@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains the assortment of races for the game system. The special
+      advantages of each race are conferred through a combination of scripts and
+      automatic assignment of special abilities. All special abilities are assigned
+      via the bootstrapping of the ability, resulting in the ability being
+      automatically assigned to the actor whenever the race is selected. If an ability
+      is both user-selected AND conferred by a race, the ability only appears a single
+      time because it all abilities are "unique".
+-->
+
+<document signature="Hero Lab Data">
+
+  <!-- Human Race -->
+  <thing
+    id="racHuman"
+    name="Human"
+    compset="Race"
+    isunique="yes"
+    description="Humans are more or less the standard for races. They have no bonus skill ranks and no skill check penalties. They have 8+Endurance health and can take a dying action.">
+    <bootstrap thing="abDyingAct"/>
+
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Traits" priority="4001"><![CDATA[
+    #traitbonus[trHealth] = 8 + #trait[skEndure]
+    ]]></eval>
+
+    </thing>
+
+    <thing
+  id="abDyingAct"
+  name="Dying Action"
+  compset="Ability"
+  isunique="yes"
+  description="When your human character dies you may immediately take one final action (not a full turn — just a single action). This action cannot save your life, though it may very well save the lives of your friends and allies. If your character does not take this action immediately, then you forfeit it.">
+  </thing>
+  
+  <thing
+    id="racNeoph"
+    name="Neophant"
+    compset="Race"
+    isunique="yes"
+    description="Neophants are the third generation of uplifted elephants, or 'Loxies'. They're physically powerful, but slow to dodge. They may use their trunk as an additional limb.">
+    <bootstrap thing="abTrunk"/>
+
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skAthlete] += 1
+    #traitbase[skEndure] += 2
+    #traitbase[skPercept] += 1
+    ~Somehow, we add the Athletics (Running) specialty
+    ]]></eval>
+    
+    <eval index="2" phase="Traits" priority="4001"><![CDATA[
+    #traitbonus[trHealth] = 9 + #trait[skEndure]
+    ]]></eval>
+    
+    <eval index="3" phase="Traits" priority="4002"><![CDATA[
+    #traitbonus[skDodge] -= 1
+    ]]></eval>
+    
+    </thing>
+    
+  <thing
+    id="abTrunk"
+    name="Trunk"
+    compset="Ability"
+    isunique="yes"
+    description="Your trunk counts as an extra limb with minimal dexterity. You can use it to pick things up, open large containers, or open doors with big handles. Your trunk can lift something roughly a quarter of your size and weight.">
+  </thing>
+  
+  <thing
+    id="racPurp"
+    name="Purp"
+    compset="Race"
+    isunique="yes"
+    description="Purps are genetically modified humans who are slightly frailer, but more athletic. They can also photosynthesize, but not well enough to replace eating.">
+    
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skAthlete] += 1
+    #traitbase[skEndure] += 1
+    ]]></eval>
+    
+    <eval index="2" phase="Traits" priority="4001"><![CDATA[
+    #traitbonus[trHealth] = 7 + #trait[skEndure]
+    ]]></eval>
+    
+    </thing>
+    
+    <thing
+    id="racRilla"
+    name="Rilla"
+    compset="Race"
+    isunique="yes"
+    description="Rillas are genetically uplifted gorillas. They're very strong, and dextrous, but are often not taken seriously by other Sophonts and tend to be touchy about references to their non-sapient simmian ancestors.">
+    
+    <!-- Note: Add bite attack with Athletics damage -->
+    
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skAthlete] += 1
+    #traitbase[skEndure] += 1
+    #traitbase[skPercept] += 1
+    ]]></eval>
+    
+    <eval index="2" phase="Traits" priority="4001"><![CDATA[
+    #traitbonus[trHealth] = 8 + #trait[skEndure]
+    ]]></eval>
+    
+    <eval index="3" phase="Traits" priority="4002"><![CDATA[
+    #traitbonus[skNegot] -= 2
+    ]]></eval>
+    
+    </thing>
+    
+  <thing
+    id="racUrsus"
+    name="Ursumari"
+    compset="Race"
+    isunique="yes"
+    description="Ursumari are genetically uplifted polar bears. They're very strong, very dangerous, and very big. Unfortunately, they don't handle heat very well, which means they also tend to be very angry.">
+    
+    <!-- Note: Add claw attack with Athletics+2 damage -->
+    
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skAthlete] += 1
+    #traitbase[skEndure] += 1
+    #traitbase[skIntim] += 1
+    #traitbase[skMelee] += 1
+    #traitbase[skThrown] += 1
+    ]]></eval>
+    
+    <eval index="2" phase="Traits" priority="4001"><![CDATA[
+    #traitbonus[trHealth] = 9 + #trait[skEndure]
+    ]]></eval>
+    
+    </thing>
+  
+  </document>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains the assortment of derived traits for the game system. Derived
+      traits are calculated via scripts and based on the attributes from which they
+      are derived.
+
+      Since derived traits are based upon other traits, we have a "chicken-and-egg"
+      situation with respect to script evaluation timing. The "Trait" component
+      auto-calculates the final value for the traits derived FROM, while the "Derived"
+      component provides a second calculation after that to incorporate the results of
+      the special calculation for each derived trait. Each derived trait must then
+      calculate the new derived value between those two times, which is what we
+      accomplish below within the eval script for each derived trait. The script is
+      timed to occur at Traits/4000 to splice it between the two other scripts that
+      mentioned above and performed by the component.
+
+      We calculate the derived value as a "bonus" for the trait, allowing it to be
+      added in appropriately by the component script. Trait bonuses can arise from
+      multiple sources, so we need to ADD our calculated amount instead of setting the
+      amount.
+
+      All trait values are rounded down, so we apply the proper rounding as needed.
+      Rounding must be performed BEFORE we add the adjustment.
+
+      Appropriate tags are assigned to each derived trait to control where the trait
+      is displayed to the user and the order in which the traits are displayed.
+-->
+
+<document signature="Hero Lab Data">
+
+  <!-- Health Trait -->
+  <thing
+    id="trHealth"
+	name="Health"
+	compset="Trait"
+	isunique="yes"
+	description="This is your health, which is derived from your sophont type and your endurance.">
+  <fieldval field="trtAbbrev" value="Hlth"/>
+  <tag group="explicit" tag="9"/>
+  <tag group="DashTacCon" tag="Combat"/>
+  <eval index="1" phase="Traits" priority="4000">
+    <before name="Derived trtFinal"/>
+    <after name="Calc trtFinal"/><![CDATA[
+    ~toughness is 5 plus half the character's Endurance, but we track attributes at
+    ~the half value (2-6), so we add Vigor directly
+    field[trtBonus].value = 0 + #trait[skEndure]
+    ~equipped armor should add to the Toughness, so we add that from the armor
+    ]]></eval>  
+  </thing>
+
+  <!-- Defense Trait -->
+  <thing
+    id="trDefense"
+    name="Defense"
+    compset="Trait"
+    isunique="yes"
+    description="Defense is equal to 5 plus your character's Dodge bonus. This is the TN for someone who is not Dodging, or who rolled Dodge lower than their Defense">
+    <fieldval field="trtAbbrev" value="Def"/>
+    <fieldval field="trtBonus" value="0"/>
+    <tag group="explicit" tag="2"/>
+    <tag group="DashTacCon" tag="Combat"/>
+
+    <!-- Calculate the trait as appropriate -->
+    <eval index="1" phase="Traits" priority="4000"><![CDATA[
+  ~defense is 5 plus the Dodge skill
+  field[trtBonus].value += 5 + #traitfound[skDodge]
+  ]]></eval> 
+    </thing>
+
+  <!-- Initiative Trait -->
+  <thing
+    id="trInit"
+    name="Initiative"
+    compset="Trait"
+    isunique="yes"
+    description="Description goes here">
+    <fieldval field="trtAbbrev" value="Init"/>
+    <tag group="explicit" tag="2"/>
+    <tag group="User" tag="Combat"/>
+    <tag group="DashTacCon" tag="Combat"/>
+    <tag group="DashTacCon" tag="Traits"/>
+
+    <!-- Calculate the Initiative trait as appropriate -->
+    <eval value="1" phase="Traits" priority="4000">
+      <before name="Derived trtFinal"/>
+      <after name="Calc trtFinal"/><![CDATA[
+      field[trtBonus].value = 0
+      ]]></eval>
+    </thing>
+
+  <!-- Power Points Trait -->
+  <thing
+    id="trPowerPts"
+    name="Power Points"
+    compset="Trait"
+    isunique="yes"
+    description="Description goes here">
+    <fieldval field="trtAbbrev" value="Powr"/>
+    <tag group="explicit" tag="4"/>
+    <tag group="User" tag="Power"/>
+
+    <!-- Calculate the Power Points trait as appropriate -->
+    <eval value="1" phase="Traits" priority="4000">
+      <before name="Derived trtFinal"/>
+      <after name="Calc trtFinal"/><![CDATA[
+      field[trtBonus].value = 0
+      ]]></eval>
+    </thing>
+
+  
+  </document>

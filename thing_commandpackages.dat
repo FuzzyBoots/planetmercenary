@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains the assortment of command packages -->
+
+<document signature="Hero Lab Data">
+
+  <!-- Human Race -->
+  <thing
+    id="cmdCaptain"
+    name="Captain"
+    compset="CmdPckge"
+    isunique="yes"
+    description="If you play as the Captain, then your in-game job is to make command decisions and issue orders to the other officers. You’re a little like the Adjutant to the GC, and in that role, you rely on people skills to keep the game moving.">
+    
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skEcon] += 2
+    #traitbase[skContract] += 2
+    #traitbase[skHistory] += 1
+    ~Somehow, we add the Athletics (Running) specialty
+    ]]></eval>
+
+    </thing>
+  
+
+  
+  </document>

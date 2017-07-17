@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains the definition of the "Skills" tab panel. This tab is where
+      the user selects the skills for the character.
+
+      All public visual elements used with this tab panel start with the prefix "sk"
+      to associate them with the tab.
+-->
+
+<document signature="Hero Lab Data">
+
+
+  <!-- skSkills portal
+        Presents a dynamic table where the user can adjust skills for the
+        character.
+  -->
+  <portal
+  id="skSkills"
+  style="tblNormal">
+  <table_dynamic
+    component="Skill"
+    showtemplate="skPick"
+    choosetemplate="SimpleItem"
+    addpick="resSkill">
+    <candidate>!Hide.Skill</candidate>
+    <titlebar><![CDATA[
+      @text = "Add a Special Skill - " & hero.child[resSkill].field[resSummary].text
+      ]]></titlebar>
+    <headertitle><![CDATA[
+      @text = "Skills: " & hero.child[resSkill].field[resSummary].text
+      ]]></headertitle>
+    <additem><![CDATA[
+      ~if we're in advancement mode, we've been frozen, so display accordingly
+      if (state.iscreate = 0) then
+        @text = "{text a0a0a0}Add/Increase Skills Via Advances Tab"
+        done
+        endif
+
+      ~get the color-highlighted "add" text
+      @text = field[resAddItem].text
+      ]]></additem>
+    </table_dynamic>
+  </portal>
+
+<template
+  id="skPick"
+  name="Skill Pick"
+  compset="Skill"
+  marginhorz="3"
+  marginvert="2">
+  
+  <portal
+    id="value"
+    style="incrSimple">
+    <incrementer
+      field="trtUser">
+      </incrementer>
+    <mouseinfo mousepos="middle+above"><![CDATA[
+      if (hero.tagis[mode.creation] = 0) then
+        @text = "Skills must be modified via the Advances tab once the character is locked for play."
+      elseif (autonomous = 0) then
+        @text = "This trait has been improved via the Advances tab and cannot be modified further from here."
+      else
+        @text = "Allocate points to this skill by clicking on the arrows to increase/decrease the number of points assigned."
+        endif
+      ]]></mouseinfo>
+  </portal>
+  
+  <portal
+    id="name"
+    style="lblNormal"
+    showinvalid="yes">
+    <label
+      field="name">
+      </label>
+    </portal>
+
+  <portal
+    id="info"
+    style="actInfo">
+    <action
+      action="info">
+      </action>
+    <mouseinfo mousepos="middle+above"/>
+    </portal>
+
+  <portal
+    id="delete"
+    style="actDelete"
+    tiptext="Click to delete this item">
+    <action
+      action="delete">
+      </action>
+    </portal>
+
+  <position><![CDATA[
+    ~set up our height based on our tallest portal
+    height = portal[info].height
+
+    ~if this is a "sizing" calculation, we're done
+    if (issizing <> 0) then
+      done
+      endif
+
+    ~position our tallest portal at the top
+    portal[info].top = 0
+
+    ~position the other portals vertically
+    perform portal[name].centervert
+    ~ perform portal[domain].centervert
+    ~ perform portal[lbldomain].centervert
+    perform portal[value].centervert
+    perform portal[delete].centervert
+
+    ~position the delete portal on the far right
+    perform portal[delete].alignedge[right,0]
+
+    ~position the info portal to the left of the delete button
+    perform portal[info].alignrel[rtol,delete,-8]
+
+    ~position the incrementer on the left
+    portal[value].left = 0
+
+    ~position the name next to the incrementer
+    perform portal[name].alignrel[ltor,value,10]
+
+    ~if we don't need a domain, hide it and let the name use all available space
+    ~if (tagis[User.NeedDomain] = 0) then
+    ~  portal[lbldomain].visible = 0
+    ~  portal[domain].visible = 0
+    portal[name].width = minimum(portal[name].width,portal[info].left - portal[name].left - 10)
+
+    ~otherwise, position the domain portals next to the name
+    ~else
+    ~  perform portal[lbldomain].alignrel[ltor,name,20]
+    ~  perform portal[domain].alignrel[ltor,lbldomain,5]
+    ~  portal[domain].width = 150
+    ~  endif 
+
+    ~if the ability is auto-added, change its font to indicate that fact
+    if (candelete = 0) then
+      perform portal[name].setstyle[lblAuto]
+      endif
+    ]]></position>
+  </template>
+
+<layout
+  id="skills">
+  <portalref portal="skSkills" taborder="10"/>
+  <position><![CDATA[
+    ~freeze our table in advancement mode to disable adding new choices
+    ~Note: All freezing must be done *before* any positioning is performed.
+    if (state.iscreate = 0) then
+      portal[skSkills].freeze = 1
+      endif
+
+    ~position and size the table to span the full layout; it will only use the
+    ~vertical space that it actually needs
+    perform portal[skSkills].autoplace
+    ]]></position>
+  </layout>
+
+<panel
+  id="skills"
+  name="Skills"
+  marginhorz="5"
+  marginvert="5"
+  order="120">
+  <live>!HideTab.skills</live>
+  <layoutref layout="skills"/>
+  <position><![CDATA[
+    ]]></position>
+  </panel>
+  </document>
