@@ -154,7 +154,13 @@
     autocompset="no"
     panellink="skills">
 
-    <!-- Net final roll that includes the value of the linked attribute -->
+    <field
+      id="trtSpec"
+      name="Specialty"
+      type="user">
+      </field>
+	
+  <!-- Net final roll that includes the value of the linked attribute -->
     <field
       id="sklRoll"
       name="Net Skill Roll"
@@ -169,7 +175,7 @@
         ]]></calculate>
       </field>
 
-    <!-- Each skill needs its own identity tag so existing skills can be identified during advancement -->
+	  <!-- Each skill needs its own identity tag so existing skills can be identified during advancement -->
     <identity group="Skill"/>
 
     <!-- Every skill is shown on the "Rolls" mouse-over on the Dashboard/TacCon -->

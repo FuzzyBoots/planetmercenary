@@ -156,6 +156,14 @@
     <value id="smStatbl"/>
     </group>
 
+  <group
+	id="Skills">
+	<value id="Combat"/>
+	<value id="Mental"/>
+	<value id="Physical"/>
+	<value id="Social"/>
+	</group>
+	
   <!-- Hide group - controls whether things are hidden in certain contexts
         In the same way that the HideTab group controls which panels are made visible
         for a given character, the Hide group controls the visibiliy of individual

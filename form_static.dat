@@ -27,25 +27,25 @@
         The "chosen" script shows the selected race with a suitable prefix. If no
         race is yet selected, a prompt it shown with appropriate color highlighting.
   -->
-  <portal
-    id="stRace"
-    style="chsNormal"
-    width="110">
-    <chooser_table
-      component="Race"
-      choosetemplate="LargeItem">
-      <chosen><![CDATA[
-        if (@ispick = 0) then
-          @text = "{text clrwarning}Select Race"
-        else
-          @text = "Race: " & field[name].text
-          endif
-        ]]></chosen>
-      <titlebar><![CDATA[
-        @text = "Choose the race for your character"
-        ]]></titlebar>
-      </chooser_table>
-    </portal>
+    <portal 
+      id="stRace"
+      style="chsNormal"
+      width="110">
+      <chooser_table
+        component="Race"
+        choosetemplate="LargeItem">
+        <chosen><![CDATA[
+          if (@ispick = 0) then
+            @text = "{text clrwarning}Select Race"
+          else
+            @text = "Race: " & field[name].text
+            endif
+          ]]></chosen>
+        <titlebar><![CDATA[
+          @text = "Choose the race for your character"
+          ]]></titlebar>
+        </chooser_table>
+      </portal>
 
 
   <!-- stName template
@@ -178,8 +178,8 @@
   -->
   <layout
     id="static">
-    <portalref portal="stRace" taborder="20"/>
-    <templateref template="stName" thing="heroname" taborder="10"/>
+        <portalref portal="stRace" taborder="20"/>
+        <templateref template="stName" thing="heroname" taborder="10"/>
     <templateref template="stActor" thing="actor"/>
 
     <!-- This script sizes and positions the layout and its child visual elements. -->
