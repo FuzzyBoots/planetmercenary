@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains the assortment of backgrounds -->
+
+<document signature="Hero Lab Data">
+
+  <!-- Captain Background -->
+  <thing
+    id="bckCrmLrd"
+    name="Crime Lord"
+    compset="Bckgrnd"
+    isunique="yes"
+    description="">
+    
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skDeceive] += 2
+    #traitbase[skNegot] += 2
+    #traitbase[skHistory] += 2
+    ]]></eval>
+
+    </thing>
+  
+  <thing
+    id="bckDriver"
+    name="Driver"
+    compset="Bckgrnd"
+    isunique="yes"
+    description="">
+    
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skCompute] += 2
+    #traitbase[skPercept] += 2
+    #traitbase[skGrndVeh] += 2
+    ]]></eval>
+
+    </thing>
+  
+  <thing
+    id="bckEnter"
+    name="Entertainer"
+    compset="Bckgrnd"
+    isunique="yes"
+    description="Maybe you played in a band. Maybe the band was a circus. Maybe the circus was the writing pit for a comedy show.">
+    
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skDodge] += 2
+    #traitbase[skMedic] += 2
+    #traitbase[skXeno] += 2
+    #traitbase[skPistol] += 2
+    ]]></eval>
+
+    </thing>
+  
+  <thing
+    id="bckMedic"
+    name="Medical Professional"
+    compset="Bckgrnd"
+    isunique="yes"
+    description="">
+    
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skChem] += 2
+    #traitbase[skEng] += 2
+    #traitbase[skMech] += 2
+    #traitbase[skPistol] += 2
+    ]]></eval>
+
+    </thing>
+  
+  <thing
+    id="bckGrunt"
+    name="Military (Infantry Grunt)"
+    compset="Bckgrnd"
+    isunique="yes"
+    description="">
+    
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skEmpathy] += 2
+    #traitbase[skPercept] += 2
+    #traitbase[skCarbine] += 2
+    #traitbase[skPistol] += 2
+    ]]></eval>
+
+    </thing>
+  
+  <thing
+    id="bckOffcr"
+    name="Military (Officer)"
+    compset="Bckgrnd"
+    isunique="yes"
+    description="">
+    
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skDeceive] += 2
+    #traitbase[skEmpathy] += 2
+    #traitbase[skDodge] += 2
+    #traitbase[skInspire] += 2
+    ]]></eval>
+
+    </thing>
+  
+  <thing
+    id="bckPilot"
+    name="Pilot"
+    compset="Bckgrnd"
+    isunique="yes"
+    description="">
+    
+    <!-- Define any script needed to apply changes to traits or other mechanisms-->
+    <eval index="1" phase="Setup" priority="4000"><![CDATA[
+    #traitbase[skChem] += 2
+    #traitbase[skDodge] += 2
+    #traitbase[skExplsves] += 2
+    #traitbase[skPistol] += 2
+    ]]></eval>
+
+    </thing>
+  
+  
+  
+  </document>

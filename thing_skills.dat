@@ -102,7 +102,7 @@
 
   <!-- Pistols Skill -->
   <thing
-    id="skPistols"
+    id="skPistol"
     name="Pistols"
     compset="Skill"
     isunique="yes"
@@ -284,7 +284,7 @@
   
   <!-- Medicine Skill -->
   <thing
-    id="skMed"
+    id="skMedic"
     name="Medicine"
     compset="Skill"
     isunique="yes"
@@ -304,7 +304,7 @@
     isunique="yes"
     description="Use your Research skill to quickly (but temporarily) increase your knowledge in a specific area, using your hypernet connection. This can translate to a boost with an upcoming skill check.">
     <fieldval field="trtAbbrev" value="Res"/>
-    <!--fieldval field="trtType" value="Mental"/-->
+    <tag group="Skills" tag="Mental"/>
   </thing>
   
   <!-- Xenobiology Skill -->
@@ -417,10 +417,10 @@
   <!-- Water Vehicles Skill -->
   <thing
     id="skSpcVeh"
-    name="Water Vehicles"
+    name="Space Vehicles"
     compset="Skill"
     isunique="yes"
-    description="Use your Water Vehicles skill to maneuver small Water vehicles, regardless of their propulsion. AIs generally pilot large Water vehicles that require full crews.">
+    description="Use your Space Vehicles skill to maneuver small Space vehicles, regardless of their propulsion. AIs generally pilot large Space vehicles that require full crews.">
     <fieldval field="trtAbbrev" value="Spc"/>
     <tag group="Skills" tag="Physical"/>
     <!-- arrayval field="trtSpec" index="0" value="Evasive Action" /-->
@@ -465,7 +465,7 @@
     isunique="yes"
     description="Use your Contracts skill at the start of every job to negotiate your fees with a client. Your potential employer offers you base compensation, usually ranging from 2–5 Resources. The character making this check rolls using their personal Contracts skill, and applies the modifier from your company’s Reputation.">
     <fieldval field="trtAbbrev" value="Con"/>
-    <!--fieldval field="trtType" value="Social"/-->
+    <tag group="Skills" tag="Social"/>
   </thing>
   
   <!-- Deceive Skill -->
@@ -520,9 +520,6 @@
     description="Use your Intimidate skill to loom threateningly over an informant, to rough up an NPC, or to pull a captive into a dark room where a single swinging lamp reveals a set of tools that everybody wishes they didn’t know you had.">
     <fieldval field="trtAbbrev" value="Int"/>
     <tag group="Skills" tag="Social"/>
-    <!-- arrayval field="trtSpec" index="0" value="Coercion" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Interrogation" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Torture" /-->
   </thing>
   
   <!-- Negotiate Skill -->
@@ -534,13 +531,8 @@
     description="Use your Negotiate skill to bargain and get what you want with a light touch. There are no demands here; this is about getting the most from other people with charm, panache, and a completely non-ironic application of “win/win.”">
     <fieldval field="trtAbbrev" value="Neg"/>
     <tag group="Skills" tag="Social"/>
-    <!-- arrayval field="trtSpec" index="0" value="Black Market" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Haggling" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Persuasion" /-->
   </thing>
-  
-  
-  
+    
   <!-- Perform Skill -->
   <thing
     id="skPerform"
@@ -548,12 +540,8 @@
     compset="Skill"
     isunique="yes"     
     description="Theater! Use your Perform skill to dazzle your targets with a performance they’ll never forget. This skill covers every way you can put on a show, anywhere you want.">
-    <fieldval field="trtAbbrev" value="Neg"/>
+    <fieldval field="trtAbbrev" value="Perf"/>
     <tag group="Skills" tag="Social"/>
-    <!-- arrayval field="trtSpec" index="0" value="Acting" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Comedy" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Dancing" /-->
-    <!-- arrayval field="trtSpec" index="3" value="Song" /-->
   </thing>
   
   <!-- Willpower Skill -->
@@ -563,7 +551,7 @@
     compset="Skill"
     isunique="yes"     
     description="Use your Willpower skill to resist mental and physical pressure. This skill represents your raw determination. Willpower lets you stick to your guns in an argument, and remain uncowed by guns should a discussion become heated.">
-    <fieldval field="trtAbbrev" value="Neg"/>
+    <fieldval field="trtAbbrev" value="Will"/>
     <tag group="Skills" tag="Social"/>
     <!-- arrayval field="trtSpec" index="0" value="Fortitude" /-->
     <!-- arrayval field="trtSpec" index="1" value="Tenacity" /-->
