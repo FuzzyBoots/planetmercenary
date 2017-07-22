@@ -12,7 +12,7 @@
 <!--portal 
     id="stRace"
     style="chsNormal"
-    width="110">  
+    width="250">  
     <chooser_table
       component="Race"
       choosetemplate="LargeItem">
@@ -30,9 +30,9 @@
     </portal-->
 
   <portal 
-    id="stCmdPkg"
+    id="stCmdPckge"
     style="chsNormal"
-    width="200">  
+    width="240">  
     <chooser_table
       component="CmdPckge"
       choosetemplate="LargeItem">
@@ -40,11 +40,32 @@
         if (@ispick = 0) then
           @text = "{text clrwarning}Select Command Package"
         else
-          @text = "Command Package: " & field[name].text
+          @text = "Cmd Package: " & field[name].text
           endif
         ]]></chosen>
       <titlebar><![CDATA[
         @text = "Choose the command package for your character"
+        ]]></titlebar>
+      </chooser_table>
+    </portal>
+
+
+  <portal 
+    id="stBckGrnd"
+    style="chsNormal"
+    width="240">  
+    <chooser_table
+      component="Bckgrnd"
+      choosetemplate="LargeItem">
+      <chosen><![CDATA[
+        if (@ispick = 0) then
+          @text = "{text clrwarning}Select Background"
+        else
+          @text = "Background: " & field[name].text
+          endif
+        ]]></chosen>
+      <titlebar><![CDATA[
+        @text = "Choose the background for your character"
         ]]></titlebar>
       </chooser_table>
     </portal>
@@ -60,7 +81,7 @@
     style="tblInvis">
     <table_fixed
       component="Derived"
-      showtemplate="baTrtPick"
+      showtemplate="baTrtPick"  
       showsortset="explicit"
       scrollable="no">
       </table_fixed>
@@ -167,9 +188,10 @@
   -->
   <layout
     id="basics">
-    <portalref portal="baTrait" taborder="20"/>
     <portalref portal="stRace" taborder="20"/>
-    <portalref portal="stCmdPkg" taborder="20"/>
+    <portalref portal="stCmdPckge" taborder="40"/>
+    <portalref portal="stBckGrnd" taborder="60"/>
+    <portalref portal="baTrait" taborder="80"/>
     
     <portalref portal="Horizontal"/>
 
@@ -177,20 +199,23 @@
     <position><![CDATA[
       ~size and position the attributes table in the top left; we set the height to
       ~the full layout height, but the table will only use the space it needs
-      portal[stRace].left = 0
+      portal[stRace].left = 0 
 
-      portal[stCmdPkg].left = 0
-      portal[stCmdPkg].top = portal[stRace].bottom + 15
+      portal[stCmdPckge].left = 0
+      portal[stCmdPckge].top = portal[stRace].bottom + 15
+      
+      portal[stBckGrnd].left = 0
+      portal[stBckGrnd].top = portal[stCmdPckge].bottom + 15
       
       ~set the separator width and position it beneath the attributes
       portal[Horizontal].width = width / 2 - 5
-      portal[Horizontal].top = portal[stCmdPkg].bottom + 15
-      portal[Horizontal].left = portal[stCmdPkg].left + (portal[stCmdPkg].width - portal[Horizontal].width) / 2
+      portal[Horizontal].top = portal[stBckGrnd].bottom + 15
+      portal[Horizontal].left = portal[stBckGrnd].left + (portal[stBckGrnd].width - portal[Horizontal].width) / 2
 
       ~size and position the traits table beneath the separator; we set the height
       ~the the full layout height, but the table will only use the space it needs
       portal[baTrait].width = width / 2 - 5
-      portal[baTrait].left = portal[stCmdPkg].left
+      portal[baTrait].left = portal[stBckGrnd].left
       portal[baTrait].top = portal[Horizontal].bottom + 15
       portal[baTrait].height = height - portal[baTrait].top
 

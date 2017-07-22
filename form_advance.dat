@@ -81,7 +81,7 @@
   <!-- advNew template -->
   <template
     id="advNew"
-    name="Add New Ability"
+    name="Add New Specialty"
     compset="Advance">
 
     <portal

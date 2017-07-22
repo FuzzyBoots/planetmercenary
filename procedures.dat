@@ -709,20 +709,11 @@
       endif
     final = "Race: {b}" & info & "{/b}{br}{br}"
 
-    ~output our power point pool
-    perform hero.child[trPowerPts].setfocus
-    final &= "Power Points: {b}" & focus.field[trtFinal].text & " / " & focus.field[trtMaximum].text & "{/b}{br}{br}"
-
     ~output our resistance traits
     foreach pick in hero where "User.Resistance"
       final &= eachpick.field[name].text & ": {b}" & eachpick.field[trtFinal].text & "{/b}{br}"
       nexteach
     final &= "{br}"
-
-    ~output attributes
-    foreach pick in hero from Attribute
-      final &= eachpick.field[name].text & ": {b}" & eachpick.field[trtFinal].text & "{/b}{br}"
-      nexteach
 
     ~output any permanent adjustments
     info = ""

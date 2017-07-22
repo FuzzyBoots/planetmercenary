@@ -10,31 +10,6 @@
 <document signature="Hero Lab Data">
 
 
-  <!-- Attribute editthing -->
-  <editthing
-    compset="Attribute"
-    name="Attribute"
-    prefix="attr"
-    description="Attributes are incredibly simple. They have a minimum and maximum value.{br}They also have an optional short name and/or abbreviation."
-    summary="Defines an Attribute upon which starting CPs can be spent by a character.">
-    <inputthing
-      name="Minimum Value"
-      helptext="Specify the minimum rating for the attribute (default is 0).">
-      <it_field field="trtMinimum"/>
-      </inputthing>
-    <inputthing
-      name="Maximum Value"
-      helptext="Specify the maximum rating for the attribute (default is 10).">
-      <it_field field="trtMaximum"/>
-      </inputthing>
-    <inputthing
-      name="Abbreviation"
-      helptext="Specify a very short abbreviation for use in displaying the attribute via its abbreviation (max 5 characters).">
-      <it_field field="trtAbbrev"/>
-      </inputthing>
-    </editthing>
-
-
   <!-- Skill editthing -->
   <editthing
     compset="Skill"

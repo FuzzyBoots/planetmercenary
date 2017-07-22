@@ -97,25 +97,7 @@
         ]]></labeltext>
       </output_label>
     </portal>
-
-
-  <!-- oAttribute portal
-        This is a table of Attributes for the actor. Attributes use the same template
-        for both the contents and the header across the top. See the template for
-        more details on this.
-  -->
-  <portal
-    id="oAttribute"
-    style="outNormal">
-    <output_table
-      component="Attribute"
-      showtemplate="oAttrPick"
-      headertemplate="oAttrPick"
-      showsortset="explicit">
-      </output_table>
-    </portal>
-
-
+  
   <!-- oDerived portal
         This is a table of Derived Traits for the actor. Only resistance and combat
         traits are included in the list of derived traits within the character sheet.
@@ -301,172 +283,7 @@
     </portal>
 
 
-  <!-- oAttrPick template
-        This template presents the contents of each attribute. Each attribute has its
-        total value, base value, and any adjustments shown separately.
-
-        The template is also used as a header for the table. As such, the template
-        includes additional portals that are only used as part of the header (i.e.
-        they are designated by the "isheader" attribute). All header portals are
-        positioned via the "header" script, which is invoked AFTER the normal "position"
-        script. Header portals can therefore be positioned relative to non-header
-        portals, making it easy to align the header portals based on the actual content
-        portals.
-
-        NOTE! We CANNOT use a non-zero "marginhorz" attribute for the template to
-        apply an indent on each side. The titlebar inherits the same margin restriction
-        as the contents area, so the title would not span the full width. Consequently,
-        we manually indent everything on either side within the "position" script.
-  -->
-  <template
-    id="oAttrPick"
-    name="Output Attributes Table"
-    compset="Attribute"
-    marginvert="10">
-
-    <portal
-      id="name"
-      style="outNameLg">
-      <output_label
-        field="name">
-        </output_label>
-      </portal>
-
-    <portal
-      id="total"
-      style="outValBox">
-      <output_label
-        field="trtFinal">
-        </output_label>
-      </portal>
-
-    <portal
-      id="equal"
-      style="outNameLg">
-      <output_label
-        text="=">
-        </output_label>
-      </portal>
-
-    <portal
-      id="base"
-      style="outGreyBox">
-      <output_label
-        field="trtUser">
-        </output_label>
-      </portal>
-
-    <portal
-      id="plus"
-      style="outNameLg">
-      <output_label
-        text="+">
-        </output_label>
-      </portal>
-
-    <portal
-      id="bonus"
-      style="outGreyBox">
-      <output_label>
-        <labeltext><![CDATA[
-          var bonus as number
-          bonus = field[trtBonus].value + field[trtInPlay].value
-          @text = bonus
-          ]]></labeltext>
-        </output_label>
-      </portal>
-
-    <!-- Portals used as the header -->
-    <portal
-      id="hdrtitle"
-      style="outTitle"
-      isheader="yes">
-      <output_label
-        text="Attributes">
-        </output_label>
-      </portal>
-
-    <portal
-      id="hdrtotal"
-      style="outHeader"
-      isheader="yes">
-      <output_label
-        text="Total">
-        </output_label>
-      </portal>
-
-    <portal
-      id="hdrbase"
-      style="outHeader"
-      isheader="yes">
-      <output_label
-        text="Base">
-        </output_label>
-      </portal>
-
-    <portal
-      id="hdrbonus"
-      style="outHeader"
-      isheader="yes">
-      <output_label
-        text="Bonus">
-        </output_label>
-      </portal>
-
-    <position><![CDATA[
-      ~our height is driven by the tallest portal (they're all the same)
-      height = portal[name].height
-      doneif (issizing <> 0)
-
-      ~setup appropriate widths for the various value portals
-      portal[total].width = 110
-      portal[base].width = 110
-      portal[bonus].width = 110
-
-      ~center everything vertically within the template
-      perform portal[name].centervert
-      perform portal[total].centervert
-      perform portal[base].centervert
-      perform portal[bonus].centervert
-      perform portal[equal].centervert
-      perform portal[plus].centervert
-
-      ~position everything horizontally, indenting 125 pixels on each side
-      portal[name].left = 125
-      perform portal[bonus].alignedge[right,-125]
-      perform portal[plus].alignrel[rtol,bonus,-20]
-      perform portal[base].alignrel[rtol,plus,-20]
-      perform portal[equal].alignrel[rtol,base,-20]
-      perform portal[total].alignrel[rtol,equal,-20]
-      ]]></position>
-
-    <header><![CDATA[
-      ~our header height is the title plus a gap plus the header text
-      height = portal[hdrtitle].height + 10 + portal[hdrtotal].height
-      doneif (issizing <> 0)
-
-      ~our title spans the full width of the template
-      portal[hdrtitle].width = width
-
-      ~each of our header labels has the same width as the corresponding data beneath
-      portal[hdrtotal].width = portal[total].width
-      portal[hdrbase].width = portal[base].width
-      portal[hdrbonus].width = portal[bonus].width
-
-      ~center each header label on the corresponding data beneath
-      perform portal[hdrtotal].centeron[horz,total]
-      perform portal[hdrbase].centeron[horz,base]
-      perform portal[hdrbonus].centeron[horz,bonus]
-
-      ~align all header labels at the bottom of the header region
-      perform portal[hdrtotal].alignedge[bottom,0]
-      perform portal[hdrbase].alignedge[bottom,0]
-      perform portal[hdrbonus].alignedge[bottom,0]
-      ]]></header>
-
-    </template>
-
-
+  
   <!-- oDerivPick template
         This template presents the various derived traits. Derived traits simply list
         the name and final value for each. We use margins around the template to get
@@ -1325,8 +1142,6 @@
     id="oLeftSide">
     <portalref portal="oHeroName"/>
     <portalref portal="oHeroInfo"/>
-    <portalref portal="oAttribute"/>
-    <portalref portal="oPower"/>
     <portalref portal="oDerived"/>
     <position><![CDATA[
       ~position the hero name at the top with the hero details beneath the name
@@ -1334,8 +1149,6 @@
       perform portal[oHeroInfo].autoplace[15]
 
       ~position the tables next
-      perform portal[oAttribute].autoplace
-      perform portal[oPower].autoplace
       perform portal[oDerived].autoplace
 
       ~our layout height is the extent of the elements within

@@ -30,7 +30,7 @@
     <portal 
       id="stRace"
       style="chsNormal"
-      width="110">
+      width="240">
       <chooser_table
         component="Race"
         choosetemplate="LargeItem">
