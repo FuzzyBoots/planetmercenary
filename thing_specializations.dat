@@ -32,7 +32,14 @@
 	  isunique="yes">
     <fieldval field="spcSkill" value="skCarbine"/>
 	</thing>
-
+    
+	<thing
+	  id="spcHstDom"
+	  name="History"
+	  compset="Specialty"
+	  description="History">
+	  <tag group="User" tag="NeedDomain"/>
+	</thing>
 
 	
 </document>

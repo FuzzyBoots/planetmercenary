@@ -28,11 +28,12 @@
     </thing>
 
     <thing
-  id="abDyingAct"
-  name="Dying Action"
-  compset="Ability"
-  isunique="yes"
-  description="When your human character dies you may immediately take one final action (not a full turn — just a single action). This action cannot save your life, though it may very well save the lives of your friends and allies. If your character does not take this action immediately, then you forfeit it.">
+      id="abDyingAct"
+      name="Dying Action"      
+	  compset="Ability"      
+	  isunique="yes"
+      description="When your human character dies you may immediately take one final action (not a full turn — just a single action). This action cannot save your life, though it may very well save the lives of your friends and allies. If your character does not take this action immediately, then you forfeit it.">
+	<bootstrap thing="spcHstDom"/>
   </thing>
   
   <thing
@@ -42,6 +43,7 @@
     isunique="yes"
     description="Neophants are the third generation of uplifted elephants, or 'Loxies'. They're physically powerful, but slow to dodge. They may use their trunk as an additional limb.">
     <bootstrap thing="abTrunk"/>
+    <bootstrap thing="spcNLCar"/>
 
     <!-- Define any script needed to apply changes to traits or other mechanisms-->
     <eval index="1" phase="Setup" priority="4000"><![CDATA[
@@ -49,7 +51,7 @@
     #traitbase[skEndure] += 2
     #traitbase[skPercept] += 1
     ~Somehow, we add the Athletics (Running) specialty
-    ]]></eval>
+	]]></eval>
     
     <eval index="2" phase="Traits" priority="4001"><![CDATA[
     #traitbonus[trHealth] = 9 + #trait[skEndure]

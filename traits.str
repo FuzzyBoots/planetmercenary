@@ -125,19 +125,6 @@
 
     </component>
 
-  <component
-    id="Specialty"
-    name="Specialization"
-    autocompset="no"
-    panellink="basics">
-    
-    <field        
-      id="spcSkill"
-      name="Associated Skill"
-      type="static"/>
-  </component>  
-
-      
 
   <!-- Skill component
         Each skill derives from this component
@@ -187,6 +174,20 @@
 
     </component>
 
+  <component
+    id="Specialty"
+    name="Specialization"
+    autocompset="no"
+    panellink="skills">
+    
+    <field        
+      id="spcSkill"
+      name="Associated Skill"
+	  maxlength="10"
+      type="static"/>
+	  
+	<tag group="SpecialTab" tag="Specialty"/>
+  </component>    
 
   <!-- Ability component
         Each special ability derives from this component
@@ -397,5 +398,15 @@
     forceunique="yes">
     <compref component="Bckgrnd"/>
     </compset>
+
+  <!-- Specialty - all skill specialties derive from this compset -->
+  <compset
+    id="Specialty">
+    <compref component="Specialty"/>
+    <compref component="Ability"/>
+	<compref component="SpecialTab"/>
+    <compref component="Domain"/>
+    <compref component="CanAdvance"/>
+  </compset>
 
   </document>

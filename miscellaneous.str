@@ -400,20 +400,20 @@
     </component>
 
   <component
-  id="Bennies"
-  name="Bennies"
+  id="RiPPs"
+  name="RiPPs"
   autocompset="no">
-  <tag group="SpecialTab" tag="Bennies"/>
+  <tag group="SpecialTab" tag="RiPPs"/>
   <eval index="1" phase="Render" priority="5000"><![CDATA[
-    field[spcName].text = "Bennies (" & #trkmax[trkBennies] & " per game)"
+    field[spcName].text = "RiPPs (" & #trkmax[trkRiPPs] & " per game)"
     ]]></eval>
   </component>
   
   <compset
-  id="Bennies">
+  id="RiPPs">
   <compref component="Tracker"/>
   <compref component="SpecialTab"/>
-  <compref component="Bennies"/>
+  <compref component="RiPPs"/>
   </compset>
 
   <!-- Define various component sets associated with the components defined above.

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains the definition of the "Skills" tab panel. This tab is where
+      the user selects the skills for the character.
+
+      All public visual elements used with this tab panel start with the prefix "sk"
+      to associate them with the tab.
+-->
+
+<document signature="Hero Lab Data">
+
+
+  <!-- skSkills portal
+        Presents a fixed table where the user can adjust skills for the
+        character.
+  -->
+  <portal
+  id="skSpecs"
+  style="tblNormal">
+    <table_fixed component="Specialty" showtemplate="specPick"
+      scrollable="yes">
+      <headertitle>
+        @text="Specialities"
+      </headertitle>
+    </table_fixed>
+  </portal>
+  
+<template
+  id="specPick"
+  name="Specialty Pick"
+  compset="Specialty"
+  marginhorz="3"
+  marginvert="2">
+  
+  <portal
+    id="name"
+    style="lblNormal"
+    showinvalid="yes">
+    <label
+      field="thingname">
+      </label>
+    </portal>
+
+  <portal
+    id="info"
+    style="actInfo">
+    <action
+      action="info">
+      </action>
+    <mouseinfo mousepos="middle+above"/>
+    </portal>
+
+  <portal
+  id="lbldomain"
+  style="lblSecond">
+    <label
+        text="Domain:">
+        </label>
+    </portal>
+
+  <portal
+    id="domain"
+    style="editNormal">
+    <edit
+      field="domDomain">
+      </edit>
+    </portal>
+	
+  <position><![CDATA[
+    ~set up our height based on our tallest portal
+    height = portal[info].height
+
+    ~if this is a "sizing" calculation, we're done
+    if (issizing <> 0) then
+      done
+      endif
+
+    ~position our tallest portal at the top
+    portal[info].top = 0
+
+    ~position the other portals vertically
+    perform portal[name].centervert
+    perform portal[domain].centervert
+    perform portal[lbldomain].centervert
+
+    ~position the info portal on the far right
+    perform portal[info].alignedge[right,0]
+
+    ~position the name on the left
+    portal[name].left = 0
+    
+    portal[name].width = minimum(portal[name].width,portal[info].left - portal[name].left - 10)
+   
+    ~if we don't need a domain, hide it and let the name use all available space
+    
+    if (tagis[User.NeedDomain] = 0) then
+      portal[lbldomain].visible = 0
+      portal[domain].visible = 0
+      portal[name].width = minimum(portal[name].width,portal[info].left - portal[name].left - 10)
+
+    ~otherwise, position the domain portals next to the name
+    else
+      perform portal[lbldomain].alignrel[ltor,name,20]
+      perform portal[domain].alignrel[ltor,lbldomain,5]
+      portal[domain].width = 150
+      endif 
+
+    ~if the ability is auto-added, change its font to indicate that fact
+    if (candelete = 0) then
+      perform portal[name].setstyle[lblAuto]
+      endif
+
+
+   
+    ]]></position>
+  </template>
+
+<layout
+  id="specs">
+  <portalref portal="skSpecs" taborder="10"/>
+  <position><![CDATA[
+    portal[skSpecs].visible = 1
+    
+    autogap =  3
+
+    perform portal[skSpecs].batchadd
+    
+    perform batchplace
+
+    height = autotop
+
+    ]]></position>
+  </layout>
+
+<panel
+  id="specs"
+  name="Specialties"
+  marginhorz="5"
+  marginvert="5"
+  order="120">
+  <live>!HideTab.skills</live>
+  <layoutref layout="specs"/>
+  <position><![CDATA[
+    ]]></position>
+  </panel>
+  </document>

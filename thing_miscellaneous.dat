@@ -45,9 +45,9 @@
   </thing>  
   
   <thing
-  id="trkBennies"
-  name="Bennies"
-  compset="Bennies">
+  id="trkRiPPs"
+  name="RiPPs"
+  compset="RiPPs">
   <fieldval field="trkMin" value="0"/>
   <fieldval field="trkMax" value="3"/>
   <tag group="Helper" tag="Bootstrap"/>
