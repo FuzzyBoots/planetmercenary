@@ -19,6 +19,7 @@
     isunique="yes"
     description="Humans are more or less the standard for races. They have no bonus skill ranks and no skill check penalties. They have 8+Endurance health and can take a dying action.">
     <bootstrap thing="abDyingAct"/>
+    <bootstrap thing="spcHstDom"/>
 
     <!-- Define any script needed to apply changes to traits or other mechanisms-->
     <eval index="1" phase="Traits" priority="4001"><![CDATA[
@@ -33,8 +34,7 @@
 	  compset="Ability"      
 	  isunique="yes"
       description="When your human character dies you may immediately take one final action (not a full turn — just a single action). This action cannot save your life, though it may very well save the lives of your friends and allies. If your character does not take this action immediately, then you forfeit it.">
-	<bootstrap thing="spcHstDom"/>
-  </thing>
+	</thing>
   
   <thing
     id="racNeoph"

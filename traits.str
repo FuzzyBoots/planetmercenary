@@ -403,8 +403,7 @@
   <compset
     id="Specialty">
     <compref component="Specialty"/>
-    <compref component="Ability"/>
-	<compref component="SpecialTab"/>
+	  <compref component="SpecialTab"/>
     <compref component="Domain"/>
     <compref component="CanAdvance"/>
   </compset>
