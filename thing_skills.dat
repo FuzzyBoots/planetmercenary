@@ -13,9 +13,7 @@
     description="Use your Carbines skill when firing carbine class weapons. As the weapons most commonly issued to infantry, carbines offer versatility and lethality. They are designed for quick carry, ease of use, and close-quarters action">
     <fieldval field="trtAbbrev" value="Car"/>
 
-    <!-- arrayval field="trtSpec" index="0" value="Beam" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Non-Lethal" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Projectile" /-->
+    <tag group="Skill" tag="skCarbine"/>
 
     <tag group="Skills" tag="Combat"/>
   </thing>
@@ -26,11 +24,11 @@
     name="Dodge"
     compset="Skill"
     isunique="yes"
-    description="Dodge represents your self-preservation instinct, and your training that reinforces this instinct. This is your ability to predict incoming violence and get out of the way. The source of danger is irrelevant; whether you’re threatened by a directed attack, a passive trap, the environment, or something else, you always use Dodge to avoid injury.">
-    
+    description="Dodge represents your self-preservation instinct, and your training that reinforces this instinct. This is your ability to predict incoming violence and get out of the way. The source of danger is irrelevant; whether you’re threatened by a directed attack, a passive trap, the environment, or something else, you always use Dodge to avoid injury.">    
     <fieldval field="trtAbbrev" value="Ddg"/>
     <fieldval field="trtBase" value="5"/>
     
+    <tag group="Skill" tag="skDodge"/>
     <tag group="Skills" tag="Combat"/>
   </thing>
 
@@ -43,10 +41,7 @@
     description="Use your explosives skill to build, set, find, or disarm an explosive device. If you try to hurl an explosive, like a grenade or an incendiary bottle, handle that check with Thrown Weapons">
     <fieldval field="trtAbbrev" value="Exp"/>
 
-    <!-- arrayval field="trtSpec" index="0" value="Building" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Detecting" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Disarming" /-->
-    <!-- arrayval field="trtSpec" index="3" value="Placing" /-->
+    <tag group="Skill" tag="skExplsves"/>
 
     <tag group="Skills" tag="Combat"/>
 </thing>
@@ -59,10 +54,8 @@
     isunique="yes"
     description="Use your Heavy Weapons skill when firing heavy-class weapons. If your weapon hangs underslung, feels massive, rotates, and makes terrifying noises when it’s fired, then you’re packing a heavy weapon. Tanks, large vehicles, power-armored sophonts — these all become valid targets when you fire a heavy weapon.">
     <fieldval field="trtAbbrev" value="Hvy"/>
-    
-    <!-- arrayval field="trtSpec" index="0" value="Beam" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Non-Lethal" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Projectile" /-->
+
+    <tag group="Skill" tag="skHvyWeap"/>    
 
     <tag group="Skills" tag="Combat"/>
   </thing>
@@ -75,10 +68,8 @@
     isunique="yes"
     description="Use your Long Guns skill when firing long gun-class weapons. As the weapons of choice for sharpshooters, long guns include high-powered rifles, snipers, and long-range flechette guns. If you want to perch on a building and fire shots across town with pinpoint accuracy, you’ll want some deadly serious Long Gun proficiency.">
     <fieldval field="trtAbbrev" value="Lng"/>
-    
-    <!-- arrayval field="trtSpec" index="0" value="Beam" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Non-Lethal" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Projectile" /-->
+
+    <tag group="Skill" tag="skLongGun"/>    
 
     <tag group="Skills" tag="Combat"/>
   </thing>
@@ -91,11 +82,8 @@
     isunique="yes"
     description="Use your Melee skill for all melee attacks, with or without a weapon. Whether you punch with fists, swipe with claws, slap with nano-engineered chunks of advanced metal embedded in your tentacles, stab with a combat knife, or swing a vibro-halberd over your head, you use the Melee skill when you attack right up in whatever passes for your enemy’s face.">
     <fieldval field="trtAbbrev" value="Mel"/>
-    
-    <!-- arrayval field="trtSpec" index="0" value="Common Weapons" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Exotic Weapons" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Unarmed" /-->
-    <!-- arrayval field="trtSpec" index="3" value="Wrestling" /-->
+
+    <tag group="Skill" tag="skMelee"/>    
 
     <tag group="Skills" tag="Combat"/>
   </thing>
@@ -108,10 +96,8 @@
     isunique="yes"
     description="Use your Pistols skill when firing pistol-class weapons. Hold-outs, fast-draw handguns, and other ranged weapons designed to be held in a single hand (or hand-equivalent appendage) are used with this skill. Pistols are more easily concealable than many other weapons, making them an excellent choice for clandestine operations in places too civilized for slinging a carbine over a shoulder (or shoulder-equivalent joint).">
     <fieldval field="trtAbbrev" value="Pst"/>
-    
-    <!-- arrayval field="trtSpec" index="0" value="Beam" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Non-Lethal" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Projectile" /-->
+
+    <tag group="Skill" tag="skPistol"/>    
 
     <tag group="Skills" tag="Combat"/>
   </thing>
@@ -124,10 +110,8 @@
     isunique="yes"
     description="Use your Scatterguns skill when firing scattergun-class weapons. If your weapon fires a spread of projectiles (or a spray of highenergy particles), use the Scattergun skill. The form factor of scatterguns is like that of many carbines, but these weapons require a different kind of focus and control. Some scatterguns approach heavy weapon-levels of coverage, but they’re still optimal for close quarters combat.">
     <fieldval field="trtAbbrev" value="Sct"/>
-    
-    <!-- arrayval field="trtSpec" index="0" value="Beam" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Non-Lethal" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Projectile" /-->
+
+    <tag group="Skill" tag="skScatter"/>    
 
     <tag group="Skills" tag="Combat"/>
   </thing>
@@ -141,9 +125,7 @@
     description="Use your Stationed Weapons skill when firing stationed weapons. Any weapon that is fixed into a brace, built into a structure, mounted on a swivel, or attached to a vehicle counts as a stationed weapon. You may make any Carbine, Long Gun, Scattergun, or Heavy Weapon into a Stationed Weapon by attaching it to a preinstalled weapons slot that already exists in a vehicle, turret, tripod, or wall. If a pre-installed weapons slot is not available, you may still make your weapon stationed by rolling an Engineering check or Mechanic (Jury-rig) check TN 20. The ability to make weapons stationed is particularly valuable to small sophonts, such as esspererin.">
     <fieldval field="trtAbbrev" value="StW"/>
 
-    <!-- arrayval field="trtSpec" index="0" value="Beam" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Ballistic" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Missile" /-->
+    <tag group="Skill" tag="skStaWeap"/>
     <tag group="Skills" tag="Combat"/>
   </thing>
   
@@ -156,9 +138,7 @@
     description="Use your Thrown Weapons skill to hurl an item at a target. This skill applies no matter what you throw. If you lob a grenade, hurl a spear, or toss a caber, this skill determines your capacity to rain brutality down on your foes. Use this skill also when attacking with a weapon that you throw with the help of an additional tool, like the atl-atl, or a sling and stone.">
     <fieldval field="trtAbbrev" value="Thr"/>
 
-    <!-- arrayval field="trtSpec" index="0" value="Aerodynamic" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Grenades" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Improvised" /-->
+    <tag group="Skill" tag="skThrown"/>
     <tag group="Skills" tag="Combat"/>
   </thing>
   
@@ -170,9 +150,8 @@
     isunique="yes"
     description="Use your Chemistry skill to develop and reverse-engineer chemical compounds, find antitoxins for poisons, manufacture vaccines, and determine the suitability of an atmosphere for a particular form of life. If a task requires a deep understanding of chemical reactions and properties, then you need to perform a Chemistry skill check to complete it.">
     <fieldval field="trtAbbrev" value="Chm"/>
-    
-    <!-- arrayval field="trtSpec" index="0" value="Biochemistry" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Inorganic" /-->
+
+    <tag group="Skill" tag="skChem"/>    
 
     <tag group="Skills" tag="Mental"/>
   </thing>
@@ -186,10 +165,7 @@
     description="Use your Computers skill to hack, program, repair, and protect non-sentient computer systems. It’s also used to perform many tasks that are managed through the use of a computer, like complex data searches and toggling linked security devices. You can even use Computers to interface with an AI, though only through a normal node and with only very basic control.">
     <fieldval field="trtAbbrev" value="Cmp"/>
 
-    <!-- arrayval field="trtSpec" index="0" value="Hacking" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Programming" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Repair" /-->
-    <!-- arrayval field="trtSpec" index="3" value="Security" /-->
+    <tag group="Skill" tag="skCompute"/>
 
     <tag group="Skills" tag="Mental"/>
   </thing>
@@ -203,10 +179,7 @@
     description="Use your Economics skill to interpret the economic landscape, successfully navigate the various galactic stock markets, exploit new financial trends, and find new business contacts throughout the known worlds (including contacts that are unsavory, extralegal, or outright black market ones). The Economics skill tells you where to shop, when to buy, and when to sell, but it isn’t used to broker transactions or settle on a price. For haggling, use Negotiate.">
     <fieldval field="trtAbbrev" value="Ecn"/>
 
-    <!-- arrayval field="trtSpec" index="0" value="Local" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Planetary" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Sector" /-->
-
+    <tag group="Skill" tag="skEcon"/>
     <tag group="Skills" tag="Mental"/>
   </thing>
   
@@ -219,11 +192,7 @@
     description="Use your Engineering skill to design and build ground-based physical structures like skyscrapers, Water elevators, and arcologies, as well as Water-based structures like starships, habitats, and orbital foundries. You can use it to identify important details about buildings and vessels, like good points of forced entry, locations of power conduits, and choice spots for inflicting catastrophic damage.">
     <fieldval field="trtAbbrev" value="Eng"/>
 
-    <!-- arrayval field="trtSpec" index="0" value="Architecture" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Habitats" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Planetary Vehicles" /-->
-    <!-- arrayval field="trtSpec" index="3" value="Vessels" /-->
-
+    <tag group="Skill" tag="skEng"/>
     <tag group="Skills" tag="Mental"/>
   </thing>
   
@@ -236,6 +205,7 @@
     description="They say “necessity is the mother of invention,” and many who said this actually survived the havoc wrought by their inventions. Some even went on to live normal lives. Experimental Sciences goes beyond the deductive epiphanies of Insight, carrying armloads of tools and foolhardy enthusiasm into the realms of the unproven. It goes beyond the kit-bashing of Mechanic (Jury-rig) and steps right into what mundane folk might call “mad science.”">
     <fieldval field="trtAbbrev" value="Exp"/>
 
+    <tag group="Skill" tag="skExpSci"/>
     <tag group="Skills" tag="Mental"/>
   </thing>
   
@@ -247,11 +217,8 @@
     isunique="yes"
     description="Use your History skill to draw on your knowledge of the past to solve current problems. This skill represents your understanding of past events throughout the galaxy. A History check can give you helpful context for the environment in which you find yourself, and can provide the information you need to solve a problem facing the company. You could determine a good course of action through recall of an important precedent, and might even put yourself in the shoes of historical figures for a bit of inspiration.">
     <fieldval field="trtAbbrev" value="Hst"/>
-    
-    <!-- arrayval field="trtSpec" index="0" value="Military" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Political" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Religious" /-->
-    <!-- arrayval field="trtSpec" index="3" value="Sophont Type (Pick One)" /-->
+
+    <tag group="Skill" tag="skHistory"/>    
 
     <tag group="Skills" tag="Mental"/>
   </thing>
@@ -264,7 +231,8 @@
     isunique="yes"
     description="Use your Insight skill to make deductive leaps beyond the scope of player knowledge. This skill represents your character’s ability to contemplate their sophont-appropriate center of being in order to reach an epiphany. This skill differs from Experimental Sciences in that it focuses on ideas rather than devices, though both skills help to solve problems facing your company.">
     <fieldval field="trtAbbrev" value="Ins"/>
-    
+
+    <tag group="Skill" tag="skInsight"/>    
     <tag group="Skills" tag="Mental"/>
   </thing>
   
@@ -276,10 +244,9 @@
     isunique="yes"
     description="Use your Mechanic skill to repair, maintain, and modify your gear, or build completely new gear. This skill covers weapon modifications, hull patches, and robot repairs. Mechanic checks can also be used to learn how something works, why it’s not working, and when needed, how to make it stop working.">
     <fieldval field="trtAbbrev" value="Mch"/>
+
+    <tag group="Skill" tag="skMech"/> 
     <tag group="Skills" tag="Mental"/>
-    <!-- arrayval field="trtSpec" index="0" value="Build" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Jury-Rig" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Repair"-->
   </thing>
   
   <!-- Medicine Skill -->
@@ -290,10 +257,9 @@
     isunique="yes"
     description="Use your Medicine skill to heal organic sophonts. You may also use this skill to diagnose illnesses, determine cause of a death, and answer all manner of questions about the physiology of a body, be it living or dead. Most of the time, though, you’ll make Medicine checks to plug bullet holes in your comrades, keeping them operational enough to point their weapons.">
     <fieldval field="trtAbbrev" value="Med"/>
+
+    <tag group="Skill" tag="skMedic"/> 
     <tag group="Skills" tag="Mental"/>
-    <!-- arrayval field="trtSpec" index="0" value="Battlefield" /-->
-    <!-- arrayval field="trtSpec" index="1" value="First Aid" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Surgery" /-->
   </thing>
   
   <!-- Research Skill -->
@@ -304,6 +270,8 @@
     isunique="yes"
     description="Use your Research skill to quickly (but temporarily) increase your knowledge in a specific area, using your hypernet connection. This can translate to a boost with an upcoming skill check.">
     <fieldval field="trtAbbrev" value="Res"/>
+
+    <tag group="Skill" tag="skRes"/> 
     <tag group="Skills" tag="Mental"/>
   </thing>
   
@@ -315,8 +283,9 @@
     isunique="yes"
     description="Use your Xenobiology skill to determine information about the physiology of the myriad sophont types and non-intelligent species populating the galaxy in the 31st century. There are hundreds of thousands of disparate family trees of biology in the galaxy, and with training in Xenobiology you can quickly ascertain what it is you’re looking at. A successful Xenobiology check might tell you how to make non-lethal attacks against a creature, how to make it sick, or how sick it will make you if you eat it. Players can use this skill to ask all manner of physiological questions about a creature.">
     <fieldval field="trtAbbrev" value="Xen"/>
+
+    <tag group="Skill" tag="skXeno"/> 
     <tag group="Skills" tag="Mental"/>
-    <!-- arrayval field="trtSpec" index="0" value="Per World of Origin" /-->
   </thing>
   
   <!-- Air Vehicles Skill -->
@@ -327,11 +296,9 @@
     isunique="yes"
     description="Use your Air Vehicles skill to maneuver small air vehicles, regardless of their propulsion. AIs generally pilot large air vehicles that require full crews.">
     <fieldval field="trtAbbrev" value="Air"/>
+
+    <tag group="Skill" tag="skAirVeh"/> 
     <tag group="Skills" tag="Physical"/>
-    <!-- arrayval field="trtSpec" index="0" value="Evasive Action" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Navigation" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Pursuit" /-->
-    <!-- arrayval field="trtSpec" index="3" value ="Stunts" /-->
   </thing>
   
   <!-- Athletics Skill -->
@@ -342,14 +309,9 @@
     isunique="yes"
     description="Use your Athletics skill to engage in nonvehicular movement, whether you’re leaping between buildings in urban areas, swimming through a carbonated hot-spring, or sprinting for cover across an icy plain.">
     <fieldval field="trtAbbrev" value="Ath"/>
+
+    <tag group="Skill" tag="skAthlete"/> 
     <tag group="Skills" tag="Physical"/>
-    <!-- arrayval field="trtSpec" index="0" value="Climbing" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Flight" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Jumping" /-->
-    <!-- arrayval field="trtSpec" index="3" value="Pursuit" /-->
-    <!-- arrayval field="trtSpec" index="4" value="Running" /-->
-    <!-- arrayval field="trtSpec" index="5" value="Strength" /-->
-    <!-- arrayval field="trtSpec" index="6" value ="Swimming" /-->
   </thing>
   
  <!-- Endurance Skill -->
@@ -360,10 +322,9 @@
     isunique="yes"
     description="Use your Endurance skill to absorb more damage, hold your breath for extended periods, or put up a better fight against insidious assaults from things like poison, parasites, and disease. Everyone can resist a variety of physical threats for short periods of time. Endurance improves your staying power against these threats. Ranks in Endurance can even help you extend your lifespan by precious moments when you find yourself on the wrong side of the airlock without the right gear.">
     <fieldval field="trtAbbrev" value="End"/>
+
+    <tag group="Skill" tag="skEndure"/> 
     <tag group="Skills" tag="Physical"/>
-    <!-- arrayval field="trtSpec" index="0" value="Hard Vacuum" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Hold Breath" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Immunological" /-->
   </thing>
    
   <!-- Ground Vehicles Skill -->
@@ -374,11 +335,9 @@
     isunique="yes"
     description="Use your Ground Vehicles skill to maneuver small land vehicles, regardless of their locomotion. AIs generally pilot large land vehicles that require full crews.">
     <fieldval field="trtAbbrev" value="Grn"/>
+
+    <tag group="Skill" tag="skGrndVeh"/> 
     <tag group="Skills" tag="Physical"/>
-    <!-- arrayval field="trtSpec" index="0" value="Evasive Action" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Navigation" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Pursuit" /-->
-    <!-- arrayval field="trtSpec" index="3" value ="Stunts" /-->
   </thing>
    
   <!-- Larceny Skill -->
@@ -389,11 +348,9 @@
     isunique="yes"
     description="Use your Larceny skill to find ways into secured locations, conceal objects with legerdemain, and otherwise acquire things that others would rather you not acquire. Don’t think of Larceny as “crime.” Think of it as “unauthorized property reallocation.” This skill does not cover hidden movement; that’s handled with Stealth.">
     <fieldval field="trtAbbrev" value="Lar"/>
+
+    <tag group="Skill" tag="skLarceny"/> 
     <tag group="Skills" tag="Physical"/>
-    <!-- arrayval field="trtSpec" index="0" value="Breaking & Entering" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Picking Locks" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Picking Pockets" /-->
-    <!-- arrayval field="trtSpec" index="3" value ="Sleight of Hand" /-->
   </thing>
   
   <!-- Perception Skill -->
@@ -404,14 +361,9 @@
     isunique="yes"
     description="Use your Perception skill to interpret your surroundings using whatever sensory input organs (or implants) are available to you. Perception checks test your ability to see, hear, smell, taste, touch, and otherwise sense your environment. Any time the story hinges on whether a character senses something, roll Perception.">
     <fieldval field="trtAbbrev" value="Per"/>
+
+    <tag group="Skill" tag="skPercept"/> 
     <tag group="Skills" tag="Physical"/>
-    <!-- arrayval field="trtSpec" index="0" value="Hearing" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Magnetic" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Sight" /-->
-    <!-- arrayval field="trtSpec" index="3" value="Smell" /-->
-    <!-- arrayval field="trtSpec" index="4" value="Taste" /-->
-    <!-- arrayval field="trtSpec" index="5" value="Thermal" /-->
-    <!-- arrayval field="trtSpec" index="6" value ="Touch" /-->
   </thing>
     
   <!-- Water Vehicles Skill -->
@@ -422,11 +374,9 @@
     isunique="yes"
     description="Use your Space Vehicles skill to maneuver small Space vehicles, regardless of their propulsion. AIs generally pilot large Space vehicles that require full crews.">
     <fieldval field="trtAbbrev" value="Spc"/>
+
+    <tag group="Skill" tag="skSpcVeh"/> 
     <tag group="Skills" tag="Physical"/>
-    <!-- arrayval field="trtSpec" index="0" value="Evasive Action" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Navigation" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Pursuit" /-->
-    <!-- arrayval field="trtSpec" index="3" value ="Stunts" /-->
   </thing>
   
   <!-- Stealth Skill -->
@@ -437,9 +387,9 @@
     isunique="yes"
     description="Use your Stealth skill to avoid detection — which, if you’re not sold on the concept, is what lets you conserve ammunition, and simultaneously prevent incoming fire and follow enemy grunts back to their leaders.">
     <fieldval field="trtAbbrev" value="Stl"/>
+
+    <tag group="Skill" tag="skStealth"/> 
     <tag group="Skills" tag="Physical"/>
-    <!-- arrayval field="trtSpec" index="0" value="Hiding" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Tailing" /-->
   </thing>
     
   <!-- Water Vehicles Skill -->
@@ -450,11 +400,9 @@
     isunique="yes"
     description="Use your Water Vehicles skill to maneuver small aquatic vehicles, regardless of their locomotion or whether they submerge. AIs generally pilot large ships that require full crews.">
     <fieldval field="trtAbbrev" value="Wat"/>
+
+    <tag group="Skill" tag="skWatVeh"/>    
     <tag group="Skills" tag="Physical"/>
-    <!-- arrayval field="trtSpec" index="0" value="Evasive Action" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Navigation" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Pursuit" /-->
-    <!-- arrayval field="trtSpec" index="3" value ="Stunts" /-->
   </thing>
   
   <!-- Contracts Skill -->
@@ -465,6 +413,8 @@
     isunique="yes"
     description="Use your Contracts skill at the start of every job to negotiate your fees with a client. Your potential employer offers you base compensation, usually ranging from 2–5 Resources. The character making this check rolls using their personal Contracts skill, and applies the modifier from your company’s Reputation.">
     <fieldval field="trtAbbrev" value="Con"/>
+
+    <tag group="Skill" tag="skContract"/>    
     <tag group="Skills" tag="Social"/>
   </thing>
   
@@ -476,10 +426,9 @@
     isunique="yes"
     description="Use your Deceive skill to tell little lies or whole-cloth whoppers, to perform stone-cold bluffs, or assemble super-cool disguises.">
     <fieldval field="trtAbbrev" value="Dec"/>
+
+    <tag group="Skill" tag="skDeceive"/>    
     <tag group="Skills" tag="Social"/>
-    <!-- arrayval field="trtSpec" index="0" value="Bluffing" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Disguise" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Distraction" /-->
   </thing>
   
   <!-- Empathy Skill -->
@@ -490,11 +439,9 @@
     isunique="yes"
     description="Use your Empathy skill to connect with other sophonts. This is a core skill for many characters, including command personnel, religious advisors, and spies. The word may suggest “touchy-feely” kindness and love, but Empathy is ultimately about getting inside another character’s head — sensing their motives, their dreams, and their deepest desires — and then using that information against them.">
     <fieldval field="trtAbbrev" value="Emp"/>
+
+    <tag group="Skill" tag="skEmpathy"/>    
     <tag group="Skills" tag="Social"/>
-    <!-- arrayval field="trtSpec" index="0" value="Gambling" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Gather Info" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Influence" /-->
-    <!-- arrayval field="trtSpec" index="3" value="Read Sophont" /-->
   </thing>
   
   <!-- Inspire Skill -->
@@ -505,10 +452,9 @@
     isunique="yes"
     description="Use your Inspire skill to elicit something special from your troops, to seed attitudes and viewpoints in the masses, and to stoke the fires of romance. The Inspire skill differs from the other Social skills in that it focuses less on manipulating others than prompting them to do something on their own. Politicians, military leaders, motivational speakers, and courtiers typically excel at inspiration.">
     <fieldval field="trtAbbrev" value="Ins"/>
+
+    <tag group="Skill" tag="skInspire"/> 
     <tag group="Skills" tag="Social"/>
-    <!-- arrayval field="trtSpec" index="0" value="Oratory" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Leadership" /-->
-    <!-- arrayval field="trtSpec" index="2" value="Seduction" /-->
   </thing>
   
   <!-- Intimidate Skill -->
@@ -519,7 +465,9 @@
     isunique="yes"
     description="Use your Intimidate skill to loom threateningly over an informant, to rough up an NPC, or to pull a captive into a dark room where a single swinging lamp reveals a set of tools that everybody wishes they didn’t know you had.">
     <fieldval field="trtAbbrev" value="Int"/>
-    <tag group="Skills" tag="Social"/>
+
+    <tag group="Skill" tag="skIntim"/>    
+	<tag group="Skills" tag="Social"/>
   </thing>
   
   <!-- Negotiate Skill -->
@@ -530,7 +478,9 @@
     isunique="yes"
     description="Use your Negotiate skill to bargain and get what you want with a light touch. There are no demands here; this is about getting the most from other people with charm, panache, and a completely non-ironic application of “win/win.”">
     <fieldval field="trtAbbrev" value="Neg"/>
-    <tag group="Skills" tag="Social"/>
+
+    <tag group="Skill" tag="skNegot"/>    
+	<tag group="Skills" tag="Social"/>
   </thing>
     
   <!-- Perform Skill -->
@@ -541,7 +491,9 @@
     isunique="yes"     
     description="Theater! Use your Perform skill to dazzle your targets with a performance they’ll never forget. This skill covers every way you can put on a show, anywhere you want.">
     <fieldval field="trtAbbrev" value="Perf"/>
-    <tag group="Skills" tag="Social"/>
+
+    <tag group="Skill" tag="skPerform"/>    
+	<tag group="Skills" tag="Social"/>
   </thing>
   
   <!-- Willpower Skill -->
@@ -552,9 +504,9 @@
     isunique="yes"     
     description="Use your Willpower skill to resist mental and physical pressure. This skill represents your raw determination. Willpower lets you stick to your guns in an argument, and remain uncowed by guns should a discussion become heated.">
     <fieldval field="trtAbbrev" value="Will"/>
+
+    <tag group="Skill" tag="skWillpow"/>    
     <tag group="Skills" tag="Social"/>
-    <!-- arrayval field="trtSpec" index="0" value="Fortitude" /-->
-    <!-- arrayval field="trtSpec" index="1" value="Tenacity" /-->
   </thing>
   
 </document>

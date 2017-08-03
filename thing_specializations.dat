@@ -4,42 +4,1184 @@
 -->
 
 <document signature="Hero Lab Data">
-	<!-- Carbine Beam Specialization -->
-	<thing
-	  id="spcBeamCar"
-	  name="Beam (Carbines)"
-	  compset="Specialty"
-	  isunique="yes">
-    <fieldval field="spcSkill" value="skCarbine"/>
-	</thing>
+  <!-- Beam Skill Specialty -->
+  <thing
+    id="sp"
+    name="Beam"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skCarbine"/>
+  </thing>
 
 
-	<!-- Carbine Non-Lethal Specialization -->
-	<thing
-	  id="spcNLCar"
-	  name="Non-Lethal (Carbines)"
-	  compset="Specialty"
-	  isunique="yes">
-    <fieldval field="spcSkill" value="skCarbine"/>
-	</thing>
+  <!-- Non-Lethal Skill Specialty -->
+  <thing
+    id="sp"
+    name="Non-Lethal"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skCarbine"/>
+  </thing>
 
 
-	<!-- Projectile Specialization -->
-	<thing
-	  id="spcPrjCar"
-	  name="Projectile (Carbines)"
-	  compset="Specialty"
-	  isunique="yes">
-    <fieldval field="spcSkill" value="skCarbine"/>
-	</thing>
-    
-	<thing
-	  id="spcHstDom"
-	  name="History"
-	  compset="Specialty"
-	  description="History">
-	  <tag group="User" tag="NeedDomain"/>
-	</thing>
+  <!-- Projectile Skill Specialty -->
+  <thing
+    id="sp"
+    name="Projectile"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skCarbine"/>
+  </thing>
 
+
+  <!-- Building Skill Specialty -->
+  <thing
+    id="sp"
+    name="Building"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skExplsves"/>
+  </thing>
+
+
+  <!-- Detecting Skill Specialty -->
+  <thing
+    id="sp"
+    name="Detecting"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skExplsves"/>
+  </thing>
+
+
+  <!-- Disarming Skill Specialty -->
+  <thing
+    id="sp"
+    name="Disarming"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skExplsves"/>
+  </thing>
+
+
+  <!-- Placing Skill Specialty -->
+  <thing
+    id="sp"
+    name="Placing"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skExplsves"/>
+  </thing>
+
+
+  <!-- Beam Skill Specialty -->
+  <thing
+    id="sp"
+    name="Beam"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skHvyWeap"/>
+  </thing>
+
+
+  <!-- Non-Lethal Skill Specialty -->
+  <thing
+    id="sp"
+    name="Non-Lethal"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skHvyWeap"/>
+  </thing>
+
+
+  <!-- Projectile Skill Specialty -->
+  <thing
+    id="sp"
+    name="Projectile"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skHvyWeap"/>
+  </thing>
+
+
+  <!-- Beam Skill Specialty -->
+  <thing
+    id="sp"
+    name="Beam"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skLongGun"/>
+  </thing>
+
+
+  <!-- Non-Lethal Skill Specialty -->
+  <thing
+    id="sp"
+    name="Non-Lethal"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skLongGun"/>
+  </thing>
+
+
+  <!-- Projectile Skill Specialty -->
+  <thing
+    id="sp"
+    name="Projectile"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skLongGun"/>
+  </thing>
+
+  <!-- Common Weapons Skill Specialty -->
+  <thing
+    id="sp"
+    name="Common Weapons"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skMelee"/>
+  </thing>
+
+
+  <!-- Exotic Weapons Skill Specialty -->
+  <thing
+    id="sp"
+    name="Exotic Weapons"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skMelee"/>
+  </thing>
+
+
+  <!-- Unarmed Skill Specialty -->
+  <thing
+    id="sp"
+    name="Unarmed"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skMelee"/>
+  </thing>
+
+
+  <!-- Wrestling Skill Specialty -->
+  <thing
+    id="sp"
+    name="Wrestling"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skMelee"/>
+  </thing>
+
+
+  <!-- Beam Skill Specialty -->
+  <thing
+    id="sp"
+    name="Beam"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skPistol"/>
+  </thing>
+
+
+  <!-- Non-Lethal Skill Specialty -->
+  <thing
+    id="sp"
+    name="Non-Lethal"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skPistol"/>
+  </thing>
+
+
+  <!-- Projectile Skill Specialty -->
+  <thing
+    id="sp"
+    name="Projectile"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skPistol"/>
+  </thing>
+
+
+  <!-- Beam Skill Specialty -->
+  <thing
+    id="sp"
+    name="Beam"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skScatter"/>
+  </thing>
+
+
+  <!-- Non-Lethal Skill Specialty -->
+  <thing
+    id="sp"
+    name="Non-Lethal"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skScatter"/>
+  </thing>
+
+
+  <!-- Projectile Skill Specialty -->
+  <thing
+    id="sp"
+    name="Projectile"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skScatter"/>
+  </thing>
+
+
+  
+  <!-- Beam Skill Specialty -->
+  <thing
+    id="sp"
+    name="Beam"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skStaWeap"/>
+  </thing>
+
+
+  <!-- Ballistic Skill Specialty -->
+  <thing
+    id="sp"
+    name="Ballistic"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skStaWeap"/>
+  </thing>
+
+
+  <!-- Missile Skill Specialty -->
+  <thing
+    id="sp"
+    name="Missile"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skStaWeap"/>
+  </thing>
+
+  <!-- Aerodynamic Skill Specialty -->
+  <thing
+    id="sp"
+    name="Aerodynamic"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skThrown"/>
+  </thing>
+
+
+  <!-- Grenades Skill Specialty -->
+  <thing
+    id="sp"
+    name="Grenades"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skThrown"/>
+  </thing>
+
+
+  <!-- Improvised Skill Specialty -->
+  <thing
+    id="sp"
+    name="Improvised"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skThrown"/>
+  </thing>
+
+  <!-- Biochemistry Skill Specialty -->
+  <thing
+    id="sp"
+    name="Biochemistry"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skChem"/>
+  </thing>
+
+
+  <!-- Inorganic Skill Specialty -->
+  <thing
+    id="sp"
+    name="Inorganic"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skChem"/>
+  </thing>
+
+
+  <!-- Hacking Skill Specialty -->
+  <thing
+    id="sp"
+    name="Hacking"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skCompute"/>
+  </thing>
+
+
+  <!-- Programming Skill Specialty -->
+  <thing
+    id="sp"
+    name="Programming"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skCompute"/>
+  </thing>
+
+
+  <!-- Repair Skill Specialty -->
+  <thing
+    id="sp"
+    name="Repair"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skCompute"/>
+  </thing>
+
+
+  <!-- Security Skill Specialty -->
+  <thing
+    id="sp"
+    name="Security"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skCompute"/>
+  </thing>
+
+
+  <!-- Local Skill Specialty -->
+  <thing
+    id="sp"
+    name="Local"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skEcon"/>
+  </thing>
+
+
+  <!-- Planetary Skill Specialty -->
+  <thing
+    id="sp"
+    name="Planetary"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skEcon"/>
+  </thing>
+
+
+  <!-- Sector Skill Specialty -->
+  <thing
+    id="sp"
+    name="Sector"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skEcon"/>
+  </thing>
+
+
+  <tag group="Skill" tag="skEng"/>
+  <!-- Architecture Skill Specialty -->
+  <thing
+    id="sp"
+    name="Architecture"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    tagroup
+  </thing>
+
+
+  <!-- Habitats Skill Specialty -->
+  <thing
+    id="sp"
+    name="Habitats"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    tagroup
+  </thing>
+
+
+  <!-- Planetary Vehicles Skill Specialty -->
+  <thing
+    id="sp"
+    name="Planetary Vehicles"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    tagroup
+  </thing>
+
+
+  <!-- Vessels Skill Specialty -->
+  <thing
+    id="sp"
+    name="Vessels"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    tagroup
+  </thing>
+
+
+  <!-- Military Skill Specialty -->
+  <thing
+    id="sp"
+    name="Military"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skHistory"/>
+  </thing>
+
+
+  <!-- Political Skill Specialty -->
+  <thing
+    id="sp"
+    name="Political"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skHistory"/>
+  </thing>
+
+
+  <!-- Religious Skill Specialty -->
+  <thing
+    id="sp"
+    name="Religious"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skHistory"/>
+  </thing>
+
+
+  <!-- Sophont Type (Pick One) Skill Specialty -->
+  <thing
+    id="sp"
+    name="Sophont Type"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skHistory"/>
+  	<tag group="User" tag="NeedDomain"/>
+    </thing>
+
+
+  <!-- Build Skill Specialty -->
+  <thing
+    id="sp"
+    name="Build"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skMech"/>
+  </thing>
+
+
+  <!-- Jury-Rig Skill Specialty -->
+  <thing
+    id="sp"
+    name="Jury-Rig"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skMech"/>
+  </thing>
+
+
+  <!-- Repair Skill Specialty -->
+  <thing
+    id="sp"
+    name="Repair"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skMech"/>
+  </thing>
+
+
+  <!-- Battlefield Skill Specialty -->
+  <thing
+    id="sp"
+    name="Battlefield"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skMedic"/>
+  </thing>
+
+
+  <!-- First Aid Skill Specialty -->
+  <thing
+    id="sp"
+    name="First Aid"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skMedic"/>
+  </thing>
+
+
+  <!-- Surgery Skill Specialty -->
+  <thing
+    id="sp"
+    name="Surgery"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skMedic"/>
+  </thing>
+
+
+  <!-- Per World of Origin Skill Specialty -->
+  <thing
+    id="sp"
+    name="Per World of Origin"
+    compset="Speciality"
+    isunique="no"
+    description="">
+    <tag group="Skill" tag="skXeno"/>
+  	<tag group="User" tag="NeedDomain"/>
+  </thing>
+
+
+  <!-- Evasive Action Skill Specialty -->
+  <thing
+    id="sp"
+    name="Evasive Action"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skAirVeh"/>
+  </thing>
+
+
+  <!-- Navigation Skill Specialty -->
+  <thing
+    id="sp"
+    name="Navigation"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skAirVeh"/>
+  </thing>
+
+
+  <!-- Pursuit Skill Specialty -->
+  <thing
+    id="sp"
+    name="Pursuit"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skAirVeh"/>
+  </thing>
+
+
+  <!-- Climbing Skill Specialty -->
+  <thing
+    id="sp"
+    name="Climbing"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skAthlete"/>
+  </thing>
+
+
+  <!-- Flight Skill Specialty -->
+  <thing
+    id="sp"
+    name="Flight"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skAthlete"/>
+  </thing>
+
+
+  <!-- Jumping Skill Specialty -->
+  <thing
+    id="sp"
+    name="Jumping"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skAthlete"/>
+  </thing>
+
+
+  <!-- Pursuit Skill Specialty -->
+  <thing
+    id="sp"
+    name="Pursuit"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skAthlete"/>
+  </thing>
+
+
+  <!-- Running Skill Specialty -->
+  <thing
+    id="sp"
+    name="Running"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skAthlete"/>
+  </thing>
+
+
+  <!-- Strength Skill Specialty -->
+  <thing
+    id="sp"
+    name="Strength"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skAthlete"/>
+  </thing>
+
+
+  <!-- Hard Vacuum Skill Specialty -->
+  <thing
+    id="sp"
+    name="Hard Vacuum"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skEndure"/>
+  </thing>
+
+
+  <!-- Hold Breath Skill Specialty -->
+  <thing
+    id="sp"
+    name="Hold Breath"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skEndure"/>
+  </thing>
+
+
+  <!-- Immunological Skill Specialty -->
+  <thing
+    id="sp"
+    name="Immunological"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skEndure"/>
+  </thing>
+
+
+  <!-- Evasive Action Skill Specialty -->
+  <thing
+    id="sp"
+    name="Evasive Action"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skGrndVeh"/>
+  </thing>
+
+
+  <!-- Navigation Skill Specialty -->
+  <thing
+    id="sp"
+    name="Navigation"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skGrndVeh"/>
+  </thing>
+
+
+  <!-- Pursuit Skill Specialty -->
+  <thing
+    id="sp"
+    name="Pursuit"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skGrndVeh"/>
+  </thing>
+
+  <!-- Breaking & Entering Skill Specialty -->
+  <thing
+    id="sp"
+    name="Breaking & Entering"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skLarceny"/>
+  </thing>
+
+
+  <!-- Picking Locks Skill Specialty -->
+  <thing
+    id="sp"
+    name="Picking Locks"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skLarceny"/>
+  </thing>
+
+
+  <!-- Picking Pockets Skill Specialty -->
+  <thing
+    id="sp"
+    name="Picking Pockets"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skLarceny"/>
+  </thing>
+
+
+  <!-- Hearing Skill Specialty -->
+  <thing
+    id="sp"
+    name="Hearing"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skPercept"/>
+  </thing>
+
+
+  <!-- Magnetic Skill Specialty -->
+  <thing
+    id="sp"
+    name="Magnetic"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skPercept"/>
+  </thing>
+
+
+  <!-- Sight Skill Specialty -->
+  <thing
+    id="sp"
+    name="Sight"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skPercept"/>
+  </thing>
+
+
+  <!-- Smell Skill Specialty -->
+  <thing
+    id="sp"
+    name="Smell"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skPercept"/>
+  </thing>
+
+
+  <!-- Taste Skill Specialty -->
+  <thing
+    id="sp"
+    name="Taste"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skPercept"/>
+  </thing>
+
+
+  <!-- Thermal Skill Specialty -->
+  <thing
+    id="sp"
+    name="Thermal"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skPercept"/>
+  </thing>
+
+
+  <!-- Evasive Action Skill Specialty -->
+  <thing
+    id="sp"
+    name="Evasive Action"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skSpcVeh"/>
+  </thing>
+
+
+  <!-- Navigation Skill Specialty -->
+  <thing
+    id="sp"
+    name="Navigation"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skSpcVeh"/>
+  </thing>
+
+
+  <!-- Pursuit Skill Specialty -->
+  <thing
+    id="sp"
+    name="Pursuit"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skSpcVeh"/>
+  </thing>
+
+
+  <!-- Hiding Skill Specialty -->
+  <thing
+    id="sp"
+    name="Hiding"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skStealth"/>
+  </thing>
+
+
+  <!-- Tailing Skill Specialty -->
+  <thing
+    id="sp"
+    name="Tailing"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skStealth"/>
+  </thing>
+
+
+  <!-- Evasive Action Skill Specialty -->
+  <thing
+    id="sp"
+    name="Evasive Action"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skWatVeh"/>
+  </thing>
+
+
+  <!-- Navigation Skill Specialty -->
+  <thing
+    id="sp"
+    name="Navigation"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skWatVeh"/>
+  </thing>
+
+
+  <!-- Pursuit Skill Specialty -->
+  <thing
+    id="sp"
+    name="Pursuit"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skWatVeh"/>
+  </thing>
+
+
+  <!-- Bluffing Skill Specialty -->
+  <thing
+    id="sp"
+    name="Bluffing"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skDeceive"/>
+  </thing>
+
+
+  <!-- Disguise Skill Specialty -->
+  <thing
+    id="sp"
+    name="Disguise"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skDeceive"/>
+  </thing>
+
+
+  <!-- Distraction Skill Specialty -->
+  <thing
+    id="sp"
+    name="Distraction"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skDeceive"/>
+  </thing>
+
+
+  <!-- Gambling Skill Specialty -->
+  <thing
+    id="sp"
+    name="Gambling"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skEmpathy"/>
+  </thing>
+
+
+  <!-- Gather Info Skill Specialty -->
+  <thing
+    id="sp"
+    name="Gather Info"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skEmpathy"/>
+  </thing>
+
+
+  <!-- Influence Skill Specialty -->
+  <thing
+    id="sp"
+    name="Influence"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skEmpathy"/>
+  </thing>
+
+
+  <!-- Read Sophont Skill Specialty -->
+  <thing
+    id="sp"
+    name="Read Sophont"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skEmpathy"/>
+  </thing>
+
+
+  <!-- Oratory Skill Specialty -->
+  <thing
+    id="sp"
+    name="Oratory"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skInspire"/>
+  </thing>
+
+
+  <!-- Leadership Skill Specialty -->
+  <thing
+    id="sp"
+    name="Leadership"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skInspire"/>
+  </thing>
+
+
+  <!-- Seduction Skill Specialty -->
+  <thing
+    id="sp"
+    name="Seduction"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skInspire"/>
+  </thing>
+
+  <!-- Coercion Skill Specialty -->
+  <thing
+    id="sp"
+    name="Coercion"
+    compset="Speciality"
+    isunique="yes"
+    description="">
 	
+    <tag group="Skill" tag="skIntim"/>
+  </thing>
+
+  <!-- Interrogation Skill Specialty -->
+  <thing
+    id="sp"
+    name="Interrogation"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+	
+    <tag group="Skill" tag="skIntim"/>
+  
+  </thing>
+  
+  <!-- Torture Skill Specialty -->
+  <thing
+    id="sp"
+    name="Torture"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+	
+    <tag group="Skill" tag="skIntim"/>
+  </thing>
+
+
+  <!-- Persuasion Skill Specialty -->
+  <thing
+    id="sp"
+    name="Persuasion"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+	
+    <tag group="Skill" tag="skNegot"/>
+  </thing>
+
+  <!-- Haggling Skill Specialty -->
+  <thing
+    id="sp"
+    name="Haggling"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+	
+    <tag group="Skill" tag="skNegot"/>
+  
+  </thing>
+  
+  <!-- Black Market Skill Specialty -->
+  <thing
+    id="sp"
+    name="Black Market"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+	
+    <tag group="Skill" tag="skNegot"/>
+  </thing>
+  
+  <!-- Acting Skill Specialty -->
+  <thing
+    id="sp"
+    name="Acting"
+    compset="Specialty"
+    isunique="yes"
+    description="">
+
+    <tag group="Skill" tag="skPerform"/>
+  </thing>
+
+
+  <!-- Comedy Skill Specialty -->
+  <thing
+    id="sp"
+    name="Comedy"
+    compset="Specialty"
+    isunique="yes"
+    description="">
+
+    <tag group="Skill" tag="skPerform"/>
+  </thing>
+
+
+  <!-- Dance Skill Specialty -->
+  <thing
+    id="sp"
+    name="Dance"
+    compset="Specialty"
+    isunique="yes"
+    description="">
+
+    <tag group="Skill" tag="skPerform"/>
+  </thing>
+
+
+  <!-- Song Skill Specialty -->
+  <thing
+    id="sp"
+    name="Song"
+    compset="Specialty"
+    isunique="yes"
+    description="">
+
+    <tag group="Skill" tag="skPerform"/>
+  </thing>
+
+  <!-- Fortitude Skill Specialty -->
+  <thing
+    id="sp"
+    name="Fortitude"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skWillpow"/>
+  </thing>
+
+
+  <!-- Tenacity Skill Specialty -->
+  <thing
+    id="sp"
+    name="Tenacity"
+    compset="Speciality"
+    isunique="yes"
+    description="">
+    <tag group="Skill" tag="skWillpow"/>
+  </thing>
 </document>

@@ -163,7 +163,50 @@
 	<value id="Physical"/>
 	<value id="Social"/>
 	</group>
-	
+  
+  <group
+    id="Skill"
+    dynamic="yes">
+		<value id="skCarbine" name="Carbines"/>
+		<value id="skDodge" name="Dodge"/>
+		<value id="skExplsves" name="Explosives"/>
+		<value id="skHvyWeap" name="Heavy Weapons"/>
+		<value id="skLongGun" name="Long Gun"/>
+		<value id="skMelee" name="Melee"/>
+		<value id="skPistol" name="Pistols"/>
+		<value id="skScatter" name="Scatterguns"/>
+		<value id="skStaWeap" name="Stationed Weapons"/>
+		<value id="skThrown" name="Thrown Weapons"/>
+		<value id="skChem" name="Chemistry"/>
+		<value id="skCompute" name="Computers"/>
+		<value id="skEcon" name="Economics"/>
+		<value id="skEng" name="Engineering"/>
+		<value id="skExpSci" name="Experimental Sciences"/>
+		<value id="skHistory" name="History"/>
+		<value id="skInsight" name="Insight"/>
+		<value id="skMech" name="Mechanic"/>
+		<value id="skMedic" name="Medicine"/>
+		<value id="skRes" name="Research"/>
+		<value id="skXeno" name="Xenobiology"/>
+		<value id="skAirVeh" name="Air Vehicles"/>
+		<value id="skAthlete" name="Athletics"/>
+		<value id="skEndure" name="Endurance"/>
+		<value id="skGrndVeh" name="Ground Vehicles"/>
+		<value id="skLarceny" name="Larceny"/>
+		<value id="skPercept" name="Perception"/>
+		<value id="skSpcVeh" name="Space Vehicles"/>
+		<value id="skStealth" name="Stealth"/>
+		<value id="skWatVeh" name="Water Vehicles"/>
+		<value id="skContract" name="Contracts"/>
+		<value id="skDeceive" name="Deceive"/>
+		<value id="skEmpathy" name="Empathy"/>
+		<value id="skInspire" name="Inspire"/>
+		<value id="skIntim" name="Intimidate"/>
+		<value id="skNegot" name="Negotiate"/>
+		<value id="skPerform" name="Perform"/>
+		<value id="skWillpow" name="Willpower"/>
+		</group>  
+		
   <!-- Hide group - controls whether things are hidden in certain contexts
         In the same way that the HideTab group controls which panels are made visible
         for a given character, the Hide group controls the visibiliy of individual

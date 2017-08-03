@@ -51,7 +51,7 @@
         ]]></finalize>
       </field>
 
-    <!-- Gear cost -->
+    <!-- Gear cost (in supplies) -->
     <field
       id="grCost"
       name="Cost"
@@ -527,28 +527,27 @@
       name="Defense Adjustment"
       type="derived">
       </field>
-
-    <!-- Minimum strength required to use the equipment -->
+	  
+	<!-- Damage Reduction adjustment conferred by the equipment -->
     <field
-      id="defStrReq"
-      name="Minimum Strength"
-      type="static">
+      id="defDR"
+      name="Damage Reduction"
+      type="derived">
       </field>
-
-    <!-- If equipped and the minimum strength isn't satisfied, apply any penalty and
-        mark ourselves as not satisfying the requirement -->
-    <eval index="1" phase="Final" priority="5000"><![CDATA[
-      ~if the minimum strength is satisfied, there's nothing to do
-      
-      ~assign a tag to indicate the requirement isn't met
-      perform assign[Helper.BadStrReq]
-
-      ~if not equipped, there's nothing more to do
-      doneif (field[grIsEquip].value = 0)
-
-      ~apply any general penalty required (e.g. defense penalties or the like)
-      ~.... add code here ....
-      ]]></eval>
+	  
+	<!-- Hull Points adjustment conferred by the equipment -->
+    <field
+      id="defHP"
+      name="Hull Points"
+      type="derived">
+      </field>
+	  
+	<!-- Qualities associated with this equipment -->  
+	<field
+	  id="defQuals"
+	  name="Qualities"
+	  type="derived"
+	  </field>
 
     <!-- Apply effects of the equipped armor/shield -->
     <eval index="2" phase="PreTraits" priority="5000">
@@ -557,20 +556,13 @@
       ~if this gear is not equipped, skip it
       doneif (field[grIsEquip].value = 0)
 
+	  ~Stacked armor should work by applying the lowest
+	  ~defense and the highest DR.
+	  
       ~apply the appropriate trait adjustments for the equipment
       #traitbonus[trDefense] += field[defDefense].value
+      #traitbonus[trDR] += field[defDR].value
       ]]></eval>
-
-    <!-- Check the strength requirement, which we only treat as a problem for things. -->
-    <prereq message="Strength requirement not met.">
-      <validate><![CDATA[
-        ~if this is a pick, we're valid
-        ~NOTE! We assume that equipping an item without the strength just applies penalties.
-        validif (@ispick <> 0)
-
-        ~verify whether we meet the strength requirement
-        ]]></validate>
-      </prereq>
 
     </component>
 

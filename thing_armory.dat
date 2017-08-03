@@ -17,27 +17,55 @@
 
   <!-- Natural armor is automatically equipped -->
   <thing
-    id="armNatural"
-    name="Natural Armor"
+    id="armKreely"
+    name="Kreely Armor"
     compset="Armor"
-    description="Description goes here"
+    description="Kreely armor provides +1 DEF and +5 DR verus Melee attacks"
     isunique="yes"
     holdable="no">
     <fieldval field="defDefense" value="1"/>
+    <fieldval field="defDR" value="5"/>
     <tag group="Equipment" tag="Natural"/>
     <tag group="Equipment" tag="AutoEquip"/>
     </thing>
 
-  <!-- Sample armor -->
+  <!-- CD&P Corporate Raider, models CR-110 to CR-190 -->
   <thing
-    id="armSample"
-    name="Sample Armor"
+    id="armCRlght"
+    name="CD&P Corporate Raider"
     compset="Armor"
-    description="Description goes here">
+    description="Raider (CR) series of suits offers strong protection in an expensive but not particularly stylish package. Designed primarily for humans in corporate environments, each of these suits looks just like a shirt, suit-coat, and tie, but is woven with a blend of handsome fabrics, flexible ripstop synthetic super-silk, and bullet-stopping fullerene fibers.">
     <fieldval field="defDefense" value="1"/>
-    <fieldval field="defStrReq" value="3"/>
-    <fieldval field="grCost" value="100"/>
-    <fieldval field="gearWeight" value="15"/>
+    <fieldval field="defDR" value="1"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQual" value="N/A"/>
+    <fieldval field="grCost" value="3"/>
+    </thing>
+
+  <!-- CD&P Citizen Soldier -->
+  <thing
+    id="armCDPcs"
+    name="CD&P Citizen Soldier"
+    compset="Armor"
+    description="The Citizen Soldier (CS) series from Cobbold is a favorite of deep-cover operatives across hundreds of systems. Thousands of civilian outfits, including numerous “skimpy” ones, have been mimicked by the engineers at Cobbold, letting soldiers mingle with anonymous confidence until the hammer falls. These suits don’t offer quite as much coverage as many obvious models, but even the CS-909 Bikini can stop more bullets than a regular bikini would — assuming, of course, that it’s worn correctly by someone trained in its use. There’s also the discreet “no, really, it’s just my handbag” CS-909a, which can be wielded as a small personal shield when the need arises.">
+    <fieldval field="defDefense" value="2"/>
+    <fieldval field="defDR" value="2"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQual" value="Requires 1 action to engage full protection. Otherwise 1/1."/>
+    <fieldval field="grCost" value="6"/>
+    </thing>
+
+  <!-- Malott M&M V-44 Whisperskin -->
+  <thing
+    id="armWhspr"
+    name="Malott M&M V-44 Whisperskin"
+    compset="Armor"
+    description="There are numerous skin-tight carbon fullerene suits on the market. The Malott M&M V-44 Whisperskin is one of the most popular of these suits, and is a good representative example. Woven from fullerene single-thread, piezosilk, and a suite of skin-friendly materials, the V-44 fits as snugly as a sheer leotard while providing full protection from small arms fire. It is unobtrusive and extremely stylish if you have the physique to work its particular look.<BR/><BR/> Whether you have the physique for this suit or not, you may choose to wear layers over it — and yes, you can even wear other armor over it. Want to look really tough and stop bullets like a backstop? Slip a Troublemaker suit over your Whisperskin and command the respect you deserve.<BR/><BR/> Many soldiers wear the V-44 beneath their standard issue uniforms, granting them extra defense without violating their organization’s dress code.">
+    <fieldval field="defDefense" value="3"/>
+    <fieldval field="defDR" value="2"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQual" value="Can fit under clothes and stacks with other armor"/>
+    <fieldval field="grCost" value="4"/>
     </thing>
 
   <!-- Sample shield -->
