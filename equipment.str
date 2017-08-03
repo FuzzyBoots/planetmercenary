@@ -306,13 +306,6 @@
       maxlength="20">
       </field>
 
-    <!-- Minimum strength required to wield -->
-    <field
-      id="wpStrReq"
-      name="Minimum Strength"
-      type="static">
-      </field>
-
     <!-- Special details about the weapon -->
     <field
       id="wpSpecial"
@@ -329,13 +322,6 @@
       maxlength="250">
       </field>
 
-    <!-- Weapon penalty -->
-    <field
-      id="wpPenalty"
-      name="Weapon Penalty"
-      type="derived">
-      </field>
-
     <!-- Net attack roll for weapon -->
     <field
       id="wpNetAtk"
@@ -345,24 +331,6 @@
 
     <!-- Weapons require one hand by default (unless natural) -->
     <tag group="Equipment" tag="Hand"/>
-
-    <!-- If equipped and the minimum strength isn't satisfied, apply any penalty and
-        mark ourselves as not satisfying the requirement -->
-    <eval index="1" phase="Final" priority="5000"><![CDATA[
-      ~if the minimum strength is satisfied, there's nothing to do
-      
-      ~assign a tag to indicate the requirement isn't met
-      perform assign[Helper.BadStrReq]
-
-      ~apply any penalty required with the specific weapon
-      field[wpPenalty].value = -1
-
-      ~if not equipped, there's nothing more to do
-      doneif (field[grIsEquip].value = 0)
-
-      ~apply any general penalty required (e.g. defense penalties or the like)
-      ~.... add code here ....
-      ]]></eval>
 
     <!-- Assign any derived special notes to the appropriate field -->
     <eval index="2" phase="Render" priority="1000"><![CDATA[
@@ -384,16 +352,6 @@
       ~we've synthesized the notes for the weapon
       field[wpNotes].text = special
       ]]></eval>
-
-    <!-- Check the strength requirement, which we only treat as a problem for things. -->
-    <prereq message="Strength requirement not met.">
-      <validate><![CDATA[
-        ~if this is a pick, we're valid
-        ~NOTE! We assume that equipping an item without the strength just applies penalties.
-        validif (@ispick <> 0)
-        
-        ]]></validate>
-      </prereq>
 
     </component>
 
@@ -537,7 +495,7 @@
 	  
 	<!-- Hull Points adjustment conferred by the equipment -->
     <field
-      id="defHP"
+      id="defHull"
       name="Hull Points"
       type="derived">
       </field>
@@ -546,7 +504,7 @@
 	<field
 	  id="defQuals"
 	  name="Qualities"
-	  type="derived"
+	  type="derived"> 
 	  </field>
 
     <!-- Apply effects of the equipped armor/shield -->

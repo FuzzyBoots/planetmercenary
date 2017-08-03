@@ -58,22 +58,17 @@
       <bound phase="Traits" priority="1000" name="Bound trtUser">
         <before name="Calc trtFinal"/><![CDATA[
         @minimum = field[trtBase].value + field[trtMinimum].value
-        if (hero.tagis[mode.creation] + !autonomous >= 2) then
+        if (hero.tagis[mode.creation] = 1) then
           @maximum = field[trtMaximum].value
         else
-          @maximum = 200
+          @maximum = 9
         endif
         ]]></bound>
       <!-- Final value for display is the fully adjusted net value that incorporates
             all adjustments from other sources
       -->
       <finalize><![CDATA[
-        ~if we're in creation mode and not autonomous, we can't be modified
-        if (hero.tagis[mode.creation] + !autonomous >= 2) then
-          @text = "{bmp forbidden_up}"
-        else
-          @text = field[trtFinal].value
-          endif
+        @text = field[trtFinal].value
         ]]></finalize>
       </field>
 
@@ -155,14 +150,19 @@
 
     <!-- Every skill is shown on the "Rolls" mouse-over on the Dashboard/TacCon -->
     <tag group="DashTacCon" tag="Rolls"/>
-
+ 
+    <eval index="1" phase="Initialize" priority="3000"><![CDATA[
+      field[trtMinimum].value = 0
+      field[trtMaximum].value = 9
+      ]]></eval>      
+    
     <!-- Track the skill on the actor -->
-    <eval index="1" phase="Setup" priority="5000"><![CDATA[
+    <eval index="2" phase="Setup" priority="5000"><![CDATA[
       perform forward[Skill.?]
       ]]></eval>
     
     <!-- Each skill point that is allocated by the user costs 2 CP -->
-    <eval index="2" phase="Traits" priority="10000">
+    <eval index="3" phase="Traits" priority="10000">
       <before name="Calc resLeft"/>
       <after name="Bound trtUser"/><![CDATA[
       ~if this skill is not added directly to the hero (i.e. an advance), skip it entirely
@@ -187,7 +187,18 @@
       type="static"/>
 	  
 	<tag group="SpecialTab" tag="Specialty"/>
-  </component>    
+  
+  <!-- Each specialty that is allocated by the user costs 2 CP -->
+    <eval index="2" phase="Traits" priority="10000">
+      <before name="Calc resLeft"/>
+      <after name="Bound trtUser"/><![CDATA[
+      ~if this skill is not added directly to the hero (i.e. an advance), skip it entirely
+      doneif (origin.ishero = 0)
+
+      ~adjust the resource appropriately
+      hero.child[resCP].field[resSpent].value += 2
+    ]]></eval>
+</component>    
 
   <!-- Ability component
         Each special ability derives from this component
@@ -403,9 +414,9 @@
   <compset
     id="Specialty">
     <compref component="Specialty"/>
-	  <compref component="SpecialTab"/>
+    <compref component="SpecialTab"/>
     <compref component="Domain"/>
     <compref component="CanAdvance"/>
   </compset>
 
-  </document>
+</document>

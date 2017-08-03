@@ -4,132 +4,132 @@
 -->
 
 <document signature="Hero Lab Data">
-  <!-- Beam Skill Specialty -->
+  <!-- Carbine Beam Skill Specialty -->
   <thing
-    id="sp"
+    id="spCarbBeam"
     name="Beam"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skCarbine"/>
   </thing>
 
 
-  <!-- Non-Lethal Skill Specialty -->
+  <!-- Carbine Non-Lethal Skill Specialty -->
   <thing
-    id="sp"
+    id="spCarbNL"
     name="Non-Lethal"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skCarbine"/>
   </thing>
 
 
-  <!-- Projectile Skill Specialty -->
+  <!-- Carbine Projectile Skill Specialty -->
   <thing
-    id="sp"
+    id="spCarbProj"
     name="Projectile"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skCarbine"/>
   </thing>
 
 
-  <!-- Building Skill Specialty -->
+  <!-- Explosives Building Skill Specialty -->
   <thing
-    id="sp"
+    id="spExpBld"
     name="Building"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skExplsves"/>
   </thing>
 
 
-  <!-- Detecting Skill Specialty -->
+  <!-- Explosives Detecting Skill Specialty -->
   <thing
-    id="sp"
+    id="spExpDet"
     name="Detecting"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skExplsves"/>
   </thing>
 
 
-  <!-- Disarming Skill Specialty -->
+  <!-- Explosives Disarming Skill Specialty -->
   <thing
-    id="sp"
+    id="spExpDearm"
     name="Disarming"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skExplsves"/>
   </thing>
 
 
-  <!-- Placing Skill Specialty -->
+  <!-- Explosives Placing Skill Specialty -->
   <thing
-    id="sp"
+    id="spExpPlac"
     name="Placing"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skExplsves"/>
   </thing>
 
 
-  <!-- Beam Skill Specialty -->
+  <!-- Heavy Weapons Beam Skill Specialty -->
   <thing
-    id="sp"
+    id="spHvyBeam"
     name="Beam"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skHvyWeap"/>
   </thing>
 
 
-  <!-- Non-Lethal Skill Specialty -->
+  <!-- Heavy Weapons Non-Lethal Skill Specialty -->
   <thing
-    id="sp"
+    id="spHvyNL"
     name="Non-Lethal"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skHvyWeap"/>
   </thing>
 
 
-  <!-- Projectile Skill Specialty -->
+  <!-- Heavy Weapons Projectile Skill Specialty -->
   <thing
-    id="sp"
+    id="spHvyProj"
     name="Projectile"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skHvyWeap"/>
   </thing>
 
 
-  <!-- Beam Skill Specialty -->
+  <!-- Long Guns Beam Skill Specialty -->
   <thing
-    id="sp"
+    id="spLongBeam"
     name="Beam"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skLongGun"/>
   </thing>
 
 
-  <!-- Non-Lethal Skill Specialty -->
+  <!-- Long Guns Non-Lethal Skill Specialty -->
   <thing
-    id="sp"
+    id="spLongNL"
     name="Non-Lethal"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skLongGun"/>
@@ -138,9 +138,9 @@
 
   <!-- Projectile Skill Specialty -->
   <thing
-    id="sp"
+    id="spLongProj"
     name="Projectile"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skLongGun"/>
@@ -148,9 +148,9 @@
 
   <!-- Common Weapons Skill Specialty -->
   <thing
-    id="sp"
+    id="spMeleeCom"
     name="Common Weapons"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skMelee"/>
@@ -159,9 +159,9 @@
 
   <!-- Exotic Weapons Skill Specialty -->
   <thing
-    id="sp"
+    id="spMeleeEx"
     name="Exotic Weapons"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skMelee"/>
@@ -170,9 +170,9 @@
 
   <!-- Unarmed Skill Specialty -->
   <thing
-    id="sp"
+    id="spMeleeUn"
     name="Unarmed"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skMelee"/>
@@ -181,9 +181,9 @@
 
   <!-- Wrestling Skill Specialty -->
   <thing
-    id="sp"
+    id="spMeleeWr"
     name="Wrestling"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skMelee"/>
@@ -192,9 +192,9 @@
 
   <!-- Beam Skill Specialty -->
   <thing
-    id="sp"
+    id="spPistBeam"
     name="Beam"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skPistol"/>
@@ -203,9 +203,9 @@
 
   <!-- Non-Lethal Skill Specialty -->
   <thing
-    id="sp"
+    id="spPistNL"
     name="Non-Lethal"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skPistol"/>
@@ -214,9 +214,9 @@
 
   <!-- Projectile Skill Specialty -->
   <thing
-    id="sp"
+    id="spPistProj"
     name="Projectile"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skPistol"/>
@@ -225,9 +225,9 @@
 
   <!-- Beam Skill Specialty -->
   <thing
-    id="sp"
+    id="spScatBeam"
     name="Beam"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skScatter"/>
@@ -236,9 +236,9 @@
 
   <!-- Non-Lethal Skill Specialty -->
   <thing
-    id="sp"
+    id="spScatNL"
     name="Non-Lethal"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skScatter"/>
@@ -247,9 +247,9 @@
 
   <!-- Projectile Skill Specialty -->
   <thing
-    id="sp"
+    id="spScatProj"
     name="Projectile"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skScatter"/>
@@ -259,9 +259,9 @@
   
   <!-- Beam Skill Specialty -->
   <thing
-    id="sp"
+    id="spStaWBeam"
     name="Beam"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skStaWeap"/>
@@ -270,9 +270,9 @@
 
   <!-- Ballistic Skill Specialty -->
   <thing
-    id="sp"
+    id="spStaWBall"
     name="Ballistic"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skStaWeap"/>
@@ -281,9 +281,9 @@
 
   <!-- Missile Skill Specialty -->
   <thing
-    id="sp"
+    id="spStaWMiss"
     name="Missile"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skStaWeap"/>
@@ -291,9 +291,9 @@
 
   <!-- Aerodynamic Skill Specialty -->
   <thing
-    id="sp"
+    id="spThrwAero"
     name="Aerodynamic"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skThrown"/>
@@ -302,9 +302,9 @@
 
   <!-- Grenades Skill Specialty -->
   <thing
-    id="sp"
+    id="spThrwGren"
     name="Grenades"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skThrown"/>
@@ -313,9 +313,9 @@
 
   <!-- Improvised Skill Specialty -->
   <thing
-    id="sp"
+    id="spThrwImpr"
     name="Improvised"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skThrown"/>
@@ -323,9 +323,9 @@
 
   <!-- Biochemistry Skill Specialty -->
   <thing
-    id="sp"
+    id="spChemBio"
     name="Biochemistry"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skChem"/>
@@ -334,9 +334,9 @@
 
   <!-- Inorganic Skill Specialty -->
   <thing
-    id="sp"
+    id="spChemInrg"
     name="Inorganic"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skChem"/>
@@ -345,9 +345,9 @@
 
   <!-- Hacking Skill Specialty -->
   <thing
-    id="sp"
+    id="spCompHack"
     name="Hacking"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skCompute"/>
@@ -356,9 +356,9 @@
 
   <!-- Programming Skill Specialty -->
   <thing
-    id="sp"
+    id="spCompProg"
     name="Programming"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skCompute"/>
@@ -367,9 +367,9 @@
 
   <!-- Repair Skill Specialty -->
   <thing
-    id="sp"
+    id="spCompRep"
     name="Repair"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skCompute"/>
@@ -378,9 +378,9 @@
 
   <!-- Security Skill Specialty -->
   <thing
-    id="sp"
+    id="spCompSec"
     name="Security"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skCompute"/>
@@ -389,9 +389,9 @@
 
   <!-- Local Skill Specialty -->
   <thing
-    id="sp"
+    id="spEconLcl"
     name="Local"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skEcon"/>
@@ -400,9 +400,9 @@
 
   <!-- Planetary Skill Specialty -->
   <thing
-    id="sp"
+    id="spEconPlan"
     name="Planetary"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skEcon"/>
@@ -411,65 +411,64 @@
 
   <!-- Sector Skill Specialty -->
   <thing
-    id="sp"
+    id="spEconSec"
     name="Sector"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skEcon"/>
   </thing>
 
 
-  <tag group="Skill" tag="skEng"/>
   <!-- Architecture Skill Specialty -->
   <thing
-    id="sp"
+    id="spEngArch"
     name="Architecture"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
-    tagroup
+    <tag group="Skill" tag="skEng"/>
   </thing>
 
 
   <!-- Habitats Skill Specialty -->
   <thing
-    id="sp"
+    id="spEngHab"
     name="Habitats"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
-    tagroup
+    <tag group="Skill" tag="skEng"/>
   </thing>
 
 
   <!-- Planetary Vehicles Skill Specialty -->
   <thing
-    id="sp"
+    id="spEngPlVeh"
     name="Planetary Vehicles"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
-    tagroup
+    <tag group="Skill" tag="skEng"/>
   </thing>
 
 
   <!-- Vessels Skill Specialty -->
   <thing
-    id="sp"
+    id="spEngVess"
     name="Vessels"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
-    tagroup
+    <tag group="Skill" tag="skEng"/>
   </thing>
 
 
   <!-- Military Skill Specialty -->
   <thing
-    id="sp"
+    id="spHistMil"
     name="Military"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skHistory"/>
@@ -478,9 +477,9 @@
 
   <!-- Political Skill Specialty -->
   <thing
-    id="sp"
+    id="spHistPoli"
     name="Political"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skHistory"/>
@@ -489,9 +488,9 @@
 
   <!-- Religious Skill Specialty -->
   <thing
-    id="sp"
+    id="spHistRel"
     name="Religious"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skHistory"/>
@@ -500,9 +499,9 @@
 
   <!-- Sophont Type (Pick One) Skill Specialty -->
   <thing
-    id="sp"
+    id="spHistSoph"
     name="Sophont Type"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skHistory"/>
@@ -512,9 +511,9 @@
 
   <!-- Build Skill Specialty -->
   <thing
-    id="sp"
+    id="spMechBld"
     name="Build"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skMech"/>
@@ -523,9 +522,9 @@
 
   <!-- Jury-Rig Skill Specialty -->
   <thing
-    id="sp"
+    id="spMechJury"
     name="Jury-Rig"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skMech"/>
@@ -534,9 +533,9 @@
 
   <!-- Repair Skill Specialty -->
   <thing
-    id="sp"
+    id="spMechRep"
     name="Repair"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skMech"/>
@@ -545,9 +544,9 @@
 
   <!-- Battlefield Skill Specialty -->
   <thing
-    id="sp"
+    id="spMedBatt"
     name="Battlefield"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skMedic"/>
@@ -556,9 +555,9 @@
 
   <!-- First Aid Skill Specialty -->
   <thing
-    id="sp"
+    id="spMedFAid"
     name="First Aid"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skMedic"/>
@@ -567,9 +566,9 @@
 
   <!-- Surgery Skill Specialty -->
   <thing
-    id="sp"
+    id="spMedSurg"
     name="Surgery"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skMedic"/>
@@ -578,9 +577,9 @@
 
   <!-- Per World of Origin Skill Specialty -->
   <thing
-    id="sp"
+    id="spXenoWrld"
     name="Per World of Origin"
-    compset="Speciality"
+    compset="Specialty"
     isunique="no"
     description="">
     <tag group="Skill" tag="skXeno"/>
@@ -590,9 +589,9 @@
 
   <!-- Evasive Action Skill Specialty -->
   <thing
-    id="sp"
+    id="spAirEvad"
     name="Evasive Action"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skAirVeh"/>
@@ -601,9 +600,9 @@
 
   <!-- Navigation Skill Specialty -->
   <thing
-    id="sp"
+    id="spAirNav"
     name="Navigation"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skAirVeh"/>
@@ -612,9 +611,9 @@
 
   <!-- Pursuit Skill Specialty -->
   <thing
-    id="sp"
+    id="spAirPurs"
     name="Pursuit"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skAirVeh"/>
@@ -623,9 +622,9 @@
 
   <!-- Climbing Skill Specialty -->
   <thing
-    id="sp"
+    id="spAthClmb"
     name="Climbing"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skAthlete"/>
@@ -634,9 +633,9 @@
 
   <!-- Flight Skill Specialty -->
   <thing
-    id="sp"
+    id="spAthFlght"
     name="Flight"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skAthlete"/>
@@ -645,9 +644,9 @@
 
   <!-- Jumping Skill Specialty -->
   <thing
-    id="sp"
+    id="spAthJump"
     name="Jumping"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skAthlete"/>
@@ -656,9 +655,9 @@
 
   <!-- Pursuit Skill Specialty -->
   <thing
-    id="sp"
+    id="spAthPurs"
     name="Pursuit"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skAthlete"/>
@@ -667,9 +666,9 @@
 
   <!-- Running Skill Specialty -->
   <thing
-    id="sp"
+    id="spAthRun"
     name="Running"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skAthlete"/>
@@ -678,9 +677,9 @@
 
   <!-- Strength Skill Specialty -->
   <thing
-    id="sp"
+    id="spAthStr"
     name="Strength"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skAthlete"/>
@@ -689,9 +688,9 @@
 
   <!-- Hard Vacuum Skill Specialty -->
   <thing
-    id="sp"
+    id="spEndVac"
     name="Hard Vacuum"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skEndure"/>
@@ -700,9 +699,9 @@
 
   <!-- Hold Breath Skill Specialty -->
   <thing
-    id="sp"
+    id="spEndHold"
     name="Hold Breath"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skEndure"/>
@@ -711,9 +710,9 @@
 
   <!-- Immunological Skill Specialty -->
   <thing
-    id="sp"
+    id="spEndImmun"
     name="Immunological"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skEndure"/>
@@ -722,9 +721,9 @@
 
   <!-- Evasive Action Skill Specialty -->
   <thing
-    id="sp"
+    id="spGrndEvad"
     name="Evasive Action"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skGrndVeh"/>
@@ -733,9 +732,9 @@
 
   <!-- Navigation Skill Specialty -->
   <thing
-    id="sp"
+    id="spGrndNav"
     name="Navigation"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skGrndVeh"/>
@@ -744,9 +743,9 @@
 
   <!-- Pursuit Skill Specialty -->
   <thing
-    id="sp"
+    id="spGrndPurs"
     name="Pursuit"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skGrndVeh"/>
@@ -754,9 +753,9 @@
 
   <!-- Breaking & Entering Skill Specialty -->
   <thing
-    id="sp"
-    name="Breaking & Entering"
-    compset="Speciality"
+    id="spLarcBE"
+    name="Breaking &amp; Entering"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skLarceny"/>
@@ -765,9 +764,9 @@
 
   <!-- Picking Locks Skill Specialty -->
   <thing
-    id="sp"
+    id="spLarcPLoc"
     name="Picking Locks"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skLarceny"/>
@@ -776,9 +775,9 @@
 
   <!-- Picking Pockets Skill Specialty -->
   <thing
-    id="sp"
+    id="spLarcPPoc"
     name="Picking Pockets"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skLarceny"/>
@@ -787,9 +786,9 @@
 
   <!-- Hearing Skill Specialty -->
   <thing
-    id="sp"
+    id="spPercHear"
     name="Hearing"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skPercept"/>
@@ -798,9 +797,9 @@
 
   <!-- Magnetic Skill Specialty -->
   <thing
-    id="sp"
+    id="spPercMag"
     name="Magnetic"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skPercept"/>
@@ -809,9 +808,9 @@
 
   <!-- Sight Skill Specialty -->
   <thing
-    id="sp"
+    id="spPercSght"
     name="Sight"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skPercept"/>
@@ -820,9 +819,9 @@
 
   <!-- Smell Skill Specialty -->
   <thing
-    id="sp"
+    id="spPercSmll"
     name="Smell"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skPercept"/>
@@ -831,9 +830,9 @@
 
   <!-- Taste Skill Specialty -->
   <thing
-    id="sp"
+    id="spPercTste"
     name="Taste"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skPercept"/>
@@ -842,9 +841,9 @@
 
   <!-- Thermal Skill Specialty -->
   <thing
-    id="sp"
+    id="spPercThrm"
     name="Thermal"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skPercept"/>
@@ -853,9 +852,9 @@
 
   <!-- Evasive Action Skill Specialty -->
   <thing
-    id="sp"
+    id="spSpcEvad"
     name="Evasive Action"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skSpcVeh"/>
@@ -864,9 +863,9 @@
 
   <!-- Navigation Skill Specialty -->
   <thing
-    id="sp"
+    id="spSpcNav"
     name="Navigation"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skSpcVeh"/>
@@ -875,9 +874,9 @@
 
   <!-- Pursuit Skill Specialty -->
   <thing
-    id="sp"
+    id="spSpcPurs"
     name="Pursuit"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skSpcVeh"/>
@@ -886,9 +885,9 @@
 
   <!-- Hiding Skill Specialty -->
   <thing
-    id="sp"
+    id="spStlthHid"
     name="Hiding"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skStealth"/>
@@ -897,9 +896,9 @@
 
   <!-- Tailing Skill Specialty -->
   <thing
-    id="sp"
+    id="spStlthTai"
     name="Tailing"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skStealth"/>
@@ -908,9 +907,9 @@
 
   <!-- Evasive Action Skill Specialty -->
   <thing
-    id="sp"
+    id="spWatrEvad"
     name="Evasive Action"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skWatVeh"/>
@@ -919,9 +918,9 @@
 
   <!-- Navigation Skill Specialty -->
   <thing
-    id="sp"
+    id="spWatrNav"
     name="Navigation"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skWatVeh"/>
@@ -930,9 +929,9 @@
 
   <!-- Pursuit Skill Specialty -->
   <thing
-    id="sp"
+    id="spWatrPurs"
     name="Pursuit"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skWatVeh"/>
@@ -941,9 +940,9 @@
 
   <!-- Bluffing Skill Specialty -->
   <thing
-    id="sp"
+    id="spDecBluff"
     name="Bluffing"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skDeceive"/>
@@ -952,9 +951,9 @@
 
   <!-- Disguise Skill Specialty -->
   <thing
-    id="sp"
+    id="spDecDisg"
     name="Disguise"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skDeceive"/>
@@ -963,9 +962,9 @@
 
   <!-- Distraction Skill Specialty -->
   <thing
-    id="sp"
+    id="spDecDist"
     name="Distraction"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skDeceive"/>
@@ -974,9 +973,9 @@
 
   <!-- Gambling Skill Specialty -->
   <thing
-    id="sp"
+    id="spEmpGamb"
     name="Gambling"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skEmpathy"/>
@@ -985,9 +984,9 @@
 
   <!-- Gather Info Skill Specialty -->
   <thing
-    id="sp"
+    id="spEmpGInfo"
     name="Gather Info"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skEmpathy"/>
@@ -996,9 +995,9 @@
 
   <!-- Influence Skill Specialty -->
   <thing
-    id="sp"
+    id="spEmpInfl"
     name="Influence"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skEmpathy"/>
@@ -1007,9 +1006,9 @@
 
   <!-- Read Sophont Skill Specialty -->
   <thing
-    id="sp"
+    id="spEmpRSoph"
     name="Read Sophont"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skEmpathy"/>
@@ -1018,9 +1017,9 @@
 
   <!-- Oratory Skill Specialty -->
   <thing
-    id="sp"
+    id="spInspOra"
     name="Oratory"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skInspire"/>
@@ -1029,9 +1028,9 @@
 
   <!-- Leadership Skill Specialty -->
   <thing
-    id="sp"
+    id="spInspLead"
     name="Leadership"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skInspire"/>
@@ -1040,9 +1039,9 @@
 
   <!-- Seduction Skill Specialty -->
   <thing
-    id="sp"
+    id="spInspSed"
     name="Seduction"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skInspire"/>
@@ -1050,9 +1049,9 @@
 
   <!-- Coercion Skill Specialty -->
   <thing
-    id="sp"
+    id="spIntCoer"
     name="Coercion"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
 	
@@ -1061,9 +1060,9 @@
 
   <!-- Interrogation Skill Specialty -->
   <thing
-    id="sp"
+    id="spIntInter"
     name="Interrogation"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
 	
@@ -1073,9 +1072,9 @@
   
   <!-- Torture Skill Specialty -->
   <thing
-    id="sp"
+    id="spIntTort"
     name="Torture"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
 	
@@ -1085,9 +1084,9 @@
 
   <!-- Persuasion Skill Specialty -->
   <thing
-    id="sp"
+    id="spNegPers"
     name="Persuasion"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
 	
@@ -1096,9 +1095,9 @@
 
   <!-- Haggling Skill Specialty -->
   <thing
-    id="sp"
+    id="spNegHagg"
     name="Haggling"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
 	
@@ -1108,9 +1107,9 @@
   
   <!-- Black Market Skill Specialty -->
   <thing
-    id="sp"
+    id="spNegBlck"
     name="Black Market"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
 	
@@ -1119,7 +1118,7 @@
   
   <!-- Acting Skill Specialty -->
   <thing
-    id="sp"
+    id="spPerfAct"
     name="Acting"
     compset="Specialty"
     isunique="yes"
@@ -1131,7 +1130,7 @@
 
   <!-- Comedy Skill Specialty -->
   <thing
-    id="sp"
+    id="spPerfCom"
     name="Comedy"
     compset="Specialty"
     isunique="yes"
@@ -1143,7 +1142,7 @@
 
   <!-- Dance Skill Specialty -->
   <thing
-    id="sp"
+    id="spPerfDnce"
     name="Dance"
     compset="Specialty"
     isunique="yes"
@@ -1155,7 +1154,7 @@
 
   <!-- Song Skill Specialty -->
   <thing
-    id="sp"
+    id="spPerfSong"
     name="Song"
     compset="Specialty"
     isunique="yes"
@@ -1166,9 +1165,9 @@
 
   <!-- Fortitude Skill Specialty -->
   <thing
-    id="sp"
+    id="spWillFort"
     name="Fortitude"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skWillpow"/>
@@ -1177,9 +1176,9 @@
 
   <!-- Tenacity Skill Specialty -->
   <thing
-    id="sp"
+    id="spWillTena"
     name="Tenacity"
-    compset="Speciality"
+    compset="Specialty"
     isunique="yes"
     description="">
     <tag group="Skill" tag="skWillpow"/>

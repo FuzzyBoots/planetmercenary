@@ -291,10 +291,6 @@
     ~report the damage rating of the weapon
     iteminfo &= "Damage Rating: " & field[wpDamage].text & "{br}"
 
-    ~report the minimum strength requirement (omitting if there is none)
-    if (field[wpStrReq].value > 0) then
-      iteminfo &= "Minimum Strength: " & field[wpStrReq].text & "{br}"
-      endif
     ]]></procedure>
 
 
@@ -372,10 +368,9 @@
     ~add the defense rating
     iteminfo &= "Defense: " & field[defDefense].text & "{br}"
 
-    ~report the minimum strength requirement (omitting if there is none)
-    if (field[defStrReq].value > 0) then
-      iteminfo &= "Minimum Strength: " & field[defStrReq].text & "{br}"
-      endif
+    ~report the damage resistance
+    iteminfo &= "DR: " & field[defDR].text & "{ br}"
+
     ]]></procedure>
 
 
@@ -714,7 +709,7 @@
       final &= eachpick.field[name].text & ": {b}" & eachpick.field[trtFinal].text & "{/b}{br}"
       nexteach
     final &= "{br}"
-
+    
     ~output any permanent adjustments
     info = ""
     foreach pick in hero where "InPlay.Permanent"

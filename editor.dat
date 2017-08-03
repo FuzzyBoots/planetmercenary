@@ -164,12 +164,7 @@
       helptext="Specify the damage rating of the weapon.">
       <it_field field="wpDamage"/>
       </inputthing>
-    <inputthing
-      name="Minimum Strength"
-      helptext="Specify the minimum Strength required to use the weapon without penalty.">
-      <it_field field="wpStrReq"/>
-      </inputthing>
-    <inputthing
+      <inputthing
       name="Cost"
       helptext="Specify the standard cost of the item, with a value of 0 meaning it is free.">
       <it_field field="grCost"/>
@@ -230,11 +225,6 @@
       <it_field field="wpLong"/>
       </inputthing>
     <inputthing
-      name="Minimum Strength"
-      helptext="Specify the minimum Strength required to use the weapon without penalty.">
-      <it_field field="wpStrReq"/>
-      </inputthing>
-    <inputthing
       name="Cost"
       helptext="Specify the standard cost of the item, with a value of 0 meaning it is free.">
       <it_field field="grCost"/>
@@ -275,9 +265,9 @@
       <it_field field="defDefense"/>
       </inputthing>
     <inputthing
-      name="Minimum Strength"
-      helptext="Specify the minimum Strength required to use the armor successfully.">
-      <it_field field="defStrReq"/>
+      name="Damage  Resistance"
+      helptext="Specify the damage resistance.">
+      <it_field field="defDR"/>
       </inputthing>
     <inputthing
       name="Cost"
@@ -305,9 +295,9 @@
       <it_field field="defDefense"/>
       </inputthing>
     <inputthing
-      name="Minimum Strength"
-      helptext="Specify the minimum Strength required to use the armor successfully.">
-      <it_field field="defStrReq"/>
+      name="Damage Resistance"
+      helptext="Specify the damage resistance.">
+      <it_field field="defDR"/>
       </inputthing>
     <inputthing
       name="Cost"

@@ -67,6 +67,19 @@
   ]]></eval> 
     </thing>
 
+  <!--  Damage  Resistance Trait -->
+  <thing
+    id="trDR"
+    name="Damage Resistance"
+    compset="Trait"
+    isunique="yes"
+    description="">
+    <fieldval field="trtAbbrev" value="Def"/>
+    <fieldval field="trtBonus" value="0"/>
+    <tag group="explicit" tag="2"/>
+    <tag group="DashTacCon" tag="Combat"/>
+  </thing>
+  
   <!-- Initiative Trait -->
   <thing
     id="trInit"
