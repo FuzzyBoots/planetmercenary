@@ -42,14 +42,24 @@
     name="Entertainer"
     compset="Bckgrnd"
     isunique="yes"
-    description="Maybe you played in a band. Maybe the band was a circus. Maybe the circus was the writing pit for a comedy show.">
+    description="Maybe you played in a band. Maybe the band was a circus. Maybe the circus was the writing pit for a comedy show.{br}{br}{b}Bonus Skill Ranks:{/b} +2 Athletics {i}or{/i} Empathy, +2 Deceive {i}or{/i} Thrown Weapons, +2 Inspire">
+    
+    <tag group="SkillBonus" tag="skDodge"/>
+    
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skAthlete"/>
+      <autotag group="SkillBonus" tag="skEmpathy"/>
+      </bootstrap>
+      
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skThrown"/>
+      <autotag group="SkillBonus" tag="skDeceive"/>
+      </bootstrap>
+    
     
     <!-- Define any script needed to apply changes to traits or other mechanisms-->
     <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skDodge] += 2
-    #traitbase[skMedic] += 2
-    #traitbase[skXeno] += 2
-    #traitbase[skPistol] += 2
+    #traitBG[skInspire] += 2    
     ]]></eval>
 
     </thing>
@@ -121,7 +131,5 @@
     ]]></eval>
 
     </thing>
-  
-  
   
   </document>

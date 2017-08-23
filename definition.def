@@ -116,6 +116,10 @@ These data files provide a starting framework for implementing support for any g
     param1="trait"
     result="hero.child[#trait].field[trtBase].value"/>
   <scriptmacro
+    name="traitBG"
+    param1="trait"
+    result="hero.child[#trait].field[trtBG].value"/>
+  <scriptmacro
     name="traitbonus"
     param1="trait"
     result="hero.child[#trait].field[trtBonus].value"/>

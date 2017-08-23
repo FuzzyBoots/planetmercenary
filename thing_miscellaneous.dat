@@ -49,11 +49,34 @@
   name="RiPPs"
   compset="RiPPs">
   <fieldval field="trkMin" value="0"/>
-  <fieldval field="trkMax" value="3"/>
+  <fieldval field="trkMax" value="5"/>
   <tag group="Helper" tag="Bootstrap"/>
   <tag group="Helper" tag="ResetMax"/>
-  <tag group="Helper" tag="NoMaxBound"/>
+  <!--tag group="Helper" tag="NoMaxBound"/-->
   </thing> 
+  
+  <!-- Any background, command package, or race can bootstrap this, adding 
+       SkillBonus.attrid tags as necessary -->
+  <thing
+    id="fRPlusSk"
+    name="+2 to Skill"
+    compset="SkillBonus"
+    description="Gives a +2 bonus to the selected skill.">
+    <fieldval field="usrCandid1" value="component.Skill"/>
+    <tag group="Hide" tag="Special"/>
+    <eval index="1" phase="PreTraits" priority="5000">
+      <before name="Calc trtFinal"/><![CDATA[
+      ~build the candidate expression out of our SkillBonus tags
+      if (tagis[SkillBonus.?] <> 0) then
+        field[usrCandid1].text &= " & (" & tagids[SkillBonus.?, " | "] & ")"
+        endif
+
+      ~#traitbase[field[usrChosen1].chosen] += 2
+      ~ #traitBG[field[usrChosen1].chosen] += 2
+      ~ hero.child[field[usrChosen1].chosen].field[trtBG].value += 2
+      perform field[usrChosen1].chosen.field[trtBG].modify[+,2,"Background"]
+      ]]></eval>
+    </thing>  
   
   <thing
     id="resSkill"
@@ -136,26 +159,14 @@
     </thing>
 
 
-  <!-- Power points tracker so the user can manage the expenditure of power points -->
+  <!-- AoE Helper -->
   <thing
-    id="trkPower"
-    name="Power Points"
-    compset="Tracker">
-
-    <!-- Automatically add the tracker to every actor -->
-    <tag group="Helper" tag="Bootstrap"/>
-
-    <!-- Resetting the tracker sets the value to the maximum -->
-    <tag group="Helper" tag="ResetMax"/>
-
-    <!-- Use the starting power points as our initial maximum -->
-    <eval index="1" phase="Final" priority="1000"><![CDATA[
-      field[trkMin].value = 0
-      field[trkMax].value = #trait[trPowerPts]
-      ]]></eval>
+    id="AoEHelp"
+    name="AoE Helper"
+    compset="AoEHelp"
+    description="Description goes here">
     </thing>
-
-
+    
   <!-- Types of characters you might want to build -->
   <thing
     id="typHero"

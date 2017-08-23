@@ -114,19 +114,6 @@
       </portal>
 
     <portal
-      id="power"
-      style="lblSmall">
-      <label>
-        <labeltext><![CDATA[
-          @text = "{size 30}PP: {size 36}" & hero.child[trkPower].field[trkUser].text
-          ]]></labeltext>
-        </label>
-      <mouseinfo><![CDATA[
-        @text = "Power Points: " & hero.child[trkPower].field[trkUser].text & " / " & hero.child[trkPower].field[trkMax].text
-        ]]></mouseinfo>
-      </portal>
-
-    <portal
       id="special"
       style="actInfoSpc">
       <action
@@ -235,13 +222,9 @@
       perform portal[combat].alignrel[ltor,rolls,btngap]
       perform portal[basics].alignrel[ltor,combat,btngap]
 
-      ~position power details next to the "gear" portal
-      perform portal[power].centeron[vert,gear]
-      perform portal[power].alignrel[rtol,gear,-4]
-
-      ~position health details parallel to the "power" portal
-      perform portal[health].centeron[vert,power]
-      portal[health].width = portal[power].left - 3
+      ~position health details parallel to the "gear" portal
+      perform portal[health].centeron[vert,gear]
+      portal[health].width = portal[gear].left - 3
 
       ~position the name in the available space in the upper left
       portal[name].width = portal[load].left - 3
@@ -267,7 +250,6 @@
 
           ~shift the health and power portals down slightly to make more room
           portal[health].top += 2
-          portal[power].top += 2
           endif
         endif
 

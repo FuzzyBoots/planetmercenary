@@ -80,45 +80,5 @@
     <tag group="DashTacCon" tag="Combat"/>
   </thing>
   
-  <!-- Initiative Trait -->
-  <thing
-    id="trInit"
-    name="Initiative"
-    compset="Trait"
-    isunique="yes"
-    description="Description goes here">
-    <fieldval field="trtAbbrev" value="Init"/>
-    <tag group="explicit" tag="2"/>
-    <tag group="User" tag="Combat"/>
-    <tag group="DashTacCon" tag="Combat"/>
-    <tag group="DashTacCon" tag="Traits"/>
-
-    <!-- Calculate the Initiative trait as appropriate -->
-    <eval value="1" phase="Traits" priority="4000">
-      <before name="Derived trtFinal"/>
-      <after name="Calc trtFinal"/><![CDATA[
-      field[trtBonus].value = 0
-      ]]></eval>
-    </thing>
-
-  <!-- Power Points Trait -->
-  <thing
-    id="trPowerPts"
-    name="Power Points"
-    compset="Trait"
-    isunique="yes"
-    description="Description goes here">
-    <fieldval field="trtAbbrev" value="Powr"/>
-    <tag group="explicit" tag="4"/>
-    <tag group="User" tag="Power"/>
-
-    <!-- Calculate the Power Points trait as appropriate -->
-    <eval value="1" phase="Traits" priority="4000">
-      <before name="Derived trtFinal"/>
-      <after name="Calc trtFinal"/><![CDATA[
-      field[trtBonus].value = 0
-      ]]></eval>
-    </thing>
-
   
   </document>

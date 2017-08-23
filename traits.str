@@ -24,14 +24,22 @@
       maxlength="5">
       </field>
 
-
     <!-- Base value that costs no points, and can't be decreased, but counts toward the maximum -->
     <field 
       id="trtBase"
       name="Base Value"
-      type="derived">
+      type="derived"
+      history="stack">
     </field>
-
+    
+    <!-- Value from the chosen race/background/command package. Costs no points. Counts toward maximum. -->
+    <field 
+      id="trtBG"
+      name="BG Value"
+      type="derived"
+      history="stack">
+    </field>
+    
     <!-- Minimum user-assigned value for the trait -->
     <field
       id="trtMinimum"
@@ -57,9 +65,9 @@
       <!-- Bound the user value to the limits established for the trait -->
       <bound phase="Traits" priority="1000" name="Bound trtUser">
         <before name="Calc trtFinal"/><![CDATA[
-        @minimum = field[trtBase].value + field[trtMinimum].value
+        @minimum = field[trtMinimum].value
         if (hero.tagis[mode.creation] = 1) then
-          @maximum = field[trtMaximum].value
+          @maximum = field[trtMaximum].value - field[trtBase].value - field[trtBG].value
         else
           @maximum = 9
         endif
@@ -68,7 +76,8 @@
             all adjustments from other sources
       -->
       <finalize><![CDATA[
-        @text = field[trtFinal].value
+        @text = field[trtUser].value
+        
         ]]></finalize>
       </field>
 
@@ -76,7 +85,8 @@
     <field
       id="trtBonus"
       name="Bonus Value"
-      type="derived">
+      type="derived"
+      history="stack">
       </field>
 
     <!-- In-play bonuses applied to the trait -->
@@ -95,7 +105,7 @@
       <calculate phase="Traits" priority="3000" name="Calc trtFinal"><![CDATA[
         ~Note! If you change this calculation, you may need to change the similar
         ~       calculation in the "Derived" component.
-        @value = field[trtUser].value + field[trtBonus].value + field[trtInPlay].value
+        @value = field[trtUser].value + field[trtBG].value + field[trtBase].value + field[trtBonus].value + field[trtInPlay].value
         ]]></calculate>
       </field>
 
@@ -147,6 +157,10 @@
 
 	  <!-- Each skill needs its own identity tag so existing skills can be identified during advancement -->
     <identity group="Skill"/>
+    
+    <!-- Each skill can also be selected as a background/command package/race bonus.
+         This bonus does count against the maximum at character creation.    -->
+    <identity group="SkillBonus"/>
 
     <!-- Every skill is shown on the "Rolls" mouse-over on the Dashboard/TacCon -->
     <tag group="DashTacCon" tag="Rolls"/>
@@ -161,7 +175,7 @@
       perform forward[Skill.?]
       ]]></eval>
     
-    <!-- Each skill point that is allocated by the user costs 2 CP -->
+    <!-- Each skill point that is allocated by the user costs 1 CP -->
     <eval index="3" phase="Traits" priority="10000">
       <before name="Calc resLeft"/>
       <after name="Bound trtUser"/><![CDATA[
@@ -169,18 +183,69 @@
       doneif (origin.ishero = 0)
 
       ~adjust the resource appropriately
-      hero.child[resCP].field[resSpent].value += field[trtUser].value - field[trtBase].value
+      hero.child[resCP].field[resSpent].value += field[trtUser].value
     ]]></eval>
+    
+    <!-- set the appropriate candidate expression -->
+    <eval index="4" phase="Final" priority="1000" name="aoeHelp Expr">
+      <![CDATA[
+      
+      var myId as string
+      myId = tagids[Skill.sk?," & "]
+      
+      call SetAoEExpr
+      ]]></eval>
+      
+    <eval index="10" phase="Initialize" priority="10000"><![CDATA[
+      ~copy our SkillList tags to the gizmo so they can be used for the needtag
+      if (isgizmo <> 0) then
+        perform gizmo.pushtags[Skill.?]
+
+        ~tags added to the gizmo are then automatically added to the parent of
+        ~that gizmo - but that's where those tags were just pushed from, meaning
+        ~that what happens is to duplicate them all.  So, delete the ones on
+        ~ourself, then pull the tags from the gizmo.
+        perform delete[Skill.?]
+        perform gizmo.pulltags[Skill.?]
+        endif
+      ]]></eval>
 
     </component>
 
+  <!-- SkillBonus component -->
+  <component
+    id="SkillBonus"
+    name="Starting Skill Bonus"
+    autocompset="no"
+    panellink="basics">
+
+    <!-- This tag is added to the hero if our feature is selected. -->
+    <identity group="HasFeature"/>
+
+    <!-- All feats get the same tag for sorting purposes -->
+    <!--tag group="SpecialTab" tag="RaceFeat"/-->
+
+    <!-- Activate any selected build option -->
+    <eval index="1" phase="Setup" priority="100" name="Build option activated"><![CDATA[
+      if (field[usrChosen1].ischosen <> 0) then
+        if (field[usrChosen1].chosen.ispick <> 0) then
+          perform field[usrChosen1].chosen.assign[Helper.ChosenOpt]
+          endif
+        endif
+
+      ~forward our "has feature" tags to the hero so it knows we're present
+      perform forward[HasFeature.?]
+      ]]></eval>
+
+    </component>
+    
   <component
     id="Specialty"
     name="Specialization"
     autocompset="no"
     panellink="skills">
     
-    <field        
+    <field
       id="spcSkill"
       name="Associated Skill"
 	  maxlength="10"
@@ -198,7 +263,25 @@
       ~adjust the resource appropriately
       hero.child[resCP].field[resSpent].value += 2
     ]]></eval>
-</component>    
+  </component>    
+
+<!-- AoE Helper component
+        Each AoE Gizmo derives from this component
+  -->
+  
+  <component
+    id="AoEHelp"
+    name="Area of Expertise Helper">
+
+    <!-- Selection Tag Expressions -->
+    <field
+      id="aoeAoEExpr"
+      name="Specialization Tag Expression"
+      type="derived"
+      maxlength="500">
+      </field>
+
+    </component>
 
   <!-- Ability component
         Each special ability derives from this component
@@ -418,5 +501,18 @@
     <compref component="Domain"/>
     <compref component="CanAdvance"/>
   </compset>
+
+  <!-- Skill Bonuses -->
+  <compset
+    id="SkillBonus">
+    <compref component="SkillBonus"/>
+    <compref component="UserSelect"/>
+    <compref component="SpecialTab"/>
+    <compref component="Custom"/>
+    </compset>
+  
+  <entity
+    id="SpecialEnt">
+  </entity>
 
 </document>

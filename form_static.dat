@@ -63,7 +63,7 @@
 
   <!-- stActor template
         This template displays all the basic state information for the actor, such
-        as health, power, character points, and cash.
+        as health, character points, and cash.
   -->
   <template
     id="stActor"
@@ -76,16 +76,6 @@
       <label>
         <labeltext><![CDATA[
           @text = "HP: " & herofield[acHPSumm].text
-          ]]></labeltext>
-        </label>
-      </portal>
-
-    <portal
-      id="power"
-      style="lblStatic">
-      <label>
-        <labeltext><![CDATA[
-          @text = "PP: " & herofield[acPPSumm].text
           ]]></labeltext>
         </label>
       </portal>
@@ -120,14 +110,9 @@
 
       ~position the portals horizontally
       portal[hp].left = 0
-      perform portal[power].alignrel[ltor,hp,15]
-      perform portal[cp].alignrel[ltor,power,15]
+      perform portal[cp].alignrel[ltor,hp,15]
       perform portal[cash].alignrel[ltor,cp,15]
 
-      ~hide any portals that don't fully fit within the visible horizontal space
-      if (portal[power].right > width) then
-        portal[power].visible = 0
-        endif
       if (portal[cp].right > width) then
         portal[cp].visible = 0
         endif

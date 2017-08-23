@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<document signature="Hero Lab Data">
+
+  <portal
+    id="prtAoE"
+    style="tblNormal">
+    <table_dynamic
+      component="Specialty"
+      showtemplate="tmpAoE"
+      choosetemplate="tmpAoE"
+      scrollable="yes"
+      alwaysupdate="yes"
+      candidatepick="AoEHelp"
+      candidatefield="aoeAoEExpr"
+      addpick="">
+      <!--needtag container="Skill" thing="Skill" usehero="yes"></needtag-->
+      <titlebar><![CDATA[
+        @text = "Add an Expertise"
+        ]]></titlebar>
+      <headertitle><![CDATA[
+        @text = "Area of Expertise"
+        ]]></headertitle>
+      <additem><![CDATA[
+        @text = "Add Expertise"
+        ]]>
+        </additem>
+      </table_dynamic>      
+    </portal>
+
+  <template
+    id="tmpAoE"
+    name="Area of Expertise Pick"
+    compset="Specialty"
+    marginhorz="3"
+    marginvert="1">
+
+    <portal
+      id="name"
+      style="lblSmall">
+      <label>
+        <labeltext><![CDATA[
+          @text = field[name].text
+          ]]></labeltext>
+        </label>
+      </portal>
+    
+    <portal
+      id="delete"
+      style="actDelete"
+      tiptext="Click to delete this item">
+      <action
+        action="delete">
+        </action>
+      </portal>
+
+    <position><![CDATA[
+    
+      ~set up our height based on our tallest portal
+      height = portal[name].height
+
+      ~if this is a "sizing" calculation, we're done
+      doneif (issizing <> 0)
+
+      ~position our tallest portal at the top
+      portal[name].top = 0
+      portal[name].left = 0
+      portal[name].width = 250
+      
+      ~center the other portals vertically
+      perform portal[delete].centervert
+
+      ~position the delete portal on the far right
+      perform portal[delete].alignedge[right,0]
+
+      ]]></position>
+    </template>
+
+  <layout
+    id="layAoE"
+    marginvert="4">
+    <portalref portal="prtAoE" taborder="20"/>
+    <position><![CDATA[
+      ~perform portal[prtAoE].batchadd
+      ~perform batchplace
+      
+      ~position and size the table to span the full layout
+      portal[prtAoE].left = 0
+      portal[prtAoE].width = width
+      portal[prtAoE].height = 400
+      
+      
+      ]]></position>
+    </layout>
+
+  <form
+	id="frmAoE"
+	name="Area of Expertise"
+	marginhorz="10"
+	marginvert="5">
+	<layoutref layout="layAoE"/>
+	<position><![CDATA[
+	  layout[layAoE].width = 400
+	  perform layout[layAoE].render
+	  width = layout[layAoE].width
+	  height = 400
+	  ]]></position>
+	</form>
+
+  </document>

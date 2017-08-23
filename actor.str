@@ -143,27 +143,6 @@
         ]]></finalize>
       </field>
 
-    <!-- Power point summary for display -->
-    <field
-      id="acPPSumm"
-      name="Power Summary"
-      type="derived"
-      maxfinal="50">
-      <!-- Calculate a value that is based on all the fields referenced by the
-            "finalize" script. This ensures that the field always changes if any of
-            its pieces changes, which triggers the finalized value to be updated.
-      -->
-      <calculate phase="Render" priority="1000"><![CDATA[
-        ~make sure this value consists of the elements that could cause the summary to change
-        @value = hero.child[trkPower].field[trkLeft].value * 100 + hero.child[trkPower].field[trkMax].value
-        ]]></calculate>
-      <!-- Final value for display shows the current and maximum power points.
-      -->
-      <finalize><![CDATA[
-        @text = hero.child[trkPower].field[trkUser].value & " / " & hero.child[trkPower].field[trkMax].value
-        ]]></finalize>
-      </field>
-
     <!-- Starting character points to allocate -->
     <field
       id="acStartSP"

@@ -95,6 +95,16 @@
   </portal>
   
   <portal
+    id="bonus"
+    style="lblSmall">
+    <label>
+      <labeltext><![CDATA[
+          @text = "(+" & field[trtFinal].value & ")"
+          ]]></labeltext>
+      </label>
+    </portal>
+  
+  <portal
     id="name"
     style="lblSmall"
     showinvalid="yes">
@@ -110,7 +120,7 @@
       action="info">
       </action>
     <mouseinfo mousepos="middle+above"/>
-    </portal>
+    </portal> 
 
   <portal
     id="specialty"
@@ -118,7 +128,7 @@
     tiptext="Click to add specialties">
     <action
       action="form"
-      form="tacManip">
+      form="frmAoE">
       </action>
     </portal>
 
@@ -137,6 +147,7 @@
     ~position the other portals vertically
     perform portal[name].centervert
     perform portal[value].centervert
+    perform portal[bonus].centervert
     perform portal[specialty].centervert
 
     ~position the specialty portal on the far right
@@ -148,10 +159,13 @@
     ~position the incrementer on the left
     portal[value].left = 0
 
-    ~position the name next to the incrementer
-    perform portal[name].alignrel[ltor,value,10]
+    ~position the bonus to the right of the incrementer
+    perform portal[bonus].alignrel[ltor,value,10]
+    
+    ~position the name next to the bonus
+    perform portal[name].alignrel[ltor,bonus,10]
 
-    portal[name].width = minimum(portal[name].width,portal[info].left - portal[name].left - 10)
+    portal[name].width = minimum(portal[name].width, portal[info].left - portal[name].left - 10)
    
     ]]></position>
   </template>

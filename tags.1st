@@ -39,6 +39,7 @@
     <value id="NoMinimum"/>   <!-- Resource does NOT need to be fully spent to avoid reporting a warning -->
     <value id="CustomItem"/>  <!-- Identifies a thing that has a user customizable name -->
     <value id="NoPersText"/>  <!-- User entered no background text -->
+    <value id="ChosenOpt"/>   <!-- This build option was chosen by the class -->
     </group>
 
   <!-- User group - general helper tags that can be assigned by users via the Editor
@@ -56,6 +57,7 @@
     <value id="Resistance"/>  <!-- Identifies a resistance trait -->
     <value id="Power"/>       <!-- Identifies a power trait -->
     <value id="Combat"/>      <!-- Identifies a combat trait -->
+    <value id="NeedChosen"/>  <!-- This power behaves like a build option - it must be "chosen" before you can use / see it -->
     </group>
 
   <!-- Hero group - Helper tags assigned exclusively to the hero/actor
@@ -151,7 +153,7 @@
     <value id="inplay"/>
     <value id="special"/>
     <value id="smBasics"/>
-    <value id="smAbility"/>
+    <value id="smSkill"/>
     <value id="smArmory"/>
     <value id="smStatbl"/>
     </group>

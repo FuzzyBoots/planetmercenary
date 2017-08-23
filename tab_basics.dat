@@ -9,6 +9,26 @@
 
 <document signature="Hero Lab Data">
 
+  <!-- Skill Bonus portal. Used to list skill bonuses from backgrounds, races, and  
+       command packages, and to allow for choices. -->
+  <portal
+    id="raFeatures"
+    style="tblInvis"
+    width="240">
+    <table_fixed
+      component="UserSelect"
+      showtemplate="MenuSlPick"
+      showsortset=""
+      alwaysupdate="yes">
+      <list><![CDATA[
+        (!User.NeedChosen | Helper.ChosenOpt)
+        ]]></list>
+      <headertitle><![CDATA[
+        @text = "Skill Bonuses"
+        ]]></headertitle>
+      </table_fixed>
+    </portal>
+
   <!-- stRace portal
         Displays a chooser wherein the user can select the race for the character.
 
@@ -96,6 +116,58 @@
       </table_fixed>
     </portal>
 
+ <template
+    id="MenuSlPick"
+    name="Configurable Pick"
+    compset="UserSelect"
+    marginhorz="5"
+    marginvert="3">
+    
+    <portal
+      id="name"
+      style="lblLeft"
+      showinvalid="yes">
+      <label
+        ismultiline="yes"
+        field="name">
+        </label>
+      </portal>
+    
+    <portal
+      id="thinglist"
+      style="menuSmall">
+      <menu_things
+        field="usrChosen1"
+        component="none"
+        candidatefield="usrCandid1"
+        usepicksfield="usrSource1"
+        maxvisible="10"
+        sortset="explicit">
+        </menu_things>
+      </portal>
+    
+    <position><![CDATA[
+      ~set up our height; our width is pre-initialized for us
+      height = portal[thinglist].height
+
+      ~if this is a "sizing" calculation, we're done
+      doneif (issizing <> 0)
+
+      ~position our tallest portal at the top
+      portal[thinglist].top = 0
+
+      ~center the other portals on the tallest one
+      perform portal[name].centeron[vert,thinglist]
+      
+      portal[name].left = 0
+      portal[name].width = 100
+      
+      portal[thinglist].left = portal[name].right + 3
+      portal[thinglist].width = width - portal[name].width - 3
+    ]]></position>
+    
+    </template>
+    
  <!-- baTrtPick template
         Displays one trait within the table of traits. The trait name is shown on
         the left, with appropriate details about the derived value on the right.
@@ -200,7 +272,8 @@
     <portalref portal="stRace" taborder="20"/>
     <portalref portal="stCmdPckge" taborder="40"/>
     <portalref portal="stBckGrnd" taborder="60"/>
-    <portalref portal="baTrait" taborder="80"/>
+    <portalref portal="raFeatures" taborder ="80"/>
+    <portalref portal="baTrait" taborder="99"/>
     
     <portalref portal="Horizontal"/>
 
@@ -227,6 +300,8 @@
       portal[baTrait].left = portal[stBckGrnd].left
       portal[baTrait].top = portal[Horizontal].bottom + 15
       portal[baTrait].height = height - portal[baTrait].top
+      
+      portal[raFeatures].top = portal[baTrait].bottom + 4
 
       ~figure out the total height we need for the tab
       height = portal[baTrait].bottom

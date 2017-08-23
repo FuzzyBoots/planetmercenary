@@ -138,24 +138,7 @@
         endif
       ]]></eval>
     </thing>
-
-  <!-- Power Points Adjustment -->
-  <thing
-    id="adjPower"
-    name="Power Points"
-    compset="Adjustment"
-    description="Select this adjustment to apply a bonus/penalty to your total Power Points.">
-    <tag group="AdjustShow" tag="Increment"/>
-    <tag group="Helper" tag="UserAdjust"/>
-    <tag group="InPlay" tag="PermOK"/>
-    <eval phase="Setup" priority="8000">
-      <before name="Calc wpNetAtk"/><![CDATA[
-      if (tagis[Helper.Activated] <> 0) then
-        #traitinplay[trPowerPts] += field[adjUser].value
-        endif
-      ]]></eval>
-    </thing>
-
+  
   <!-- Counter Adjustment -->
   <thing
     id="adjCounter"

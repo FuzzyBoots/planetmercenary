@@ -271,11 +271,8 @@
       <label
         ismultiline="yes">
         <labeltext><![CDATA[
-          ~start with the power points status
-          @text = "{size 30}PP: {size 36}" & #traituser[trPowerPts] & " / " & #trait[trPowerPts]
-
           ~add the defense rating
-          @text &= "{horz 12}{size 30}Def: {size 36}" & #trait[trDefense]
+          @text = "{horz 12}{size 30}Def: {size 36}" & #trait[trDefense]
           ]]></labeltext>
         </label>
       </portal>
@@ -317,16 +314,6 @@
       <incrementer
         field="tactInit">
         </incrementer>
-      </portal>
-
-    <portal
-      id="init"
-      style="lblSmall">
-      <label>
-        <labeltext><![CDATA[
-          @text = "{text clrdisable}(" & #trait[trInit] & "){text clrreset}"
-          ]]></labeltext>
-        </label>
       </portal>
 
     <portal
@@ -843,9 +830,9 @@
       ~position the reroll initiative button right-aligned with the activated abilities
       perform portal[reroll].alignrel[rtor,active,0]
 
-      perform portal[init].alignrel[rtol,reroll,-5]
+      ~perform portal[init].alignrel[rtol,reroll,-5]
 
-      perform portal[totalinit].alignrel[rtol,init,-3]
+      ~perform portal[totalinit].alignrel[rtol,init,-3]
       perform portal[totalinit].alignedge[bottom,-margin - 4]
 
       ~vertically center the reroll button on our initiative incrementer
@@ -855,12 +842,12 @@
       perform portal[lblinit].alignrel[rtol,totalinit,-3]
 
       ~vertically align the initiative labels based on the incrementer
-      perform portal[init].centeron[vert,totalinit]
+      ~perform portal[init].centeron[vert,totalinit]
       perform portal[lblinit].centeron[vert,totalinit]
 
       ~all initiative details are only visible within combat
       show = state.iscombat
-      portal[init].visible = show
+      ~portal[init].visible = show
       portal[totalinit].visible = show
       portal[lblinit].visible = show
       portal[reroll].visible = show

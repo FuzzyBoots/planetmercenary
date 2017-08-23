@@ -797,5 +797,23 @@
     infotext = infotext & spacing
     ]]></procedure>
 
+    
+    <!-- Script used to set up AoE selection
+  -->
+  <procedure id="SetAoEExpr" context="pick"><![CDATA[
+    ~make sure there's a gizmo to travel to
+    doneif (isgizmo = 0)
+    
+    ~set up our tag expression for selecting appropriate specialty
+    var expr as string
+    var myId as string
+
+    expr = "component.Specialty & (User.CustSkill |  "
+
+    expr &= myId & ")"
+    
+    gizmo.childfound[AoEHelp].field[aoeAoEExpr].text = expr
+    ]]></procedure>
+
 
   </document>

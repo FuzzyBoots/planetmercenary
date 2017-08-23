@@ -11,22 +11,6 @@
 <document signature="Hero Lab Data">
 
 
-  <!-- smAbility portal - table of special abilities
-  -->
-  <portal
-    id="smAbility"
-    style="tblInvisSm">
-    <table_fixed
-      component="Ability"
-      showtemplate="smAbility"
-      scrollable="no">
-      <headertitle><![CDATA[
-      @text = #summtitle_decoration[] & " Abilities " & #summtitle_decoration[]
-      ]]></headertitle>
-      </table_fixed>
-    </portal>
-
-
   <!-- smSkill portal
         Table of skills, using the "smTrait" template defined in "summ_basics.dat".
   -->
@@ -36,7 +20,8 @@
     <table_fixed
       component="Skill"
       showtemplate="smTrait"
-      scrollable="no">
+      scrollable="no"
+      alwaysupdate="yes">
       <headertitle><![CDATA[
       @text = #summtitle_decoration[] & " Skills " & #summtitle_decoration[]
       ]]></headertitle>
@@ -44,12 +29,30 @@
     </portal>
 
 
-  <!-- smAbility template
+  <!-- smSkill portal
+        Table of skills, using the "smTrait" template defined in "summ_basics.dat".
+  -->
+  <portal
+    id="smSpec"
+    style="tblInvisSm">
+    <table_fixed
+      component="Specialty"
+      showtemplate="smTrait"
+      scrollable="no"
+      alwaysupdate="yes">
+      <headertitle><![CDATA[
+      @text = #summtitle_decoration[] & " Specialties " & #summtitle_decoration[]
+      ]]></headertitle>
+      </table_fixed>
+    </portal>
+
+
+  <!-- smSkill template
         This template shows the names of each special ability ability, providing
         mouse-over behavior to show the details of each ability.
   -->
   <template
-    id="smAbility"
+    id="smSkill"
     name="Summary Ability Pick"
     compset="Ability">
 
@@ -74,27 +77,58 @@
       portal[name].top = 0
       ]]></position>
     </template>
+    
+  <!-- smSpec template
+        This template shows the names of each skill specialty, providing
+        mouse-over behavior to show the details of each specialty.
+  -->
+  <template
+    id="smSpec"
+    name="Summary Specialty Pick"
+    compset="Specialty">
+
+    <portal
+      id="name"
+      style="lblSummary">
+      <label
+        field="name">
+        </label>
+      <mouseinfo/>
+      </portal>
+
+    <position><![CDATA[
+      ~set up our height based on our tallest portal
+      height = portal[name].height
+
+      ~if this is a "sizing" calculation, we're done
+      doneif (issizing <> 0)
+
+      ~the name is the only portal to position
+      portal[name].left = 0
+      portal[name].top = 0
+      ]]></position>
+    </template>
 
 
-  <!-- smAbility layout
+  <!-- smSkill layout
         This layout contains both the table of special abilities and the table of
         skills for the actor.
   -->
   <layout
-    id="smAbility">
-    <portalref portal="smAbility"/>
+    id="smSkill">
     <portalref portal="smSkill"/>
+    <portalref portal="smSpec"/>
 
     <position><![CDATA[
       ~position and size the tables to span the full layout
-      perform portal[smAbility].autoplace
-      perform portal[smSkill].autoplace[20]
+      perform portal[smSkill].autoplace
+      perform portal[smSpec].autoplace[20]
       ]]></position>
 
     </layout>
 
 
-  <!-- smAbility panel
+  <!-- smSkill panel
         This panel is designated as a summary panel and given an order that positions
         it properly amongst the other defined summary panels. We setup a small margin
         to indent the layout from the edges of the panel.
@@ -106,14 +140,14 @@
         ghosts vs. mortals in the World of Darkness game system.
   -->
   <panel
-    id="smAbility"
+    id="smSkill"
     name="Abilities"
     order="10020"
     marginhorz="2"
     marginvert="2"
     issummary="yes">
-    <live>!HideTab.smAbility</live>
-    <layoutref layout="smAbility"/>
+    <live>!HideTab.smSkill</live>
+    <layoutref layout="smSkill"/>
 
     <position><![CDATA[
       ]]></position>
