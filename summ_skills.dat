@@ -29,15 +29,15 @@
     </portal>
 
 
-  <!-- smSkill portal
-        Table of skills, using the "smTrait" template defined in "summ_basics.dat".
+  <!-- smSpec portal
+        Table of specializations, using the "smTrait" template defined in "summ_basics.dat".
   -->
   <portal
     id="smSpec"
     style="tblInvisSm">
     <table_fixed
       component="Specialty"
-      showtemplate="smTrait"
+      showtemplate="smSpec"
       scrollable="no"
       alwaysupdate="yes">
       <headertitle><![CDATA[
@@ -90,9 +90,11 @@
     <portal
       id="name"
       style="lblSummary">
-      <label
-        field="name">
-        </label>
+      <label>
+      <labeltext><![CDATA[
+          @text = field[name].text & " (" & this.tagnames[Skill.?," "]  & ")"
+          ]]></labeltext>
+      </label>
       <mouseinfo/>
       </portal>
 
@@ -141,7 +143,7 @@
   -->
   <panel
     id="smSkill"
-    name="Abilities"
+    name="Skills"
     order="10020"
     marginhorz="2"
     marginvert="2"

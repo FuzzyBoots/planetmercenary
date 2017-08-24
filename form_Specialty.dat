@@ -3,33 +3,33 @@
 <document signature="Hero Lab Data">
 
   <portal
-    id="prtAoE"
+    id="prtSpec"
     style="tblNormal">
     <table_dynamic
       component="Specialty"
-      showtemplate="tmpAoE"
-      choosetemplate="tmpAoE"
+      showtemplate="tmpSpec"
+      choosetemplate="tmpSpec"
       scrollable="yes"
       alwaysupdate="yes"
-      candidatepick="AoEHelp"
-      candidatefield="aoeAoEExpr"
+      candidatepick="SpecHelp"
+      candidatefield="SpecExpr"
       addpick="">
       <!--needtag container="Skill" thing="Skill" usehero="yes"></needtag-->
       <titlebar><![CDATA[
-        @text = "Add an Expertise"
+        @text = "Add a Specialty"
         ]]></titlebar>
       <headertitle><![CDATA[
-        @text = "Area of Expertise"
+        @text = "Specialty"
         ]]></headertitle>
       <additem><![CDATA[
-        @text = "Add Expertise"
+        @text = "Add Specialty"
         ]]>
         </additem>
       </table_dynamic>      
     </portal>
 
   <template
-    id="tmpAoE"
+    id="tmpSpec"
     name="Area of Expertise Pick"
     compset="Specialty"
     marginhorz="3"
@@ -40,7 +40,7 @@
       style="lblSmall">
       <label>
         <labeltext><![CDATA[
-          @text = field[name].text
+          @text = field[name].text & " (" & this.tagnames[Skill.?," "]  & ")"
           ]]></labeltext>
         </label>
       </portal>
@@ -77,32 +77,32 @@
     </template>
 
   <layout
-    id="layAoE"
+    id="laySpec"
     marginvert="4">
-    <portalref portal="prtAoE" taborder="20"/>
+    <portalref portal="prtSpec" taborder="20"/>
     <position><![CDATA[
-      ~perform portal[prtAoE].batchadd
+      ~perform portal[prtSpec].batchadd
       ~perform batchplace
       
       ~position and size the table to span the full layout
-      portal[prtAoE].left = 0
-      portal[prtAoE].width = width
-      portal[prtAoE].height = 400
+      portal[prtSpec].left = 0
+      portal[prtSpec].width = width
+      portal[prtSpec].height = 400
       
       
       ]]></position>
     </layout>
 
   <form
-	id="frmAoE"
-	name="Area of Expertise"
+	id="frmSpec"
+	name="Specialty"
 	marginhorz="10"
 	marginvert="5">
-	<layoutref layout="layAoE"/>
+	<layoutref layout="laySpec"/>
 	<position><![CDATA[
-	  layout[layAoE].width = 400
-	  perform layout[layAoE].render
-	  width = layout[layAoE].width
+	  layout[laySpec].width = 400
+	  perform layout[laySpec].render
+	  width = layout[laySpec].width
 	  height = 400
 	  ]]></position>
 	</form>

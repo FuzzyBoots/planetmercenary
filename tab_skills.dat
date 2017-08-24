@@ -128,7 +128,7 @@
     tiptext="Click to add specialties">
     <action
       action="form"
-      form="frmAoE">
+      form="frmSpec">
       </action>
     </portal>
 

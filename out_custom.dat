@@ -76,7 +76,37 @@
       nexteach
     ]]></procedure>
 
+  <!-- Procedure xoabs
+        Output all of the traits that satisfy the provided tag expression, reporting
+        the name and final value for each. The "tagexpr" text variable specifies the
+        constraints that must be satisfied for the list of traits. The "parentnode"
+        numeric variable is the node under which to add the attributes. The
+        "nodename" text variable is the name of the node to create.
 
+        Inbound parameter:  tagexpr, nodename, parentnode
+  -->
+  <procedure id="xoabs" scripttype="dossierxml"><![CDATA[
+    var tagexpr as string
+    var nodename as string
+    var parentnode as number
+
+    var node as number
+    var xodescript as string
+
+    foreach pick in hero where tagexpr sortas explicit
+      node = xml[parentnode].addchild[nodename]
+      xml[node].attr["name"] = eachpick.field[name].text
+      xodescript = eachpick.field[descript].text
+      call xodescript
+
+      if (eachpick.tagis[thing.user_added] = 0) then
+        xml[node].attr["useradded"] = "no"
+        endif
+      nexteach
+    ]]></procedure>
+
+
+    
   <!-- Procedure xogrbasics
         Output basic details for the gear that is the focus pick.
   -->
@@ -342,12 +372,6 @@
         xml[node].attr["text"] = hero.child[mscPerson].field[perWeight].text
         xml[node].attr["value"] = hero.child[mscPerson].field[perWeight].value
 
-        ~output attributes
-        parentnode = xmlroot.addchild["attributes"]
-        nodename = "attribute"
-        tagexpr = "component.Attribute"
-        call xotraits
-
         ~output skills
         parentnode = xmlroot.addchild["skills"]
         nodename = "skill"
@@ -358,7 +382,7 @@
         parentnode = xmlroot.addchild["abilities"]
         nodename = "ability"
         tagexpr = "component.Ability"
-        call xotraits
+        call xoabs
 
         ~output derived traits
         parentnode = xmlroot.addchild["traits"]

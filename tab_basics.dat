@@ -12,7 +12,7 @@
   <!-- Skill Bonus portal. Used to list skill bonuses from backgrounds, races, and  
        command packages, and to allow for choices. -->
   <portal
-    id="raFeatures"
+    id="skBonuses"
     style="tblInvis"
     width="240">
     <table_fixed
@@ -272,7 +272,7 @@
     <portalref portal="stRace" taborder="20"/>
     <portalref portal="stCmdPckge" taborder="40"/>
     <portalref portal="stBckGrnd" taborder="60"/>
-    <portalref portal="raFeatures" taborder ="80"/>
+    <portalref portal="skBonuses" taborder ="80"/>
     <portalref portal="baTrait" taborder="99"/>
     
     <portalref portal="Horizontal"/>
@@ -301,7 +301,7 @@
       portal[baTrait].top = portal[Horizontal].bottom + 15
       portal[baTrait].height = height - portal[baTrait].top
       
-      portal[raFeatures].top = portal[baTrait].bottom + 4
+      portal[skBonuses].top = portal[baTrait].bottom + 4
 
       ~figure out the total height we need for the tab
       height = portal[baTrait].bottom

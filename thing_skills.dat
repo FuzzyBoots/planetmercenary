@@ -14,7 +14,6 @@
     <fieldval field="trtAbbrev" value="Car"/>
 
     <tag group="Skill" tag="skCarbine"/>
-
     <tag group="Skills" tag="Combat"/>
   </thing>
   
@@ -42,7 +41,6 @@
     <fieldval field="trtAbbrev" value="Exp"/>
 
     <tag group="Skill" tag="skExplsves"/>
-
     <tag group="Skills" tag="Combat"/>
 </thing>
   
@@ -55,8 +53,7 @@
     description="Use your Heavy Weapons skill when firing heavy-class weapons. If your weapon hangs underslung, feels massive, rotates, and makes terrifying noises when it’s fired, then you’re packing a heavy weapon. Tanks, large vehicles, power-armored sophonts — these all become valid targets when you fire a heavy weapon.">
     <fieldval field="trtAbbrev" value="Hvy"/>
 
-    <tag group="Skill" tag="skHvyWeap"/>    
-
+    <tag group="Skill" tag="skHvyWeap"/>
     <tag group="Skills" tag="Combat"/>
   </thing>
   
@@ -69,8 +66,7 @@
     description="Use your Long Guns skill when firing long gun-class weapons. As the weapons of choice for sharpshooters, long guns include high-powered rifles, snipers, and long-range flechette guns. If you want to perch on a building and fire shots across town with pinpoint accuracy, you’ll want some deadly serious Long Gun proficiency.">
     <fieldval field="trtAbbrev" value="Lng"/>
 
-    <tag group="Skill" tag="skLongGun"/>    
-
+    <tag group="Skill" tag="skLongGun"/>
     <tag group="Skills" tag="Combat"/>
   </thing>
   
@@ -83,8 +79,7 @@
     description="Use your Melee skill for all melee attacks, with or without a weapon. Whether you punch with fists, swipe with claws, slap with nano-engineered chunks of advanced metal embedded in your tentacles, stab with a combat knife, or swing a vibro-halberd over your head, you use the Melee skill when you attack right up in whatever passes for your enemy’s face.">
     <fieldval field="trtAbbrev" value="Mel"/>
 
-    <tag group="Skill" tag="skMelee"/>    
-
+    <tag group="Skill" tag="skMelee"/>
     <tag group="Skills" tag="Combat"/>
   </thing>
 
@@ -97,8 +92,7 @@
     description="Use your Pistols skill when firing pistol-class weapons. Hold-outs, fast-draw handguns, and other ranged weapons designed to be held in a single hand (or hand-equivalent appendage) are used with this skill. Pistols are more easily concealable than many other weapons, making them an excellent choice for clandestine operations in places too civilized for slinging a carbine over a shoulder (or shoulder-equivalent joint).">
     <fieldval field="trtAbbrev" value="Pst"/>
 
-    <tag group="Skill" tag="skPistol"/>    
-
+    <tag group="Skill" tag="skPistol"/>
     <tag group="Skills" tag="Combat"/>
   </thing>
   
@@ -111,8 +105,7 @@
     description="Use your Scatterguns skill when firing scattergun-class weapons. If your weapon fires a spread of projectiles (or a spray of highenergy particles), use the Scattergun skill. The form factor of scatterguns is like that of many carbines, but these weapons require a different kind of focus and control. Some scatterguns approach heavy weapon-levels of coverage, but they’re still optimal for close quarters combat.">
     <fieldval field="trtAbbrev" value="Sct"/>
 
-    <tag group="Skill" tag="skScatter"/>    
-
+    <tag group="Skill" tag="skScatter"/>
     <tag group="Skills" tag="Combat"/>
   </thing>
   
@@ -151,8 +144,7 @@
     description="Use your Chemistry skill to develop and reverse-engineer chemical compounds, find antitoxins for poisons, manufacture vaccines, and determine the suitability of an atmosphere for a particular form of life. If a task requires a deep understanding of chemical reactions and properties, then you need to perform a Chemistry skill check to complete it.">
     <fieldval field="trtAbbrev" value="Chm"/>
 
-    <tag group="Skill" tag="skChem"/>    
-
+    <tag group="Skill" tag="skChem"/>
     <tag group="Skills" tag="Mental"/>
   </thing>
   
@@ -166,7 +158,6 @@
     <fieldval field="trtAbbrev" value="Cmp"/>
 
     <tag group="Skill" tag="skCompute"/>
-
     <tag group="Skills" tag="Mental"/>
   </thing>
   
@@ -218,8 +209,7 @@
     description="Use your History skill to draw on your knowledge of the past to solve current problems. This skill represents your understanding of past events throughout the galaxy. A History check can give you helpful context for the environment in which you find yourself, and can provide the information you need to solve a problem facing the company. You could determine a good course of action through recall of an important precedent, and might even put yourself in the shoes of historical figures for a bit of inspiration.">
     <fieldval field="trtAbbrev" value="Hst"/>
 
-    <tag group="Skill" tag="skHistory"/>    
-
+    <tag group="Skill" tag="skHistory"/>
     <tag group="Skills" tag="Mental"/>
   </thing>
   

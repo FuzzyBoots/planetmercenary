@@ -77,7 +77,7 @@
       perform field[usrChosen1].chosen.field[trtBG].modify[+,2,"Background"]
       ]]></eval>
     </thing>  
-  
+        
   <thing
     id="resSkill"
     name="Skill Points"
@@ -159,11 +159,11 @@
     </thing>
 
 
-  <!-- AoE Helper -->
+  <!-- Spec Helper -->
   <thing
-    id="AoEHelp"
-    name="AoE Helper"
-    compset="AoEHelp"
+    id="SpecHelp"
+    name="Spec Helper"
+    compset="SpecHelp"
     description="Description goes here">
     </thing>
     

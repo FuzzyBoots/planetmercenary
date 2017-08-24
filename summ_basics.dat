@@ -70,7 +70,35 @@
       ]]></position>
     </template>
 
+<!-- smTrait template
+        This template shows the name and final value of the given trait, providing
+        mouse-over behavior to show the details of each trait.
+  -->
+  <template
+    id="smSpec2"
+    name="Summary Specialty Pick"
+    compset="Specialty">
 
+    <portal
+      id="name"
+      style="lblSummary">
+      <label
+        field="name">
+        </label>
+      <mouseinfo/>
+      </portal>
+    
+    <position><![CDATA[
+      ~set up our height based on our tallest portal
+      height = portal[name].height
+
+      ~if this is a "sizing" calculation, we're done
+      doneif (issizing <> 0)
+
+      ~ perform portal[name].alignrel[ltor,value,5]
+      ]]></position>
+    </template>
+  
   <!-- smBasics layout
         This layout contains the table of attributes and derived traits for the
         character.

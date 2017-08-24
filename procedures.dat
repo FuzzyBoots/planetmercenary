@@ -798,9 +798,9 @@
     ]]></procedure>
 
     
-    <!-- Script used to set up AoE selection
+    <!-- Script used to set up Specialty selection
   -->
-  <procedure id="SetAoEExpr" context="pick"><![CDATA[
+  <procedure id="SetSpcExpr" context="pick"><![CDATA[
     ~make sure there's a gizmo to travel to
     doneif (isgizmo = 0)
     
@@ -812,7 +812,7 @@
 
     expr &= myId & ")"
     
-    gizmo.childfound[AoEHelp].field[aoeAoEExpr].text = expr
+    gizmo.childfound[SpecHelp].field[SpecExpr].text = expr
     ]]></procedure>
 
 

@@ -45,6 +45,19 @@
     append @newline
     ]]></procedure>
 
+  <procedure id="sbabs" scripttype="synthesize"><![CDATA[
+    var tagexpr as string
+    var ismore as number
+    ismore = 0
+    foreach pick in hero where tagexpr
+      if (ismore <> 0) then
+        append ", "
+        endif
+      append eachpick.field[name].text
+      ismore = 1
+      nexteach
+    append @newline
+    ]]></procedure>
 
   <!-- Procedure sbweapons
         Output all of the weapons possessed by the character, listing equipped
@@ -177,11 +190,6 @@
         ~output age
         append @boldon & "Age: " & @boldoff & hero.child[mscPerson].field[perAge].text & @newline
 
-        ~output attributes
-        append @boldon & "Attributes: " & @boldoff
-        tagexpr = "component.Attribute"
-        call sbtraits
-
         ~output skills
         append @boldon & "Skills: " & @boldoff
         tagexpr = "component.Skill"
@@ -190,7 +198,7 @@
         ~output special abilities
         append @boldon & "Special Abilities: " & @boldoff
         tagexpr = "component.Ability"
-        call sbtraits
+        call sbabs
 
         ~output derived traits
         foreach pick in hero from Derived sortas explicit

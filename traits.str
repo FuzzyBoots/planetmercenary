@@ -113,7 +113,7 @@
         NOTE! This is necessary so incrementers have proper values when edited by the user.
         -->
     <eval index="1" phase="Render" priority="5000"><![CDATA[
-      field[trtUser].delta = field[trtBonus].value + field[trtInPlay].value
+      field[trtUser].delta = field[trtBase].value + field[trtBG].value + field[trtBonus].value + field[trtInPlay].value
       ]]></eval>
 
     <!-- If the trait is at its minimum/maximum, assign a tag to preclude further advancements -->
@@ -128,6 +128,25 @@
         endif
       ]]></eval>
 
+    </component>
+
+  <!-- BGTrait - all background traits — backgrounds, command packages, and races —
+       derive from this to provide common properties -->
+  <component
+    id="BGTrait"
+    name="Background trait"
+    autocompset="no"
+    panellink="basics">
+    <eval index="1" phase="Setup" priority="3000" name="BG tag final">
+      <before name="Size final"/><![CDATA[
+      var expr as string
+        if (tagis[SkillBonus.?] <> 0) then
+          expr = tagids[SkillBonus.?, " | "]
+          foreach pick in hero from Skill where expr
+            perform eachpick.field[trtBG].modify[+,2,""]
+            nexteach
+          endif
+          ]]></eval>
     </component>
 
 
@@ -187,13 +206,13 @@
     ]]></eval>
     
     <!-- set the appropriate candidate expression -->
-    <eval index="4" phase="Final" priority="1000" name="aoeHelp Expr">
+    <eval index="4" phase="Final" priority="1000" name="SpecHelp Expr">
       <![CDATA[
       
       var myId as string
       myId = tagids[Skill.sk?," & "]
       
-      call SetAoEExpr
+      call SetSpcExpr
       ]]></eval>
       
     <eval index="10" phase="Initialize" priority="10000"><![CDATA[
@@ -265,17 +284,17 @@
     ]]></eval>
   </component>    
 
-<!-- AoE Helper component
-        Each AoE Gizmo derives from this component
+<!-- Specialty Helper component
+        Each Specialty Gizmo derives from this component
   -->
   
   <component
-    id="AoEHelp"
-    name="Area of Expertise Helper">
+    id="SpecHelp"
+    name="Specialty Helper">
 
     <!-- Selection Tag Expressions -->
     <field
-      id="aoeAoEExpr"
+      id="SpecExpr"
       name="Specialization Tag Expression"
       type="derived"
       maxlength="500">
@@ -460,9 +479,7 @@
   <compset
     id="Ability">
     <compref component="Ability"/>
-    <compref component="Trait"/>
     <compref component="SpecialTab"/>
-    <compref component="CanAdvance"/>
     </compset>
 
   <!-- Trait - all derived traits are based on this compset -->
@@ -477,6 +494,7 @@
     id="Race"
     forceunique="yes">
     <compref component="Race"/>
+    <compref component="BGTrait"/>
     </compset>
 
   <!-- Command Package - all command packages derive from this compset -->
@@ -484,6 +502,7 @@
     id="CmdPckge"
     forceunique="yes">
     <compref component="CmdPckge"/>
+    <compref component="BGTrait"/>
     </compset>
 
   <!-- Background - all backgrounds derive from this compset -->
@@ -491,6 +510,7 @@
     id="Bckgrnd"
     forceunique="yes">
     <compref component="Bckgrnd"/>
+    <compref component="BGTrait"/>
     </compset>
 
   <!-- Specialty - all skill specialties derive from this compset -->
