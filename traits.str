@@ -117,7 +117,7 @@
       ]]></eval>
 
     <!-- If the trait is at its minimum/maximum, assign a tag to preclude further advancements -->
-    <eval index="2" phase="Final" priority="5000"><![CDATA[
+    <eval index="2" phase="Final" priority="4001"><![CDATA[
       ~base our test on the adjusted trait value, sans any in-play adjustments
       var trait as number
       trait = field[trtUser].value + field[trtBonus].value
@@ -138,15 +138,15 @@
     autocompset="no"
     panellink="basics">
     <eval index="1" phase="Setup" priority="3000" name="BG tag final">
-      <before name="Size final"/><![CDATA[
+      <!--before name="Size final"/--><![CDATA[
       var expr as string
-        if (tagis[SkillBonus.?] <> 0) then
-          expr = tagids[SkillBonus.?, " | "]
-          foreach pick in hero from Skill where expr
-            perform eachpick.field[trtBG].modify[+,2,""]
-            nexteach
-          endif
-          ]]></eval>
+      if (tagis[SkillBon2.?] <> 0) then
+        expr = tagids[SkillBon2.?, " | "]
+        foreach pick in hero from Skill where expr
+          perform eachpick.field[trtBG].modify[+,2,""]
+          nexteach
+        endif
+        ]]></eval>
     </component>
 
 
@@ -179,7 +179,7 @@
     
     <!-- Each skill can also be selected as a background/command package/race bonus.
          This bonus does count against the maximum at character creation.    -->
-    <identity group="SkillBonus"/>
+    <identity group="SkillBon2"/>
 
     <!-- Every skill is shown on the "Rolls" mouse-over on the Dashboard/TacCon -->
     <tag group="DashTacCon" tag="Rolls"/>
@@ -231,9 +231,9 @@
 
     </component>
 
-  <!-- SkillBonus component -->
+  <!-- SkillBon2 component -->
   <component
-    id="SkillBonus"
+    id="SkillBon2"
     name="Starting Skill Bonus"
     autocompset="no"
     panellink="basics">
@@ -243,7 +243,10 @@
 
     <!-- All feats get the same tag for sorting purposes -->
     <!--tag group="SpecialTab" tag="RaceFeat"/-->
-
+    
+    <!-- Each attribute can also be selected as a skill bonus. -->
+    <!--identity group="SkillBon2"/-->
+    
     <!-- Activate any selected build option -->
     <eval index="1" phase="Setup" priority="100" name="Build option activated"><![CDATA[
       if (field[usrChosen1].ischosen <> 0) then
@@ -409,15 +412,7 @@
 
     <!-- Track the race on the actor by assigning the appropriate tag -->
     <eval index="1" phase="Setup" priority="5000"><![CDATA[
-      perform forward[Race.?]
-      
-      ~ var expr as string
-      ~ if (tagis[SkillBonus.?] <> 0) then
-      ~   expr = tagids[SkillBonus.?, " | "]
-      ~   foreach pick in hero from Skill where expr
-      ~     perform eachpick.field[trtRacial].modify[+,2,""]
-      ~     nexteach
-      ~   endif
+      perform forward[Race.?]      
       ]]></eval>
 
     
@@ -455,8 +450,10 @@
 
     <!-- Track the background on the actor by assigning the appropriate tag -->
     <eval index="1" phase="Setup" priority="5001"><![CDATA[
-      perform forward[CmdPckge.?]
+      perform forward[Bckgrnd.?]
       ]]></eval>
+      
+    
 
     </component>
 
@@ -524,8 +521,8 @@
 
   <!-- Skill Bonuses -->
   <compset
-    id="SkillBonus">
-    <compref component="SkillBonus"/>
+    id="SkillBon2">
+    <compref component="SkillBon2"/>
     <compref component="UserSelect"/>
     <compref component="SpecialTab"/>
     <compref component="Custom"/>

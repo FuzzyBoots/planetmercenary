@@ -157,7 +157,7 @@
     <value id="smArmory"/>
     <value id="smStatbl"/>
     </group>
-
+    
   <group
 	id="Skills">
 	<value id="Combat"/>
@@ -207,7 +207,119 @@
 		<value id="skNegot" name="Negotiate"/>
 		<value id="skPerform" name="Perform"/>
 		<value id="skWillpow" name="Willpower"/>
-		</group>  
+		</group>
+    
+  <group
+    id="Specialty"
+    dynamic="yes">
+    <value id="spCarbBeam"/>
+    <value id="spCarbNL"/>
+    <value id="spCarbProj"/>
+    <value id="spExpBld"/>
+    <value id="spExpDet"/>
+    <value id="spExpDearm"/>
+    <value id="spExpPlac"/>
+    <value id="spHvyBeam"/>
+    <value id="spHvyNL"/>
+    <value id="spHvyProj"/>
+    <value id="spLongBeam"/>
+    <value id="spLongNL"/>
+    <value id="spLongProj"/>
+    <value id="spMeleeCom"/>
+    <value id="spMeleeEx"/>
+    <value id="spMeleeUn"/>
+    <value id="spMeleeWr"/>
+    <value id="spPistBeam"/>
+    <value id="spPistNL"/>
+    <value id="spPistProj"/>
+    <value id="spScatBeam"/>
+    <value id="spScatNL"/>
+    <value id="spScatProj"/>
+    <value id="spStaWBeam"/>
+    <value id="spStaWBall"/>
+    <value id="spStaWMiss"/>
+    <value id="spThrwAero"/>
+    <value id="spThrwGren"/>
+    <value id="spThrwImpr"/>
+    <value id="spChemBio"/>
+    <value id="spChemInrg"/>
+    <value id="spCompHack"/>
+    <value id="spCompProg"/>
+    <value id="spCompRep"/>
+    <value id="spCompSec"/>
+    <value id="spEconLcl"/>
+    <value id="spEconPlan"/>
+    <value id="spEconSec"/>
+    <value id="spEngArch"/>
+    <value id="spEngHab"/>
+    <value id="spEngPlVeh"/>
+    <value id="spEngVess"/>
+    <value id="spHistMil"/>
+    <value id="spHistPoli"/>
+    <value id="spHistRel"/>
+    <value id="spHistSoph"/>
+    <value id="spMechBld"/>
+    <value id="spMechJury"/>
+    <value id="spMechRep"/>
+    <value id="spMedBatt"/>
+    <value id="spMedFAid"/>
+    <value id="spMedSurg"/>
+    <value id="spXenoWrld"/>
+    <value id="spAirEvad"/>
+    <value id="spAirNav"/>
+    <value id="spAirPurs"/>
+    <value id="spAthClmb"/>
+    <value id="spAthFlght"/>
+    <value id="spAthJump"/>
+    <value id="spAthPurs"/>
+    <value id="spAthRun"/>
+    <value id="spAthStr"/>
+    <value id="spEndVac"/>
+    <value id="spEndHold"/>
+    <value id="spEndImmun"/>
+    <value id="spGrndEvad"/>
+    <value id="spGrndNav"/>
+    <value id="spGrndPurs"/>
+    <value id="spLarcBE"/>
+    <value id="spLarcPLoc"/>
+    <value id="spLarcPPoc"/>
+    <value id="spPercHear"/>
+    <value id="spPercMag"/>
+    <value id="spPercSght"/>
+    <value id="spPercSmll"/>
+    <value id="spPercTste"/>
+    <value id="spPercThrm"/>
+    <value id="spSpcEvad"/>
+    <value id="spSpcNav"/>
+    <value id="spSpcPurs"/>
+    <value id="spStlthHid"/>
+    <value id="spStlthTai"/>
+    <value id="spWatrEvad"/>
+    <value id="spWatrNav"/>
+    <value id="spWatrPurs"/>
+    <value id="spDecBluff"/>
+    <value id="spDecDisg"/>
+    <value id="spDecDist"/>
+    <value id="spEmpGamb"/>
+    <value id="spEmpGInfo"/>
+    <value id="spEmpInfl"/>
+    <value id="spEmpRSoph"/>
+    <value id="spInspOra"/>
+    <value id="spInspLead"/>
+    <value id="spInspSed"/>
+    <value id="spIntCoer"/>
+    <value id="spIntInter"/>
+    <value id="spIntTort"/>
+    <value id="spNegPers"/>
+    <value id="spNegHagg"/>
+    <value id="spNegBlck"/>
+    <value id="spPerfAct"/>
+    <value id="spPerfCom"/>
+    <value id="spPerfDnce"/>
+    <value id="spPerfSong"/>
+    <value id="spWillFort"/>
+    <value id="spWillTena"/>
+  </group>
 		
   <!-- Hide group - controls whether things are hidden in certain contexts
         In the same way that the HideTab group controls which panels are made visible
@@ -362,7 +474,7 @@
     id="SpecialTab"
     sequence="explicit">
     <value id="Ability"    order="10"/>
-	<value id="Specialty"  order="30"/>
+	  <value id="Specialty"  order="30"/>
     <value id="RiPPs"      order="50"/>
     <value id="Unknown"    order="80"/>
     </group>

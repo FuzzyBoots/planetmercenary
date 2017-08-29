@@ -15,25 +15,38 @@
     compset="Skill"
     name="Skill"
     prefix="sk"
-    description="As basic traits, Skills have a minimum and maximum value, as well as{br}an optional short name and/or abbreviation."
+    description="As basic traits, Skills have an optional short name and/or abbreviation and a type designation."
     summary="Defines a Skill upon which starting CPs can be spent by a character.">
-    <inputthing
-      name="Minimum Value"
-      helptext="Specify the minimum rating for the skill (default is 0).">
-      <it_field field="trtMinimum"/>
-      </inputthing>
-    <inputthing
-      name="Maximum Value"
-      helptext="Specify the maximum rating for the skill(default is 10).">
-      <it_field field="trtMaximum"/>
-      </inputthing>
     <inputthing
       name="Abbreviation"
       helptext="Specify a very short abbreviation for use in displaying the skill via its abbreviation (max 5 characters).">
       <it_field field="trtAbbrev"/>
       </inputthing>
+    <inputthing
+      name="Skill Category"
+      helptext="Specify which category the skill appears in.">
+      <it_tagpick group="Skills" tag="?"/>
+      </inputthing>
     </editthing>
 
+  <!-- Specialty editthing -->
+  <editthing
+    compset="Specialty"
+    name="Specialty"
+    prefix="spc"
+    description="As basic traits, Specialties have a skill designation."
+    summary="Defines a Specialty upon which starting CPs can be spent by a character.">
+    <inputthing
+      name="Domain Required?"
+      helptext="Specify whether this skill requires the user to specify a domain.">
+      <it_tagcheck group="User" tag="NeedDomain"/>
+      </inputthing>
+    <inputthing
+      name="Skill Category"
+      helptext="Specify which skill this corresponds to.">
+      <it_tagpick group="Skill" tag="?"/>
+      </inputthing>
+    </editthing>
 
   <!-- Ability editthing -->
   <editthing
@@ -89,6 +102,31 @@
     prefix="rac"
     description="Races have no special fields - only a name. If a race confers an ability,{br}create it as a special ability and bootstrap it from the race."
     summary="Defines a Race that can be selected by a character.">
+
+    <inputthing
+      name="Skill Bonuses"
+      helptext="Pick skills to which this race assigns a +2 bonus.">
+      <it_taglist group="SkillBon2" tag="?"/>
+      </inputthing>
+      
+    <inputthing
+      name="Bonus Specialties"
+      helptext="Specialties automatically accorded due to Race.">
+      <it_taglist group="Specialty" tag="?"/>
+      </inputthing>
+    
+    <inputthing
+      name="Skill Bonus Choices"
+      helptext="Add one or more skill bonus choices that the characters of this race can pick.">
+      <it_bootcustom compset="SkillBon2">
+        <match>thingid.fRPlusSk</match>
+        <inputthing
+          name="Skills"
+          helptext="Pick the skills that can be chosen for this bonus.">
+          <it_taglist group="SkillBon2" tag="?" dynamic="no"/>
+          </inputthing>
+        </it_bootcustom>
+      </inputthing>
     </editthing>
 
 
