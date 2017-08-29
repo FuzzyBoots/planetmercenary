@@ -405,15 +405,15 @@
   autocompset="no">
   <tag group="SpecialTab" tag="RiPPs"/>
   <eval index="1" phase="Render" priority="5000"><![CDATA[
-    field[spcName].text = "RiPPs (" & #trkmax[trkRiPPs] & " per game)"
+    field[spcName].text = "RiPPs (Max " & #trkmax[trkRiPPs] & " per game)"
     ]]></eval>
   </component>
   
   <compset
   id="RiPPs">
-  <compref component="Tracker"/>
-  <compref component="SpecialTab"/>
-  <compref component="RiPPs"/>
+    <compref component="Tracker"/>
+    <compref component="SpecialTab"/>
+    <compref component="RiPPs"/>
   </compset>
 
   <!-- Define various component sets associated with the components defined above.

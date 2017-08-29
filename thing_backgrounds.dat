@@ -44,18 +44,20 @@
     isunique="yes"
     description="Maybe you played in a band. Maybe the band was a circus. Maybe the circus was the writing pit for a comedy show.{br}{br}{b}Bonus Skill Ranks:{/b} +2 Athletics {i}or{/i} Empathy, +2 Deceive {i}or{/i} Thrown Weapons, +2 Inspire">
     
-    <tag group="SkillBonus" tag="skInspire"/>
+    <tag group="SkillBon2" tag="skInspire"/>
     
     <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBonus" tag="skAthlete"/>
-      <autotag group="SkillBonus" tag="skEmpathy"/>
+      <autotag group="SkillBon2" tag="skAthlete"/>
+      <autotag group="SkillBon2" tag="skEmpathy"/>
+      <autotag group="explicit" tag="1"/>
       </bootstrap>
     
     <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBonus" tag="skThrown"/>
-      <autotag group="SkillBonus" tag="skDeceive"/>
+      <autotag group="SkillBon2" tag="skThrown"/>
+      <autotag group="SkillBon2" tag="skDeceive"/>
+      <autotag group="explicit" tag="2"/>
       </bootstrap>
-    
+      
     </thing>
   
   <thing

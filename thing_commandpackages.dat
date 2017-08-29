@@ -29,16 +29,22 @@
     isunique="yes"
     description="The Chaplain provides both moral support and a moral compass. Morale and morality! Sometimes it falls to the Chaplain to point out what horrible people the other officers could become if they follow a given path. Other times the Chaplain must bring his carbine to his shoulder and clear a path with righteous indignation!">
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skDodge] += 2
-    #traitbase[skInspire] += 2
-    #traitbase[skHistory] += 2
-    #traitbase[skPistol] += 1
-
-    ~Somehow, we add the History (Religion) specialty
-    ]]></eval>
-
+    <tag group="SkillBon2" tag="skDodge"/>
+    <tag group="SkillBon2" tag="skHistory"/>
+    
+    <bootstrap thing="spHistRel"/>
+    
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBon2" tag="skInspire"/>
+      <autotag group="SkillBon2" tag="skPerform"/>
+      <autotag group="explicit" tag="1"/>
+      </bootstrap>
+    
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBon2" tag="skCompute"/>
+      <autotag group="SkillBon2" tag="skInspire"/>
+      <autotag group="explicit" tag="2"/>
+      </bootstrap>
     </thing>
   
   <thing

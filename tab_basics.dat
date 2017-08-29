@@ -18,7 +18,7 @@
     <table_fixed
       component="UserSelect"
       showtemplate="MenuSlPick"
-      showsortset=""
+      showsortset="explicit"
       alwaysupdate="yes">
       <list><![CDATA[
         (!User.NeedChosen | Helper.ChosenOpt)
