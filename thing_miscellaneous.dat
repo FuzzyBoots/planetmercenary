@@ -41,34 +41,35 @@
     compset="Resource">
     <fieldval field="resObject" value="Skill"/>
     <fieldval field="resMax" value="5"/>
+    <fieldval field="resDefault" value="1"/>
     <tag group="Helper" tag="Bootstrap"/>
   </thing>  
   
   <thing
-  id="trkRiPPs"
-  name="RiPPs"
-  compset="RiPPs">
-  <fieldval field="trkMin" value="0"/>
-  <fieldval field="trkMax" value="5"/>
-  <tag group="Helper" tag="Bootstrap"/>
-  <tag group="Helper" tag="ResetMax"/>
-  <!--tag group="Helper" tag="NoMaxBound"/-->
-  </thing> 
+    id="trkRiPPs"
+    name="RiPPs"
+    compset="RiPPs">
+    <fieldval field="trkMin" value="0"/>
+    <fieldval field="trkMax" value="5"/>
+    <tag group="Helper" tag="Bootstrap"/>
+    <tag group="Helper" tag="ResetMax"/>
+    <!--tag group="Helper" tag="NoMaxBound"/-->
+    </thing> 
   
   <!-- Any background, command package, or race can bootstrap this, adding 
-       SkillBon2.attrid tags as necessary -->
+       SkillBonus.attrid tags as necessary -->
   <thing
     id="fRPlusSk"
     name="+2 to Skill"
-    compset="SkillBon2"
+    compset="SkillBonus"
     description="Gives a +2 bonus to the selected skill.">
     <fieldval field="usrCandid1" value="component.Skill"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="5000">
       <before name="Calc trtFinal"/><![CDATA[
-      ~build the candidate expression out of our SkillBon2 tags
-      if (tagis[SkillBon2.?] <> 0) then
-        field[usrCandid1].text &= " & (" & tagids[SkillBon2.?, " | "] & ")"
+      ~build the candidate expression out of our SkillBonus tags
+      if (tagis[SkillBonus.?] <> 0) then
+        field[usrCandid1].text &= " & (" & tagids[SkillBonus.?, " | "] & ")"
         endif
 
       perform field[usrChosen1].chosen.field[trtBG].modify[+,2,"Background"]
@@ -78,15 +79,15 @@
   <thing
     id="fRPlusSkTy"
     name="+2 to Skill Type"
-    compset="SkillBon2"
+    compset="SkillBonus"
     description="Gives a +2 bonus to the selected skill.">
     <fieldval field="usrCandid1" value="component.Skill"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4900">
       <before name="Calc trtFinal"/><![CDATA[
-      ~build the candidate expression out of our SkillBon2 tags
-      if (tagis[SkillBon2.?] <> 0) then
-        field[usrCandid1].text &= " & (" & tagids[SkillBon2.?, " | "] & ")"
+      ~build the candidate expression out of our SkillBonus tags
+      if (tagis[SkillBonus.?] <> 0) then
+        field[usrCandid1].text &= " & (" & tagids[SkillBonus.?, " | "] & ")"
         endif
 
       perform field[usrChosen1].chosen.field[trtBG].modify[+,2,"Background"]
@@ -94,17 +95,17 @@
     </thing>  
         
   <!-- Any background, command package, or race can bootstrap this, adding 
-       SkillBon2.attrid tags as necessary -->
+       SkillBonus.attrid tags as necessary -->
   <thing
     id="fPlusSk1"
     name="+1 to Skill"
-    compset="SkillBon2"
+    compset="SkillBonus"
     description="Gives a +1 bonus to the specified skill.">
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4949">
       <before name="Calc trtFinal"/><![CDATA[
-      if (tagis[SkillBon2.?] > 0) then
-        if (tagis[SkillBon2.?] < 2) then
+      if (tagis[SkillBonus.?] > 0) then
+        if (tagis[SkillBonus.?] < 2) then
           perform hero.child[skInspire].field[trtBG].modify[+,1,"Background"]
         endif
       endif
@@ -114,14 +115,14 @@
   <thing
     id="fPlusSk2"
     name="+2 to Skill"
-    compset="SkillBon2"
+    compset="SkillBonus"
     description="Gives a +2 bonus to the specified skill.">
     <fieldval field="usrCandid1" value="component.Skill"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4950">
       <before name="Calc trtFinal"/><![CDATA[
-      if (tagis[SkillBon2.?] > 0) then
-        if (tagis[SkillBon2.?] < 2) then
+      if (tagis[SkillBonus.?] > 0) then
+        if (tagis[SkillBonus.?] < 2) then
           perform hero.child[skInspire].field[trtBG].modify[+,2,"Background"]
         endif
       endif

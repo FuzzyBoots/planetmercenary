@@ -37,6 +37,13 @@
       name="Maximum Value"
       type="derived">
       </field>
+      
+    <!-- Maximum value for resource -->
+    <field
+      id="resDefault"
+      name="Default Value"
+      type="derived">
+      </field>
 
     <!-- Quantity of resource that has been spent -->
     <field

@@ -29,20 +29,20 @@
     isunique="yes"
     description="The Chaplain provides both moral support and a moral compass. Morale and morality! Sometimes it falls to the Chaplain to point out what horrible people the other officers could become if they follow a given path. Other times the Chaplain must bring his carbine to his shoulder and clear a path with righteous indignation!">
     
-    <tag group="SkillBon2" tag="skDodge"/>
-    <tag group="SkillBon2" tag="skHistory"/>
+    <tag group="SkillBonus" tag="skDodge"/>
+    <tag group="SkillBonus" tag="skHistory"/>
     
     <bootstrap thing="spHistRel"/>
     
     <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBon2" tag="skInspire"/>
-      <autotag group="SkillBon2" tag="skPerform"/>
+      <autotag group="SkillBonus" tag="skInspire"/>
+      <autotag group="SkillBonus" tag="skPerform"/>
       <autotag group="explicit" tag="1"/>
       </bootstrap>
     
     <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBon2" tag="skCompute"/>
-      <autotag group="SkillBon2" tag="skInspire"/>
+      <autotag group="SkillBonus" tag="skCompute"/>
+      <autotag group="SkillBonus" tag="skInspire"/>
       <autotag group="explicit" tag="2"/>
       </bootstrap>
     </thing>

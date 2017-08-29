@@ -140,8 +140,8 @@
     <eval index="1" phase="Setup" priority="3000" name="BG tag final">
       <!--before name="Size final"/--><![CDATA[
       var expr as string
-      if (tagis[SkillBon2.?] <> 0) then
-        expr = tagids[SkillBon2.?, " | "]
+      if (tagis[SkillBonus.?] <> 0) then
+        expr = tagids[SkillBonus.?, " | "]
         foreach pick in hero from Skill where expr
           perform eachpick.field[trtBG].modify[+,2,""]
           nexteach
@@ -149,6 +149,13 @@
         ]]></eval>
     </component>
 
+  <!-- Fireteam Skill component -->
+  <component
+    id="FSkill"
+    name="Fireteam Skill"
+    autocompset="no"
+    panellink="basics"> <!-- Will eventualy link to Fireteam -->
+    </component>    
 
   <!-- Skill component
         Each skill derives from this component
@@ -179,7 +186,7 @@
     
     <!-- Each skill can also be selected as a background/command package/race bonus.
          This bonus does count against the maximum at character creation.    -->
-    <identity group="SkillBon2"/>
+    <identity group="SkillBonus"/>
 
     <!-- Every skill is shown on the "Rolls" mouse-over on the Dashboard/TacCon -->
     <tag group="DashTacCon" tag="Rolls"/>
@@ -231,9 +238,9 @@
 
     </component>
 
-  <!-- SkillBon2 component -->
+  <!-- SkillBonus component -->
   <component
-    id="SkillBon2"
+    id="SkillBonus"
     name="Starting Skill Bonus"
     autocompset="no"
     panellink="basics">
@@ -245,7 +252,7 @@
     <!--tag group="SpecialTab" tag="RaceFeat"/-->
     
     <!-- Each attribute can also be selected as a skill bonus. -->
-    <!--identity group="SkillBon2"/-->
+    <!--identity group="SkillBonus"/-->
     
     <!-- Activate any selected build option -->
     <eval index="1" phase="Setup" priority="100" name="Build option activated"><![CDATA[
@@ -463,6 +470,14 @@
 
   <!-- No compsets are auto-defined for the component -->
 
+  <!-- Fireteam Skill - all fireteam skills derive from this compset -->
+  <compset
+    id="FSkill"
+    forceunique="yes">
+    <compref component="FSkill"/>
+    <compref component="Trait"/>
+    </compset>
+
   <!-- Skill - all skills derive from this compset -->
   <compset
     id="Skill"
@@ -522,8 +537,8 @@
 
   <!-- Skill Bonuses -->
   <compset
-    id="SkillBon2">
-    <compref component="SkillBon2"/>
+    id="SkillBonus">
+    <compref component="SkillBonus"/>
     <compref component="UserSelect"/>
     <compref component="SpecialTab"/>
     <compref component="Custom"/>

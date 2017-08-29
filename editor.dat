@@ -106,24 +106,115 @@
     <inputthing
       name="Skill Bonuses"
       helptext="Pick skills to which this race assigns a +2 bonus.">
-      <it_taglist group="SkillBon2" tag="?"/>
+      <it_taglist group="SkillBonus" tag="?"/>
       </inputthing>
       
     <inputthing
       name="Bonus Specialties"
       helptext="Specialties automatically accorded due to Race.">
-      <it_taglist group="Specialty" tag="?"/>
+      <it_bootcustom compset="Specialty">
+        <match>thingid.?</match>
+        <inputthing
+          name="Specialties"
+          helptext="Pick the Specialties that can be chosen for this bonus.">
+          <it_taglist group="Specialty" tag="?" dynamic="no"/>
+          </inputthing>
+        </it_bootcustom>
       </inputthing>
     
     <inputthing
       name="Skill Bonus Choices"
       helptext="Add one or more skill bonus choices that the characters of this race can pick.">
-      <it_bootcustom compset="SkillBon2">
+      <it_bootcustom compset="SkillBonus">
         <match>thingid.fRPlusSk</match>
         <inputthing
           name="Skills"
           helptext="Pick the skills that can be chosen for this bonus.">
-          <it_taglist group="SkillBon2" tag="?" dynamic="no"/>
+          <it_taglist group="SkillBonus" tag="?" dynamic="no"/>
+          </inputthing>
+        </it_bootcustom>
+      </inputthing>
+    </editthing>
+
+
+  <!-- Race editthing -->
+  <editthing
+    compset="Bckgrnd"
+    name="Background"
+    prefix="bck"
+    description="Races have no special fields - only a name. If a race confers an ability,{br}create it as a special ability and bootstrap it from the race."
+    summary="Defines a Race that can be selected by a character.">
+
+    <inputthing
+      name="Skill Bonuses"
+      helptext="Pick skills to which this race assigns a +2 bonus.">
+      <it_taglist group="SkillBonus" tag="?"/>
+      </inputthing>
+      
+    <inputthing
+      name="Bonus Specialties"
+      helptext="Specialties automatically accorded due to Race.">
+      <it_bootcustom compset="Specialty">
+        <match>thingid.?</match>
+        <inputthing
+          name="Specialties"
+          helptext="Pick the Specialties that can be chosen for this bonus.">
+          <it_taglist group="Specialty" tag="?" dynamic="no"/>
+          </inputthing>
+        </it_bootcustom>
+      </inputthing>
+    
+    <inputthing
+      name="Skill Bonus Choices"
+      helptext="Add one or more skill bonus choices that the characters of this race can pick.">
+      <it_bootcustom compset="SkillBonus">
+        <match>thingid.fRPlusSk</match>
+        <inputthing
+          name="Skills"
+          helptext="Pick the skills that can be chosen for this bonus.">
+          <it_taglist group="SkillBonus" tag="?" dynamic="no"/>
+          </inputthing>
+        </it_bootcustom>
+      </inputthing>
+    </editthing>
+
+
+  <!-- Race editthing -->
+  <editthing
+    compset="CmdPckge"
+    name="Command Package"
+    prefix="cmd"
+    description="Races have no special fields - only a name. If a race confers an ability,{br}create it as a special ability and bootstrap it from the race."
+    summary="Defines a Race that can be selected by a character.">
+
+    <inputthing
+      name="Skill Bonuses"
+      helptext="Pick skills to which this race assigns a +2 bonus.">
+      <it_taglist group="SkillBonus" tag="?"/>
+      </inputthing>
+      
+    <inputthing
+      name="Bonus Specialties"
+      helptext="Specialties automatically accorded due to Race.">
+      <it_bootcustom compset="Specialty">
+        <match>thingid.?</match>
+        <inputthing
+          name="Specialties"
+          helptext="Pick the Specialties that can be chosen for this bonus.">
+          <it_taglist group="Specialty" tag="?" dynamic="no"/>
+          </inputthing>
+        </it_bootcustom>
+      </inputthing>
+    
+    <inputthing
+      name="Skill Bonus Choices"
+      helptext="Add one or more skill bonus choices that the characters of this race can pick.">
+      <it_bootcustom compset="SkillBonus">
+        <match>thingid.fRPlusSk</match>
+        <inputthing
+          name="Skills"
+          helptext="Pick the skills that can be chosen for this bonus.">
+          <it_taglist group="SkillBonus" tag="?" dynamic="no"/>
           </inputthing>
         </it_bootcustom>
       </inputthing>

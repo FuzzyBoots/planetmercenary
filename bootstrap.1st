@@ -18,6 +18,11 @@
     component.Skill
     ]]></enmasse>
 
+  <!-- Add all fireteam skills to the actor -->
+  <enmasse><![CDATA[
+    component.FSkill
+    ]]></enmasse>
+    
   <!-- Add all derived traits to the actor -->
   <enmasse><![CDATA[
     component.Derived
