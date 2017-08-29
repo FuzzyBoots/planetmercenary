@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="racBOBRac" name="Race" compset="Race" uniqueness="unique">
+    <tag group="Specialty" tag="spPistBeam"/>
+    <tag group="Specialty" tag="spCarbBeam"/>
+    </thing>
+  </document>

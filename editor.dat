@@ -89,6 +89,11 @@
     prefix="rac"
     description="Races have no special fields - only a name. If a race confers an ability,{br}create it as a special ability and bootstrap it from the race."
     summary="Defines a Race that can be selected by a character.">
+    <inputthing
+      name="Specialty"
+      helptext="Specialties bootstrapped by the race">
+      <it_taglist group="Specialty" tag="?"/>
+      </inputthing>
     </editthing>
 
 

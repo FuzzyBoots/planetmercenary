@@ -493,6 +493,13 @@
       type="derived">
       </field>
 	  
+	<!-- Defense type conferred by the equipment -->
+    <field
+      id="defType"
+      name="Damage Reduction"
+      type="derived">
+      </field>
+	  
 	<!-- Hull Points adjustment conferred by the equipment -->
     <field
       id="defHull"

@@ -99,7 +99,7 @@
     style="lblSmall">
     <label>
       <labeltext><![CDATA[
-          @text = "(+" & field[trtFinal].value & ")"
+          @text = "(+" & field[trtUser].value & ")"
           ]]></labeltext>
       </label>
     </portal>

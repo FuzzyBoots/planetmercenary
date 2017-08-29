@@ -25,6 +25,7 @@
     holdable="no">
     <fieldval field="defDefense" value="1"/>
     <fieldval field="defDR" value="5"/>
+    <fieldval field="defType" value="Melee"/>
     <tag group="Equipment" tag="Natural"/>
     <tag group="Equipment" tag="AutoEquip"/>
     </thing>

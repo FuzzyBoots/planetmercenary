@@ -264,15 +264,16 @@
     autocompset="no"
     panellink="skills">
     
-    <field
-      id="spcSkill"
-      name="Associated Skill"
-	  maxlength="10"
-      type="static"/>
-	  
-	<tag group="SpecialTab" tag="Specialty"/>
+	  <identity group="Specialty"/>
+    
+	  <tag group="SpecialTab" tag="Specialty"/>
   
-  <!-- Each specialty that is allocated by the user costs 2 CP -->
+    <!-- Track the ability on the actor -->
+    <eval index="1" phase="Setup" priority="5000"><![CDATA[
+      perform forward[Specialty.?]
+      ]]></eval>
+      
+    <!-- Each specialty that is allocated by the user costs 2 CP -->
     <eval index="2" phase="Traits" priority="10000">
       <before name="Calc resLeft"/>
       <after name="Bound trtUser"/><![CDATA[
