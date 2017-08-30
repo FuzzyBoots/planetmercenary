@@ -4,39 +4,62 @@
 
 <document signature="Hero Lab Data">
 
-  <!-- Captain Background -->
-  <thing
-    id="bckCrmLrd"
-    name="Crime Lord"
-    compset="Bckgrnd"
-    isunique="yes"
-    description="">
-    
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skDeceive] += 2
-    #traitbase[skNegot] += 2
-    #traitbase[skHistory] += 2
-    ]]></eval>
-
+  <thing id="bckCrime" name="Crime Lord" description="You probably didn’t get your lawless hands very dirty, but you definitely know some people who did — and they did it on your orders.\n\n{b}Bonus Skill Ranks:{/b} +2 Deceive, +2 Economics {i}or{/i} History, +2 Inspire {i}or{/i} Negotiate" compset="Bckgrnd" uniqueness="unique">
+    <tag group="SkillBonus" tag="skDeceive"/>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skEcon"/>
+      <autotag group="SkillBonus" tag="skHistory"/>
+      <autotag group="explicit" tag="1"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skInspire"/>
+      <autotag group="SkillBonus" tag="skNegot"/>
+      <autotag group="explicit" tag="2"/>
+      </bootstrap>
     </thing>
-  
-  <thing
-    id="bckDriver"
-    name="Driver"
-    compset="Bckgrnd"
-    isunique="yes"
-    description="">
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skCompute] += 2
-    #traitbase[skPercept] += 2
-    #traitbase[skGrndVeh] += 2
-    ]]></eval>
-
+  <thing id="bckDriver" name="Driver" description="Maybe you raced hover vehicles. Perhaps you worked for a limousine company. Or possibly you were the guy driving the getaway car. Could be you did all three.\n\n{b}Bonus Skill Ranks:{/b} +2 Computers {i}or{/i} Mechanic, +2 Ground Vehicles {i}or{/i} Water Vehicles, +2 Perception" compset="Bckgrnd" uniqueness="unique">
+    <tag group="SkillBonus" tag="skPercept"/>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skGrndVeh"/>
+      <autotag group="SkillBonus" tag="skWatVeh"/>
+      <autotag group="explicit" tag="1"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skCompute"/>
+      <autotag group="SkillBonus" tag="skMech"/>
+      <autotag group="explicit" tag="2"/>
+      </bootstrap>
     </thing>
-  
+    
+  <thing id="bckMilGr" name="Military (Infantry Grunt)" description="You served as an enlisted soldier in the infantry. You know how to take orders but you also know a good order when you hear one. You kept moving in the right direction even when a clueless lieutenant froze up.\n\n{b}Bonus Skill Ranks:{/b} +2 Dodge, +4 to any 1 Combat skill {i}or{/i} +2 to any 2 Combat skills" compset="Bckgrnd" uniqueness="unique">
+    <tag group="SkillBonus" tag="skDodge"/>
+    <bootstrap thing="fRPlusSkTy">
+      <autotag group="Skills" tag="Combat"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSkTy">
+      <autotag group="Skills" tag="Combat"/>
+      </bootstrap>
+    </thing>
+    
+  <thing id="bckMedic" name="Medical Professional" description="Maybe you played in a band. Maybe the band was a circus. Maybe the circus was the writing pit for a comedy show.\n\n{b}Bonus Skill Ranks:{/b} +2 Empathy, +2 Xenobiology (pick a world to specialize in), +2 Medicine" compset="Bckgrnd" uniqueness="unique">
+    <tag group="SkillBonus" tag="skEmpathy"/>
+    <tag group="SkillBonus" tag="skMedic"/>
+    <tag group="SkillBonus" tag="skXeno"/>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skAthlete"/>
+      <autotag group="SkillBonus" tag="skEmpathy"/>
+      <autotag group="explicit" tag="1"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skDeceive"/>
+      <autotag group="SkillBonus" tag="skThrown"/>
+      <autotag group="explicit" tag="2"/>
+      </bootstrap>
+    <bootstrap thing="spXenoWrld"></bootstrap>
+    </thing>
+    
+    
   <thing
     id="bckEnter"
     name="Entertainer"
@@ -58,40 +81,6 @@
       <autotag group="explicit" tag="2"/>
       </bootstrap>
       
-    </thing>
-  
-  <thing
-    id="bckMedic"
-    name="Medical Professional"
-    compset="Bckgrnd"
-    isunique="yes"
-    description="">
-    
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skChem] += 2
-    #traitbase[skEng] += 2
-    #traitbase[skMech] += 2
-    #traitbase[skPistol] += 2
-    ]]></eval>
-
-    </thing>
-  
-  <thing
-    id="bckGrunt"
-    name="Military (Infantry Grunt)"
-    compset="Bckgrnd"
-    isunique="yes"
-    description="">
-    
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skEmpathy] += 2
-    #traitbase[skPercept] += 2
-    #traitbase[skCarbine] += 2
-    #traitbase[skPistol] += 2
-    ]]></eval>
-
     </thing>
   
   <thing

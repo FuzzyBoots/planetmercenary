@@ -85,9 +85,9 @@
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4900">
       <before name="Calc trtFinal"/><![CDATA[
-      ~build the candidate expression out of our SkillBonus tags
-      if (tagis[SkillBonus.?] <> 0) then
-        field[usrCandid1].text &= " & (" & tagids[SkillBonus.?, " | "] & ")"
+      ~build the candidate expression out of our Skills tags
+      if (tagis[Skills.?] <> 0) then
+        field[usrCandid1].text &= " & (" & tagids[Skills.?, " | "] & ")"
         endif
 
       perform field[usrChosen1].chosen.field[trtBG].modify[+,2,"Background"]

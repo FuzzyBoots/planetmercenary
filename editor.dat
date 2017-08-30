@@ -100,7 +100,7 @@
     compset="Race"
     name="Race"
     prefix="rac"
-    description="Races have no special fields - only a name. If a race confers an ability,{br}create it as a special ability and bootstrap it from the race."
+    description="Races confer skill bonuses, penalties, and a Health equation. If a race confers an ability,{br}create it as a special ability and bootstrap it from the race."
     summary="Defines a Race that can be selected by a character.">
 
     <inputthing
@@ -137,7 +137,7 @@
     </editthing>
 
 
-  <!-- Race editthing -->
+  <!-- Background editthing -->
   <editthing
     compset="Bckgrnd"
     name="Background"
@@ -173,6 +173,19 @@
           name="Skills"
           helptext="Pick the skills that can be chosen for this bonus.">
           <it_taglist group="SkillBonus" tag="?" dynamic="no"/>
+          </inputthing>
+        </it_bootcustom>
+      </inputthing>
+    
+    <inputthing
+      name="Skill Type Choices"
+      helptext="Add one or more skill bonus types that the characters of this race can pick.">
+      <it_bootcustom compset="SkillBonus">
+        <match>thingid.fRPlusSkTy</match>
+        <inputthing
+          name="Skills"
+          helptext="Pick the skill types that can be chosen for this bonus.">
+          <it_taglist group="Skills" tag="?" dynamic="no"/>
           </inputthing>
         </it_bootcustom>
       </inputthing>
