@@ -251,16 +251,13 @@
     <!-- All feats get the same tag for sorting purposes -->
     <!--tag group="SpecialTab" tag="RaceFeat"/-->
     
-    <!-- Each attribute can also be selected as a skill bonus. -->
-    <!--identity group="SkillBonus"/-->
-    
     <!-- Activate any selected build option -->
     <eval index="1" phase="Setup" priority="100" name="Build option activated"><![CDATA[
-      if (field[usrChosen1].ischosen <> 0) then
-        if (field[usrChosen1].chosen.ispick <> 0) then
-          perform field[usrChosen1].chosen.assign[Helper.ChosenOpt]
-          endif
-        endif
+~      if (field[usrChosen1].ischosen <> 0) then
+~        if (field[usrChosen1].chosen.ispick <> 0) then
+~          perform field[usrChosen1].chosen.assign[Helper.ChosenOpt]
+~          endif
+~        endif
 
       ~forward our "has feature" tags to the hero so it knows we're present
       perform forward[HasFeature.?]
@@ -540,6 +537,13 @@
     id="cmpsetSB">
     <compref component="SkillBonus"/>
     <compref component="UserSelect"/>
+    <compref component="SpecialTab"/>
+    <compref component="Custom"/>
+    </compset>
+  
+  <compset
+    id="cmpsetSSB">
+    <compref component="SkillBonus"/>
     <compref component="SpecialTab"/>
     <compref component="Custom"/>
     </compset>

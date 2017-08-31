@@ -63,6 +63,7 @@
     name="+2 to Skill"
     compset="cmpsetSB"
     description="Gives a +2 bonus to the selected skill.">
+    <fieldval field="usrCandid1" value="component.Skill"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="5000">
       <before name="Calc trtFinal"/><![CDATA[
@@ -80,6 +81,7 @@
     name="+2 to Skill Type"
     compset="cmpsetSB"
     description="Gives a +2 bonus to the selected skill.">
+    <fieldval field="usrCandid1" value="component.Skill"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4900">
       <before name="Calc trtFinal"/><![CDATA[
@@ -97,16 +99,19 @@
   <thing
     id="fPlusSk1"
     name="+1 to Skill"
-    compset="cmpsetSB"
+    compset="cmpsetSSB"
     description="Gives a +1 bonus to the specified skill.">
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4949">
       <before name="Calc trtFinal"/><![CDATA[
-      if (tagis[SkillBonus.?] > 0) then
-        if (tagis[SkillBonus.?] < 2) then
-          perform hero.child[skInspire].field[trtBG].modify[+,1,"Background"]
-        endif
-      endif
+      foreach pick in hero where "SkillBonus.?"
+        debug "SkillBonus id: " & eachpick.idstring
+        nexteach
+~      if (tagis[SkillBonus.?] > 0) then
+~        if (tagis[SkillBonus.?] < 2) then
+~          perform hero.child[skInspire].field[trtBG].modify[+,1,"Background"]
+~        endif
+~      endif
       ]]></eval>
     </thing>  
         

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains the details of fireteams
+-->
+
+<document signature="Hero Lab Data">
+  <!-- Combat Skill -->
+  <thing
+    id="skCombat"
+    name="Combat"
+    compset="FSkill"
+    isunique="yes"
+    description="Use this skill when the fireteam attempts any activity covered by a Combat skill.">
+    <fieldval field="trtAbbrev" value="Cmb"/>
+  </thing>
+  
+  <!-- Social Skill -->
+  <thing
+    id="skSocial"
+    name="Social"
+    compset="FSkill"
+    isunique="yes"
+    description="Use this skill when the fireteam attempts any activity covered by a Social skill.">
+    <fieldval field="trtAbbrev" value="Soc"/>
+  </thing>
+  
+  <!-- Mental Skill -->
+  <thing
+    id="skMental"
+    name="Mental"
+    compset="FSkill"
+    isunique="yes"
+    description="Use this skill when the fireteam attempts any activity covered by a Mental skill.">
+    <fieldval field="trtAbbrev" value="Men"/>
+  </thing>
+  
+  <!-- Physical Skill -->
+  <thing
+    id="skPhysical"
+    name="Physical"
+    compset="FSkill"
+    isunique="yes"
+    description="Use this skill when the fireteam attempts any activity covered by a Physical skill.">
+    <fieldval field="trtAbbrev" value="Phy"/>
+  </thing>
+  
+  <!-- Fireteam Damage -->
+  <thing
+    id="skDamage"
+    name="Damage"
+    compset="FSkill"
+    isunique="yes"
+    description="The damage that the Fireteam does.">
+    <fieldval field="trtBase" value="1"/>
+    <fieldval field="trtAbbrev" value="Phy"/>
+  </thing>
+  
+  <!-- Fireteam Thing -->
+  <!--thing
+    id="Fireteam"
+    name="Fireteam member"
+    compset="FTeam"
+    isunique="no"
+    description="This is a fireteam entry.">
+    <child entity="ftDetails"/>
+  </thing-->
+  
+</document>

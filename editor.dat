@@ -153,7 +153,7 @@
       
     <inputthing
       name="Bonus Specialties"
-      helptext="Specialties automatically accorded due to Race.">
+      helptext="Specialties automatically accorded due to Background.">
       <it_bootcustom compset="Specialty">
         <inputthing
           name="Specialties"
