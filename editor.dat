@@ -125,7 +125,7 @@
     <inputthing
       name="Skill Bonus Choices"
       helptext="Add one or more skill bonus choices that the characters of this race can pick.">
-      <it_bootcustom compset="SkillBonus">
+      <it_bootcustom compset="cmpsetSB">
         <match>thingid.fRPlusSk</match>
         <inputthing
           name="Skills"
@@ -155,7 +155,6 @@
       name="Bonus Specialties"
       helptext="Specialties automatically accorded due to Race.">
       <it_bootcustom compset="Specialty">
-        <match>thingid.?</match>
         <inputthing
           name="Specialties"
           helptext="Pick the Specialties that can be chosen for this bonus.">
@@ -167,7 +166,7 @@
     <inputthing
       name="Skill Bonus Choices"
       helptext="Add one or more skill bonus choices that the characters of this race can pick.">
-      <it_bootcustom compset="SkillBonus">
+      <it_bootcustom compset="cmpsetSB">
         <match>thingid.fRPlusSk</match>
         <inputthing
           name="Skills"
@@ -180,7 +179,7 @@
     <inputthing
       name="Skill Type Choices"
       helptext="Add one or more skill bonus types that the characters of this race can pick.">
-      <it_bootcustom compset="SkillBonus">
+      <it_bootcustom compset="cmpsetSB">
         <match>thingid.fRPlusSkTy</match>
         <inputthing
           name="Skills"
@@ -222,7 +221,7 @@
     <inputthing
       name="Skill Bonus Choices"
       helptext="Add one or more skill bonus choices that the characters of this race can pick.">
-      <it_bootcustom compset="SkillBonus">
+      <it_bootcustom compset="cmpsetSB">
         <match>thingid.fRPlusSk</match>
         <inputthing
           name="Skills"

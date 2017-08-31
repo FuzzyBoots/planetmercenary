@@ -61,9 +61,8 @@
   <thing
     id="fRPlusSk"
     name="+2 to Skill"
-    compset="SkillBonus"
+    compset="cmpsetSB"
     description="Gives a +2 bonus to the selected skill.">
-    <fieldval field="usrCandid1" value="component.Skill"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="5000">
       <before name="Calc trtFinal"/><![CDATA[
@@ -79,9 +78,8 @@
   <thing
     id="fRPlusSkTy"
     name="+2 to Skill Type"
-    compset="SkillBonus"
+    compset="cmpsetSB"
     description="Gives a +2 bonus to the selected skill.">
-    <fieldval field="usrCandid1" value="component.Skill"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4900">
       <before name="Calc trtFinal"/><![CDATA[
@@ -90,7 +88,7 @@
         field[usrCandid1].text &= " & (" & tagids[Skills.?, " | "] & ")"
         endif
 
-      perform field[usrChosen1].chosen.field[trtBG].modify[+,2,"Background"]
+      perform field[usrChosen1].chosen.field[trtBG].modify[+,1,"Background"]
       ]]></eval>
     </thing>  
         
@@ -99,7 +97,7 @@
   <thing
     id="fPlusSk1"
     name="+1 to Skill"
-    compset="SkillBonus"
+    compset="cmpsetSB"
     description="Gives a +1 bonus to the specified skill.">
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4949">
@@ -115,7 +113,7 @@
   <thing
     id="fPlusSk2"
     name="+2 to Skill"
-    compset="SkillBonus"
+    compset="cmpsetSB"
     description="Gives a +2 bonus to the specified skill.">
     <fieldval field="usrCandid1" value="component.Skill"/>
     <tag group="Hide" tag="Special"/>

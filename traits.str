@@ -537,7 +537,7 @@
 
   <!-- Skill Bonuses -->
   <compset
-    id="SkillBonus">
+    id="cmpsetSB">
     <compref component="SkillBonus"/>
     <compref component="UserSelect"/>
     <compref component="SpecialTab"/>
