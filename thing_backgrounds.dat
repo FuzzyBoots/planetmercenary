@@ -46,16 +46,7 @@
     <tag group="SkillBonus" tag="skEmpathy"/>
     <tag group="SkillBonus" tag="skMedic"/>
     <tag group="SkillBonus" tag="skXeno"/>
-    <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBonus" tag="skAthlete"/>
-      <autotag group="SkillBonus" tag="skEmpathy"/>
-      <autotag group="explicit" tag="1"/>
-      </bootstrap>
-    <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBonus" tag="skDeceive"/>
-      <autotag group="SkillBonus" tag="skThrown"/>
-      <autotag group="explicit" tag="2"/>
-      </bootstrap>
+    
     <bootstrap thing="spXenoWrld"></bootstrap>
     </thing>
     
@@ -88,15 +79,14 @@
     name="Military (Officer)"
     compset="Bckgrnd"
     isunique="yes"
-    description="">
+    description="You served as an officer in the military. Perhaps you were an infantry captain, or a fleet commodore. Today you’re a mercenary. How did you get here, do you think?\n\n{b}Bonus Skill Ranks:{/b} +2 Dodge, +2 Inspire, +2 to any 1 Combat skill">
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skDeceive] += 2
-    #traitbase[skEmpathy] += 2
-    #traitbase[skDodge] += 2
-    #traitbase[skInspire] += 2
-    ]]></eval>
+    <tag group="SkillBonus" tag="skDodge"/>
+    <tag group="SkillBonus" tag="skInspire"/>
+    
+    <bootstrap thing="fRPlusSkTy">
+      <autotag group="Skills" tag="Combat"/>
+      </bootstrap>
 
     </thing>
   
@@ -105,16 +95,72 @@
     name="Pilot"
     compset="Bckgrnd"
     isunique="yes"
-    description="">
+    description="You speak starship.\n\n{b}Bonus Skill Ranks:{/b} +2 Empathy (Influence), +2 Air Vehicles {i}or{/i} Space Vehicles, +2 Stationed Weapons">
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skChem] += 2
-    #traitbase[skDodge] += 2
-    #traitbase[skExplsves] += 2
-    #traitbase[skPistol] += 2
-    ]]></eval>
+    <tag group="SkillBonus" tag="skEmpathy"/>
+    <tag group="SkillBonus" tag="skStaWeap"/>
+    
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skAirVeh"/>
+      <autotag group="SkillBonus" tag="skWatVeh"/>
+      <autotag group="explicit" tag="1"/>
+      </bootstrap>
 
+    <bootstrap thing="spEmpInfl"></bootstrap>
     </thing>
   
+  <thing
+    id="bckScience"
+    name="Scientist"
+    compset="Bckgrnd"
+    isunique="yes"
+    description="It’s not that you’re {i}mad{/i}, or that nobody understands your work. It’s that other sectors offer more money. A {i}lot{/i} more money.\n\n{b}Bonus Skill Ranks:{/b} +2 Experimental Sciences {i}or{/i} Perception, +2 to any 2 Mental skills">
+    
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skExpSci"/>
+      <autotag group="SkillBonus" tag="skPercept"/>
+      <autotag group="explicit" tag="1"/>
+      </bootstrap>
+
+    <bootstrap thing="fRPlusSkTy">
+      <autotag group="Skills" tag="Mental"/>
+      </bootstrap>
+      
+    <bootstrap thing="fRPlusSkTy">
+      <autotag group="Skills" tag="Mental"/>
+      </bootstrap>
+      
+    <bootstrap thing="spEmpInfl"></bootstrap>
+    </thing>
+  
+  <thing
+    id="bckSpy"
+    name="Spy"
+    compset="Bckgrnd"
+    isunique="yes"
+    description="You operated as a field agent for an intelligence organization. It’s possible that you still do, but you probably shouldn’t let that slip.\n\n{b}Bonus Skill Ranks:{/b} +2 Deceive, +2 Dodge, +2 Negotiate">
+    
+    <tag group="SkillBonus" tag="skDeceive"/>
+    <tag group="SkillBonus" tag="skDodge"/>
+    <tag group="SkillBonus" tag="skNegot"/>
+        
+    </thing>
+  
+  <thing
+    id="bckStrCrim"
+    name="Street Criminal"
+    compset="Bckgrnd"
+    isunique="yes"
+    description="You’ve broken your share of laws, and we’re not talking traffic ordinances — though there were a few of those as well.\n\n{b}Bonus Skill Ranks:{/b} +2 Deceive, +2 Dodge, +2 Explosives {i}or{/i} Melee">
+    
+    <tag group="SkillBonus" tag="skDeceive"/>
+    <tag group="SkillBonus" tag="skDodge"/>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skMelee"/>
+      <autotag group="SkillBonus" tag="skExplsves"/>
+      <autotag group="explicit" tag="1"/>
+      </bootstrap>
+
+    </thing>
+    
   </document>

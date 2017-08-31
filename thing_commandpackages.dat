@@ -10,16 +10,18 @@
     name="Captain"
     compset="CmdPckge"
     isunique="yes"
-    description="If you play as the Captain, then your in-game job is to make command decisions and issue orders to the other officers. You’re a little like the Adjutant to the GC, and in that role, you rely on people skills to keep the game moving.">
+    description="If you play as the Captain, then your in-game job is to make command decisions and issue orders to the other officers. You’re a little like the Adjutant to the GC, and in that role, you rely on people skills to keep the game moving.\n\nThe Captain’s bonuses reflect both expertise and experience. Mercenary captains are more than just career soldiers with brass garnish. They’re entrepreneurs with a passion for turning professionals-at-arms into a profitable fighting force. With an emphasis on profitable. And an unwritten nod toward “legal,” because that always makes things easier.\n\n{b}Bonus Skill Ranks:{/b} +2 Economics, +2 Contracts, +2 History (Military), +2 to any 1 Combat skill; also, you’re in charge!">
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skEcon] += 2
-    #traitbase[skContract] += 2
-    #traitbase[skHistory] += 1
-    ~Somehow, we add the Athletics (Running) specialty
-    ]]></eval>
+    <tag group="SkillBonus" tag="skEcon"/>
+    <tag group="SkillBonus" tag="skContract"/>
+    <tag group="SkillBonus" tag="skHistory"/>
 
+    <bootstrap thing="fRPlusSkTy">
+      <autotag group="Skills" tag="Combat"/>
+      </bootstrap>
+
+    <bootstrap thing="spHistMil"/>
+    
     </thing>
   
   <thing
@@ -27,12 +29,10 @@
     name="Chaplain"
     compset="CmdPckge"
     isunique="yes"
-    description="The Chaplain provides both moral support and a moral compass. Morale and morality! Sometimes it falls to the Chaplain to point out what horrible people the other officers could become if they follow a given path. Other times the Chaplain must bring his carbine to his shoulder and clear a path with righteous indignation!">
+    description="The Chaplain provides both moral support and a moral compass. Morale and morality! Sometimes it falls to the Chaplain to point out what horrible people the other officers could become if they follow a given path. Other times the Chaplain must bring his carbine to his shoulder and clear a path with righteous indignation!\n\nCareer Chaplains are students of history, and they’re adept at citing scriptural, historical, and cultural touchstones at just the right time. In a mercenary company, their inspirational speeches usually have pointy bits right at the very end. \n\n{b}Bonus Skill Ranks:{/b} +2 Dodge, +2 History (Religious), +2 Inspire {i}or{/i} Perform, +2 to any 1 Combat skill">
     
     <tag group="SkillBonus" tag="skDodge"/>
     <tag group="SkillBonus" tag="skHistory"/>
-    
-    <bootstrap thing="spHistRel"/>
     
     <bootstrap thing="fRPlusSk">
       <autotag group="SkillBonus" tag="skInspire"/>
@@ -40,11 +40,13 @@
       <autotag group="explicit" tag="1"/>
       </bootstrap>
     
-    <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBonus" tag="skCompute"/>
-      <autotag group="SkillBonus" tag="skInspire"/>
+    <bootstrap thing="fRPlusSkTy">
+      <autotag group="Skills" tag="Combat"/>
       <autotag group="explicit" tag="2"/>
       </bootstrap>
+
+    <bootstrap thing="spHistRel"/>
+        
     </thing>
   
   <thing
@@ -52,15 +54,17 @@
     name="Doctor"
     compset="CmdPckge"
     isunique="yes"
-    description="The tools of 31st-century medicine are extremely powerful, but the single most useful surgical instrument is always information — specifically, information about which bits are supposed to be reconnected to which other bits, and whether a particular organ would be missed, since there’s rarely time to grow a new one.">
+    description="The tools of 31st-century medicine are extremely powerful, but the single most useful surgical instrument is always information — specifically, information about which bits are supposed to be reconnected to which other bits, and whether a particular organ would be missed, since there’s rarely time to grow a new one.\n\nYears of schooling (or equivalent experience) qualify a Doctor for the job of making everyone else not-dead as often as possible. Sure, the Doctor sometimes hands a stretcher full of mince flambé to the Chaplain, but the very best way to prevent stretcher-flambé is to pick up something far deadlier than a scalpel, and invite the folks on the other side to call {i}their{/i} chaplain.\n\n{b}Bonus Skill Ranks:{/b} +2 Dodge, +2 Medicine, +2 Xenobiology, +2 to any 1 Combat skill">
+       
+
+    <tag group="SkillBonus" tag="skDodge"/>
+    <tag group="SkillBonus" tag="skMedicine"/>
+    <tag group="SkillBonus" tag="skXeno"/>
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skDodge] += 2
-    #traitbase[skMedic] += 2
-    #traitbase[skXeno] += 2
-    #traitbase[skPistol] += 2
-    ]]></eval>
+    <bootstrap thing="fRPlusSkTy">
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="explicit" tag="2"/>
+      </bootstrap>
 
     </thing>
   
@@ -69,15 +73,21 @@
     name="Engineer"
     compset="CmdPckge"
     isunique="yes"
-    description="An Engineer is like a walking toolbox of twotwists-and-hit-it-with-a-hammer solutions to problems the company may encounter. (If the Engineer is a machine-intelligence with the right attachments, then remove the word “like” from the previous sentence.) Typically, the Engineer is tasked with fixing (or building!) things in the “materiel” category, though they may also be adept at hacking the various nonsentient “thinking” machines commonly called “computers.”">
+    description="An Engineer is like a walking toolbox of two-twists-and-hit-it-with-a-hammer solutions to problems the company may encounter. (If the Engineer is a machine-intelligence with the right attachments, then remove the word “like” from the previous sentence.) Typically, the Engineer is tasked with fixing (or building!) things in the “materiel” category, though they may also be adept at hacking the various nonsentient “thinking” machines commonly called “computers.”\n\nMercenary Engineers don’t just sit in the quartermastery playing rear-echelon wrenchmonkey, though. They need to be right there next to the boots on deck, because the odds are pretty good that the deck will eventually give way, or that the those boots will suddenly not have their rockets attached correctly anymore. \n\n{b}Bonus Skill Ranks:{/b} +2 Chemistry, +2 Engineering, +2 Experimental Sciences {i}or{/i} Mechanic, +2 to any 1 Combat skill">
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skChem] += 2
-    #traitbase[skEng] += 2
-    #traitbase[skMech] += 2
-    #traitbase[skPistol] += 2
-    ]]></eval>
+    <tag group="SkillBonus" tag="skChem"/>
+    <tag group="SkillBonus" tag="skEngineer"/>
+    
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skExpSci"/>
+      <autotag group="SkillBonus" tag="skMech"/>
+      <autotag group="explicit" tag="1"/>
+      </bootstrap>
+        
+    <bootstrap thing="fRPlusSkTy">
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="explicit" tag="2"/>
+      </bootstrap>
 
     </thing>
   
@@ -86,15 +96,26 @@
     name="Ops Commander"
     compset="CmdPckge"
     isunique="yes"
-    description="When the client looks to your officer corps, their eyes fall on the Captain. They may not even notice the Ops Commander, who has already identified the exits, possible entry points for attackers, and half a dozen ways to kill everyone in the room — all without attracting any attention.">
+    description="When the client looks to your officer corps, their eyes fall on the Captain. They may not even notice the Ops Commander, who has already identified the exits, possible entry points for attackers, and half a dozen ways to kill everyone in the room — all without attracting any attention.\n\nThe Captain may give the orders but when
+bullets are flying at the boots on deck, but it’s the Ops Commander who leads the strike force. Years of experience are valuable, yes, but the Ops Commander has this role thanks to surviving those years of experience. \n\n{b}Bonus Skill Ranks:{/b} +2 Empathy {i}or{/i} Inspire, +2 Perception, +2 to any 2 Combat skills">
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skEmpathy] += 2
-    #traitbase[skPercept] += 2
-    #traitbase[skCarbine] += 2
-    #traitbase[skPistol] += 2
-    ]]></eval>
+    <tag group="SkillBonus" tag="skPercept"/>
+    
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skEmpathy"/>
+      <autotag group="SkillBonus" tag="skInspire"/>
+      <autotag group="explicit" tag="1"/>
+      </bootstrap>
+        
+    <bootstrap thing="fRPlusSkTy">
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="explicit" tag="2"/>
+      </bootstrap>
+
+    <bootstrap thing="fRPlusSkTy">
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="explicit" tag="3"/>
+      </bootstrap>
 
     </thing>
   
@@ -103,16 +124,31 @@
     name="Legal Counsel"
     compset="CmdPckge"
     isunique="yes"
-    description="Sometimes it’s best for everyone to holster their weapons while the company’s Legal Counsel steps in to negotiate. This noble warbarrister operates as more than just a lawyer. They are the fastest talker in a word-fight, the craftiest contractor ever to get paid twice for the same job, and the only one who can tie the hands of an entire government with littleknown precedent and a single well-timed signature.">
+    description="Sometimes it’s best for everyone to holster their weapons while the company’s Legal Counsel steps in to negotiate. This noble warbarrister operates as more than just a lawyer. They are the fastest talker in a word-fight, the craftiest contractor ever to get paid twice for the same job, and the only one who can tie the hands of an entire government with little-known precedent and a single well-timed signature.\n\nLacking the right signatures, the Legal Counsel may be required to unholster and go hot, serving up bullets instead of subpoenas. Either way, the job gets done and the contract gets honored.\n\n{b}Bonus Skill Ranks:{/b} +2 Deceive {i}or{/i} History, +2 Empathy {i}or{/i} Negotiate, +2 Dodge ranks {i}or{/i} any 1 Combat skill, +2 Inspire {i}or{/i} any 1 Combat skill (you may take Combat skills in both options that allow them)">
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skDeceive] += 2
-    #traitbase[skEmpathy] += 2
-    #traitbase[skDodge] += 2
-    #traitbase[skInspire] += 2
-    ]]></eval>
-
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skDeceive"/>
+      <autotag group="SkillBonus" tag="skHistory"/>
+      <autotag group="explicit" tag="1"/>
+      </bootstrap>
+        
+    <bootstrap thing="fRPlusSk">
+      <autotag group="SkillBonus" tag="skEmpathy"/>
+      <autotag group="SkillBonus" tag="skNegot"/>
+      <autotag group="explicit" tag="2"/>
+      </bootstrap>
+        
+    <bootstrap thing="fRPlusSkMx">
+      <autotag group="Skill" tag="skDodge"/>
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="explicit" tag="3"/>
+      </bootstrap>
+    
+    <bootstrap thing="fRPlusSkMx">
+      <autotag group="Skill" tag="skInspire"/>
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="explicit" tag="4"/>
+      </bootstrap>
     </thing>
   
   <thing

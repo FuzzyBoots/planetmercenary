@@ -94,6 +94,27 @@
       ]]></eval>
     </thing>  
         
+  <thing
+    id="fRPlusSkMx"
+    name="+2 to Skill or Skill Type"
+    compset="cmpsetSB"
+    description="Gives a +2 bonus to the selected skill.">
+    <fieldval field="usrCandid1" value="component.Skill"/>
+    <tag group="Hide" tag="Special"/>
+    <eval index="1" phase="PreTraits" priority="4900">
+      <before name="Calc trtFinal"/><![CDATA[
+      ~build the candidate expression out of our Skill and Skills tags
+      if (tagis[Skills.?] <> 0) then
+        field[usrCandid1].text &= " & (" & tagids[Skills.?, " | "] & ")"
+        endif
+      if (tagis[Skill.?] <> 0) then
+        field[usrCandid1].text &= " & (" & tagids[Skill.?, " | "] & ")"
+        endif
+        
+      perform field[usrChosen1].chosen.field[trtBG].modify[+,1,"Background"]
+      ]]></eval>
+    </thing>  
+        
   <!-- Any background, command package, or race can bootstrap this, adding 
        SkillBonus.attrid tags as necessary -->
   <thing
