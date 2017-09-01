@@ -16,7 +16,7 @@
     style="tblInvis"
     width="240">
     <table_fixed
-      component="UserSelect"
+      component="SkillBonus"
       showtemplate="MenuSlPick"
       showsortset="explicit"
       alwaysupdate="yes">

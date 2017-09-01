@@ -96,8 +96,7 @@
     name="Ops Commander"
     compset="CmdPckge"
     isunique="yes"
-    description="When the client looks to your officer corps, their eyes fall on the Captain. They may not even notice the Ops Commander, who has already identified the exits, possible entry points for attackers, and half a dozen ways to kill everyone in the room — all without attracting any attention.\n\nThe Captain may give the orders but when
-bullets are flying at the boots on deck, but it’s the Ops Commander who leads the strike force. Years of experience are valuable, yes, but the Ops Commander has this role thanks to surviving those years of experience. \n\n{b}Bonus Skill Ranks:{/b} +2 Empathy {i}or{/i} Inspire, +2 Perception, +2 to any 2 Combat skills">
+    description="When the client looks to your officer corps, their eyes fall on the Captain. They may not even notice the Ops Commander, who has already identified the exits, possible entry points for attackers, and half a dozen ways to kill everyone in the room — all without attracting any attention.\n\nThe Captain may give the orders but when bullets are flying at the boots on deck, but it’s the Ops Commander who leads the strike force. Years of experience are valuable, yes, but the Ops Commander has this role thanks to surviving those years of experience. \n\n{b}Bonus Skill Ranks:{/b} +2 Empathy {i}or{/i} Inspire, +2 Perception, +2 to any 2 Combat skills">
     
     <tag group="SkillBonus" tag="skPercept"/>
     

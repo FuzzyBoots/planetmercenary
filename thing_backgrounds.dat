@@ -84,6 +84,10 @@
     <tag group="SkillBonus" tag="skDodge"/>
     <tag group="SkillBonus" tag="skInspire"/>
     
+    <bootstrap thing="fPlusSk1">
+      <autotag group="SkillBonus" tag="skWatVeh"/>
+    </bootstrap>
+    
     <bootstrap thing="fRPlusSkTy">
       <autotag group="Skills" tag="Combat"/>
       </bootstrap>
