@@ -318,6 +318,106 @@
 
     </component>
 
+  <component
+    id="cSkillBon"
+    name="Skill Bonus"
+    ispublic="no">
+    
+    <!--  Label associated with the first thing-based menu -->
+    <field
+      id="sklLabel1"
+      name="Thing Menu Label #1"
+      type="static"
+      maxlength="50">
+      </field>
+
+    <!-- Tracks the first selection made when a menu choice is required -->
+    <field
+      id="sklChosen1"
+      name="Chosen Thing / Pick #1"
+      type="user"
+      style="menu">
+      </field>
+
+    <!-- Candidate tagexpr used to determine which picks/things are shown in menu #1
+          NOTE! If this field is empty, it means NO first menu is shown for the pick.
+    -->
+    <field
+      id="sklCandid1"
+      name="Candidate TagExpr for Menu #1"
+      type="derived"
+      maxlength="1000"
+      defvalue="">
+      </field>
+
+    <!-- Source to pull choices from within menu #1 -->
+    <field
+      id="sklSource1"
+      name="Source for Menu #1 Choices"
+      type="derived">
+      <!-- Determine the source to choose from based on the tag, defaulting to "Hero" -->
+      <calculate phase="Render" priority="10000"><![CDATA[
+        if (tagis[ChooseSrc1.Thing] <> 0) then
+          @value = 0
+        elseif (tagis[ChooseSrc1.Container] <> 0) then
+          @value = 1
+        elseif (tagis[ChooseSrc1.Hero] <> 0) then
+          @value = 2
+        else
+          @value = 2
+          endif
+        ]]></calculate>
+      </field>
+    <!-- Integrate the various user selections into the name of the pick
+          NOTE! Must be scheduled after the "shortname" field is synthesized at Render/100.
+    -->
+    <eval index="1" phase="Render" priority="500"><![CDATA[
+      ~if we're not supposed to auto-amend the name for this pick, we're done
+      doneif (tagis[User.NoAutoName] <> 0)
+
+      ~if we have thing-based menus, determine the text to append to the name
+      var choices as string
+      if (field[sklCandid1].isempty = 0) then
+        if (field[sklChosen1].ischosen <> 0) then
+          choices = field[sklChosen1].chosen.field[name].text
+        else
+          choices = "-Choose-"
+          endif
+        endif
+
+      ~if we have no text to append, we're done
+      doneif (empty(choices) <> 0)
+
+      ~add the selection to both the livename and shortname (if present) fields
+      field[livename].text = field[name].text & ": " & choices
+      if (tagis[component.shortname] <> 0) then
+        field[shortname].text &= " (" & choices & ")"
+        endif
+      ]]></eval>
+
+    <!-- Report a validation error if no selection has been made for a menu selection -->
+    <evalrule phase="Validate" priority="10000" message="You must choose an option" summary="Choose!"><![CDATA[
+      ~determine the number of menus that NEED selection
+      ~Note: Remember that a non-empty tagexpr field indicates menu selection is used.
+      var needed as number
+      needed = !field[sklCandid1].isempty
+      
+      ~determine the number of menus that HAVE selections
+      var actual as number
+      if (field[sklCandid1].isempty = 0) then
+        actual += field[sklChosen1].ischosen
+        endif
+      
+      ~if the user has chosen something whenever required, we're valid
+      validif (actual >= needed)
+
+      ~mark any associated tab as invalid
+      if (ispanel <> 0) then
+        linkvalid = 0
+        endif
+      ]]></evalrule>
+
+    </component>
 
   <!-- UserSelect component
         Used for things that require the presentation of user selection options to

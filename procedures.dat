@@ -811,7 +811,7 @@
     expr = "component.Specialty & (User.CustSkill |  "
 
     expr &= myId & ")"
-    
+    debug "Specialty expression: " & expr
     gizmo.childfound[SpecHelp].field[SpecExpr].text = expr
     ]]></procedure>
 

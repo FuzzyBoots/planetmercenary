@@ -16,7 +16,7 @@
     <tag group="SkillBonus" tag="skContract"/>
     <tag group="SkillBonus" tag="skHistory"/>
 
-    <bootstrap thing="fRPlusSkTy">
+    <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Combat"/>
       </bootstrap>
 
@@ -35,12 +35,12 @@
     <tag group="SkillBonus" tag="skHistory"/>
     
     <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBonus" tag="skInspire"/>
-      <autotag group="SkillBonus" tag="skPerform"/>
+      <autotag group="Skill" tag="skInspire"/>
+      <autotag group="Skill" tag="skPerform"/>
       <autotag group="explicit" tag="1"/>
       </bootstrap>
     
-    <bootstrap thing="fRPlusSkTy">
+    <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Combat"/>
       <autotag group="explicit" tag="2"/>
       </bootstrap>
@@ -61,7 +61,7 @@
     <tag group="SkillBonus" tag="skMedicine"/>
     <tag group="SkillBonus" tag="skXeno"/>
     
-    <bootstrap thing="fRPlusSkTy">
+    <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Combat"/>
       <autotag group="explicit" tag="2"/>
       </bootstrap>
@@ -79,12 +79,12 @@
     <tag group="SkillBonus" tag="skEngineer"/>
     
     <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBonus" tag="skExpSci"/>
-      <autotag group="SkillBonus" tag="skMech"/>
+      <autotag group="Skill" tag="skExpSci"/>
+      <autotag group="Skill" tag="skMech"/>
       <autotag group="explicit" tag="1"/>
       </bootstrap>
         
-    <bootstrap thing="fRPlusSkTy">
+    <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Combat"/>
       <autotag group="explicit" tag="2"/>
       </bootstrap>
@@ -101,17 +101,17 @@
     <tag group="SkillBonus" tag="skPercept"/>
     
     <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBonus" tag="skEmpathy"/>
-      <autotag group="SkillBonus" tag="skInspire"/>
+      <autotag group="Skill" tag="skEmpathy"/>
+      <autotag group="Skill" tag="skInspire"/>
       <autotag group="explicit" tag="1"/>
       </bootstrap>
         
-    <bootstrap thing="fRPlusSkTy">
+    <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Combat"/>
       <autotag group="explicit" tag="2"/>
       </bootstrap>
 
-    <bootstrap thing="fRPlusSkTy">
+    <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Combat"/>
       <autotag group="explicit" tag="3"/>
       </bootstrap>
@@ -126,24 +126,24 @@
     description="Sometimes it’s best for everyone to holster their weapons while the company’s Legal Counsel steps in to negotiate. This noble warbarrister operates as more than just a lawyer. They are the fastest talker in a word-fight, the craftiest contractor ever to get paid twice for the same job, and the only one who can tie the hands of an entire government with little-known precedent and a single well-timed signature.\n\nLacking the right signatures, the Legal Counsel may be required to unholster and go hot, serving up bullets instead of subpoenas. Either way, the job gets done and the contract gets honored.\n\n{b}Bonus Skill Ranks:{/b} +2 Deceive {i}or{/i} History, +2 Empathy {i}or{/i} Negotiate, +2 Dodge ranks {i}or{/i} any 1 Combat skill, +2 Inspire {i}or{/i} any 1 Combat skill (you may take Combat skills in both options that allow them)">
     
     <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBonus" tag="skDeceive"/>
-      <autotag group="SkillBonus" tag="skHistory"/>
+      <autotag group="Skill" tag="skDeceive"/>
+      <autotag group="Skill" tag="skHistory"/>
       <autotag group="explicit" tag="1"/>
       </bootstrap>
         
     <bootstrap thing="fRPlusSk">
-      <autotag group="SkillBonus" tag="skEmpathy"/>
-      <autotag group="SkillBonus" tag="skNegot"/>
+      <autotag group="Skill" tag="skEmpathy"/>
+      <autotag group="Skill" tag="skNegot"/>
       <autotag group="explicit" tag="2"/>
       </bootstrap>
         
-    <bootstrap thing="fRPlusSkMx">
+    <bootstrap thing="fRPlusSk">
       <autotag group="Skill" tag="skDodge"/>
       <autotag group="Skills" tag="Combat"/>
       <autotag group="explicit" tag="3"/>
       </bootstrap>
     
-    <bootstrap thing="fRPlusSkMx">
+    <bootstrap thing="fRPlusSk">
       <autotag group="Skill" tag="skInspire"/>
       <autotag group="Skills" tag="Combat"/>
       <autotag group="explicit" tag="4"/>
@@ -155,18 +155,16 @@
     name="Quartermaster"
     compset="CmdPckge"
     isunique="yes"
-    description="Properly selected weapons and other materiel can turn a lone soldier into a perambulatory dispensary of enemy dismay. It’s the Quartermaster’s job to keep the “properly” there with the “maintained,” and to perform repairs on gear that’s been dragged into one too many ambushes.">
+    description="Properly selected weapons and other materiel can turn a lone soldier into a perambulatory dispensary of enemy dismay. It’s the Quartermaster’s job to keep the “properly” there with the “maintained,” and to perform repairs on gear that’s been dragged into one too many ambushes. \n\nIn the canon of force multiplication there are many axioms and aphorisms featuring the words “high” and “explosives.” The Quartermaster knows them all, and knows which ones cause any particular thing to explode. Or not explode. The Quartermaster also knows how quickly to run when the answer to any question was “fire in the hole” or “oops.” \n\n{b}Bonus Skill Ranks:{/b} +2 Chemistry, +2 Dodge, +2 Explosives, +2 to any 1 Combat skill">
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skChem] += 2
-    #traitbase[skDodge] += 2
-    #traitbase[skExplsves] += 2
-    #traitbase[skPistol] += 2
-    ]]></eval>
-
-    </thing>
-  
-  
-  
+    <tag group="SkillBonus" tag="skChem"/>
+    <tag group="SkillBonus" tag="skDodge"/>
+    <tag group="SkillBonus" tag="skExplsves"/>
+    
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="explicit" tag="1"/>
+      </bootstrap>
+      
+    </thing> 
   </document>

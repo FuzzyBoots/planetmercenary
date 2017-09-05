@@ -81,7 +81,7 @@
       
       portal[name].width = minimum(portal[name].width,portal[info].left - portal[name].left - 10)
      
-      perform portal[value].alignrel[ltor,name,20]
+      portal[value].left = 100
       ]]></position>
     </template>
 

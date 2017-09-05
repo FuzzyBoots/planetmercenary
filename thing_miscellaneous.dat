@@ -56,53 +56,21 @@
     <!--tag group="Helper" tag="NoMaxBound"/-->
     </thing> 
   
-  <!-- Any background, command package, or race can bootstrap this, adding 
-       SkillBonus.attrid tags as necessary -->
   <thing
     id="fRPlusSk"
-    name="+2 to Skill"
+    name="Skill Bonus"
     compset="cmpsetSB"
-    description="Gives a +2 bonus to the selected skill.">
-    <fieldval field="usrCandid1" value="component.Skill"/>
-    <tag group="Hide" tag="Special"/>
-    <eval index="1" phase="PreTraits" priority="5000">
-      <before name="Calc trtFinal"/><![CDATA[
-      ~build the candidate expression out of our SkillBonus tags
-      if (tagis[SkillBonus.?] <> 0) then
-        field[usrCandid1].text &= " & (" & tagids[SkillBonus.?, " | "] & ")"
-        endif
-
-      perform field[usrChosen1].chosen.field[trtBG].modify[+,2,"Background"]
-      ]]></eval>
-    </thing>  
-        
-  <thing
-    id="fRPlusSkTy"
-    name="+2 to Skill"
-    compset="cmpsetSB"
-    description="Gives a +2 bonus to the selected skill.">
+    description="Gives a bonus to the selected skill.">
     <fieldval field="usrCandid1" value="component.Skill"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4900">
       <before name="Calc trtFinal"/><![CDATA[
-      ~build the candidate expression out of our Skills tags
-      if (tagis[Skills.?] <> 0) then
-        field[usrCandid1].text &= " & (" & tagids[Skills.?, " | "] & ")"
-        endif
-
-      perform field[usrChosen1].chosen.field[trtBG].modify[+,1,"Background"]
-      ]]></eval>
-    </thing>  
-        
-  <thing
-    id="fRPlusSkMx"
-    name="+2 to Skill"
-    compset="cmpsetSB"
-    description="Gives a +2 bonus to the selected skill.">
-    <fieldval field="usrCandid1" value="component.Skill"/>
-    <tag group="Hide" tag="Special"/>
-    <eval index="1" phase="PreTraits" priority="4900">
-      <before name="Calc trtFinal"/><![CDATA[
+      var bonus as number
+      bonus = tagvalue[Bonus.?]
+      if (bonus = 0) then
+        bonus = 2
+      endif
+      
       ~build the candidate expression out of our Skill and Skills tags
       var skills as string
       skills = tagids[Skill.?, " | "]
@@ -114,23 +82,24 @@
         if (tagis[Skill.?] <> 0) then
           combined = skills & " | " & skilltypes
         else
-          combined = skills
+          combined = skilltypes
         endif
       else
-        combined = skilltypes
+        combined = skills
+      endif
+      
+      debug combined & ", " & empty(combined)
+      if (empty(combined) = 0) then
+        field[usrCandid1].text &= " & (" & combined & ")"
       endif
         
-      if (empty(combined) <> 0) then
-        field[usrCandid1].text &= " & (" & combined & ")"
-      endif     
-        
-      perform field[usrChosen1].chosen.field[trtBG].modify[+,2,"Background"]
+      perform field[usrChosen1].chosen.field[trtBG].modify[+,bonus,"Background"]
       ]]></eval>
     </thing>  
         
   <!-- Any background, command package, or race can bootstrap this, adding 
        SkillBonus.attrid tags as necessary -->
-  <thing
+  <!--thing
     id="fPlusSk1"
     name="+1 to Skill"
     compset="cmpsetSSB"
@@ -141,40 +110,24 @@
       foreach pick in hero from Skill where tagids[SkillBonus.?,"|"]
         perform eachpick.field[trtBG].modify[+,1,"Background"]
       nexteach
-~      if (tagis[SkillBonus.?] > 0) then
-~        if (tagis[SkillBonus.?] < 2) then
-~          perform hero.child[skInspire].field[trtBG].modify[+,1,"Background"]
-~        endif
-~      endif
       ]]></eval>
     </thing>  
         
   <thing
     id="fPlusSk2"
-    name="+2 to Skill"
+    name="*+2 to Skill"
     compset="cmpsetSB"
     description="Gives a +2 bonus to the specified skill.">
     <fieldval field="usrCandid1" value="component.Skill"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4950">
       <before name="Calc trtFinal"/><![CDATA[
-      if (tagis[SkillBonus.?] > 0) then
-        if (tagis[SkillBonus.?] < 2) then
-          perform hero.child[skInspire].field[trtBG].modify[+,2,"Background"]
-        endif
-      endif
+      foreach pick in hero from Skill where tagids[SkillBonus.?,"|"]
+        perform eachpick.field[trtBG].modify[+,2,"Background"]
+      nexteach
       ]]></eval>
-    </thing>  
+    </thing-->  
         
-  <thing
-    id="resSkill"
-    name="Skill Points"
-    compset="Resource">
-    <fieldval field="resObject" value="Skill"/>
-    <fieldval field="resMax" value="40"/>
-    <tag group="Helper" tag="Bootstrap"/>
-  </thing>  
-  
   <!-- Character point resource to track the pool of character points being spent -->
   <thing
     id="resCP"

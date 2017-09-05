@@ -118,7 +118,7 @@
           name="Specialties"
           helptext="Pick the Specialties that can be chosen for this bonus.">
           <it_taglist group="Specialty" tag="?" dynamic="no"/>
-          </inputthing>
+          </inputthing>        
         </it_bootcustom>
       </inputthing>
     
@@ -130,8 +130,15 @@
         <inputthing
           name="Skills"
           helptext="Pick the skills that can be chosen for this bonus.">
-          <it_taglist group="SkillBonus" tag="?" dynamic="no"/>
+          <it_taglist group="Skill" tag="?" dynamic="no"/>
           </inputthing>
+          
+        <inputthing
+          name="Bonus"
+          helptext="Pick the bonus value.">
+          <it_tagpick group="Bonus" tag="?" dynamic="no"/>
+          </inputthing>
+          
         </it_bootcustom>
       </inputthing>
     </editthing>
@@ -142,7 +149,7 @@
     compset="Bckgrnd"
     name="Background"
     prefix="bck"
-    description="Races have no special fields - only a name. If a race confers an ability,{br}create it as a special ability and bootstrap it from the race."
+    description="Races have no special fields - only a name. If a race confers an ability, create it as a special ability and bootstrap it from the race."
     summary="Defines a Race that can be selected by a character.">
 
     <inputthing
@@ -171,26 +178,18 @@
         <inputthing
           name="Skills"
           helptext="Pick the skills that can be chosen for this bonus.">
-          <it_taglist group="SkillBonus" tag="?" dynamic="no"/>
+          <it_taglist group="Skill" tag="?" dynamic="no"/>
           </inputthing>
-        </it_bootcustom>
-      </inputthing>
-    
-    <inputthing
-      name="Skill Type Choices"
-      helptext="Add one or more skill bonus types that the characters of this race can pick.">
-      <it_bootcustom compset="cmpsetSB">
-        <match>thingid.fRPlusSkTy</match>
         <inputthing
-          name="Skills"
-          helptext="Pick the skill types that can be chosen for this bonus.">
-          <it_taglist group="Skills" tag="?" dynamic="no"/>
+          name="Bonus"
+          helptext="Pick the bonus value.">
+          <it_tagpick group="Bonus" tag="?" dynamic="no"/>
           </inputthing>
+          
         </it_bootcustom>
       </inputthing>
-    </editthing>
-
-
+  </editthing>
+  
   <!-- Race editthing -->
   <editthing
     compset="CmdPckge"
@@ -226,8 +225,15 @@
         <inputthing
           name="Skills"
           helptext="Pick the skills that can be chosen for this bonus.">
-          <it_taglist group="SkillBonus" tag="?" dynamic="no"/>
+          <it_taglist group="Skill" tag="?" dynamic="no"/>
           </inputthing>
+          
+        <inputthing
+          name="Bonus"
+          helptext="Pick the bonus value.">
+          <it_tagpick group="Bonus" tag="?" dynamic="no"/>
+          </inputthing>
+
         </it_bootcustom>
       </inputthing>
     </editthing>

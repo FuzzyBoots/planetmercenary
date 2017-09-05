@@ -159,6 +159,20 @@
     </group>
     
   <group
+    id="Bonus">
+    <value id="Plus1" name="+1"/>
+    <value id="Plus2" name="+2"/>
+    <value id="Plus3" name="+3"/>
+    </group>
+    
+  <group
+    id="Penalty">
+    <value id="Minus1" name="-1"/>
+    <value id="Minus2" name="-2"/>
+    <value id="Minus3" name="-3"/>
+    </group>
+
+    <group
     id="Skills">
     <value id="Combat"/>
     <value id="Mental"/>
