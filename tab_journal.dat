@@ -95,7 +95,6 @@
           moneyvalue = herofield[acCashNet].value
           call MoneyBare
           @text = "{text clrgrey}Total $: " & money
-          @text &= "{horz 40} Total XP: " & #resmax[resXP]
           ]]></labeltext>
         </label>
       </portal>
@@ -407,7 +406,7 @@
     <position><![CDATA[
       ~configure whether our header is visible or not
       ~Note: If the header is non-visible, no space is allotted for it below.
-      template[jrHeader].visible = 1
+      template[jrHeader].visible = 0
 
       ~position the title at the top, followed by the template, and then the table
       perform portal[jrTitle].autoplace

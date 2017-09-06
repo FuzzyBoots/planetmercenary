@@ -346,9 +346,6 @@
     ~start with generic details for all weapons
     call InfoWeapon
 
-    ~add the range details for the weapon
-    iteminfo &= "Range: " & field[wpRange].text & "{br}"
-
     ~finish with generic special abilities for all weapons
     call InfoWeapSp
     ]]></procedure>
@@ -809,9 +806,8 @@
     var myId as string
 
     expr = "component.Specialty & (User.CustSkill |  "
-
     expr &= myId & ")"
-    debug "Specialty expression: " & expr
+
     gizmo.childfound[SpecHelp].field[SpecExpr].text = expr
     ]]></procedure>
 

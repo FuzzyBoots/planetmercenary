@@ -337,14 +337,6 @@
     <!-- All abilities get the same tag for sorting purposes -->
     <tag group="SpecialTab" tag="Ability"/>
 
-    <!-- Each ability that is added by the user costs 1 slot -->
-    <eval index="1" phase="Setup" priority="5000"><![CDATA[
-      ~we must ignore bootstrapped abilities from races and abilities added via advances
-      if (isuser + origin.ishero >= 2) then
-        hero.child[resAbility].field[resSpent].value += 1
-        endif
-      ]]></eval>
-
     <!-- Track the ability on the actor -->
     <eval index="2" phase="Setup" priority="5000"><![CDATA[
       perform forward[Ability.?]
@@ -549,7 +541,9 @@
     </compset>
   
   <entity
-    id="SpecialEnt">
+    id="entSpec"
+    form="frmSpec">
+    <bootstrap thing="SpecHelp"/>
   </entity>
 
 </document>

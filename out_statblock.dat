@@ -75,9 +75,6 @@
       if (eachpick.field[grIsEquip].value <> 0) then
         append " (Equipped)"
         endif
-      if (eachpick.tagis[component.WeapRange] <> 0) then
-        append " (Rng: " & eachpick.field[wpShort].text & "/" & eachpick.field[wpMedium].text & "/" & eachpick.field[wpLong].text & ")"
-        endif
       append @newline
       nexteach
     ~if we have no weapons, output that fact

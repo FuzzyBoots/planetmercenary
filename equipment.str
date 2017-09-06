@@ -298,6 +298,13 @@
       type="derived">
       </field>
 
+    <!-- Weapon penalty -->
+    <field
+      id="wpPenalty"
+      name="Weapon Penalty"
+      type="derived">
+      </field>
+
     <!-- Damage rating of the weapon -->
     <field
       id="wpDamage"
@@ -357,10 +364,8 @@
 
 
   <!-- WeapRange component
-        Ranged weapons derive from this component. They add range distances for three
-        different range classifications. For simplicity, a text-based version of the
-        ranges is automatically generated for easy use in displaying the weapon.
-        Ranged weapons auto-calculate their net attack value based on the Shooting
+        Ranged weapons derive from this component.
+        Ranged weapons auto-calculate their net attack value based on the relevant
         skill.
   -->
   <component
@@ -368,56 +373,27 @@
     name="Ranged Weapon"
     autocompset="no">
 
-    <!-- Short range for the weapon -->
-    <field
-      id="wpShort"
-      name="Short Range"
-      type="static">
-      </field>
-
-    <!-- Medium range for the weapon -->
-    <field
-      id="wpMedium"
-      name="Medium Range"
-      type="static">
-      </field>
-
-    <!-- Long range for the weapon -->
-    <field
-      id="wpLong"
-      name="Long Range"
-      type="static">
-      </field>
-
-    <!-- Synthesized text ranges for the weapon -->
-    <field
-      id="wpRange"
-      name="Range"
-      type="derived"
-      maxfinal="25">
-      <!-- Calculate the value based on all three range elements so that any changes
-          to any value safely trigger an update of the finalized value
-      -->
-      <calculate phase="Render" priority="10000"><![CDATA[
-        @value = field[wpShort].value * 100000000 + field[wpMedium].value * 10000 + field[wpLong].value
-        ]]></calculate>
-      <!-- Final value for display is a blending of the various range values -->
-      <finalize><![CDATA[
-        if (tagis[Weapon.SpecRange] <> 0) then
-          @text = "Special"
-        else
-          @text = field[wpShort].value & "/" & field[wpMedium].value & "/" & field[wpLong].value
-          endif
-        ]]></finalize>
-      </field>
-
     <!-- All ranged weapons get the same tag for sorting purposes -->
     <tag group="Armory" tag="Range"/>
 
     <!-- Calculate the net attack roll for the weapon -->
-    <!--eval index="1" phase="Final" priority="7000" name="Calc wpNetAtk"><![CDATA[
-      field[wpNetAtk].value = #trait[skShooting] + field[wpBonus].value + field[wpPenalty].value
-      ]]></eval-->
+    <eval index="1" phase="Final" priority="7000" name="Calc wpNetAtk"><![CDATA[
+      field[wpNetAtk].value = field[wpBonus].value + field[wpPenalty].value
+      
+      if (tagis[WeaponType.rngCarbine] <> 0) then
+        field[wpNetAtk].value += #trait[skCarbine]
+      elseif (tagis[WeaponType.rngPistol] <> 0) then
+        field[wpNetAtk].value += #trait[skPistol]
+      elseif (tagis[WeaponType.rngScatter] <> 0) then
+        field[wpNetAtk].value += #trait[skScatter]
+      elseif (tagis[WeaponType.rngLongGun] <> 0) then
+        field[wpNetAtk].value += #trait[skLongGun]
+      elseif (tagis[WeaponType.rngHvyWeap] <> 0) then
+        field[wpNetAtk].value += #trait[skHvyWeap]        
+      elseif (tagis[WeaponType.rngStaWeap] <> 0) then
+        field[wpNetAtk].value += #trait[skStaWeap]
+      endif
+      ]]></eval>
 
     <!-- Prepend any derived special notes to the appropriate field -->
     <eval index="2" phase="Render" priority="2000"><![CDATA[
@@ -430,9 +406,8 @@
       ]]></eval>
 
     </component>
-
-
-  <!-- WeapMelee component
+    
+    <!-- WeapMelee component
         Melee weapons derive from this component. Melee weapons auto-calculate their
         net attack value based on the Melee skill.
   -->
@@ -450,9 +425,9 @@
       ]]></eval>
 
     <!-- Calculate the net attack roll for the weapon -->
-    <!--eval index="2" phase="Final" priority="7000" name="Calc wpNetAtk"><![CDATA[
+    <eval index="2" phase="Final" priority="7000" name="Calc wpNetAtk"><![CDATA[
       field[wpNetAtk].value = #trait[skMelee] + field[wpBonus].value + field[wpPenalty].value
-      ]]></eval-->
+      ]]></eval>
 
     <!-- Prepend any derived special notes to the appropriate field -->
     <eval index="3" phase="Render" priority="2000"><![CDATA[

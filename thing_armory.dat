@@ -132,7 +132,6 @@
     <fieldval field="wpDamage" value="1d3"/>
     <fieldval field="wpSpecial" value=""/>
     <fieldval field="grCost" value="5"/>
-    <fieldval field="gearWeight" value="1"/>
     <!-- If this is a natural weapon, assign this tag
     <tag group="Equipment" tag="Natural"/>
     -->
@@ -157,12 +156,8 @@
     <fieldval field="shortname" value=""/>
     <fieldval field="wpBonus" value="0"/>
     <fieldval field="wpDamage" value="2d6"/>
-    <fieldval field="wpShort" value="20"/>
-    <fieldval field="wpMedium" value="30"/>
-    <fieldval field="wpLong" value="40"/>
     <fieldval field="wpSpecial" value=""/>
     <fieldval field="grCost" value="200"/>
-    <fieldval field="gearWeight" value="4"/>
     </thing>
 
 

@@ -718,18 +718,6 @@
       </portal>
 
     <portal
-      id="range"
-      style="outPlain">
-      <output_label>
-        <labeltext><![CDATA[
-          if (tagis[component.WeapRange] <> 0) then
-            @text = field[wpRange].text
-            endif
-          ]]></labeltext>
-        </output_label>
-      </portal>
-
-    <portal
       id="dots"
       style="outDots">
       <output_dots>
@@ -764,15 +752,6 @@
         </output_label>
       </portal>
 
-    <portal
-      id="hdrrange"
-      style="outHeader"
-      isheader="yes">
-      <output_label
-        text="Range">
-        </output_label>
-      </portal>
-
     <position><![CDATA[
       ~our height is based on the tallest portal within
       height = portal[name].height
@@ -793,28 +772,28 @@
       ~position the range with the same baseline as the rest of the text; since it
       ~uses a smaller font, it will have a smaller height, so centering it will have
       ~it appear to float up relative to the other text
-      perform portal[range].alignrel[btob,name,0]
+      ~perform portal[range].alignrel[btob,name,0]
 
       ~establish suitable fixed widths for the various columns of data
       portal[damage].width = 120
       portal[attack].width = 70
-      portal[range].width = 260
+      ~portal[range].width = 260
 
       ~position everything horizontally, leaving a margin on both sides appropriately
       portal[badstr].left = 5
       perform portal[damage].alignedge[right,-5]
       perform portal[name].alignrel[ltor,badstr,5]
       perform portal[attack].alignrel[rtol,damage,-10]
-      perform portal[range].alignrel[rtol,attack,-10]
+      ~perform portal[range].alignrel[rtol,attack,-10]
 
       ~if this is a ranged weapon, limit the name to the space up to the range details;
       ~otherwise, let the name extend over to the attack value
       var limit as number
-      if (tagis[component.WeapRange] <> 0) then
-        limit = portal[range].left
-      else
+      ~if (tagis[component.WeapRange] <> 0) then
+      ~  limit = portal[range].left
+      ~else
         limit = portal[attack].left
-        endif
+      ~  endif
 
       ~limit the name to the extent determined above
       if (portal[name].right > limit - 5) then
@@ -846,17 +825,17 @@
       ~each of our header labels has the same width as the corresponding data beneath
       portal[hdrattack].width = portal[attack].width
       portal[hdrdamage].width = portal[damage].width
-      portal[hdrrange].width = portal[range].width
+      ~portal[hdrrange].width = portal[range].width
 
       ~center each header label on the corresponding data beneath
       perform portal[hdrattack].centeron[horz,attack]
       perform portal[hdrdamage].centeron[horz,damage]
-      perform portal[hdrrange].centeron[horz,range]
+      ~perform portal[hdrrange].centeron[horz,range]
 
       ~align all header labels at the bottom of the header region
       perform portal[hdrattack].alignedge[bottom,0]
       perform portal[hdrdamage].alignedge[bottom,0]
-      perform portal[hdrrange].alignedge[bottom,0]
+      ~perform portal[hdrrange].alignedge[bottom,0]
       ]]></header>
 
     </template>

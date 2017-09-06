@@ -139,15 +139,7 @@
   <!-- arWpnThing template
         Derived from the SimpleItem template, this template includes the weapon
         damage and purchase cost. It is specifically for showing things for the
-        user to select.
-
-        It would be reasonable to assume that we could designate the range as a
-        simple field-based label portal, but that won't work. If the weapon is a
-        melee weapon, it won't have the range field, so you'll get run-time errors
-        when Hero Lab tries to access the field associated with the portal. The
-        solution is to use a script-based label that properly checks whether the
-        weapon is ranged. If so, then the field can be safely accessed. If not,
-        then the text is left as empty.
+        user to select.        
   -->
   <template
     id="arWpnThing"
@@ -173,20 +165,6 @@
       </portal>
 
     <portal
-      id="range"
-      style="lblDisable">
-      <label>
-        <labeltext><![CDATA[
-          if (tagis[component.WeapRange] <> 0) then
-            @text = field[wpRange].text
-          else
-            @text = ""
-            endif
-          ]]></labeltext>
-        </label>
-      </portal>
-
-    <portal
       id="cost"
       style="lblNormal">
       <label>
@@ -200,11 +178,11 @@
       ~set up our dimensions, with a width that we dictate; our width can vary
       ~between weapon types, since ranged weapons require extra space for the range
       height = portal[name].height
-      if (tagis[component.WeapRange] <> 0) then
-        width = 350
-      else
+      ~if (tagis[component.WeapRange] <> 0) then
+      ~  width = 350
+      ~else
         width = 250
-        endif
+      ~  endif
 
       ~if this is a "sizing" calculation, we're done
       doneif (issizing <> 0)
@@ -218,11 +196,11 @@
 
       ~position the range portal to be centered in its own column relative to a
       ~centerpoint position
-      perform portal[range].centerpoint[horz,260]
+      ~perform portal[range].centerpoint[horz,260]
 
       ~position the name on the left and let it use all available space
       portal[name].left = 0
-      portal[name].width = minimum(portal[name].width,portal[range].left - 10)
+      portal[name].width = portal[name].width
       ]]></position>
 
     </template>
@@ -297,20 +275,6 @@
       </portal>
 
     <portal
-      id="range"
-      style="lblDisable">
-      <label>
-        <labeltext><![CDATA[
-          if (tagis[component.WeapRange] <> 0) then
-            @text = field[wpRange].text
-          else
-            @text = ""
-            endif
-          ]]></labeltext>
-        </label>
-      </portal>
-
-    <portal
       id="special"
       style="imgNormal">
       <image_literal
@@ -362,7 +326,6 @@
       perform portal[name].centervert
       perform portal[attack].centervert
       perform portal[damage].centervert
-      perform portal[range].centervert
       perform portal[special].centervert
       perform portal[gearmanage].centervert
       perform portal[delete].centervert
@@ -381,11 +344,7 @@
       ~position the special portal to the left of the gear button
       perform portal[special].alignrel[rtol,gearmanage,-8]
 
-      ~position the range portal to the left of the delete button; we want the
-      ~damage to be centered in its own column relative to a centerpoint position
-      perform portal[range].centerpoint[horz,330]
-
-      ~position the damage portal to the left of the range column; we want the
+      ~position the damage portal to the left of the special column; we want the
       ~damage to be centered in its own column relative to a centerpoint position
       perform portal[damage].centerpoint[horz,250]
 
@@ -399,22 +358,13 @@
       portal[name].left = 0
       portal[name].width = minimum(portal[name].width,limit)
 
-      ~show the 'strength requirement' icon to the right of the name
-      perform portal[strreq].alignrel[ltor,name,2]
-      portal[strreq].visible = tagis[Helper.BadStrReq]
-
-      ~show the 'held by' icon to the right of the strenght requirement if appropriate
+      ~show the 'held by' icon to the right of the strength requirement if appropriate
       if (portal[strreq].visible = 0) then
         portal[heldby].left = portal[strreq].left
       else
         perform portal[heldby].alignrel[ltor,strreq,5]
         endif
       portal[heldby].visible = isgearheld
-
-      ~if this is not a ranged weapon, hide the range portal
-      if (tagis[component.WeapRange] = 0) then
-        portal[range].visible = 0
-        endif
 
       ~only show the special portal if there are special abilities/notes to view
       portal[special].visible = 1 - field[wpNotes].isempty

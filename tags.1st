@@ -109,6 +109,52 @@
     <value id="SpecRange" name="Range is special"/>               <!-- Identifies a weapon with a special range -->
     </group>
 
+  <!-- AmmoType group - helper tags for ranged weapon ammo types -->
+  <group
+    id="AmmoType">
+    <value id="Laser" name="Laser"/>
+    <value id="Stun" name="Stun"/>
+    <value id="Demotivate" name="De-Motivators"/>
+    <value id="Goober" name="Goober"/>
+    <value id="Gunfoam" name="Gunfoam"/>
+    <value id="PEA" name="PEA"/>
+    <value id="Particle" name="Particle"/>
+    <value id="Ion" name="Ion"/>
+    </group>
+    
+  <!-- Reload group - helper tags for ranged weapon reload values -->
+  <group
+    id="Reload">
+    <value id="None" name="-"/>
+    <value id="One" name="1"/>
+    <value id="OneTwo" name="1-2"/>
+    <value id="OneThree" name="1-3"/>
+    </group>
+    
+  <!-- WeaponType group - helper tags for  weapon types 
+         This governs which skill is used.
+  -->
+  <group
+    id="WeaponType">
+    <value id="rngCarbine" name="Carbine"/>
+    <value id="rngScatter" name="Scattergun"/>
+    <value id="rngPistol" name="Pistol"/>
+    <value id="rngLongGun" name="Long Gun"/>
+    <value id="rngHvyWeap" name="Heavy Weapon"/>
+    <value id="rngStaWeap" name="Stationary Weapon"/>
+    <value id="MelCommon" name="Common Melee"/>
+    <value id="MelExotic" name="Exotic Melee"/>
+    <value id="MelUnarmed" name="Unarmed / Natural"/>
+    </group>
+    
+  <!-- License group - helper tags for gear license values -->
+  <group
+    id="License">
+    <value id="Legal" name="Legal"/>
+    <value id="Restricted" name="Restricted"/>
+    <value id="Military" name="Military"/>
+    </group>
+      
   <!-- InPlay group - tags used to control behaviors associated with in-play effects
         Behaviors that govern in-play adjustments, permanenent adjustments, or other
         in-play effects belong in the group.

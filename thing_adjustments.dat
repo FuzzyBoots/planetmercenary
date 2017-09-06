@@ -122,23 +122,6 @@
       ]]></eval>
     </thing>
 
-  <!-- Ability Slot Adjustment -->
-  <thing
-    id="adjAbility"
-    name="Ability Slots"
-    compset="Adjustment"
-    description="Select this adjustment to apply a bonus/penalty to your total Ability slots.">
-    <tag group="AdjustShow" tag="Increment"/>
-    <tag group="Helper" tag="UserAdjust"/>
-    <tag group="InPlay" tag="PermOK"/>
-    <eval phase="Setup" priority="8000">
-      <before name="Calc wpNetAtk"/><![CDATA[
-      if (tagis[Helper.Activated] <> 0) then
-        hero.child[resAbility].field[resMax].value += field[adjUser].value
-        endif
-      ]]></eval>
-    </thing>
-  
   <!-- Counter Adjustment -->
   <thing
     id="adjCounter"

@@ -143,43 +143,6 @@
       ]]></eval>
     </thing>
 
-
-  <!-- Ability slot resource to track the pool of ability slots being spent -->
-  <thing
-    id="resAbility"
-    name="Ability Slots"
-    compset="Resource">
-    <fieldval field="resObject" value="Ability"/>
-
-    <!-- Automatically add the resource to every actor -->
-    <tag group="Helper" tag="Bootstrap"/>
-
-    <!-- Use the starting ability slots as our initial maximum -->
-    <eval index="1" phase="Setup" priority="1000"><![CDATA[
-      field[resMax].value = herofield[acStartAbi].value
-      ]]></eval>
-    </thing>
-
-
-  <!-- Experience points resource to track the pool of XP accrued and spent -->
-  <thing
-    id="resXP"
-    name="Experience Points"
-    compset="Resource">
-
-    <!-- Automatically add the resource to every actor -->
-    <tag group="Helper" tag="Bootstrap"/>
-
-    <!-- Do NOT require this resource to be fully utilized -->
-    <tag group="Helper" tag="NoMinimum"/>
-
-    <!-- Use the starting XP plus the accrued XP as our maximum -->
-    <eval index="1" phase="Setup" priority="1000" name="Calc XP Max"><![CDATA[
-      field[resMax].value = herofield[acStartXP].value + hero.usagepool[TotalXP].value
-      ]]></eval>
-    </thing>
-
-
   <!-- Advance resource to track the number of advances accrued/spent -->
   <thing
     id="resAdvance"
@@ -190,12 +153,6 @@
 
     <!-- Automatically add the resource to every actor -->
     <tag group="Helper" tag="Bootstrap"/>
-
-    <!-- Base our maximum on the accrued XP -->
-    <eval index="1" phase="Setup" priority="2000">
-      <after name="Calc XP Max"/><![CDATA[
-      field[resMax].value = round(#resmax[resXP] / 20,0,-1)
-      ]]></eval>
 
     </thing>
 

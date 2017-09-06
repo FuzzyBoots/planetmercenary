@@ -357,24 +357,15 @@
       <it_field field="wpDamage"/>
       </inputthing>
     <inputthing
-      name="Short Range"
-      helptext="Specify the short range distance of the weapon.">
-      <it_field field="wpShort"/>
-      </inputthing>
-    <inputthing
-      name="Medium Range"
-      helptext="Specify the medium range distance of the weapon.">
-      <it_field field="wpMedium"/>
-      </inputthing>
-    <inputthing
-      name="Long Range"
-      helptext="Specify the long range distance of the weapon.">
-      <it_field field="wpLong"/>
-      </inputthing>
-    <inputthing
       name="Cost"
       helptext="Specify the standard cost of the item, with a value of 0 meaning it is free.">
       <it_field field="grCost"/>
+      </inputthing>
+    <inputthing
+      name="Type"
+      helptext="Specify the type of ranged weapon.">
+      <it_tagpick
+        group="WeaponType" tag="rng?"/>
       </inputthing>
     <inputthing
       name="Weight"

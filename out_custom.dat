@@ -163,12 +163,6 @@
         xml[node].attr["equipped"] = "yes"
         endif
 
-      if (eachpick.tagis[component.WeapRange] <> 0) then
-        xml[node].attr["shortrange"] = eachpick.field[wpShort].text
-        xml[node].attr["mediumrange"] = eachpick.field[wpMedium].text
-        xml[node].attr["longrange"] = eachpick.field[wpLong].text
-        endif
-
       ~output basic gear details
       perform eachpick.setfocus
       call xogrbasics
@@ -348,8 +342,6 @@
         xml[node].attr["name"] = txt
 
         ~output our total cash and XP
-        node = xmlroot.addchild["xp"]
-        xml[node].attr["total"] = #resmax[resXP]
         node = xmlroot.addchild["cash"]
         xml[node].attr["total"] = herofield[acCashNet].value
 
