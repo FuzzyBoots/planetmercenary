@@ -14,7 +14,8 @@
     <fieldval field="trtAbbrev" value="Car"/>
 
     <tag group="Skills" tag="Combat"/>
-  </thing>
+    <child entity="entSpec" />
+    </thing>
   
   <!-- Dodge Skill -->
   <thing
@@ -27,7 +28,8 @@
     <fieldval field="trtBase" value="5"/>
     
     <tag group="Skills" tag="Combat"/>
-  </thing>
+    <child entity="entSpec" />
+    </thing>
 
   <!-- Explosives Skill -->
   <thing

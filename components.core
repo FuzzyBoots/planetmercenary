@@ -318,10 +318,20 @@
 
     </component>
 
+  <!-- sklSelect component
+         This item is a bit like a UserSelect, but it only has one menu option,
+         and supports a custom Name property.
+  -->
   <component
-    id="cSkillBon"
-    name="Skill Bonus"
+    id="sklSelect"
+    name="Skill Selection"
     ispublic="no">
+    
+    <field
+      id="nameCustom"
+      name="Custom Name field"
+      type="derived"
+      maxlength="25"/>
     
     <!--  Label associated with the first thing-based menu -->
     <field
@@ -368,6 +378,7 @@
           endif
         ]]></calculate>
       </field>
+      
     <!-- Integrate the various user selections into the name of the pick
           NOTE! Must be scheduled after the "shortname" field is synthesized at Render/100.
     -->
@@ -383,7 +394,7 @@
         else
           choices = "-Choose-"
           endif
-        endif
+       endif
 
       ~if we have no text to append, we're done
       doneif (empty(choices) <> 0)
@@ -401,7 +412,7 @@
       ~Note: Remember that a non-empty tagexpr field indicates menu selection is used.
       var needed as number
       needed = !field[sklCandid1].isempty
-      
+
       ~determine the number of menus that HAVE selections
       var actual as number
       if (field[sklCandid1].isempty = 0) then
@@ -418,7 +429,8 @@
       ]]></evalrule>
 
     </component>
-
+    
+    
   <!-- UserSelect component
         Used for things that require the presentation of user selection options to
         customize a pick within a table. For example, a special ability that requires
@@ -442,7 +454,7 @@
       maxlength="100">
       </field>
 
-    <!-- Indicates whether the checkbox is selected is not -->
+    <!-- Indicates whether the checkbox is selected or not -->
     <field
       id="usrIsCheck"
       name="Checked?"

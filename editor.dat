@@ -116,7 +116,7 @@
         <match>thingid.?</match>
         <inputthing
           name="Specialties"
-          helptext="Pick the Specialties that can be chosen for this bonus.">
+          helptext="Pick the Specialties that will automatically be added.">
           <it_taglist group="Specialty" tag="?" dynamic="no"/>
           </inputthing>        
         </it_bootcustom>

@@ -14,7 +14,7 @@
       candidatepick="SpecHelp"
       candidatefield="SpecExpr"
       addpick="">
-      <!--needtag container="Skill" thing="Skill" usehero="yes"></needtag-->
+      
       <titlebar><![CDATA[
         @text = "Add a Specialty"
         ]]></titlebar>

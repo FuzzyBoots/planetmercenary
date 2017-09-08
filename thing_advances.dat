@@ -16,39 +16,13 @@
     </thing>
 
 
-  <!-- New Ability advance
-  -->
-  <thing
-    id="advAbility"
-    name="Gain a New Ability"
-    compset="Advance"
-    description="Select a new ability of your choice.">
-    <fieldval field="advAction" value="New Ability"/>
-    <fieldval field="advDynamic" value="component.Ability"/>
-    <tag group="Advance" tag="AddNew"/>
-    <!-- Modify tagexpr to deny abilities that have already been added to the character -->
-    <eval index="1" phase="Render" priority="1000">
-      <before name="Assign Dynamic Tagexpr"/><![CDATA[
-      ~get the list of all abilities on the hero and assemble it as a list of precluded tags
-      var tagexpr as string
-      tagexpr = hero.tagids[Ability.?," & !"]
-      ~if there are any tags to exclude, append them to the tagexpr appropriately
-      field[advDynamic].text = splice(field[advDynamic].text,tagexpr," & !")
-      ]]></eval>
-
-    <!-- Attach the child entity for tracking the advance -->
-    <child entity="Advance">
-      <tag group="Advance" tag="MustChoose"/>
-      </child>
-    </thing>
-
   <!-- Increase Skill advance
   -->
   <thing
     id="advSkill"
     name="Increase Skill"
     compset="Advance"
-    description="Select a skill to increase by one.">
+    description="Select three skills to increase by one.">
     <fieldval field="advAction" value="Increase Skill"/>
     <fieldval field="advDynamic" value="component.Skill &amp; !Helper.Maximum &amp; !Hide.Skill"/>
     <tag group="Advance" tag="Increase"/>

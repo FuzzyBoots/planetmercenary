@@ -505,7 +505,7 @@
     isunique="yes"
     description="">
     <tag group="Skill" tag="skHistory"/>
-  	<tag group="User" tag="NeedDomain"/>
+    <tag group="User" tag="NeedDomain"/>
     </thing>
 
 
@@ -583,7 +583,7 @@
     isunique="no"
     description="">
     <tag group="Skill" tag="skXeno"/>
-  	<tag group="User" tag="NeedDomain"/>
+    <tag group="User" tag="NeedDomain"/>
   </thing>
 
 
@@ -1054,7 +1054,7 @@
     compset="Specialty"
     isunique="yes"
     description="">
-	
+  
     <tag group="Skill" tag="skIntim"/>
   </thing>
 
@@ -1065,7 +1065,7 @@
     compset="Specialty"
     isunique="yes"
     description="">
-	
+  
     <tag group="Skill" tag="skIntim"/>
   
   </thing>
@@ -1077,7 +1077,7 @@
     compset="Specialty"
     isunique="yes"
     description="">
-	
+  
     <tag group="Skill" tag="skIntim"/>
   </thing>
 
@@ -1089,7 +1089,7 @@
     compset="Specialty"
     isunique="yes"
     description="">
-	
+  
     <tag group="Skill" tag="skNegot"/>
   </thing>
 
@@ -1100,7 +1100,7 @@
     compset="Specialty"
     isunique="yes"
     description="">
-	
+  
     <tag group="Skill" tag="skNegot"/>
   
   </thing>
@@ -1112,7 +1112,7 @@
     compset="Specialty"
     isunique="yes"
     description="">
-	
+  
     <tag group="Skill" tag="skNegot"/>
   </thing>
   
