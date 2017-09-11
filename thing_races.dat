@@ -41,6 +41,7 @@
     compset="Race"
     isunique="yes"
     description="Neophants are the third generation of uplifted elephants, or 'Loxies'. They're physically powerful, but slow to dodge. They may use their trunk as an additional limb.">
+    
     <bootstrap thing="abTrunk"/>
     <bootstrap thing="spAthRun"/>
 
@@ -95,7 +96,8 @@
     isunique="yes"
     description="Rillas are genetically uplifted gorillas. They're very strong, and dextrous, but are often not taken seriously by other Sophonts and tend to be touchy about references to their non-sapient simmian ancestors.">
     
-    <!-- Note: Add bite attack with Athletics damage -->
+    <!-- Add bite attack with Athletics damage -->
+    <bootstrap thing="wpRilla"/>
     
     <!-- Define any script needed to apply changes to traits or other mechanisms-->
     <eval index="1" phase="Setup" priority="4000"><![CDATA[
@@ -121,7 +123,7 @@
     isunique="yes"
     description="Ursumari are genetically uplifted polar bears. They're very strong, very dangerous, and very big. Unfortunately, they don't handle heat very well, which means they also tend to be very angry.">
     
-    <!-- Note: Add claw attack with Athletics+2 damage -->
+    <!-- Add bite/claw attack with Athletics+2 damage -->
     <bootstrap thing="wpUrsus"/>
 
     <!-- Define any script needed to apply changes to traits or other mechanisms-->

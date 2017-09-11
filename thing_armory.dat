@@ -69,15 +69,188 @@
     <fieldval field="grCost" value="4"/>
     </thing>
 
-  <!-- Sample shield -->
+  <!-- Malott M&M Blue Collar -->
   <thing
-    id="shdSample"
-    name="Sample Shield"
+    id="armMalott"
+    name="Malott M&M Blue Collar"
+    compset="Armor"
+    description="Malott’s Blue Collar work suits were not originally designed for the military. They were built for use in heavy industries where the most dangerous jobs had to be performed by humans rather than robots. These suits are generally employed by engineers doing EVA (Extra-vehicular Activity) work, who suspect their projects may fail non-linearly and deposit their energy on nearby personnel.\n\nB-series suits are hooded and offer the same protection as the Whisperskin, plus insulation against hazards specific to an intended environment. This high degree of tailored protection and a more affordable price tag than most medium and heavy armors make the suits very appealing to military and mercenary organizations.">
+    <fieldval field="defDefense" value="2"/>
+    <fieldval field="defDR" value="3"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQuals" value="Damage reduction 6 vs. laser, plasma, and electrical attacks; damage reduction 3 vs. all other attacks; helmet and mask provide for full EVA work"/>
+    <fieldval field="grCost" value="4"/>
+    </thing>
+  
+  <!-- Phubar Troublemaker Mark II -->
+  <thing
+    id="armTrblMkr"
+    name="Phubar Troublemaker Mark II"
+    compset="Armor"
+    description="The Troublemaker suit from Phubar is a cost-effective way to advertise to enemies that you’re only slightly bulletproof, and for this reason it’s not popular with companies that run jobs against conventionally-armed military forces. It is, however, extremely popular with companies that run jobs against lightly-armed forces, and civilians.\n\n The Mark II is a blend of short-fiber fullerenes over a network of thin, chitin-gel plates. These plates distribute impacts but will often rupture after just one or two shots. This is why we recommend to mercs expecting to face hails of bullets that they consider something a little heavier. The same is true if you anticipate being targeted by a disciplined opponent who can hit the same spot twice in rapid succession.\n\nArmor aficionados agree that the Troublemaker suit is aptly named, since it’s best deployed by easily satisfied criminals on a budget, as well as street thugs wanting to look tough and (probably) survive the next drive-by. Like all Phubar products, the Troublemaker suit is prone to failure, but its design is simple enough that it rarely fails without first sustaining fire, and that’s why it remains a top seller.\n\nA variant of this item, the “Troublemaker Plus,” includes three key upgrades: a chitingel hood and mask; secondary external plates at the elbow, knee, shoulder, and crotch; and a “gherkin- wick” assembly that absorbs embarrassing moisture and odors. Of note: the Plus model retains the same game statistics as the original.">
+    <fieldval field="defDefense" value="3"/>
+    <fieldval field="defDR" value="1"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQuals" value="Failure Prone"/>
+    <fieldval field="grCost" value="1"/>
+    </thing>
+  
+      
+  
+  <!-- CD&P CXO -->
+  <thing
+    id="armCDPCXO"
+    name="CD&P CXO"
+    compset="Armor"
+    description="When you need to wear what appears to be a traditional suit and you don’t want it to be the last suit you ever put on, the Cobbold Design & Protection CXO series is a solid choice. Fabricated from long-chain fullerenes with flexible plates of K-sink piezoelectric transducers, the CXO can take a high-velocity round and spread the impact over a large area. Thus, when you stand back up all your ribs will still be intact.\n\n Additionally, the necktie and collars are duomorphic: with a trigger command, they sweep up and over your head, providing critical cranial protection in under a second. Users should take care to keep their trigger commands unique and confidential, as on more than one occasion the suit has inadvertently killed an owner when it deployed and they had a fork in their mouth.\n\n A suite of comm peripherals for your handbrain can be securely embedded in the tie, providing helmet communications when your helmet is up, and letting you talk into the end of your necktie when the helmet is down.">
+    <fieldval field="defDefense" value="3"/>
+    <fieldval field="defDR" value="3"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQuals" value=""/>
+    <fieldval field="grCost" value="5"/>
+    </thing>
+  
+  <!-- Malott M&M 1150 Supersuit -->
+  <thing
+    id="armMMMSupe"
+    name="Malott M&M 1150 Supersuit"
+    compset="Armor"
+    description="The marketing boffins at Malott didn’t name the 1150 the Supersuit, but they haven’t discouraged the name, either. The suit looks like an insulated version of any old skin-tight fullerene suit on the market, except that it’s reminiscent of those old caped hero comedies, right down to the way it hugs your physique.\n\n The 1150 boasts three layers of protection. The outermost layer is reflective (ablative) and shrugs off photon- and electron-based beam weapons long enough for the wearer to take cover. A middle layer is a thick weave of single-thread fullerenes and microfine PTU threads. This drives the price way up, but the added protection is worth it. This layer is where most bullets stop. The innermost layer is a smart set of flexible, interlocking chitingel scales. These scales help distribute the force of impacts, letting you survive extreme acceleration of up to 830 m/s² (that’s a little over 80 g, Earthlings).">
+    <fieldval field="defDefense" value="2"/>
+    <fieldval field="defDR" value="3"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQuals" value="Integral Shields"/>
+    <fieldval field="grCost" value="15"/>
+    </thing>
+  
+  <!-- Malott M&M 1150 EX Supersuit -->
+  <thing
+    id="armMMMSupX"
+    name="Malott M&M 1150 EX Supersuit"
+    compset="Armor"
+    description="This upgraded version of the basic 1150 Supersuit boasts several impressive upgrades. Its outer layer can be programmed to function as smart camouflage, though for best effect it should be paired with something other than the off-the-shelf Synthetic Intelligence. The middle layer is powered and its molecular-level fullerene flexion effect is exploited such that muscle movement is amplified, granting the wearer three to five times their normal strength. The inner layer provides moderate inertial protection, promoting survival at acceleration up to 830 m/s² (that’s a little over 80 g, Earthlings).\n\n The Supersuit EX also includes six micro-annies — one each at the wrists, ankles, belt buckle, and collar — which power the fullerene layer, fuel the inertial dampers, and best of all grant the wearer up to 1d6 minutes of fully-mobile flight.">
+    <fieldval field="defDefense" value="2"/>
+    <fieldval field="defDR" value="6"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQuals" value="Integral Shield, Limited Flight, Active Camouflage"/>
+    <fieldval field="grCost" value="17"/>
+    </thing>
+  
+  <!-- Phubar Enforcer -->
+  <thing
+    id="armPhubEnf"
+    name="Phubar Enforcer"
+    compset="Armor"
+    description="Phubar’s Enforcer armor is priced and labeled as a step up from their Troublemaker suit, but in fact it costs more than wearing a super-sized Troublemaker atop a fitted Troublemaker, and that is all it is. If your idea of protection is waddling around looking like a cross between Mitch the Marshmallow and an antique nesting doll, then the Enforcer is right up your alley. Hopefully your alley doesn’t have enemy troops in it.">
+    <fieldval field="defDefense" value="2"/>
+    <fieldval field="defDR" value="3"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQuals" value="Failure Prone"/>
+    <fieldval field="grCost" value="4"/>
+    </thing>
+  
+  <!-- Phubar Enforcer Deluxe -->
+  <thing
+    id="armPhbEnfD"
+    name="Phubar Enforcer Deluxe"
+    compset="Armor"
+    description="The Enforcer Deluxe is basically a Troublemaker inside a Troublemaker Plus, with a nice pair of goggles. Which probably do nothing. We don’t know. We haven’t tried them on.">
+    <fieldval field="defDefense" value="2"/>
+    <fieldval field="defDR" value="4"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQuals" value="Stacks with the Phubahr Troublemaker Mark II (see page 155); if stacked, then each set of armor can only take two hits before failing, not three; Failure Prone"/>
+    <fieldval field="grCost" value="7"/>
+    </thing>
+  
+  <!-- Esspererin Sashiko -->
+  <thing
+    id="armEssSash"
+    name="Esspererin Sashiko"
+    compset="Armor"
+    description="Sashiko is the esspererin word for “full armor,” and to an esspererin, “full armor” means eight to ten meters of serpentine interlocking plates with manipulator arms, mounted weapons, full flight capabilities, and a life-support system that keeps the pilot happy and healthy through an extended deployment.\n\n “Pilot” is the right word to use here. To enter the Sashiko, an esspererin couches comfortably into less than one cubic meter of cockpit and plugs the suit’s controls directly into their head, usually by removing their eyes and antennae. They keep their hands, feet, and wings curled and furled as the Sashiko becomes a literal extension of their body.\n\nAs with most esspererin manufacturing, Sashiko components are grown and then assembled into full suits by hand. Also like most tech owned by the species, Sashiko suits tend to be tinkered with extensively.">
+    <fieldval field="defDefense" value="5"/>
+    <fieldval field="defDR" value="8"/>
+    <fieldval field="defHull" value="1"/>
+    <fieldval field="defQuals" value="May only be worn (piloted) by esspererin; Hull Points; Implanted Weapons"/>
+    <fieldval field="grCost" value="15"/>
+    </thing>
+  
+  <!-- Phubahr Godmode Gargoyle -->
+  <thing
+    id="armPhGoGar"
+    name="Phubahr Godmode Gargoyle"
+    compset="Armor"
+    description="The Phubahr Gargoyle is a shameless knockoff of the Vella Tacspec Golem (see next page). Sophonts who work in Phubahr’s sales department try to obscure this fact by giving it the moniker “Godmode” to imply that in this suit, one is as powerful as a god. Having this suit is definitely better than running around a battle zone in skin tights or an armored dress suit, but purchasers should be advised that the same engineers who designed Phubahr weapons also had their hands on this suit. Gargoyles have been known to fail catastrophically mid-battle. However, when one considers the price point, then the chance that it might not fail, and the R1P-A Goaltender from Wächter in one pauldron, they might find that a Phubahr Gargoyle is exactly the suit they need.">
+    <fieldval field="defDefense" value="4"/>
+    <fieldval field="defDR" value="5"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQuals" value="Includes a modified R1P-A Goaltender; Failure Prone; Flight"/>
+    <fieldval field="grCost" value="10"/>
+    </thing>
+  
+  <!-- Planet Mercenary ICC-Odin -->
+  <thing
+    id="armPMICCOd"
+    name="Planet Mercenary ICC-Odin"
+    compset="Armor"
+    description="This suit is very similar to the T2-F11 series, though it features a pair of anti-personnel cannons in the pauldrons. People argue whether having cannons as point defenses is better or worse than having a specially-designed Goaltender. The difference is in collateral damage — the Goaltender doesn’t wreck stuff that’s behind the incoming rounds, while the built-in cannons can do exactly that. This suit was designed with the cannons in mind, so they’re part of the structure of the suit. Removing them is not recommended.">
+    <fieldval field="defDefense" value="5"/>
+    <fieldval field="defDR" value="6"/>
+    <fieldval field="defHull" value="1"/>
+    <fieldval field="defQuals" value="Comes with two permanently shouldermounted Gunfoam cannons (2d6 damage, Reload 1–2, no weapon qualities on the cannons, license Military); Hull Points; Flight"/>
+    <fieldval field="grCost" value="15"/>
+    </thing>
+  
+  <!-- USMF Infantry Combat Chassis (USMF-ICC) -->
+  <thing
+    id="armUSMFICC"
+    name="USMF Infantry Combat Chassis (USMF-ICC)"
+    compset="Armor"
+    description="Phubar isn’t the only company to knock off Vella Tacspec’s work. The USMF-ICC is the UNS infantry’s standard-issue heavy armor and it is remarkably similar to the T2-F11 (see below). It’s less expensive than the Vella Tacspec and about the same cost as Phubar models (“free” if you’re UNS heavy infantry), but you can only score a suit if you have access to a UNS surplus, or you’ve captured and stripped UNS heavy infantry units. As with the Vella Tacspec Golem, the USM Foundries Combat Chassis allows for fully-mobile flight and a power assist to make moving around in it possible.">
+    <fieldval field="defDefense" value="5"/>
+    <fieldval field="defDR" value="8"/>
+    <fieldval field="defHull" value="1"/>
+    <fieldval field="defQuals" value="Hull Points; Flight"/>
+    <fieldval field="grCost" value="10"/>
+    </thing>
+  
+  <!-- Vella Tacspec T2-F11 Golem -->
+  <thing
+    id="armVTGolem"
+    name="Vella Tacspec T2-F11 Golem"
+    compset="Armor"
+    description="Imagine slipping on a Döblitz Armory Harmadillo assault craft that’s cut to fit you like a wedding dress....\n\n This is a truly top-of-the-line suit, with powered strength- and speed-boosting tech and mini-annies capable of running the ensemble for weeks. Its turbine-powered flight jets are noisy, but it’s also smart enough to adjust to you not knowing how to hold your body when you fly (a trained pilot can make this beast soar, as the suit won’t have to compensate for any flailing).\n\n The Golem includes mounts suitable for attaching various heavy weapons, scatterguns, long guns, or carbines. Weapons are not usually sold with the suit, since they assume you already have a favorite weapon of your own.">
+    <fieldval field="defDefense" value="5"/>
+    <fieldval field="defDR" value="6"/>
+    <fieldval field="defHull" value="1"/>
+    <fieldval field="defQuals" value="Hull Points; Flight; Implanted Weapons"/>
+    <fieldval field="grCost" value="12"/>
+    </thing>
+  
+  <!-- Vella Tacspec T2-F11 Golem EX -->
+  <thing
+    id="armVTGolEX"
+    name="Vella Tacspec T2-F11 Golem EX"
+    compset="Armor"
+    description="The Golem EX model has all the features and benefits available to the regular Golem, but thanks to a partnership with Wächter Landscaping & Defense, the Golem EX adds an integrated R1P-A Goaltender in one pauldron. In older models, the addition of the Goaltender reduced the number of available slots for mounting weapons. Clever engineers at Vella Tacspec have now solved this problem, and your EX model can mount the same number of external weapons as your regular model.">
+    <fieldval field="defDefense" value="5"/>
+    <fieldval field="defDR" value="6"/>
+    <fieldval field="defHull" value="1"/>
+    <fieldval field="defQuals" value="Includes a R1P-A Goaltender; Hull Points; Flight; Implanted Weapons"/>
+    <fieldval field="grCost" value="12"/>
+    </thing>
+  
+  <!-- Vella Tacspec Bunker Bubble -->
+  <thing
+    id="shdVTBB"
+    name="Vella Tacspec Bunker Bubble"
     compset="Shield"
-    description="Description goes here">
-    <fieldval field="defDefense" value="1"/>
-    <fieldval field="grCost" value="30"/>
-    <fieldval field="gearWeight" value="5"/>
+    description="There’s no better active armor than a true unifield shield. A platoon under a Bunker Bubble may be shoulder to shoulder, but they can advance across contested ground with relative impunity.\n\n The Bunker Bubble is a four-ton annie plant, one meter in diameter, that projects a hemispheric shield out to six meters in every direction (that’s twelve meters of protection for the sophonts playing at home). All characters inside the shield gain its full Damage Reduction of 6, though this is reduced to only 3 against beam and projectile weapons because the shield flickers from time to time. The techs are working on it.\n\n The Bunker Bubble has three modes of propulsion. The default option is a reaction-free hovering mode. This option is perfectly quiet but may induce vertigo in soldiers standing next to the central unit. It also consumes the most fuel of any mobility mode. The second option is an efficient but noisy hovercraft mode. A standard hover skirt unfolds around the unit and turbines create a high-pressure cushion of air upon which the unit rides. The third option is “walker” mode. Three spider-like legs deploy from beneath the unit, lurching it forward across the battlefield.">
+    <fieldval field="defDefense" value="0"/>
+    <fieldval field="defDR" value="6"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defQuals" value="Damage Reduction vs. beam and projectile attacks; the Bunker Bubble may move at a speed roughly equivalent to the fastest sophont in a team."/>
+    <fieldval field="grCost" value="10"/>
     </thing>
 
 
@@ -96,11 +269,9 @@
     isunique="yes"
     holdable="no">
     <fieldval field="shortname" value="Unarmed"/>
-    <fieldval field="wpBonus" value="0"/>
     <fieldval field="wpDamage" value="1"/>
     <fieldval field="wpSpecial" value=""/>
     <fieldval field="grCost" value="0"/>
-    <fieldval field="gearWeight" value="0"/>
     <tag group="Equipment" tag="Natural"/>
     </thing>
 
@@ -117,7 +288,22 @@
     <fieldval field="wpDamage" value="Athletics+2"/>
     <fieldval field="wpSpecial" value=""/>
     <fieldval field="grCost" value="0"/>
-    <fieldval field="gearWeight" value="0"/>
+    <tag group="Equipment" tag="Natural"/>
+    </thing>
+
+  <!-- Rilla Unarmed Strike melee weapon -->
+  <thing
+    id="wpRilla"  
+    name="Rilla Unarmed Strike"
+    compset="Melee"
+    description="Ursumari have a bite attack equal to Athletics+2."
+    isunique="yes"
+    holdable="no">
+    <fieldval field="shortname" value="Unarmed"/>
+    <fieldval field="wpBonus" value="0"/>
+    <fieldval field="wpDamage" value="Athletics+2"/>
+    <fieldval field="wpSpecial" value=""/>
+    <fieldval field="grCost" value="0"/>
     <tag group="Equipment" tag="Natural"/>
     </thing>
 

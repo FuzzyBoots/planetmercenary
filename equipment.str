@@ -496,8 +496,9 @@
       ~if this gear is not equipped, skip it
       doneif (field[grIsEquip].value = 0)
 
-	  ~Stacked armor should work by applying the lowest
-	  ~defense and the highest DR.
+	    ~Stacked armor should work by applying the lowest
+	    ~defense and adding the DR over that type,
+      ~but I'm not up to that point yet.
 	  
       ~apply the appropriate trait adjustments for the equipment
       #traitbonus[trDefense] += field[defDefense].value
