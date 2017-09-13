@@ -404,6 +404,13 @@
     name="Race"
     autocompset="no">
 
+    <!-- Base Health value -->
+    <field
+      id="baseHealth"
+      name="Base Health"
+      type="static">
+      </field>
+    
     <!-- Each race needs its own identity tag to configure the hero appropriately -->
     <identity group="Race"/>
 
@@ -411,8 +418,11 @@
     <eval index="1" phase="Setup" priority="5000"><![CDATA[
       perform forward[Race.?]      
       ]]></eval>
-
     
+    <!-- Determine base health -->
+    <eval index="2" phase="Traits" priority="4001" name="Calc Sophont Health"><![CDATA[
+      #traitbonus[trHealth] = field[baseHealth].value + #trait[skEndure]
+    ]]></eval>
 
     </component>
 

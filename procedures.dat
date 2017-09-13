@@ -366,7 +366,7 @@
     iteminfo &= "Defense: " & field[defDefense].text & "{br}"
 
     ~report the damage resistance
-    iteminfo &= "DR: " & field[defDR].text & "{ br}"
+    iteminfo &= "DR: " & field[defDR].text & "{br}"
 
     ]]></procedure>
 
@@ -808,6 +808,7 @@
     expr = "component.Specialty & (User.CustSkill |  "
     expr &= myId & ")"
 
+    debug expr
     gizmo.childfound[SpecHelp].field[SpecExpr].text = expr
     ]]></procedure>
 

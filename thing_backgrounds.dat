@@ -16,6 +16,10 @@
       <autotag group="Skill" tag="skNegot"/>
       <autotag group="explicit" tag="2"/>
       </bootstrap>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Skill" tag="skInsight"/>
+      <autotag group="explicit" tag="3"/>
+      </bootstrap>
     </thing>
     
   <thing id="bckDriver" name="Driver" description="Maybe you raced hover vehicles. Perhaps you worked for a limousine company. Or possibly you were the guy driving the getaway car. Could be you did all three.\n\n{b}Bonus Skill Ranks:{/b} +2 Computers {i}or{/i} Mechanic, +2 Ground Vehicles {i}or{/i} Water Vehicles, +2 Perception" compset="Bckgrnd" uniqueness="unique">
