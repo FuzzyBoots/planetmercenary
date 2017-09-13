@@ -154,7 +154,28 @@
     <value id="Restricted" name="Restricted"/>
     <value id="Military" name="Military"/>
     </group>
-      
+
+  <group
+    id="VehType"
+    dynamic="yes"
+    sequence="explicit">
+    <value id="Ground" name="Ground Vehicles" order="10"/>
+    <value id="Aircraft" order="20"/>
+    <value id="Boat" name="Boats & Ships" order="30"/>
+    </group>
+
+  <group
+    id="VehClass"
+    sequence="explicit">
+    <value id="Consumer" order = "10"/>    
+    <value id="Military" order = "20"/>
+    </group>
+    
+  <group
+    id="VehEnclose">
+    <value id="Enclosed"/>
+    </group>
+    
   <!-- InPlay group - tags used to control behaviors associated with in-play effects
         Behaviors that govern in-play adjustments, permanenent adjustments, or other
         in-play effects belong in the group.

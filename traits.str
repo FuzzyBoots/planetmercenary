@@ -222,7 +222,14 @@
       call SetSpcExpr
       ]]></eval>
       
-    <eval index="10" phase="Initialize" priority="10000"><![CDATA[
+    <!-- Track the skill on the actor -->
+    <eval index="5" phase="Setup" priority="10000"><![CDATA[
+      if (field[trtUser].value >= 0) then
+        perform assign[User.HasSpec]
+        endif
+      ]]></eval>
+    
+    <!--eval index="10" phase="Initialize" priority="10000"><![CDATA[
       ~copy our SkillList tags to the gizmo so they can be used for the needtag
       if (isgizmo <> 0) then
         perform gizmo.pushtags[Skill.?]
@@ -234,7 +241,7 @@
         perform delete[Skill.?]
         perform gizmo.pulltags[Skill.?]
         endif
-      ]]></eval>
+      ]]></eval-->
 
     </component>
 

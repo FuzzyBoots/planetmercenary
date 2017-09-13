@@ -17,7 +17,7 @@
     name="Human"
     compset="Race"
     isunique="yes"
-    description="Humans are more or less the standard for races. They have no bonus skill ranks and no skill check penalties. They have 8+Endurance health and can take a dying action.">
+    description="These crafty, smooth-skinned bipeds number in the hundreds of billions. They’re flexible, creative, and surprisingly resilient despite their relatively fragile frames. In the 900 years since they joined the other star faring species, they’ve become a major power economically, militarily, and culturally. Humans are ambitious, competent, and often extremely lucky.\n\n {b}Bonus Skill Ranks:{/b} None\n\n {b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} When your human character dies, you may immediately take one final action (not a full turn — just a single action). This action cannot save your life, though it may save the lives of your friends and allies. If you do not take this action immediately, it is forfeit.">
     <bootstrap thing="abDyingAct"/>
 
     <!-- Define any script needed to apply changes to traits or other mechanisms-->
@@ -40,7 +40,7 @@
     name="Neophant"
     compset="Race"
     isunique="yes"
-    description="Neophants are the third generation of uplifted elephants, or 'Loxies'. They're physically powerful, but slow to dodge. They may use their trunk as an additional limb.">
+    description="Humans uplifted their distant cousins the elephants, and then further tweaked nature’s robust, thick-skinned design so the quadrupeds can walk upright. Massive hands were genengineered as well, but neophants find their long prehensile snouts far more dexterous. Many neophants have anger management issues, which a competent commanding officer can put to good use. They’re also large enough to make very good meat shields for the rest of their mercenary company, which is appropriate since these traits also make it difficult for them to avoid incoming attacks.\r\n Bonus Skill Ranks: +1 Athletics, +2 Endurance, +1 Perception; you also gain the Athletics (Running) specialty at no cost\r\n Skill Check Penalties: You suffer a –1 penalty with Dodge skill checks. Apply this penalty to your result after all other modifiers.\r\n Special Rules: Your trunk counts as an extra limb with minimal dexterity. You can use it to pick things up and open large containers or doors with big handles. Your trunk can lift something roughly a quarter of your size and weight.">
     
     <bootstrap thing="abTrunk"/>
     <bootstrap thing="spAthRun"/>
@@ -140,5 +140,7 @@
     ]]></eval>
       
     </thing>
+  
+  <thing
   
   </document>

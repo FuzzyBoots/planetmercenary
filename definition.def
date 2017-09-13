@@ -43,9 +43,9 @@
     major="0"
     minor="1"
     required="6.1g"
-    summary="HLExport will use this text automatically"><![CDATA[{b}{text clrglow}Skeleton data files for Hero Lab{text clrreset}{/b}
+    summary="HLExport will use this text automatically"><![CDATA[{b}{text clrglow}Planet Mercenary data files for Hero Lab{text clrreset}{/b}
 
-These data files provide a starting framework for implementing support for any game system of your choice. Adapt these data files as necessary. A detailed example is provided for adapting these files to the Savage Worlds game system.
+These data files provide a framework for Hypernode Press's Planet Mercenary game.
 ]]>
     </release>
 
@@ -88,15 +88,6 @@ These data files provide a starting framework for implementing support for any g
       ~reset the abandon state in case it's still set from the previous combat
       herofield[acAbandon].value = 0
       ]]></newcombat>
-
-    <!-- Define how the initiative is auto-calculated by the Tactical Console. -->
-
-    <initiative><![CDATA[
-      ~calculate the primary initiative rating
-      @initiative = random(10) + 1
-      ~calculate the tiebreaker initiative rating
-      @tiebreaker = 0
-      ]]></initiative>
 
     </behavior>
 

@@ -88,7 +88,7 @@
           ~Special case. Only one skill
           var skillName as string
           skillName =  tagnames[Skill.?, ""]
-          field[livename].text = field[livename].text & " " & skillName
+          field[livename].text = field[livename].text & " (" & skillName & ")"
           perform hero.child[tagids[Skill.?]].field[trtBG].modify[+,bonus,"Background"]
         endif
       endif
@@ -110,6 +110,57 @@
       endif
         
       perform field[usrChosen1].chosen.field[trtBG].modify[+,bonus,"Background"]
+      ]]></eval>
+    </thing>  
+        
+  <thing
+    id="fRPlusSk2"
+    name="Skill Bonus"
+    compset="cmpsetSB"
+    description="Gives a bonus to the selected skills.">
+    <tag group="Hide" tag="Special"/>
+    <eval index="1" phase="PreTraits" priority="4900">
+      <before name="Calc trtFinal"/><![CDATA[
+      var bonus as number
+      var penalty as number
+      bonus = tagvalue[Bonus.?]
+      penalty = tagvalue[Penalty.?]
+      if (bonus = 0) then
+        if (penalty = 0) then
+          bonus = 2
+        endif
+      endif
+      
+      ~build the candidate expression out of our Skill and Skills tags
+      var skills as string
+      skills = tagids[Skill.?, " | "]
+      var skilltypes as string
+      skilltypes = tagids[Skills.?, " | "]
+
+      if (bonus > 0) then
+        field[livename].text = "+" & bonus & " " & livename
+        
+        foreach pick in hero from Skill where tagids[Skill.?,"|"]
+          perform eachpick.field[trtBG].modify[+,bonus,"Background"]
+        nexteach
+      
+        foreach pick in hero from Skill where tagids[Skills.?,"|"]
+          perform eachpick.field[trtBG].modify[+,bonus,"Background"]
+        nexteach
+      endif
+      
+      if (penalty > 0) then
+        field[livename].text = "-" & penalty & " " & livename
+        
+        foreach pick in hero from Skill where tagids[Skill.?,"|"]
+          perform eachpick.field[trtBonus].modify[-,penalty,"Background"]
+        nexteach
+      
+        foreach pick in hero from Skill where tagids[Skills.?,"|"]
+          perform eachpick.field[trtBonus].modify[-,penalty,"Background"]
+        nexteach
+      endif
+      
       ]]></eval>
     </thing>  
         

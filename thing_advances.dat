@@ -33,21 +33,32 @@
       </child>
     </thing>
 
-  <!-- Increase Attribute advance
-  -->
+  <!-- Add Specialty advance -->
   <thing
-    id="advAttrib"
-    name="Increase Attribute"
+    id="advSpec"
+    name="Add Specialty"
     compset="Advance"
-    description="Select an attribute to increase by one.">
-    <fieldval field="advAction" value="Increase Attribute"/>
-    <fieldval field="advDynamic" value="component.Attribute &amp; !Helper.Maximum &amp; !Hide.Attribute"/>
-    <tag group="Advance" tag="Increase"/>
-
-    <!-- Attach the child entity for tracking the advance -->
-    <child entity="Advance">
-      </child>
-    </thing>
-
-
+    description="Add a skill specialty">
+    <fieldval field="advAction" value="Add Specialty"/>
+    <fieldval field="advDynamic" value="component.Specialty &amp; !Hide.Specialty"/>
+    <tag group="Advance" tag="AddNew"/>
+    <eval value="1" phase="Render" priority="1000">
+      <before name="Assign Dynamic Tagexpr"/><![CDATA[
+      ~get the list of all unique specialties on the hero and assemble it as a list of precluded tags
+      var tagexpr as string
+      foreach pick in hero where "component.Specialty & !Hide.Specialty"
+        if (each.isunique <> 0) then
+          tagexpr &= " & !Specialty." & each.idstring
+        endif
+      nexteach
+      
+      ~if there are any tags to exclude, append them to the tagexpr appropriately
+      if (empty(tagexpr) = 0) then
+        field[advDynamic].text &= tagexpr
+      endif
+      ]]></eval>
+<child entity="Advance">
+<tag group="Advance" tag="MustChoose"/>
+</child></thing>
+  
   </document>
