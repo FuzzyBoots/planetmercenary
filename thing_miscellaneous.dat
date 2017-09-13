@@ -72,10 +72,16 @@
       if (bonus = 0) then
         if (penalty = 0) then
           bonus = 2
+        else
+          bonus = penalty
         endif
       endif
       
-      field[livename].text = "+" & bonus & " " & livename
+      if (bonus > 0) then
+        field[livename].text = "+" & bonus & " " & livename
+      else
+        field[livename].text = bonus & " " & livename
+      endif
       
       ~build the candidate expression out of our Skill and Skills tags
       var skills as string
@@ -83,15 +89,16 @@
       var skilltypes as string
       skilltypes = tagids[Skills.?, " | "]
 
-      if (tagis[Skill.?] = 1) then
-        if (tagis[Skills.?] = 0) then
-          ~Special case. Only one skill
-          var skillName as string
-          skillName =  tagnames[Skill.?, ""]
-          field[livename].text = field[livename].text & " " & skillName
-          perform hero.child[tagids[Skill.?]].field[trtBG].modify[+,bonus,"Background"]
-        endif
-      endif
+      ~if (tagcount[Skill.?] = 1) then
+      ~  if (tagcount[Skills.?] = 0) then
+      ~    ~Special case. Only one skill
+      ~    var skillName as string
+      ~    skillName =  tagnames[Skill.?, ","]
+      ~    field[livename].text = field[livename].text & " " & skillName
+      ~    debug "skillName: " & skillName & " Skill: " & tagcount[Skill.?] & " Skills: " & tagcount[Skills.?]
+      ~    perform hero.child[skInsight].field[trtBG].modify[+,bonus,"Background"]
+      ~  endif
+      ~endif
       
       var combined as string
       if (tagis[Skills.?] <> 0) then
@@ -111,7 +118,7 @@
         
       perform field[usrChosen1].chosen.field[trtBG].modify[+,bonus,"Background"]
       ]]></eval>
-    </thing>  
+    </thing>
         
   <!-- Any background, command package, or race can bootstrap this, adding 
        SkillBonus.attrid tags as necessary -->

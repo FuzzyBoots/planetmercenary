@@ -137,18 +137,6 @@
       call XactSell
       ]]></xactsell>
 
-    <!-- Accrue the weight of this item into the character, as appropriate -->
-    <eval index="1" phase="Effects" priority="10000" name="Accrue Weight"><![CDATA[
-      ~if this piece of gear is held by something else, ignore it - we'll get it below
-      doneif (isgearheld <> 0)
-
-      ~if this piece of gear is a topmost holder, ignore it - it's not on the character
-      doneif (tagis[thing.holder_top] <> 0)
-
-      ~accrue the net weight of this piece of gear into the character
-      ~#resspent[resourceid] += field[gearNet].value
-      ]]></eval>
-
     </component>
 
 
@@ -458,35 +446,36 @@
     <field
       id="defDefense"
       name="Defense Adjustment"
-      type="derived">
+      type="static">
       </field>
 	  
 	<!-- Damage Reduction adjustment conferred by the equipment -->
     <field
       id="defDR"
       name="Damage Reduction"
-      type="derived">
+      type="static">
       </field>
 	  
 	<!-- Defense type conferred by the equipment -->
     <field
       id="defType"
       name="Damage Reduction"
-      type="derived">
+      type="static">
       </field>
 	  
 	<!-- Hull Points adjustment conferred by the equipment -->
     <field
       id="defHull"
       name="Hull Points"
-      type="derived">
+      type="static">
       </field>
 	  
 	<!-- Qualities associated with this equipment -->  
 	<field
 	  id="defQuals"
 	  name="Qualities"
-	  type="derived"> 
+	  type="static"
+    maxlength="200"> 
 	  </field>
 
     <!-- Apply effects of the equipped armor/shield -->

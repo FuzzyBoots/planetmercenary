@@ -56,7 +56,7 @@
     <fieldval field="grCost" value="6"/>
     </thing>
 
-  <!-- Malott M&M V-44 Whisperskin -->
+  <!-- Malott M&amp;M V-44 Whisperskin -->
   <thing
     id="armWhspr"
     name="Malott M&amp;M V-44 Whisperskin"
@@ -69,10 +69,10 @@
     <fieldval field="grCost" value="4"/>
     </thing>
 
-  <!-- Malott M&M Blue Collar -->
+  <!-- Malott M&amp;M Blue Collar -->
   <thing
     id="armMalott"
-    name="Malott M&M Blue Collar"
+    name="Malott M&amp;M Blue Collar"
     compset="Armor"
     description="Malott’s Blue Collar work suits were not originally designed for the military. They were built for use in heavy industries where the most dangerous jobs had to be performed by humans rather than robots. These suits are generally employed by engineers doing EVA (Extra-vehicular Activity) work, who suspect their projects may fail non-linearly and deposit their energy on nearby personnel.\n\nB-series suits are hooded and offer the same protection as the Whisperskin, plus insulation against hazards specific to an intended environment. This high degree of tailored protection and a more affordable price tag than most medium and heavy armors make the suits very appealing to military and mercenary organizations.">
     <fieldval field="defDefense" value="2"/>
@@ -87,7 +87,7 @@
     id="armTrblMkr"
     name="Phubar Troublemaker Mark II"
     compset="Armor"
-    description="The Troublemaker suit from Phubar is a cost-effective way to advertise to enemies that you’re only slightly bulletproof, and for this reason it’s not popular with companies that run jobs against conventionally-armed military forces. It is, however, extremely popular with companies that run jobs against lightly-armed forces, and civilians.\n\n The Mark II is a blend of short-fiber fullerenes over a network of thin, chitin-gel plates. These plates distribute impacts but will often rupture after just one or two shots. This is why we recommend to mercs expecting to face hails of bullets that they consider something a little heavier. The same is true if you anticipate being targeted by a disciplined opponent who can hit the same spot twice in rapid succession.\n\nArmor aficionados agree that the Troublemaker suit is aptly named, since it’s best deployed by easily satisfied criminals on a budget, as well as street thugs wanting to look tough and (probably) survive the next drive-by. Like all Phubar products, the Troublemaker suit is prone to failure, but its design is simple enough that it rarely fails without first sustaining fire, and that’s why it remains a top seller.\n\nA variant of this item, the “Troublemaker Plus,” includes three key upgrades: a chitingel hood and mask; secondary external plates at the elbow, knee, shoulder, and crotch; and a “gherkin- wick” assembly that absorbs embarrassing moisture and odors. Of note: the Plus model retains the same game statistics as the original.">
+    description="The Troublemaker suit from Phubar is a cost-effective way to advertise to enemies that you’re only slightly bulletproof, and for this reason it’s not popular with companies that run jobs against conventionally-armed military forces. It is, however, extremely popular with companies that run jobs against lightly-armed forces, and civilians.\n\n The Mark II is a blend of short-fiber fullerenes over a network of thin, chitin-gel plates. These plates distribute impacts but will often rupture after just one or two shots. This is why we recommend to mercs expecting to face hails of bullets that they consider something a little heavier. The same is true if you anticipate being targeted by a disciplined opponent who can hit the same spot twice in rapid succession.\n\nArmor aficionados agree that the Troublemaker suit is aptly named, since it’s best deployed by easily satisfied criminals on a budget, as well as street thugs wanting to look tough and (probably) survive the next drive-by. Like all Phubar products, the Troublemaker suit is prone to failure, but its design is simple enough that it rarely fails without first sustaining fire, and that’s why it remains a top seller.\n\nA variant of this item, the “Troublemaker Plus,” includes three key upgrades: a chitingel hood and mask; secondary external plates at the elbow, knee, shoulder, and crotch; and a “gherkin-wick” assembly that absorbs embarrassing moisture and odors. Of note: the Plus model retains the same game statistics as the original.">
     <fieldval field="defDefense" value="3"/>
     <fieldval field="defDR" value="1"/>
     <fieldval field="defHull" value="0"/>
@@ -100,9 +100,9 @@
   <!-- CD&P CXO -->
   <thing
     id="armCDPCXO"
-    name="CD&P CXO"
+    name="CD&amp;P CXO"
     compset="Armor"
-    description="When you need to wear what appears to be a traditional suit and you don’t want it to be the last suit you ever put on, the Cobbold Design & Protection CXO series is a solid choice. Fabricated from long-chain fullerenes with flexible plates of K-sink piezoelectric transducers, the CXO can take a high-velocity round and spread the impact over a large area. Thus, when you stand back up all your ribs will still be intact.\n\n Additionally, the necktie and collars are duomorphic: with a trigger command, they sweep up and over your head, providing critical cranial protection in under a second. Users should take care to keep their trigger commands unique and confidential, as on more than one occasion the suit has inadvertently killed an owner when it deployed and they had a fork in their mouth.\n\n A suite of comm peripherals for your handbrain can be securely embedded in the tie, providing helmet communications when your helmet is up, and letting you talk into the end of your necktie when the helmet is down.">
+    description="When you need to wear what appears to be a traditional suit and you don’t want it to be the last suit you ever put on, the Cobbold Design &amp; Protection CXO series is a solid choice. Fabricated from long-chain fullerenes with flexible plates of K-sink piezoelectric transducers, the CXO can take a high-velocity round and spread the impact over a large area. Thus, when you stand back up all your ribs will still be intact.\n\n Additionally, the necktie and collars are duomorphic: with a trigger command, they sweep up and over your head, providing critical cranial protection in under a second. Users should take care to keep their trigger commands unique and confidential, as on more than one occasion the suit has inadvertently killed an owner when it deployed and they had a fork in their mouth.\n\n A suite of comm peripherals for your handbrain can be securely embedded in the tie, providing helmet communications when your helmet is up, and letting you talk into the end of your necktie when the helmet is down.">
     <fieldval field="defDefense" value="3"/>
     <fieldval field="defDR" value="3"/>
     <fieldval field="defHull" value="0"/>
@@ -110,10 +110,10 @@
     <fieldval field="grCost" value="5"/>
     </thing>
   
-  <!-- Malott M&M 1150 Supersuit -->
+  <!-- Malott M&amp;M 1150 Supersuit -->
   <thing
     id="armMMMSupe"
-    name="Malott M&M 1150 Supersuit"
+    name="Malott M&amp;M 1150 Supersuit"
     compset="Armor"
     description="The marketing boffins at Malott didn’t name the 1150 the Supersuit, but they haven’t discouraged the name, either. The suit looks like an insulated version of any old skin-tight fullerene suit on the market, except that it’s reminiscent of those old caped hero comedies, right down to the way it hugs your physique.\n\n The 1150 boasts three layers of protection. The outermost layer is reflective (ablative) and shrugs off photon- and electron-based beam weapons long enough for the wearer to take cover. A middle layer is a thick weave of single-thread fullerenes and microfine PTU threads. This drives the price way up, but the added protection is worth it. This layer is where most bullets stop. The innermost layer is a smart set of flexible, interlocking chitingel scales. These scales help distribute the force of impacts, letting you survive extreme acceleration of up to 830 m/s² (that’s a little over 80 g, Earthlings).">
     <fieldval field="defDefense" value="2"/>
@@ -123,10 +123,10 @@
     <fieldval field="grCost" value="15"/>
     </thing>
   
-  <!-- Malott M&M 1150 EX Supersuit -->
+  <!-- Malott M&amp;M 1150 EX Supersuit -->
   <thing
     id="armMMMSupX"
-    name="Malott M&M 1150 EX Supersuit"
+    name="Malott M&amp;M 1150 EX Supersuit"
     compset="Armor"
     description="This upgraded version of the basic 1150 Supersuit boasts several impressive upgrades. Its outer layer can be programmed to function as smart camouflage, though for best effect it should be paired with something other than the off-the-shelf Synthetic Intelligence. The middle layer is powered and its molecular-level fullerene flexion effect is exploited such that muscle movement is amplified, granting the wearer three to five times their normal strength. The inner layer provides moderate inertial protection, promoting survival at acceleration up to 830 m/s² (that’s a little over 80 g, Earthlings).\n\n The Supersuit EX also includes six micro-annies — one each at the wrists, ankles, belt buckle, and collar — which power the fullerene layer, fuel the inertial dampers, and best of all grant the wearer up to 1d6 minutes of fully-mobile flight.">
     <fieldval field="defDefense" value="2"/>
@@ -232,7 +232,7 @@
     id="armVTGolEX"
     name="Vella Tacspec T2-F11 Golem EX"
     compset="Armor"
-    description="The Golem EX model has all the features and benefits available to the regular Golem, but thanks to a partnership with Wächter Landscaping & Defense, the Golem EX adds an integrated R1P-A Goaltender in one pauldron. In older models, the addition of the Goaltender reduced the number of available slots for mounting weapons. Clever engineers at Vella Tacspec have now solved this problem, and your EX model can mount the same number of external weapons as your regular model.">
+    description="The Golem EX model has all the features and benefits available to the regular Golem, but thanks to a partnership with Wächter Landscaping &amp; Defense, the Golem EX adds an integrated R1P-A Goaltender in one pauldron. In older models, the addition of the Goaltender reduced the number of available slots for mounting weapons. Clever engineers at Vella Tacspec have now solved this problem, and your EX model can mount the same number of external weapons as your regular model.">
     <fieldval field="defDefense" value="5"/>
     <fieldval field="defDR" value="6"/>
     <fieldval field="defHull" value="1"/>
