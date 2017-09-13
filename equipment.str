@@ -158,7 +158,29 @@
   <component
     id="Vehicle"
     name="Vehicle"
+    panellink="gear"
     autocompset="no">
+    
+    <field
+      id="vhPass"
+      name="Passengers"
+      type="static"
+      maxlength="3">
+      </field>
+
+    <field
+      id="vhDR"
+      name="Damage Resistance"
+      type="static"
+      maxlength="3">
+      </field>
+
+    <field
+      id="vhSpec"
+      name="Special Rules"
+      type="derived"
+      maxlength="150">
+      </field>
 
     </component>
 
@@ -732,5 +754,9 @@
     <compref component="Vehicle"/>
     <compref component="Gear"/>
     </compset>
+    
+  <entity
+    id="LoadOut">
+    </entity>
 
   </document>
