@@ -253,7 +253,7 @@
     panellink="basics">
 
     <!-- This tag is added to the hero if our feature is selected. -->
-    <identity group="HasFeature"/>
+    <!--identity group="HasFeature"/-->
 
     <!-- All feats get the same tag for sorting purposes -->
     <!--tag group="SpecialTab" tag="RaceFeat"/-->
@@ -267,7 +267,7 @@
 ~        endif
 
       ~forward our "has feature" tags to the hero so it knows we're present
-      perform forward[HasFeature.?]
+      ~perform forward[HasFeature.?]
       ]]></eval>
 
     </component>
@@ -546,13 +546,6 @@
     id="cmpsetSB">
     <compref component="SkillBonus"/>
     <compref component="UserSelect"/>
-    <compref component="SpecialTab"/>
-    <compref component="Custom"/>
-    </compset>
-  
-  <compset
-    id="cmpsetSSB">
-    <compref component="SkillBonus"/>
     <compref component="SpecialTab"/>
     <compref component="Custom"/>
     </compset>

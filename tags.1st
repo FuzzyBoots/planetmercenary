@@ -40,6 +40,7 @@
     <value id="CustomItem"/>  <!-- Identifies a thing that has a user customizable name -->
     <value id="NoPersText"/>  <!-- User entered no background text -->
     <value id="ChosenOpt"/>   <!-- This build option was chosen by the class -->
+    <value id="NoChoice"/>    <!-- There is no choice to be made for this item -->
     </group>
 
   <!-- User group - general helper tags that can be assigned by users via the Editor
@@ -58,6 +59,8 @@
     <value id="Power"/>       <!-- Identifies a power trait -->
     <value id="Combat"/>      <!-- Identifies a combat trait -->
     <value id="NeedChosen"/>  <!-- This power behaves like a build option - it must be "chosen" before you can use / see it -->
+    <value id="HasSpec"/>     <!-- This skill can take specialties -->
+    <value id="NoMenu"/>      <!-- No menu on UserSelect -->
     </group>
 
   <!-- Hero group - Helper tags assigned exclusively to the hero/actor
@@ -106,7 +109,7 @@
   -->
   <group
     id="Weapon">
-    <value id="SpecRange" name="Range is special"/>               <!-- Identifies a weapon with a special range -->
+    <value id="ActCamo" name="Active Camouﬂage"/>
     </group>
 
   <!-- AmmoType group - helper tags for ranged weapon ammo types -->
@@ -161,14 +164,14 @@
     sequence="explicit">
     <value id="Ground" name="Ground Vehicles" order="10"/>
     <value id="Aircraft" order="20"/>
-    <value id="Boat" name="Boats & Ships" order="30"/>
+    <value id="Boat" name="Boats &amp; Ships" order="30"/>
     </group>
 
   <group
     id="VehClass"
     sequence="explicit">
-    <value id="Consumer" order = "10"/>    
-    <value id="Military" order = "20"/>
+    <value id="Consumer" order="10"/>    
+    <value id="Military" order="20"/>
     </group>
     
   <group

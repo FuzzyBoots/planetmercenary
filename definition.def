@@ -89,6 +89,14 @@ These data files provide a framework for Hypernode Press's Planet Mercenary game
       herofield[acAbandon].value = 0
       ]]></newcombat>
 
+    <!-- Define how the initiative is auto-calculated by the Tactical Console. -->
+    <initiative><![CDATA[
+      ~calculate the primary initiative rating
+      @initiative = random(10) + 1
+      ~calculate the tiebreaker initiative rating
+      @tiebreaker = 0
+      ]]></initiative>
+      
     </behavior>
 
 

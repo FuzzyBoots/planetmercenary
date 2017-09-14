@@ -600,6 +600,7 @@
       doneif (tagis[User.NoAutoName] <> 0)
 
       ~if we have thing-based menus, determine the text to append to the name
+      
       var choices as string
       if (field[usrCandid1].isempty = 0) then
         if (field[usrChosen1].ischosen <> 0) then

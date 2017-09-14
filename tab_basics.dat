@@ -147,6 +147,10 @@
       </portal>
     
     <position><![CDATA[
+      if (field[usrCandid1].isempty <> 0) then
+        portal[thinglist].visible = 0
+      endif
+      
       ~set up our height; our width is pre-initialized for us
       height = portal[thinglist].height
 
@@ -160,7 +164,11 @@
       perform portal[name].centeron[vert,thinglist]
       
       portal[name].left = 0
-      portal[name].width = 100
+      if (portal[thinglist].visible <> 0) then
+        portal[name].width = 100
+      else
+        portal[name].width = width
+      endif
       
       portal[thinglist].left = portal[name].right + 3
       portal[thinglist].width = width - portal[name].width - 3

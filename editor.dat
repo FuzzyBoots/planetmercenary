@@ -55,6 +55,58 @@
           
         </it_bootcustom>
       </inputthing>
+      
+      <inputthing
+      name="Skill Bonuses"
+      helptext="Add one or more skills that receive automatic bonuses.">
+      <it_bootcustom compset="cmpsetSB">
+        <match>thingid.fRPlusSk2</match>
+        <inputthing
+          name="Skills"
+          helptext="Pick the skills that can be chosen for this bonus.">
+          <it_taglist group="Skill" tag="?" dynamic="no"/>
+          </inputthing>
+          
+        <inputthing
+          name="Skill Types"
+          helptext="Pick the skill types that can be chosen for this bonus.">
+          <it_taglist group="Skills" tag="?" dynamic="no"/>
+          </inputthing>
+          
+        <inputthing
+          name="Bonus"
+          helptext="Pick the bonus value.">
+          <it_tagpick group="Bonus" tag="?" dynamic="no"/>
+          </inputthing>
+          
+        </it_bootcustom>
+      </inputthing>
+      
+      <inputthing
+      name="Skill Penalties"
+      helptext="Add one or more skills that receive penalties.">
+      <it_bootcustom compset="cmpsetSB">
+        <match>thingid.fRPlusSk2</match>
+        <inputthing
+          name="Skills"
+          helptext="Pick the skills that can be chosen for this penalty.">
+          <it_taglist group="Skill" tag="?" dynamic="no"/>
+          </inputthing>
+          
+        <inputthing
+          name="Skill Types"
+          helptext="Pick the skill types that can be chosen for this penalty.">
+          <it_taglist group="Skills" tag="?" dynamic="no"/>
+          </inputthing>
+          
+        <inputthing
+          name="Penalty"
+          helptext="Pick the penalty value.">
+          <it_tagpick group="Penalty" tag="?" dynamic="no"/>
+          </inputthing>
+          
+        </it_bootcustom>
+      </inputthing>
     </inputthinggroup>
 
   <!-- Skill editthing -->
@@ -209,11 +261,6 @@
       <it_field field="grLotCost"/>
       </inputthing>
     <inputthing
-      name="Weight"
-      helptext="Specify the weight of the item.">
-      <it_field field="gearWeight"/>
-      </inputthing>
-    <inputthing
       name="Container Behavior"
       helptext="Specify whether this piece of equipment can contain other equipment. If this equipment can contain other equipment AND be contained within other equipment, select 'Holder'. If the equipment can only contain other equipment, select 'Top Holder'. If the equipment can only be contained by other equipment, do not select anything.">
       <it_tagpick group="thing" tag="holder?" />
@@ -237,11 +284,6 @@
       name="Lot Cost"
       helptext="Specify the cost of a full 'lot' of the item, where the lot size is given on the right. The 'lot cost' overrides any individual cost given above.">
       <it_field field="grLotCost"/>
-      </inputthing>
-    <inputthing
-      name="Weight"
-      helptext="Specify the weight of the item.">
-      <it_field field="gearWeight"/>
       </inputthing>
     </editthing>
 
@@ -267,11 +309,6 @@
       name="Cost"
       helptext="Specify the standard cost of the item, with a value of 0 meaning it is free.">
       <it_field field="grCost"/>
-      </inputthing>
-    <inputthing
-      name="Weight"
-      helptext="Specify the weight of the item.">
-      <it_field field="gearWeight"/>
       </inputthing>
     <inputthing
       name="Special Behaviors"
@@ -364,11 +401,6 @@
       helptext="Specify the standard cost of the item, with a value of 0 meaning it is free.">
       <it_field field="grCost"/>
       </inputthing>
-    <inputthing
-      name="Weight"
-      helptext="Specify the weight of the item.">
-      <it_field field="gearWeight"/>
-      </inputthing>
     </editthing>
 
 
@@ -393,11 +425,6 @@
       name="Cost"
       helptext="Specify the standard cost of the item, with a value of 0 meaning it is free.">
       <it_field field="grCost"/>
-      </inputthing>
-    <inputthing
-      name="Weight"
-      helptext="Specify the weight of the item.">
-      <it_field field="gearWeight"/>
       </inputthing>
     </editthing>
 

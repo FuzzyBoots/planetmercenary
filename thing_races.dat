@@ -45,17 +45,21 @@
     <bootstrap thing="abTrunk"/>
     <bootstrap thing="spAthRun"/>
 
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skAthlete] += 1
-    #traitbase[skEndure] += 2
-    #traitbase[skPercept] += 1
-	]]></eval>
-        
-    <eval index="3" phase="Traits" priority="4002"><![CDATA[
-    #traitbonus[skDodge] -= 1
-    ]]></eval>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skPercept"/>
+      <autotag group="Skill" tag="skAthlete"/>
+      <autotag group="Bonus" tag="Plus1"/>
+      </bootstrap>
     
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skEndure"/>
+      <autotag group="Bonus" tag="Plus2"/>
+      </bootstrap>
+      
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skDodge"/>
+      <autotag group="Penalty" tag="Minus1"/>
+      </bootstrap>
     </thing>
     
   <thing
@@ -130,7 +134,5 @@
     ]]></eval>
     
     </thing>
-  
-  <thing
   
   </document>
