@@ -578,7 +578,7 @@
   <!-- Per World of Origin Skill Specialty -->
   <thing
     id="spXenoWrld"
-    name="Per World of Origin"
+    name="World"
     compset="Specialty"
     isunique="no"
     description="">

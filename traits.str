@@ -60,7 +60,7 @@
       id="trtUser"
       name="User Value"
       type="user"
-      usedelta="yes"
+      usedelta="no"
       maxfinal="50">
       <!-- Bound the user value to the limits established for the trait -->
       <bound phase="Traits" priority="1000" name="Bound trtUser">
@@ -77,7 +77,6 @@
       -->
       <finalize><![CDATA[
         @text = field[trtUser].value
-        
         ]]></finalize>
       </field>
 
@@ -112,9 +111,9 @@
     <!-- Set the delta for the user value to be the current bonuses
         NOTE! This is necessary so incrementers have proper values when edited by the user.
         -->
-    <eval index="1" phase="Render" priority="5000"><![CDATA[
+    <!--eval index="1" phase="Render" priority="5000"><![CDATA[
       field[trtUser].delta = field[trtBase].value + field[trtBG].value + field[trtBonus].value + field[trtInPlay].value
-      ]]></eval>
+      ]]></eval-->
 
     <!-- If the trait is at its minimum/maximum, assign a tag to preclude further advancements -->
     <eval index="2" phase="Final" priority="4001"><![CDATA[
@@ -139,13 +138,9 @@
     panellink="basics">
     <eval index="1" phase="Setup" priority="3000" name="BG tag final">
       <!--before name="Size final"/--><![CDATA[
-      var expr as string
-      if (tagis[SkillBonus.?] <> 0) then
-        expr = tagids[SkillBonus.?, " | "]
-        foreach pick in hero from Skill where expr
-          perform eachpick.field[trtBG].modify[+,2,""]
-          nexteach
-        endif
+      foreach pick in hero from Skill where tagids[SkillBonus.?, " | "]
+        perform eachpick.field[trtBG].modify[+,2,"Background trait"]
+        nexteach
         ]]></eval>
     </component>
 
@@ -181,6 +176,41 @@
         ]]></calculate>
       </field>
 
+    <!-- Display Name without values for use on Skills Tab -->
+    <field
+      id="sklTabName"
+      name="Display Name (Tab)"
+      type="static"
+      maxlength="50"
+      maxfinal="50">
+      <finalize><![CDATA[
+        ~Displays name
+        @text = field[name].text
+        
+        var numAoE as number
+        var i as number
+        
+        if (tagcount[User.HasSpec] <> 0) then
+          numAoE = tagcount[User.HasSpec]
+          
+          if (numAoE > 0) then
+            @text &= " ("
+            
+            foreach pick in gizmo where "component.Specialty"
+              i += 1
+              if (i > 1) then
+                @text &= ", "
+                endif
+              @text &= eachpick.field[name].text
+              nexteach
+              
+            @text &= ")"
+            endif
+        endif
+        
+        ]]></finalize>
+      </field>  
+    
 	  <!-- Each skill needs its own identity tag so existing skills can be identified during advancement -->
     <identity group="Skill"/>
     
@@ -221,28 +251,7 @@
       
       call SetSpcExpr
       ]]></eval>
-      
-    <!-- Track the skill on the actor -->
-    <eval index="5" phase="Setup" priority="10000"><![CDATA[
-      if (field[trtUser].value >= 0) then
-        perform assign[User.HasSpec]
-        endif
-      ]]></eval>
     
-    <!--eval index="10" phase="Initialize" priority="10000"><![CDATA[
-      ~copy our SkillList tags to the gizmo so they can be used for the needtag
-      if (isgizmo <> 0) then
-        perform gizmo.pushtags[Skill.?]
-
-        ~tags added to the gizmo are then automatically added to the parent of
-        ~that gizmo - but that's where those tags were just pushed from, meaning
-        ~that what happens is to duplicate them all.  So, delete the ones on
-        ~ourself, then pull the tags from the gizmo.
-        perform delete[Skill.?]
-        perform gizmo.pulltags[Skill.?]
-        endif
-      ]]></eval-->
-
     </component>
 
   <!-- SkillBonus component -->
@@ -252,12 +261,6 @@
     autocompset="no"
     panellink="basics">
 
-    <!-- This tag is added to the hero if our feature is selected. -->
-    <!--identity group="HasFeature"/-->
-
-    <!-- All feats get the same tag for sorting purposes -->
-    <!--tag group="SpecialTab" tag="RaceFeat"/-->
-    
     <!-- Activate any selected build option -->
     <eval index="1" phase="Setup" priority="100" name="Build option activated"><![CDATA[
 ~      if (field[usrChosen1].ischosen <> 0) then
@@ -278,6 +281,19 @@
     autocompset="no"
     panellink="skills">
     
+    <!-- Display Name for use on Specialties Tab -->
+    <field
+      id="spcTabName"
+      name="Display Name (Tab)"
+      type="static"
+      maxlength="50"
+      maxfinal="50">
+      <finalize><![CDATA[
+        ~Displays name
+        @text = field[name].text & " (" & this.tagnames[Skill.?," "]  & ")"
+        ]]></finalize>
+      </field> 
+    
 	  <identity group="Specialty"/>
     
 	  <tag group="SpecialTab" tag="Specialty"/>
@@ -285,14 +301,15 @@
     <!-- Track the ability on the actor -->
     <eval index="1" phase="Setup" priority="5000"><![CDATA[
       perform forward[Specialty.?]
+      perform parent.assign[User.HasSpec]
       ]]></eval>
       
     <!-- Each specialty that is allocated by the user costs 2 CP -->
     <eval index="2" phase="Traits" priority="10000">
       <before name="Calc resLeft"/>
       <after name="Bound trtUser"/><![CDATA[
-      ~if this skill is not added directly to the hero (i.e. an advance), skip it entirely
-      doneif (origin.ishero = 0)
+      ~if this speciality wasn't added by the user (as with a Background trait), skip it entirely
+      doneif (isuser = 0)
 
       ~adjust the resource appropriately
       hero.child[resCP].field[resSpent].value += 2

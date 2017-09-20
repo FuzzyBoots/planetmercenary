@@ -7,20 +7,21 @@
     style="tblNormal">
     <table_dynamic
       component="Specialty"
-      showtemplate="tmpSpec"
-      choosetemplate="tmpSpec"
+      showtemplate="SpecPick"
+      choosetemplate="SpecPick"
       scrollable="yes"
       alwaysupdate="yes"
       candidatepick="SpecHelp"
       candidatefield="SpecExpr"
-      addpick="">
+      addpick="SpecHelp"
+      allowuserorder="yes">
       
-      <titlebar><![CDATA[
+      <!--titlebar><![CDATA[
         @text = "Add a Specialty"
-        ]]></titlebar>
-      <headertitle><![CDATA[
+        ]]></titlebar-->
+      <!--headertitle><![CDATA[
         @text = "Specialty"
-        ]]></headertitle>
+        ]]></headertitle-->
       <additem><![CDATA[
         @text = "Add Specialty"
         ]]>
@@ -29,8 +30,8 @@
     </portal>
 
   <template
-    id="tmpSpec"
-    name="Area of Expertise Pick"
+    id="SpecPick"
+    name="Specialty Pick"
     compset="Specialty"
     marginhorz="3"
     marginvert="1">
@@ -40,7 +41,7 @@
       style="lblSmall">
       <label>
         <labeltext><![CDATA[
-          @text = field[name].text & " (" & this.tagnames[Skill.?," "]  & ")"
+          @text = field[thingname].text
           ]]></labeltext>
         </label>
       </portal>
@@ -53,6 +54,14 @@
         action="delete">
         </action>
       </portal>
+      
+    <portal
+    id="domain"
+    style="editNormal">
+    <edit
+      field="domDomain">
+      </edit>
+    </portal>
 
     <position><![CDATA[
     
@@ -72,6 +81,18 @@
 
       ~position the delete portal on the far right
       perform portal[delete].alignedge[right,0]
+      
+      ~if we don't need a domain, hide it and let the name use all available space
+      if (tagis[User.NeedDomain] = 0) then
+        portal[domain].visible = 0
+        portal[name].width = minimum(portal[name].width,portal[delete].left - portal[name].left - 10)
+
+      ~otherwise, position the domain portals next to the name
+      else
+        perform portal[domain].alignrel[ltor,name,5]
+        portal[domain].width = 50
+        endif 
+      
 
       ]]></position>
     </template>

@@ -131,7 +131,7 @@
   <!-- The "sortset" elements specify the various sort sequences to be used when
         displaying or otherwise operating on lists of picks and/or things.
   -->
-
+  
   <!-- Define the sortset used when displaying stuff on the "Special" tab. -->
   <sortset
     id="SpecialTab"

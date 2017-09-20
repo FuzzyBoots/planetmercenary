@@ -41,10 +41,7 @@
   <eval index="1" phase="Traits" priority="4000">
     <before name="Derived trtFinal"/>
     <after name="Calc trtFinal"/><![CDATA[
-    ~toughness is 5 plus half the character's Endurance, but we track attributes at
-    ~the half value (2-6), so we add Vigor directly
     field[trtBonus].value = 0 + #trait[skEndure]
-    ~equipped armor should add to the Toughness, so we add that from the armor
     ]]></eval>  
   </thing>
 
@@ -62,9 +59,9 @@
 
     <!-- Calculate the trait as appropriate -->
     <eval index="1" phase="Traits" priority="4000"><![CDATA[
-  ~defense is 5 plus the Dodge skill
-  field[trtBonus].value += 5 + #traitfound[skDodge]
-  ]]></eval> 
+      ~defense is 5 plus the Dodge skill
+      field[trtBonus].value += 5 + #traitfound[skDodge]
+    ]]></eval> 
     </thing>
 
   <!--  Damage  Resistance Trait -->

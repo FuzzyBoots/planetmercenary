@@ -60,7 +60,6 @@
     <value id="Combat"/>      <!-- Identifies a combat trait -->
     <value id="NeedChosen"/>  <!-- This power behaves like a build option - it must be "chosen" before you can use / see it -->
     <value id="HasSpec"/>     <!-- This skill can take specialties -->
-    <value id="NoMenu"/>      <!-- No menu on UserSelect -->
     </group>
 
   <!-- Hero group - Helper tags assigned exclusively to the hero/actor

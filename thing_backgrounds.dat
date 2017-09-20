@@ -133,8 +133,6 @@
     <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Mental"/>
       </bootstrap>
-      
-    <bootstrap thing="spEmpInfl"></bootstrap>
     </thing>
   
   <thing

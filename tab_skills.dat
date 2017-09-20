@@ -99,7 +99,7 @@
     style="lblSmall">
     <label>
       <labeltext><![CDATA[
-          @text = "(+" & field[trtUser].value & ")"
+          @text = "(+" & field[trtFinal].value & ")"
           ]]></labeltext>
       </label>
     </portal>
@@ -109,7 +109,7 @@
     style="lblSmall"
     showinvalid="yes">
     <label
-      field="name">
+      field="sklTabName">
       </label>
     </portal>
 
@@ -127,8 +127,8 @@
     style="actOvalSm"
     tiptext="Click to add specialties">
     <action
-      action="form"
-      form="frmSpec">
+      action="edit"
+      buttontext="">
       </action>
     </portal>
 
