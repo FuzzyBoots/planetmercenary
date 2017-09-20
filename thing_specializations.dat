@@ -10,7 +10,7 @@
     name="Beam"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with carbines that use beam ammunition.">
     <tag group="Skill" tag="skCarbine"/>
   </thing>
 
@@ -21,7 +21,7 @@
     name="Non-Lethal"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with carbines that use non-lethal ammunition.">
     <tag group="Skill" tag="skCarbine"/>
   </thing>
 
@@ -32,7 +32,7 @@
     name="Projectile"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with carbines that use projectile ammunition.">
     <tag group="Skill" tag="skCarbine"/>
   </thing>
 
@@ -43,7 +43,7 @@
     name="Building"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when creating an explosive.">
     <tag group="Skill" tag="skExplsves"/>
   </thing>
 
@@ -54,7 +54,7 @@
     name="Detecting"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when trying to find and identify explosives.">
     <tag group="Skill" tag="skExplsves"/>
   </thing>
 
@@ -65,7 +65,7 @@
     name="Disarming"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when disarming an explosive.">
     <tag group="Skill" tag="skExplsves"/>
   </thing>
 
@@ -76,7 +76,7 @@
     name="Placing"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when setting an explosive in a location, to be detonated later.">
     <tag group="Skill" tag="skExplsves"/>
   </thing>
 
@@ -87,7 +87,7 @@
     name="Beam"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with heavy weapons that use beam ammunition.">
     <tag group="Skill" tag="skHvyWeap"/>
   </thing>
 
@@ -98,7 +98,7 @@
     name="Non-Lethal"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with heavy weapons that use non-lethal ammunition.">
     <tag group="Skill" tag="skHvyWeap"/>
   </thing>
 
@@ -109,7 +109,7 @@
     name="Projectile"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with heavy weapons that use projectile ammunition.">
     <tag group="Skill" tag="skHvyWeap"/>
   </thing>
 
@@ -120,7 +120,7 @@
     name="Beam"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with long guns that use beam ammunition.">
     <tag group="Skill" tag="skLongGun"/>
   </thing>
 
@@ -131,7 +131,7 @@
     name="Non-Lethal"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with long guns that use non-lethal ammunition.">
     <tag group="Skill" tag="skLongGun"/>
   </thing>
 
@@ -142,7 +142,7 @@
     name="Projectile"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with long guns that use projectile ammunition.">
     <tag group="Skill" tag="skLongGun"/>
   </thing>
 
@@ -152,7 +152,7 @@
     name="Common Weapons"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with any variation on the club, or the sharpened stick (e.g. a sword, axe, hammer, spear, or another blunt, edged, or pointed weapon in common use).">
     <tag group="Skill" tag="skMelee"/>
   </thing>
 
@@ -163,7 +163,7 @@
     name="Exotic Weapons"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with an improvised melee weapon (e.g. a table leg, which isn’t weighted to be a club, but you’re giving it a go), or a weapon that can just as easily injure the attacker as the target (e.g. a whip, chain, or rope-dagger), or a stealth weapon (e.g. a Dorothy-wire boot, hat-brim blade, or poisoned ring-pin). This specialty also applies to weapons designed for a sophont with more limbs than you have.">
     <tag group="Skill" tag="skMelee"/>
   </thing>
 
@@ -174,7 +174,7 @@
     name="Unarmed"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with your bare hands (or your bare feet, or your fancy officer’s boots, or any other melee configuration that does not include a weapon). This specialty is also used for biting, attacking with claws, pseudopods, and other weapons that are part of your body.">
     <tag group="Skill" tag="skMelee"/>
   </thing>
 
@@ -185,7 +185,7 @@
     name="Wrestling"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when grappling, or trying to pin your target without hurting them (i.e. when you just want to hold a target in place).">
     <tag group="Skill" tag="skMelee"/>
   </thing>
 
@@ -196,7 +196,7 @@
     name="Beam"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with pistols that use beam ammunition.">
     <tag group="Skill" tag="skPistol"/>
   </thing>
 
@@ -207,7 +207,7 @@
     name="Non-Lethal"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with pistols that use non-lethal ammunition.">
     <tag group="Skill" tag="skPistol"/>
   </thing>
 
@@ -218,7 +218,7 @@
     name="Projectile"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with pistols that use projectile ammunition.">
     <tag group="Skill" tag="skPistol"/>
   </thing>
 
@@ -229,7 +229,7 @@
     name="Beam"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with scatterguns that use beam ammunition.">
     <tag group="Skill" tag="skScatter"/>
   </thing>
 
@@ -240,7 +240,7 @@
     name="Non-Lethal"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with scatterguns that use non-lethal ammunition.">
     <tag group="Skill" tag="skScatter"/>
   </thing>
 
@@ -251,7 +251,7 @@
     name="Projectile"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with scatterguns that use projectile ammunition.">
     <tag group="Skill" tag="skScatter"/>
   </thing>
 
@@ -263,7 +263,7 @@
     name="Beam"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when firing a stationed weapon which requires line of sight between weapon and target.">
     <tag group="Skill" tag="skStaWeap"/>
   </thing>
 
@@ -274,7 +274,7 @@
     name="Ballistic"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with stationed weapons that fire unpowered projectile ammunition, like field artillery and ship-mounted point-defense cannons.">
     <tag group="Skill" tag="skStaWeap"/>
   </thing>
 
@@ -285,7 +285,7 @@
     name="Missile"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attacking with stationed weapons using powered projectiles, whether guided or unguided, like rockets or breacher missiles.">
     <tag group="Skill" tag="skStaWeap"/>
   </thing>
 
@@ -295,7 +295,7 @@
     name="Aerodynamic"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when throwing any weapon designed to be thrown (e.g. a throwing knife, spear, or dart).">
     <tag group="Skill" tag="skThrown"/>
   </thing>
 
@@ -306,7 +306,7 @@
     name="Grenades"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when throwing an explosive that is designed to be thrown. Also, please consider acquiring this specialty before throwing an explosive, because the failure state for throwing an explosive tends to be much more severe than the failure state for throwing a rock.">
     <tag group="Skill" tag="skThrown"/>
   </thing>
 
@@ -317,7 +317,7 @@
     name="Improvised"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when throwing any weapon not designed to be thrown (e.g. a chair, vial of acid, chunk of masonry, sword, or Shurikannon). Also apply this specialty when throwing an explosive that normally requires placement (e.g. a directional demolitions charge or a mine).">
     <tag group="Skill" tag="skThrown"/>
   </thing>
 
@@ -327,7 +327,7 @@
     name="Biochemistry"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when working with living and/or organic matter.">
     <tag group="Skill" tag="skChem"/>
   </thing>
 
@@ -338,7 +338,7 @@
     name="Inorganic"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when working with minerals and other non-living, non-animal, non-plant matter.">
     <tag group="Skill" tag="skChem"/>
   </thing>
 
@@ -349,7 +349,7 @@
     name="Hacking"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when breaking computer encryption, and when trying to make a computer do something that someone else doesn’t want it to do.">
     <tag group="Skill" tag="skCompute"/>
   </thing>
 
@@ -360,7 +360,7 @@
     name="Programming"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when making permanent modifications to a computer’s hardware or software, and when another system is not actively contesting your changes.">
     <tag group="Skill" tag="skCompute"/>
   </thing>
 
@@ -371,7 +371,7 @@
     name="Repair"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when repairing a computer’s hardware or software. When a bullet clips the edge of the q-block, a virus disentangles your telepairs, or a grunt accidentally installs some pernicious malware, use this specialty.">
     <tag group="Skill" tag="skCompute"/>
   </thing>
 
@@ -382,7 +382,7 @@
     name="Security"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when operating a computer system in an effort to counter a hacking attempt, and when encrypting or encoding data.">
     <tag group="Skill" tag="skCompute"/>
   </thing>
 
@@ -393,7 +393,7 @@
     name="Local"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when your search, task, or question focuses on the economic systems of a city, habitat, or smaller community.">
     <tag group="Skill" tag="skEcon"/>
   </thing>
 
@@ -404,7 +404,7 @@
     name="Planetary"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when your search, task, or question focuses on the economic systems of a planet or planetary system.">
     <tag group="Skill" tag="skEcon"/>
   </thing>
 
@@ -415,7 +415,7 @@
     name="Sector"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when your search, task, or question focuses on trade networks and transactional markets that span multiple star systems.">
     <tag group="Skill" tag="skEcon"/>
   </thing>
 
@@ -426,7 +426,7 @@
     name="Architecture"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when working with conventional ground-based structures.">
     <tag group="Skill" tag="skEng"/>
   </thing>
 
@@ -437,7 +437,7 @@
     name="Habitats"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when working with any structure with a robust, self-contained life support system, whether it’s in orbit, on inhospitable ground, or in an ocean.">
     <tag group="Skill" tag="skEng"/>
   </thing>
 
@@ -448,7 +448,7 @@
     name="Planetary Vehicles"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when working with very large vehicles designed to operate primarily within an atmosphere, on the ground, or in/on an ocean.">
     <tag group="Skill" tag="skEng"/>
   </thing>
 
@@ -459,7 +459,7 @@
     name="Vessels"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when working with vehicles designed to operate primarily outside an atmosphere, especially if they have artificial gravity and travel with heavy acceleration.">
     <tag group="Skill" tag="skEng"/>
   </thing>
 
@@ -470,7 +470,7 @@
     name="Military"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when drawing on knowledge of armed forces, warfare, and related events.">
     <tag group="Skill" tag="skHistory"/>
   </thing>
 
@@ -481,7 +481,7 @@
     name="Political"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when drawing on knowledge of governments, diplomacy, and related events.">
     <tag group="Skill" tag="skHistory"/>
   </thing>
 
@@ -492,7 +492,7 @@
     name="Religious"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when drawing on knowledge of conviction, known faiths, and related events.">
     <tag group="Skill" tag="skHistory"/>
   </thing>
 
@@ -500,10 +500,10 @@
   <!-- Sophont Type (Pick One) Skill Specialty -->
   <thing
     id="spHistSoph"
-    name="Sophont Type"
+    name="Sophont"
     compset="Specialty"
-    isunique="yes"
-    description="">
+    isunique="no"
+    description="Apply this specialty when drawing on knowledge of events in a single sophont type’s timeline e.g. History (Kreely) or History (Neophant). You may have any number of sophont type or non-intelligent species specialties.">
     <tag group="Skill" tag="skHistory"/>
     <tag group="User" tag="NeedDomain"/>
     </thing>
@@ -515,7 +515,7 @@
     name="Build"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="This specialty applies when making a new item from intended parts.">
     <tag group="Skill" tag="skMech"/>
   </thing>
 
@@ -526,7 +526,7 @@
     name="Jury-Rig"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="This specialty applies when making a new item from improvised parts.">
     <tag group="Skill" tag="skMech"/>
   </thing>
 
@@ -537,7 +537,7 @@
     name="Repair"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="This specialty applies when fixing a broken item or recovering a robot’s Health.">
     <tag group="Skill" tag="skMech"/>
   </thing>
 
@@ -548,7 +548,7 @@
     name="Battlefield"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when healing or saving the life of a character on the battlefield, or in any crisis that occurs in rounds.">
     <tag group="Skill" tag="skMedic"/>
   </thing>
 
@@ -559,7 +559,7 @@
     name="First Aid"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when healing in the field, away from a hospital, but also away from combat conditions.">
     <tag group="Skill" tag="skMedic"/>
   </thing>
 
@@ -570,7 +570,7 @@
     name="Surgery"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when healing with full access to a hospital or medbay.">
     <tag group="Skill" tag="skMedic"/>
   </thing>
 
@@ -581,7 +581,7 @@
     name="World"
     compset="Specialty"
     isunique="no"
-    description="">
+    description="Apply this specialty when drawing on knowledge of a particular world’s biology (e.g. Terran, or Othling). You may have any number of these specialties.">
     <tag group="Skill" tag="skXeno"/>
     <tag group="User" tag="NeedDomain"/>
   </thing>
@@ -593,7 +593,7 @@
     name="Evasive Action"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when maneuvering a vehicle out of harm’s way (e.g. evading an inbound missile, another vehicle, or a disabled capital ship dropping through your flight path on its way to catastrophic lithobraking). Apply this specialty also when Dodging in a character-driven vehicle.">
     <tag group="Skill" tag="skAirVeh"/>
   </thing>
 
@@ -604,7 +604,7 @@
     name="Navigation"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when determining a route through confusing or unfamiliar terrain.">
     <tag group="Skill" tag="skAirVeh"/>
   </thing>
 
@@ -615,7 +615,18 @@
     name="Pursuit"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when engaging in chases, and when attempting to follow another vehicle without being detected.">
+    <tag group="Skill" tag="skAirVeh"/>
+  </thing>
+
+
+  <!-- Stunts Skill Specialty -->
+  <thing
+    id="spAirStnt"
+    name="Stunts"
+    compset="Specialty"
+    isunique="yes"
+    description="Apply this specialty when doing anything with a vehicle that may void its warranty, get you thrown in jail, or both. The Stunts specialty applies to those moments when you take it to eleven with some wild, over-the-top action that defies reason, and perhaps calls into question your understanding of simple physics.">
     <tag group="Skill" tag="skAirVeh"/>
   </thing>
 
@@ -626,7 +637,7 @@
     name="Climbing"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when scaling any surface, at any height or angle.">
     <tag group="Skill" tag="skAthlete"/>
   </thing>
 
@@ -637,7 +648,7 @@
     name="Flight"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="This specialty is reserved for certain sophont types with the natural ability to fly, and those who strap on individual flight systems, like rocket boots or jury-rigged wings.">
     <tag group="Skill" tag="skAthlete"/>
   </thing>
 
@@ -648,7 +659,7 @@
     name="Jumping"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when crossing a gap, vaulting a barricade, or seeking purchase on something outside of your standing reach.">
     <tag group="Skill" tag="skAthlete"/>
   </thing>
 
@@ -659,7 +670,7 @@
     name="Pursuit"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when engaging in a non-vehicular chase, whether you’re climbing, flying, jumping, running, or swimming.">
     <tag group="Skill" tag="skAthlete"/>
   </thing>
 
@@ -670,7 +681,7 @@
     name="Running"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when running, no matter how many limbs your personal physiology requires for the activity.">
     <tag group="Skill" tag="skAthlete"/>
   </thing>
 
@@ -681,7 +692,18 @@
     name="Strength"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when performing feats of strength, such as dead lifts, carrying heavy loads across distances, prying open access panels, and other feats of brute force.">
+    <tag group="Skill" tag="skAthlete"/>
+  </thing>
+
+
+  <!-- Swimming Skill Specialty -->
+  <thing
+    id="spAthSwim"
+    name="Swimming"
+    compset="Specialty"
+    isunique="yes"
+    description="Apply this specialty anytime you’re moving in or through a liquid medium. Usually this medium is water, but with the right protective gear you might safely swim in other liquids as well.">
     <tag group="Skill" tag="skAthlete"/>
   </thing>
 
@@ -692,7 +714,7 @@
     name="Hard Vacuum"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when resisting the effects of deep space without protective gear.">
     <tag group="Skill" tag="skEndure"/>
   </thing>
 
@@ -703,7 +725,7 @@
     name="Hold Breath"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when not breathing, such as when you stop inhaling to protect yourself from something unhealthy, like water or poisonous gases.">
     <tag group="Skill" tag="skEndure"/>
   </thing>
 
@@ -714,7 +736,7 @@
     name="Immunological"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when resisting diseases, poisons, toxins, parasites, and even allergens, whether or not your sophont type resists these things with an immune system.">
     <tag group="Skill" tag="skEndure"/>
   </thing>
 
@@ -725,7 +747,7 @@
     name="Evasive Action"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when maneuvering a vehicle out of the path of an incoming danger (e.g. an attack, another vehicle, or the flaming husk of a giant land predator a sniper’s just taken out from a mile away). Evasive Action is also used to Dodge in a character-driven vehicle.">
     <tag group="Skill" tag="skGrndVeh"/>
   </thing>
 
@@ -736,7 +758,7 @@
     name="Navigation"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when determining a route through confusing or unfamiliar terrain. This helps ground vehicles get through urban environments with heavy traffic patterns.">
     <tag group="Skill" tag="skGrndVeh"/>
   </thing>
 
@@ -747,7 +769,17 @@
     name="Pursuit"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when engaging in chases, and when attempting to follow another vehicle without being detected.">
+    <tag group="Skill" tag="skGrndVeh"/>
+  </thing>
+
+  <!-- Stunts Skill Specialty -->
+  <thing
+    id="spGrndStnt"
+    name="Stunts"
+    compset="Specialty"
+    isunique="yes"
+    description="Apply this specialty when doing anything with a vehicle that may void its warranty, get you thrown in jail, or both. The Stunts specialty is for those moments when you take it to eleven with some wild, overthe- top action that defies reason or questions the laws of physics.">
     <tag group="Skill" tag="skGrndVeh"/>
   </thing>
 
@@ -757,7 +789,7 @@
     name="Breaking &amp; Entering"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when seeking entry into secure locations and evading various security systems that don’t involve locks and similar mechanisms (e.g. laser grids, thermal sensors, pressure plates, and the like).">
     <tag group="Skill" tag="skLarceny"/>
   </thing>
 
@@ -768,7 +800,7 @@
     name="Picking Locks"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when trying to beat physical security, including locked doors and windows, handcuffs, and any other non-computerized lock (those require a Computers (Hacking) check).">
     <tag group="Skill" tag="skLarceny"/>
   </thing>
 
@@ -779,7 +811,18 @@
     name="Picking Pockets"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when secretly removing objects from another person, or when attempting to slip something onto a person. This specialty also applies to non-sophonts, should you wish to literally bell the cat or giant cat-analog.">
+    <tag group="Skill" tag="skLarceny"/>
+  </thing>
+
+
+  <!-- Sleight of Hand Skill Specialty -->
+  <thing
+    id="spLarcSlght"
+    name="Sleight of Hand"
+    compset="Specialty"
+    isunique="yes"
+    description="Apply this specialty when secretly removing objects from another person, or when attempting to slip something onto a person. This specialty also applies to non-sophonts, should you wish to literally bell the cat or giant cat-analog.">
     <tag group="Skill" tag="skLarceny"/>
   </thing>
 
@@ -790,7 +833,7 @@
     name="Hearing"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when using an organ or apparatus that senses sonic vibrations, like ears.">
     <tag group="Skill" tag="skPercept"/>
   </thing>
 
@@ -801,7 +844,7 @@
     name="Magnetic"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when using an organ or apparatus that senses magnetic waves.">
     <tag group="Skill" tag="skPercept"/>
   </thing>
 
@@ -812,7 +855,7 @@
     name="Sight"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when using an organ or apparatus that senses visual stimuli, like eyes or infrared sensors.">
     <tag group="Skill" tag="skPercept"/>
   </thing>
 
@@ -823,7 +866,7 @@
     name="Smell"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when using an organ or apparatus that senses olfactory stimuli, like a nose.">
     <tag group="Skill" tag="skPercept"/>
   </thing>
 
@@ -834,7 +877,7 @@
     name="Taste"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when using an organ or apparatus that senses flavor or chemical composition. (Old-school human crime scene investigators used to apply this specialty when checking if that red stain on the ground was blood. Old-school human criminals used to apply it when verifying that drug shipments were real. Old-school humans were weird.)">
     <tag group="Skill" tag="skPercept"/>
   </thing>
 
@@ -845,7 +888,18 @@
     name="Thermal"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when using an organ or apparatus that senses temperature. If you can “see” in infrared, then your Sight specialty applies instead, and you should lord that up over lesser creatures by talking about how lovely everything looks.">
+    <tag group="Skill" tag="skPercept"/>
+  </thing>
+
+
+  <!-- Touch Skill Specialty -->
+  <thing
+    id="spPercTouch"
+    name="Touch"
+    compset="Specialty"
+    isunique="yes"
+    description="Apply this specialty when using an organ or apparatus that responds to physical contact. You may find this sense particularly useful when blind or blindfolded, and when poor judgement leaves you without sufficient light.">
     <tag group="Skill" tag="skPercept"/>
   </thing>
 
@@ -856,7 +910,7 @@
     name="Evasive Action"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when maneuvering a vehicle out of the path of an incoming danger (e.g. an attack, another vehicle, or the field of debris from a scuttled space station). Apply this specialty also when Dodging in a character-driven vehicle.">
     <tag group="Skill" tag="skSpcVeh"/>
   </thing>
 
@@ -867,7 +921,7 @@
     name="Navigation"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when determining a route through confusing or unfamiliar terrain. Apply this specialty also for Teraport navigation, as well as for any use of a space vehicle involving the precise application of large-scale orbital mechanics. Conducting a slingshot maneuver, making a ballistic approach, or solving n-body problems to predict where that juicy target will be in two weeks — Navigation covers all of these actions.">
     <tag group="Skill" tag="skSpcVeh"/>
   </thing>
 
@@ -878,7 +932,18 @@
     name="Pursuit"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when engaging in chases and when attempting to follow another vehicle without being detected — an endeavor that can be spectacularly difficult in space.">
+    <tag group="Skill" tag="skSpcVeh"/>
+  </thing>
+
+
+  <!-- Stunts Skill Specialty -->
+  <thing
+    id="spSpcStnt"
+    name="Stunts"
+    compset="Specialty"
+    isunique="yes"
+    description="Apply this specialty when doing anything with a vehicle that may void its warranty, get you thrown in jail, or both. The Stunts specialty is for those moments when you take it to eleven with some wild, overthe- top action that defies reason or questions the laws of physics.">
     <tag group="Skill" tag="skSpcVeh"/>
   </thing>
 
@@ -889,7 +954,7 @@
     name="Hiding"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when staying in one place, and trying to avoid being found.">
     <tag group="Skill" tag="skStealth"/>
   </thing>
 
@@ -900,7 +965,7 @@
     name="Tailing"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when following someone without them knowing it. When piloting a vehicle and tailing someone, use that vehicle’s skill and specialty.">
     <tag group="Skill" tag="skStealth"/>
   </thing>
 
@@ -911,7 +976,7 @@
     name="Evasive Action"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when maneuvering a vehicle out of the path of incoming danger (e.g. an attack, another vehicle, or a sea creature the size and relative temperament of a recently-conquered moon). Apply this specialty also when Dodging in a character-driven vehicle.">
     <tag group="Skill" tag="skWatVeh"/>
   </thing>
 
@@ -922,7 +987,7 @@
     name="Navigation"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when determining a route through confusing or unfamiliar terrain. This becomes critically important when underwater because sonar navigation and ELF (extremely low frequency) navigation is tricky. Apply this specialty also when using aquatic vehicles to plot the likely courses of tsunamis and other waterborne events. So you can, you know, get out of their way. Or aim them.">
     <tag group="Skill" tag="skWatVeh"/>
   </thing>
 
@@ -933,7 +998,17 @@
     name="Pursuit"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when engaging in chases, and when attempting to follow another vehicle without being detected.">
+    <tag group="Skill" tag="skWatVeh"/>
+  </thing>
+  
+  <!-- Stunts Skill Specialty -->
+  <thing
+    id="spWatStnt"
+    name="Stunts"
+    compset="Specialty"
+    isunique="yes"
+    description="Apply this specialty when doing anything with a vehicle that may void its warranty, get you thrown in jail, or both. The Stunts specialty applies to those moments when you take it to eleven with some wild, over-the-top action that defies reason or questions the laws of physics.">
     <tag group="Skill" tag="skWatVeh"/>
   </thing>
 
@@ -944,7 +1019,7 @@
     name="Bluffing"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when lying to someone.">
     <tag group="Skill" tag="skDeceive"/>
   </thing>
 
@@ -955,7 +1030,7 @@
     name="Disguise"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when hiding your identity or posing as someone else.">
     <tag group="Skill" tag="skDeceive"/>
   </thing>
 
@@ -966,7 +1041,7 @@
     name="Distraction"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when diverting someone’s attention.">
     <tag group="Skill" tag="skDeceive"/>
   </thing>
 
@@ -977,7 +1052,7 @@
     name="Gambling"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when playing games that rely on sensing the other players’ hidden goals.">
     <tag group="Skill" tag="skEmpathy"/>
   </thing>
 
@@ -988,7 +1063,7 @@
     name="Gather Info"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when eliciting information from someone with warmth, kind words, and promises. If you wish to resort to coercion, use Intimidate instead.">
     <tag group="Skill" tag="skEmpathy"/>
   </thing>
 
@@ -999,7 +1074,7 @@
     name="Influence"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when improving the target’s impression of you.">
     <tag group="Skill" tag="skEmpathy"/>
   </thing>
 
@@ -1010,7 +1085,7 @@
     name="Read Sophont"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when trying to determine whether someone is lying to you or trying to manipulate you. This specialty functions as your defense against other characters using Empathy against you.">
     <tag group="Skill" tag="skEmpathy"/>
   </thing>
 
@@ -1021,7 +1096,7 @@
     name="Oratory"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when trying to uplift crowds with moving speeches.">
     <tag group="Skill" tag="skInspire"/>
   </thing>
 
@@ -1032,7 +1107,7 @@
     name="Leadership"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when rolling to add a quality to your fireteam.">
     <tag group="Skill" tag="skInspire"/>
   </thing>
 
@@ -1043,7 +1118,7 @@
     name="Seduction"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when attempting to romance another sophont.">
     <tag group="Skill" tag="skInspire"/>
   </thing>
 
@@ -1053,7 +1128,7 @@
     name="Coercion"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when forcing someone to do something. Make them an offer they can’t refuse, so to speak. It’s the flip side of Negotiate (Persuasion) in that you don’t ask nicely, and you certainly don’t charm anyone.">
   
     <tag group="Skill" tag="skIntim"/>
   </thing>
@@ -1064,7 +1139,7 @@
     name="Interrogation"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when grilling someone for information, often in confinement and with threats of violence or humiliation for the target and/or their loved ones.">
   
     <tag group="Skill" tag="skIntim"/>
   
@@ -1076,7 +1151,7 @@
     name="Torture"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when deliberately inflicting physical or psychological pain to get what you want.">
   
     <tag group="Skill" tag="skIntim"/>
   </thing>
@@ -1088,7 +1163,7 @@
     name="Persuasion"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when convincing someone to do something. It’s the flip side of the Intimidate (Coercion) specialty, in that you succeed without the use of threats or violence.">
   
     <tag group="Skill" tag="skNegot"/>
   </thing>
@@ -1099,7 +1174,7 @@
     name="Haggling"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when bartering on any open (legal) market.">
   
     <tag group="Skill" tag="skNegot"/>
   
@@ -1111,7 +1186,7 @@
     name="Black Market"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when brokering deals on the galaxy’s black market, where special “rules of the house” vary dramatically based on the merchant you’re meeting and where the exchange goes down.">
   
     <tag group="Skill" tag="skNegot"/>
   </thing>
@@ -1122,7 +1197,7 @@
     name="Acting"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when “getting into character,” whether it’s for a play, a sting, or an undercover operation.">
 
     <tag group="Skill" tag="skPerform"/>
   </thing>
@@ -1134,7 +1209,7 @@
     name="Comedy"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when telling jokes. Even bad ones.">
 
     <tag group="Skill" tag="skPerform"/>
   </thing>
@@ -1146,7 +1221,7 @@
     name="Dance"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when entertaining with choreographed or improvised motion.">
 
     <tag group="Skill" tag="skPerform"/>
   </thing>
@@ -1158,7 +1233,7 @@
     name="Song"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when lifting your voice in lyrical verse.">
 
     <tag group="Skill" tag="skPerform"/>
   </thing>
@@ -1169,7 +1244,7 @@
     name="Fortitude"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when resisting Intimidate (Interrogation) and Intimidate (Torture) checks.">
     <tag group="Skill" tag="skWillpow"/>
   </thing>
 
@@ -1180,7 +1255,7 @@
     name="Tenacity"
     compset="Specialty"
     isunique="yes"
-    description="">
+    description="Apply this specialty when resisting Intimidate (Coercion) and Negotiate (Persuasion) checks.">
     <tag group="Skill" tag="skWillpow"/>
   </thing>
 </document>
