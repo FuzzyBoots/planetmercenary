@@ -251,6 +251,29 @@
       
       call SetSpcExpr
       ]]></eval>
+      
+    <!-- Check to see if the skill has specialties -->
+    <eval index="5" phase="Setup" priority="10000"><![CDATA[
+      var myId as string
+      myId = tagids[Skill.sk?," & "]
+      
+      var specMatch as number
+      specMatch = 0
+      foreach thing in Specialty where myId
+        specMatch += 1
+        nexteach
+      debug "specMatch: " & specMatch
+      
+      if (specMatch <> 0) then
+        if (field[trtUser].value > 0) then
+          perform assign[Helper.AllowSpec]
+          endif
+          
+        if (tagis[Specialty.?] <> 0) then
+          perform assign[Helper.AllowSpec]
+          endif
+        endif
+      ]]></eval>
     
     </component>
 

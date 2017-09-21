@@ -818,7 +818,7 @@
 
   <!-- Sleight of Hand Skill Specialty -->
   <thing
-    id="spLarcSlght"
+    id="spLarcSlgt"
     name="Sleight of Hand"
     compset="Specialty"
     isunique="yes"
@@ -895,7 +895,7 @@
 
   <!-- Touch Skill Specialty -->
   <thing
-    id="spPercTouch"
+    id="spPercTch"
     name="Touch"
     compset="Specialty"
     isunique="yes"

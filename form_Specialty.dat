@@ -8,13 +8,12 @@
     <table_dynamic
       component="Specialty"
       showtemplate="SpecPick"
-      choosetemplate="SpecPick"
+      choosetemplate="SpecPick2"
       scrollable="yes"
       alwaysupdate="yes"
       candidatepick="SpecHelp"
       candidatefield="SpecExpr"
-      addpick="SpecHelp"
-      allowuserorder="yes">
+      addpick="SpecHelp">
       
       <!--titlebar><![CDATA[
         @text = "Add a Specialty"
@@ -94,6 +93,39 @@
         endif 
       
 
+      ]]></position>
+    </template>
+
+  <template
+    id="SpecPick2"
+    name="Specialty Pick (no Domain field)"
+    compset="Specialty"
+    marginhorz="3"
+    marginvert="1">
+
+    <portal
+      id="name"
+      style="lblSmall">
+      <label>
+        <labeltext><![CDATA[
+          @text = field[name].text
+          ]]></labeltext>
+        </label>
+      </portal>
+    
+    <position><![CDATA[
+    
+      ~set up our height based on our tallest portal
+      height = portal[name].height
+
+      ~if this is a "sizing" calculation, we're done
+      doneif (issizing <> 0)
+
+      ~position our tallest portal at the top
+      portal[name].top = 0
+      portal[name].left = 0
+      portal[name].width = 150
+      
       ]]></position>
     </template>
 

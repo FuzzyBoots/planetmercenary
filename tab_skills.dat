@@ -150,11 +150,11 @@
     perform portal[bonus].centervert
     perform portal[specialty].centervert
 
-    ~position the specialty portal on the far right
-    perform portal[specialty].alignedge[right,0]
+    ~position the info portal on the far right
+    perform portal[info].alignedge[right,0]
 
-    ~position the info portal to the left of the specialty button
-    perform portal[info].alignrel[rtol,specialty,-8]
+    ~position the specialty portal to the left of the info button
+    perform portal[specialty].alignrel[rtol,info,-8]
 
     ~position the incrementer on the left
     portal[value].left = 0
@@ -166,6 +166,10 @@
     perform portal[name].alignrel[ltor,bonus,10]
 
     portal[name].width = minimum(portal[name].width, portal[info].left - portal[name].left - 10)
+   
+   if (tagis[Helper.AllowSpec] = 0) then
+     portal[specialty].visible = 0
+     endif
    
     ]]></position>
   </template>
