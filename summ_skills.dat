@@ -22,9 +22,12 @@
       showtemplate="smTrait"
       scrollable="no"
       alwaysupdate="yes">
+      <list><![CDATA[
+        Helper.NotZero
+        ]]></list>
       <headertitle><![CDATA[
-      @text = #summtitle_decoration[] & " Skills " & #summtitle_decoration[]
-      ]]></headertitle>
+	    @text = #summtitle_decoration[] & " Skills " & #summtitle_decoration[] 
+	    ]]></headertitle>
       </table_fixed>
     </portal>
 
@@ -40,7 +43,8 @@
         var skillText as string
         foreach pick in hero from Skill
           foreach pick in eachpick.gizmo from Specialty
-            skillText = skillText & eachpick.field[spcTabName] & "{br}"
+		    skillText &= "Test"
+            ~ skillText = skillText & eachpick.field[spcTabName] & "{br}"
             nexteach
           nexteach
           

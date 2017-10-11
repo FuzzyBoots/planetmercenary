@@ -42,7 +42,8 @@
     <value id="ChosenOpt"/>   <!-- This build option was chosen by the class -->
     <value id="NoChoice"/>    <!-- There is no choice to be made for this item -->
     <value id="AllowSpec"/>   <!-- It's possible to add or edit specializations for this skill -->
-    </group>
+    <value id="NotZero"/>     <!-- The final value is not 0, so it should be listed on the summary tab -->
+	</group>
 
   <!-- User group - general helper tags that can be assigned by users via the Editor
         Any tags that you would normally put in the Helper group, but that you also

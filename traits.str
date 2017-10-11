@@ -104,7 +104,8 @@
       <calculate phase="Traits" priority="3000" name="Calc trtFinal"><![CDATA[
         ~Note! If you change this calculation, you may need to change the similar
         ~       calculation in the "Derived" component.
-        @value = field[trtUser].value + field[trtBG].value + field[trtBase].value + field[trtBonus].value + field[trtInPlay].value
+		@value = field[trtUser].value + field[trtBG].value + field[trtBase].value + field[trtBonus].value + field[trtInPlay].value
+        debug "trtFinal Calc " & field[trtBonus].value & ", " & @value
         ]]></calculate>
       </field>
 
@@ -292,8 +293,8 @@
       
       call SetSpcExpr
       ]]></eval>
-      
-    <!-- Set the value for whether to display the specialty button -->
+    
+	<!-- Set the value for whether to display the specialty button -->
     <eval index="5" phase="Traits" priority="4000">
       <after name="Calc trtFinal"/><![CDATA[
       var myId as string
@@ -319,8 +320,16 @@
         endif
       ]]></eval>
       
+    <!-- Set the value for whether to display the skill in the summary -->
+    <eval index="6" phase="Traits" priority="4000">
+      <after name="Calc trtFinal"/><![CDATA[
+      if (field[trtFinal].value <> 0) then
+        perform assign[Helper.NotZero]
+        endif
+      ]]></eval>
+      
     <!-- Track the specialty on the actor -->
-    <eval index="6" phase="Setup" priority="5010"><![CDATA[
+    <eval index="7" phase="Setup" priority="5010"><![CDATA[
       perform forward[Specialty.?]
       ]]></eval>
     

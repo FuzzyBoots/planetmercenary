@@ -115,7 +115,7 @@
     compset="cmpsetSB"
     description="Gives a bonus to the selected skills.">
     <tag group="Hide" tag="Special"/>
-    <eval index="1" phase="PreTraits" priority="4900">
+    <eval index="1" phase="PreTraits" priority="2900">
       <before name="Calc trtFinal"/><![CDATA[
       var bonus as number
       var penalty as number
