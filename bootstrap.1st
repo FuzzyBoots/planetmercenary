@@ -20,7 +20,7 @@
 
   <!-- Add all fireteam skills to the actor -->
   <enmasse><![CDATA[
-    component.FSkill
+    component.FTSkill
     ]]></enmasse>
     
   <!-- Add all derived traits to the actor -->
@@ -47,6 +47,11 @@
 
   <!-- Add the "unarmed attack" pick -->
   <bootstrap index="20" thing="wpUnarmed"/>
+  
+  <!-- Add three fireteam members -->
+  <bootstrap index="30" thing="Fireteam"/>
+  <bootstrap index="31" thing="Fireteam"/>
+  <bootstrap index="32" thing="Fireteam"/>
 
   <!-- The "autoadd" elements identify individual things that should be automatically
         added to every new character by Hero Lab. The key difference from "bootstrap"

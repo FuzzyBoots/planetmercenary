@@ -45,12 +45,31 @@
     <eval value="1" phase="Render" priority="1000">
       <before name="Assign Dynamic Tagexpr"/><![CDATA[
       ~get the list of all unique specialties on the hero and assemble it as a list of precluded tags
+      debug "Assign Dynamic"
       var tagexpr as string
-      foreach pick in hero where "component.Specialty & !Hide.Specialty"
-        if (each.isunique <> 0) then
-          tagexpr &= " & !Specialty." & each.idstring
+      foreach pick in hero where "component.Skill"
+        var skillID as string
+        var skillrank as number
+        var speccount as number
+        skillID = eachpick.idstring
+        skillrank = eachpick.field[trtFinal].value
+        speccount = eachpick.tagcount[User.HasSpec]
+        debug skillrank & ", " & speccount
+        if (speccount < skillrank) then
+          foreach pick in eachpick.gizmo where "component.Specialty & !Hide.Specialty"
+            debug eachpick.idstring
+            if (each.isunique <> 0) then
+              tagexpr &= " & !Specialty." & each.idstring
+            endif
+          nexteach
+        else
+        ~  debug skillID
+          foreach thing in Specialty where "Skill." & skillID
+            tagexpr &= " & !Specialty." & eachthing.idstring
+          nexteach
         endif
       nexteach
+      debug "Precluded: " & tagexpr
       
       ~if there are any tags to exclude, append them to the tagexpr appropriately
       if (empty(tagexpr) = 0) then

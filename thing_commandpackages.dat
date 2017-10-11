@@ -33,6 +33,7 @@
     
     <tag group="SkillBonus" tag="skDodge"/>
     <tag group="SkillBonus" tag="skHistory"/>
+    <tag group="Specialty" tag="spHistRel"/>
     
     <bootstrap thing="fRPlusSk">
       <autotag group="Skill" tag="skInspire"/>
@@ -44,8 +45,6 @@
       <autotag group="Skills" tag="Combat"/>
       <autotag group="explicit" tag="2"/>
       </bootstrap>
-
-    <bootstrap thing="spHistRel"/>
         
     </thing>
   

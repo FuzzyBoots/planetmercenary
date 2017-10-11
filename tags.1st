@@ -112,6 +112,14 @@
     <value id="ActCamo" name="Active Camouﬂage"/>
     </group>
 
+  <!-- Weapon Class group - helper tags for ranged weapon class -->
+  <group
+    id="WeapClass">
+    <value id="Beam" name="Beam"/>
+    <value id="NonLethal" name="Non-Lethal"/>
+    <value id="Projectile" name="Projectile"/>
+    </group>
+    
   <!-- AmmoType group - helper tags for ranged weapon ammo types -->
   <group
     id="AmmoType">
@@ -129,9 +137,9 @@
   <group
     id="Reload">
     <value id="None" name="-"/>
-    <value id="One" name="1"/>
-    <value id="OneTwo" name="1-2"/>
-    <value id="OneThree" name="1-3"/>
+    <value id="rlOne" name="1"/>
+    <value id="rlOneTwo" name="1-2"/>
+    <value id="rlOneThree" name="1-3"/>
     </group>
     
   <!-- WeaponType group - helper tags for  weapon types 
@@ -156,6 +164,7 @@
     <value id="Legal" name="Legal"/>
     <value id="Restricted" name="Restricted"/>
     <value id="Military" name="Military"/>
+    <value id="Illegal" name="Ilegal"/>
     </group>
 
   <group

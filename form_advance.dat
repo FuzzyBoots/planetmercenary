@@ -87,8 +87,13 @@
     <portal
       id="name"
       style="lblNormal">
-      <label
-        field="name">
+      <label>
+        <labeltext><![CDATA[
+          ~start with the base name
+          @text = field[name].text
+
+          @text &= " (" & this.tagnames[Skill.?," "]  & ")"              
+          ]]></labeltext>
         </label>
       </portal>
 

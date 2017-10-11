@@ -136,21 +136,62 @@
     name="Background trait"
     autocompset="no"
     panellink="basics">
-    <eval index="1" phase="Setup" priority="3000" name="BG tag final">
-      <!--before name="Size final"/--><![CDATA[
+    <eval index="1" phase="Setup" priority="3000" name="BG SkillBonus">
+      <![CDATA[
       foreach pick in hero from Skill where tagids[SkillBonus.?, " | "]
         perform eachpick.field[trtBG].modify[+,2,"Background trait"]
         nexteach
         ]]></eval>
+        
+    <eval index="2" phase="Setup" priority="3001" name="Add BG Specializations">
+      <![CDATA[
+      var myId as string
+      myId = tagids[Specialty.?," & "]
+      debug "myID: " & myId
+      
+      foreach thing in Specialty where myId
+        var indID as string
+        indID = eachthing.idstring
+        var skillIDs as string
+        debug "indID: " & indID
+        
+        skillIDs = eachthing.tagids[Skill.?, " & "]
+        debug "skillIDs: " & skillIDs
+        foreach thing in Skill where skillIDs
+          debug "Add " & indID & " to skill " & eachthing.idstring
+          nexteach
+        nexteach
+        ]]></eval>
     </component>
 
+  <component 
+    id="FTMember"
+    name="Fireteam Member"
+    autocompset="no"
+    panellink="ftPanel">
+    
+    <!-- In-play bonuses applied to the trait -->
+    <field
+      id="ftName"
+      name="Fireteam member name"
+      type="user">
+      </field>
+    
+    <field
+      id="ftNotes"
+      name="Fireteam notes"
+      type="user">
+      </field>    
+    </component>
+    
+    
   <!-- Fireteam Skill component -->
   <component
-    id="FSkill"
+    id="FTSkill"
     name="Fireteam Skill"
     autocompset="no"
-    panellink="basics"> <!-- Will eventualy link to Fireteam -->
-    </component>    
+    panellink="ftPanel">
+    </component>
 
   <!-- Skill component
         Each skill derives from this component
@@ -228,7 +269,7 @@
     
     <!-- Track the skill on the actor -->
     <eval index="2" phase="Setup" priority="5000"><![CDATA[
-      perform forward[Skill.?]
+      ~ perform forward[Skill.?]
       ]]></eval>
     
     <!-- Each skill point that is allocated by the user costs 1 CP -->
@@ -252,8 +293,9 @@
       call SetSpcExpr
       ]]></eval>
       
-    <!-- Check to see if the skill has specialties -->
-    <eval index="5" phase="Setup" priority="10000"><![CDATA[
+    <!-- Set the value for whether to display the specialty button -->
+    <eval index="5" phase="Traits" priority="4000">
+      <after name="Calc trtFinal"/><![CDATA[
       var myId as string
       myId = tagids[Skill.sk?," & "]
       
@@ -262,17 +304,24 @@
       foreach thing in Specialty where myId
         specMatch += 1
         nexteach
-      debug "specMatch: " & specMatch
+        ~ debug "specMatch: " & specMatch
       
       if (specMatch <> 0) then
-        if (field[trtUser].value > 0) then
+        if (field[trtFinal].value > 0) then
+          ~ debug myId & " : trtFinal Sufficient"
           perform assign[Helper.AllowSpec]
           endif
           
         if (tagis[Specialty.?] <> 0) then
+          ~ debug myId & " : Has a speciality"
           perform assign[Helper.AllowSpec]
           endif
         endif
+      ]]></eval>
+      
+    <!-- Track the specialty on the actor -->
+    <eval index="6" phase="Setup" priority="5010"><![CDATA[
+      perform forward[Specialty.?]
       ]]></eval>
     
     </component>
@@ -283,18 +332,6 @@
     name="Starting Skill Bonus"
     autocompset="no"
     panellink="basics">
-
-    <!-- Activate any selected build option -->
-    <eval index="1" phase="Setup" priority="100" name="Build option activated"><![CDATA[
-~      if (field[usrChosen1].ischosen <> 0) then
-~        if (field[usrChosen1].chosen.ispick <> 0) then
-~          perform field[usrChosen1].chosen.assign[Helper.ChosenOpt]
-~          endif
-~        endif
-
-      ~forward our "has feature" tags to the hero so it knows we're present
-      ~perform forward[HasFeature.?]
-      ]]></eval>
 
     </component>
     
@@ -488,7 +525,7 @@
     <eval index="1" phase="Setup" priority="5001"><![CDATA[
       perform forward[CmdPckge.?]
       ]]></eval>
-
+    
     </component>
 
   <!-- Background component
@@ -518,9 +555,9 @@
 
   <!-- Fireteam Skill - all fireteam skills derive from this compset -->
   <compset
-    id="FSkill"
+    id="FTSkill"
     forceunique="yes">
-    <compref component="FSkill"/>
+    <compref component="FTSkill"/>
     <compref component="Trait"/>
     </compset>
 
@@ -578,7 +615,6 @@
     <compref component="Specialty"/>
     <compref component="SpecialTab"/>
     <compref component="Domain"/>
-    <compref component="CanAdvance"/>
   </compset>
 
   <!-- Skill Bonuses -->
@@ -590,10 +626,21 @@
     <compref component="Custom"/>
     </compset>
   
+  <!-- Fireteam -->
+  <compset
+    id="FTMember">
+    <compref component="FTMember"/>
+    <compref component="UserSelect"/>
+    </compset>
+  
   <entity
     id="entSpec"
     form="frmSpec">
     <bootstrap thing="SpecHelp"/>
+  </entity>
+  
+  <entity
+    id="ftDetails">
   </entity>
 
 </document>

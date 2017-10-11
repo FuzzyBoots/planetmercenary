@@ -9,7 +9,7 @@
 
 <document signature="Hero Lab Data">
 
-  <inputthinggroup
+  <inputthinggroup  
     id="bckTraits">
     <inputthing
       name="Skill Bonuses"
@@ -113,7 +113,8 @@
   <editthing
     compset="Skill"
     name="Skill"
-    prefix="sk"
+    prefix="sk" 
+    defchild="entSpec"
     description="As basic traits, Skills have an optional short name and/or abbreviation and a type designation."
     summary="Defines a Skill upon which starting CPs can be spent by a character.">
     <inputthing
@@ -272,7 +273,7 @@
   <editthing
     compset="Ammunition"
     name="Ammunition"
-    prefix="eq"
+    prefix="am"
     description="Weapons, armor, and vehicles all have their own tabs for creating objects of those types."
     summary="Defines a type of weapon ammunition that can be selected on the Gear tab.">
     <inputthing
@@ -292,14 +293,14 @@
   <editthing
     compset="Melee"
     name="Melee Weapon"
-    prefix="wp"
+    prefix="wpm"
     description="Armor, vehicles, and simple equipment all have their own tabs for creating objects of those types."
     summary="Defines a melee weapon that can be selected on the Armory tab.">
-    <inputthing
+    <!--inputthing
       name="Weapon Bonus"
       helptext="Specify the attack bonus of the weapon.">
       <it_field field="wpBonus"/>
-      </inputthing>
+      </inputthing-->
     <inputthing
       name="Weapon Damage"
       helptext="Specify the damage rating of the weapon.">
@@ -332,14 +333,14 @@
   <editthing
     compset="Ranged"
     name="Ranged Weapon"
-    prefix="wp"
+    prefix="wpr"
     description="Armor, vehicles, and simple equipment all have their own tabs for creating objects of those types."
     summary="Defines a ranged weapon that can be selected on the Armory tab.">
-    <inputthing
+    <!--inputthing
       name="Weapon Bonus"
       helptext="Specify the attack bonus of the weapon.">
       <it_field field="wpBonus"/>
-      </inputthing>
+      </inputthing-->
     <inputthing
       name="Weapon Damage"
       helptext="Specify the damage rating of the weapon.">
@@ -357,20 +358,38 @@
         group="WeaponType" tag="rng?"/>
       </inputthing>
     <inputthing
-      name="Weight"
-      helptext="Specify the weight of the item.">
-      <it_field field="gearWeight"/>
+      name="Class"
+      helptext="Specify the class of ranged weapon.">
+      <it_tagpick
+        group="WeapClass" tag="?"/>
+      </inputthing>
+    <inputthing
+      name="Ammunition">
+      <it_taglist
+        group="AmmoType" tag="?"/>
+      </inputthing>
+    <inputthing
+      name="License"
+      helptext="Specify the weapon license.">
+      <it_tagpick
+        group="License" tag="?"/>
+      </inputthing>
+     <inputthing
+      name="Reload"
+      helptext="Specify the reload range.">
+      <it_tagpick
+        group="Reload" tag="?"/>
       </inputthing>
     <inputthing
       name="Special Behaviors"
       helptext="Specify any special behaviors for the weapon of which the user should be reminded.">
       <it_field field="wpSpecial"/>
       </inputthing>
-    <inputthing
+    <!--inputthing
       name="Natural Attack?"
       helptext="Specify whether this weapon should be treated as a natural attack.">
       <it_tagcheck group="Equipment" tag="Natural"/>
-      </inputthing>
+      </inputthing-->
     <inputthing
       name="Two-Handed Weapon?"
       helptext="Specify whether this weapon is two-handed.">

@@ -10,11 +10,11 @@
     name="Carbines"
     compset="Skill"
     isunique="yes"
-    description="Use your Carbines skill when firing carbine class weapons. As the weapons most commonly issued to infantry, carbines offer versatility and lethality. They are designed for quick carry, ease of use, and close-quarters action">
+    description="Use your Carbines skill    when firing carbine class weapons. As the weapons most commonly issued to infantry, carbines offer versatility and lethality. They are designed for quick carry, ease of use, and close-quarters action">
     <fieldval field="trtAbbrev" value="Car"/>
 
     <tag group="Skills" tag="Combat"/>
-    <child entity="entSpec" />
+      <child entity="entSpec" />
     </thing>
   
   <!-- Dodge Skill -->
@@ -28,7 +28,7 @@
     <fieldval field="trtBase" value="5"/>
     
     <tag group="Skills" tag="Combat"/>
-    <child entity="entSpec" />
+      <child entity="entSpec" />
     </thing>
 
   <!-- Explosives Skill -->
@@ -41,7 +41,7 @@
     <fieldval field="trtAbbrev" value="Exp"/>
 
     <tag group="Skills" tag="Combat"/>
-    <child entity="entSpec" />
+      <child entity="entSpec" />
     </thing>
   
   <!-- Heavy Weapons Skill -->
@@ -54,7 +54,7 @@
     <fieldval field="trtAbbrev" value="Hvy"/>
 
     <tag group="Skills" tag="Combat"/>
-    <child entity="entSpec" />
+      <child entity="entSpec" />
     </thing>
   
   <!-- Long Gun Skill -->
@@ -67,7 +67,7 @@
     <fieldval field="trtAbbrev" value="Lng"/>
 
     <tag group="Skills" tag="Combat"/>
-    <child entity="entSpec" />
+      <child entity="entSpec" />
     </thing>
   
   <!-- Melee Skill -->
@@ -80,7 +80,7 @@
     <fieldval field="trtAbbrev" value="Mel"/>
 
     <tag group="Skills" tag="Combat"/>
-    <child entity="entSpec" />
+      <child entity="entSpec" />
     </thing>
 
   <!-- Pistols Skill -->
@@ -93,7 +93,7 @@
     <fieldval field="trtAbbrev" value="Pst"/>
 
     <tag group="Skills" tag="Combat"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Scatterguns Skill -->
@@ -106,7 +106,7 @@
     <fieldval field="trtAbbrev" value="Sct"/>
 
     <tag group="Skills" tag="Combat"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Stationed Weapons Skill -->
@@ -119,7 +119,7 @@
     <fieldval field="trtAbbrev" value="StW"/>
 
     <tag group="Skills" tag="Combat"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Thrown Weapons Skill -->
@@ -132,7 +132,7 @@
     <fieldval field="trtAbbrev" value="Thr"/>
 
     <tag group="Skills" tag="Combat"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Chemistry Skill -->
@@ -145,7 +145,7 @@
     <fieldval field="trtAbbrev" value="Chm"/>
 
     <tag group="Skills" tag="Mental"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Computers Skill -->
@@ -158,7 +158,7 @@
     <fieldval field="trtAbbrev" value="Cmp"/>
 
     <tag group="Skills" tag="Mental"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Economics Skill -->
@@ -171,7 +171,7 @@
     <fieldval field="trtAbbrev" value="Ecn"/>
 
     <tag group="Skills" tag="Mental"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Engineering Skill -->
@@ -184,7 +184,7 @@
     <fieldval field="trtAbbrev" value="Eng"/>
 
     <tag group="Skills" tag="Mental"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Experimental Sciences Skill -->
@@ -197,7 +197,7 @@
     <fieldval field="trtAbbrev" value="Exp"/>
 
     <tag group="Skills" tag="Mental"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- History Skill -->
@@ -210,7 +210,7 @@
     <fieldval field="trtAbbrev" value="Hst"/>
 
     <tag group="Skills" tag="Mental"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Insight Skill -->
@@ -223,7 +223,7 @@
     <fieldval field="trtAbbrev" value="Ins"/>
 
     <tag group="Skills" tag="Mental"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Mechanic Skill -->
@@ -236,7 +236,7 @@
     <fieldval field="trtAbbrev" value="Mch"/>
 
     <tag group="Skills" tag="Mental"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Medicine Skill -->
@@ -249,7 +249,7 @@
     <fieldval field="trtAbbrev" value="Med"/>
 
     <tag group="Skills" tag="Mental"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Research Skill -->
@@ -262,7 +262,7 @@
     <fieldval field="trtAbbrev" value="Res"/>
 
     <tag group="Skills" tag="Mental"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Xenobiology Skill -->
@@ -275,7 +275,7 @@
     <fieldval field="trtAbbrev" value="Xen"/>
 
     <tag group="Skills" tag="Mental"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Air Vehicles Skill -->
@@ -288,7 +288,7 @@
     <fieldval field="trtAbbrev" value="Air"/>
 
     <tag group="Skills" tag="Physical"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Athletics Skill -->
@@ -301,7 +301,7 @@
     <fieldval field="trtAbbrev" value="Ath"/>
 
     <tag group="Skills" tag="Physical"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
  <!-- Endurance Skill -->
@@ -314,7 +314,7 @@
     <fieldval field="trtAbbrev" value="End"/>
 
     <tag group="Skills" tag="Physical"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
    
   <!-- Ground Vehicles Skill -->
@@ -327,7 +327,7 @@
     <fieldval field="trtAbbrev" value="Grn"/>
 
     <tag group="Skills" tag="Physical"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
    
   <!-- Larceny Skill -->
@@ -340,7 +340,7 @@
     <fieldval field="trtAbbrev" value="Lar"/>
 
     <tag group="Skills" tag="Physical"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Perception Skill -->
@@ -353,7 +353,7 @@
     <fieldval field="trtAbbrev" value="Per"/>
 
     <tag group="Skills" tag="Physical"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
     
   <!-- Water Vehicles Skill -->
@@ -366,7 +366,7 @@
     <fieldval field="trtAbbrev" value="Spc"/>
 
     <tag group="Skills" tag="Physical"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Stealth Skill -->
@@ -379,7 +379,7 @@
     <fieldval field="trtAbbrev" value="Stl"/>
 
     <tag group="Skills" tag="Physical"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
     
   <!-- Water Vehicles Skill -->
@@ -392,7 +392,7 @@
     <fieldval field="trtAbbrev" value="Wat"/>
 
     <tag group="Skills" tag="Physical"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Contracts Skill -->
@@ -405,7 +405,7 @@
     <fieldval field="trtAbbrev" value="Con"/>
 
     <tag group="Skills" tag="Social"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Deceive Skill -->
@@ -418,7 +418,7 @@
     <fieldval field="trtAbbrev" value="Dec"/>
 
     <tag group="Skills" tag="Social"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Empathy Skill -->
@@ -431,7 +431,7 @@
     <fieldval field="trtAbbrev" value="Emp"/>
 
     <tag group="Skills" tag="Social"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Inspire Skill -->
@@ -444,7 +444,7 @@
     <fieldval field="trtAbbrev" value="Ins"/>
 
     <tag group="Skills" tag="Social"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Intimidate Skill -->
@@ -456,8 +456,8 @@
     description="Use your Intimidate skill to loom threateningly over an informant, to rough up an NPC, or to pull a captive into a dark room where a single swinging lamp reveals a set of tools that everybody wishes they didn’t know you had.">
     <fieldval field="trtAbbrev" value="Int"/>
 
-	<tag group="Skills" tag="Social"/>
-  <child entity="entSpec" />
+    <tag group="Skills" tag="Social"/>
+    <child entity="entSpec" />
     </thing>
   
   <!-- Negotiate Skill -->
@@ -469,8 +469,8 @@
     description="Use your Negotiate skill to bargain and get what you want with a light touch. There are no demands here; this is about getting the most from other people with charm, panache, and a completely non-ironic application of “win/win.”">
     <fieldval field="trtAbbrev" value="Neg"/>
 
-	<tag group="Skills" tag="Social"/>
-  <child entity="entSpec" />
+    <tag group="Skills" tag="Social"/>
+    <child entity="entSpec" />
     </thing>
     
   <!-- Perform Skill -->
@@ -482,8 +482,8 @@
     description="Theater! Use your Perform skill to dazzle your targets with a performance they’ll never forget. This skill covers every way you can put on a show, anywhere you want.">
     <fieldval field="trtAbbrev" value="Perf"/>
 
-	<tag group="Skills" tag="Social"/>
-  <child entity="entSpec" />
+    <tag group="Skills" tag="Social"/>
+    <child entity="entSpec" />
     </thing>
   
   <!-- Willpower Skill -->
@@ -496,7 +496,7 @@
     <fieldval field="trtAbbrev" value="Will"/>
 
     <tag group="Skills" tag="Social"/>
-  <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
 </document>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="wprGlDag" name="Blattco Ni-972 “Glass Dagger”" description="Blattco Arms made its frst foray into the beam weapon market only recently, but its effort has met with favorable critical response as well as panicked cries from those illuminated downrange.\n\nThe Ni-972 “Glass Dagger” is a long-barreled pistol with a capstack magazine in the grip. Like most Blattco weapons, it caters to those who want the frst shot to count. It fires a powerful pulse of coherent light that delivers enough heat to burn through most brands of light armor, excepting those specifcally designed to dissipate or reﬂect high temperature attacks.\n\nThis hot pulse comes at a price, however. TeNi-972 cannot be burst-fired, nor can it deliver a continuous, sweeping beam. The weapon also heats up quickly and only gets six shots out of each magazine. An extended capstack is available, upping the shot count to fifteen and allowing the wielder to ignore the first reload required in each combat. In Planet Mercenary RPG, it has the Self-supplying Ammunition quality, which mimics the real-world extended\ncapstack of this weapon.\n\nUnlike other Blattco weapons, the “Glass Dagger” can be rendered inoperable during normal use. Tis is by design. With the toggling of a pair of switches, the Ni-972 can discharge its entire capstack at once, dealing as much damage in a single shot as it could if all six shots had struck the target individually. This “all-in mode” makes the “Glass Dagger” a Single-use weapon, destroying its optical elements. Thereafer, the pistol must be feld-stripped and re-assembled with replacement parts before it can be fred again.\n\nUsing all-in mode with the extended capstack is not recommended if you want to keep the appendage that you use to fre your pistol." compset="Ranged">
+    <fieldval field="wpDamage" value="Laser: 2d6+2 (5d6+5 in all in mode)"/>
+    <fieldval field="grCost" value="9"/>
+    <fieldval field="wpSpecial" value="Breacher; Single-use; Sturdy Construction"/>
+    <fieldval field="shortname" value="Glass Dagger"/>
+    <tag group="License" tag="Military"/>
+    <tag group="Reload" tag="rlOne"/>
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="AmmoType" tag="Laser"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    </thing>
+  <thing id="wprLMSG" name="BFF DT-56k “Little Magic Sleep Gun”" compset="Ranged">
+    <fieldval field="wpDamage" value="Endurance check (TN 20) or fall unconscious"/>
+    <fieldval field="grCost" value="5"/>
+    <fieldval field="wpSpecial" value="Only works on humans &amp; Purps (has no eﬀect on other races)"/>
+    <fieldval field="shortname" value="Little Magic Sleep Gun"/>
+    <tag group="AmmoType" tag="Stun"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    <tag group="WeapClass" tag="NonLethal"/>
+    </thing>
+  <thing id="wprNeuroM" name="BFF Neuromazer" compset="Ranged">
+    <fieldval field="wpDamage" value="Endurance check (TN 20) or fall unconscious"/>
+    <fieldval field="grCost" value="7"/>
+    <fieldval field="wpSpecial" value="Only works on sophonts with nerves and skin (has no eﬀect on other races); short range"/>
+    <fieldval field="shortname" value="Neuromazer"/>
+    <tag group="AmmoType" tag="Stun"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    <tag group="WeapClass" tag="NonLethal"/>
+    </thing>
+  <thing id="wprPistCH" name="Blattco 15 mm Clawhammer" compset="Ranged">
+    <fieldval field="grCost" value="5"/>
+    <fieldval field="wpDamage" value="Demotivator, Endurance check TN 15 or become incapacitated; {br}Goober Athletics check TN 20 to escape; {br}Gunfoam 1d6+3, PEA 1d6+3"/>
+    <fieldval field="wpSpecial" value="Sturdy Construction; Variable Ammo"/>
+    <fieldval field="shortname" value="Clawhammer"/>
+    <tag group="AmmoType" tag="Demotivate"/>
+    <tag group="AmmoType" tag="Goober"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="AmmoType" tag="PEA"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOne"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    </thing>
+  <thing id="wprBallPn" name="Blattco 7 mm Ball-Peen" description="Blattco’s smallest pistol is the so-called “BallPeen” pistol. It only fires gunfoam, but it’s super-dependable. It’s small and hits more like a love tap than a proper hammer. Of course, that’s by comparison. The Ball-Peen is perfectly lethal — it just lacks stopping power and the huge, hulking profle that goes with it. It is ideal for hiding in small pockets or bags, or to be carried into places where folk might not want you to carry such things." compset="Ranged">
+    <fieldval field="grCost" value="5"/>
+    <fieldval field="wpDamage" value="Gunfoam 1d6+1"/>
+    <fieldval field="wpSpecial" value="Holdout/Stealth"/>
+    <fieldval field="shortname" value="Clawhammer"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    <tag group="License" tag="Restricted"/>
+    <tag group="Reload" tag="rlOne"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    </thing>
+  <thing id="wprTenSqr" name="Phubahr 102 10 mm Tensquare" description="If you’re operating on a budget and need to put a rack of disposable weapons in the hands of a company of disposable grunts, then the Phubahr “Tensquare” is the bargain waiting in your basement. Probably right next to the body bags. \n\nThe Tensquare fres 10 mm balls that sit atop 10 mm gunfoam cartridges. It lacks the stopping power of larger weapons but it can get the job done. Be warned, however: like all Phubahr weapons, the Tensquare is twitchy. They sometimes jam catastrophically" compset="Ranged">
+    <fieldval field="wpDamage" value="Gunfoam 1d6"/>
+    <fieldval field="grCost" value="2"/>
+    <fieldval field="wpSpecial" value="Failure Prone"/>
+    <tag group="Reload" tag="rlOne"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    </thing>
+  <thing id="wprDerrier" name="Phubahr Derrierringer" description="The Derrierringer is currently the only Phubahr weapon that’s exactly as dependable as it needs to be. This single-shot pea-shooter dumps its entire capstack into launching just one pre-loaded ﬂechette. This capstack is integrated into the pulsilinear array, so the weapon must be completely disassembled to be reloaded. The cost of parts and labor required to reload this pistol are more than the price for a new one.\n\nFire this pistol once and throw it away. For added effect, you can chuck the otherwise useless pistol at any remaining opponents, but we can’t guarantee any added eﬀect unless you have a good throwing arm." compset="Ranged">
+    <fieldval field="wpDamage" value="PEA 1d6"/>
+    <fieldval field="grCost" value="3"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="PEA"/>
+    <tag group="License" tag="Restricted"/>
+    </thing>
+  <thing id="wprStrGG29" name="Strohl G/G 29" description="The Strohl Munitions G/G 29 is a top-notch sidearm that you, like many mercenaries, may find yourself adding notches to, if you’re that kind of person. There’s even a replaceable notch plate on the grip. None of this is a guarantee that you won’t end up as a notch on someone else’s G/G 29, of course. For that sort of insurance, you should check out Planet Mercenary’s wide selection of armor. Also, spend some time on the range.\n\nThe G/G 29 is a hybrid pistol. The grip magazine can be loaded with Ferrotious brand ferroceramic peas, 9 mm gunfoam rounds, or a combination of both. With gunfoam rounds, you should use shorts or standards. Stay away from the XL rounds because while they pack a bit more punch, they’ll damage the secondary barrel used by the peas.\n\nWhen you need to kill things without a lot of noise, this is your weapon. Also, be a very good shot because these 2 mm peas don’t pack much punch at subsonic speeds, and they’re unlikely to penetrate light body armor or a helmet." compset="Ranged">
+    <fieldval field="wpDamage" value="Gunfoam 1d6+1; PEA 1d6-1"/>
+    <fieldval field="grCost" value="3"/>
+    <fieldval field="wpSpecial" value="Variable Ammunition"/>
+    <tag group="Reload" tag="rlOne"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    <tag group="License" tag="Legal"/>
+    </thing>
+  <thing id="wprStrGGAP" name="Strohl G/G 29 AP" description="This is the annie-powered version of the G/G 29. It costs more, but it’s guaranteed to fire 200,000 rounds before you need a new power unit. In-game, this is represented by the Annie Plant Power Supply quality. The annie assembly includes a shot counter but it’s not tamper-proof. If you buy a G/G  29 AP on the secondary market, then be sure to send the annie assembly to Planet Mercenary for refurbishment and recharging. Better safe than sorry!" compset="Ranged">
+    <fieldval field="wpDamage" value="Gunfoam 1d6+1; PEA 1d6-1"/>
+    <fieldval field="grCost" value="8"/>
+    <fieldval field="wpSpecial" value="Annie Plant Power Supply; Variable Ammunition"/>
+    <tag group="Reload" tag="rlOne"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    <tag group="License" tag="Legal"/>
+    </thing>
+  </document>

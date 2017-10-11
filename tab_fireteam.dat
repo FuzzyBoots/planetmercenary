@@ -17,17 +17,98 @@
   <portal
   id="ftSkills"
   style="tblNormal">
-    <table_fixed component="FSkill" showtemplate="FTSPick">
+    <table_fixed component="FTSkill" showtemplate="FTSPick">
       <headertitle>
         @text="Fireteam Skills"
       </headertitle>
     </table_fixed>
   </portal>
   
+  <portal
+  id="ftMembers"
+  style="tblNormal">
+    <table_fixed component="FTMember" showtemplate="FTMPick">
+      <headertitle>
+        @text="Fireteam Members"
+      </headertitle>
+    </table_fixed>
+  </portal>
+  
+  <template
+    id="FTMPick"
+    name="Fireteam Member Pick"
+    compset="FTMember"
+    marginhorz="5"
+    marginvert="10">
+    
+    <portal
+      id="lblName"
+      style="lblNormal">
+      <label
+        text="Name:">
+        </label>
+      </portal>
+    
+    <portal
+    id="name"
+    style="editNormal">
+    <edit
+      field="ftName">
+      </edit>
+    </portal>
+
+    <portal
+      id="delete"
+      style="actDelete"
+      tiptext="Click to delete this item">
+      <action
+        action="delete">
+        </action>
+      </portal>
+      
+    <portal
+      id="info"
+      style="actInfo">
+      <action
+        action="info">
+        </action>
+      <mouseinfo mousepos="middle+above"/>
+      </portal>
+
+    <position><![CDATA[
+      ~set up our height based on our tallest portal
+      height = portal[info].height
+      portal[lblName].width = 50
+      portal[name].width = 200
+      
+      ~if this is a "sizing" calculation, we're done
+      if (issizing <> 0) then
+        done
+        endif
+
+      ~position our tallest portal at the top
+      portal[info].top = 0
+
+      ~position the other portals vertically
+      perform portal[name].centervert
+      perform portal[lblName].centervert
+      
+      ~position the info portal on the far right
+      perform portal[info].alignedge[right,0]
+
+      ~position the name on the left
+      portal[lblName].left = 0
+      portal[name].left = portal[lblName].right + 5
+      
+      portal[name].width = minimum(portal[name].width, portal[info].left - portal[name].left - 10)
+     
+      ]]></position>
+    </template>
+  
   <template
     id="FTSPick"
     name="Fireteam Skill Pick"
-    compset="FSkill"
+    compset="FTSkill"
     marginhorz="3"
     marginvert="2">
   
@@ -88,12 +169,16 @@
 <layout
   id="ftSkills">
   <portalref portal="ftSkills" taborder="10"/>
+  <portalref portal="ftMembers" taborder="20"/>
+  
   <position><![CDATA[
     portal[ftSkills].visible = 1
+    portal[ftMembers].visible = 1
     
     autogap =  3
 
     perform portal[ftSkills].batchadd
+    perform portal[ftMembers].batchadd
     
     perform batchplace
 

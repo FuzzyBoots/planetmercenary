@@ -8,7 +8,7 @@
   <thing
     id="skCombat"
     name="Combat"
-    compset="FSkill"
+    compset="FTSkill"
     isunique="yes"
     description="Use this skill when the fireteam attempts any activity covered by a Combat skill.">
     <fieldval field="trtAbbrev" value="Cmb"/>
@@ -18,7 +18,7 @@
   <thing
     id="skSocial"
     name="Social"
-    compset="FSkill"
+    compset="FTSkill"
     isunique="yes"
     description="Use this skill when the fireteam attempts any activity covered by a Social skill.">
     <fieldval field="trtAbbrev" value="Soc"/>
@@ -28,7 +28,7 @@
   <thing
     id="skMental"
     name="Mental"
-    compset="FSkill"
+    compset="FTSkill"
     isunique="yes"
     description="Use this skill when the fireteam attempts any activity covered by a Mental skill.">
     <fieldval field="trtAbbrev" value="Men"/>
@@ -38,7 +38,7 @@
   <thing
     id="skPhysical"
     name="Physical"
-    compset="FSkill"
+    compset="FTSkill"
     isunique="yes"
     description="Use this skill when the fireteam attempts any activity covered by a Physical skill.">
     <fieldval field="trtAbbrev" value="Phy"/>
@@ -48,7 +48,7 @@
   <thing
     id="skDamage"
     name="Damage"
-    compset="FSkill"
+    compset="FTSkill"
     isunique="yes"
     description="The damage that the Fireteam does.">
     <fieldval field="trtBase" value="1"/>
@@ -56,13 +56,14 @@
   </thing>
   
   <!-- Fireteam Thing -->
-  <!--thing
+  <thing
     id="Fireteam"
     name="Fireteam member"
-    compset="FTeam"
+    compset="FTMember"
     isunique="no"
     description="This is a fireteam entry.">
     <child entity="ftDetails"/>
-  </thing-->
+  </thing>
+  
   
 </document>

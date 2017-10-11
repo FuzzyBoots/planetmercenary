@@ -310,6 +310,7 @@
       portal[baTrait].height = height - portal[baTrait].top
       
       portal[skBonuses].top = portal[baTrait].bottom + 4
+      portal[skBonuses].height = 800
 
       ~figure out the total height we need for the tab
       height = portal[baTrait].bottom

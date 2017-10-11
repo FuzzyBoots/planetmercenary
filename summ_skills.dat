@@ -34,16 +34,19 @@
   -->
   <portal
     id="smSpec"
-    style="tblInvisSm">
-    <table_fixed
-      component="Specialty"
-      showtemplate="smSpec"
-      scrollable="no"
-      alwaysupdate="yes">
-      <headertitle><![CDATA[
-      @text = #summtitle_decoration[] & " Specialties " & #summtitle_decoration[]
-      ]]></headertitle>
-      </table_fixed>
+    style="lblSummary">
+    <label>
+      <labeltext><![CDATA[
+        var skillText as string
+        foreach pick in hero from Skill
+          foreach pick in eachpick.gizmo from Specialty
+            skillText = skillText & eachpick.field[spcTabName] & "{br}"
+            nexteach
+          nexteach
+          
+        @text = skillText
+        ]]></labeltext>
+        </label>
     </portal>
 
 
