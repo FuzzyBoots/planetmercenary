@@ -14,7 +14,7 @@
   <thing id="wprLMSG" name="BFF DT-56k “Little Magic Sleep Gun”" compset="Ranged">
     <fieldval field="wpDamage" value="Endurance check (TN 20) or fall unconscious"/>
     <fieldval field="grCost" value="5"/>
-    <fieldval field="wpSpecial" value="Only works on humans &amp; Purps (has no eﬀect on other races)"/>
+    <fieldval field="wpSpecial" value="Only works on humans &amp; Purps (has no effect on other races)"/>
     <fieldval field="shortname" value="Little Magic Sleep Gun"/>
     <tag group="AmmoType" tag="Stun"/>
     <tag group="License" tag="Legal"/>
@@ -25,7 +25,7 @@
   <thing id="wprNeuroM" name="BFF Neuromazer" compset="Ranged">
     <fieldval field="wpDamage" value="Endurance check (TN 20) or fall unconscious"/>
     <fieldval field="grCost" value="7"/>
-    <fieldval field="wpSpecial" value="Only works on sophonts with nerves and skin (has no eﬀect on other races); short range"/>
+    <fieldval field="wpSpecial" value="Only works on sophonts with nerves and skin (has no effect on other races); short range"/>
     <fieldval field="shortname" value="Neuromazer"/>
     <tag group="AmmoType" tag="Stun"/>
     <tag group="License" tag="Legal"/>
@@ -68,7 +68,7 @@
     <tag group="License" tag="Legal"/>
     <tag group="AmmoType" tag="Gunfoam"/>
     </thing>
-  <thing id="wprDerrier" name="Phubahr Derrierringer" description="The Derrierringer is currently the only Phubahr weapon that’s exactly as dependable as it needs to be. This single-shot pea-shooter dumps its entire capstack into launching just one pre-loaded ﬂechette. This capstack is integrated into the pulsilinear array, so the weapon must be completely disassembled to be reloaded. The cost of parts and labor required to reload this pistol are more than the price for a new one.\n\nFire this pistol once and throw it away. For added effect, you can chuck the otherwise useless pistol at any remaining opponents, but we can’t guarantee any added eﬀect unless you have a good throwing arm." compset="Ranged">
+  <thing id="wprDerrier" name="Phubahr Derrierringer" description="The Derrierringer is currently the only Phubahr weapon that’s exactly as dependable as it needs to be. This single-shot pea-shooter dumps its entire capstack into launching just one pre-loaded ﬂechette. This capstack is integrated into the pulsilinear array, so the weapon must be completely disassembled to be reloaded. The cost of parts and labor required to reload this pistol are more than the price for a new one.\n\nFire this pistol once and throw it away. For added effect, you can chuck the otherwise useless pistol at any remaining opponents, but we can’t guarantee any added effect unless you have a good throwing arm." compset="Ranged">
     <fieldval field="wpDamage" value="PEA 1d6"/>
     <fieldval field="grCost" value="3"/>
     <tag group="WeaponType" tag="rngPistol"/>

@@ -26,8 +26,8 @@
         Helper.NotZero
         ]]></list>
       <headertitle><![CDATA[
-	    @text = #summtitle_decoration[] & " Skills " & #summtitle_decoration[] 
-	    ]]></headertitle>
+      @text = #summtitle_decoration[] & " Skills " & #summtitle_decoration[] 
+      ]]></headertitle>
       </table_fixed>
     </portal>
 
@@ -43,8 +43,8 @@
         var skillText as string
         foreach pick in hero from Skill
           foreach pick in eachpick.gizmo from Specialty
-		    skillText &= "Test"
-            ~ skillText = skillText & eachpick.field[spcTabName] & "{br}"
+            debug eachpick.field[spcTabName].text
+            skillText = skillText & eachpick.field[spcTabName].text & "\n"
             nexteach
           nexteach
           

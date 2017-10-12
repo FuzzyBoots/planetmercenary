@@ -106,7 +106,7 @@
     #traitbase[skPercept] += 1
     ]]></eval>
     
-    <eval index="3" phase="Traits" priority="4002"><![CDATA[
+    <eval index="3" phase="Traits" priority="2002"><![CDATA[
     #traitbonus[skNegot] -= 2
     ]]></eval>
     

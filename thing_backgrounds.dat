@@ -6,6 +6,7 @@
 
   <thing id="bckCrime" name="Crime Lord" description="You probably didn’t get your lawless hands very dirty, but you definitely know some people who did — and they did it on your orders.\n\n{b}Bonus Skill Ranks:{/b} +2 Deceive, +2 Economics {i}or{/i} History, +2 Inspire {i}or{/i} Negotiate" compset="Bckgrnd" uniqueness="unique">
     <tag group="SkillBonus" tag="skDeceive"/>
+    
     <bootstrap thing="fRPlusSk">
       <autotag group="Skill" tag="skEcon"/>
       <autotag group="Skill" tag="skHistory"/>
@@ -15,10 +16,6 @@
       <autotag group="Skill" tag="skInspire"/>
       <autotag group="Skill" tag="skNegot"/>
       <autotag group="explicit" tag="2"/>
-      </bootstrap>
-    <bootstrap thing="fRPlusSk">
-      <autotag group="Skill" tag="skInsight"/>
-      <autotag group="explicit" tag="3"/>
       </bootstrap>
     </thing>
     
@@ -106,7 +103,7 @@
     
     <bootstrap thing="fRPlusSk">
       <autotag group="Skill" tag="skAirVeh"/>
-      <autotag group="Skill" tag="skWatVeh"/>
+      <autotag group="Skill" tag="skSpcVeh"/>
       <autotag group="explicit" tag="1"/>
       </bootstrap>
 
