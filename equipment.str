@@ -301,6 +301,14 @@
     panellink="armory"
     ispublic="no">
 
+    <!-- Short Name -->
+    <field
+      id="wpShrtName"
+      name="Short Name"
+      type="derived">
+      </field>
+      
+    
     <!-- Weapon bonus -->
     <field
       id="wpBonus"

@@ -38,13 +38,14 @@
   <portal
     id="smSpec"
     style="lblSummary">
-    <label>
+    <label
+    ismultiline="yes">
       <labeltext><![CDATA[
         var skillText as string
         foreach pick in hero from Skill
           foreach pick in eachpick.gizmo from Specialty
-            debug eachpick.field[spcTabName].text
-            skillText = skillText & eachpick.field[spcTabName].text & "\n"
+            ~ debug eachpick.field[spcTabName].text
+            skillText = skillText & eachpick.field[spcTabName].text & "{br}"
             nexteach
           nexteach
           

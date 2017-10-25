@@ -807,7 +807,7 @@
 
     expr = "component.Specialty & " & myId
 
-    debug "expr: " & expr
+    ~ debug "expr: " & expr
     gizmo.childfound[SpecHelp].field[SpecExpr].text = expr
     ]]></procedure>
 

@@ -105,7 +105,6 @@
         ~Note! If you change this calculation, you may need to change the similar
         ~       calculation in the "Derived" component.
 		    @value = field[trtUser].value + field[trtBG].value + field[trtBase].value + field[trtBonus].value + field[trtInPlay].value
-        debug "trtFinal Calc " & field[trtBonus].value & ", " & @value
         ]]></calculate>
       </field>
 
@@ -148,7 +147,16 @@
       <![CDATA[
       var myId as string
       myId = tagids[Specialty.?," & "]
-      debug "myID: " & myId
+      ~ debug "myID: " & myId
+      
+      debug "Hero Picks: "
+      foreach pick in container
+        debug eachpick.field[name].text
+        nexteach
+      
+      foreach pick in hero from Specialty
+        debug eachpick.field[spcTabName].text
+        nexteach
       
       foreach thing in Specialty where myId
         var indID as string
@@ -369,8 +377,8 @@
   
     <!-- Track the ability on the actor -->
     <eval index="1" phase="Setup" priority="5000"><![CDATA[
-      perform forward[Specialty.?]
-      perform parent.assign[User.HasSpec]
+      ~ perform forward[Specialty.?]
+      ~ perform parent.assign[User.HasSpec]
       ]]></eval>
       
     <!-- Each specialty that is allocated by the user costs 2 CP -->

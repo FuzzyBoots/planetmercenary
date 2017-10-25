@@ -43,7 +43,7 @@
     <fieldval field="baseHealth" value="9"/>
     
     <bootstrap thing="abTrunk"/>
-    <!--bootstrap thing="spAthRun"/-->
+    <bootstrap thing="spAthRun"/>
 
     <bootstrap thing="fRPlusSk2">
       <autotag group="Skill" tag="skPercept"/>

@@ -152,7 +152,7 @@
       id="name"
       style="lblNormal">
       <label
-        field="name">
+        field="wpShrtName">
         </label>
       </portal>
 
@@ -160,7 +160,8 @@
       id="damage"
       style="lblNormal">
       <label
-        field="wpDamage">
+        field="wpDamage"
+        ismultiline="yes">
         </label>
       </portal>
 
@@ -177,7 +178,7 @@
     <position><![CDATA[
       ~set up our dimensions, with a width that we dictate; our width can vary
       ~between weapon types, since ranged weapons require extra space for the range
-      height = portal[name].height
+      height = portal[damage].height
       ~if (tagis[component.WeapRange] <> 0) then
       ~  width = 350
       ~else
