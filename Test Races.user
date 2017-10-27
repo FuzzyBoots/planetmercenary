@@ -3,19 +3,9 @@
   <thing id="racTest" name="Carbosilicate Amorph" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="2"/>
     <bootstrap thing="fRPlusSk2">
-      <autotag group="Skill" tag="skPercept"/>
-      <autotag group="Skill" tag="skAthlete"/>
+      <autotag group="Bonus" tag="Plus1"/>
+      <autotag group="Skills" tag="Combat"/>
       <autotag group="Skills" tag="Physical"/>
-      <autotag group="Bonus" tag="Plus2"/>
-      </bootstrap>
-    <bootstrap thing="fRPlusSk2">
-      <autotag group="Skills" tag="Social"/>
-      <autotag group="Penalty" tag="Minus1"/>
-      </bootstrap>
-    <bootstrap thing="fRPlusSk">
-      <autotag group="Skills" tag="Mental"/>
-      <autotag group="Skill" tag="skCarbine"/>
-      <autotag group="Bonus" tag="Plus3"/>
       </bootstrap>
     <eval phase="Traits" priority="4002">#traitbonus[trHealth] = field[baseHealth].value + 2 * #trait[skEndure]
       <after name="Calc Sophont Health"/>
