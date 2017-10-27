@@ -101,7 +101,7 @@
       id="advDynamic"
       name="Dynamic TagExpr"
       type="derived"
-      maxlength="1000">
+      maxlength="3000">
       </field>
 
     <!-- Action associated with this advancement entry -->
@@ -150,7 +150,10 @@
     <!-- Put the dynamic tagexpr for choosers into the child gizmo -->
     <eval index="5" phase="Render" priority="2000" name="Assign Dynamic Tagexpr"><![CDATA[
       if (empty(field[advDynamic].text) = 0) then
-        gizmo.child[advDetails].field[advTagexpr].text = field[advDynamic].text & " & !thing.showonly"
+	    debug "advTagexpr: " &  field[advDynamic].text & " & !thing.showonly"
+		~ gizmo.child[advDetails].field[advTagexpr].text = "component.Specialty & !Hide.Specialty & !Specialty.spAirEvad & !Specialty.spAirNav & !Specialty.spAirPurs & !Specialty.spAirStnt & !Specialty.spAthClmb & !Specialty.spAthFlght & !Specialty.spAthJump & !Specialty.spAthPurs & !Specialty.spAthRun & !Specialty.spAthStr & !Specialty.spAthSwim & !Specialty.spCarbBeam & !Specialty.spCarbNL & !Specialty.spCarbProj & !Specialty.spChemBio & !Specialty.spChemInrg & !Specialty.spCompHack & !Specialty.spCompProg & !Specialty.spCompRep & !Specialty.spCompSec & !Specialty.spDecBluff & !Specialty.spDecDisg & !Specialty.spDecDist & !Specialty.spEconLcl & !Specialty.spEconPlan & !Specialty.spEconSec & !Specialty.spEmpGamb & !Specialty.spEmpGInfo & !Specialty.spEmpInfl & !Specialty.spEmpRSoph & !Specialty.spEndVac & !Specialty.spEndHold & !Specialty.spEndImmun & !Specialty.spEngArch & !Specialty.spEngHab & !Specialty.spEngPlVeh & !Specialty.spEngVess & !Specialty.spGrndEvad & !Specialty.spGrndNav & !Specialty.spGrndPurs & !Specialty.spLarcPPoc & !Specialty.spLarcBE" 
+	    gizmo.child[advDetails].field[advTagexpr].text = field[advDynamic].text & " & !thing.showonly"
+		~ gizmo.child[advDetails].field[advTagexpr].text = "component.Specialty & !Hide.Specialty & Skill.skCarbine"
         endif
       ]]></eval>
 
