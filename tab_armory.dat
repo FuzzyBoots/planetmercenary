@@ -152,18 +152,18 @@
       id="name"
       style="lblNormal">
       <label
-        field="wpShrtName">
+        field="name">
         </label>
       </portal>
 
-    <portal
+    <!--portal
       id="damage"
-      style="lblNormal">
+      style="lblSmall">
       <label
         field="wpDamage"
         ismultiline="yes">
         </label>
-      </portal>
+      </portal-->
 
     <portal
       id="cost"
@@ -178,11 +178,11 @@
     <position><![CDATA[
       ~set up our dimensions, with a width that we dictate; our width can vary
       ~between weapon types, since ranged weapons require extra space for the range
-      height = portal[damage].height
+      height = portal[name].height
       ~if (tagis[component.WeapRange] <> 0) then
-      ~  width = 350
+      width = 350
       ~else
-        width = 250
+      ~  width = 250
       ~  endif
 
       ~if this is a "sizing" calculation, we're done
@@ -190,15 +190,7 @@
 
       ~position the cost portal on the far right
       perform portal[cost].alignedge[right,0]
-
-      ~position the damage portal to the left of the cost; we want the damage to
-      ~be centered in its own column relative to a centerpoint position
-      perform portal[damage].centerpoint[horz,180]
-
-      ~position the range portal to be centered in its own column relative to a
-      ~centerpoint position
-      ~perform portal[range].centerpoint[horz,260]
-
+      
       ~position the name on the left and let it use all available space
       portal[name].left = 0
       portal[name].width = portal[name].width

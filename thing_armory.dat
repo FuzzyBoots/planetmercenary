@@ -296,7 +296,7 @@
     id="wpRilla"  
     name="Rilla Unarmed Strike"
     compset="Melee"
-    description="Ursumari have a bite attack equal to Athletics+2."
+    description="Rilla have a bite attack equal to Athletics+2."
     isunique="yes"
     holdable="no">
     <fieldval field="shortname" value="Unarmed"/>
@@ -331,20 +331,6 @@
       Ranged Weapons
      ##################
 -->
-
-
-  <!-- Sample ranged weapon -->
-  <thing
-    id="wpSampleR"
-    name="Sample Ranged"
-    compset="Ranged"
-    description="Description goes here">
-    <fieldval field="shortname" value=""/>
-    <fieldval field="wpBonus" value="0"/>
-    <fieldval field="wpDamage" value="2d6"/>
-    <fieldval field="wpSpecial" value=""/>
-    <fieldval field="grCost" value="200"/>
-    </thing>
 
 
   </document>
