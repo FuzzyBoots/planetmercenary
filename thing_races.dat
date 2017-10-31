@@ -135,4 +135,15 @@
     
     </thing>
   
+  <thing id="racAmorph" name="Carbosilicate Amorph" compset="Race" uniqueness="unique">
+    <fieldval field="baseHealth" value="2"/>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Bonus" tag="Plus1"/>
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="Skills" tag="Physical"/>
+      </bootstrap>
+    <eval phase="Traits" priority="4002">#traitbonus[trHealth] = field[baseHealth].value + 2 * #trait[skEndure]
+      <after name="Calc Sophont Health"/>
+      </eval>
+    </thing>
   </document>

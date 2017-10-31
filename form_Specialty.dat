@@ -147,17 +147,17 @@
     </layout>
 
   <form
-	id="frmSpec"
-	name="Specialty"
-	marginhorz="10"
-	marginvert="5">
-	<layoutref layout="laySpec"/>
-	<position><![CDATA[
-	  layout[laySpec].width = 400
-	  perform layout[laySpec].render
-	  width = layout[laySpec].width
-	  height = 400
-	  ]]></position>
-	</form>
+  id="frmSpec"
+  name="Specialty"
+  marginhorz="10"
+  marginvert="5">
+  <layoutref layout="laySpec"/>
+  <position><![CDATA[
+    layout[laySpec].width = 400
+    perform layout[laySpec].render
+    width = layout[laySpec].width
+    height = 400
+    ]]></position>
+  </form>
 
   </document>

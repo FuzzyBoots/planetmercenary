@@ -31,10 +31,10 @@
   <!-- Health Trait -->
   <thing
     id="trHealth"
-	name="Health"
-	compset="Trait"
-	isunique="yes"
-	description="This is your health, which is derived from your sophont type and your endurance.">
+  name="Health"
+  compset="Trait"
+  isunique="yes"
+  description="This is your health, which is derived from your sophont type and your endurance.">
   <fieldval field="trtAbbrev" value="Hlth"/>
   <tag group="explicit" tag="9"/>
   <tag group="DashTacCon" tag="Combat"/>

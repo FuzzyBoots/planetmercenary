@@ -289,7 +289,11 @@
       doneif (origin.ishero = 0)
 
       ~adjust the resource appropriately
-      hero.child[resCP].field[resSpent].value += field[trtUser].value
+	  if (this.tagexpr[hero#Race.racAmorph & (Skills.Social | Skills.Mental)] <> 0) then
+		hero.child[resCP].field[resSpent].value += field[trtUser].value * 2
+	  else	
+        hero.child[resCP].field[resSpent].value += field[trtUser].value
+      endif
     ]]></eval>
     
     <!-- set the appropriate candidate expression -->
