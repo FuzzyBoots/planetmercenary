@@ -128,7 +128,7 @@
     tiptext="Click to add specialties">
     <action
       action="edit"
-      buttontext="">
+      buttontext="spec">
       </action>
     </portal>
 
@@ -196,28 +196,7 @@
     perform batchplace
 
     height = autotop
-
-    ~ perform portal[skCSkills].autoplace
-    ~ perform portal[skPSkills].autoplace
-    ~ perform portal[skMSkills].autoplace
-    ~ perform portal[skSSkills].autoplace
-
-    ~ portal[skCSkills].left = 0 
-    ~ portal[skCSkills].top = 0
-    ~ portal[skCSkills].width = width / 2 - 5
-    ~ 
-    ~ portal[skMSkills].left = portal[skCSkills].width + 5
-    ~ portal[skMSkills].top = portal[skCSkills].bottom + 5
-    ~ portal[skMSkills].width = width / 2 - 5
-    ~ 
-    ~ portal[skPSkills].left = 0  
-    ~ portal[skPSkills].top = portal[skMSkills].bottom + 5
-    ~ portal[skPSkills].width = width / 2 - 5
-    ~ 
-    ~ portal[skSSkills].left = portal[skCSkills].width + 5
-    ~  portal[skSSkills].top = portal[skPSkills].bottom + 5
-    ~ portal[skSSkills].width = width
-
+    
     ]]></position>
   </layout>
 

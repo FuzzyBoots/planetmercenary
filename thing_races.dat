@@ -75,7 +75,7 @@
     name="Purp"
     compset="Race"
     isunique="yes"
-    description="Purps are genetically modified humans who are slightly frailer, but more athletic. They can also photosynthesize, but not well enough to replace eating.">
+    description="An ill-considered genengineering project, this purple-skinned branch of the Homo sapiens genetic line tends to be “leaner and meaner” than core human stock. Purps have photosynthetic skin, letting them derive nourishment from natural, full-spectrum light; they crave it even when they’re well fed, and they tend to dress (or undress) accordingly. Purps are relatively rare, and they do not breed true with baseline humans.">
     
     <fieldval field="baseHealth" value="7"/>
     
@@ -92,7 +92,7 @@
     name="Rilla"
     compset="Race"
     isunique="yes"
-    description="Rillas are genetically uplifted gorillas. They're very strong, and dextrous, but are often not taken seriously by other Sophonts and tend to be touchy about references to their non-sapient simmian ancestors.">
+    description="Humanity’s heavily-muscled great-ape cousins were among the earliest uplif projects. Today Rillas are quite sensitive to the prejudices and biases against hairy-skinned folk who can peel oranges (do not say “bananas”) with any of their four limbs. Even afer 800 years of tweaks to their genome, Rillas fnd clothing uncomfortable, and they seek naked time whenever the opportunity presents itself.">
     
     <fieldval field="baseHealth" value="8"/>
     
@@ -117,7 +117,7 @@
     name="Ursumari"
     compset="Race"
     isunique="yes"
-    description="Ursumari are genetically uplifted polar bears. They're very strong, very dangerous, and very big. Unfortunately, they don't handle heat very well, which means they also tend to be very angry.">
+    description="Uplifed polar bears stand between 2.5 and 3.5 meters in height, and when they shout, the roar conveys a single, unmistakable message to the human hindbrain: “run away quickly.” Ursumari are naturally peaceful, as long as they get a nice, long ice water bath every day. Without the bath? Grouchy, potentially-dangerous bear.">
     
     <fieldval field="baseHealth" value="9"/>
     
@@ -135,7 +135,158 @@
     
     </thing>
   
-  <thing id="racAmorph" name="Carbosilicate Amorph" compset="Race" uniqueness="unique">
+  <thing id="racEssper" name="Esspererin" description="Though their bodies only measure a meter in height, esspererin are exceptionally hardy. They can survive extreme heat and cold, require no air, and have light-collecting wings that unfurl to a span of four meters. Teir bodies have evolved over millions of years, harmoniously merging technology and biology, and this aﬀords them a strong aptitude with the inelegant mechanical creations of strictly organic sophonts. Too bad the Esspererin are such reckless tinkerers.\n\n{b}Bonus Skill Ranks:{/b} +1 Computers, +1 Dodge, +1 Engineering, +1 Mechanics; you also gain the Athletics (Flight) specialty at no cost\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} Draw a Mayhem card every time you roll a 6 on any die while making an Engineering or Mechanics check. Even if you roll more than one 6, you still only draw one Mayhem card. If you already draw a Mayhem card for any reason, draw only that one card; do not draw any more cards due to this rule. \nBecause of your small size, the only weapons you can use are pistols, carbines, and stationed weapons. Also, you can ﬂy and don’t need air." compset="Race" uniqueness="unique">
+    <bootstrap thing="spAthFlght"></bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Bonus" tag="Plus1"/>
+      <autotag group="Skill" tag="skCompute"/>
+      <autotag group="Skill" tag="skDodge"/>
+      <autotag group="Skill" tag="skEng"/>
+      <autotag group="Skill" tag="skMech"/>
+      </bootstrap>
+    </thing>
+  <thing id="racFobott" name="Fobott’r" description="For centuries the four-armed, bipedal Fobott’r were the soldier-slaves of the rich and powerful. They have long since cast oﬀ those shackles, and many of them now enjoy proftable careers as professionals-at-arms. Contrary to cultural biases, fobott’r are not all thieves, and pirates. Just a few (billion) of them.\n\n{b}Bonus Skill Ranks:{/b} +1 Carbines, +1 Perception, +1 Pistols; you also gain the Perception (Hearing) specialty at no cost\n\n{b}Skill Check Penalties:{/b} You suﬀer a –1 penalty with Computers skill checks. Apply this penalty to your result afer all other modifers.\n\n{b}Special Rules{/b}: You may fire two weapons with a single action, though you suffer a –2 penalty with each of the two checks. Alternatively, you may reload one weapon and fire one weapon as a single action (these need not be the same weapon). If you and a friendly fobott’r are in direct physical contact, either of you or both of you may fire two weapons with a single action, and each of the two checks only suﬀers a -1 penalty. If you are next to a friendly fobott’r and either of you uses this rule, attacks against either of you gain a +2 to the roll." compset="Race" uniqueness="unique">
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Bonus" tag="Plus1"/>
+      <autotag group="Skill" tag="skCarbine"/>
+      <autotag group="Skill" tag="skPercept"/>
+      <autotag group="Skill" tag="skPistol"/>
+      </bootstrap>
+    <bootstrap thing="spPercHear"></bootstrap>
+    </thing>
+  <thing id="racFrell" name="Frellenti" description="The long-legged, flightless, pseudo-avian Frellenti are evidence either that evolution has a great sense of humor, or that it has been punked by engineers who don’t sign their work. Frellenti are swift runners and natural pilots, and though their forelimbs are useless they can grasp and manipulate defly with their feet. Their long, strong, prehensile tongue can support several times their body weight, yet it’s also a highly sensitive chemical receptor.\n\n{b}Bonus Skill Ranks:{/b} +1 Athletics, +1 Dodge, +1 Perception, +1 to any Vehicle skill; you also gain the Perception (Taste) specialty at no cost\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} Your feet are quite agile and serve the same purpose as a human’s hands, but you can’t use them as hands while running. You can also use your tongue as a fully prehensile tentacle, and it is strong enough to support at least twice your body weight (you can swing from it). You can use it to pick up small objects or open compact containers. You can perform Perception (Taste) from up to four meters from the target." compset="Race" uniqueness="unique">
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Bonus" tag="Plus1"/>
+      <autotag group="Skill" tag="skAthlete"/>
+      <autotag group="Skill" tag="skDodge"/>
+      <autotag group="Skill" tag="skPercept"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Bonus" tag="Plus1"/>
+      <autotag group="Skill" tag="skAirVeh"/>
+      <autotag group="Skill" tag="skGrndVeh"/>
+      <autotag group="Skill" tag="skSpcVeh"/>
+      <autotag group="Skill" tag="skWatVeh"/>
+      </bootstrap>
+    <bootstrap thing="spPercTste"></bootstrap>
+    </thing>
+  <thing id="racKreely" name="Kreely" description="At three meters in length, the six-limbed Kreely are among the largest of the galaxy’s exoskeletal sophonts. Tis exoskeleton provides fantastic armor in the natural world, and it’s nearly as helpful in a world where frearms and other force multipliers are commonplace. Kreelies complement this defense with superior agility and speed, though they also tire quickly. Galactic culture holds great disdain for Kreely reproduction and child-rearing practices, because they sell a large number of their young to restaurateurs as delicacies.\n\n{b}Bonus Skill Ranks:{/b} +1 Athletics, +1 Dodge\n\n{b}Skill Check Penalties:{/b} You suﬀer a –1 penalty with Endurance skill checks. Apply this penaltyto your result afer all other modifers. \n\n{b}Special Rules:{/b} You have natural armor (+1 to Defense and Dodge and 5 damage reduction against melee attacks only)." compset="Race" uniqueness="unique">
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Bonus" tag="Plus1"/>
+      <autotag group="Skill" tag="skAthlete"/>
+      <autotag group="Skill" tag="skDodge"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Penalty" tag="Minus1"/>
+      <autotag group="Skill" tag="skEndure"/>
+      </bootstrap>
+    <bootstrap thing="armKreely"></bootstrap>
+    </thing>
+  <thing id="racPolyfl" name="Polyflorian" description="Arguably the most technologically dependent of all sophonts, polyﬂorians resemble terran gastropods, or Othlin sea-plasms. They don’t like being described this way, however, nor do they like being called “cyborgs” or “ﬂying snotstrosities.” However, they happily accept compliments on their heightened skill with many technologies.\n\n{b}Bonus Skill Ranks:{/b} +2 Computers, +1 Engineering, +1 to any Vehicle skill, +1 Research\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} You require a special chair to move around. If this chair is destroyed, damaged, or lost, then you have a hard time moving quickly. (All your Athletic checks have a -2 penalty until you manage to re-acquire a functioning chair.) On the plus side, each of these chairs can ﬂy and you may ft yours with up to two weapons (see page 196). However, each piece of your gear costs 1 additional Supplies because it must be modifed to ft your chair. Once attached to the chair, the weapon is a Stationed Weapon and thus subject to the Stationed Weapons skill. Other stats of the weapon do not change." compset="Race" uniqueness="unique">
+    <tag group="SkillBonus" tag="skCompute"/>
+    <tag group="SkillBonus" tag="skEng"/>
+    <tag group="SkillBonus" tag="skRes"/>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Bonus" tag="Plus1"/>
+      <autotag group="Skill" tag="skAirVeh"/>
+      <autotag group="Skill" tag="skGrndVeh"/>
+      <autotag group="Skill" tag="skSpcVeh"/>
+      <autotag group="Skill" tag="skWatVeh"/>
+      </bootstrap>
+    </thing>
+  <thing id="racQueltro" name="Queltro" description="No carbon-based sophonts owe quite as much to the geometry of the carbon atom as the queltro, whose four limbs are arranged in a tetrahedral. They’re only 125 centimeters tall but they can “run” by tumbling swifly and crazily across almost any terrain. Teir small, high-intake respiratory system prevents them from running quietly, however — the rhythmic slurp-gasp-gallop is a dead giveaway.\n\n{b}Bonus Skill Ranks:{/b} +1 Athletics, +1 Chemistry, +1 Dodge, +1 Explosives, +1 Melee\n\n{b}Skill Check Penalties:{/b} You suﬀer a –1 penalty with Endurance skill checks, a –2 penalty with Intimidate skill checks, a –1 penalty with Negotiate checks, and a –2 penalty with Stealth skill checks. Apply these penalties to your results afer all other modifers.\n\n{b}Special Rules:{/b} Any explosive that you create, use, or plant inﬂicts an extra 1d6 damage." compset="Race" uniqueness="unique">
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Bonus" tag="Plus1"/>
+      <autotag group="Skill" tag="skAthlete"/>
+      <autotag group="Skill" tag="skChem"/>
+      <autotag group="Skill" tag="skDodge"/>
+      <autotag group="Skill" tag="skExplsves"/>
+      <autotag group="Skill" tag="skMelee"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Penalty" tag="Minus1"/>
+      <autotag group="Skill" tag="skEndure"/>
+      <autotag group="Skill" tag="skNegot"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Penalty" tag="Minus2"/>
+      <autotag group="Skill" tag="skIntim"/>
+      <autotag group="Skill" tag="skStealth"/>
+      </bootstrap>
+    </thing>
+  <thing id="racKssthra" name="Kss’thrata" description="These fearsome, scaled pacifsts of the Tause system have jaws and a gait reminiscent of Earth’s Jurassic alpha predators, but despite this appearance they’re actually quite friendly. It is with great reluctance and epic regret that they’ve built their entire culture around warfare, largely to defend against their aggressive planetary neighbors, the ob’enn. \n\n{b}Bonus Skill Ranks:{/b} +1 Athletics, +1 Intimidate, +2 to any weapon skill\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} You have a claw attack (damage: Athletics + 2) and a headbutt attack (damage: Athletics + 2)." compset="Race" uniqueness="unique">
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Bonus" tag="Plus1"/>
+      <autotag group="Skill" tag="skAthlete"/>
+      <autotag group="Skill" tag="skIntim"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Bonus" tag="Plus2"/>
+      <autotag group="Skill" tag="skCarbine"/>
+      <autotag group="Skill" tag="skExplsves"/>
+      <autotag group="Skill" tag="skHvyWeap"/>
+      <autotag group="Skill" tag="skLongGun"/>
+      <autotag group="Skill" tag="skMelee"/>
+      <autotag group="Skill" tag="skPistol"/>
+      <autotag group="Skill" tag="skScatter"/>
+      <autotag group="Skill" tag="skStaWeap"/>
+      <autotag group="Skill" tag="skThrown"/>
+      </bootstrap>
+    <bootstrap thing="wpmKssthr"></bootstrap>
+    </thing>
+  <thing id="wpmKssthr" name="Kss’thrata Unarmed Strike" description="Kss’thrata have headbutt and claw attacks equal to Athletics+2." compset="Melee" uniqueness="unique">
+    <fieldval field="wpDamage" value="Athletics+2"/>
+    <fieldval field="shortname" value="Unarmed"/>
+    <tag group="Equipment" tag="Natural" name="Natural weapon/armor/etc." abbrev="Natural weapon/armor/etc."/>
+    </thing>
+  <thing id="racObenn" name="Ob’enn" description="By accident or design, these short, furry, congenitally-xenophobic creatures discovered space travel just a little too late to attack and exterminate their nearest neighbors, the kss’thrata. Tis resulted in open war and an arms race that spanned centuries. Most ob’enn are far too sociopathic to get by in mixed company. Some manage, but they’re usually seen as abominations by their families, and every other species that they meet still regards them with suspicion.\n\n{b}Bonus Skill Ranks:{/b} +1 to any four skills\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} You suﬀer a –1 penalty with social skill checks targeting non-ob’enn." compset="Race" uniqueness="unique">
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="Skills" tag="Mental"/>
+      <autotag group="Skills" tag="Physical"/>
+      <autotag group="Skills" tag="Social"/>
+      <autotag group="Bonus" tag="Plus1"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="Skills" tag="Mental"/>
+      <autotag group="Skills" tag="Physical"/>
+      <autotag group="Skills" tag="Social"/>
+      <autotag group="Bonus" tag="Plus1"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="Skills" tag="Mental"/>
+      <autotag group="Skills" tag="Physical"/>
+      <autotag group="Skills" tag="Social"/>
+      <autotag group="Bonus" tag="Plus1"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Skills" tag="Combat"/>
+      <autotag group="Skills" tag="Mental"/>
+      <autotag group="Skills" tag="Physical"/>
+      <autotag group="Skills" tag="Social"/>
+      <autotag group="Bonus" tag="Plus1"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Penalty" tag="Minus1"/>
+      <autotag group="Skills" tag="Social"/>
+      </bootstrap>
+    </thing>
+  <thing id="racUnioc" name="Unioc" description="With a single eye the size of a human’s entire head, this species enjoys sensory perception. Members of other species might assume that oth — or as everyone else calls them, the “unioc” — merely have very good vision but in fact they can also see into the near-infrared spectrum, and even in complete darkness (thanks to their massive orb doubling as an ear drum).\n\n{b}Bonus Skill Ranks:{/b} +1 Athletics, +1 Research, +1 Perception; you also gain the Perception (Sight) specialty at no cost\n\n{b}Skill Check Penalties:{/b} You suﬀer a –2 penalty\nwith Explosives skill checks. Apply this penalty\nto your result afer all other modifers.\n\n{b}Special Rules:{/b} None" compset="Race" uniqueness="unique">
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Bonus" tag="Plus1"/>
+      <autotag group="Skill" tag="skAthlete"/>
+      <autotag group="Skill" tag="skPercept"/>
+      <autotag group="Skill" tag="skRes"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Penalty" tag="Minus2"/>
+      <autotag group="Skill" tag="skExplsves"/>
+      </bootstrap>
+    </thing>
+
+    <thing id="racAmorph" name="Carbosilicate Amorph" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="2"/>
     <bootstrap thing="fRPlusSk2">
       <autotag group="Bonus" tag="Plus1"/>
