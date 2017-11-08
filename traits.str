@@ -381,7 +381,7 @@
   
     <!-- Track the ability on the actor -->
     <eval index="1" phase="Setup" priority="5000"><![CDATA[
-      ~ perform forward[Specialty.?]
+      perform forward[Specialty.?]
       ~ perform parent.assign[User.HasSpec]
       ]]></eval>
       
