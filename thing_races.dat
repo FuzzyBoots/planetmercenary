@@ -79,12 +79,12 @@
     
     <fieldval field="baseHealth" value="7"/>
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skAthlete] += 1
-    #traitbase[skEndure] += 1
-    ]]></eval>
-    
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skAthlete"/>
+      <autotag group="Skill" tag="skEndure"/>
+      <autotag group="Bonus" tag="Plus1"/>
+      </bootstrap>
+        
     </thing>
     
     <thing
@@ -99,16 +99,19 @@
     <!-- Add bite attack with Athletics damage -->
     <bootstrap thing="wpRilla"/>
     
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skAthlete] += 1
-    #traitbase[skEndure] += 1
-    #traitbase[skPercept] += 1
-    ]]></eval>
+    <bootstrap thing="spPercSmll"/>
     
-    <eval index="3" phase="Traits" priority="2002"><![CDATA[
-    #traitbonus[skNegot] -= 2
-    ]]></eval>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skPercept"/>
+      <autotag group="Skill" tag="skAthlete"/>
+      <autotag group="Skill" tag="skEndure"/>
+      <autotag group="Bonus" tag="Plus1"/>
+      </bootstrap>
+      
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skNegot"/>
+      <autotag group="Penalty" tag="Minus2"/>
+      </bootstrap>
     
     </thing>
     
@@ -124,15 +127,15 @@
     <!-- Add bite/claw attack with Athletics+2 damage -->
     <bootstrap thing="wpUrsus"/>
 
-    <!-- Define any script needed to apply changes to traits or other mechanisms-->
-    <eval index="1" phase="Setup" priority="4000"><![CDATA[
-    #traitbase[skAthlete] += 1
-    #traitbase[skEndure] += 1
-    #traitbase[skIntim] += 1
-    #traitbase[skMelee] += 1
-    #traitbase[skThrown] += 1
-    ]]></eval>
-    
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skMelee"/>
+      <autotag group="Skill" tag="skThrown"/>
+      <autotag group="Skill" tag="skIntim"/>
+      <autotag group="Skill" tag="skAthlete"/>
+      <autotag group="Skill" tag="skEndure"/>
+      <autotag group="Bonus" tag="Plus1"/>
+      </bootstrap>
+      
     </thing>
   
   <thing id="racEssper" name="Esspererin" description="Though their bodies only measure a meter in height, esspererin are exceptionally hardy. They can survive extreme heat and cold, require no air, and have light-collecting wings that unfurl to a span of four meters. Teir bodies have evolved over millions of years, harmoniously merging technology and biology, and this aﬀords them a strong aptitude with the inelegant mechanical creations of strictly organic sophonts. Too bad the Esspererin are such reckless tinkerers.\n\n{b}Bonus Skill Ranks:{/b} +1 Computers, +1 Dodge, +1 Engineering, +1 Mechanics; you also gain the Athletics (Flight) specialty at no cost\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} Draw a Mayhem card every time you roll a 6 on any die while making an Engineering or Mechanics check. Even if you roll more than one 6, you still only draw one Mayhem card. If you already draw a Mayhem card for any reason, draw only that one card; do not draw any more cards due to this rule. \nBecause of your small size, the only weapons you can use are pistols, carbines, and stationed weapons. Also, you can ﬂy and don’t need air.{br}{br}{b}Health:{/b} 5 + Endurance" compset="Race" uniqueness="unique">
