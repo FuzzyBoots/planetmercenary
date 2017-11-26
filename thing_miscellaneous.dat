@@ -109,6 +109,41 @@
       ]]></eval>
     </thing>
         
+  <!--thing
+    id="fRPlusSp"
+    name="Bonus Specialty"
+    compset="cmpsetSB"
+    description="Adds the selected specialty.">
+    <fieldval field="usrCandid1" value="component.Specialty"/>
+    <tag group="Hide" tag="Special"/>
+    <eval index="1" phase="PreTraits" priority="4900">
+      <before name="Calc trtFinal"/><![CDATA[
+      ~build the candidate expression out of our specialty tags
+      var specialties as string
+      specialties = tagids[Specialty.?, " | "]
+      var skilltypes as string
+      skilltypes = tagids[Skills.?, " | "]
+
+      var combined as string
+      if (tagis[Skills.?] <> 0) then
+        if (tagis[Skill.?] <> 0) then
+          combined = skills & " | " & skilltypes
+        else
+          combined = skilltypes
+        endif
+      else
+        combined = skills
+      endif
+      
+      ~ debug combined & ", " & empty(combined)
+      if (empty(combined) = 0) then
+        field[usrCandid1].text &= " & (" & combined & ")"
+      endif
+        
+      perform field[usrChosen1].chosen.field[trtBG].modify[+,bonus,"Background"]
+      ]]></eval>
+    </thing-->
+        
   <thing
     id="fRPlusSk2"
     name="Multiple Skill Bonuses"
