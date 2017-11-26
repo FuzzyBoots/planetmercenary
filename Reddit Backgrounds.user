@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="bckAcad" name="Academic / Professor" description="You used to try to discover the secrets of some obscure facet of the universe.\n\n{b}Bonus Skill Ranks:{/b} +2 Research, +2 History {i}or{/i} Experimental Sciences, +2 Economics {i}or{/i} Engineering" compset="Bckgrnd" uniqueness="unique">
+    <usesource source="srcReddBck" parent="UserParent" name="Reddit Background Traits"/>
+    <tag group="SkillBonus" tag="skRes"/>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Skill" tag="skEcon"/>
+      <autotag group="Skill" tag="skEng"/>
+      <autotag group="Bonus" tag="Plus2"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Bonus" tag="Plus2"/>
+      <autotag group="Skill" tag="skExpSci"/>
+      <autotag group="Skill" tag="skHistory"/>
+      </bootstrap>
+    </thing>
+  <thing id="bckBureau" name="Bureaucrat / Manager" description="You know that red tape? You used to cut it lengthways.\n\n{b}Bonus Skill Ranks:{/b} +2 Contracts {i}or{/i} Negotiate, +2 Intimidate, +2 Economics" compset="Bckgrnd" uniqueness="unique">
+    <usesource source="srcReddBck" parent="UserParent" name="Reddit Background Traits"/>
+    <tag group="SkillBonus" tag="skEcon"/>
+    <tag group="SkillBonus" tag="skIntim"/>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Bonus" tag="Plus2"/>
+      <autotag group="Skill" tag="skContract"/>
+      <autotag group="Skill" tag="skNegot"/>
+      </bootstrap>
+    </thing>
+  <thing id="bckAcct" name="Accountant / Business Sophont" description="Numbers are useful. If you know how to make them say the right thing, they can be even more useful. I mean, what is a decimal point worth between friends...?\n\n{b}Bonus Skill Ranks:{/b} +3 Economics, +3 Negotiate {i}or{/i} Deceive" compset="Bckgrnd" uniqueness="unique">
+    <usesource source="srcReddBck"/>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skEcon"/>
+      <autotag group="Bonus" tag="Plus3"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Skill" tag="skDeceive"/>
+      <autotag group="Skill" tag="skNegot"/>
+      <autotag group="Bonus" tag="Plus3"/>
+      </bootstrap>
+    </thing>
+  <thing id="bckExplore" name="Explorer" description="You have a drive to find new things by going to strange and obscure places.\n\n{b}Bonus Skill Ranks:{/b} +2 Endurance, +2 Athletics, +2 Xenobiology" compset="Bckgrnd" uniqueness="unique">
+    <tag group="SkillBonus" tag="skAthlete"/>
+    <tag group="SkillBonus" tag="skEndure"/>
+    <tag group="SkillBonus" tag="skXeno"/>
+    </thing>
+  <thing id="bckMech" name="Mechanic" description="Inanimate machines seem to love you!\n\n{b}Bonus Skill Ranks:{/b} +2 Mechanic, +2 Engineering, 1 Mechanic speciality (Build, Jury-rig, Repair)" compset="Bckgrnd" uniqueness="unique">
+    <tag group="SkillBonus" tag="skEng"/>
+    <tag group="SkillBonus" tag="skMech"/>
+    </thing>
+  </document>
