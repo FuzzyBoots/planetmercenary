@@ -42,11 +42,14 @@
     ismultiline="yes">
       <labeltext><![CDATA[
         var skillText as string
-        foreach pick in hero from Skill
-          foreach pick in eachpick.gizmo from Specialty
-            ~ debug eachpick.field[spcTabName].text
-            skillText = skillText & eachpick.field[spcTabName].text & "{br}"
-            nexteach
+        
+        var specIds as string
+        specIds = hero.tagids[Specialty.?, " | "]
+        debug "Hero Specialty tags: " & specIds
+        
+        foreach thing in Specialty where specIds
+          debug "Specialty for summary: " & eachthing.field[spcTabName].text
+          skillText = skillText & eachthing.field[spcTabName].text & "{br}"
           nexteach
           
         @text = skillText

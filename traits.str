@@ -142,35 +142,7 @@
         perform eachpick.field[trtBG].modify[+,2,"Background trait"]
         nexteach
         ]]></eval>
-        
-    <eval index="2" phase="Setup" priority="3001" name="Add BG Specializations">
-      <![CDATA[
-      var myId as string
-      myId = tagids[Specialty.?," & "]
-      ~ debug "myID: " & myId
-      
-      debug "Hero Picks: "
-      foreach pick in container
-        debug eachpick.field[name].text
-        nexteach
-      
-      foreach pick in hero from Specialty
-        debug eachpick.field[spcTabName].text
-        nexteach
-      
-      foreach thing in Specialty where myId
-        var indID as string
-        indID = eachthing.idstring
-        var skillIDs as string
-        debug "indID: " & indID
-        
-        skillIDs = eachthing.tagids[Skill.?, " & "]
-        debug "skillIDs: " & skillIDs
-        foreach thing in Skill where skillIDs
-          debug "Add " & indID & " to skill " & eachthing.idstring
-          nexteach
-        nexteach
-        ]]></eval>
+    
     </component>
 
   <component 
@@ -589,7 +561,6 @@
     <compref component="Skill"/>
     <compref component="Trait"/>
     <compref component="Domain"/>
-    <compref component="CanAdvance"/>
     </compset>
 
   <!-- Ability - all abilities derive from this compset -->

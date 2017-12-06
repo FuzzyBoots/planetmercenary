@@ -17,8 +17,6 @@
       candidatepick="advDetails"
       candidatefield="advTagexpr"
       descwidth="350">
-      <!-- preclude any trait that has already been added via advancement -->
-      <denytag usehero="yes" container="IsAdvance" thing="IsAdvance"/>
       <autotag group="Helper" tag="Displace"/>
       <autotag group="Advance" tag="Gizmo"/>
       <chosen><![CDATA[

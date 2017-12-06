@@ -15,9 +15,9 @@
       candidatefield="SpecExpr"
       addpick="SpecHelp">
       
-      <!--titlebar><![CDATA[
+      <titlebar><![CDATA[
         @text = "Add a Specialty"
-        ]]></titlebar-->
+        ]]></titlebar>
       <!--headertitle><![CDATA[
         @text = "Specialty"
         ]]></headertitle-->

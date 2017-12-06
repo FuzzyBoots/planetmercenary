@@ -13,7 +13,57 @@
 
 <document signature="Hero Lab Data">
 
-
+  <!-- smBG portal - Label with the chosen Background package -->
+  <portal
+    id="smBG"
+    style="lblSummary">
+    <label>
+      <labeltext><![CDATA[
+        var bgName as string
+        bgName = "None"
+        foreach pick in hero from Bckgrnd
+          bgName = eachpick.livename
+          nexteach
+                  
+        @text = "{b}BG: {/b}" & bgName
+        ]]></labeltext>
+        </label>
+    </portal>
+    
+  <!-- smCP portal - Label with the chosen Command Package -->
+  <portal
+    id="smCP"
+    style="lblSummary">
+    <label>
+      <labeltext><![CDATA[
+        var cpName as string
+        cpName = "None"
+        foreach pick in hero from CmdPckge
+          cpName = eachpick.livename
+          nexteach
+        
+        @text = "{b}CP: {/b}" & cpName
+        ]]></labeltext>
+        </label>
+    </portal>
+    
+  <!-- smRace portal - Label with the chosen Sophont package -->
+  <portal
+    id="smRace"
+    style="lblSummary">
+    <label>
+      <labeltext><![CDATA[
+        var raceName as string
+        raceName = "None"
+        foreach pick in hero from Race
+          raceName = eachpick.livename
+          nexteach
+          
+        @text = "{b}Soph: {/b}" & raceName
+        ]]></labeltext>
+        </label>
+    </portal>
+  
   <!-- smDerived portal - table of derived traits
   -->
   <portal
@@ -77,10 +127,15 @@
   <layout
     id="smBasics">
     <portalref portal="smDerived"/>
+    <portalref portal="smBG"/>
+    <portalref portal="smCP"/>
+    <portalref portal="smRace"/>
 
     <position><![CDATA[
       ~position and size the tables to span the full layout
-      ~perform portal[smBG].autoplace
+      perform portal[smBG].autoplace
+      perform portal[smCP].autoplace
+      perform portal[smRace].autoplace
       perform portal[smDerived].autoplace
       ]]></position>
 

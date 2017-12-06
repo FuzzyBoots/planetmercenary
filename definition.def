@@ -177,6 +177,18 @@ These data files provide a framework for Hypernode Press's Planet Mercenary game
       if (#resleft[resCP] <> 0) then
         @message &= bullet & "Character points must be assigned for the character.{br}"
         endif
+      
+      if (empty(#childname[valRace]) = 0) then
+        @message &= bullet & "A sophont type mut be assigned to the character.{br}"
+        endif
+        
+      if (empty(#childname[valRace]) = 0) then
+        @message &= bullet & "A sophont type mut be assigned to the character.{br}"
+        endif
+        
+      if (empty(#childname[valRace]) = 0) then
+        @message &= bullet & "A sophont type mut be assigned to the character.{br}"
+        endif
       ]]></canadvance>
 
     <!-- Handle the transition to/from advancement mode -->
