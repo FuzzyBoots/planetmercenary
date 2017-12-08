@@ -349,6 +349,9 @@
     
 	  <identity group="Specialty"/>
     
+	  <!-- All advancements need to displace themselves to the hero -->
+      <displace target="hero">TRUE</displace>
+	
 	  <tag group="SpecialTab" tag="Specialty"/>
   
     <!-- Track the ability on the actor -->
