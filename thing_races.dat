@@ -151,6 +151,7 @@
     </thing>
   <thing id="racFobott" name="Fobott’r" description="For centuries the four-armed, bipedal Fobott’r were the soldier-slaves of the rich and powerful. They have long since cast off those shackles, and many of them now enjoy proftable careers as professionals-at-arms. Contrary to cultural biases, fobott’r are not all thieves, and pirates. Just a few (billion) of them.\n\n{b}Bonus Skill Ranks:{/b} +1 Carbines, +1 Perception, +1 Pistols; you also gain the Perception (Hearing) specialty at no cost\n\n{b}Skill Check Penalties:{/b} You suffer a –1 penalty with Computers skill checks. Apply this penalty to your result after all other modifers.\n\n{b}Special Rules{/b}: You may fire two weapons with a single action, though you suffer a –2 penalty with each of the two checks. Alternatively, you may reload one weapon and fire one weapon as a single action (these need not be the same weapon). If you and a friendly fobott’r are in direct physical contact, either of you or both of you may fire two weapons with a single action, and each of the two checks only suffers a -1 penalty. If you are next to a friendly fobott’r and either of you uses this rule, attacks against either of you gain a +2 to the roll.{br}{br}{b}Health:{/b} 7 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="7"/>
+    <!--fieldval field="hero.acHands" value="4"/-->
     <bootstrap thing="fRPlusSk2">
       <autotag group="Bonus" tag="Plus1"/>
       <autotag group="Skill" tag="skCarbine"/>

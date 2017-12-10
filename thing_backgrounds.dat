@@ -5,6 +5,7 @@
 <document signature="Hero Lab Data">
 
   <thing id="bckCrime" name="Crime Lord" description="You probably didn’t get your lawless hands very dirty, but you definitely know some people who did — and they did it on your orders.\n\n{b}Bonus Skill Ranks:{/b} +2 Deceive, +2 Economics {i}or{/i} History, +2 Inspire {i}or{/i} Negotiate" compset="Bckgrnd" uniqueness="unique">
+
     <tag group="SkillBonus" tag="skDeceive"/>
     
     <bootstrap thing="fRPlusSk">
@@ -34,7 +35,9 @@
     </thing>
     
   <thing id="bckMilGr" name="Military (Infantry Grunt)" description="You served as an enlisted soldier in the infantry. You know how to take orders but you also know a good order when you hear one. You kept moving in the right direction even when a clueless lieutenant froze up.\n\n{b}Bonus Skill Ranks:{/b} +2 Dodge, +4 to any 1 Combat skill {i}or{/i} +2 to any 2 Combat skills" compset="Bckgrnd" uniqueness="unique">
+
     <tag group="SkillBonus" tag="skDodge"/>
+
     <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Combat"/>
       </bootstrap>

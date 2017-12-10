@@ -20,7 +20,7 @@
     <table_fixed
       component="Skill"
       showtemplate="smTrait"
-      scrollable="no"
+      scrollable="yes"
       alwaysupdate="yes">
       <list><![CDATA[
         Helper.NotZero
@@ -37,8 +37,8 @@
   -->
   <portal
     id="smSpec"
-    style="lblSummary">
-    <label
+    style="tblInvisSm">
+    <!--label
     ismultiline="yes">
       <labeltext><![CDATA[
         var skillText as string
@@ -54,11 +54,63 @@
           
         @text = skillText
         ]]></labeltext>
-        </label>
+        </label-->
+    <table_fixed
+      component="Specialty"
+      showtemplate="smSpecTemp"
+      scrollable="yes"
+      alwaysupdate="yes">
+      
+      <headertitle><![CDATA[
+      @text = #summtitle_decoration[] & " Specialties " & #summtitle_decoration[] 
+      ]]></headertitle>
+      </table_fixed>
+      
     </portal>
+    
+    <template
+      id="smSpecTemp"
+      name="Specialty Pick"
+      compset="Specialty"
+      marginhorz="3"
+      marginvert="1">
 
+      <portal
+        id="name"
+        style="lblSmlLeft">
+        <label>
+          <labeltext><![CDATA[
+            @text = field[spcTabName].text
+            ]]></labeltext>
+          </label>
+        </portal>
+      
+      <portal
+        id="delete"
+        style="actDelete"
+        tiptext="Click to delete this item">
+        <action
+          action="delete">
+          </action>
+        </portal>
 
-  <!-- smSkill template
+      <position><![CDATA[
+      
+        ~set up our height based on our tallest portal
+        height = portal[name].height
+
+        ~if this is a "sizing" calculation, we're done
+        doneif (issizing <> 0)
+
+        ~position our tallest portal at the top
+        portal[name].top = 0
+        portal[name].left = 0
+        portal[name].width = 200
+        
+        ]]></position>
+      </template>
+
+    <!-- smSkill template
         This template shows the names of each special ability ability, providing
         mouse-over behavior to show the details of each ability.
   -->

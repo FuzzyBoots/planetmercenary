@@ -89,7 +89,7 @@
       ~if we have no more than one set of armor equipped, we're good
       validif (hero.tagcount[Armor.?] <= 1)
 
-      ~mark associaated tabs as invalid
+      ~mark associated tabs as invalid
       container.panelvalid[armory] = 0
       ]]></evalrule>
 
