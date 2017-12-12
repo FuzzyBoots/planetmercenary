@@ -146,9 +146,32 @@
         </menu_things>
       </portal>
     
+    <portal
+      id="specChoose"
+      style="chsNormal">
+      <chooser_table
+        component="Specialty"
+        choosetemplate="SimpleItem">
+        <chosen><![CDATA[
+          if (@ispick = 0) then
+            @text = "{text clrwarning}Select Specialty"
+          else
+            @text = field[name].text
+            endif
+          ]]></chosen>
+        <titlebar><![CDATA[
+          @text = "Choose a specialty"
+          ]]></titlebar>
+        </chooser_table>
+      </portal>
+    
     <position><![CDATA[
       if (field[usrCandid1].isempty <> 0) then
         portal[thinglist].visible = 0
+      endif
+      
+      if (field[usrCandid2].isempty <> 0) then
+        portal[specChoose].visible = 0
       endif
       
       ~set up our height; our width is pre-initialized for us
@@ -159,6 +182,7 @@
 
       ~position our tallest portal at the top
       portal[thinglist].top = 0
+      portal[specChoose].top = 0
 
       ~center the other portals on the tallest one
       perform portal[name].centeron[vert,thinglist]
@@ -166,12 +190,17 @@
       portal[name].left = 0
       if (portal[thinglist].visible <> 0) then
         portal[name].width = 100
+      elseif (portal[specChoose].visible <> 0) then
+        portal[name].width = 100
       else
         portal[name].width = width
       endif
       
       portal[thinglist].left = portal[name].right + 3
       portal[thinglist].width = width - portal[name].width - 3
+      
+      portal[specChoose].left = portal[name].right + 3
+      portal[specChoose].width = width - portal[name].width - 3
     ]]></position>
     
     </template>

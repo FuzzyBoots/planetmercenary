@@ -16,7 +16,7 @@
   <!-- smBG portal - Label with the chosen Background package -->
   <portal
     id="smBG"
-    style="lblSummary">
+    style="lblLeft">
     <label>
       <labeltext><![CDATA[
         var bgName as string
@@ -33,7 +33,7 @@
   <!-- smCP portal - Label with the chosen Command Package -->
   <portal
     id="smCP"
-    style="lblSummary">
+    style="lblLeft">
     <label>
       <labeltext><![CDATA[
         var cpName as string
@@ -50,7 +50,7 @@
   <!-- smRace portal - Label with the chosen Sophont package -->
   <portal
     id="smRace"
-    style="lblSummary">
+    style="lblLeft">
     <label>
       <labeltext><![CDATA[
         var raceName as string

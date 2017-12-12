@@ -17,9 +17,14 @@
   <portal
   id="ftSkills"
   style="tblNormal">
-    <table_fixed component="FTSkill" showtemplate="FTSPick">
+    <!--table_fixed component="FTSkill" showtemplate="FTSPick">
       <headertitle>
         @text="Fireteam Skills"
+      </headertitle>
+    </table_fixed-->
+    <table_fixed component="FTMember" showtemplate="FTMPick">
+      <headertitle>
+        @text="Fireteam Members"
       </headertitle>
     </table_fixed>
   </portal>
@@ -50,12 +55,12 @@
       </portal>
     
     <portal
-    id="name"
-    style="editNormal">
-    <edit
-      field="ftName">
-      </edit>
-    </portal>
+      id="name"
+      style="editNormal">
+      <edit
+        field="ftName">
+        </edit>
+      </portal>
 
     <portal
       id="delete"
@@ -105,7 +110,7 @@
       ]]></position>
     </template>
   
-  <template
+  <!--template
     id="FTSPick"
     name="Fireteam Skill Pick"
     compset="FTSkill"
@@ -164,7 +169,7 @@
      
       portal[value].left = 100
       ]]></position>
-    </template>
+    </template-->
 
 <layout
   id="ftSkills">

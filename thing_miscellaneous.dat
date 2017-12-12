@@ -109,7 +109,7 @@
       ]]></eval>
     </thing>
         
-  <!--thing
+  <thing
     id="fRPlusSp"
     name="Bonus Specialty"
     compset="cmpsetSB"
@@ -119,20 +119,20 @@
     <eval index="1" phase="PreTraits" priority="4900">
       <before name="Calc trtFinal"/><![CDATA[
       ~build the candidate expression out of our specialty tags
-      var specialties as string
-      specialties = tagids[Specialty.?, " | "]
-      var skilltypes as string
-      skilltypes = tagids[Skills.?, " | "]
+      var specs as string
+      specs = tagids[Specialty.?, " | "]
+      var skills as string
+      skills = tagids[Skill.?, " | "]
 
       var combined as string
-      if (tagis[Skills.?] <> 0) then
-        if (tagis[Skill.?] <> 0) then
-          combined = skills & " | " & skilltypes
+      if (tagis[Skill.?] <> 0) then
+        if (tagis[Specialty.?] <> 0) then
+          combined = skills & " | " & specs
         else
-          combined = skilltypes
+          combined = skills
         endif
       else
-        combined = skills
+        combined = specs
       endif
       
       ~ debug combined & ", " & empty(combined)
@@ -140,9 +140,8 @@
         field[usrCandid1].text &= " & (" & combined & ")"
       endif
         
-      perform field[usrChosen1].chosen.field[trtBG].modify[+,bonus,"Background"]
       ]]></eval>
-    </thing-->
+    </thing>
         
   <thing
     id="fRPlusSk2"
@@ -194,6 +193,7 @@
       endif
       
       ]]></eval>
+    <child entity="entSpec" />
     </thing>  
         
   <!-- Character point resource to track the pool of character points being spent -->

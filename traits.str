@@ -159,21 +159,42 @@
       </field>
     
     <field
+      id="ftPhysical"
+      name="Fireteam physical skill"
+      type="user">
+      </field>
+    
+    <field
+      id="ftMental"
+      name="Fireteam mental skill"
+      type="user">
+      </field>
+      
+    <field
+      id="ftSocial"
+      name="Fireteam social skill"
+      type="user">
+      </field>
+      
+    <field
+      id="ftCombat"
+      name="Fireteam combat skill"
+      type="user">
+      </field>
+    
+    <field
+      id="ftDamage"
+      name="Fireteam damage"
+      type="user">
+      </field>
+    
+    <field
       id="ftNotes"
       name="Fireteam notes"
       type="user">
       </field>    
     </component>
-    
-    
-  <!-- Fireteam Skill component -->
-  <component
-    id="FTSkill"
-    name="Fireteam Skill"
-    autocompset="no"
-    panellink="ftPanel">
-    </component>
-
+  
   <!-- Skill component
         Each skill derives from this component
   -->
@@ -548,14 +569,6 @@
   -->
 
   <!-- No compsets are auto-defined for the component -->
-
-  <!-- Fireteam Skill - all fireteam skills derive from this compset -->
-  <compset
-    id="FTSkill"
-    forceunique="yes">
-    <compref component="FTSkill"/>
-    <compref component="Trait"/>
-    </compset>
 
   <!-- Skill - all skills derive from this compset -->
   <compset

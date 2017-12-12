@@ -57,6 +57,26 @@
       </inputthing>
       
       <inputthing
+      name="Specialty Choices"
+      helptext="Add one or more specialty choices that the characters can pick.">
+      <it_bootcustom compset="cmpsetSB">
+        <match>thingid.fRPlusSp</match>
+        <inputthing
+          name="Specialties"
+          helptext="Pick the specialties that can be chosen for this bonus.">
+          <it_taglist group="Specialty" tag="?" dynamic="no"/>
+          </inputthing>
+          
+        <inputthing
+          name="Skill Types"
+          helptext="Pick the skill whose specialties that can be chosen for this bonus.">
+          <it_taglist group="Skill" tag="?" dynamic="no"/>
+          </inputthing>
+          
+        </it_bootcustom>
+      </inputthing>
+      
+      <inputthing
       name="Skill Bonuses"
       helptext="Add one or more skills that receive automatic bonuses.">
       <it_bootcustom compset="cmpsetSB">

@@ -14,7 +14,7 @@
     <fieldval field="trtAbbrev" value="Car"/>
 
     <tag group="Skills" tag="Combat"/>
-      <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Dodge Skill -->
@@ -28,7 +28,7 @@
     <fieldval field="trtBase" value="5"/>
     
     <tag group="Skills" tag="Combat"/>
-      <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
 
   <!-- Explosives Skill -->
@@ -41,7 +41,7 @@
     <fieldval field="trtAbbrev" value="Exp"/>
 
     <tag group="Skills" tag="Combat"/>
-      <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Heavy Weapons Skill -->
@@ -54,7 +54,7 @@
     <fieldval field="trtAbbrev" value="Hvy"/>
 
     <tag group="Skills" tag="Combat"/>
-      <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Long Gun Skill -->
@@ -67,7 +67,7 @@
     <fieldval field="trtAbbrev" value="Lng"/>
 
     <tag group="Skills" tag="Combat"/>
-      <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
   
   <!-- Melee Skill -->
@@ -80,7 +80,7 @@
     <fieldval field="trtAbbrev" value="Mel"/>
 
     <tag group="Skills" tag="Combat"/>
-      <child entity="entSpec" />
+    <child entity="entSpec" />
     </thing>
 
   <!-- Pistols Skill -->
