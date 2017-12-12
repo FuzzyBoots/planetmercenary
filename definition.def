@@ -178,17 +178,18 @@ These data files provide a framework for Hypernode Press's Planet Mercenary game
         @message &= bullet & "Character points must be assigned for the character.{br}"
         endif
       
-      if (empty(#childname[valRace]) = 0) then
+	  if (empty(#childname[valRace]) = 0) then
         @message &= bullet & "A sophont type mut be assigned to the character.{br}"
         endif
         
-      if (empty(#childname[valRace]) = 0) then
-        @message &= bullet & "A sophont type mut be assigned to the character.{br}"
+      if (empty(#childname[valCmd]) = 0) then
+        @message &= bullet & "A Command Package mut be assigned to the character.{br}"
         endif
         
-      if (empty(#childname[valRace]) = 0) then
-        @message &= bullet & "A sophont type mut be assigned to the character.{br}"
+      if (empty(#childname[valBG]) = 0) then
+        @message &= bullet & "A Background mut be assigned to the character.{br}"
         endif
+        
       ]]></canadvance>
 
     <!-- Handle the transition to/from advancement mode -->

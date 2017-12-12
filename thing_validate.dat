@@ -30,6 +30,34 @@
 
     </thing>
 
+	<thing
+    id="valBG"
+    name="Background"
+    compset="Simple">
+    <tag group="Helper" tag="Bootstrap"/>
+
+    <!-- Make sure that we have a background selected -->
+    <evalrule index="1" phase="Validate" priority="8000" message="Must be selected"><![CDATA[
+      ~if we have a race selected, we're good
+      validif (hero.tagis[Bckgrnd.?] <> 0)
+      ]]></evalrule>
+
+    </thing>
+
+	<thing
+    id="valCmd"
+    name="Command Package"
+    compset="Simple">
+    <tag group="Helper" tag="Bootstrap"/>
+
+    <!-- Make sure that we have a race selected -->
+    <evalrule index="1" phase="Validate" priority="8000" message="Must be selected"><![CDATA[
+      ~if we have a command package selected, we're good
+      validif (hero.tagis[CmdPckge.?] <> 0)
+      ]]></evalrule>
+
+    </thing>
+
 
   <!-- Character points thing for validation reporting -->
   <thing

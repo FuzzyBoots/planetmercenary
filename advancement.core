@@ -198,9 +198,6 @@
   <!-- Define various component sets associated with the components defined above.
   -->
 
-  <!-- The "CanAdvance" compset is auto-defined for the component -->
-
-
   <!-- Advance - all advances utilize this compset -->
   <compset
     id="Advance">
