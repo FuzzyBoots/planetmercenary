@@ -412,8 +412,8 @@
   <group
     id="SpecialTab"
     sequence="explicit">
-    <value id="Ability"    order="10"/>
-	  <value id="Specialty"  order="30"/>
+    <value id="Ability"    order="10"/>   
+    <value id="Specialty"  order="30"/>
     <value id="RiPPs"      order="50"/>
     <value id="Unknown"    order="80"/>
     </group>

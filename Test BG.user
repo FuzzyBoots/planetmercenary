@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="bckTestBG" name="Test BG" compset="Bckgrnd" uniqueness="unique">
+    <bootstrap thing="fRPlusSp">
+      <autotag group="Specialty" tag="spEngArch"/>
+      <autotag group="Specialty" tag="spHvyBeam"/>
+      <autotag group="Specialty" tag="spPistBeam"/>
+      </bootstrap>
+    </thing>
+  </document>

@@ -129,7 +129,40 @@
       ]]></position>
     </template>
 
-  <layout
+  <template
+    id="SpecPick3"
+    name="Specialty Pick (with skill)"
+    compset="Specialty"
+    marginhorz="3"
+    marginvert="1">
+
+    <portal
+      id="name"
+      style="lblSmall">
+      <label>
+        <labeltext><![CDATA[
+          @text = field[spcTabName].text
+          ]]></labeltext>
+        </label>
+      </portal>
+    
+    <position><![CDATA[
+    
+      ~set up our height based on our tallest portal
+      height = portal[name].height
+
+      ~if this is a "sizing" calculation, we're done
+      doneif (issizing <> 0)
+
+      ~position our tallest portal at the top
+      portal[name].top = 0
+      portal[name].left = 0
+      portal[name].width = 150
+      
+      ]]></position>
+    </template>
+	
+    <layout
     id="laySpec"
     marginvert="4">
     <portalref portal="prtSpec" taborder="20"/>

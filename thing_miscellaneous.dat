@@ -114,7 +114,7 @@
     name="Bonus Specialty"
     compset="cmpsetSB"
     description="Adds the selected specialty.">
-    <fieldval field="usrCandid1" value="component.Specialty"/>
+    <fieldval field="usrCandid2" value="component.Specialty"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4900">
       <before name="Calc trtFinal"/><![CDATA[
@@ -135,13 +135,26 @@
         combined = specs
       endif
       
-      ~ debug combined & ", " & empty(combined)
-      if (empty(combined) = 0) then
-        field[usrCandid1].text &= " & (" & combined & ")"
-      endif
-        
+	  var myId as string
+      myId = combined
+      
+      call SetSpcExpr
+	  
       ]]></eval>
-    </thing>
+    
+	<!-- set the appropriate candidate expression -->
+    <eval index="4" phase="Final" priority="1000" name="SpecHelp Expr">
+      <![CDATA[
+      
+      var myId as string
+      myId = tagids[Skill.sk?," & "]
+      
+      call SetSpcExpr
+      ]]></eval>
+    
+	  <child entity="entSpec" />
+    
+	</thing>
         
   <thing
     id="fRPlusSk2"
@@ -193,7 +206,6 @@
       endif
       
       ]]></eval>
-    <child entity="entSpec" />
     </thing>  
         
   <!-- Character point resource to track the pool of character points being spent -->

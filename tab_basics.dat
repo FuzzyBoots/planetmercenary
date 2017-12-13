@@ -146,12 +146,14 @@
         </menu_things>
       </portal>
     
-    <portal
+	<portal
       id="specChoose"
       style="chsNormal">
       <chooser_table
         component="Specialty"
-        choosetemplate="SimpleItem">
+        choosetemplate="SpecPick3"
+		candidatepick="SpecHelp"
+        candidatefield="SpecExpr">
         <chosen><![CDATA[
           if (@ispick = 0) then
             @text = "{text clrwarning}Select Specialty"
