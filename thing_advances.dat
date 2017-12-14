@@ -20,7 +20,7 @@
   -->
   <thing
     id="advSkill"
-    name="Increase Skill"
+    name="Increase Skills"
     compset="Advance"
     description="Select three skills to increase by one.">
     <fieldval field="advAction" value="Increase Skill"/>
