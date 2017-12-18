@@ -577,6 +577,7 @@
     <compref component="Skill"/>
     <compref component="Trait"/>
     <compref component="Domain"/>
+    <compref component="CanAdvance"/>
     </compset>
 
   <!-- Ability - all abilities derive from this compset -->

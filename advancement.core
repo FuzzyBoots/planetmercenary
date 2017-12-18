@@ -20,6 +20,67 @@
     <value id="Notation"/>    <!-- Advancement provides place for a notation by the user (like a domain) -->
     </group>
 
+  <!-- CanAdvance component
+        Each attribute and skill that can be advanced derives from this component
+  -->
+  <component
+    id="CanAdvance"
+    name="Can Advance"
+    ispublic="no">
+
+    <!-- Each advancement needs its own identity tag to support denial of duplicate advancements -->
+    <identity group="IsAdvance"/>
+
+    <!-- Each advancement needs its own identity tag to restrict enhancement to existing advances -->
+    <identity group="CanAdvance"/>
+
+    <!-- All advancements need to displace themselves to the hero -->
+    <displace target="hero">Helper.Displace</displace>
+
+    <!-- Forward all advancement tags up to the containing gizmo.
+        NOTE! Only do this when we're within an advancement gizmo and NOT the hero.
+        -->
+    <eval index="1" phase="Setup" priority="3000"><![CDATA[
+      if (tagis[Advance.Gizmo] <> 0) then
+        perform forward[IsAdvance.?,origin]
+        endif
+      ]]></eval>
+
+    <!-- Forward the advancement allowed tag up to the hero -->
+    <eval index="2" phase="Setup" priority="3000"><![CDATA[
+      perform hero.setidentity[CanAdvance]
+      ]]></eval>
+
+    <!-- If this thing is unique, forward its identity advancement tag to the hero
+        NOTE! This is needed to enable deny tags so we avoid adding an existing trait again.
+        NOTE! We only need to do this for user-added things.
+        -->
+    <eval index="3" phase="Setup" priority="3000"><![CDATA[
+      if (isunique <> 0) then
+        if (isuser <> 0) then
+          perform hero.setidentity[IsAdvance]
+          endif
+        endif
+      ]]></eval>
+
+    <!-- If this is an increase, add one to the trait, and subtract one for a decrease -->
+    <eval index="4" phase="Effects" priority="1000"><![CDATA[
+      ~we only worry about this on actual advances - not traits added at creation
+      doneif (tagis[Advance.Gizmo] = 0)
+
+      ~apply any appropriate increase or decrease for the linked trait
+      ~Note: This pick is a child of the gizmo and our parent pick is the actual "Advance"
+      ~       pick that contains the appopriate "Advance" tag, so be sure to check there.
+      ~Note: Since the advancement is displaced to the hero, it's "parent" is *not* the
+      ~       gizmo, so we must explicitly reference through the "origin" container.
+      if (origin.parent.tagis[Advance.Increase] > 0) then
+        linkage[basis].field[trtBonus].value += 1
+      elseif (origin.parent.tagis[Advance.Decrease] > 0) then
+        linkage[basis].field[trtBonus].value -= 1
+        endif
+      ]]></eval>
+
+    </component>
 
   
   <!-- Advance component
