@@ -151,10 +151,8 @@
       style="chsNormal">
       <chooser_table
         component="Specialty"
-        choosetemplate="SpecPick3"
-		candidatepick="SpecHelp"
-        candidatefield="SpecExpr">
-        <chosen><![CDATA[
+        choosetemplate="SpecPick3">
+		<chosen><![CDATA[
           if (@ispick = 0) then
             @text = "{text clrwarning}Select Specialty"
           else

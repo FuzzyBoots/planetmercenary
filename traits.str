@@ -332,11 +332,6 @@
         perform assign[Helper.NotZero]
         endif
       ]]></eval>
-      
-    <!-- Track the specialty on the actor -->
-    <eval index="7" phase="Setup" priority="5010"><![CDATA[
-      perform forward[Specialty.?]
-      ]]></eval>
     
     </component>
 
@@ -385,8 +380,12 @@
     <eval index="2" phase="Traits" priority="10000">
       <before name="Calc resLeft"/>
       <after name="Bound trtUser"/><![CDATA[
-      ~if this speciality wasn't added by the user (as with a Background trait), skip it entirely
+      ~if this specialty wasn't added by the user (as with a Background trait), skip it entirely
       doneif (isuser = 0)
+	  ~doneif (origin.ishero = 0)
+	  doneif (tagis[Advance.Gizmo] <> 0)
+	  
+	  debug field[spcTabName].text & " isuser = " & isuser
 
       ~adjust the resource appropriately
       hero.child[resCP].field[resSpent].value += 2

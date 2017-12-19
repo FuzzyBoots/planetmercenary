@@ -179,15 +179,15 @@ These data files provide a framework for Hypernode Press's Planet Mercenary game
         endif
       
       if (empty(#childname[valRace]) = 0) then
-        @message &= bullet & "A sophont type mut be assigned to the character.{br}"
+        ~ @message &= bullet & "A sophont type mut be assigned to the character.{br}"
         endif
         
       if (empty(#childname[valRace]) = 0) then
-        @message &= bullet & "A sophont type mut be assigned to the character.{br}"
+        ~ @message &= bullet & "A sophont type mut be assigned to the character.{br}"
         endif
         
       if (empty(#childname[valRace]) = 0) then
-        @message &= bullet & "A sophont type mut be assigned to the character.{br}"
+        ~ @message &= bullet & "A sophont type mut be assigned to the character.{br}"
         endif
       ]]></canadvance>
 
