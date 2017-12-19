@@ -40,12 +40,98 @@
     style="chsNormal"
     width="275">
     <chooser_table
-      component="none"
+      component="Skill"
       choosetemplate="advBoost"
       choosepicks="hero"
       candidatepick="advDetails"
       candidatefield="advTagexpr"
       descwidth="350">
+      <!-- only traits that have already been added to the hero can be advanced -->
+      <needtag usehero="yes" container="CanAdvance" thing="CanAdvance"/>
+      <autotag group="Advance" tag="Gizmo"/>
+      <chosen><![CDATA[
+        if (@ispick = 0) then
+          @text = "{text clrwarning}Select Trait to Boost"
+        else
+          @text = "Boost: " & field[name].text
+          endif
+        ]]></chosen>
+      <titlebar><![CDATA[
+        @text = "Choose the Existing Trait to Boost"
+        ]]></titlebar>
+      <description><![CDATA[
+        ~ If we've failed any pre-requisites, get the info here
+        var prereqs as string
+        var use_hero as number
+        use_hero = 1
+        call Prereqs
+        @text = prereqs
+
+        ~append our description
+        var descript as string
+        call Descript
+        @text &= descript
+        ]]></description>
+      </chooser_table>
+    </portal>
+
+
+  <!-- advBoost chooser -->
+  <portal
+    id="advBoost2"
+    style="chsNormal"
+    width="275">
+    <chooser_table
+      component="Skill"
+      choosetemplate="advBoost"
+      choosepicks="hero"
+      candidatepick="advDetails"
+      candidatefield="advTagexpr"
+      descwidth="350">
+      <!-- only traits that have already been added to the hero can be advanced -->
+      <needtag usehero="yes" container="CanAdvance" thing="CanAdvance"/>
+      <autotag group="Advance" tag="Gizmo"/>
+      <chosen><![CDATA[
+        if (@ispick = 0) then
+          @text = "{text clrwarning}Select Trait to Boost"
+        else
+          @text = "Boost: " & field[name].text
+          endif
+        ]]></chosen>
+      <titlebar><![CDATA[
+        @text = "Choose the Existing Trait to Boost"
+        ]]></titlebar>
+      <description><![CDATA[
+        ~ If we've failed any pre-requisites, get the info here
+        var prereqs as string
+        var use_hero as number
+        use_hero = 1
+        call Prereqs
+        @text = prereqs
+
+        ~append our description
+        var descript as string
+        call Descript
+        @text &= descript
+        ]]></description>
+      </chooser_table>
+    </portal>
+
+
+  <!-- advBoost chooser -->
+  <portal
+    id="advBoost3"
+    style="chsNormal"
+    width="275">
+    <chooser_table
+      component="Skill"
+      choosetemplate="advBoost"
+      choosepicks="hero"
+      candidatepick="advDetails"
+      candidatefield="advTagexpr"
+      descwidth="350">
+      <!-- only traits that have already been added to the hero can be advanced -->
+      <needtag usehero="yes" container="CanAdvance" thing="CanAdvance"/>
       <autotag group="Advance" tag="Gizmo"/>
       <chosen><![CDATA[
         if (@ispick = 0) then
@@ -408,6 +494,8 @@
     id="advance">
     <portalref portal="advNew" taborder="20"/>
     <portalref portal="advBoost" taborder="20"/>
+    <portalref portal="advBoost2" taborder="21"/>
+    <portalref portal="advBoost3" taborder="22"/>
     <templateref template="advTitle" thing="advDetails" taborder="10"/>
     <templateref template="advStatic" thing="advDetails" taborder="20"/>
     <templateref template="advNotate" thing="advDetails" taborder="20"/>
@@ -432,6 +520,16 @@
       portal[advBoost].top = portal[advNew].top
       portal[advBoost].width = portal[advNew].width
 
+      ~position the chooser for boosting in the same place
+      portal[advBoost2].left = portal[advNew].left
+      portal[advBoost2].top = portal[advBoost].bottom + 3
+      portal[advBoost2].width = portal[advNew].width
+
+      ~position the chooser for boosting in the same place
+      portal[advBoost3].left = portal[advNew].left
+      portal[advBoost3].top = portal[advBoost2].bottom + 3
+      portal[advBoost3].width = portal[advNew].width
+
       ~position the static template in the same place (for non-editable items)
       template[advStatic].left = portal[advNew].left
       template[advStatic].top = portal[advNew].top
@@ -451,6 +549,8 @@
       template[advNotate].visible = 0
       portal[advNew].visible = 0
       portal[advBoost].visible = 0
+      portal[advBoost2].visible = 0
+      portal[advBoost3].visible = 0
 
       ~if this is NOT the newest advancement, show the static template so the user
       ~can't change anything; otherwise, determine which chooser should be shown
@@ -462,6 +562,8 @@
         template[advNotate].visible = 1
       else
         portal[advBoost].visible = 1
+        portal[advBoost2].visible = 1
+        portal[advBoost3].visible = 1
         endif
 
       ~position the domain template

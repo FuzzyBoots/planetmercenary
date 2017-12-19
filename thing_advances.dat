@@ -20,13 +20,26 @@
   -->
   <thing
     id="advSkill"
-    name="Increase Skill"
+    name="Increase Skills"
     compset="Advance"
     description="Select three skills to increase by one.">
     <fieldval field="advAction" value="Increase Skill"/>
     <fieldval field="advDynamic" value="component.Skill &amp; !Helper.Maximum &amp; !Hide.Skill"/>
     <tag group="Advance" tag="Increase"/>
 
+    <!--eval value="1" phase="Final" priority="1001">
+      <![CDATA[
+        var skills as string
+        ~foreach pick in context from Skill
+          ~debug "Add to " & eachpick.idstring
+        ~  nexteach
+        skills = tagids[Skill.?, " | "]
+        foreach pick in hero from Skill where skills
+          perform eachpick.field[trtBonus].modify[+,1,"Advance"]
+          nexteach
+        ]]>
+      </eval-->
+    
     <!-- Attach the child entity for tracking the advance -->
     <child entity="Advance">
       <tag group="Advance" tag="MustChoose"/>
