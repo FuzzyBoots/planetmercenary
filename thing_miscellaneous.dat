@@ -41,7 +41,7 @@
     compset="Resource">
     <fieldval field="resObject" value="Skill"/>
     <fieldval field="resMax" value="5"/>
-    <fieldval field="resDefault" value="1"/>
+    <fieldval field="resDefault" value="3"/>
     <tag group="Helper" tag="Bootstrap"/>
   </thing>  
   

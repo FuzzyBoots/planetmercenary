@@ -133,8 +133,8 @@
   -->
   <layout
     id="static">
-        <portalref portal="stRace" taborder="20"/>
-        <templateref template="stName" thing="heroname" taborder="10"/>
+    <portalref portal="stRace" taborder="20"/>
+    <templateref template="stName" thing="heroname" taborder="10"/>
     <templateref template="stActor" thing="actor"/>
 
     <!-- This script sizes and positions the layout and its child visual elements. -->
@@ -148,6 +148,7 @@
       ~a little to the right of the race
       portal[stRace].left = template[stName].right + 20
       template[stActor].left = portal[stRace].right + 15
+      portal[stRace].visible = 0
 
       ~limit the width of the actor template to the remaining space available and
       ~then render the template

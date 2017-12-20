@@ -318,10 +318,17 @@
 
     <!-- This script sizes and positions the layout and its child visual elements. -->
     <position><![CDATA[
+      if (state.iscreate = 0) then
+        portal[stRace].freeze = 1
+        portal[stCmdPckge].freeze = 1
+        portal[stBckGrnd].freeze = 1
+        portal[skBonuses].freeze = 1
+        endif
+      
       ~size and position the attributes table in the top left; we set the height to
       ~the full layout height, but the table will only use the space it needs
       portal[stRace].left = 0 
-
+      
       portal[stCmdPckge].left = 0
       portal[stCmdPckge].top = portal[stRace].bottom + 15
       
@@ -345,6 +352,7 @@
 
       ~figure out the total height we need for the tab
       height = portal[baTrait].bottom
+      
       ]]></position>
 
     </layout>
