@@ -136,12 +136,9 @@
       endif
 
       debug "combined: " & combined
-	  ~ gizmo.childfound[SpecHelp].field[SpecExpr].text = combined`
+	  gizmo.childfound[SpecHelp].field[SpecExpr].text = "component.Specialty & (" & combined & ")"
 	  
       ]]></eval>
-    
-	  <child entity="entSpec" />
-    
 	</thing>
         
   <thing
