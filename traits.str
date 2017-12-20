@@ -161,31 +161,31 @@
     <field
       id="ftPhysical"
       name="Fireteam physical skill"
-      type="user">
+      type="derived">
       </field>
     
     <field
       id="ftMental"
       name="Fireteam mental skill"
-      type="user">
+      type="derived">
       </field>
       
     <field
       id="ftSocial"
       name="Fireteam social skill"
-      type="user">
+      type="derived">
       </field>
       
     <field
       id="ftCombat"
       name="Fireteam combat skill"
-      type="user">
+      type="derived">
       </field>
     
     <field
       id="ftDamage"
       name="Fireteam damage"
-      type="user">
+      type="derived">
       </field>
     
     <field
