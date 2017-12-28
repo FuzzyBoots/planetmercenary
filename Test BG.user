@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
-  <thing id="bckTestBG" name="Test BG" compset="Bckgrnd" uniqueness="unique">
-    <bootstrap thing="fRPlusSp">
-      <autotag group="Specialty" tag="spEngArch"/>
-      <autotag group="Specialty" tag="spHvyBeam"/>
-      <autotag group="Specialty" tag="spPistBeam"/>
+  <thing id="cmdMilPol" name="Military Police" description="Sometimes, mercenaries don&apos;t do what they&apos;re supposed to do. Letting them get away with it is bad for business, so sometimes you need an enforcer. The Military Police fill that gap." compset="CmdPckge" uniqueness="unique">
+    <tag group="SkillBonus" tag="skInsight"/>
+    <tag group="SkillBonus" tag="skIntim"/>
+    <tag group="SkillBonus" tag="skPercept"/>
+    <bootstrap thing="fRPlusSk">
+      <autotag group="Bonus" tag="Plus2"/>
+      <autotag group="Skills" tag="Combat"/>
       </bootstrap>
+    </thing>
+  <thing id="bckBOBTst2" name="Test 2" compset="Bckgrnd" uniqueness="unique">
+    <bootstrap thing="fRPlusSp">
+      <autotag group="Specialty" tag="spLongNL"/>
+      <autotag group="Specialty" tag="spHvyNL"/>
+      <autotag group="Specialty" tag="spPistNL"/>
+      <autotag group="Specialty" tag="spScatNL"/>
+      <autotag group="Specialty" tag="spCarbNL"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSp">
+      <autotag group="Skill" tag="skMech"/>
+      </bootstrap>
+    <bootstrap thing="spStaWBall"></bootstrap>
+    <bootstrap thing="spMedBatt"></bootstrap>
+    <child entity="entSpec"></child>
+    </thing>
+  <thing id="eqBotCnstr" name="Bot, Construction" description="Has 8 ranks in Engineering but no specialties or other skills; multiple bots required for large and/or complex projects, which may also require a Computers (Programming) check (TN 15–30)" compset="Equipment">
+    <fieldval field="grCost" value="2"/>
+    <tag group="GearType" tag="Automation"/>
     </thing>
   </document>

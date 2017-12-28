@@ -45,13 +45,16 @@
   <!-- And one personal info pick -->
   <bootstrap index="10" thing="mscPerson"/>
 
-  <!-- Add the "unarmed attack" pick -->
-  <bootstrap index="20" thing="wpUnarmed"/>
-  
   <!-- Add three fireteam members -->
-  <bootstrap index="30" thing="Fireteam"/>
-  <bootstrap index="31" thing="Fireteam"/>
-  <bootstrap index="32" thing="Fireteam"/>
+  <bootstrap index="30" thing="Fireteam">
+    <assignval field="ftName" value="Bob"/>
+  </bootstrap>
+  <bootstrap index="31" thing="Fireteam">
+    <assignval field="ftName" value="Tom"/>
+  </bootstrap>
+  <bootstrap index="32" thing="Fireteam">
+    <assignval field="ftName" value="Harry"/>
+  </bootstrap>
 
   <!-- The "autoadd" elements identify individual things that should be automatically
         added to every new character by Hero Lab. The key difference from "bootstrap"

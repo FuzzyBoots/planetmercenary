@@ -638,7 +638,6 @@
   <compset
     id="FTMember">
     <compref component="FTMember"/>
-    <compref component="UserSelect"/>
     </compset>
   
   <entity

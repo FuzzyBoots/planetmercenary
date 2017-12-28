@@ -44,5 +44,8 @@
   <thing id="bckMech" name="Mechanic" description="Inanimate machines seem to love you!\n\n{b}Bonus Skill Ranks:{/b} +2 Mechanic, +2 Engineering, 1 Mechanic speciality (Build, Jury-rig, Repair)" compset="Bckgrnd" uniqueness="unique">
     <tag group="SkillBonus" tag="skEng"/>
     <tag group="SkillBonus" tag="skMech"/>
+    <bootstrap thing="fRPlusSp">
+      <autotag group="Skill" tag="skMech"/>
+      </bootstrap>
     </thing>
   </document>

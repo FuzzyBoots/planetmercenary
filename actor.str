@@ -151,18 +151,10 @@
       defvalue="40">
       </field>
 
-    <!-- Starting ability slots to allocate -->
+    <!-- Starting Advances for the character -->
     <field
-      id="acStartAbi"
-      name="Ability Slots"
-      type="user"
-      defvalue="2">
-      </field>
-
-    <!-- Starting XP for the character -->
-    <field
-      id="acStartXP"
-      name="Starting XP"
+      id="acStartAdv"
+      name="Starting Advances"
       type="user">
       </field>
 
@@ -177,7 +169,7 @@
     <!-- Net cash for the character -->
     <field
       id="acCashNet"
-      name="Starting Cash"
+      name="Current Cash"
       type="derived">
       </field>
 
@@ -197,6 +189,7 @@
       type="user"
       maxlength="25">
       </field>
+    
     <field
       id="acBookName"
       name="Book Name"
@@ -248,6 +241,15 @@
     <!-- activate our selected character type -->
     <eval index="4" phase="Setup" priority="5000"><![CDATA[
       perform field[acType].chosen.forward[CharType.?]
+      ]]></eval>
+      
+    <eval index="5" phase="Setup" priority="8001">
+      <before name="Calc trtFinal"/><![CDATA[
+      foreach pick in hero from Journal
+        if (eachpick.field[jrnAdvance].value <> 0) then
+          #resmax[resAdvance] += 1
+          endif
+        nexteach
       ]]></eval>
 
     </component>

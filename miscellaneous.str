@@ -249,53 +249,11 @@
     name="Journal"
     autocompset="no">
 
-    <!-- User-specified XP quantity awarded -->
     <field
-      id="jrnXP"
-      name="XP Awarded"
+      id="jrnAdvance"
+      name="Advance?"
       type="user">
       </field>
-
-    <!-- User-specified cash amount awared -->
-    <field
-      id="jrnCash"
-      name="Cash Awarded"
-      type="user">
-      </field>
-
-    <!-- Summary of the total XP and cash amount awarded -->
-    <field
-      id="jrnSummary"
-      name="Summary"
-      type="derived"
-      maxfinal="50">
-      <!-- Calculate a value that is based on all the values referenced by the
-            "finalize" script. This ensures that the field always changes if any of
-            its pieces changes, which triggers the finalized value to be updated.
-      -->
-      <calculate phase="Render" priority="10000"><![CDATA[
-        @value = usagepool[JrnlCash].value * 1000 + usagepool[JrnlXP].value
-        ]]></calculate>
-      <!-- Final value for display shows the total cash and XP amounts awarded -->
-      <finalize><![CDATA[
-        var moneyvalue as number
-        var money as string
-        moneyvalue = usagepool[JrnlCash].value
-        call MoneyBare
-        @text = "$: " & money & "{horz 20}XP: " & usagepool[JrnlXP].value
-        ]]></finalize>
-      </field>
-
-    <!-- Each journal entry makes use of usage pools to track the quantities awarded -->
-    <usage usagepool="JrnlXP"/>
-    <usage usagepool="JrnlCash"/>
-
-    <!-- If a journal entry is deleted, we must delete the awarded totals for the entry
-        out of our overall tracked pools for the actor -->
-    <deletion><![CDATA[
-      perform hero.usagepool[TotalXP].adjust[-usagepool[JrnlXP].value]
-      perform hero.usagepool[TotalCash].adjust[-usagepool[JrnlCash].value]
-      ]]></deletion>
 
     </component>
 

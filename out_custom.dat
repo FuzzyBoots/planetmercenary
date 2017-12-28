@@ -403,8 +403,6 @@
           xml[node].attr["name"] = eachpick.field[jrnTitle].text
           xml[node].attr["gamedate"] = eachpick.field[jrnGame].text
           xml[node].attr["realdate"] = eachpick.field[jrnReal].text
-          xml[node].attr["xp"] = eachpick.usagepool[JrnlXP].value
-          xml[node].attr["cash"] = eachpick.usagepool[JrnlCash].value
           xodescript = eachpick.field[jrnDescr].text
           call xodescript
           nexteach
