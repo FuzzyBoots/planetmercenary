@@ -151,7 +151,6 @@
     </thing>
   <thing id="racFobott" name="Fobott’r" description="For centuries the four-armed, bipedal Fobott’r were the soldier-slaves of the rich and powerful. They have long since cast off those shackles, and many of them now enjoy proftable careers as professionals-at-arms. Contrary to cultural biases, fobott’r are not all thieves, and pirates. Just a few (billion) of them.\n\n{b}Bonus Skill Ranks:{/b} +1 Carbines, +1 Perception, +1 Pistols; you also gain the Perception (Hearing) specialty at no cost\n\n{b}Skill Check Penalties:{/b} You suffer a –1 penalty with Computers skill checks. Apply this penalty to your result after all other modifers.\n\n{b}Special Rules{/b}: You may fire two weapons with a single action, though you suffer a –2 penalty with each of the two checks. Alternatively, you may reload one weapon and fire one weapon as a single action (these need not be the same weapon). If you and a friendly fobott’r are in direct physical contact, either of you or both of you may fire two weapons with a single action, and each of the two checks only suffers a -1 penalty. If you are next to a friendly fobott’r and either of you uses this rule, attacks against either of you gain a +2 to the roll.{br}{br}{b}Health:{/b} 7 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="7"/>
-    <!--fieldval field="hero.acHands" value="4"/-->
     <bootstrap thing="fRPlusSk2">
       <autotag group="Bonus" tag="Plus1"/>
       <autotag group="Skill" tag="skCarbine"/>
@@ -159,6 +158,9 @@
       <autotag group="Skill" tag="skPistol"/>
       </bootstrap>
     <bootstrap thing="spPercHear"></bootstrap>
+    <eval phase="Traits" priority="4003">herofield[acHands].value = 4
+      <!--after name="Calc Sophont Health"/-->
+      </eval>
     </thing>
   <thing id="racFrell" name="Frellenti" description="The long-legged, flightless, pseudo-avian Frellenti are evidence either that evolution has a great sense of humor, or that it has been punked by engineers who don’t sign their work. Frellenti are swift runners and natural pilots, and though their forelimbs are useless they can grasp and manipulate defly with their feet. Their long, strong, prehensile tongue can support several times their body weight, yet it’s also a highly sensitive chemical receptor.\n\n{b}Bonus Skill Ranks:{/b} +1 Athletics, +1 Dodge, +1 Perception, +1 to any Vehicle skill; you also gain the Perception (Taste) specialty at no cost\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} Your feet are quite agile and serve the same purpose as a human’s hands, but you can’t use them as hands while running. You can also use your tongue as a fully prehensile tentacle, and it is strong enough to support at least twice your body weight (you can swing from it). You can use it to pick up small objects or open compact containers. You can perform Perception (Taste) from up to four meters from the target.{br}{br}{b}Health:{/b} 7 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="7"/>

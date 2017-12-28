@@ -91,6 +91,29 @@
     <value id="Traits"/>      <!-- Whether to show pick in the "traits" column on the TacCon -->
     </group>
 
+  <group
+    id="GearType"
+    dynamic="yes"
+    sequence="explicit">
+    <value id="Custom" order="0"/>
+    <value id="Automation" name="Assorted Automation" order="1"/>
+    <value id="CompAndCom" name="Computation and Communication" order="2"/>
+    <value id="CuffStuff" name="Cuffs &amp; Stuff" order="3"/>
+    <value id="MedTech" name="Med Tech" order="4"/>
+    <value id="Misc" name="Miscellaneous Materiel" order="5"/>
+    </group> 
+    
+  <group
+    id="LockerCls"
+    sequence="explicit">
+    <value id="CivYes" name="Yes" order="1"/>
+    <value id="CivMaybe" name="Maybe" order="2"/>
+    <value id="CivNo" name="No" order="3"/>
+    <value id="MilYes" name="Yes" order="4"/>
+    <value id="MilMaybe" name="Maybe" order="5"/>
+    <value id="MilNo" name="No" order="6"/>
+    </group>
+    
   <!-- Equipment group - helper tags specific to equipment
         Any tags associated with equipment of all varieties should be defined in
         this group.

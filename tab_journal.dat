@@ -90,11 +90,9 @@
       style="lblNormal">
       <label>
         <labeltext><![CDATA[
-          var moneyvalue as number
-          var money as string
-          moneyvalue = herofield[acCashNet].value
-          call MoneyBare
-          @text = "{text clrgrey}Total $: " & money
+          var advances as number
+          advances = hero.child[resAdvance].field[resMax].value
+          @text = "{text clrgrey}Total Advances: " & advances
           ]]></labeltext>
         </label>
       </portal>
@@ -196,68 +194,11 @@
         </separator>
       </portal>
 
-    <portal
-      id="editcash"
-      style="editCenter">
-      <edit
-        field="jrnCash"
-        maxlength="6"
-        format="integer"
-        signed="yes">
-        </edit>
+    <portal id="isAdvance" style="chkNormal" showinvalid="yes"
+      tiptext="Click to indicate that an advance was acquired.">
+      <checkbox field="jrnAdvance" message="Advance?"/>
       </portal>
-
-    <portal
-      id="addcash"
-      style="actSmall">
-      <action
-        action="trigger"
-        buttontext="Add $">
-        <trigger><![CDATA[
-          ~add the cash total to both the journal entry's usage pool and the hero's as well
-          ~debug "Adding Cash: " & field[jrnCash].value
-          perform usagepool[JrnlCash].adjust[field[jrnCash].value]
-          perform hero.usagepool[TotalCash].adjust[field[jrnCash].value]
-          perform field[jrnCash].reset
-          ]]></trigger>
-        </action>
-      </portal>
-
-    <portal
-      id="editxp"
-      style="editCenter">
-      <edit
-        field="jrnXP"
-        maxlength="6"
-        format="integer"
-        signed="yes">
-        </edit>
-      </portal>
-
-    <portal
-      id="addxp"
-      style="actSmall">
-      <action
-        action="trigger"
-        buttontext="Add XP">
-        <trigger><![CDATA[
-          ~add the XP total to both the journal entry's usage pool and the hero's as well
-          ~debug "Adding XP: " & field[jrnXP].value
-          perform usagepool[JrnlXP].adjust[field[jrnXP].value]
-          perform hero.usagepool[TotalXP].adjust[field[jrnXP].value]
-          perform field[jrnXP].reset
-          ]]></trigger>
-        </action>
-      </portal>
-
-    <portal
-      id="summary"
-      style="lblJrnSumm">
-      <label
-        field="jrnSummary">
-        </label>
-      </portal>
-
+      
     <portal
       id="notes"
       style="actNotesSm"
@@ -364,27 +305,10 @@
       portal[separator].height = height - portal[separator].top - 1
 
       ~position the cash edit portal
-      portal[editcash].width = 50
-      perform portal[editcash].alignrel[ltor,separator,10]
-      perform portal[editcash].alignedge[bottom,-1]
+      portal[isAdvance].width = 100
+      perform portal[isAdvance].alignrel[ltor,separator,10]
+      perform portal[isAdvance].alignedge[bottom,-1]
 
-      ~position the button to add the cash
-      perform portal[addcash].alignrel[ltor,editcash,5]
-      perform portal[addcash].centeron[vert,editcash]
-
-      ~position the xp edit portal
-      portal[editxp].width = 50
-      perform portal[editxp].alignrel[ltor,addcash,15]
-      portal[editxp].top = portal[editcash].top
-
-      ~position the button to add the xp
-      perform portal[addxp].alignrel[ltor,editxp,5]
-      portal[addxp].top = portal[addcash].top
-
-      ~position the summary in the open region in the lower right
-      perform portal[summary].alignrel[btot,addxp,-4]
-      perform portal[summary].alignrel[ltol,editcash,45]
-      portal[summary].width = portal[addxp].right - portal[editcash].left - 90
       ]]></position>
     </template>
 
@@ -406,7 +330,7 @@
     <position><![CDATA[
       ~configure whether our header is visible or not
       ~Note: If the header is non-visible, no space is allotted for it below.
-      template[jrHeader].visible = 0
+      template[jrHeader].visible = 1
 
       ~position the title at the top, followed by the template, and then the table
       perform portal[jrTitle].autoplace

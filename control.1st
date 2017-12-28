@@ -31,14 +31,6 @@
     maximum="30"
     persist="yes"/>
 
-  <!-- Track the total XP progression of the actor -->
-  <usagepool
-    id="TotalXP"
-    name="Total XP"
-    abbrev="XP"
-    ishero="yes"
-    persist="yes"/>
-
   <!-- Track the total cash progression of the actor -->
   <usagepool
     id="TotalCash"
@@ -47,22 +39,13 @@
     ishero="yes"
     persist="yes"/>
 
-  <!-- Track the XP adjustment associated with each entry in the journal -->
+  <!-- Track the Advance adjustment associated with each entry in the journal -->
   <usagepool
-    id="JrnlXP"
-    name="Journal Experience Points"
-    abbrev="XP"
+    id="JrnlAdv"
+    name="Journal Advances"
+    abbrev="Adv"
     ishero="no"
     persist="no"/>
-
-  <!-- Track the cash adjustment associated with each entry in the journal -->
-  <usagepool
-    id="JrnlCash"
-    name="Journal Cash"
-    abbrev="Cash"
-    ishero="no"
-    persist="no"/>
-
 
   <!-- The "source" elements define the assortment of user-configurable options for
         each actor and their relative hierarchical structure. Each selectable source

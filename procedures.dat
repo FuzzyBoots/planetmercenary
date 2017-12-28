@@ -789,8 +789,9 @@
       infotext = infotext & "{b}Date (game world){/b}: " & field[jrnGame].datetime[gamedate,"/"] & "{br}"
       endif
     infotext = infotext & "{b}Date (real world){/b}: " & field[jrnReal].datetime[realdate,"/"] & "{br}" & spacing
-    infotext = infotext & "{b}XP Awarded{/b}: " & usagepool[JrnlXP].value & "{br}"
-    infotext = infotext & "{b}Cash Awarded{/b}: " & usagepool[JrnlCash].value & "{br}"
+    if (field[jrnAdvance].value <> 0) then
+      infotext = infotext & "{b}Advance Awarded{/b}{br}"
+      endif
     infotext = infotext & spacing
     ]]></procedure>
 
