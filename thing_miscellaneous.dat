@@ -43,6 +43,7 @@
     <fieldval field="resMax" value="5"/>
     <fieldval field="resDefault" value="3"/>
     <tag group="Helper" tag="Bootstrap"/>
+    <tag group="Helper" tag="NoMinimum"/>
   </thing>  
   
   <thing
@@ -136,9 +137,12 @@
       endif
 
       debug "combined: " & combined
-	  gizmo.childfound[SpecHelp].field[SpecExpr].text = "component.Specialty & (" & combined & ")"
-	  
+      gizmo.childfound[SpecHelp].field[SpecExpr].text = "component.Specialty & (" & combined & ")"
+      field[usrCandid2].text &= " & (" & combined & ")"
+	    debug "Gizmo Text: " & gizmo.childfound[SpecHelp].field[SpecExpr].text
       ]]></eval>
+      <child entity="entSpec"/>
+    
 	</thing>
         
   <thing
