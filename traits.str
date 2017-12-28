@@ -185,7 +185,19 @@
     <field
       id="ftDamage"
       name="Fireteam damage"
-      type="derived">
+      type="derived"
+      defvalue="1">
+      </field>
+      
+    <field
+      id="ftComDam"
+      name="Combat and Damage"
+      type="static"
+      maxfinal="10">
+      <finalize><![CDATA[
+        ~Displays name
+        @text = field[ftCombat].value & " (" & field[ftDamage].value & "d6)"
+        ]]></finalize>
       </field>
     
     <field
@@ -638,7 +650,6 @@
   <compset
     id="FTMember">
     <compref component="FTMember"/>
-    <compref component="UserSelect"/>
     </compset>
   
   <entity
