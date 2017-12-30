@@ -30,7 +30,7 @@
 
     </thing>
 
-	<thing
+  <thing
     id="valBG"
     name="Background"
     compset="Simple">
@@ -44,7 +44,7 @@
 
     </thing>
 
-	<thing
+  <thing
     id="valCmd"
     name="Command Package"
     compset="Simple">

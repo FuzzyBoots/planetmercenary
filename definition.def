@@ -178,7 +178,7 @@ These data files provide a framework for Hypernode Press's Planet Mercenary game
         @message &= bullet & "Character points must be assigned for the character.{br}"
         endif
       
-	    ]]></canadvance>
+      ]]></canadvance>
 
     <!-- Handle the transition to/from advancement mode -->
 

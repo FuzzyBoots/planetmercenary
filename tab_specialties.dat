@@ -65,7 +65,7 @@
       field="domDomain">
       </edit>
     </portal>
-	
+  
   <position><![CDATA[
     ~set up our height based on our tallest portal
     height = portal[info].height

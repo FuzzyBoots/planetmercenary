@@ -82,15 +82,6 @@
         </label>
       </portal>
     
-    <!--portal
-      id="notes"
-      style="actInfo">
-      <action
-        action="form">
-        </action>
-      <mouseinfo mousepos="middle+above"/>
-      </portal-->
-
     <position><![CDATA[
       ~set up our height based on our tallest portal
       height = portal[name].height
