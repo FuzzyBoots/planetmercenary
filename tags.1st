@@ -132,16 +132,72 @@
         defined in this group.
   -->
   <group
-    id="Weapon">
-    <value id="ActCamo" name="Active Camouﬂage"/>
+    id="Weapon"
+    dynamic="yes">
+    <value id="Accurate" name="Accurate"/>
+    <value id="APPS" name="Annie Plant Power Supply"/>
+    <value id="APiercing" name="Armor-piercing"/>
+    <value id="ACorrect" name="Autocorrecting"/>
+    <value id="AVPL" name="AVPL"/>
+    <value id="Breacher" name="Breacher"/>
+    <value id="CAmmo" name="Costly Ammo"/>
+    <value id="Delivery" name="Delivery"/>
+    <value id="DoubTap" name="Double Tap"/>
+    <value id="ExMag" name="Extended Magazine "/>
+    <value id="FProne" name="Failure Prone"/>
+    <value id="TSystem" name="Hi-Res Targeting System"/>
+    <value id="Holdout" name="Holdout/Stealth"/>
+    <value id="HyperAcc" name="Hyper-accurate"/>
+    <value id="Polymer" name="Lightweight Polymer"/>
+    <value id="Lucky" name="Lucky"/>
+    <value id="ReloadInt" name="Reload-intensive"/>
+    <value id="RemoteUp" name="Remote Targeting Uplink"/>
+    <value id="Scatter" name="Scattergun"/>
+    <value id="SSAmmo" name="Self-supplying Ammunition"/>
+    <value id="SRange" name="Short Range"/>
+    <value id="SingleUse" name="Single-use"/>
+    <value id="Sniper" name="Sniper"/>
+    <value id="SConstrct" name="Sturdy Construction"/>
+    <value id="ULauncher" name="Underslung Launcher"/>
+    <value id="Unlucky" name="Unlucky"/>
+    <value id="VAmmo" name="Variable Ammunition"/>
     </group>
-
+  <!--group // Yeah... no Value. But we don't need it yet.
+    id="Weapon">
+    <value id="Accurate" name="Accurate" value="2"/>
+    <value id="APPS" name="Annie Plant Power Supply" value="3"/>
+    <value id="APiercing" name="Armor-piercing" value="2"/>
+    <value id="ACorrect" name="Autocorrecting" value="1"/>
+    <value id="AVPL" name="AVPL" value="4"/>
+    <value id="Breacher" name="Breacher" value="10"/>
+    <value id="CAmmo" name="Costly Ammo" value="-3"/>
+    <value id="Delivery" name="Delivery" value="2"/>
+    <value id="DoubTap" name="Double Tap" value="1"/>
+    <value id="ExMag" name="Extended Magazine " value="3"/>
+    <value id="FProne" name="Failure Prone" value="-2"/>
+    <value id="TSystem" name="Hi-Res Targeting System" value="1"/>
+    <value id="Holdout" name="Holdout/Stealth" value="1"/>
+    <value id="HyperAcc" name="Hyper-accurate" value="3"/>
+    <value id="Polymer" name="Lightweight Polymer" value="1"/>
+    <value id="Lucky" name="Lucky" value="1"/>
+    <value id="ReloadInt" name="Reload-intensive" value="-2"/>
+    <value id="RemoteUp" name="Remote Targeting Uplink" value="1"/>
+    <value id="Scatter" name="Scattergun" value="2"/>
+    <value id="SSAmmo" name="Self-supplying Ammunition" value="2"/>
+    <value id="SRange" name="Short Range" value="-1"/>
+    <value id="SingleUse" name="Single-use" value="-6"/>
+    <value id="Sniper" name="Sniper" value="4"/>
+    <value id="SConstrct" name="Sturdy Construction" value="3"/>
+    <value id="ULauncher" name="Underslung Launcher" value="3"/>
+    <value id="Unlucky" name="Unlucky" value="-1"/>
+    <value id="VAmmo" name="Variable Ammunition" value="1"/>
+    </group-->
   <!-- Weapon Class group - helper tags for ranged weapon class -->
   <group
     id="WeapClass">
-    <value id="Beam" name="Beam"/>
-    <value id="NonLethal" name="Non-Lethal"/>
-    <value id="Projectile" name="Projectile"/>
+    <value id="Beam" name="Beam" order="5"/>
+    <value id="NonLethal" name="Non-Lethal" order="10"/>
+    <value id="Projectile" name="Projectile" order="15"/>
     </group>
     
   <!-- AmmoType group - helper tags for ranged weapon ammo types -->
@@ -152,6 +208,7 @@
     <value id="Demotivate" name="De-Motivators"/>
     <value id="Goober" name="Goober"/>
     <value id="Gunfoam" name="Gunfoam"/>
+    <value id="Plasma" name="Plasma"/>
     <value id="PEA" name="PEA"/>
     <value id="Particle" name="Particle"/>
     <value id="Ion" name="Ion"/>
@@ -166,19 +223,19 @@
     <value id="rlOneThree" name="1-3"/>
     </group>
     
-  <!-- WeaponType group - helper tags for  weapon types 
+  <!-- WeaponType group - helper tags for weapon types 
          This governs which skill is used.
   -->
   <group
     id="WeaponType">
-    <value id="rngCarbine" name="Carbine"/>
-    <value id="rngScatter" name="Scattergun"/>
-    <value id="rngPistol" name="Pistol"/>
-    <value id="rngLongGun" name="Long Gun"/>
-    <value id="rngHvyWeap" name="Heavy Weapon"/>
+    <value id="rngPistol" name="Pistol" order="5"/>
+    <value id="rngScatter" name="Scattergun" order="10"/>
+    <value id="rngCarbine" name="Carbine" order="15"/>
+    <value id="rngLongGun" name="Long Gun" order="20"/>
+    <value id="rngHvyWeap" name="Heavy Weapon" order="25"/>
     <value id="rngStaWeap" name="Stationary Weapon"/>
-    <value id="MelCommon" name="Common Melee"/>
-    <value id="MelExotic" name="Exotic Melee"/>
+    <value id="MelCommon" name="Common Melee" order="30"/>
+    <value id="MelExotic" name="Exotic Melee" order="35"/>
     <value id="MelUnarmed" name="Unarmed / Natural"/>
     </group>
     
@@ -189,6 +246,16 @@
     <value id="Restricted" name="Restricted"/>
     <value id="Military" name="Military"/>
     <value id="Illegal" name="Ilegal"/>
+    </group>
+
+  <!-- Armor group - helper tags for armor special abilities
+        If a tag is used to indicate a special ability for a armor, it should be
+        defined in this group.
+  -->
+  <group
+    id="Armor"
+    dynamic="yes">
+    <value id="ActCamo" name="Active Camouﬂage"/>
     </group>
 
   <group
@@ -247,6 +314,7 @@
     id="HideTab">
     <value id="basics"/>
     <value id="skills"/>
+    <value id="specialty"/>
     <value id="armory"/>
     <value id="gear"/>
     <value id="advances"/>
@@ -275,7 +343,7 @@
     <value id="Minus3" name="-3"/>
     </group>
 
-    <group
+  <group
     id="Skills">
     <value id="Combat"/>
     <value id="Mental"/>

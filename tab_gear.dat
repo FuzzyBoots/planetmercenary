@@ -33,6 +33,7 @@
     <table_dynamic
       component="Gear"
       showtemplate="grGrPick"
+      choosesortset="Gear"
       choosetemplate="grGrThing"
       buytemplate="BuyCash"
       selltemplate="SellCash">
@@ -87,7 +88,7 @@
     <position><![CDATA[
       ~set up our dimensions, with a width that we dictate
       height = portal[name].height
-      width = 250
+      width = 325
 
       ~if this is a "sizing" calculation, we're done
       doneif (issizing <> 0)

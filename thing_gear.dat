@@ -39,6 +39,269 @@
     <tag group="Helper" tag="CustomItem"/>
     </thing>
 
+  <thing id="eqBotCnstr" name="Bot, Construction" description="Has 8 ranks in Engineering but no specialties or other skills; multiple bots required for large and/or complex projects, which may also require a Computers (Programming) check (TN 15–30)" compset="Equipment">
+    <fieldval field="grCost" value="2"/>
+    <tag group="GearType" tag="Automation"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqBotMaint" name="Bot, Maintenance" description="Has 8 ranks in Mechanics but no specialties or other skills; multiple bots required for large and/or complex projects, which may also require a Computers (Programming) check (TN 15–30)" compset="Equipment">
+    <fieldval field="grCost" value="2"/>
+    <tag group="GearType" tag="Automation"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqBotMedic" name="Bot, Medical" description="Has 8 ranks in Medicine but no specialties or other skills; multiple bots required for large and/or complex projects, which may also require a Computers (Programming) check (TN 15–30)" compset="Equipment">
+    <fieldval field="grCost" value="2"/>
+    <tag group="GearType" tag="Automation"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqBotMulti" name="Bot, Multipurpose" description="Has 8 ranks in any one GC-approved skill but no specialties or other skills; must generally be told what to do, though it can act on most loose instructions" compset="Equipment">
+    <fieldval field="grCost" value="2"/>
+    <tag group="GearType" tag="Automation"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqBotUtil" name="Bot, Utility" description="No skill ranks; may only perform rudimentary tasks" compset="Equipment">
+    <fieldval field="grCost" value="1"/>
+    <tag group="GearType" tag="Automation"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqFabberCh" name="PMH Fabberchow" description="With suitable biological material, may sustain up to 100 characters for up to 10 years of use at no additional cost" compset="Equipment">
+    <fieldval field="grCost" value="3"/>
+    <tag group="GearType" tag="Automation"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqPopsVend" name="Popso Vending Station" description="May sustain up to 100 characters for up to 20 years of use, though an additional 1 Supplies per 100 characters must be paid each month for Popso Nutrifuel Blocks" compset="Equipment">
+    <fieldval field="grCost" value="5"/>
+    <tag group="GearType" tag="Automation"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqHvrboard" name="Wächter Sunrise “McFly-15” Hoverboard" description="Hovers 10 cm oﬀ the ground and travels at a speed of up to 9 m/s; may only carry one sophont (or sophont equivalent weight)" compset="Equipment">
+    <fieldval field="grCost" value="1"/>
+    <tag group="GearType" tag="Automation"/>
+    <tag group="LockerCls" tag="CivYes"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqCommBone" name="Commbone" description="Allows for sub-vocalized (silent) communication; signal may be intercepted with a Computers (Hacking) check (TN 16), or jammed with a Computers (Hacking) check (TN 12)" compset="Equipment">
+    <fieldval field="grCost" value="1"/>
+    <tag group="GearType" tag="CompAndCom"/>
+    <tag group="LockerCls" tag="CivYes"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqCommBud" name="Commbud" description="Allows for (very) quiet vocalized communication; signal may be intercepted with a Computers (Hacking) check (TN 16), or jammed with a Computers (Hacking) check (TN 12)" compset="Equipment">
+    <fieldval field="grCost" value="1"/>
+    <tag group="GearType" tag="CompAndCom"/>
+    <tag group="LockerCls" tag="CivYes"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqHndBrain" name="Handbrain" description="The whole of the hypernet in the palm of your... uh, whatever; may operate in three modes (local network pass-through, direct connectivity, or private network connectivity)" compset="Equipment">
+    <fieldval field="grCost" value="1"/>
+    <tag group="GearType" tag="CompAndCom"/>
+    <tag group="LockerCls" tag="CivYes"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqHndBrnCT" name="Handbrain CT" description="Used to interface with any system that doesn’t have the right connectivity; the Ship’s Locker contains one Handbrain CT for each player character who has 1+ Ranks in the Computers skill" compset="Equipment">
+    <fieldval field="grCost" value="2"/>
+    <tag group="GearType" tag="CompAndCom"/>
+    <tag group="LockerCls" tag="CivMaybe"/>
+    <tag group="LockerCls" tag="MilMaybe"/>
+    </thing>
+  <thing id="eqHyprNode" name="Hypernet Hut HN1 “Hyper-Node”" description="Grants basic, universal access to the hypernet" compset="Equipment">
+    <fieldval field="grCost" value="1"/>
+    <tag group="GearType" tag="CompAndCom"/>
+    <tag group="LockerCls" tag="CivYes"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqNodeJck1" name="Hypernet Hut LI NJ00 “Node-Jack”" description="Required to access many secured systems and grants a +1 bonus with Computers checks when using unsecured systems; each Node-Jack may be used only once and must then be discarded" compset="Equipment">
+    <fieldval field="grCost" value="3"/>
+    <tag group="GearType" tag="CompAndCom"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilMaybe"/>
+    </thing>
+  <thing id="eqNodeJck2" name="Hypernet Hut Nodecracker 1010" description="+2 with Computers (Hacking) checks made to penetrate system security; allows up to three checks before its hacking protocols are exhausted" compset="Equipment">
+    <fieldval field="grCost" value="5"/>
+    <tag group="GearType" tag="CompAndCom"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqNodeJck3" name="Hypernet Hut Nodecracker EX" description="+3 with Computers (Hacking) checks made to penetrate system security; allows up to three checks before its hacking protocols are exhausted" compset="Equipment">
+    <fieldval field="grCost" value="7"/>
+    <tag group="GearType" tag="CompAndCom"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqNodeJck4" name="Hypernet Hut Nodecracker Junior" description="+4 with Computers (Hacking) checks made to penetrate system security; allows up to three checks before its hacking protocols are exhausted, afer which another Computers check (TN 15) may be made to refresh the cycle; if this refreshing check is failed, then the Junior cannot be used against the same system again" compset="Equipment">
+    <fieldval field="grCost" value="11"/>
+    <tag group="GearType" tag="CompAndCom"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqCuffs" name="Simple Mechanical Restraints" description="Athletics (Strength) check (TN 20) to escape through brute force; Larceny (Picking Locks) check (TN 10 with a tool, or 15 without one) to escape through finesse" compset="Equipment">
+    <tag group="GearType" tag="CuffStuff"/>
+    <tag group="LockerCls" tag="CivYes"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqAutoBail" name="Autobailiff 2200" description="Contains prisoner in clear dome on a hover platform; Athletics (Strength) check to break out via brute force (TN 20, or 15 with a crowbar or similar item); Computers (Hacking) check (TN 15) to escape with access to the system and the necessary interface tools" compset="Equipment">
+    <fieldval field="grCost" value="2"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    <tag group="GearType" tag="CuffStuff"/>
+    </thing>
+  <thing id="eqBagamrph" name="Bagamorph 4411" description="Only restrains Carbosilicate Amorphs; escape requires two successful Chemistry (Biochemistry) checks (TN 15); these checks cannot be concealed" compset="Equipment">
+    <fieldval field="grCost" value="5"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    <tag group="GearType" tag="CuffStuff"/>
+    </thing>
+  <thing id="eqNnnyCuff" name="Nannycuffs" description="Athletics (Strength) check to break out via brute force (TN 25); Computers (Hacking) check (TN 15) to escape with access to the system and the necessary interface tools" compset="Equipment">
+    <fieldval field="grCost" value="4"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    <tag group="GearType" tag="CuffStuff"/>
+    </thing>
+  <thing id="eqPerpSlve" name="Perpsleeve Unibody" description="Monitors prisoner’s vitals, location, and sounds; escape only possible with a suitable tool in hand when restrained; with a tool, it takes at least one hour and a successful Athletics (Strength) or Computers (Hacking) check (TN 20)" compset="Equipment">
+    <fieldval field="grCost" value="4"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    <tag group="GearType" tag="CuffStuff"/>
+    </thing>
+  <thing id="eqTrckNeck" name="Track-a-Neck 4000" description="Collar tracks a prisoner’s location and outside permitted boundaries either stuns (Endurance check (TN 20) or fall unconscious) or detonates (3d6 + 5 damage to the prisoner, ignoring all damage reduction, and also inﬂicts 3d6 damage to anyone within several feet); escape requires a Computers (Hacking or Security) check (TN 20) and failure by 5 or more triggers the punishment setting" compset="Equipment">
+    <fieldval field="grCost" value="5"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilMaybe"/>
+    <tag group="GearType" tag="CuffStuff"/>
+    </thing>
+  <thing id="eqCryokit" name="Cryokit" description="Puts a corpse on ice indefnitely (as long as there is power). A Medicine check is required to restore the sophont to functioning, at TN 12 for standard bodily failures (such as heart attacks), or at up to TN 30 for extensive trauma or bodily damage" compset="Equipment">
+    <fieldval field="grCost" value="10"/>
+    <tag group="GearType" tag="MedTech"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqBacTankM" name="Hand-Me-Down Bactolotl Tank (medium)" description="Regrows a character’s entire body except for the brain, which must be preserved in a nanny-bag; takes 3d6 + 14 days and requires a Medicine check (TN 12) for the body and a Medicine (Surgery) check (TN 15) to install the brain; failure with either or both checks results in lost skill ranks; automatic failure with either results in permanent character death; a player may promote a grunt while a character’s body is being regrown" compset="Equipment">
+    <fieldval field="grCost" value="25"/>
+    <tag group="GearType" tag="MedTech"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqBacTankL" name="Hand-Me-Down Bactolotl Tank (large)" description="Regrows a character’s entire body except for the brain, which must be preserved in a nanny-bag; takes 3d6 + 14 days and requires a Medicine check (TN 12) for the body and a Medicine (Surgery) check (TN 15) to install the brain; failure with either or both checks results in lost skill ranks; automatic failure with either results in permanent character death; a player may promote a grunt while a character’s body is being regrown" compset="Equipment">
+    <fieldval field="grCost" value="30"/>
+    <tag group="GearType" tag="MedTech"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqIncubtrl" name="Hand-Me-Down Incubatrol" description="Regrows a limb, organ, or other discrete body part; takes 3d6 + 30 hours and requires a Medicine check (TN 12) to replace the body part; failure results in the part not working or being rejected, though you can try again; automatic failure means the body part may never be replaced" compset="Equipment">
+    <fieldval field="grCost" value="5"/>
+    <tag group="GearType" tag="MedTech"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqSlapStck" name="MFG1 FA-20 Slapstick" description="Restores 1d6 Health, plus use of the target area or limb, cauterizes a wound, and stops bleeding; each slapstick is single-use and discarded afer application" compset="Equipment">
+    <fieldval field="grCost" value="1"/>
+    <tag group="GearType" tag="MedTech"/>
+    <tag group="LockerCls" tag="CivYes"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqNannyBag" name="MFG1 Nanny-Bag" description="Keeps one dismembered limb or other body part fresh for up to a week; each nanny-bag is single-use and discarded aferward" compset="Equipment">
+    <fieldval field="grCost" value="2"/>
+    <tag group="GearType" tag="MedTech"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilMaybe"/>
+    </thing>
+  <thing id="eqREDREO" name="Neoafan Nursetech RED-REO Blood Nannies" description="Makes a copy of one character’s mind so it can be installed into a new brain; installation takes 3d6 + 12 hours and requires a Medicine check (TN 12); failure results in lost skill ranks; automatic failure results in permanent brain death" compset="Equipment">
+    <fieldval field="grCost" value="5"/>
+    <tag group="GearType" tag="MedTech"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqNnnyBag2" name="Planet Mercenary Nanny-Bag PMH-Med-101" description="Keeps one corpse fresh for up to fve days; each nanny-bag is single-use and discarded afterward" compset="Equipment">
+    <fieldval field="grCost" value="1"/>
+    <tag group="GearType" tag="MedTech"/>
+    <tag group="LockerCls" tag="CivMaybe"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqSalvatab" name="Planet Mercenary Salvatab PH-Med-77" description="Restores 1d6 + 2 Health, plus use of the target area or limb, cauterizes a wound, and stops bleeding; ﬂip a coin and with heads the character falls unconscious for 20 minutes; each salvatab is single-use and discarded afer application" compset="Equipment">
+    <fieldval field="grCost" value="4"/>
+    <tag group="GearType" tag="MedTech"/>
+    <tag group="LockerCls" tag="CivMaybe"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqBEK1" name="Blacklabel Entrance Kit, BEK-1" description="Grants a +1 bonus with Larceny (Picking Locks) checks targeting tumbler locks" compset="Equipment">
+    <fieldval field="grCost" value="2"/>
+    <tag group="GearType" tag="Misc"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqBEK2" name="Blacklabel Entrance Kit, BEK-2" description="Grants a +2 bonus with Larceny (Picking Locks) checks targeting tumbler locks, keypads, and card readers" compset="Equipment">
+    <fieldval field="grCost" value="4"/>
+    <tag group="GearType" tag="Misc"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqBEK3" name="Blacklabel Entrance Kit, BEK-3" description="Automatically grants access without a skill check but if the lock is BEK-proofed, then there’s a 50/50 chance the BEK-3 fails, in which case you’re denied entry and any security frm employed to protect the house is alerted" compset="Equipment">
+    <fieldval field="grCost" value="8"/>
+    <tag group="GearType" tag="Misc"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqBEK4" name="Blacklabel Entrance Kit, BEK-4" description="Battering ram and “jaws of life”-style spreader that grants a +4 bonus with Athletics (Strength) checks to forcing locks that can be forced" compset="Equipment">
+    <fieldval field="grCost" value="8"/>
+    <tag group="GearType" tag="Misc"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqBEK5" name="Blacklabel Entrance Kit, BEK-5" description="Automatically succeed with any Larceny (Picking Locks) check that doesn’t roll three 1s (an automatic failure)" compset="Equipment">
+    <fieldval field="grCost" value="14"/>
+    <tag group="GearType" tag="Misc"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqBrace" name="Locksteady Gunsquat M Brace" description="This brace has one slot which allows you to make any Carbine, Long Gun, Scattergun, or Heavy Weapon into a Stationed Weapon" compset="Equipment">
+    <fieldval field="grCost" value="1"/>
+    <tag group="GearType" tag="Misc"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqEmerBelt" name="Malott M&amp;M BRB-60 Emergency Belt" description="Flight belt and face mask for unscheduled decompression events; requires one action to activate; provides a 1d6 minute air supply" compset="Equipment">
+    <fieldval field="grCost" value="3"/>
+    <tag group="GearType" tag="Misc"/>
+    <tag group="LockerCls" tag="CivMaybe"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqUtilBelt" name="Smart utility belt" description="Once per combat, you may grab any one item on your person without taking an action to do so; outside combat, instantly grab an item once per hour" compset="Equipment">
+    <fieldval field="grCost" value="2"/>
+    <tag group="GearType" tag="Misc"/>
+    <tag group="LockerCls" tag="CivMaybe"/>
+    <tag group="LockerCls" tag="MilMaybe"/>
+    </thing>
+  <thing id="eqTeraCage" name="Teraport cage" description="Must be purchased in pairs; Computer check to transport undetected; Target Number is 7 + (1 per time a cage has been used to traverse the same TAD in the last 24 hours); failure means detection and possible interception of transport; automatic failure means cages at both ends explode, disintegrating anything and anyone being transported" compset="Equipment">
+    <fieldval field="grCost" value="15"/>
+    <tag group="GearType" tag="Misc"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    </thing>
+  <thing id="eqFireSup1" name="Wächter Fire Suppression Gear WM-FEX-1" description="Puts out a single small fre in a location up to the size of a bunk room" compset="Equipment">
+    <tag group="GearType" tag="Misc"/>
+    <tag group="LockerCls" tag="CivYes"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    </thing>
+  <thing id="eqFireSup2" name="Wächter Fire Suppression Gear WM-FEX-2" description="Puts out a moderate fre in a location up to the size of a mess hall" compset="Equipment">
+    <fieldval field="grCost" value="2"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilYes"/>
+    <tag group="GearType" tag="Misc"/>
+    </thing>
+  <thing id="eqFireSup3" name="Wächter Fire Suppression Gear WM-FEX-3" description="Puts out a large fre in a location up to the size of a cavernous cargo bay" compset="Equipment">
+    <fieldval field="grCost" value="5"/>
+    <tag group="LockerCls" tag="CivNo"/>
+    <tag group="LockerCls" tag="MilNo"/>
+    <tag group="GearType" tag="Misc"/>
+    </thing>
+
   <!-- Customizable Top-Holder gear -->
   <thing
     id="eqCustTop"
@@ -50,6 +313,7 @@
     description="Use this item to represent a place to store your gear - for example, a house, or as buried treasure somewhere.">
     <fieldval field="UserName" value="New Location"/>
     <tag group="Helper" tag="CustomItem"/>
+    <tag group="GearType" tag="Custom"/>
     <tag group="thing" tag="holder_top"/>
     </thing>
 
@@ -63,58 +327,21 @@
     description="Use this item to represent a bag or other container in which gear can be carried around.">
     <fieldval field="UserName" value="New Container"/>
     <tag group="Helper" tag="CustomItem"/>
+    <tag group="GearType" tag="Custom"/>
     <tag group="thing" tag="holder"/>
     </thing>
 
-
-  <!-- Sample Simple gear -->
+  <!-- Customizable gear -->
   <thing
-    id="eqSimple"
-    name="Sample Simple"
+    id="eqCustGear"
+    name=" – Custom Gear –"
     compset="Equipment"
-    description="Description goes here">
-    <fieldval field="grCost" value="100"/>
-    <fieldval field="gearWeight" value="1"/>
-    <!-- Define any script needed to confer the effects of the gear
-    <eval value="1" phase="PreTraits" priority="5000">
-      <before name="Calc trtFinal"/><![CDATA[
-      ~#traitbonus[attrSam] += 1
-      ]]></eval>
-    -->
-    </thing>
-
-  <!-- Sample Ammunition gear -->
-  <thing
-    id="eqAmmo"
-    name="Sample Ammo"
-    compset="Ammunition"
-    lotsize="20"
-    stacking="merge"
-    description="Description goes here.">
-    <fieldval field="grCost" value=".5"/>
-    <fieldval field="gearWeight" value=".1"/>
-    </thing>
-
-  <!-- Sample Container gear -->
-  <thing
-    id="eqContain"
-    name="Sample Container"
-    compset="Equipment"
-    description="Description goes here.">
-    <fieldval field="grCost" value="5"/>
-    <fieldval field="gearWeight" value="1"/>
-    <tag group="thing" tag="holder"/>
-    </thing>
-
-  <!-- Sample Stackable gear -->
-  <thing
-    id="eqStack"
-    name="Sample Stackable"
-    compset="Equipment"
-    stacking="merge"
-    description="Description goes here.">
-    <fieldval field="grCost" value="1"/>
-    <fieldval field="gearWeight" value="1"/>
+    stacking="solo"
+    isprivate="yes"
+    description="Use this item to represent a custom piece of gear.">
+    <fieldval field="UserName" value="New Gear"/>
+    <tag group="Helper" tag="CustomItem"/>
+    <tag group="GearType" tag="Custom"/>
     </thing>
 
   <!-- Dropped to Ground location - automatically bootstrapped to every hero -->

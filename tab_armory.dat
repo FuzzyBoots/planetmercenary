@@ -86,7 +86,8 @@
       showtemplate="arWpnPick"
       choosetemplate="arWpnThing"
       buytemplate="BuyCash"
-      selltemplate="SellCash">
+      selltemplate="SellCash"
+      choosesortset="Weapon">
       <list>component.WeapRange</list>
       <candidate inheritlist="yes">!Equipment.Natural</candidate>
       <titlebar><![CDATA[

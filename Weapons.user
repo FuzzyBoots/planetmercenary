@@ -1,42 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
-  <thing id="wprGlDag" name="Blattco Ni-972 “Glass Dagger”" description="Blattco Arms made its frst foray into the beam weapon market only recently, but its effort has met with favorable critical response as well as panicked cries from those illuminated downrange.\n\nThe Ni-972 “Glass Dagger” is a long-barreled pistol with a capstack magazine in the grip. Like most Blattco weapons, it caters to those who want the frst shot to count. It fires a powerful pulse of coherent light that delivers enough heat to burn through most brands of light armor, excepting those specifcally designed to dissipate or reﬂect high temperature attacks.\n\nThis hot pulse comes at a price, however. TeNi-972 cannot be burst-fired, nor can it deliver a continuous, sweeping beam. The weapon also heats up quickly and only gets six shots out of each magazine. An extended capstack is available, upping the shot count to fifteen and allowing the wielder to ignore the first reload required in each combat. In Planet Mercenary RPG, it has the Self-supplying Ammunition quality, which mimics the real-world extended\ncapstack of this weapon.\n\nUnlike other Blattco weapons, the “Glass Dagger” can be rendered inoperable during normal use. Tis is by design. With the toggling of a pair of switches, the Ni-972 can discharge its entire capstack at once, dealing as much damage in a single shot as it could if all six shots had struck the target individually. This “all-in mode” makes the “Glass Dagger” a Single-use weapon, destroying its optical elements. Thereafer, the pistol must be feld-stripped and re-assembled with replacement parts before it can be fred again.\n\nUsing all-in mode with the extended capstack is not recommended if you want to keep the appendage that you use to fre your pistol." compset="Ranged">
-    <fieldval field="wpDamage" value="Laser: 2d6+2 (5d6+5 in all in mode)"/>
+  <thing id="wprGlDag" name="Blattco Ni-972 “Glass Dagger”" description="Blattco Arms made its frst foray into the beam weapon market only recently, but its effort has met with favorable critical response as well as panicked cries from those illuminated downrange.\n\nThe Ni-972 “Glass Dagger” is a long-barreled pistol with a capstack magazine in the grip. Like most Blattco weapons, it caters to those who want the frst shot to count. It fires a powerful pulse of coherent light that delivers enough heat to burn through most brands of light armor, excepting those specifcally designed to dissipate or reﬂect high temperature attacks.\n\nThis hot pulse comes at a price, however. TeNi-972 cannot be burst-fired, nor can it deliver a continuous, sweeping beam. The weapon also heats up quickly and only gets six shots out of each magazine. An extended capstack is available, upping the shot count to fifteen and allowing the wielder to ignore the first reload required in each combat. In Planet Mercenary RPG, it has the Self-supplying Ammunition quality, which mimics the real-world extended\ncapstack of this weapon.\n\nUnlike other Blattco weapons, the “Glass Dagger” can be rendered inoperable during normal use. This is by design. With the toggling of a pair of switches, the Ni-972 can discharge its entire capstack at once, dealing as much damage in a single shot as it could if all six shots had struck the target individually. This “all-in mode” makes the “Glass Dagger” a Single-use weapon, destroying its optical elements. Thereafer, the pistol must be feld-stripped and re-assembled with replacement parts before it can be fred again.\n\nUsing all-in mode with the extended capstack is not recommended if you want to keep the appendage that you use to fre your pistol." compset="Ranged">
+    <fieldval field="wpDamage" value="2d6+2 (5d6+5 in all-in mode)"/>
     <fieldval field="grCost" value="9"/>
-    <fieldval field="wpSpecial" value="Breacher; Single-use; Sturdy Construction"/>
     <fieldval field="shortname" value="Glass Dagger"/>
-    <tag group="License" tag="Military"/>
+    <fieldval field="wpSpecial" value="Single-use &quot;all-in&quot; only"/>
     <tag group="Reload" tag="rlOne"/>
     <tag group="WeapClass" tag="Beam"/>
     <tag group="AmmoType" tag="Laser"/>
     <tag group="WeaponType" tag="rngPistol"/>
+    <tag group="Weapon" tag="Breacher"/>
+    <tag group="Weapon" tag="SingleUse"/>
+    <tag group="Weapon" tag="SConstrct"/>
+    <tag group="License" tag="Military"/>
     </thing>
-  <thing id="wprLMSG" name="BFF DT-56k “Little Magic Sleep Gun”" compset="Ranged">
+  <thing id="wprLMSG" name="BFF DT-56k “Little Magic Sleep Gun”" description="When you’re firing into a homogenous crowd of humans or purps, then your least-expensive stunning option is the Bryanton Faire Fabricators (BFF) DT-56k, also known as the “Little Magic Sleep Gun.” This weapon fires parallel high-energy beams of ultra-low-frequency sound. The two beams are very close in wave length, resulting in a difference in tone where they overlap. This tone has all the energy of both beams but remains highly directional, unlike true low-frequency systems.\n\nThe effect on a human or purp is usually immediate and total sedation, as certain neural paths are forced to resonate in time with the low-frequency sound. Unfortunately, this effect often also voids the bowels." compset="Ranged">
     <fieldval field="wpDamage" value="Endurance check (TN 20) or fall unconscious"/>
     <fieldval field="grCost" value="5"/>
     <fieldval field="wpSpecial" value="Only works on humans &amp; Purps (has no effect on other races)"/>
-    <fieldval field="shortname" value="Little Magic Sleep Gun"/>
+    <fieldval field="shortname" value="LMSG"/>
     <tag group="AmmoType" tag="Stun"/>
     <tag group="License" tag="Legal"/>
     <tag group="Reload" tag="rlOneTwo"/>
     <tag group="WeaponType" tag="rngPistol"/>
     <tag group="WeapClass" tag="NonLethal"/>
     </thing>
-  <thing id="wprNeuroM" name="BFF Neuromazer" compset="Ranged">
+  <thing id="wprNeuroM" name="BFF Neuromazer" description="The Neuromazer uses short-frequency EM radiation to induce a pain response in exposed nerves. The effect works on most sophont races with nerves and skin, and it’s usually safe. Usually. This is only a medium-range and short-range pistol. BFF engineers discovered to their dismay, and permanent maiming, that the energy required for long-range shots would make short-range shots rather dangerous, so they limited the energy output of the weapon." compset="Ranged">
     <fieldval field="wpDamage" value="Endurance check (TN 20) or fall unconscious"/>
     <fieldval field="grCost" value="7"/>
-    <fieldval field="wpSpecial" value="Only works on sophonts with nerves and skin (has no effect on other races); short range"/>
+    <fieldval field="wpSpecial" value="Only works on sophonts with nerves and skin (has no effect on other races)"/>
     <fieldval field="shortname" value="Neuromazer"/>
     <tag group="AmmoType" tag="Stun"/>
     <tag group="License" tag="Legal"/>
     <tag group="Reload" tag="rlOneTwo"/>
     <tag group="WeaponType" tag="rngPistol"/>
     <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="Weapon" tag="SRange"/>
     </thing>
-  <thing id="wprPistCH" name="Blattco 15 mm Clawhammer" compset="Ranged">
+  <thing id="wprPistCH" name="Blattco 15 mm Clawhammer" description="Like all Blattco Arms weapons, the Clawhammer is exceptionally reliable. If you want a pistol with stopping power, a threatening profle, and a report like an artillery strike, then this is the weapon for you.\n\nThe Clawhammer does not truck with any of that namby-pamby, fancy-dancing recoil reduction. Those systems are among the first to fail in any complex weapon design and let’s face it: if you’re carrying the Clawhammer, then you don’t care about recoil because your first shot will start and fnish the job.\n\nHang on tight, though. Any kick not redirected into cycling the action is going straight back into your wrist. If your grip is the slightest bit loose, then the Clawhammer will launch itself back from your hand and hit you in the face like a… well, like a hammer.\n\nThe large muzzle of the Clawhammer boasts a diameter that allows for a wide range of specialty and custom loads. Goober rounds, armor crackers, de-motivators — you name it, the Clawhammer can fire it. Enjoy." compset="Ranged">
     <fieldval field="grCost" value="5"/>
     <fieldval field="wpDamage" value="Demotivator, Endurance check TN 15 or become incapacitated; {br}Goober Athletics check TN 20 to escape; {br}Gunfoam 1d6+3, PEA 1d6+3"/>
-    <fieldval field="wpSpecial" value="Sturdy Construction; Variable Ammo"/>
     <fieldval field="shortname" value="Clawhammer"/>
     <tag group="AmmoType" tag="Demotivate"/>
     <tag group="AmmoType" tag="Goober"/>
@@ -46,52 +49,321 @@
     <tag group="License" tag="Legal"/>
     <tag group="Reload" tag="rlOne"/>
     <tag group="WeapClass" tag="Projectile"/>
+    <tag group="Weapon" tag="SConstrct"/>
+    <tag group="Weapon" tag="VAmmo"/>
     </thing>
   <thing id="wprBallPn" name="Blattco 7 mm Ball-Peen" description="Blattco’s smallest pistol is the so-called “BallPeen” pistol. It only fires gunfoam, but it’s super-dependable. It’s small and hits more like a love tap than a proper hammer. Of course, that’s by comparison. The Ball-Peen is perfectly lethal — it just lacks stopping power and the huge, hulking profle that goes with it. It is ideal for hiding in small pockets or bags, or to be carried into places where folk might not want you to carry such things." compset="Ranged">
     <fieldval field="grCost" value="5"/>
-    <fieldval field="wpDamage" value="Gunfoam 1d6+1"/>
-    <fieldval field="wpSpecial" value="Holdout/Stealth"/>
-    <fieldval field="shortname" value="Clawhammer"/>
+    <fieldval field="wpDamage" value="1d6+1"/>
+    <fieldval field="shortname" value="Ball-Peen"/>
     <tag group="AmmoType" tag="Gunfoam"/>
     <tag group="WeaponType" tag="rngPistol"/>
     <tag group="License" tag="Restricted"/>
     <tag group="Reload" tag="rlOne"/>
     <tag group="WeapClass" tag="Projectile"/>
+    <tag group="Weapon" tag="Holdout"/>
     </thing>
   <thing id="wprTenSqr" name="Phubahr 102 10 mm Tensquare" description="If you’re operating on a budget and need to put a rack of disposable weapons in the hands of a company of disposable grunts, then the Phubahr “Tensquare” is the bargain waiting in your basement. Probably right next to the body bags. \n\nThe Tensquare fres 10 mm balls that sit atop 10 mm gunfoam cartridges. It lacks the stopping power of larger weapons but it can get the job done. Be warned, however: like all Phubahr weapons, the Tensquare is twitchy. They sometimes jam catastrophically" compset="Ranged">
     <fieldval field="wpDamage" value="Gunfoam 1d6"/>
     <fieldval field="grCost" value="2"/>
-    <fieldval field="wpSpecial" value="Failure Prone"/>
-    <tag group="Reload" tag="rlOne"/>
+    <fieldval field="shortname" value="Tensquare"/>
     <tag group="WeaponType" tag="rngPistol"/>
     <tag group="WeapClass" tag="Projectile"/>
     <tag group="License" tag="Legal"/>
     <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="Weapon" tag="FProne"/>
+    <tag group="Reload" tag="rlOne"/>
     </thing>
   <thing id="wprDerrier" name="Phubahr Derrierringer" description="The Derrierringer is currently the only Phubahr weapon that’s exactly as dependable as it needs to be. This single-shot pea-shooter dumps its entire capstack into launching just one pre-loaded ﬂechette. This capstack is integrated into the pulsilinear array, so the weapon must be completely disassembled to be reloaded. The cost of parts and labor required to reload this pistol are more than the price for a new one.\n\nFire this pistol once and throw it away. For added effect, you can chuck the otherwise useless pistol at any remaining opponents, but we can’t guarantee any added effect unless you have a good throwing arm." compset="Ranged">
-    <fieldval field="wpDamage" value="PEA 1d6"/>
+    <fieldval field="wpDamage" value="1d6"/>
     <fieldval field="grCost" value="3"/>
-    <tag group="WeaponType" tag="rngPistol"/>
+    <fieldval field="shortname" value="Derrierringer"/>
     <tag group="WeapClass" tag="Projectile"/>
     <tag group="AmmoType" tag="PEA"/>
     <tag group="License" tag="Restricted"/>
+    <tag group="Reload" tag="None"/>
+    <tag group="Weapon" tag="FProne"/>
+    <tag group="Weapon" tag="Holdout"/>
+    <tag group="Weapon" tag="SingleUse"/>
+    <tag group="WeaponType" tag="rngPistol"/>
     </thing>
   <thing id="wprStrGG29" name="Strohl G/G 29" description="The Strohl Munitions G/G 29 is a top-notch sidearm that you, like many mercenaries, may find yourself adding notches to, if you’re that kind of person. There’s even a replaceable notch plate on the grip. None of this is a guarantee that you won’t end up as a notch on someone else’s G/G 29, of course. For that sort of insurance, you should check out Planet Mercenary’s wide selection of armor. Also, spend some time on the range.\n\nThe G/G 29 is a hybrid pistol. The grip magazine can be loaded with Ferrotious brand ferroceramic peas, 9 mm gunfoam rounds, or a combination of both. With gunfoam rounds, you should use shorts or standards. Stay away from the XL rounds because while they pack a bit more punch, they’ll damage the secondary barrel used by the peas.\n\nWhen you need to kill things without a lot of noise, this is your weapon. Also, be a very good shot because these 2 mm peas don’t pack much punch at subsonic speeds, and they’re unlikely to penetrate light body armor or a helmet." compset="Ranged">
     <fieldval field="wpDamage" value="Gunfoam 1d6+1; PEA 1d6-1"/>
     <fieldval field="grCost" value="3"/>
-    <fieldval field="wpSpecial" value="Variable Ammunition"/>
-    <tag group="Reload" tag="rlOne"/>
+    <fieldval field="shortname" value="G/G 29"/>
     <tag group="WeapClass" tag="Projectile"/>
     <tag group="WeaponType" tag="rngPistol"/>
     <tag group="License" tag="Legal"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="AmmoType" tag="PEA"/>
+    <tag group="Reload" tag="rlOne"/>
+    <tag group="Weapon" tag="VAmmo"/>
     </thing>
   <thing id="wprStrGGAP" name="Strohl G/G 29 AP" description="This is the annie-powered version of the G/G 29. It costs more, but it’s guaranteed to fire 200,000 rounds before you need a new power unit. In-game, this is represented by the Annie Plant Power Supply quality. The annie assembly includes a shot counter but it’s not tamper-proof. If you buy a G/G  29 AP on the secondary market, then be sure to send the annie assembly to Planet Mercenary for refurbishment and recharging. Better safe than sorry!" compset="Ranged">
     <fieldval field="wpDamage" value="Gunfoam 1d6+1; PEA 1d6-1"/>
     <fieldval field="grCost" value="8"/>
-    <fieldval field="wpSpecial" value="Annie Plant Power Supply; Variable Ammunition"/>
-    <tag group="Reload" tag="rlOne"/>
+    <fieldval field="shortname" value="G/G 29 AP"/>
     <tag group="WeapClass" tag="Projectile"/>
     <tag group="WeaponType" tag="rngPistol"/>
     <tag group="License" tag="Legal"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="AmmoType" tag="PEA"/>
+    <tag group="Reload" tag="rlOne"/>
+    <tag group="Weapon" tag="APPS"/>
+    <tag group="Weapon" tag="VAmmo"/>
+    </thing>
+  <thing id="wprSmythMM" name="Smythe Micro Model 3" description="Te Micro Model 3 brieﬂy held the distinction of being the smallest holdout pistol in the Planet Mercenary catalog, but when Smythe began plastering that claim throughout their marketing slicks, several manufacturers launched into a campaign of aggressive one-downsmanship — a war of literal attrition, until the record-holding weapon was not only too small to be useful, it was so small that if you dropped it on the carpet you might never fnd it again.\n\nSmythe wisely refused to engage, and the Micro Model 3 remains a favorite among Planet Mercenary’s discerning clientele. It fires 2.25 mm gunfoam rounds." compset="Ranged">
+    <fieldval field="wpDamage" value="1d6-1"/>
+    <fieldval field="grCost" value="4"/>
+    <fieldval field="shortname" value="Micro Model"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="License" tag="Restricted"/>
+    <tag group="Reload" tag="rlOne"/>
+    <tag group="Weapon" tag="Holdout"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    </thing>
+  <thing id="wprSledge" name="Blattco 30 mm Sledgehammer" description="The Blattco Arms Sledgehammer delivers everything you’d expect from a large-bore scattergun: sound, fury, and a single-shot solution for most problems. It takes gunfoam cartridges, but goober rounds can also be loaded without any modifcations.\n\nFor trench fghting, the standard load is perfect. It’s loud and messy, and at close range there’s little chance you’ll miss your target completely. Stopping power isn’t the only selling point, either. The simple, large-bore design of the Sledgehammer offers huge ﬂexibility. This weapon sees lots of law enforcement use because it can fre the full suite of goober crowd control options.\n\nThat same ﬂexibility lets the user chamber some heavy-duty loads, like armor crackers." compset="Ranged">
+    <fieldval field="shortname" value="Sledgehammer"/>
+    <fieldval field="wpDamage" value="Goober, Athletics check TN 20 to escape; Gunfoam 2d6+3; Stun, Endurance check TN 20 or fall unconscious"/>
+    <fieldval field="grCost" value="6"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="WeaponType" tag="rngScatter"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="Goober"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="AmmoType" tag="Stun"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="Scatter"/>
+    <tag group="Weapon" tag="VAmmo"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    </thing>
+  <thing id="wprWAFlech" name="Wimanu-Arrow Model A Shafter 14 mm Flechette Pistol" description="Most pea-shooters are compatible with many specialty rounds, but Wimanu-Arrow’s entire business is built around throwing the best darts in the business. The Model A has a wide barrel built to accommodate large payloads and the company’s line of ﬂechettes is far more varied and versatile than either Ferrotious or Fletchion can offer.\n\nWith a 14-round magazine and an integrated capstack, the Model A is unlike other pea-shooters in that it has only two muzzle-velocity settings: “pierce” and “punch.” Tese launch ﬂechettes at 44 m/s and 300 m/s, respectively. Both modes fire silently.\n\nEven at only 44 m/s, a ﬂechette can break the skin (typically to deliver a chemical payload). At 300 m/s, the same 12-gram ﬂechette impacts with potentially lethal force. Of course, if you’re trying to tranquilize a neophant, then you’ll probably want the punch to deliver the payload in the frst place. A skilled shooter trained with this weapon can launch tranquilizers, micro-grenades, Vom darts, de-motivators, and plain old “kill” darts in combat" compset="Ranged">
+    <fieldval field="wpDamage" value="Demotivator, Endurance check TN 15 or become incapacitated; PEA (pierce mode) 1d6-3; PEA (punch mode) 1d6+2"/>
+    <fieldval field="grCost" value="5"/>
+    <fieldval field="shortname" value="Model A Shafter"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="Demotivate"/>
+    <tag group="AmmoType" tag="PEA"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOne"/>
+    <tag group="Weapon" tag="Breacher"/>
+    <tag group="Weapon" tag="Delivery"/>
+    <tag group="Weapon" tag="VAmmo"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    </thing>
+  <thing id="wprPhu2020" name="Phubahr 20-20" description="The Phubahr 20-20 takes 20 mm gunfoam cartridges and like all Phubahr weapons, it’s most commonly used by organizations on a lean budget. Unlike other Phubahr weapons, the 20-20 is not prone to misfires or breakage — provided it’s always only loaded with 20-20 spec, Phubahr-brand cartridges (a fact that is represented in-game by an extra supplies cost to remove the Failure Prone quality). Many ammo manufacturers claim that their specialty loads are fully Phubahr-compatible, but those claims are, at best, hyperbole. Like its cousin models, the Phubahr 20-20 is an extremely temperamental weapon, and if you want it to reliably kill what you point it at, then you need to load it with stock ammunition." compset="Ranged">
+    <fieldval field="shortname" value="20-20"/>
+    <fieldval field="wpDamage" value="2d6"/>
+    <fieldval field="grCost" value="2"/>
+    <fieldval field="wpSpecial" value="Additional cost of S2 removes Failure Prone"/>
+    <tag group="WeaponType" tag="rngScatter"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="Goober"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="AmmoType" tag="Stun"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="Scatter"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Weapon" tag="FProne"/>
+    </thing>
+  <thing id="wprMagsplt" name="Strohl 20 mm Magsplatter 440" description="As a rule, scatterguns are loud, inaccurate, and messy. The Strohl Munitions 20 mm Magsplatter 440 is a rule-breaker that, in the right hands, operates quietly and accurately, and it can keep the mess it makes in one place (unless you want to spread the damage around, but we’ll get to that).\n\nThe Magsplatter 440 fires a “ﬂock” of ferroceramic slivers. Te shooter may choose if the ﬂock ﬂies wide (scatter mode) or in a tight pattern (focus mode). This pattern is highly programmable, and thus there are now art competitions centered around shooting downrange and creating pictures with a single pull of the trigger. You probably won’t want to write your initials on your enemies, but if you do, then the Magsplatter 440 has you covered. There is a downside to programming your strikes: occasionally the onboard SI gets confused and needs to be rebooted, which functions like needing to reload your weapon.\n\nBest of all the Magsplatter 440 has a whisper of a report. Te loudest sound is generated at the point of impact. Depending on ambient noise, it’s entirely possible that no one will even notice a weapon was fred anywhere in the area." compset="Ranged">
+    <fieldval field="wpDamage" value="2d6"/>
+    <fieldval field="grCost" value="5"/>
+    <fieldval field="shortname" value="Magsplatter 440"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="ScatterM" name="Scatter Mode"/>
+    <tag group="Weapon" tag="Scatter"/>
+    <tag group="Weapon" tag="FocusM" name="Focus Mode"/>
+    <tag group="Weapon" tag="ReloadInt"/>
+    <tag group="WeaponType" tag="rngScatter"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    </thing>
+  <thing id="wprVerfkwa" name="Aarikaida Optics N-80 Verfkwas" description="The N-80 Verfwas is a continuous-fire laser weapon that’s arguably as smart as anybody who could reasonably be expected to carry it. Fortunately, what smarts the weapon does exhibit are dedicated exclusively to the task of keeping the laser pinpointed on the same spot for a deep burn. Te designers also made sure that the weapon’s annie plant has enough power to fire for hours on end. Occasionally, it needs a quick reboot for the onboard SI, but overall it is one of the most reliable beam carbines available." compset="Ranged">
+    <fieldval field="wpDamage" value="2d6+2"/>
+    <fieldval field="grCost" value="10"/>
+    <fieldval field="shortname" value="Verfkwas"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="AmmoType" tag="Laser"/>
+    <tag group="License" tag="Military"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="Weapon" tag="Accurate"/>
+    <tag group="Weapon" tag="APPS"/>
+    <tag group="Weapon" tag="SSAmmo"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    </thing>
+  <thing id="wprCancStk" name="Phubahr PG-55 Cancerstick" description="Phubahr outdid themselves when they reverse-engineered the Strohl AP-1100. The PG-55 looks almost exactly like the AP-1100, only with much more attractive styling on the stock; however, that beautiful stock should be kept as far away from your body as possible.\n\nWhen warming up, the PG-55 leaks high-velocity atomic nuclei, and due to the proximity of the acceleration chamber to the shooter, 50% of those nuclei strike the shooter. It’s not noticeable. It’s just kind of warm. But over time, numerous cells in the shooter’s body are damaged by hard radiation. Most soldiers have blood-nannies that can sniff out any cancerous cells before they become a problem, which is why the Phubahr PG-55 remains popular with people who need a particle gun on the cheap, and who think their shots are up to date.\n\nThe PG-55’s second most common failure mode is the electron recapture coil at the end of the barrel. On a properly tuned, non-ionizing particle gun, the nuclei grab electrons on their way out, making them electrically neutral. This prevents beam deformation in the presence of environmental magnetism, but more importantly it prevents the weapon from becoming a non-grounded ion gun — which, as you’ll learn once you’ve read the section on ion guns, is spectacularly bad." compset="Ranged">
+    <fieldval field="wpDamage" value="3d6"/>
+    <fieldval field="grCost" value="5"/>
+    <fieldval field="shortname" value="Cancerstick"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="License" tag="Illegal"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="Weapon" tag="APPS"/>
+    <tag group="AmmoType" tag="Particle"/>
+    <tag group="Weapon" tag="Breacher"/>
+    <tag group="Weapon" tag="FProne"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    </thing>
+  <thing id="wprZeusso" name="Phubahr Zeussomator" description="Gods, no. And when we say “gods,” we’re invoking any culture’s gods but most especially those governing the domains of lightning and death.\n\nThe Zeussomator does not come with a full ion suit but it does come with something that looks a lot like a copper string bag — which is going to do just about as much good as an actual string bag once you pull the trigger. We think it’s supposed to be a portable faraday cage, but ultimately it’s just a convenient way to keep all your pieces in one place while your comradesin-arms haul your electrocuted corpse to the dump. Of course, this assumes that the electrical discharge left enough of your body to dump at all, which is by no means a sure thing.\n\nIf we dare to make assumptions, and if we further dare to stretch our hands heavenward and implore favor from previously invoked deities and assume you put on a proper ion suit before discharging this weapon, then it’s not beyond the arc-lit pale to imagine a bolt of lightning connecting the tip of the weapon to the center mass of your target, smiting the wicked with jolly joules numbering in the billions. For one sharply-illuminated moment, you will be wielding the very Finger of God, and those you touch will feel power a million times greater than that imparted by the now mundane 15 mm Blattco Breaker Bar." compset="Ranged">
+    <fieldval field="wpDamage" value="5d6"/>
+    <fieldval field="grCost" value="3"/>
+    <fieldval field="shortname" value="Zeussomator"/>
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="AmmoType" tag="Ion"/>
+    <tag group="License" tag="Illegal"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="Reload" tag="rlOneThree"/>
+    <tag group="Weapon" tag="APiercing"/>
+    <tag group="Weapon" tag="FProne"/>
+    <tag group="Weapon" tag="Unlucky"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    </thing>
+  <thing id="wprShckStr" name="Shockstar LG-2000 Lightning Gun" description="One of the industry’s worst-kept secrets is the fact that Shockstar is an alias corporation through which Strohl Munitions can sell weapons on which they feel ashamed to put their name. Tey’re high-quality tools, but because ion guns are inherently electromagnecatastrophic, Strohl decided to protect their brand.\n\nThe LG-2000 is long and bulbous, a break from the cleaner lines of Strohl’s name-branded products. It comes with a suit that’s custom-ftted for the shooter, and a properly-suited soldier who wields an LG-2000 enjoys the rare pleasure of throwing lightning at others with nigh-impunity.\n\nThis doesn’t do his squad-mates a lick of good, of course. The gun only comes with one suit, and they probably wouldn’t ft in it even if they stole it out of the shooter’s locker." compset="Ranged">
+    <fieldval field="shortname" value=" LG-2000"/>
+    <fieldval field="wpDamage" value="2d6"/>
+    <fieldval field="grCost" value="8"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="AmmoType" tag="Ion"/>
+    <tag group="License" tag="Military"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="APiercing"/>
+    <tag group="Weapon" tag="FProne"/>
+    </thing>
+  <thing id="wprStrlght" name="Smythe Starlight 23" description="Phubahr hasn’t entered the laser weapon arena, which is nice, as it made room at the low end for Smythe to deliver the Starlight 23, a laser carbine worthy of an honorary Phubahr designation. Most of this weapon’s misfres are simple failures to emit a beam. Unfortunately, there’s almost never an opportune time for your laser weapon to fail to emit a beam.\n\nThe Starlight 23 also manages a feat long thought impossible for a laser weapon: it’s possible for the beam to hit something other than what’s directly in front of the weapon. This is a function of the substandard array used at the aperture. If it’s any consolation, the array isn’t quite so bad as to allow you to shoot yourself while holding the weapon properly. We think." compset="Ranged">
+    <fieldval field="grCost" value="3"/>
+    <fieldval field="wpDamage" value="2d6"/>
+    <fieldval field="shortname" value="Starlight 23"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="AmmoType" tag="Laser"/>
+    <tag group="License" tag="Military"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="FProne"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    </thing>
+  <thing id="wprPerfor" name="Strohl AP-1100 Railstream Perforator" description="The AP-1100 is one of the most sophisticated weapons oﬀered by Strohl. Designed for anti-armor use, it is extremely eﬀective against hard targets. A pair of 5 cm annies slung just forward of the trigger power a magbottle and an acceleration coil that sit nestled inside the relatively chubby stock. Forward of the trigger is a 140-centimeter barrel that’s long and unwieldy but should never, under any circumstances, ever, ever be cut.\n\nThe AP-1100 fres microbursts of electroneutral carbon at over 200 million meters per second (.66c). These bursts are tiny compared to the bolts of conventional plasguns, but they’re also extremely eﬀective and can punch through any non-PTU body armor as if it wasn’t there. The target might as well be hiding behind an endcap display of potato chips." compset="Ranged">
+    <fieldval field="shortname" value="Perferator"/>
+    <fieldval field="wpDamage" value="3d6"/>
+    <fieldval field="grCost" value="17"/>
+    <tag group="Reload" tag="rlOneThree"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="License" tag="Illegal"/>
+    <tag group="Weapon" tag="AVPL"/>
+    <tag group="Weapon" tag="APPS"/>
+    <tag group="Weapon" tag="Breacher"/>
+    <tag group="Weapon" tag="SSAmmo"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    </thing>
+  <thing id="wprBanHamm" name="Blattco 8 mm “Ban-Hammer”" description="The Blattco Arms 8 mm “Ban-Hammer” carbine, commonly referred to as the BBH-8, is an extremely popular, supremely sturdy weapon. It fires 8 mm gunfoam rounds, and with some calipers and a bit of machining it can be every bit as accurate as a gauss carbine, at least in single-fire mode. Accuracy declines sharply as the weapon heats up. Fortunately, the barrel deformation is temporary, and afer your “Ban-Hammer” has cooled down, you’ll once again be putting single shots where you want them. You may need to adjust the weapon’s sight again, however.\n\nMost troopers who carry a BBH-8 sing its praises for the ergonomics — though they (usually) aren’t actually singing and they probably wouldn’t use the word “ergonomics.” Blattco took great pains with the weapon’s form factor, and regardless of your race or hand structure the BBH-8 can be ftted very comfortably. The recoil is well distributed and many owners say that the weapon feels light for its profle." compset="Ranged">
+    <fieldval field="shortname" value="Ban-Hammer"/>
+    <fieldval field="wpDamage" value="2d6+2"/>
+    <fieldval field="grCost" value="6"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="SConstrct"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    </thing>
+  <thing id="wprSlngsht" name="Phubahr 7 mm “Slingshot”" description="Let’s be completely honest: a gauss carbine is a fantastically complex piece of machinery, and Phubahr is best known for building things that fail. You’d think that even when Phubahr R&amp;D feels optimistic enough to design its own gauss carbine, the market would reject it.\n\nAnd yet, if Planet Mercenary’s sales fgures are any indication, then the Phubahr 7 mm “Slingshot” sells better than any other carbine we carry. It’s as if there’s a perfect storm of stupidity all the way up the supply chain, starting with you, the discerning consumer, and running all the waaaaaa—\n\nThe “Slingshot” is not a hybrid weapon and it makes less efficient use of capstacks than the Strohl G/G 511, but it can be outftted with any of the afer-market “smart pea” packages, including those designed for use with the G/G 511. The “Slingshot” is just as stealthy as other gauss carbines when set to subsonic fire. Until it misfres, of course. Then it’s quite loud." compset="Ranged">
+    <fieldval field="wpDamage" value="2d6"/>
+    <fieldval field="grCost" value="2"/>
+    <fieldval field="shortname" value="Slingshot"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="PEA"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="FProne"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    </thing>
+  <thing id="wprGG511" name="Strohl G/G 511" description="The Strohl Munitions G/G 511 isn’t only the finest hybrid carbine on the market, it’s arguably the best carbine in any class.\n\nThe G/G 511 is a highly dependable weapon that can be loaded with any type of PEA or goober loads as well as any standard 7 mm gunfoam ammunition. In the mud and the blood of the battlefeld, that feature alone makes this weapon worth its price.\n\nWith gauss mode (shooting PEA), the G/G 511 shines. There’s no report or muzzle ﬂash, and with the velocity dialed down to 325 m/s, there’s no supersonic crack to alert the enemy of your presence. The 7 mm slivers also pack more punch than the G/G 29’s 2 mm slivers, so you’re more likely to score that one-shot kill in the quiet dark — and if you don’t, then there are plenty more shots where that came from." compset="Ranged">
+    <fieldval field="shortname" value="G/G 511"/>
+    <fieldval field="wpDamage" value="Goober Athletics check TN 20 to escape;"/>
+    <fieldval field="grCost" value="4"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    <tag group="AmmoType" tag="Goober"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="AmmoType" tag="PEA"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="VAmmo"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    </thing>
+  <thing id="wprSkokge" name="Aarikaida Optics N-91 Skokgeweer" description="The N-91 Skokgeweer ion gun takes advantage of Aarikaida’s expertise in the category. The manufacturer doesn’t provide a suit for the weapon but it has tested the weapon exhaustively and identifes compatible suits from Voller &amp; Scheck and Tacspec Titanicorps.\n\nBuilt upon the core components of an Aarikaida N-80 “Verfwaz” laser gun, the N-91 appears very similar if you look past the bulky over-under assembly that delivers the electron stream. The N-91 overcomes one of the principal shortcomings of any laser weapon by delivering much more heat to the point of focus, and then scattering the burning charge across the target. In the right circumstances, the weapon’s electric discharge has even been known to arc high in the air with a crack that is almost musical. This doesn’t happen ofen, but when it does it’s amazing, and talking about it will earn you free drinks for years to come." compset="Ranged">
+    <fieldval field="shortname" value="Skokgeweer"/>
+    <fieldval field="wpDamage" value="2d6"/>
+    <fieldval field="grCost" value="10"/>
+    <tag group="WeaponType" tag="rngLongGun"/>
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="AmmoType" tag="Ion"/>
+    <tag group="License" tag="Military"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="Accurate"/>
+    <tag group="Weapon" tag="APiercing"/>
+    <tag group="Weapon" tag="Sniper"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    </thing>
+  <thing id="wprBrkrBar" name="Blattco 12 mm Breaker Bar" description="Blattco Arms’ 12 mm Breaker Bar, or BB-12, is popular with snipers and sportsmen alike, though it’s hardly sporting to put a hole in a dumb animal from a kilometer away. The BB-12’s SSI makes the weapon “10-ring accurate” at distances up to 3,000 meters. In calm weather when it’s coupled with a high-resolution, oﬀ-axis overwatch, it can lob bullets at targets up to several kilometers from you. These targets can even be positioned below your line of sight — if you’ve got the chops to make proper use of the SI’s advice, that is." compset="Ranged">
+    <fieldval field="wpDamage" value="3d6"/>
+    <fieldval field="grCost" value="8"/>
+    <fieldval field="shortname" value="Breaker Bar"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="Accurate"/>
+    <tag group="Weapon" tag="Sniper"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="WeaponType" tag="rngLongGun"/>
+    </thing>
+  <thing id="wprOsok" name="Phubahr 15 mm Osok" description="Phubahr’s 15 mm long gun is called the Osok, an acronym for “one shot, one kill.” The name is unfortunately apt. This riﬂe is astoundingly accurate but its reliability drops oﬀ so sharply after the frst shot that it’s not unheard of for a soldier to get exactly one shot, and perhaps one kill, before the weapon must be discarded.\n\nThe Osok is quite popular with certain criminal elements, because it can be fired at one crime scene and never used again. Law enforcement tends to have trouble tracking weapons that don’t see any repeat use. Some black-market treatment packages make the Osok extremely resistant to picking up trace elements, including the shooter’s biologicals. Of course, only an idiot implicitly trusts these packages to keep their weapon entirely evidence-free. For extra-legal, single-use operations, a boundary layer should be applied between the shooter and the weapon, and that boundary layer should then accompany the shooter to an undisclosed location where it can be destroyed." compset="Ranged">
+    <fieldval field="shortname" value="Osok"/>
+    <fieldval field="wpDamage" value="3d6"/>
+    <fieldval field="grCost" value="2"/>
+    <tag group="WeaponType" tag="rngLongGun"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="None"/>
+    <tag group="Weapon" tag="Accurate"/>
+    <tag group="Weapon" tag="Sniper"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="Weapon" tag="SingleUse"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    </thing>
+  <thing id="wprGG1000" name="Strohl G/G 1000" description="Phubahr’s 15 mm long gun is called the Osok, an acronym for “one shot, one kill.” The name is unfortunately apt. This riﬂe is astoundingly accurate but its reliability drops oﬀ so sharply after the frst shot that it’s not unheard of for a soldier to get exactly one shot, and perhaps one kill, before the weapon must be discarded.\n\nThe Osok is quite popular with certain criminal elements, because it can be fired at one crime scene and never used again. Law enforcement tends to have trouble tracking weapons that don’t see any repeat use. Some black-market treatment packages make the Osok extremely resistant to picking up trace elements, including the shooter’s biologicals. Of course, only an idiot implicitly trusts these packages to keep their weapon entirely evidence-free. For extra-legal, single-use operations, a boundary layer should be applied between the shooter and the weapon, and that boundary layer should then accompany the shooter to an undisclosed location where it can be destroyed." compset="Ranged">
+    <fieldval field="shortname" value="G/G 1000"/>
+    <fieldval field="wpDamage" value=" Gunfoam 3d6; PEA 3d6+2"/>
+    <fieldval field="grCost" value="6"/>
+    <tag group="WeaponType" tag="rngLongGun"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="Sniper"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="AmmoType" tag="PEA"/>
+    <tag group="Weapon" tag="VAmmo"/>
+    </thing>
+  <thing id="wprP51Blst" name="Phubahr P-51 Blaster" compset="Ranged">
+    <fieldval field="wpDamage" value="5d6"/>
+    <fieldval field="grCost" value="3"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <tag group="WeapClass" tag="Beam"/>
+    </thing>
+  <thing id="wpmMolPol" name="BFF Molly-Polly “Knife”" description="The Molly-Polly looks like any old knife at first glance. At second glance, it may look like a longer knife, or an awl. Suddenly it’s a letter-opener. Whatever it is, it’s ridiculously sharp. The name “Molly-Polly” is derived from “molecule-edge, polymorphic blade” and we can only assume that Bryanton Faire Fabricators picked the name because it sounds silly and friendly.\n\nThe Molly-Polly is neither silly nor friendly.\n\nIn its neutral shape — the one suitable for dropping in your pocket, or on your foot — the Molly-Polly is an ergonomic grip with a thumb and finger guard, and a 25-centimeter rod sticking straight out of it. In this form, the mollywire blade is coiled up inside the rod. Shift your grip and the rod’s polymorphic material reshapes itself into a knife blade, drawing the molywire taut and bonding it to the cutting edge. The resulting blade can effortlessly slice flesh and even carve stone (if you lean into it a bit)." compset="Melee">
+    <fieldval field="wpDamage" value="1d6"/>
     </thing>
   </document>

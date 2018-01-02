@@ -247,6 +247,9 @@
       ~if not equipped, there's nothing to do
       doneif (field[grIsEquip].value = 0)
 
+      ~if this is a natural attack, don't proceed.
+      doneif (tagis[Equipment.Natural] = 0)
+
       ~if the equipment does not require hands, there's nothing to do
       doneif (tagis[Equipment.Hand] = 0)
 

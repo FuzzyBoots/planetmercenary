@@ -155,7 +155,9 @@
     <field
       id="ftName"
       name="Fireteam member name"
-      type="user">
+      type="user"
+      maxlength="200">
+
       </field>
     
     <field
@@ -396,8 +398,8 @@
       doneif (isuser = 0)
     ~doneif (origin.ishero = 0)
     doneif (tagis[Advance.Gizmo] <> 0)
-    
-    debug field[spcTabName].text & " isuser = " & isuser
+	  
+	  debug field[spcTabName].text & " isuser = " & isuser
 
       ~adjust the resource appropriately
       hero.child[resCP].field[resSpent].value += 2

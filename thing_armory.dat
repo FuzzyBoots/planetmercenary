@@ -260,21 +260,6 @@
 -->
 
 
-  <!-- Unarmed Strike melee weapon -->
-  <thing
-    id="wpUnarmed"
-    name="Unarmed Strike"
-    compset="Melee"
-    description="Unarmed damage is minor in a world of augmentations and armor without natural weapons."
-    isunique="yes"
-    holdable="no">
-    <fieldval field="shortname" value="Unarmed"/>
-    <fieldval field="wpDamage" value="1"/>
-    <fieldval field="wpSpecial" value=""/>
-    <fieldval field="grCost" value="0"/>
-    <tag group="Equipment" tag="Natural"/>
-    </thing>
-
   <!-- Ursumari Unarmed Strike melee weapon -->
   <thing
     id="wpUrsus"  
@@ -307,25 +292,7 @@
     <tag group="Equipment" tag="Natural"/>
     </thing>
 
-  <!-- Sample melee weapon -->
-  <thing
-    id="wpSampleM"
-    name="Sample Melee"
-    compset="Melee"
-    description="Description goes here">
-    <fieldval field="shortname" value=""/>
-    <fieldval field="wpBonus" value="0"/>
-    <fieldval field="wpDamage" value="1d3"/>
-    <fieldval field="wpSpecial" value=""/>
-    <fieldval field="grCost" value="5"/>
-    <!-- If this is a natural weapon, assign this tag
-    <tag group="Equipment" tag="Natural"/>
-    -->
-    <!-- If this is a two-handed weapon, assign this tag
-    <tag group="Equipment" tag="TwoHand"/>
-    -->
-    </thing>
-
+  
 
 <!-- ##################
       Ranged Weapons

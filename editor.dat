@@ -371,11 +371,6 @@
     prefix="wpr"
     description="Armor, vehicles, and simple equipment all have their own tabs for creating objects of those types."
     summary="Defines a ranged weapon that can be selected on the Armory tab.">
-    <!--inputthing
-      name="Weapon Bonus"
-      helptext="Specify the attack bonus of the weapon.">
-      <it_field field="wpBonus"/>
-      </inputthing-->
     <inputthing
       name="Weapon Damage"
       helptext="Specify the damage rating of the weapon.">
@@ -414,6 +409,11 @@
       helptext="Specify the reload range.">
       <it_tagpick
         group="Reload" tag="?"/>
+      </inputthing>
+    <inputthing
+      name="Qualities">
+      <it_taglist
+        group="Weapon" tag="?"/>
       </inputthing>
     <inputthing
       name="Special Behaviors"

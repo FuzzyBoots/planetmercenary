@@ -140,6 +140,14 @@
     <sortkey isfield="no" id="_Name_"/>
     </sortset>
 
+  <!-- Define a sortset for showing gear in the order of its types, then by name -->
+  <sortset
+    id="Gear"
+    name="Gear By Type and Name">
+    <sortkey isfield="no" id="GearType"/>
+    <sortkey isfield="no" id="_Name_"/>
+    </sortset>
+
   <!-- Define a sortset for showing all weapons and armor appropriately, with equipped items appearing first. -->
   <sortset
     id="Armory"
@@ -148,6 +156,15 @@
     <sortkey isfield="no" id="Armory"/>
     <sortkey isfield="no" id="_Name_"/>
     </sortset>
+
+  <!-- Define a sortset for sorting weapons first by type, then by class, then by name -->
+  <sortset
+    id="Weapon"
+    name="Weapon By Type and Class and Name">
+    <sortkey isfield="no" id="WeaponType"/>
+    <sortkey isfield="no" id="WeapClass"/>
+    <sortkey isfield="no" id="_Name_"/>
+    </sortset> 
 
   <!-- Define a sortset that lists are equipped pieces of gear first. -->
   <sortset
