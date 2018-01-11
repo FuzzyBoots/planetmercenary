@@ -331,7 +331,7 @@
       id="wpDamage"
       name="Damage"
       type="derived"
-      maxlength="150">
+      maxlength="200">
       </field>
 
     <!-- Special details about the weapon -->

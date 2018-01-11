@@ -362,8 +362,225 @@
     <fieldval field="grCost" value="3"/>
     <tag group="WeaponType" tag="rngHvyWeap"/>
     <tag group="WeapClass" tag="Beam"/>
+    <tag group="AmmoType" tag="Plasma"/>
     </thing>
   <thing id="wpmMolPol" name="BFF Molly-Polly “Knife”" description="The Molly-Polly looks like any old knife at first glance. At second glance, it may look like a longer knife, or an awl. Suddenly it’s a letter-opener. Whatever it is, it’s ridiculously sharp. The name “Molly-Polly” is derived from “molecule-edge, polymorphic blade” and we can only assume that Bryanton Faire Fabricators picked the name because it sounds silly and friendly.\n\nThe Molly-Polly is neither silly nor friendly.\n\nIn its neutral shape — the one suitable for dropping in your pocket, or on your foot — the Molly-Polly is an ergonomic grip with a thumb and finger guard, and a 25-centimeter rod sticking straight out of it. In this form, the mollywire blade is coiled up inside the rod. Shift your grip and the rod’s polymorphic material reshapes itself into a knife blade, drawing the molywire taut and bonding it to the cutting edge. The resulting blade can effortlessly slice flesh and even carve stone (if you lean into it a bit)." compset="Melee">
     <fieldval field="wpDamage" value="1d6"/>
+    <tag group="WeaponType" tag="MelCommon"/>
+    <tag group="License" tag="Legal"/>
+    </thing>
+  <thing id="wprBH209" name="Strohl BH-209 Plasgun" description="Technology has advanced signifcantly since 2099, when Strohl Munitions frst started doing business, but their old Model 209 has ignored every development and instead marched to the beat of refned engineering. Rather than leveraging annie-power, the BH-209 uses an extremely elegant, long-proven two-stroke fusion plant. It’s much larger and heavier than most annie-powered beam weapons. The original “handles” on the first Model 209 were a system of clamps designed for affixing the weapon to a large, powered suit, or even a vehicle, but if you can hold 40 kg at full extension while the weapon spews forth white-hot death, then you’re probably interested in a simple, stock gripping option. When Strohl introduced this option, it began calling the Model 209 the “BH” 209, where “BH” stood for “big handgun.” Trope historians within the company clamored for a BFG designation instead but cooler, less profane heads prevailed. Modern customers can select one grip or two at the time they purchase.\n\nThe BH-209’s output intensity can be varied and the aperture’s magnetic profle can be altered, providing “choke.” At the lowest intensity and with the choke set to scatter, the BH-209 can give everybody in the room a nice sunburn. Dial it up a bit and the burns climb in degree, and if you choke the beam into something straight, then at full intensity the BH-209 can cut hullmetal.\n\nAdditionally, the BH-209’s plasma stream can be magnetically coupled to the weapon’s chassis, making the weapon itself a rocket. This setting is hidden by default because when engaged, the weapon literally drives the shooter back on a pillar of fre as if they’re holding a rocket engine. Which they basically are. Successfully “piloting” a BH-209 in “rocket” mode requires incredible physical strength, blink-fast reﬂexes, and a death wish." compset="Ranged">
+    <fieldval field="shortname" value="BH-209"/>
+    <fieldval field="wpDamage" value="2d6+2"/>
+    <fieldval field="grCost" value="5"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="AmmoType" tag="Plasma"/>
+    <tag group="License" tag="Restricted"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="AVPL"/>
+    <tag group="Weapon" tag="Accurate"/>
+    </thing>
+  <thing id="wprAP130" name="Strohl AP-130 Plasgun" description="When you aren’t strong enough to wield the BH-209 and your pockets are a little deeper, the AP-130 is a good alternative. This weapon is quite small and powered by a cue-ball-sized annie plant that weighs around 2 kg. The entire weapon weighs just under three kilos.\n\nWhen drawn and ﬂipped from “safe” to “fire” mode, the AP-130 deploys a three-pronged array of feld-modulating antennae. Pull the trigger and the area enclosed by these antennae becomes a magnetic bottle, a 30-centimeter sphere of bright fury, and a beam erupts forth from that bottle striking whatever is in the weapon’s path of fire.\n\nLike the BH-209, the AP-130 offers variable intensity and choke. It also draws atmospheric gas into the back of the magnetic bottle and consumes that gas as ammunition for each shot. This means that the weapon isn’t particularly useful in a vacuum. It can, however, be fired underwater — once per shooter, usually." compset="Ranged">
+    <fieldval field="shortname" value="AP-130"/>
+    <fieldval field="wpDamage" value="2d6+1"/>
+    <fieldval field="grCost" value="10"/>
+    <fieldval field="wpSpecial" value="can’t be fred in a vacuum; becomes Single-use underwater"/>
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="AmmoType" tag="Plasma"/>
+    <tag group="License" tag="Restricted"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="AVPL"/>
+    <tag group="Weapon" tag="Accurate"/>
+    <tag group="Weapon" tag="APPS"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    </thing>
+  <thing id="wprBFFGoob" name="BFF Goober MFG, The Goober Gun" description="Bryanton Faire Fabricators’ Goober Gun is designed for more than just crowd control. It’s built for crowd &lt;i&gt;immobilization&lt;/i&gt;. Each burst from the weapon expands into a cubic meter of sticky, elastic foam. Te stuff doesn’t exit the weapon in one-meter cubes, of course, but it arrives as a lumpy web that pins targets for two or three meters in any direction from the point of impact. \n\nFun fact: Riot control teams don’t settle for single bursts — they empty their tanks of goober green-mod at an angry mob, and within 30 seconds, an area the size of an Armorball end zone is plastered in place.\n\nGoober green mod stops humans, neophants, and some vehicles. Take care, however! While technically non-lethal, green-mod isn’t great about avoiding noses and other breathing passages, and wanton discharge of a Goober Gun can smother angry-but-otherwise-mostly-innocent civilians by the dozens." compset="Ranged">
+    <fieldval field="wpDamage" value="Athletics check TN 20"/>
+    <fieldval field="grCost" value="8"/>
+    <fieldval field="shortname" value="Goober MFG"/>
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="AmmoType" tag="Goober"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOneThree"/>
+    <tag group="Weapon" tag="Scatter"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    </thing>
+  <thing id="wprM3Tater" name="Urtheep Industries M3 &quot;Tater&quot;" description="The M3 Incapacitator, or “Tater,” looks very much like a fifty-kilo potato and it costs about what you’d expect for fifty kilos of something that’s highly illegal. The weapon solves the problem of fring into a mixed-race crowd of targets by “intelligently” selecting to stun, immobilize, or de-motivate based on the logic programming of the onboard synthetic intelligence (SI). Be warned, however! Another option is “hold fire.” Tis can prove inconvenient.\n\nUrtheep Industries guarantees the nonlethality of every shot from the M3 Incapacitator, and the weapon’s high price is due in part to the underwriting of this guarantee. The rest of the expense is the annie-powered block of motile nanotech. The onboard SI isn’t actually that expensive, but it feels like it is, because in spite of not being truly sapient, the SI is almost always smarter than the person carrying the weapon.\n\nThose fortunate enough to get their hands on a “Tater Hack,” or to convert a genuine prepatch Tater, enjoy a truly smart gun with a voracious appetite for violence, plus a constitutional inability to bite off more than it can chew. For some reason Urtheep Industries hasn’t catered to the demand for this enhanced product, or if they have they’re doing so through a very effective group of cut-outs." compset="Ranged">
+    <fieldval field="shortname" value="M3 &quot;Tater&quot;"/>
+    <fieldval field="wpDamage" value="De-motivator Endurance check TN 21 or become incapacitated; Goober Athletics check TN 20 to escape; Stun Endurance check TN 20 or fall unconscious; if hacked Gunfoam 3d6"/>
+    <fieldval field="grCost" value="30"/>
+    <fieldval field="wpSpecial" value="Hack with Computers check TN 25; Upon firing the SI picks ammo suited to the target. The GC chooses which ammunition is used, this includes holding fire."/>
+    <tag group="Weapon" tag="TSystem"/>
+    <tag group="Weapon" tag="VAmmo"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="AmmoType" tag="Demotivate"/>
+    <tag group="AmmoType" tag="Goober"/>
+    <tag group="AmmoType" tag="Stun"/>
+    <tag group="License" tag="Illegal"/>
+    <tag group="Reload" tag="rlOneThree"/>
+    </thing>
+  <thing id="wpr15mmMin" name="Blattco 15 mm Minigun" description="The rotating barrel assembly has been a staple of heavy automatic weapons for centuries despite the fact that the additional moving parts create additional points of failure, and with good reason. No matter how quickly a single barrel can be confgured to fire, multiple barrels with the same confguration put more rounds downrange in the same amount of time. It’s simple math. \n\nThis weapon is extremely reliable, and not just as a minigun. Barrel vents and counter-rotating gyros provide the stability desired by heavy weapon connoisseurs all over the galaxy. This weapon almost never recoils off-target. It does, however, push straight back with incredible force. Held by a sophont who isn’t prepared for the recoil, it functions equally well as a backward propulsion system with prohibitively lethal exhaust." compset="Ranged">
+    <fieldval field="shortname" value="15 mm Minigun"/>
+    <fieldval field="wpDamage" value="Goober, Athletics check TN 20 to escape; Gunfoam 3d6"/>
+    <fieldval field="grCost" value="25"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="Goober"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="License" tag="Illegal"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="Reload" tag="rlOneThree"/>
+    <tag group="Weapon" tag="APiercing"/>
+    <tag group="Weapon" tag="DoubTap"/>
+    <tag group="Weapon" tag="HyperAcc"/>
+    <tag group="Weapon" tag="RemoteUp"/>
+    <tag group="Weapon" tag="SSAmmo"/>
+    <tag group="Weapon" tag="SConstrct"/>
+    <tag group="Weapon" tag="VAmmo"/>
+    </thing>
+  <thing id="wprCanHamm" name="Blattco 45 mm Rotary Launcher “Can-o-Hammers&quot;" description="Another rotating barrel model from Blattco Arms, the so-called “Can-o-Hammers” launches 45 mm gunfoam rounds. It’s subsonic, durable, and it has plenty of kick. You can even belt-feed this weapon. The service department at your local Planet Mercenary store (or other places that service Blattco weapons) can adapt your weapon by adding the Underslung Launcher quality for when you want to make it literally rain grenades. If you do, then you’re an idiot, but Blattco’s still got you covered." compset="Ranged">
+    <fieldval field="shortname" value="“Can-o-Hammers&quot;"/>
+    <fieldval field="wpDamage" value="4d6"/>
+    <fieldval field="grCost" value="20"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="License" tag="Illegal"/>
+    <tag group="Reload" tag="rlOneThree"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="Weapon" tag="APPS"/>
+    <tag group="Weapon" tag="APiercing"/>
+    <tag group="Weapon" tag="SConstrct"/>
+    </thing>
+  <thing id="wprShurik" name="Phubahr 75 mm Shurikannon" description="When you want to hit your target like a metric truckload of drunken ninjas, hold tight and let loose with Phubahr’s 75 mm Shurikannon. This pea-shooter launches five-packs of 7.5 cm “throwing stars” at roughly 200 meters per second, and can empty a 20-round magazine (that’s 100 shuriken) in two seconds.\n\nBut when we say “hold tight,” we mean it. The Shurikannon kicks with 8,500 newtons of force for each sharp, starry cluster of joy sent downrange. That’s almost exactly the force you experienced that one time during sparring practice when you told your sensei not to hold anything back.\n\nThere have been worse ideas in the long history of bad ideas, but most of those ideas envy the Shurikannon for how cool it looks in the moments before things become pointedly un-cool. Given the recoil on this weapon, the stresses on its barrel, and the irregularities inherent in its projectiles, not to mention the failure prone workmanship characteristic of all Phubahr weapons, “pointedly un-cool” is of course a cute understatement. If your imagination has painted an unpleasant picture here, perhaps a bit of good judgment will prevent a 75 mm Shurikannon from doing the painting for you. Or, frankly, with you." compset="Ranged">
+    <fieldval field="shortname" value="Shurikannon"/>
+    <fieldval field="grCost" value="2"/>
+    <fieldval field="wpDamage" value="5d6"/>
+    <tag group="Weapon" tag="FProne"/>
+    <tag group="Weapon" tag="ReloadInt"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="PEA"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Reload" tag="rlOneThree"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    </thing>
+  <thing id="wpr7mmMagR" name="Strohl 7 mm Rotary Mag-Rail Deluxe" compset="Ranged">
+    <fieldval field="shortname" value="7mm Mag-Rail"/>
+    <fieldval field="grCost" value="11"/>
+    <fieldval field="wpDamage" value="3d6+2"/>
+    <tag group="License" tag="Restricted"/>
+    <tag group="Reload" tag="rlOneThree"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="Weapon" tag="Delivery"/>
+    <tag group="Weapon" tag="HyperAcc"/>
+    </thing>
+  <thing id="wprHW105MC" name="Strohl HW-105 Multicannon 105 mm" compset="Ranged">
+    <fieldval field="shortname" value="HW-105 Multicannon"/>
+    <fieldval field="wpDamage" value="3d6"/>
+    <fieldval field="grCost" value="15"/>
+    <tag group="AmmoType" tag="Particle"/>
+    <tag group="AmmoType" tag="Plasma"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="License" tag="Restricted"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="Reload" tag="rlOneThree"/>
+    <tag group="Weapon" tag="AVPL"/>
+    <tag group="Weapon" tag="Breacher"/>
+    <tag group="Weapon" tag="VAmmo"/>
+    </thing>
+  <thing id="wprL105BC" name="Strohl L-105 Breacher Cannon" compset="Ranged">
+    <fieldval field="wpDamage" value="5d6"/>
+    <fieldval field="grCost" value="15"/>
+    <fieldval field="wpSpecial" value="Comes with one proprietary Strohl Breacher missile"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="License" tag="Restricted"/>
+    <tag group="Reload" tag="rlOneThree"/>
+    <tag group="Weapon" tag="AVPL"/>
+    <tag group="Weapon" tag="Breacher"/>
+    <tag group="Weapon" tag="CAmmo"/>
+    </thing>
+  <thing id="wprKtchSnk" name="Urtheep Industries Kitchen Sink Multicannon" compset="Ranged">
+    <fieldval field="shortname" value="Kitchen Sink"/>
+    <fieldval field="wpDamage" value="De-motivators: Endurance check (TN 21) or become incapacitated{br}Goober: Athletics (TN 20) to escape{br}Gunfoam: 3d6{br}PEA: 3d6{br}Stun: Endurance check (TN 20) or fall unconscious"/>
+    <fieldval field="grCost" value="15"/>
+    <tag group="AmmoType" tag="Gunfoam"/>
+    <tag group="AmmoType" tag="PEA"/>
+    <tag group="AmmoType" tag="Stun"/>
+    <tag group="AmmoType" tag="Demotivate"/>
+    <tag group="AmmoType" tag="Goober"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="License" tag="Restricted"/>
+    <tag group="Reload" tag="rlOneThree"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="Weapon" tag="TSystem"/>
+    <tag group="Weapon" tag="ULauncher"/>
+    <tag group="Weapon" tag="VAmmo"/>
+    </thing>
+  <thing id="wpmMonowre" name="Monowire" compset="Melee">
+    <fieldval field="wpDamage" value="1d6"/>
+    <fieldval field="grCost" value="1"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="License" tag="Illegal"/>
+    <tag group="WeaponType" tag="MelCommon"/>
+    </thing>
+  <thing id="wpmSpear" name="Spear" compset="Melee">
+    <fieldval field="wpDamage" value="Melee+1d6"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="WeaponType" tag="MelCommon"/>
+    </thing>
+  <thing id="wpmZwillmi" name="ZWillmi Steelworks blade or axe" compset="Melee">
+    <fieldval field="wpDamage" value="Melee+1d6"/>
+    <fieldval field="grCost" value="1"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="WeaponType" tag="MelCommon"/>
+    </thing>
+  <thing id="wpmChnsabr" name="BFF Autocutlery Chainsaber Mark IX" compset="Melee">
+    <fieldval field="wpDamage" value="Melee+3d6"/>
+    <fieldval field="grCost" value="4"/>
+    <fieldval field="shortname" value="Chainsaber"/>
+    <tag group="Equipment" tag="TwoHand"/>
+    <tag group="WeaponType" tag="MelExotic"/>
+    <tag group="Weapon" tag="FProne"/>
+    <tag group="License" tag="Illegal"/>
+    </thing>
+  <thing id="wpmPlasBat" name="Shockstar PB series plasma batons" compset="Melee">
+    <fieldval field="wpDamage" value="Melee+2d6"/>
+    <fieldval field="grCost" value="11"/>
+    <fieldval field="shortname" value="Plasma Batons"/>
+    <tag group="WeaponType" tag="MelExotic"/>
+    <tag group="Weapon" tag="FProne"/>
+    <tag group="License" tag="Illegal"/>
+    </thing>
+  <thing id="wpmThrdcle" name="Urtheep Industries Thirdacle Cable-Arms" compset="Melee">
+    <fieldval field="wpDamage" value="Engineering+3"/>
+    <fieldval field="grCost" value="10"/>
+    <fieldval field="shortname" value="Thirdacle"/>
+    <tag group="License" tag="Legal"/>
+    <tag group="Equipment" tag="Natural"/>
+    <tag group="WeaponType" tag="MelExotic"/>
+    </thing>
+  <thing id="wpmAbrCdvr" name="Urtheep Industries Abra-Cadaver Shock Wands" compset="Melee">
+    <fieldval field="wpDamage" value="Endurance TN 20"/>
+    <fieldval field="grCost" value="8"/>
+    <tag group="WeaponType" tag="MelExotic"/>
+    <tag group="License" tag="Legal"/>
+    </thing>
+  <thing id="amArmCrack" name="Armor Crackers" compset="Ammunition">
+    <fieldval field="grLotCost" value="12"/>
     </thing>
   </document>

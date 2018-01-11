@@ -341,10 +341,27 @@
       helptext="Specify the damage rating of the weapon.">
       <it_field field="wpDamage"/>
       </inputthing>
-      <inputthing
+    <inputthing
       name="Cost"
       helptext="Specify the standard cost of the item, with a value of 0 meaning it is free.">
       <it_field field="grCost"/>
+      </inputthing>
+    <inputthing
+      name="Type"
+      helptext="Specify the type of melee weapon.">
+      <it_tagpick
+        group="WeaponType" tag="Mel?"/>
+      </inputthing>
+    <inputthing
+      name="License"
+      helptext="Specify the weapon license.">
+      <it_tagpick
+        group="License" tag="?"/>
+      </inputthing>
+     <inputthing
+      name="Qualities">
+      <it_taglist
+        group="Weapon" tag="?"/>
       </inputthing>
     <inputthing
       name="Special Behaviors"

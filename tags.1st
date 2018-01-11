@@ -194,7 +194,8 @@
     </group-->
   <!-- Weapon Class group - helper tags for ranged weapon class -->
   <group
-    id="WeapClass">
+    id="WeapClass"
+    sequence="explicit">
     <value id="Beam" name="Beam" order="5"/>
     <value id="NonLethal" name="Non-Lethal" order="10"/>
     <value id="Projectile" name="Projectile" order="15"/>
@@ -227,16 +228,17 @@
          This governs which skill is used.
   -->
   <group
-    id="WeaponType">
+    id="WeaponType"
+    sequence="explicit">
     <value id="rngPistol" name="Pistol" order="5"/>
     <value id="rngScatter" name="Scattergun" order="10"/>
     <value id="rngCarbine" name="Carbine" order="15"/>
     <value id="rngLongGun" name="Long Gun" order="20"/>
     <value id="rngHvyWeap" name="Heavy Weapon" order="25"/>
-    <value id="rngStaWeap" name="Stationary Weapon"/>
-    <value id="MelCommon" name="Common Melee" order="30"/>
-    <value id="MelExotic" name="Exotic Melee" order="35"/>
-    <value id="MelUnarmed" name="Unarmed / Natural"/>
+    <value id="rngStaWeap" name="Stationary Weapon" order="30"/>
+    <value id="MelCommon" name="Common Melee" order="35"/>
+    <value id="MelExotic" name="Exotic Melee" order="40"/>
+    <value id="MelUnarmed" name="Unarmed / Natural" order="45"/>
     </group>
     
   <!-- License group - helper tags for gear license values -->

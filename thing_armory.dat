@@ -253,6 +253,157 @@
     <fieldval field="grCost" value="10"/>
     </thing>
 
+<!-- Placeholders -->
+  <thing
+    id="wpBeamPist"
+    name="– Beam Pistols –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    </thing>
+
+  <thing
+    id="wpProjPist"
+    name="– Projectile Pistols –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    </thing>
+
+  <thing
+    id="wpNLPist"
+    name="– Non-Lethal Pistols –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    </thing>
+
+  <thing
+    id="wpBeamScat"
+    name="– Beam Scatterguns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="WeaponType" tag="rngScatter"/>
+    </thing>
+
+  <thing
+    id="wpProjScat"
+    name="– Projectile Scatterguns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngScatter"/>
+    </thing>
+
+  <thing
+    id="wpNLScat"
+    name="– Non-Lethal Scatterguns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="WeaponType" tag="rngScatter"/>
+    </thing>
+
+  <thing
+    id="wpBeamCarb"
+    name="– Beam Carbines –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    </thing>
+
+  <thing
+    id="wpProjCarb"
+    name="– Projectile Carbines –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    </thing>
+
+  <thing
+    id="wpNLCarb"
+    name="– Non-Lethal Carbines –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    </thing>
+
+  <thing
+    id="wpBeamLong"
+    name="– Beam Long Guns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="WeaponType" tag="rngLongGun"/>
+    </thing>
+
+  <thing
+    id="wpProjLong"
+    name="– Projectile Long Guns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngLongGun"/>
+    </thing>
+
+  <thing
+    id="wpNLLong"
+    name="– Non-Lethal Long Guns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="WeaponType" tag="rngLongGun"/>
+    </thing>
+
+  <thing
+    id="wpBeamHvyW"
+    name="– Beam Heavy Weapons –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    </thing>
+
+  <thing
+    id="wpProjHvyW"
+    name="– Projectile Heavy Weapons –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    </thing>
+
+  <thing
+    id="wpNLHvyW"
+    name="– Non-Lethal Heavy Weapons –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    </thing>
+    
 
 <!-- ##################
       Melee Weapons
