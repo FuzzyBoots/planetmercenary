@@ -661,7 +661,8 @@
   </entity>
   
   <entity
-    id="ftDetails">
+    id="ftDetails"
+    form="frmFT">
   </entity>
 
 </document>

@@ -82,6 +82,16 @@
         </label>
       </portal>
     
+    <portal
+      id="edit"
+      style="actOvalSm"
+      tiptext="Click to define Fireteam member">
+      <action
+        action="edit"
+        buttontext="Edit">
+        </action>
+      </portal>
+
     <position><![CDATA[
       ~set up our height based on our tallest portal
       height = portal[name].height
@@ -105,9 +115,10 @@
       perform portal[mental].centervert
       perform portal[social].centervert
       perform portal[combat].centervert
+      perform portal[edit].centervert
             
-      ~position the info portal on the far right
-      ~perform portal[info].alignedge[right,0]
+      ~position the edit portal on the far right
+      perform portal[edit].alignedge[right,0]
 
       ~position the name on the left
       portal[name].left = 0
@@ -115,7 +126,7 @@
       portal[mental].left = portal[physical].right + 5
       portal[social].left = portal[mental].right + 5
       portal[combat].left = portal[social].right + 5
-            
+      
       ]]></position>
     </template>
   
