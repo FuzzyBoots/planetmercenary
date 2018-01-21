@@ -357,12 +357,20 @@
     <tag group="AmmoType" tag="PEA"/>
     <tag group="Weapon" tag="VAmmo"/>
     </thing>
-  <thing id="wprP51Blst" name="Phubahr P-51 Blaster" compset="Ranged">
+  <thing id="wprP51Blst" name="Phubahr P-51 Blaster" description="Phubahr’s annie-powered plasgun is big, bulky, and it lacks variable intensity or choke. Bolts from the blaster are one of the best examples of a worst available feature for a plasgun: they’re fast-moving clouds of dense, superhot gas, expanding as they travel. They travel relatively slowly, and decelerate noticeably at distances greater than 50 m. It’s entirely possible for a target to dodge P-51 Blaster bolts fired from just forty meters away. Targets at a hundred meters or more can just casually step out of the way. \n\nSpeaking of 100 m, a P-51’s bolt at that range is a half-meter in diameter, and it’s moving at 18 m/s. The bolt’s temperature at this range drops to less than 500°C. If the target’s clothing is fireproof and they want to look awesome, then they can step right into the bolt’s path and swat it away.\n\nUp close, however, the P-51 is lethal. This makes the weapon popular with boarding parties and defenders-on-deck. The P-51 works fine at the proper engagement range and it won’t blast holes through multiple walls or otherwise damage the ship." compset="Ranged">
     <fieldval field="wpDamage" value="5d6"/>
     <fieldval field="grCost" value="3"/>
-    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <fieldval field="shortname" value="P-51"/>
     <tag group="WeapClass" tag="Beam"/>
     <tag group="AmmoType" tag="Plasma"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    <tag group="License" tag="Illegal"/>
+    <tag group="Reload" tag="rlOneTwo"/>
+    <tag group="Weapon" tag="AVPL"/>
+    <tag group="Weapon" tag="APiercing"/>
+    <tag group="Weapon" tag="FProne"/>
+    <tag group="Weapon" tag="ReloadInt"/>
+    <tag group="Weapon" tag="SRange"/>
     </thing>
   <thing id="wpmMolPol" name="BFF Molly-Polly “Knife”" description="The Molly-Polly looks like any old knife at first glance. At second glance, it may look like a longer knife, or an awl. Suddenly it’s a letter-opener. Whatever it is, it’s ridiculously sharp. The name “Molly-Polly” is derived from “molecule-edge, polymorphic blade” and we can only assume that Bryanton Faire Fabricators picked the name because it sounds silly and friendly.\n\nThe Molly-Polly is neither silly nor friendly.\n\nIn its neutral shape — the one suitable for dropping in your pocket, or on your foot — the Molly-Polly is an ergonomic grip with a thumb and finger guard, and a 25-centimeter rod sticking straight out of it. In this form, the mollywire blade is coiled up inside the rod. Shift your grip and the rod’s polymorphic material reshapes itself into a knife blade, drawing the molywire taut and bonding it to the cutting edge. The resulting blade can effortlessly slice flesh and even carve stone (if you lean into it a bit)." compset="Melee">
     <fieldval field="wpDamage" value="1d6"/>
@@ -469,7 +477,7 @@
     <tag group="Reload" tag="rlOneThree"/>
     <tag group="Equipment" tag="TwoHand"/>
     </thing>
-  <thing id="wpr7mmMagR" name="Strohl 7 mm Rotary Mag-Rail Deluxe" compset="Ranged">
+  <thing id="wpr7mmMagR" name="Strohl 7 mm Rotary Mag-Rail Deluxe" description="One of the biggest complaints levied against rotating barrel assemblies is that most of the projectiles fired don’t hit the target. Enter the Rotary Mag-Rail Deluxe. Each of this weapon’s five barrels is a magnetic accelerator, and the weapon is confgured to take proprietary Strohl Munitions 7 mm smart ﬂechettes. The targeting system links with each smart ﬂechette, assigning it a target and an appropriate muzzle velocity. When you start hosing down the battlefeld, these tiny slivers of death actually steer themselves toward their targets, and as long as you’re pointing the weapon in the right direction, the ﬂechettes consistently strike center-of-mass, give or take 10 cm.\n\nThis is how the rich people do it. You can fire this weapon for two minutes or you can make a down payment on a gunboat." compset="Ranged">
     <fieldval field="shortname" value="7mm Mag-Rail"/>
     <fieldval field="grCost" value="11"/>
     <fieldval field="wpDamage" value="3d6+2"/>
@@ -482,7 +490,7 @@
     <tag group="Weapon" tag="Delivery"/>
     <tag group="Weapon" tag="HyperAcc"/>
     </thing>
-  <thing id="wprHW105MC" name="Strohl HW-105 Multicannon 105 mm" compset="Ranged">
+  <thing id="wprHW105MC" name="Strohl HW-105 Multicannon 105 mm" description="For those who just can’t make up their minds, Strohl Munitions oﬀers a multi-function weapon that fres breacher missiles, plasma streams, &lt;i&gt;and&lt;/i&gt; high-energy particle beams. This feature set isn’t for the faint of heart, or for the slight of frame, or for the tight of budget. The ability to drop shields, punch through hullmetal, and set fre to the landscape all with one weapon is probably worth the price tag." compset="Ranged">
     <fieldval field="shortname" value="HW-105 Multicannon"/>
     <fieldval field="wpDamage" value="3d6"/>
     <fieldval field="grCost" value="15"/>
@@ -498,11 +506,11 @@
     <tag group="Weapon" tag="Breacher"/>
     <tag group="Weapon" tag="VAmmo"/>
     </thing>
-  <thing id="wprL105BC" name="Strohl L-105 Breacher Cannon" compset="Ranged">
+  <thing id="wprL105BC" name="Strohl L-105 Breacher Cannon" description="The L-105 looks like a bazooka and fires expensive breacher missiles. For an additional cost, you can purchase proprietary Strohl Munitions Smart Breacher missiles that are each individually powered by an onboard annie plant. For the astronomical cost of operation on a Smart Breacher, you get guided missiles that are actually smart. They can breach a unifield shield by throwing up their own shield when they strike. Good point defenses can kill them before they land, of course, because they don’t have the juice to keep up their own shield for more than a split-second.\n\nThe cannon itself is cheap. It’s just a tube with some targeting tech. It can be emplaced and vehicle-mounted, if you like, and it can also be adapted to be auto-fed. That’s for rich, lazy people, though." compset="Ranged">
     <fieldval field="wpDamage" value="5d6"/>
     <fieldval field="grCost" value="15"/>
     <fieldval field="wpSpecial" value="Comes with one proprietary Strohl Breacher missile"/>
-    <tag group="WeapClass" tag="Projectile"/>
+    <fieldval field="shortname" value="L-105"/>
     <tag group="WeaponType" tag="rngHvyWeap"/>
     <tag group="Equipment" tag="TwoHand"/>
     <tag group="AmmoType" tag="Gunfoam"/>
@@ -511,8 +519,9 @@
     <tag group="Weapon" tag="AVPL"/>
     <tag group="Weapon" tag="Breacher"/>
     <tag group="Weapon" tag="CAmmo"/>
+    <tag group="WeapClass" tag="Projectile"/>
     </thing>
-  <thing id="wprKtchSnk" name="Urtheep Industries Kitchen Sink Multicannon" compset="Ranged">
+  <thing id="wprKtchSnk" name="Urtheep Industries Kitchen Sink Multicannon" description="This thing is ridiculous, but it works. The hopper on top takes any type of ammo — gunfoam, goober, peas, even grenades. The variable-aperture barrel adjusts as necessary and the onboard synthetic intelligence guides the onboard nanny-tech in adjusting whatever needs to be adjusted to fre whatever you threw in the hopper.\n\nYou can throw non-ammo things into it, but the results get a little weird. Toss a pistol into it and you may wind up with a ballistic projectile that fres other, smaller projectiles as it sails through the air. Toss body parts into it and you may get gouts of smoke-screen. Or toxic gas. Or a biblically disturbing rain of blood. All three have been recorded in safety tests, and we’re not sure yet how the weapon decided on the frst two." compset="Ranged">
     <fieldval field="shortname" value="Kitchen Sink"/>
     <fieldval field="wpDamage" value="De-motivators: Endurance check (TN 21) or become incapacitated{br}Goober: Athletics (TN 20) to escape{br}Gunfoam: 3d6{br}PEA: 3d6{br}Stun: Endurance check (TN 20) or fall unconscious"/>
     <fieldval field="grCost" value="15"/>
@@ -580,7 +589,7 @@
     <tag group="WeaponType" tag="MelExotic"/>
     <tag group="License" tag="Legal"/>
     </thing>
-  <thing id="amArmCrack" name="Armor Crackers" compset="Ammunition">
+  <thing id="amArmCrack" name="Armor Crackers" description="Anyone who has ever fired a handgun at an approaching column of armored cavalry knows the futility of hurling inert ballistics at hullmetal. Even micro-grenades with their white-hot atomic annihilation payloads are largely useless against properly armored vehicles. Enter armor crackers, which compress a micro-grenade laced with Boomex into one tiny apocalyptic package. As the round impacts a target, its nano-bottles break, ripping the target’s armor apart at an atomic level." compset="Ammunition">
     <fieldval field="grLotCost" value="12"/>
     </thing>
   </document>
