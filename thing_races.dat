@@ -140,7 +140,7 @@
   
   <thing id="racEssper" name="Esspererin" description="Though their bodies only measure a meter in height, esspererin are exceptionally hardy. They can survive extreme heat and cold, require no air, and have light-collecting wings that unfurl to a span of four meters. Teir bodies have evolved over millions of years, harmoniously merging technology and biology, and this affords them a strong aptitude with the inelegant mechanical creations of strictly organic sophonts. Too bad the Esspererin are such reckless tinkerers.\n\n{b}Bonus Skill Ranks:{/b} +1 Computers, +1 Dodge, +1 Engineering, +1 Mechanics; you also gain the Athletics (Flight) specialty at no cost\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} Draw a Mayhem card every time you roll a 6 on any die while making an Engineering or Mechanics check. Even if you roll more than one 6, you still only draw one Mayhem card. If you already draw a Mayhem card for any reason, draw only that one card; do not draw any more cards due to this rule. \nBecause of your small size, the only weapons you can use are pistols, carbines, and stationed weapons. Also, you can ﬂy and don’t need air.{br}{br}{b}Health:{/b} 5 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="5"/>
-	<bootstrap thing="spAthFlght"></bootstrap>
+  <bootstrap thing="spAthFlght"></bootstrap>
     <bootstrap thing="fRPlusSk2">
       <autotag group="Bonus" tag="Plus1"/>
       <autotag group="Skill" tag="skCompute"/>
@@ -164,7 +164,7 @@
     </thing>
   <thing id="racFrell" name="Frellenti" description="The long-legged, flightless, pseudo-avian Frellenti are evidence either that evolution has a great sense of humor, or that it has been punked by engineers who don’t sign their work. Frellenti are swift runners and natural pilots, and though their forelimbs are useless they can grasp and manipulate defly with their feet. Their long, strong, prehensile tongue can support several times their body weight, yet it’s also a highly sensitive chemical receptor.\n\n{b}Bonus Skill Ranks:{/b} +1 Athletics, +1 Dodge, +1 Perception, +1 to any Vehicle skill; you also gain the Perception (Taste) specialty at no cost\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} Your feet are quite agile and serve the same purpose as a human’s hands, but you can’t use them as hands while running. You can also use your tongue as a fully prehensile tentacle, and it is strong enough to support at least twice your body weight (you can swing from it). You can use it to pick up small objects or open compact containers. You can perform Perception (Taste) from up to four meters from the target.{br}{br}{b}Health:{/b} 7 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="7"/>
-	<bootstrap thing="fRPlusSk2">
+  <bootstrap thing="fRPlusSk2">
       <autotag group="Bonus" tag="Plus1"/>
       <autotag group="Skill" tag="skAthlete"/>
       <autotag group="Skill" tag="skDodge"/>
@@ -194,7 +194,7 @@
     </thing>
   <thing id="racPolyfl" name="Polyflorian" description="Arguably the most technologically dependent of all sophonts, polyﬂorians resemble terran gastropods, or Othlin sea-plasms. They don’t like being described this way, however, nor do they like being called “cyborgs” or “ﬂying snotstrosities.” However, they happily accept compliments on their heightened skill with many technologies.\n\n{b}Bonus Skill Ranks:{/b} +2 Computers, +1 Engineering, +1 to any Vehicle skill, +1 Research\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} You require a special chair to move around. If this chair is destroyed, damaged, or lost, then you have a hard time moving quickly. (All your Athletic checks have a -2 penalty until you manage to re-acquire a functioning chair.) On the plus side, each of these chairs can ﬂy and you may fit yours with up to two weapons. However, each piece of your gear costs 1 additional Supplies because it must be modifed to fit your chair. Once attached to the chair, the weapon is a Stationed Weapon and thus subject to the Stationed Weapons skill. Other stats of the weapon do not change.{br}{br}{b}Health:{/b} 4 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="4"/>
-	<tag group="SkillBonus" tag="skCompute"/>
+  <tag group="SkillBonus" tag="skCompute"/>
     <tag group="SkillBonus" tag="skEng"/>
     <tag group="SkillBonus" tag="skRes"/>
     <bootstrap thing="fRPlusSk">
@@ -207,7 +207,7 @@
     </thing>
   <thing id="racQueltro" name="Queltro" description="No carbon-based sophonts owe quite as much to the geometry of the carbon atom as the queltro, whose four limbs are arranged in a tetrahedral. They’re only 125 centimeters tall but they can “run” by tumbling swifly and crazily across almost any terrain. Teir small, high-intake respiratory system prevents them from running quietly, however — the rhythmic slurp-gasp-gallop is a dead giveaway.\n\n{b}Bonus Skill Ranks:{/b} +1 Athletics, +1 Chemistry, +1 Dodge, +1 Explosives, +1 Melee\n\n{b}Skill Check Penalties:{/b} You suffer a –1 penalty with Endurance skill checks, a –2 penalty with Intimidate skill checks, a –1 penalty with Negotiate checks, and a –2 penalty with Stealth skill checks. Apply these penalties to your results after all other modifers.\n\n{b}Special Rules:{/b} Any explosive that you create, use, or plant inﬂicts an extra 1d6 damage.{br}{br}{b}Health:{/b} 5 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="5"/>
-	<bootstrap thing="fRPlusSk2">
+  <bootstrap thing="fRPlusSk2">
       <autotag group="Bonus" tag="Plus1"/>
       <autotag group="Skill" tag="skAthlete"/>
       <autotag group="Skill" tag="skChem"/>
@@ -228,7 +228,7 @@
     </thing>
   <thing id="racKssthra" name="Kss’thrata" description="These fearsome, scaled pacifsts of the Tause system have jaws and a gait reminiscent of Earth’s Jurassic alpha predators, but despite this appearance they’re actually quite friendly. It is with great reluctance and epic regret that they’ve built their entire culture around warfare, largely to defend against their aggressive planetary neighbors, the ob’enn. \n\n{b}Bonus Skill Ranks:{/b} +1 Athletics, +1 Intimidate, +2 to any weapon skill\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} You have a claw attack (damage: Athletics + 2) and a headbutt attack (damage: Athletics + 2).{br}{br}{b}Health:{/b} 6 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="6"/>
-	<bootstrap thing="fRPlusSk2">
+  <bootstrap thing="fRPlusSk2">
       <autotag group="Bonus" tag="Plus1"/>
       <autotag group="Skill" tag="skAthlete"/>
       <autotag group="Skill" tag="skIntim"/>
@@ -254,7 +254,7 @@
     </thing>
   <thing id="racObenn" name="Ob’enn" description="By accident or design, these short, furry, congenitally-xenophobic creatures discovered space travel just a little too late to attack and exterminate their nearest neighbors, the kss’thrata. This resulted in open war and an arms race that spanned centuries. Most ob’enn are far too sociopathic to get by in mixed company. Some manage, but they’re usually seen as abominations by their families, and every other species that they meet still regards them with suspicion.\n\n{b}Bonus Skill Ranks:{/b} +1 to any four skills\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} You suffer a –1 penalty with social skill checks targeting non-ob’enn.{br}{br}{b}Health:{/b} 6 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="6"/>
-	<bootstrap thing="fRPlusSk">
+  <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Combat"/>
       <autotag group="Skills" tag="Mental"/>
       <autotag group="Skills" tag="Physical"/>
@@ -289,7 +289,7 @@
     </thing>
   <thing id="racUnioc" name="Unioc" description="With a single eye the size of a human’s entire head, this species enjoys sensory perception. Members of other species might assume that oth — or as everyone else calls them, the “unioc” — merely have very good vision but in fact they can also see into the near-infrared spectrum, and even in complete darkness (thanks to their massive orb doubling as an ear drum).\n\n{b}Bonus Skill Ranks:{/b} +1 Athletics, +1 Research, +1 Perception; you also gain the Perception (Sight) specialty at no cost\n\n{b}Skill Check Penalties:{/b} You suffer a –2 penalty with Explosives skill checks. Apply this penalty to your result after all other modifers.\n\n{b}Special Rules:{/b} None{br}{br}{b}Health:{/b} 7 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="7"/>
-	<bootstrap thing="fRPlusSk2">
+  <bootstrap thing="fRPlusSk2">
       <autotag group="Bonus" tag="Plus1"/>
       <autotag group="Skill" tag="skAthlete"/>
       <autotag group="Skill" tag="skPercept"/>
@@ -302,8 +302,8 @@
     </thing>
 
     <thing id="racAmorph" name="Carbosilicate Amorph" 
-	description="Among the rarest of all sophonts, these bloblike natives of Ghanj-rho are a product of that world’s lost technology. They’re strong, fast, and durable, and they have a natural aptitude for organic chemistry. They range in color from “poo-green” to “poo-brown,” with occasional visits to “stop eating colorful things,” and they tend to trigger the “keep your distance from poo” biases of clean, well-mannered sophonts. Amorphs can have any number of eyes thanks to their symbiotic relationship with a separate entity that lives within their irregular form. \n\n{b}Bonus Skill Ranks:{/b} +1 to all Combat and Physical skills, but Mental and Social skills cost double \n\n{b}Skill Check Penalties: None \n\n{b}Special Rules:{/b} You start play with 1d3 eyes and if you want more (or you want to replace any that are damaged or destroyed), you must buy them. There is no limit to the number of eyes you may possess, but using more than two at any given time requires one additional rank in perception per additional eye. If an enemy hits you with an Upgraded Success, then they may optionally destroy one of your eyes with the attack (you still suffer the attack’s normal damage, but in this case the damage is not doubled). When all your eyes are destroyed, you suffer a conditional penalty due to blindness. \nArmor costs 200% of its regular price for you. \nEach time you suffer damage — no matter how much — you also lose one skill rank at random due to memory loss, until healed.{br}{br}{b}Health:{/b} 2 + Endurance x 2"
-	compset="Race" uniqueness="unique">
+  description="Among the rarest of all sophonts, these bloblike natives of Ghanj-rho are a product of that world’s lost technology. They’re strong, fast, and durable, and they have a natural aptitude for organic chemistry. They range in color from “poo-green” to “poo-brown,” with occasional visits to “stop eating colorful things,” and they tend to trigger the “keep your distance from poo” biases of clean, well-mannered sophonts. Amorphs can have any number of eyes thanks to their symbiotic relationship with a separate entity that lives within their irregular form. \n\n{b}Bonus Skill Ranks:{/b} +1 to all Combat and Physical skills, but Mental and Social skills cost double \n\n{b}Skill Check Penalties: None \n\n{b}Special Rules:{/b} You start play with 1d3 eyes and if you want more (or you want to replace any that are damaged or destroyed), you must buy them. There is no limit to the number of eyes you may possess, but using more than two at any given time requires one additional rank in perception per additional eye. If an enemy hits you with an Upgraded Success, then they may optionally destroy one of your eyes with the attack (you still suffer the attack’s normal damage, but in this case the damage is not doubled). When all your eyes are destroyed, you suffer a conditional penalty due to blindness. \nArmor costs 200% of its regular price for you. \nEach time you suffer damage — no matter how much — you also lose one skill rank at random due to memory loss, until healed.{br}{br}{b}Health:{/b} 2 + Endurance x 2"
+  compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="2"/>
     <bootstrap thing="fRPlusSk2">
       <autotag group="Bonus" tag="Plus1"/>

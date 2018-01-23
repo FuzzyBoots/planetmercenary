@@ -14,20 +14,16 @@
         Presents a fixed table where the user can adjust skills for the
         character.
   -->
-  <portal
+  <!--portal
   id="ftSkills"
   style="tblNormal">
-    <!--table_fixed component="FTSkill" showtemplate="FTSPick">
-      <headertitle>
-        @text="Fireteam Skills"
-      </headertitle>
-    </table_fixed-->
+    
     <table_fixed component="FTMember" showtemplate="FTMPick">
       <headertitle>
         @text="Fireteam Members"
       </headertitle>
     </table_fixed>
-  </portal>
+  </portal-->
   
   <portal
   id="ftMembers"
@@ -47,14 +43,6 @@
     marginvert="10">
     
     <portal
-      id="lblName"
-      style="lblNormal">
-      <label
-        text="Name:">
-        </label>
-      </portal>
-    
-    <portal
       id="name"
       style="editNormal">
       <edit
@@ -63,28 +51,55 @@
       </portal>
 
     <portal
-      id="delete"
-      style="actDelete"
-      tiptext="Click to delete this item">
-      <action
-        action="delete">
-        </action>
+      id="physical"
+      style="lblXLarge">
+      <label
+        field="ftPhysical">
+        </label>
       </portal>
-      
+    
     <portal
-      id="info"
-      style="actInfo">
+      id="mental"
+      style="lblXLarge">
+      <label
+        field="ftPhysical">
+        </label>
+      </portal>
+    
+    <portal
+      id="social"
+      style="lblXLarge">
+      <label
+        field="ftPhysical">
+        </label>
+      </portal>
+    
+    <portal
+      id="combat"
+      style="lblXLarge">
+      <label
+        field="ftComDam">
+        </label>
+      </portal>
+    
+    <portal
+      id="edit"
+      style="actOvalSm"
+      tiptext="Click to define Fireteam member">
       <action
-        action="info">
+        action="edit"
+        buttontext="Edit">
         </action>
-      <mouseinfo mousepos="middle+above"/>
       </portal>
 
     <position><![CDATA[
       ~set up our height based on our tallest portal
-      height = portal[info].height
-      portal[lblName].width = 50
-      portal[name].width = 200
+      height = portal[name].height
+      portal[name].width = 100
+      portal[physical].width = 50
+      portal[mental].width = 50
+      portal[social].width = 50
+      portal[combat].width = 100
       
       ~if this is a "sizing" calculation, we're done
       if (issizing <> 0) then
@@ -92,21 +107,26 @@
         endif
 
       ~position our tallest portal at the top
-      portal[info].top = 0
+      portal[name].top = 0
 
       ~position the other portals vertically
-      perform portal[name].centervert
-      perform portal[lblName].centervert
-      
-      ~position the info portal on the far right
-      perform portal[info].alignedge[right,0]
+      ~perform portal[name].centervert
+      perform portal[physical].centervert
+      perform portal[mental].centervert
+      perform portal[social].centervert
+      perform portal[combat].centervert
+      perform portal[edit].centervert
+            
+      ~position the edit portal on the far right
+      perform portal[edit].alignedge[right,0]
 
       ~position the name on the left
-      portal[lblName].left = 0
-      portal[name].left = portal[lblName].right + 5
+      portal[name].left = 0
+      portal[physical].left = portal[name].right + 5
+      portal[mental].left = portal[physical].right + 5
+      portal[social].left = portal[mental].right + 5
+      portal[combat].left = portal[social].right + 5
       
-      portal[name].width = minimum(portal[name].width, portal[info].left - portal[name].left - 10)
-     
       ]]></position>
     </template>
   
@@ -173,16 +193,16 @@
 
 <layout
   id="ftSkills">
-  <portalref portal="ftSkills" taborder="10"/>
+  <!--portalref portal="ftSkills" taborder="10"/-->
   <portalref portal="ftMembers" taborder="20"/>
   
   <position><![CDATA[
-    portal[ftSkills].visible = 1
+    ~ portal[ftSkills].visible = 1
     portal[ftMembers].visible = 1
     
     autogap =  3
 
-    perform portal[ftSkills].batchadd
+    ~ perform portal[ftSkills].batchadd
     perform portal[ftMembers].batchadd
     
     perform batchplace

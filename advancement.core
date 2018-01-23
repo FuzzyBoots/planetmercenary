@@ -148,8 +148,7 @@
     <!-- Put the dynamic tagexpr for choosers into the child gizmo -->
     <eval index="5" phase="Render" priority="2000" name="Assign Dynamic Tagexpr"><![CDATA[
       if (empty(field[advDynamic].text) = 0) then
-	      debug "advTagexpr: " &  field[advDynamic].text & " & !thing.showonly"
-	      gizmo.child[advDetails].field[advTagexpr].text = field[advDynamic].text & " & !thing.showonly"
+        gizmo.child[advDetails].field[advTagexpr].text = field[advDynamic].text & " & !thing.showonly"
         endif
       ]]></eval>
 
@@ -163,9 +162,24 @@
         done
         endif
 
-      ~start with the name of the selected advancement
-      field[livename].text = gizmo.findchild[none,"Advance.Gizmo"].field[name].text
+      ~start with the name of the selected advancements
+      var first as number
+      var choices as string
+      first = 0      
+      
+      foreach pick in gizmo where "Advance.Gizmo"
+        if (first <> 0) then
+          choices &= ", "
+        else
+          first = 1
+          endif
+        choices &= eachpick.field[name].text
+        nexteach
+        
+      field[livename].text = choices
 
+      debug "Selected: " & choices
+      
       ~determine the user-selected child associated with this advancement
       ~Note: If the user hasn't selected anything yet, we won't have one, so we need
       ~       to bail out at this point if we don't have one yet.

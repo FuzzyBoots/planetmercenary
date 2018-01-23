@@ -19,7 +19,7 @@
       descwidth="350">
       <autotag group="Helper" tag="Displace"/>
       <autotag group="Advance" tag="Gizmo"/>
-	  <chosen><![CDATA[
+    <chosen><![CDATA[
         if (@ispick = 0) then
           @text = "{text clrwarning}Select New Trait/Ability"
         else

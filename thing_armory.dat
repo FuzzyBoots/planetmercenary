@@ -253,27 +253,163 @@
     <fieldval field="grCost" value="10"/>
     </thing>
 
+<!-- Placeholders -->
+  <thing
+    id="wpBeamPist"
+    name="– Beam Pistols –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    </thing>
+
+  <thing
+    id="wpProjPist"
+    name="– Projectile Pistols –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    </thing>
+
+  <thing
+    id="wpNLPist"
+    name="– Non-Lethal Pistols –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="WeaponType" tag="rngPistol"/>
+    </thing>
+
+  <thing
+    id="wpBeamScat"
+    name="– Beam Scatterguns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="WeaponType" tag="rngScatter"/>
+    </thing>
+
+  <thing
+    id="wpProjScat"
+    name="– Projectile Scatterguns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngScatter"/>
+    </thing>
+
+  <thing
+    id="wpNLScat"
+    name="– Non-Lethal Scatterguns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="WeaponType" tag="rngScatter"/>
+    </thing>
+
+  <thing
+    id="wpBeamCarb"
+    name="– Beam Carbines –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    </thing>
+
+  <thing
+    id="wpProjCarb"
+    name="– Projectile Carbines –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    </thing>
+
+  <thing
+    id="wpNLCarb"
+    name="– Non-Lethal Carbines –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="WeaponType" tag="rngCarbine"/>
+    </thing>
+
+  <thing
+    id="wpBeamLong"
+    name="– Beam Long Guns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="WeaponType" tag="rngLongGun"/>
+    </thing>
+
+  <thing
+    id="wpProjLong"
+    name="– Projectile Long Guns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngLongGun"/>
+    </thing>
+
+  <thing
+    id="wpNLLong"
+    name="– Non-Lethal Long Guns –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="WeaponType" tag="rngLongGun"/>
+    </thing>
+
+  <thing
+    id="wpBeamHvyW"
+    name="– Beam Heavy Weapons –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Beam"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    </thing>
+
+  <thing
+    id="wpProjHvyW"
+    name="– Projectile Heavy Weapons –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="Projectile"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    </thing>
+
+  <thing
+    id="wpNLHvyW"
+    name="– Non-Lethal Heavy Weapons –"
+    compset="Ranged"
+    isshowonly="yes"
+    description="">
+    <tag group="WeapClass" tag="NonLethal"/>
+    <tag group="WeaponType" tag="rngHvyWeap"/>
+    </thing>
+    
 
 <!-- ##################
       Melee Weapons
      ##################
 -->
 
-
-  <!-- Unarmed Strike melee weapon -->
-  <thing
-    id="wpUnarmed"
-    name="Unarmed Strike"
-    compset="Melee"
-    description="Unarmed damage is minor in a world of augmentations and armor without natural weapons."
-    isunique="yes"
-    holdable="no">
-    <fieldval field="shortname" value="Unarmed"/>
-    <fieldval field="wpDamage" value="1"/>
-    <fieldval field="wpSpecial" value=""/>
-    <fieldval field="grCost" value="0"/>
-    <tag group="Equipment" tag="Natural"/>
-    </thing>
 
   <!-- Ursumari Unarmed Strike melee weapon -->
   <thing
@@ -307,25 +443,7 @@
     <tag group="Equipment" tag="Natural"/>
     </thing>
 
-  <!-- Sample melee weapon -->
-  <thing
-    id="wpSampleM"
-    name="Sample Melee"
-    compset="Melee"
-    description="Description goes here">
-    <fieldval field="shortname" value=""/>
-    <fieldval field="wpBonus" value="0"/>
-    <fieldval field="wpDamage" value="1d3"/>
-    <fieldval field="wpSpecial" value=""/>
-    <fieldval field="grCost" value="5"/>
-    <!-- If this is a natural weapon, assign this tag
-    <tag group="Equipment" tag="Natural"/>
-    -->
-    <!-- If this is a two-handed weapon, assign this tag
-    <tag group="Equipment" tag="TwoHand"/>
-    -->
-    </thing>
-
+  
 
 <!-- ##################
       Ranged Weapons

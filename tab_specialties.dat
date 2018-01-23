@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- This file contains the definition of the "Skills" tab panel. This tab is where
-      the user selects the skills for the character.
+<!-- This file contains the definition of the "Specialties" tab panel. This tab is where
+      the user selects the specialties for the character.
 
-      All public visual elements used with this tab panel start with the prefix "sk"
+      All public visual elements used with this tab panel start with the prefix "sp"
       to associate them with the tab.
 -->
 
 <document signature="Hero Lab Data">
 
 
-  <!-- skSkills portal
-        Presents a fixed table where the user can adjust skills for the
+  <!-- skSpecialties portal
+        Presents a fixed table where the user can adjust specialties for the
         character.
   -->
   <portal
@@ -65,7 +65,7 @@
       field="domDomain">
       </edit>
     </portal>
-	
+  
   <position><![CDATA[
     ~set up our height based on our tallest portal
     height = portal[info].height
@@ -138,7 +138,7 @@
   marginhorz="5"
   marginvert="5"
   order="120">
-  <live>!HideTab.skills</live>
+  <live>!HideTab.specialty</live>
   <layoutref layout="specs"/>
   <position><![CDATA[
     ]]></position>

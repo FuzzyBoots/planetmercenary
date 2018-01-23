@@ -3,17 +3,17 @@
 <document signature="Hero Lab Data">
 
   <portal
-    id="prtSpec"
+    id="prtFT"
     style="tblNormal">
     <table_dynamic
       component="Specialty"
-      showtemplate="SpecPick"
-      choosetemplate="SpecPick2"
+      showtemplate="FTPick"
+      choosetemplate="FTPick2"
       scrollable="yes"
       alwaysupdate="yes"
-      candidatepick="SpecHelp"
-      candidatefield="SpecExpr"
-      addpick="SpecHelp">
+      
+      
+      addpick="FTHelp">
       
       <titlebar><![CDATA[
         @text = "Add a Specialty"
@@ -29,7 +29,7 @@
     </portal>
 
   <template
-    id="SpecPick"
+    id="FTPick"
     name="Specialty Pick"
     compset="Specialty"
     marginhorz="3"
@@ -97,7 +97,7 @@
     </template>
 
   <template
-    id="SpecPick2"
+    id="FTPick2"
     name="Specialty Pick (no Domain field)"
     compset="Specialty"
     marginhorz="3"
@@ -130,7 +130,7 @@
     </template>
 
   <template
-    id="SpecPick3"
+    id="FTPick3"
     name="Specialty Pick (with skill)"
     compset="Specialty"
     marginhorz="3"
@@ -163,32 +163,32 @@
     </template>
   
     <layout
-    id="laySpec"
+    id="layFT"
     marginvert="4">
-    <portalref portal="prtSpec" taborder="20"/>
+    <portalref portal="prtFT" taborder="20"/>
     <position><![CDATA[
-      ~perform portal[prtSpec].batchadd
+      ~perform portal[prtFT].batchadd
       ~perform batchplace
       
       ~position and size the table to span the full layout
-      portal[prtSpec].left = 0
-      portal[prtSpec].width = width
-      portal[prtSpec].height = 400
+      portal[prtFT].left = 0
+      portal[prtFT].width = width
+      portal[prtFT].height = 400
       
       
       ]]></position>
     </layout>
 
     <form
-      id="frmSpec"
-      name="Specialty"
+      id="frmFT"
+      name="Fireteam"
       marginhorz="10"
       marginvert="5">
-      <layoutref layout="laySpec"/>
+      <layoutref layout="layFT"/>
       <position><![CDATA[
-        layout[laySpec].width = 400
-        perform layout[laySpec].render
-        width = layout[laySpec].width
+        layout[layFT].width = 400
+        perform layout[layFT].render
+        width = layout[layFT].width
         height = 400
         ]]></position>
       </form>

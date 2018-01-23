@@ -170,6 +170,11 @@
       </portal>
     
     <position><![CDATA[
+      if (state.iscreate = 0) then
+        portal[thinglist].freeze = 1
+        portal[specChoose].freeze = 1
+        endif
+
       if (field[usrCandid1].isempty <> 0) then
         portal[thinglist].visible = 0
       endif

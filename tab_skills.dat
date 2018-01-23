@@ -141,6 +141,11 @@
       done
       endif
 
+    if (state.iscreate = 0) then
+      portal[value].freeze = 1
+      portal[specialty].freeze = 1
+      endif
+   
     ~position our tallest portal at the top
     portal[info].top = 0
 
@@ -166,10 +171,11 @@
     perform portal[name].alignrel[ltor,bonus,10]
 
     portal[name].width = minimum(portal[name].width, portal[info].left - portal[name].left - 10)
-   
-   if (tagis[Helper.AllowSpec] = 0) then
-     portal[specialty].visible = 0
-     endif
+
+    if (tagis[Helper.AllowSpec] = 0) then
+      portal[specialty].visible = 0
+      endif
+
    
     ]]></position>
   </template>

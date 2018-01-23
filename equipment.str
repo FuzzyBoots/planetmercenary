@@ -247,6 +247,9 @@
       ~if not equipped, there's nothing to do
       doneif (field[grIsEquip].value = 0)
 
+      ~if this is a natural attack, don't proceed.
+      doneif (tagis[Equipment.Natural] = 0)
+
       ~if the equipment does not require hands, there's nothing to do
       doneif (tagis[Equipment.Hand] = 0)
 
@@ -328,7 +331,7 @@
       id="wpDamage"
       name="Damage"
       type="derived"
-      maxlength="150">
+      maxlength="200">
       </field>
 
     <!-- Special details about the weapon -->
@@ -478,35 +481,35 @@
       name="Defense Adjustment"
       type="static">
       </field>
-	  
-	<!-- Damage Reduction adjustment conferred by the equipment -->
+    
+  <!-- Damage Reduction adjustment conferred by the equipment -->
     <field
       id="defDR"
       name="Damage Reduction"
       type="static">
       </field>
-	  
-	<!-- Defense type conferred by the equipment -->
+    
+  <!-- Defense type conferred by the equipment -->
     <field
       id="defType"
       name="Damage Reduction"
       type="static">
       </field>
-	  
-	<!-- Hull Points adjustment conferred by the equipment -->
+    
+  <!-- Hull Points adjustment conferred by the equipment -->
     <field
       id="defHull"
       name="Hull Points"
       type="static">
       </field>
-	  
-	<!-- Qualities associated with this equipment -->  
-	<field
-	  id="defQuals"
-	  name="Qualities"
-	  type="static"
+    
+  <!-- Qualities associated with this equipment -->  
+  <field
+    id="defQuals"
+    name="Qualities"
+    type="static"
     maxlength="200"> 
-	  </field>
+    </field>
 
     <!-- Apply effects of the equipped armor/shield -->
     <eval index="2" phase="PreTraits" priority="5000">
@@ -515,10 +518,10 @@
       ~if this gear is not equipped, skip it
       doneif (field[grIsEquip].value = 0)
 
-	    ~Stacked armor should work by applying the lowest
-	    ~defense and adding the DR over that type,
+      ~Stacked armor should work by applying the lowest
+      ~defense and adding the DR over that type,
       ~but I'm not up to that point yet.
-	  
+    
       ~apply the appropriate trait adjustments for the equipment
       #traitbonus[trDefense] += field[defDefense].value
       #traitbonus[trDR] += field[defDR].value

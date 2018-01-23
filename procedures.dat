@@ -34,7 +34,7 @@
     call MoneyBare
 
     ~prepend a "$" on the value
-    money = "$" & money
+    money = "S" & money
     ]]></procedure>
 
 
@@ -221,14 +221,18 @@
         iteminfo &= "Cost: " & field[grCost].text & "{br}"
         endif
 
-      ~append the item's weight
-      iteminfo &= "Weight: "
-      if (field[gearWeight].value > 0) then
-        iteminfo &= field[gearWeight].text & " each"
-      else
-        iteminfo &= chr(150)
+      ~append the gear type
+      if (tagis[GearType.?] <> 0) then
+        iteminfo &= "Gear Type: " & tagnames[GearType.?] & "{br}"
         endif
-      iteminfo &= "{br}"
+
+      ~append the locker details:
+      if (tagis[LockerCls.Civ?] <> 0) then
+        iteminfo &= "Civilian Locker: " & tagnames[LockerCls.Civ?] & "{br}"
+        endif
+      if (tagis[LockerCls.Mil?] <> 0) then
+        iteminfo &= "Military Locker: " & tagnames[LockerCls.Mil?] & "{br}"
+        endif
       endif
 
     ~append our item-specific info to the synthesized details text
@@ -345,6 +349,26 @@
 
     ~start with generic details for all weapons
     call InfoWeapon
+
+    ~add weapon class
+    if (tagis[WeapClass.?] <> 0) then
+      iteminfo &= "Weapon Class: " & tagnames[WeapClass.?] & "{br}"
+      endif
+
+    ~add license details
+    if (tagis[License.?] <> 0) then
+      iteminfo &= "License: " & tagnames[License.?] & "{br}"
+      endif
+
+    ~add ammo type
+    if (tagis[AmmoType.?] <> 0) then
+      iteminfo &= "Ammo Type: " & tagnames[AmmoType.?, ", "] & "{br}"
+      endif
+
+    ~add reload details
+    if (tagis[Reload.?] <> 0) then
+      iteminfo &= "Reload: " & tagnames[Reload.?] & "{br}"
+      endif
 
     ~finish with generic special abilities for all weapons
     call InfoWeapSp

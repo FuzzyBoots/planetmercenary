@@ -104,7 +104,7 @@
       <calculate phase="Traits" priority="3000" name="Calc trtFinal"><![CDATA[
         ~Note! If you change this calculation, you may need to change the similar
         ~       calculation in the "Derived" component.
-		    @value = field[trtUser].value + field[trtBG].value + field[trtBase].value + field[trtBonus].value + field[trtInPlay].value
+        @value = field[trtUser].value + field[trtBG].value + field[trtBase].value + field[trtBonus].value + field[trtInPlay].value
         ]]></calculate>
       </field>
 
@@ -155,7 +155,9 @@
     <field
       id="ftName"
       name="Fireteam member name"
-      type="user">
+      type="user"
+      maxlength="200">
+
       </field>
     
     <field
@@ -185,7 +187,19 @@
     <field
       id="ftDamage"
       name="Fireteam damage"
-      type="derived">
+      type="derived"
+      defvalue="1">
+      </field>
+      
+    <field
+      id="ftComDam"
+      name="Combat and Damage"
+      type="static"
+      maxfinal="10">
+      <finalize><![CDATA[
+        ~Displays name
+        @text = field[ftCombat].value & " (" & field[ftDamage].value & "d6)"
+        ]]></finalize>
       </field>
     
     <field
@@ -254,7 +268,7 @@
         ]]></finalize>
       </field>  
     
-	  <!-- Each skill needs its own identity tag so existing skills can be identified during advancement -->
+    <!-- Each skill needs its own identity tag so existing skills can be identified during advancement -->
     <identity group="Skill"/>
     
     <!-- Each skill can also be selected as a background/command package/race bonus.
@@ -282,9 +296,9 @@
       doneif (origin.ishero = 0)
 
       ~adjust the resource appropriately
-	  if (this.tagexpr[hero#Race.racAmorph & (Skills.Social | Skills.Mental)] <> 0) then
-		hero.child[resCP].field[resSpent].value += field[trtUser].value * 2
-	  else	
+    if (this.tagexpr[hero#Race.racAmorph & (Skills.Social | Skills.Mental)] <> 0) then
+    hero.child[resCP].field[resSpent].value += field[trtUser].value * 2
+    else  
         hero.child[resCP].field[resSpent].value += field[trtUser].value
       endif
     ]]></eval>
@@ -299,7 +313,7 @@
       call SetSpcExpr
       ]]></eval>
     
-	<!-- Set the value for whether to display the specialty button -->
+  <!-- Set the value for whether to display the specialty button -->
     <eval index="5" phase="Traits" priority="4000">
       <after name="Calc trtFinal"/><![CDATA[
       var myId as string
@@ -363,12 +377,12 @@
         ]]></finalize>
       </field> 
     
-	  <identity group="Specialty"/>
+    <identity group="Specialty"/>
     
-	  <!-- All advancements need to displace themselves to the hero -->
+    <!-- All advancements need to displace themselves to the hero -->
       <displace target="hero">TRUE</displace>
-	
-	  <tag group="SpecialTab" tag="Specialty"/>
+  
+    <tag group="SpecialTab" tag="Specialty"/>
   
     <!-- Track the ability on the actor -->
     <eval index="1" phase="Setup" priority="5000"><![CDATA[
@@ -382,8 +396,8 @@
       <after name="Bound trtUser"/><![CDATA[
       ~if this specialty wasn't added by the user (as with a Background trait), skip it entirely
       doneif (isuser = 0)
-	  ~doneif (origin.ishero = 0)
-	  doneif (tagis[Advance.Gizmo] <> 0)
+    ~doneif (origin.ishero = 0)
+    doneif (tagis[Advance.Gizmo] <> 0)
 	  
 	  debug field[spcTabName].text & " isuser = " & isuser
 
@@ -647,7 +661,8 @@
   </entity>
   
   <entity
-    id="ftDetails">
+    id="ftDetails"
+    form="frmFT">
   </entity>
 
 </document>

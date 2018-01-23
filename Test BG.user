@@ -24,8 +24,4 @@
     <bootstrap thing="spMedBatt"></bootstrap>
     <child entity="entSpec"></child>
     </thing>
-  <thing id="eqBotCnstr" name="Bot, Construction" description="Has 8 ranks in Engineering but no specialties or other skills; multiple bots required for large and/or complex projects, which may also require a Computers (Programming) check (TN 15–30)" compset="Equipment">
-    <fieldval field="grCost" value="2"/>
-    <tag group="GearType" tag="Automation"/>
-    </thing>
   </document>
