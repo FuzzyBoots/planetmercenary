@@ -39,8 +39,9 @@
     <fieldval field="defDefense" value="1"/>
     <fieldval field="defDR" value="1"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value="N/A"/>
+    <fieldval field="defSpecial" value="N/A"/>
     <fieldval field="grCost" value="3"/>
+    <tag group="ArmorType" tag="armLight"/>
     </thing>
 
   <!-- CD&P Citizen Soldier -->
@@ -52,8 +53,9 @@
     <fieldval field="defDefense" value="2"/>
     <fieldval field="defDR" value="2"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value="Requires 1 action to engage full protection. Otherwise 1/1."/>
+    <fieldval field="defSpecial" value="Requires 1 action to engage full protection. Otherwise 1/1."/>
     <fieldval field="grCost" value="6"/>
+    <tag group="ArmorType" tag="armLight"/>
     </thing>
 
   <!-- Malott M&amp;M V-44 Whisperskin -->
@@ -65,8 +67,9 @@
     <fieldval field="defDefense" value="3"/>
     <fieldval field="defDR" value="2"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value="Can fit under clothes and stacks with other armor"/>
+    <fieldval field="defSpecial" value="Can fit under clothes and stacks with other armor"/>
     <fieldval field="grCost" value="4"/>
+    <tag group="ArmorType" tag="armLight"/>
     </thing>
 
   <!-- Malott M&amp;M Blue Collar -->
@@ -78,8 +81,9 @@
     <fieldval field="defDefense" value="2"/>
     <fieldval field="defDR" value="3"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value="Damage reduction 6 vs. laser, plasma, and electrical attacks; damage reduction 3 vs. all other attacks; helmet and mask provide for full EVA work"/>
+    <fieldval field="defSpecial" value="Damage reduction 6 vs. laser, plasma, and electrical attacks; damage reduction 3 vs. all other attacks; helmet and mask provide for full EVA work"/>
     <fieldval field="grCost" value="4"/>
+    <tag group="ArmorType" tag="armLight"/>
     </thing>
   
   <!-- Phubar Troublemaker Mark II -->
@@ -91,8 +95,9 @@
     <fieldval field="defDefense" value="3"/>
     <fieldval field="defDR" value="1"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value="Failure Prone"/>
+    <fieldval field="defSpecial" value="Failure Prone"/>
     <fieldval field="grCost" value="1"/>
+    <tag group="ArmorType" tag="armLight"/>
     </thing>
   
       
@@ -106,8 +111,9 @@
     <fieldval field="defDefense" value="3"/>
     <fieldval field="defDR" value="3"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value=""/>
+    <fieldval field="defSpecial" value=""/>
     <fieldval field="grCost" value="5"/>
+    <tag group="ArmorType" tag="armMedium"/>
     </thing>
   
   <!-- Malott M&amp;M 1150 Supersuit -->
@@ -119,8 +125,9 @@
     <fieldval field="defDefense" value="2"/>
     <fieldval field="defDR" value="3"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value="Integral Shields"/>
+    <fieldval field="defSpecial" value="Integral Shields"/>
     <fieldval field="grCost" value="15"/>
+    <tag group="ArmorType" tag="armMedium"/>
     </thing>
   
   <!-- Malott M&amp;M 1150 EX Supersuit -->
@@ -132,8 +139,9 @@
     <fieldval field="defDefense" value="2"/>
     <fieldval field="defDR" value="6"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value="Integral Shield, Limited Flight, Active Camouflage"/>
+    <fieldval field="defSpecial" value="Integral Shield, Limited Flight, Active Camouflage"/>
     <fieldval field="grCost" value="17"/>
+    <tag group="ArmorType" tag="armMedium"/>
     </thing>
   
   <!-- Phubar Enforcer -->
@@ -145,8 +153,9 @@
     <fieldval field="defDefense" value="2"/>
     <fieldval field="defDR" value="3"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value="Failure Prone"/>
+    <fieldval field="defSpecial" value="Failure Prone"/>
     <fieldval field="grCost" value="4"/>
+    <tag group="ArmorType" tag="armMedium"/>
     </thing>
   
   <!-- Phubar Enforcer Deluxe -->
@@ -158,8 +167,9 @@
     <fieldval field="defDefense" value="2"/>
     <fieldval field="defDR" value="4"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value="Stacks with the Phubahr Troublemaker Mark II (see page 155); if stacked, then each set of armor can only take two hits before failing, not three; Failure Prone"/>
+    <fieldval field="defSpecial" value="Stacks with the Phubahr Troublemaker Mark II (see page 155); if stacked, then each set of armor can only take two hits before failing, not three; Failure Prone"/>
     <fieldval field="grCost" value="7"/>
+    <tag group="ArmorType" tag="armMedium"/>
     </thing>
   
   <!-- Esspererin Sashiko -->
@@ -171,8 +181,9 @@
     <fieldval field="defDefense" value="5"/>
     <fieldval field="defDR" value="8"/>
     <fieldval field="defHull" value="1"/>
-    <fieldval field="defQuals" value="May only be worn (piloted) by esspererin; Hull Points; Implanted Weapons"/>
+    <fieldval field="defSpecial" value="May only be worn (piloted) by esspererin; Hull Points; Implanted Weapons"/>
     <fieldval field="grCost" value="15"/>
+    <tag group="ArmorType" tag="armHeavy"/>
     </thing>
   
   <!-- Phubahr Godmode Gargoyle -->
@@ -184,8 +195,9 @@
     <fieldval field="defDefense" value="4"/>
     <fieldval field="defDR" value="5"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value="Includes a modified R1P-A Goaltender; Failure Prone; Flight"/>
+    <fieldval field="defSpecial" value="Includes a modified R1P-A Goaltender; Failure Prone; Flight"/>
     <fieldval field="grCost" value="10"/>
+    <tag group="ArmorType" tag="armHeavy"/>
     </thing>
   
   <!-- Planet Mercenary ICC-Odin -->
@@ -197,8 +209,9 @@
     <fieldval field="defDefense" value="5"/>
     <fieldval field="defDR" value="6"/>
     <fieldval field="defHull" value="1"/>
-    <fieldval field="defQuals" value="Comes with two permanently shouldermounted Gunfoam cannons (2d6 damage, Reload 1–2, no weapon qualities on the cannons, license Military); Hull Points; Flight"/>
+    <fieldval field="defSpecial" value="Comes with two permanently shouldermounted Gunfoam cannons (2d6 damage, Reload 1–2, no weapon qualities on the cannons, license Military); Hull Points; Flight"/>
     <fieldval field="grCost" value="15"/>
+    <tag group="ArmorType" tag="armHeavy"/>
     </thing>
   
   <!-- USMF Infantry Combat Chassis (USMF-ICC) -->
@@ -210,8 +223,9 @@
     <fieldval field="defDefense" value="5"/>
     <fieldval field="defDR" value="8"/>
     <fieldval field="defHull" value="1"/>
-    <fieldval field="defQuals" value="Hull Points; Flight"/>
+    <fieldval field="defSpecial" value="Hull Points; Flight"/>
     <fieldval field="grCost" value="10"/>
+    <tag group="ArmorType" tag="armHeavy"/>
     </thing>
   
   <!-- Vella Tacspec T2-F11 Golem -->
@@ -223,8 +237,9 @@
     <fieldval field="defDefense" value="5"/>
     <fieldval field="defDR" value="6"/>
     <fieldval field="defHull" value="1"/>
-    <fieldval field="defQuals" value="Hull Points; Flight; Implanted Weapons"/>
+    <fieldval field="defSpecial" value="Hull Points; Flight; Implanted Weapons"/>
     <fieldval field="grCost" value="12"/>
+    <tag group="ArmorType" tag="armHeavy"/>
     </thing>
   
   <!-- Vella Tacspec T2-F11 Golem EX -->
@@ -236,8 +251,9 @@
     <fieldval field="defDefense" value="5"/>
     <fieldval field="defDR" value="6"/>
     <fieldval field="defHull" value="1"/>
-    <fieldval field="defQuals" value="Includes a R1P-A Goaltender; Hull Points; Flight; Implanted Weapons"/>
+    <fieldval field="defSpecial" value="Includes a R1P-A Goaltender; Hull Points; Flight; Implanted Weapons"/>
     <fieldval field="grCost" value="12"/>
+    <tag group="ArmorType" tag="armHeavy"/>
     </thing>
   
   <!-- Vella Tacspec Bunker Bubble -->
@@ -249,11 +265,141 @@
     <fieldval field="defDefense" value="0"/>
     <fieldval field="defDR" value="6"/>
     <fieldval field="defHull" value="0"/>
-    <fieldval field="defQuals" value="Damage Reduction vs. beam and projectile attacks; the Bunker Bubble may move at a speed roughly equivalent to the fastest sophont in a team."/>
+    <fieldval field="defSpecial" value="Damage Reduction vs. beam and projectile attacks; the Bunker Bubble may move at a speed roughly equivalent to the fastest sophont in a team."/>
     <fieldval field="grCost" value="10"/>
+    <tag group="ArmorType" tag="armTeam"/>
     </thing>
 
-<!-- Placeholders -->
+  <!-- Wächter L&D R1P-A Goaltender -->
+  <thing
+    id="shdR1PA"
+    name="Wächter L&amp;D R1P-A Goaltender"
+    compset="Shield"
+    description="The Goaltender is a hovering drone driven by an onboard synthetic intelligence with only one job: keep the enemy from scoring hits on the goal. The goal, of course, is whatever you tell the Goaltender it is, but typically it’s you.\n\nThe Goaltender R1P-A is the lightest and least expensive of the series. It’s about the size of a cantaloupe and comes with a stack of 120-millimeter “impact sandwich” armor plates. When the bullets start flying, the Goaltender maneuvers itself between the bullets and the goal, and once an armor plate is sufficiently damaged that it no longer offers protection, the Goaltender deploys another one from a sheath slung over your shoulder.\n\nSeasoned veterans and butterbars alike agree that once you’ve deployed a Goaltender, you’ll want more of them. It’s unnerving at first, having a bot darting in front of you and then caroming away after deflecting some enemy fire, but once you’re used to it, you pine for a whole buzzing swarm of them. Your nearest Planet Mercenary retailer can make this dream a reality.">
+    <fieldval field="defDefense" value="0"/>
+    <fieldval field="defDR" value="5"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defSpecial" value="After absorbing 3 damage in a round, a R1P-A Goaltender is destroyed"/>
+    <fieldval field="grCost" value="6"/>
+    <tag group="ArmorType" tag="armTeam"/>
+    </thing>
+
+  <!-- Wächter L&D R1P-W Goaltender -->
+  <thing
+    id="shdR1PW"
+    name="Wächter L&amp;D R1P-W Goaltender"
+    compset="Shield"
+    description="Te R1P series scales up with the R1P-W, a fifty-centimeter flying sphere that uses one-meter-square armor plates to defend you and your entire fireteam. The R1P-W costs more than the limited R1P-A. It also has improved mobility and a smarter onboard SI that lets it catch more incoming fire for you. It does become unreasonably costly when its owners take fire that can destroy a plate and the drone in a single shot. Despite this, the model is deployed by many civilian law-enforcement agencies in areas of unrest. Its large plates are perfect for deflecting rocks, cans, bottles, and rotting food, and as an added bonus, the drone never takes these assaults personally.">
+    <fieldval field="defDefense" value="2"/>
+    <fieldval field="defDR" value="5"/>
+    <fieldval field="defHull" value="0"/>
+    <fieldval field="defSpecial" value="After absorbing 5 damage in a round, a R1P-W Goaltender is destroyed"/>
+    <fieldval field="grCost" value="9"/>
+    <tag group="ArmorType" tag="armTeam"/>
+    </thing>
+
+  <!-- Placeholders -->
+  <thing
+    id="armLight"
+    name="– Light Armor –"
+    compset="Defense"
+    isshowonly="yes"
+    description="">
+    <tag group="ArmorType" tag="armLight"/>
+    </thing>
+    
+  <thing
+    id="armMedium"
+    name="– Medium Armor –"
+    compset="Defense"
+    isshowonly="yes"
+    description="">
+    <tag group="ArmorType" tag="armMedium"/>
+    </thing>
+    
+  <thing
+    id="armHeavy"
+    name="– Heavy Armor –"
+    compset="Defense"
+    isshowonly="yes"
+    description="">
+    <tag group="ArmorType" tag="armHeavy"/>
+    </thing>
+    
+  <thing
+    id="armTeam"
+    name="– Team Protection –"
+    compset="Defense"
+    isshowonly="yes"
+    description="">
+    <tag group="ArmorType" tag="armTeam"/>
+    </thing>
+
+  
+    
+<!-- ##################
+      Melee Weapons
+     ##################
+-->
+
+
+  <!-- Ursumari Unarmed Strike melee weapon -->
+  <thing
+    id="wpUrsus"  
+    name="Ursumari Unarmed Strike"
+    compset="Melee"
+    description="Ursumari have bite and claw attacks equal to Athletics+2."
+    isunique="yes"
+    holdable="no">
+    <fieldval field="shortname" value="Unarmed"/>
+    <fieldval field="wpBonus" value="0"/>
+    <fieldval field="wpDamage" value="Athletics+2"/>
+    <fieldval field="wpSpecial" value=""/>
+    <fieldval field="grCost" value="0"/>
+    <tag group="Equipment" tag="Natural"/>
+    </thing>
+
+  <!-- Rilla Unarmed Strike melee weapon -->
+  <thing
+    id="wpRilla"  
+    name="Rilla Unarmed Strike"
+    compset="Melee"
+    description="Rilla have a bite attack equal to Athletics+2."
+    isunique="yes"
+    holdable="no">
+    <fieldval field="shortname" value="Unarmed"/>
+    <fieldval field="wpBonus" value="0"/>
+    <fieldval field="wpDamage" value="Athletics+2"/>
+    <fieldval field="wpSpecial" value=""/>
+    <fieldval field="grCost" value="0"/>
+    <tag group="Equipment" tag="Natural"/>
+    </thing>
+
+  <!-- Placeholder -->
+  <thing
+    id="wpComMelee"
+    name="– Common Melee Weapons –"
+    compset="Melee"
+    isshowonly="yes"
+    description="">
+    <tag group="WeaponType" tag="MelCommon"/>
+    </thing>
+    
+  <thing
+    id="wpExoMelee"
+    name="– Exotic Melee Weapons –"
+    compset="Melee"
+    isshowonly="yes"
+    description="">
+    <tag group="WeaponType" tag="MelExotic"/>
+    </thing>
+
+<!-- ##################
+      Ranged Weapons
+     ##################
+-->
+
+  <!-- Placeholders -->
   <thing
     id="wpBeamPist"
     name="– Beam Pistols –"
@@ -403,52 +549,5 @@
     <tag group="WeapClass" tag="NonLethal"/>
     <tag group="WeaponType" tag="rngHvyWeap"/>
     </thing>
-    
-
-<!-- ##################
-      Melee Weapons
-     ##################
--->
-
-
-  <!-- Ursumari Unarmed Strike melee weapon -->
-  <thing
-    id="wpUrsus"  
-    name="Ursumari Unarmed Strike"
-    compset="Melee"
-    description="Ursumari have bite and claw attacks equal to Athletics+2."
-    isunique="yes"
-    holdable="no">
-    <fieldval field="shortname" value="Unarmed"/>
-    <fieldval field="wpBonus" value="0"/>
-    <fieldval field="wpDamage" value="Athletics+2"/>
-    <fieldval field="wpSpecial" value=""/>
-    <fieldval field="grCost" value="0"/>
-    <tag group="Equipment" tag="Natural"/>
-    </thing>
-
-  <!-- Rilla Unarmed Strike melee weapon -->
-  <thing
-    id="wpRilla"  
-    name="Rilla Unarmed Strike"
-    compset="Melee"
-    description="Rilla have a bite attack equal to Athletics+2."
-    isunique="yes"
-    holdable="no">
-    <fieldval field="shortname" value="Unarmed"/>
-    <fieldval field="wpBonus" value="0"/>
-    <fieldval field="wpDamage" value="Athletics+2"/>
-    <fieldval field="wpSpecial" value=""/>
-    <fieldval field="grCost" value="0"/>
-    <tag group="Equipment" tag="Natural"/>
-    </thing>
-
-  
-
-<!-- ##################
-      Ranged Weapons
-     ##################
--->
-
 
   </document>

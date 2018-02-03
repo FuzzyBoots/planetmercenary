@@ -375,6 +375,27 @@
     ]]></procedure>
 
 
+  <!-- Procedure InfoDefSp
+        Generate special abilities specific to all defenses. This is separate from
+        the "InfoDef" procedure so that it can always be performed last. The
+        text is placed into the "iteminfo" variable for subsequent use by our caller.
+
+        Outbound parameter: iteminfo
+  -->
+  <procedure id="InfoDefSp" context="info"><![CDATA[
+    ~declare variables that are used to communicate with our caller
+    var iteminfo as string
+
+    ~report any special details about the defense (omitting if there are none)
+    var special as string
+    special = tagnames[Armor.?,", "]
+    special = splice(special,field[defSpecial].text,", ")
+    if (empty(special) = 0) then
+      iteminfo &= "Special: " & special & "{br}"
+      endif
+    ]]></procedure>
+
+
   <!-- Procedure InfoDef
         Generate details specific to defensive gear, including armor and shields.
         The text is placed into the "iteminfo" variable for subsequent use by our
@@ -392,6 +413,11 @@
     ~report the damage resistance
     iteminfo &= "DR: " & field[defDR].text & "{br}"
 
+    ~report the Hull Points
+    iteminfo &= "Hull: " & field[defHull].text & "{br}"
+
+    ~finish with generic special abilities for all defenses
+    call InfoDefSp
     ]]></procedure>
 
 

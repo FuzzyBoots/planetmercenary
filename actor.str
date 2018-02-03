@@ -42,7 +42,7 @@
             (e.g. attack penalties after taking sufficient damage).
       -->
       <calculate phase="Traits" priority="5000" name="Calc acHPMin"><![CDATA[
-        @value = #traitbonus[trHealth] + #traitinplay[trHealth]
+        @value = #traitbase[trHealth] + #traitinplay[trHealth]
         ]]></calculate>
       </field>
 

@@ -47,20 +47,14 @@
               a layout, as we do here. Both methods are perfectly reasonable.
   -->
 
-  <!-- oHeroName portal - name of the actor -->
+  <!-- oCharSec portal - Character portal -->
   <portal
-    id="oHeroName"
-    style="outHeroNam">
-    <output_label>
-      <labeltext><![CDATA[
-        @text = hero.actorname
-        if (empty(@text) <> 0) then
-          @text = "- Unnamed Hero -"
-          endif
-        ]]></labeltext>
-      </output_label>
+    id="oCharSec"
+    style="outSection">
+    <output_label
+      text="Character"/>
     </portal>
-
+  
   <!-- oHeroInfo portal - details about the actor -->
   <portal
     id="oHeroInfo"
@@ -68,33 +62,78 @@
     <output_label>
       <labeltext><![CDATA[
         var temp as string
-        if (empty(hero.playername) = 0) then
-          @text = "Player: " & hero.playername & "{br}"
+        @text = "{b}Name: "
+        if (empty(hero.actorname) = 0) then
+          @text &= hero.actorname
           endif
-        @text &= "{size 36}Character Points: " & #resmax[resCP]
-        if (#resleft[resCP] <> 0) then
-          @text &= " (" & #resleft[resCP] & " left)"
-          endif
-        @text &= "{br}{align left}{/b}"
-        temp = hero.findchild[Race].field[name].text
-        if (empty(temp) <> 0) then
-          temp = "Unknown"
-          endif
-        @text &= "Race: " & temp
-        @text &= "; " & hero.child[mscPerson].field[perGender].text
-        @text &= "; Age: " & hero.child[mscPerson].field[perAge].text
-        @text &= "; Height: " & hero.child[mscPerson].field[perHeight].text
-        @text &= "; Weight: " & hero.child[mscPerson].field[perWeight].text
-        if (hero.child[mscPerson].field[perHair].isempty = 0) then
-          @text &= "; Hair: " & hero.child[mscPerson].field[perHair].text
-          endif
-        if (hero.child[mscPerson].field[perEyes].isempty = 0) then
-          @text &= "; Eyes: " & hero.child[mscPerson].field[perEyes].text
-          endif
-        if (hero.child[mscPerson].field[perSkin].isempty = 0) then
-          @text &= "; Skin: " & hero.child[mscPerson].field[perSkin].text
-          endif
+        @text &= "{br}"
+        
+        temp = hero.firstchild["component.CmdPckge"].field[name].text
+        @text &= "Command Package: " & temp & "{br}"
+        
+        temp = hero.firstchild["component.Bckgrnd"].field[name].text
+        @text &= "Background: " & temp & "{br}"
+        
+        temp = hero.firstchild["component.Race"].field[name].text
+        @text &= "Sophont Type: " & temp & "{br}"
         ]]></labeltext>
+      </output_label>
+    </portal>
+    
+  <!-- oHealth portal
+        This is a grouping of items related to Health. It will have the base health/powers
+        value, a larger box for tracking deductions, and three headers with boxes of
+        Reduction, Defense, and Dodge 
+  -->
+  <portal
+    id="oHealth"
+    style="outNormal">
+    <output_label
+      text=" ">
+      </output_label>
+    </portal>
+    
+  <!-- oHealthLbl
+  -->
+  <portal
+    id="oHealthLbl"
+    style="outNameLg">
+    <output_label
+      text="{b}Health{/b}"/>
+    </portal>
+    
+  <!-- oReductLbl
+  -->
+  <portal
+    id="oReductLbl"
+    style="outNameLg">
+    <output_label
+      text="Reduction"/>
+    </portal>
+    
+  <!-- oDefLbl
+  -->
+  <portal
+    id="oDefLbl"
+    style="outNameLg">
+    <output_label
+      text="Defense"/>
+    </portal>
+    
+  <!-- oDodgeLbl
+  -->
+  <portal
+    id="oDodgeLbl"
+    style="outNameLg">
+    <output_label
+      text="Dodge"/>
+    </portal>
+    
+  <portal
+    id="valBox"
+    style="outGreyBox">
+    <output_label
+      text=" ">
       </output_label>
     </portal>
   
@@ -1119,13 +1158,24 @@
   -->
   <layout
     id="oLeftSide">
-    <portalref portal="oHeroName"/>
+    <portalref portal="oCharSec"/>
     <portalref portal="oHeroInfo"/>
     <portalref portal="oDerived"/>
+    <portalref portal="oHealthLbl"/>
+    <!--portalref portal="oReductLbl"/>
+    <portalref portal="oDefLbl"/>
+    <portalref portal="oDodgeLbl"/-->
+    <portalref portal="valBox"/>
     <position><![CDATA[
       ~position the hero name at the top with the hero details beneath the name
-      perform portal[oHeroName].autoplace[0]
+      perform portal[oCharSec].autoplace[0]
       perform portal[oHeroInfo].autoplace[15]
+      portal[oHealthLbl].left = portal[oHeroInfo].left
+      portal[oHealthLbl].top = portal[oHeroInfo].bottom + 5
+      portal[oHealthLbl].width = 20
+      portal[valBox].left = portal[oHealthLbl].left
+      portal[valBox].top = portal[oHealthLbl].bottom + 5
+      portal[valBox].width = 20
 
       ~position the tables next
       perform portal[oDerived].autoplace
@@ -1269,7 +1319,7 @@
 
 
   <!-- standard1 sheet
-        This is the first page of the stanard character sheet, which coordinates the
+        This is the first page of the standard character sheet, which coordinates the
         output of a whole bunch of layouts containing different pieces of information
         for the character. Layouts are estimated to perform whatever calculations are
         necessary within that layout, such as its overall dimensions. Once estimated,

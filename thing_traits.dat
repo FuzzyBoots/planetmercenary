@@ -41,7 +41,7 @@
   <eval index="1" phase="Traits" priority="4000">
     <before name="Derived trtFinal"/>
     <after name="Calc trtFinal"/><![CDATA[
-    field[trtBonus].value = 0 + #trait[skEndure]
+    field[trtBase].value = 0 + #trait[skEndure]
     ]]></eval>  
   </thing>
 
@@ -60,7 +60,7 @@
     <!-- Calculate the trait as appropriate -->
     <eval index="1" phase="Traits" priority="4000"><![CDATA[
       ~defense is 5 plus the Dodge skill
-      field[trtBonus].value += 5 + #traitfound[skDodge]
+      field[trtBase].value = 5 + #traitfound[skDodge]
     ]]></eval> 
     </thing>
 

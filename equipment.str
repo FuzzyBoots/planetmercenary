@@ -413,6 +413,8 @@
         field[wpNetAtk].value += #trait[skHvyWeap]        
       elseif (tagis[WeaponType.rngStaWeap] <> 0) then
         field[wpNetAtk].value += #trait[skStaWeap]
+      elseif (tagis[WeaponType.rngThrown] <> 0) then
+        field[wpNetAtk].value += #trait[skThrown]
       endif
       ]]></eval>
 
@@ -505,7 +507,7 @@
     
   <!-- Qualities associated with this equipment -->  
   <field
-    id="defQuals"
+    id="defSpecial"
     name="Qualities"
     type="static"
     maxlength="200"> 
@@ -521,9 +523,17 @@
       ~Stacked armor should work by applying the lowest
       ~defense and adding the DR over that type,
       ~but I'm not up to that point yet.
-    
+      
       ~apply the appropriate trait adjustments for the equipment
-      #traitbonus[trDefense] += field[defDefense].value
+      if (tagis[Armor.?] <> 0) then
+        if (#traitbonus[trDefense] = 0) then
+          #traitbonus[trDefense] = field[defDefense].value
+        elseif (#traitbonus[trDefense] > field[defDefense].value) then
+          #traitbonus[trDefense] = field[defDefense].value
+          endif
+      else 
+        #traitbonus[trDefense] += field[defDefense].value
+        endif
       #traitbonus[trDR] += field[defDR].value
       ]]></eval>
 
