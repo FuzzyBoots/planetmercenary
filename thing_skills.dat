@@ -10,7 +10,7 @@
     name="Carbines"
     compset="Skill"
     isunique="yes"
-    description="Use your Carbines skill    when firing carbine class weapons. As the weapons most commonly issued to infantry, carbines offer versatility and lethality. They are designed for quick carry, ease of use, and close-quarters action">
+    description="Use your Carbines skill when firing carbine class weapons. As the weapons most commonly issued to infantry, carbines offer versatility and lethality. They are designed for quick carry, ease of use, and close-quarters action">
     <fieldval field="trtAbbrev" value="Car"/>
 
     <tag group="Skills" tag="Combat"/>

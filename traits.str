@@ -145,6 +145,18 @@
     
     </component>
 
+  <component
+    id="FTSkill"
+    name="Fireteam skill"
+    autocompset="yes">    
+    </component>
+  
+  <component
+    id="FTRole"
+    name="Fireteam role"
+    autocompset="yes">    
+    </component>
+  
   <component 
     id="FTMember"
     name="Fireteam Member"
@@ -200,6 +212,22 @@
         ~Displays name
         @text = field[ftCombat].value & " (" & field[ftDamage].value & "d6)"
         ]]></finalize>
+      </field>
+      
+    <!-- Tracks the selection made when a menu choice is required -->
+    <field
+      id="skillCh1"
+      name="Chosen Thing / Pick"
+      type="user"
+      style="menu">
+      </field>
+    
+    <!-- Tracks the selection made when a menu choice is required -->
+    <field
+      id="skillCh2"
+      name="Chosen Thing / Pick"
+      type="user"
+      style="menu">
       </field>
     
     <field
@@ -504,7 +532,7 @@
         value from the calculation since derived traits have no user-defined facet.
         -->
     <eval index="1" phase="Traits" priority="6000" name="Derived trtFinal"><![CDATA[
-      field[trtFinal].value = field[trtBonus].value + field[trtInPlay].value
+      field[trtFinal].value = field[trtBase].value + field[trtBonus].value + field[trtInPlay].value
       ]]></eval>
 
     </component>
@@ -535,7 +563,7 @@
     
     <!-- Determine base health -->
     <eval index="2" phase="Traits" priority="4001" name="Calc Sophont Health"><![CDATA[
-      #traitbonus[trHealth] = field[baseHealth].value + #trait[skEndure]
+      #traitbase[trHealth] = field[baseHealth].value + #trait[skEndure]
     ]]></eval>
 
     </component>
@@ -652,7 +680,9 @@
   <compset
     id="FTMember">
     <compref component="FTMember"/>
+    <compref component="UserSelect"/>
     </compset>
+
   
   <entity
     id="entSpec"

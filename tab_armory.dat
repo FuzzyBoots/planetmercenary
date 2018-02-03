@@ -56,7 +56,8 @@
       showtemplate="arWpnPick"
       choosetemplate="arWpnThing"
       buytemplate="BuyCash"
-      selltemplate="SellCash">
+      selltemplate="SellCash"
+      choosesortset="Weapon">
       <list>component.WeapMelee</list>
       <candidate inheritlist="yes">!Equipment.Natural</candidate>
       <titlebar><![CDATA[
@@ -72,7 +73,7 @@
     </portal>
 
 
-  <!-- yRange portal
+  <!-- arRange portal
         Presents a dynamic table where the user can add ranged weapons for the
         character. This portal is identical to "arMelee" above, except that it
         manages ranged weapons instead of melee weapons, resulting in a few minor
@@ -121,11 +122,12 @@
       choosetemplate="arDefThing"
       showsortset="Armory"
       buytemplate="BuyCash"
-      selltemplate="SellCash">
+      selltemplate="SellCash"
+      choosesortset="Armor">
       <list>component.Defense</list>
       <candidate inheritlist="yes">!Equipment.Natural</candidate>
       <titlebar><![CDATA[
-        @text = "Select Armor and Shields to Purchase from the List Below"
+        @text = "Select Armor and Team Protection to Purchase from the List Below"
         ]]></titlebar>
       <headertitle><![CDATA[
         @text = "Armor & Shields"
@@ -192,6 +194,10 @@
       ~position the cost portal on the far right
       perform portal[cost].alignedge[right,0]
       
+      if (tagis[thing.showonly] <> 0) then
+        portal[cost].visible = 0
+        endif
+      
       ~position the name on the left and let it use all available space
       portal[name].left = 0
       portal[name].width = portal[name].width
@@ -216,14 +222,23 @@
     marginvert="3">
 
     <portal
-      id="name"
+      id="equip"
       style="chkNormal"
       showinvalid="yes"
       tiptext="Click to equip this weapon">
       <checkbox
-        field="grIsEquip"
-        dynamicfield="grStkName">
+        field="grIsEquip">
         </checkbox>
+      </portal>
+
+    <portal
+      id="name"
+      style="lblNormal"
+      showinvalid="yes">
+      <label
+        field="shortname"
+        ismultiline="yes">
+        </label>
       </portal>
 
     <portal
@@ -240,19 +255,6 @@
       </portal>
 
     <portal
-      id="strreq"
-      style="imgNormal">
-      <image_literal
-        image="strengthreq.bmp"
-        isbuiltin="yes"
-        istransparent="yes">
-        </image_literal>
-      <mouseinfo><![CDATA[
-        @text = "You do not meet this weapon's minimum strength requirement."
-        ]]></mouseinfo>
-      </portal>
-
-    <portal
       id="attack"
       style="lblNormal">
       <label
@@ -264,7 +266,8 @@
       id="damage"
       style="lblNormal">
       <label
-        field="wpDamage">
+        field="wpDamage"
+        ismultiline="yes">
         </label>
       </portal>
 
@@ -309,13 +312,16 @@
       </portal>
 
     <position><![CDATA[
+      portal[name].height = portal[name].height * 2
+
       ~set up our height based on our tallest portal
-      height = portal[info].height
+      height = portal[name].height
 
       ~if this is a "sizing" calculation, we're done
       doneif (issizing <> 0)
 
       ~center the portals vertically
+      perform portal[equip].centervert
       perform portal[info].centervert
       perform portal[name].centervert
       perform portal[attack].centervert
@@ -323,7 +329,6 @@
       perform portal[special].centervert
       perform portal[gearmanage].centervert
       perform portal[delete].centervert
-      perform portal[strreq].centervert
       perform portal[heldby].centervert
 
       ~position the delete portal on the far right
@@ -340,6 +345,7 @@
 
       ~position the damage portal to the left of the special column; we want the
       ~damage to be centered in its own column relative to a centerpoint position
+      portal[damage].width = 100
       perform portal[damage].centerpoint[horz,250]
 
       ~position the attack portal to the left of damage column; we want the
@@ -348,16 +354,14 @@
 
       ~position the name on the left and let it use all available space
       var limit as number
-      limit = portal[attack].left - 8 - portal[heldby].width - 5 - portal[strreq].width - 2
-      portal[name].left = 0
+      limit = portal[attack].left - 8 - portal[heldby].width - 5 - 2
+      portal[equip].left = 0
+      portal[name].left = portal[equip].right + 2
       portal[name].width = minimum(portal[name].width,limit)
-
-      ~show the 'held by' icon to the right of the strength requirement if appropriate
-      if (portal[strreq].visible = 0) then
-        portal[heldby].left = portal[strreq].left
-      else
-        perform portal[heldby].alignrel[ltor,strreq,5]
-        endif
+      
+      ~show the 'held by' icon to the right of the name if appropriate
+      portal[heldby].left = portal[name].right + 2
+      
       portal[heldby].visible = isgearheld
 
       ~only show the special portal if there are special abilities/notes to view
@@ -396,6 +400,22 @@
       </portal>
 
     <portal
+      id="DR"
+      style="lblNormal">
+      <label
+        field="defDR">
+        </label>
+      </portal>
+
+    <portal
+      id="HP"
+      style="lblNormal">
+      <label
+        field="defHull">
+        </label>
+      </portal>
+
+    <portal
       id="cost"
       style="lblNormal">
       <label>
@@ -420,6 +440,19 @@
       ~to be centered in its own column relative to a centerpoint position
       perform portal[defense].centerpoint[horz,180]
 
+      ~put the DR and Hull Points to the right of the defense
+      perform portal[DR].alignrel[ltor,defense,10]
+      perform portal[HP].alignrel[ltor,DR,10]
+      
+      if (tagis[thing.showonly] <> 0) then
+        portal[cost].visible = 0
+        portal[defense].visible = 0
+        portal[DR].visible = 0
+        portal[HP].visible = 0
+        endif
+      
+      
+      
       ~position the name on the left and let it use all available space
       portal[name].left = 0
       portal[name].width = minimum(portal[name].width,portal[defense].left - 8)
@@ -465,23 +498,26 @@
       </portal>
 
     <portal
-      id="strreq"
-      style="imgNormal">
-      <image_literal
-        image="strengthreq.bmp"
-        isbuiltin="yes"
-        istransparent="yes">
-        </image_literal>
-      <mouseinfo><![CDATA[
-        @text = "You do not meet this equipment's minimum strength requirement."
-        ]]></mouseinfo>
-      </portal>
-
-    <portal
       id="defense"
       style="lblNormal">
       <label
         field="defDefense">
+        </label>
+      </portal>
+
+    <portal
+      id="DR"
+      style="lblNormal">
+      <label
+        field="defDR">
+        </label>
+      </portal>
+
+    <portal
+      id="HP"
+      style="lblNormal">
+      <label
+        field="defHull">
         </label>
       </portal>
 
@@ -523,9 +559,10 @@
       perform portal[info].centervert
       perform portal[name].centervert
       perform portal[defense].centervert
+      perform portal[DR].centervert
+      perform portal[HP].centervert
       perform portal[gearmanage].centervert
       perform portal[delete].centervert
-      perform portal[strreq].centervert
       perform portal[heldby].centervert
 
       ~position the delete portal on the far right
@@ -541,22 +578,20 @@
       ~defense to be centered in its own column relative to a centerpoint position
       perform portal[defense].centerpoint[horz,250]
 
+      ~show the DR portal to the right of the defense
+      perform portal[DR].alignrel[ltor,defense,25]
+      
+      ~show the HP portal to the right of the DR
+      perform portal[HP].alignrel[ltor,DR,25]
+      
       ~position the name on the left and let it use all available space
       var limit as number
       limit = portal[defense].left - 8 - portal[heldby].width - 5
       portal[name].left = 0
       portal[name].width = minimum(portal[name].width,limit)
 
-      ~show the 'strength requirement' icon to the right of the name
-      perform portal[strreq].alignrel[ltor,name,2]
-      portal[strreq].visible = tagis[Helper.BadStrReq]
-
-      ~show the 'held by' icon to the right of the strength requirement if appropriate
-      if (portal[strreq].visible = 0) then
-        portal[heldby].left = portal[strreq].left
-      else
-        perform portal[heldby].alignrel[ltor,strreq,5]
-        endif
+      ~show the 'held by' icon to the right of DR if appropriate
+      perform portal[heldby].alignrel[ltor,DR,5]
       portal[heldby].visible = isgearheld
       ]]></position>
 
@@ -672,7 +707,7 @@
         to appear first within the second grouping (equipment), we assign it an
         "order" of 210.
 
-        The logic for this panel is similar to the logic for the preceeding panels,
+        The logic for this panel is similar to the logic for the preceding panels,
         so please refer to those panels for more details.
   -->
   <panel

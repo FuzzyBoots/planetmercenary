@@ -5,14 +5,53 @@
 
 <document signature="Hero Lab Data">
   <!-- Fireteam Thing -->
-  <thing
-    id="Fireteam"
-    name="Fireteam member"
-    compset="FTMember"
-    isunique="no"
-    description="This is a fireteam entry.">
-    <child entity="ftDetails"/>
-  </thing>
+<thing
+  id="Fireteam"
+  name="Fireteam member"
+  compset="FTMember"
+  isunique="no"
+  description="This is a fireteam entry.">
   
+  <fieldval field="usrCandid1" value=" "/>
+  <fieldval field="usrCandid2" value=" "/>
+  
+  <eval index="1" phase="PreTraits" priority="4900">
+    <before name="Calc trtFinal"/><![CDATA[
+    debug field[usrChosen1].chosen.field[name].text & ", " & field[usrChosen2].chosen.field[name].text
+    
+    if (field[usrChosen1].chosen.field[name].text = 0) then
+      debug "It's physical"
+      endif
+    
+    ]]>
+    </eval>
+  
+  <child entity="ftDetails"/>
+  </thing>
+
+<thing
+  id="ftPhysical"
+  name="Physical"
+  compset="FTSkill"/>
+  
+<thing
+  id="ftMental"
+  name="Mental"
+  compset="FTSkill"/>
+
+<thing
+  id="ftSocial"
+  name="Social"
+  compset="FTSkill"/>
+
+<thing
+  id="ftCombat"
+  name="Combat"
+  compset="FTSkill"/>
+
+<thing
+  id="ftDamage"
+  name="Damage"
+  compset="FTSkill"/>
   
 </document>

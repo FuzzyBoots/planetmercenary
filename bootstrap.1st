@@ -19,9 +19,9 @@
     ]]></enmasse>
 
   <!-- Add all fireteam skills to the actor -->
-  <!--enmasse><![CDATA[
+  <enmasse><![CDATA[
     component.FTSkill
-    ]]></enmasse-->
+    ]]></enmasse>
     
   <!-- Add all derived traits to the actor -->
   <enmasse><![CDATA[
@@ -73,6 +73,5 @@
 
   <!-- And a single journal entry -->
   <autoadd thing="journal" portal="journal"/>
-
 
   </document>

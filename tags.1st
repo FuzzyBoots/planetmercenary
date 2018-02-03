@@ -236,9 +236,19 @@
     <value id="rngLongGun" name="Long Gun" order="20"/>
     <value id="rngHvyWeap" name="Heavy Weapon" order="25"/>
     <value id="rngStaWeap" name="Stationary Weapon" order="30"/>
-    <value id="MelCommon" name="Common Melee" order="35"/>
-    <value id="MelExotic" name="Exotic Melee" order="40"/>
-    <value id="MelUnarmed" name="Unarmed / Natural" order="45"/>
+    <value id="rngThrown" name="Thrown Weapon" order="35"/>
+    <value id="MelCommon" name="Common Melee" order="40"/>
+    <value id="MelExotic" name="Exotic Melee" order="45"/>
+    <value id="MelUnarmed" name="Unarmed / Natural" order="50"/>
+    </group>
+    
+  <group
+    id="ArmorType"
+    sequence="explicit">
+    <value id="armLight" name="Light Armor" order="5"/>
+    <value id="armMedium" name="Medium Armor" order="10"/>
+    <value id="armHeavy" name="Heavy Armor" order="15"/>
+    <value id="armTeam" name="Team Protection" order="20"/>
     </group>
     
   <!-- License group - helper tags for gear license values -->
@@ -258,6 +268,7 @@
     id="Armor"
     dynamic="yes">
     <value id="ActCamo" name="Active Camouﬂage"/>
+    
     </group>
 
   <group

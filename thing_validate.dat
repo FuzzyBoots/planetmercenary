@@ -113,13 +113,14 @@
     <tag group="Helper" tag="Bootstrap"/>
 
     <!-- Make sure that we don't have multiple sets of armor equipped -->
-    <evalrule index="1" phase="Validate" priority="8000" message="Multiple suits of armor equipped"><![CDATA[
+    <!-- There's got to be a better way... -->
+    <!--evalrule index="1" phase="Validate" priority="8000" message="Multiple suits of armor equipped"><![CDATA[
       ~if we have no more than one set of armor equipped, we're good
       validif (hero.tagcount[Armor.?] <= 1)
 
       ~mark associated tabs as invalid
       container.panelvalid[armory] = 0
-      ]]></evalrule>
+      ]]></evalrule-->
 
     </thing>
 

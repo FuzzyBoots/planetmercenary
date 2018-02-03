@@ -104,11 +104,12 @@
 
   <!-- simple text for output -->
   <style
-    id="outNormal">
+    id="outNormal"
+    border="solid">
     <style_output
       textcolor="000000"
       font="ofntnormal"
-      alignment="center">
+      alignment="left">
       </style_output>
     </style>
 
@@ -125,12 +126,12 @@
 
   <!-- hero name text for output -->
   <style
-    id="outHeroNam">
+    id="outSection">
     <style_output
       textcolor="000000"
       backcolor="dddddd"
       font="ofntlarge"
-      alignment="center">
+      alignment="left">
       </style_output>
     </style>
 

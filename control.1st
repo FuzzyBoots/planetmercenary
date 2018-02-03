@@ -166,6 +166,14 @@
     <sortkey isfield="no" id="_Name_"/>
     </sortset> 
 
+  <!-- Define a sortset for sorting armor first by type, then by name -->
+  <sortset
+    id="Armor"
+    name="Armor By Type and Name">
+    <sortkey isfield="no" id="ArmorType"/>
+    <sortkey isfield="no" id="_Name_"/>
+    </sortset> 
+
   <!-- Define a sortset that lists our equipped pieces of gear first. -->
   <sortset
     id="Equipped"
