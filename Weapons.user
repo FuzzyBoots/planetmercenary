@@ -592,7 +592,8 @@
   <thing id="amArmCrack" name="Armor Crackers" description="Anyone who has ever fired a handgun at an approaching column of armored cavalry knows the futility of hurling inert ballistics at hullmetal. Even micro-grenades with their white-hot atomic annihilation payloads are largely useless against properly armored vehicles. Enter armor crackers, which compress a micro-grenade laced with Boomex into one tiny apocalyptic package. As the round impacts a target, its nano-bottles break, ripping the target’s armor apart at an atomic level." compset="Ammunition">
     <fieldval field="grLotCost" value="12"/>
     </thing>
-  <thing id="amBoomex" name="Boomex" description="Boomex is the duct tape of explosives. It is\nthe pivotal piece of any IED and of many carefully planned and executed explosive eﬀects.\nWith Boomex, you can create anything from\na massive freball for distraction purposes to\na carefully-aimed shaped charge that allows\nyou discreet entrance into a place out of which\nsomeone else was trying to keep you. No mercenary company should be without a supply of\nBoomex" compset="Ammunition" lotsize="5">
+  <thing id="amBoomex" name="Boomex" description="Boomex is the duct tape of explosives. It is the pivotal piece of any IED and of many carefully planned and executed explosive effects. With Boomex, you can create anything from a massive fireball for distraction purposes to a carefully-aimed shaped charge that allows you discreet entrance into a place out of which someone else was trying to keep you. No mercenary company should be without a supply of Boomex" compset="Ammunition" lotsize="5">
     <fieldval field="grLotCost" value="3"/>
     </thing>
+  
   </document>

@@ -233,7 +233,27 @@
       </inputthing>
     
     </editthing>
-
+    
+  <!-- Fireteam role editthing -->
+  <editthing
+    compset="FTRole"
+    name="Fireteam Role"
+    prefix="ftr"
+    description="Fireteam roles decide what skills a Fireteam member can choose from."
+    summary="Defines a role for a Fireteam member">
+    
+    <inputthing
+      name="First Skill Choice"
+      helptext="Specify which skills this role can pick for their first choice.">
+      <it_taglist group="FTSkChc1" tag="?"/>
+      </inputthing>
+  
+    <inputthing
+      name="Second Skill Choice"
+      helptext="Specify which skills this role can pick for their second choice.">
+      <it_taglist group="FTSkChc2" tag="?"/>
+      </inputthing>
+    </editthing>
 
   <!-- Background editthing -->
   <editthing

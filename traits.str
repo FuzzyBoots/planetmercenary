@@ -148,13 +148,16 @@
   <component
     id="FTSkill"
     name="Fireteam skill"
-    autocompset="yes">    
+    autocompset="yes">
+    <identity group="FTSkill"/>
+    <identity group="FTSkChc1"/>
+    <identity group="FTSkChc2"/>
     </component>
-  
+    
   <component
     id="FTRole"
     name="Fireteam role"
-    autocompset="yes">    
+    autocompset="yes">
     </component>
   
   <component 
@@ -171,6 +174,18 @@
       maxlength="200">
 
       </field>
+    
+    <field
+      id="availSk1"
+      name="Skill Choice 1"
+      type="derived"
+      maxlength="100"/>
+    
+    <field
+      id="availSk2"
+      name="Skill Choice 2"
+      type="derived"
+      maxlength="100"/>
     
     <field
       id="ftPhysical"
@@ -226,6 +241,13 @@
     <field
       id="skillCh2"
       name="Chosen Thing / Pick"
+      type="user"
+      style="menu">
+      </field>
+      
+    <field
+      id="FTRole"
+      name="Role"
       type="user"
       style="menu">
       </field>
@@ -311,12 +333,8 @@
       field[trtMaximum].value = 9
       ]]></eval>      
     
-    <!-- Track the skill on the actor -->
-    <eval index="2" phase="Setup" priority="5000"><![CDATA[
-      ~ perform forward[Skill.?]
-      ]]></eval>
-    
-    <!-- Each skill point that is allocated by the user costs 1 CP -->
+    <!-- Each skill point that is allocated by the user costs 1 CP 
+         Except Amorphs, who pay double for Social and Mental skills-->
     <eval index="3" phase="Traits" priority="10000">
       <before name="Calc resLeft"/>
       <after name="Bound trtUser"/><![CDATA[
@@ -324,11 +342,11 @@
       doneif (origin.ishero = 0)
 
       ~adjust the resource appropriately
-    if (this.tagexpr[hero#Race.racAmorph & (Skills.Social | Skills.Mental)] <> 0) then
-    hero.child[resCP].field[resSpent].value += field[trtUser].value * 2
-    else  
+      if (this.tagexpr[hero#Race.racAmorph & (Skills.Social | Skills.Mental)] <> 0) then
+        hero.child[resCP].field[resSpent].value += field[trtUser].value * 2
+      else  
         hero.child[resCP].field[resSpent].value += field[trtUser].value
-      endif
+        endif
     ]]></eval>
     
     <!-- set the appropriate candidate expression -->
@@ -680,7 +698,6 @@
   <compset
     id="FTMember">
     <compref component="FTMember"/>
-    <compref component="UserSelect"/>
     </compset>
 
   
