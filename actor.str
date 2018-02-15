@@ -158,14 +158,6 @@
       type="user">
       </field>
 
-    <!-- Starting cash for the character -->
-    <field
-      id="acCashCfg"
-      name="Starting Cash"
-      type="user"
-      defvalue="100">
-      </field>
-
     <!-- Net cash for the character -->
     <field
       id="acCashNet"
@@ -235,7 +227,7 @@
     <!-- calculate the net cash possessed for the character -->
     <eval index="3" phase="Effects" priority="5000"><![CDATA[
       ~our net cash is our configured starting cash plus our accrued cash
-      field[acCashNet].value = field[acCashCfg].value + hero.usagepool[TotalCash].value
+      field[acCashNet].value = hero.usagepool[TotalCash].value
       ]]></eval>
 
     <!-- activate our selected character type -->

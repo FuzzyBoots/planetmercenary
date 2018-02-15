@@ -505,6 +505,7 @@
         Purchase an item for cash from the character's resources.
   -->
   <procedure id="XactBuy" scripttype="xactbuy"><![CDATA[
+    debug "Entering XactBuy"
     ~if we're buying for free, no cash should be touched, so get out
     doneif (hero.transact.field[xactIsFree].value <> 0)
 
@@ -517,14 +518,9 @@
       cash = hero.transact.field[xactQty].value * hero.transact.field[xactEach].value
       endif
 
-    ~if we don't have enough cash to make the purchase, reject the transaction
-    if (cash > herofield[acCashNet].value) then
-      @reject = "You lack sufficient cash to purchase the item."
-      done
-      endif
-
-    ~subtract the amount from the current pool of cash
-    perform hero.usagepool[TotalCash].adjust[-cash]
+    debug "Buying: " & cash
+    ~add the amount from the current pool of cash
+    perform hero.usagepool[TotalCash].adjust[cash]
     ]]></procedure>
 
 
@@ -532,12 +528,14 @@
         Sell an item for cash that gets added to the character's resources.
   -->
   <procedure id="XactSell" scripttype="xactsell"><![CDATA[
+    debug "Entering XactSell"
     ~get the cash amount specified by the user
     var cash as number
     cash = hero.transact.field[xactCash].value
 
-    ~add the amount to the current pool of cash
-    perform hero.usagepool[TotalCash].adjust[cash]
+    debug "Selling: " & cash
+    ~subtract the amount to the current pool of cash
+    perform hero.usagepool[TotalCash].adjust[-cash]
     ]]></procedure>
 
 

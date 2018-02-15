@@ -99,7 +99,7 @@
           var money as string
           moneyvalue = herofield[acCashNet].value
           call Money
-          @text = "Cash: " & money
+          @text = "Gear Expense: " & money
           ]]></labeltext>
         </label>
       </portal>

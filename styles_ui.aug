@@ -908,6 +908,20 @@
       </style_incrementer>
     </style>
 
+  <style
+    id="incrWider">
+    <style_incrementer
+      textcolorid="clrnormal"
+      font="fntincrsim"
+      textleft="13" texttop="0" textwidth="36" textheight="20"
+      fullwidth="70" fullheight="20"
+      plusup="incplusup" plusdown="incplusdn" plusoff="incplusof"
+      plusx="51" plusy="0"
+      minusup="incminusup" minusdown="incminusdn" minusoff="incminusof"
+      minusx="0" minusy="0">
+      </style_incrementer>
+    </style>
+
   <!-- style used on 'narrow incrementers'
         -identical to the "simple" incrementer, except a bit narrower in width
   -->

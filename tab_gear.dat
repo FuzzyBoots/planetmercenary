@@ -31,7 +31,7 @@
     style="tblNormal">
     <table_dynamic
       component="Ammunition"
-      showtemplate="grGrPick"
+      showtemplate="grAmmoPick"
       choosetemplate="grGrThing"
       buytemplate="BuyCash"
       selltemplate="SellCash">
@@ -196,7 +196,7 @@
         call InfoHeld
         ]]></mouseinfo>
       </portal>
-
+      
     <portal
       id="gearmanage"
       style="actGear"
@@ -268,6 +268,191 @@
       ~position the name on the left and let it use all available space
       var limit as number
       limit = portal[gearmanage].left - 8 - reserve
+      portal[name].left = 0
+      portal[name].width = minimum(portal[name].width,limit)
+
+      ~if this is a "custom" gear pick, show an edit portal instead of the name
+      var nextleft as number
+      if (tagis[Helper.CustomItem] <> 0) then
+        portal[name].visible = 0
+        portal[username].left = portal[name].left
+        portal[username].width = minimum(200,limit)
+        nextleft = portal[username].right
+      else
+        portal[username].visible = 0
+        nextleft = portal[name].right
+        endif
+      nextleft += 5
+
+      ~show the 'container' icon to the right of the name (if visible)
+      if (portal[container].visible <> 0) then
+        portal[container].left = nextleft
+        nextleft = portal[container].right + 2
+        endif
+
+      ~show the 'held by' icon to the right of the container icon (if visible)
+      if (portal[heldby].visible <> 0) then
+        portal[heldby].left = nextleft
+        endif
+
+      ~if the gear can't be deleted (i.e. it's been auto-added instead of user-added,
+      ~set the style to indicate that behavior to the user
+      if (candelete = 0) then
+        perform portal[name].setstyle[lblAuto]
+        endif
+      ]]></position>
+
+    </template>
+
+
+  <!-- grGrPick template
+        Derived from the SimpleItem template, this includes the gear button to move
+        equipment between various containers.
+  -->
+  <template
+    id="grAmmoPick"
+    name="Ammo Pick"
+    compset="Ammunition"
+    marginhorz="3"
+    marginvert="3">
+
+    <portal
+      id="name"
+      style="lblLeft"
+      showinvalid="yes">
+      <label
+        field="grStkName">
+        </label>
+      </portal>
+
+    <portal
+      id="username"
+      style="editNormal">
+      <edit
+        field="UserName"
+        maxlength="100">
+        </edit>
+      </portal>
+
+    <portal
+      id="container"
+      style="imgNormal">
+      <image_literal
+        image="container.bmp"
+        isbuiltin="yes"
+        istransparent="yes">
+        </image_literal>
+      <mouseinfo><![CDATA[
+        call InfoHolder
+        ]]></mouseinfo>
+      </portal>
+
+    <portal
+      id="heldby"
+      style="imgNormal">
+      <image_literal
+        image="gearinfo.bmp"
+        isbuiltin="yes"
+        istransparent="yes">
+        </image_literal>
+      <mouseinfo><![CDATA[
+        call InfoHeld
+        ]]></mouseinfo>
+      </portal>
+      
+    <portal
+      id="count"
+      style="incrWider">
+      <incrementer
+        field="trkUser">
+        </incrementer>
+      <!--mouseinfo mousepos="middle+above"><![CDATA[
+        if (hero.tagis[mode.creation] = 0) then
+          @text = "Skills must be modified via the Advances tab once the character is locked for play."
+        elseif (autonomous = 0) then
+          @text = "This trait has been improved via the Advances tab and cannot be modified further from here."
+        else
+          @text = "Allocate points to this skill by clicking on the arrows to increase/decrease the number of points assigned."
+          endif
+        ]]></mouseinfo-->
+    </portal>
+
+    <portal
+      id="gearmanage"
+      style="actGear"
+      tiptext="Click here to choose which container to place this equipment within.">
+      <action
+        action="gear">
+        </action>
+      </portal>
+
+    <portal
+      id="info"
+      style="actInfo">
+      <action
+        action="info">
+        </action>
+      <mouseinfo/>
+      </portal>
+
+    <portal
+      id="delete"
+      style="actDelete"
+      tiptext="Click to delete this equipment">
+      <action
+        action="delete">
+        </action>
+      </portal>
+
+    <position><![CDATA[
+      ~set up our height based on our tallest portal
+      height = portal[info].height 
+
+      ~if this is a "sizing" calculation, we're done
+      doneif (issizing <> 0)
+
+      ~determine whether the container and heldby indicators should be visible
+      portal[container].visible = tagis[thing.holder?]
+      portal[heldby].visible = isgearheld
+      portal[count].visible = 1
+
+      ~center the portals vertically
+      perform portal[info].centervert
+      perform portal[name].centervert
+      perform portal[username].centervert
+      perform portal[gearmanage].centervert
+      perform portal[delete].centervert
+      perform portal[count].centervert
+      perform portal[container].centervert
+      perform portal[heldby].centervert
+
+      ~position the delete portal on the far right
+      perform portal[delete].alignedge[right,0]
+
+      ~position the info portal to the left of the delete button
+      perform portal[info].alignrel[rtol,delete,-8]
+
+      ~position the gear portal to the left of the info button
+      perform portal[gearmanage].alignrel[rtol,info,-8]
+
+      ~position the count to the left of the gear portal
+      perform portal[count].alignrel[rtol,gearmanage, -6]
+      
+      ~calculate the space to reserve for the various indicators
+      var reserve as number
+      if (portal[heldby].visible <> 0) then
+        reserve += portal[heldby].width + 2
+        endif
+      if (portal[container].visible <> 0) then
+        reserve += portal[container].width + 2
+        endif
+      if (portal[heldby].visible + portal[container].visible <> 0) then
+        reserve += 3
+        endif
+
+      ~position the name on the left and let it use all available space
+      var limit as number
+      limit = portal[count].left - 8 - reserve
       portal[name].left = 0
       portal[name].width = minimum(portal[name].width,limit)
 

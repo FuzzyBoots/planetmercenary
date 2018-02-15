@@ -234,7 +234,7 @@
         var money as string
         moneyvalue = herofield[acCashNet].value
         call Money
-        @text = "Gear  (Cash: " & money & ")"
+        @text = "Gear  (Expense: " & money & ")"
         ]]></headertitle>
       </output_table>
     </portal>
