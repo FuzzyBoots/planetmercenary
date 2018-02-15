@@ -331,16 +331,30 @@
     prefix="am"
     description="Weapons, armor, and vehicles all have their own tabs for creating objects of those types."
     summary="Defines a type of weapon ammunition that can be selected on the Gear tab.">
+    
     <inputthing
       name="Cost"
       helptext="Specify the standard cost of the item, with a value of 0 meaning it is free.">
       <it_field field="grCost"/>
       </inputthing>
+      
     <inputthing
       name="Lot Cost"
       helptext="Specify the cost of a full 'lot' of the item, where the lot size is given on the right. The 'lot cost' overrides any individual cost given above.">
       <it_field field="grLotCost"/>
       </inputthing>
+      
+    <inputthing
+      name="Use Mechanism"
+      helptext="Specify the use mechanism of the ammunition.">
+      <it_field field="ammUseMech"/>
+      </inputthing>
+      
+    <inputthing
+      name="Notes"
+      helptext="Specify notes on the ammunition.">
+      <it_field field="ammNotes"/>
+      </inputthing>      
     </editthing>
 
 

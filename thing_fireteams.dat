@@ -30,31 +30,15 @@
     
     <eval index="2" phase="PreTraits" priority="4900">
       <before name="Calc trtFinal"/><![CDATA[
-      if (field[skillCh1].chosen.tagis[FTSkill.ftPhysical] = 1) then
-        field[ftPhysical].value = field[ftPhysical].value + 1
-      elseif (field[skillCh1].chosen.tagis[FTSkill.ftCombat] = 1) then
-        field[ftCombat].value = field[ftCombat].value + 1
-      elseif (field[skillCh1].chosen.tagis[FTSkill.ftSocial] = 1) then
-        field[ftSocial].value = field[ftSocial].value + 1
-      elseif (field[skillCh1].chosen.tagis[FTSkill.ftMental] = 1) then
-        field[ftMental].value = field[ftMental].value + 1
-      elseif (field[skillCh1].chosen.tagis[FTSkill.ftDamage] = 1) then
-        field[ftDamage].value = field[ftDamage].value + 1
-        endif
+      field[ftPhysical].value = field[skillCh1].chosen.tagcount[FTSkill.ftPhysical] + field[skillCh2].chosen.tagcount[FTSkill.ftPhysical]
       
-      
-      
-      if (field[skillCh2].chosen.tagis[FTSkill.ftPhysical] = 1) then
-        field[ftPhysical].value = field[ftPhysical].value + 1
-      elseif (field[skillCh2].chosen.tagis[FTSkill.ftCombat] = 1) then
-        field[ftCombat].value = field[ftCombat].value + 1
-      elseif (field[skillCh2].chosen.tagis[FTSkill.ftSocial] = 1) then
-        field[ftSocial].value = field[ftSocial].value + 1
-      elseif (field[skillCh2].chosen.tagis[FTSkill.ftMental] = 1) then
-        field[ftMental].value = field[ftMental].value + 1
-      elseif (field[skillCh2].chosen.tagis[FTSkill.ftDamage] = 1) then
-        field[ftDamage].value = field[ftDamage].value + 1
-        endif
+      field[ftSocial].value = field[skillCh1].chosen.tagcount[FTSkill.ftSocial] + field[skillCh2].chosen.tagcount[FTSkill.ftSocial]
+        
+      field[ftMental].value = field[skillCh1].chosen.tagcount[FTSkill.ftMental] + field[skillCh2].chosen.tagcount[FTSkill.ftMental]
+        
+      field[ftCombat].value = field[skillCh1].chosen.tagcount[FTSkill.ftCombat] + field[skillCh2].chosen.tagcount[FTSkill.ftCombat]
+        
+      field[ftDamage].value = field[skillCh1].chosen.tagcount[FTSkill.ftDamage] + field[skillCh2].chosen.tagcount[FTSkill.ftDamage]
       
       ]]>
       </eval>

@@ -629,6 +629,22 @@
     id="Ammunition"
     name="Ammunition"
     autocompset="no">
+    
+    <!-- Use Mechanism -->
+    <field
+      id="ammUseMech"
+      name="Use Mechanism"
+      type="derived"
+      maxlength="100">
+      </field>
+      
+    <!-- Notes -->
+    <field
+      id="ammNotes"
+      name="Notes"
+      type="derived"
+      maxlength="500">
+      </field>
 
     <!-- Initialize the user value to the new quantity -->
     <creation><![CDATA[
@@ -762,7 +778,6 @@
   <compset
     id="Ammunition"
     stackable="yes">
-    <compref component="Equipment"/>
     <compref component="Gear"/>
     <compref component="Custom"/>
     <compref component="Ammunition"/>

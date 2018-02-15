@@ -302,6 +302,52 @@
     <tag group="GearType" tag="Misc"/>
     </thing>
 
+  <!-- Placeholders -->
+  <thing
+    id="Automation"
+    name="– Assorted Automation –"
+    compset="Equipment"
+    isshowonly="yes"
+    description="">
+    <tag group="GearType" tag="Automation"/>
+    </thing>
+    
+   <thing
+    id="CompAndCom"
+    name="– Assorted Automation –"
+    compset="Equipment"
+    isshowonly="yes"
+    description="">
+    <tag group="GearType" tag="CompAndCom"/>
+    </thing>
+    
+   <thing
+    id="CuffStuff"
+    name="– Computation and Communication –"
+    compset="Equipment"
+    isshowonly="yes"
+    description="">
+    <tag group="GearType" tag="CuffStuff"/>
+    </thing>
+    
+   <thing
+    id="MedTech"
+    name="– Med Tech –"
+    compset="Equipment"
+    isshowonly="yes"
+    description="">
+    <tag group="GearType" tag="MedTech"/>
+    </thing>
+    
+   <thing
+    id="Misc"
+    name="– Miscellaneous Materiel –"
+    compset="Equipment"
+    isshowonly="yes"
+    description="">
+    <tag group="GearType" tag="Misc"/>
+    </thing>
+    
   <!-- Customizable Top-Holder gear -->
   <thing
     id="eqCustTop"
