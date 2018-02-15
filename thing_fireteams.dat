@@ -5,53 +5,123 @@
 
 <document signature="Hero Lab Data">
   <!-- Fireteam Thing -->
-<thing
-  id="Fireteam"
-  name="Fireteam member"
-  compset="FTMember"
-  isunique="no"
-  description="This is a fireteam entry.">
-  
-  <fieldval field="usrCandid1" value=" "/>
-  <fieldval field="usrCandid2" value=" "/>
-  
-  <eval index="1" phase="PreTraits" priority="4900">
-    <before name="Calc trtFinal"/><![CDATA[
-    debug field[usrChosen1].chosen.field[name].text & ", " & field[usrChosen2].chosen.field[name].text
+  <thing
+    id="Fireteam"
+    name="Fireteam member"
+    compset="FTMember"
+    isunique="no"
+    description="This is a fireteam entry.">
     
-    if (field[usrChosen1].chosen.field[name].text = 0) then
-      debug "It's physical"
-      endif
+    <eval index="1" phase="PreTraits" priority="4500">
+      <before name="Calc trtFinal"/><![CDATA[
+        var skChoices1 as string
+        var skChoices2 as string
+
+        skChoices1 = field[FTRole].chosen.tagids[FTSkChc1.?, " | "]
+        skChoices2 = field[FTRole].chosen.tagids[FTSkChc2.?, " | "]
+        
+        debug "Skill Choices: " & skChoices1 & " / " & skChoices2
+        
+        field[availSk1].text = skChoices1
+        field[availSk2].text = skChoices2
+      
+      ]]>
+      </eval>
     
-    ]]>
-    </eval>
-  
-  <child entity="ftDetails"/>
-  </thing>
+    <eval index="2" phase="PreTraits" priority="4900">
+      <before name="Calc trtFinal"/><![CDATA[
+      field[ftPhysical].value = field[skillCh1].chosen.tagcount[FTSkill.ftPhysical] + field[skillCh2].chosen.tagcount[FTSkill.ftPhysical]
+      
+      field[ftSocial].value = field[skillCh1].chosen.tagcount[FTSkill.ftSocial] + field[skillCh2].chosen.tagcount[FTSkill.ftSocial]
+        
+      field[ftMental].value = field[skillCh1].chosen.tagcount[FTSkill.ftMental] + field[skillCh2].chosen.tagcount[FTSkill.ftMental]
+        
+      field[ftCombat].value = field[skillCh1].chosen.tagcount[FTSkill.ftCombat] + field[skillCh2].chosen.tagcount[FTSkill.ftCombat]
+        
+      field[ftDamage].value = field[skillCh1].chosen.tagcount[FTSkill.ftDamage] + field[skillCh2].chosen.tagcount[FTSkill.ftDamage]
+      
+      ]]>
+      </eval>
+    
+    <child entity="ftDetails"/>
+    </thing>
 
-<thing
-  id="ftPhysical"
-  name="Physical"
-  compset="FTSkill"/>
-  
-<thing
-  id="ftMental"
-  name="Mental"
-  compset="FTSkill"/>
+  <thing
+    id="ftPhysical"
+    name="Physical"
+    compset="FTSkill"/>
+    
+  <thing
+    id="ftMental"
+    name="Mental"
+    compset="FTSkill"/>
 
-<thing
-  id="ftSocial"
-  name="Social"
-  compset="FTSkill"/>
+  <thing
+    id="ftSocial"
+    name="Social"
+    compset="FTSkill"/>
 
-<thing
-  id="ftCombat"
-  name="Combat"
-  compset="FTSkill"/>
+  <thing
+    id="ftCombat"
+    name="Combat"
+    compset="FTSkill"/>
 
-<thing
-  id="ftDamage"
-  name="Damage"
-  compset="FTSkill"/>
-  
+  <thing
+    id="ftDamage"
+    name="Damage"
+    compset="FTSkill"/>
+    
+  <thing
+    id="ftrHeavWep"
+    name="Heavy Weapons"
+    compset="FTRole">
+    <tag group="FTSkChc1" tag="ftCombat"/>
+    <tag group="FTSkChc2" tag="ftDamage"/>
+    </thing>
+    
+  <thing
+    id="ftrDiplo"
+    name="Diplomat"
+    compset="FTRole">
+    <tag group="FTSkChc1" tag="ftSocial"/>
+    <tag group="FTSkChc2" tag="ftPhysical"/>
+    <tag group="FTSkChc2" tag="ftMental"/>
+    <tag group="FTSkChc2" tag="ftSocial"/>
+    <tag group="FTSkChc2" tag="ftCombat"/>
+    </thing>
+    
+  <thing
+    id="ftrInfntry"
+    name="Infantry"
+    compset="FTRole">
+    <tag group="FTSkChc1" tag="ftCombat"/>
+    <tag group="FTSkChc2" tag="ftPhysical"/>
+    </thing>
+    
+  <thing
+    id="ftrOfficer"
+    name="Officer in Training"
+    compset="FTRole">
+    <tag group="FTSkChc1" tag="ftPhysical"/>
+    <tag group="FTSkChc1" tag="ftMental"/>
+    <tag group="FTSkChc1" tag="ftSocial"/>
+    <tag group="FTSkChc1" tag="ftCombat"/>
+    <tag group="FTSkChc1" tag="ftDamage"/>
+    <tag group="FTSkChc2" tag="ftPhysical"/>
+    <tag group="FTSkChc2" tag="ftMental"/>
+    <tag group="FTSkChc2" tag="ftSocial"/>
+    <tag group="FTSkChc2" tag="ftCombat"/>
+    <tag group="FTSkChc2" tag="ftDamage"/>
+    </thing>
+    
+  <thing 
+    id="ftrSpecial" 
+    name="Specialist" 
+    compset="FTRole">
+    <tag group="FTSkChc1" tag="ftMental"/>
+    <tag group="FTSkChc2" tag="ftCombat"/>
+    <tag group="FTSkChc2" tag="ftMental"/>
+    <tag group="FTSkChc2" tag="ftPhysical"/>
+    <tag group="FTSkChc2" tag="ftSocial"/>
+    </thing>
 </document>

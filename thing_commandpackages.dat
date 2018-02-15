@@ -76,7 +76,7 @@
     description="An Engineer is like a walking toolbox of two-twists-and-hit-it-with-a-hammer solutions to problems the company may encounter. (If the Engineer is a machine-intelligence with the right attachments, then remove the word “like” from the previous sentence.) Typically, the Engineer is tasked with fixing (or building!) things in the “materiel” category, though they may also be adept at hacking the various nonsentient “thinking” machines commonly called “computers.”\n\nMercenary Engineers don’t just sit in the quartermastery playing rear-echelon wrenchmonkey, though. They need to be right there next to the boots on deck, because the odds are pretty good that the deck will eventually give way, or that the those boots will suddenly not have their rockets attached correctly anymore. \n\n{b}Bonus Skill Ranks:{/b} +2 Chemistry, +2 Engineering, +2 Experimental Sciences {i}or{/i} Mechanic, +2 to any 1 Combat skill">
     
     <tag group="SkillBonus" tag="skChem"/>
-    <tag group="SkillBonus" tag="skEngineer"/>
+    <tag group="SkillBonus" tag="skEng"/>
     
     <bootstrap thing="fRPlusSk">
       <autotag group="Skill" tag="skExpSci"/>
