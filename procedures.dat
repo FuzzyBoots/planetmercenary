@@ -216,11 +216,9 @@
     ~if this is a piece of gear, append proper info to the item-specific details
     if (tagis[component.Gear] <> 0) then
 
-      ~if this is a thing, append the cost
-      if (ispick = 0) then
-        iteminfo &= "Cost: " & field[grCost].text & "{br}"
-        endif
-
+      ~Append the cost
+      iteminfo &= "Cost: " & field[grCost].text & "{br}"
+      
       ~append the gear type
       if (tagis[GearType.?] <> 0) then
         iteminfo &= "Gear Type: " & tagnames[GearType.?] & "{br}"

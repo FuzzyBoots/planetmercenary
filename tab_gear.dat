@@ -30,7 +30,7 @@
     id="grAmmo"
     style="tblNormal">
     <table_dynamic
-      component="Ammunition"
+      component="Gear"
       showtemplate="grAmmoPick"
       choosetemplate="grGrThing"
       buytemplate="BuyCash"
@@ -65,28 +65,28 @@
         weapons). The "candidate" tag expression is omitted, resulting in the same
         contents as the "list" tag expression.
   -->
-  <portal
-    id="grGear"
-    style="tblNormal">
-    <table_dynamic
-      component="Equipment"
-      showtemplate="grGrPick"
-      choosesortset="Gear"
-      choosetemplate="grGrThing"
-      buytemplate="BuyCash"
-      selltemplate="SellCash">
-      <list>component.Equipment</list>
-      <titlebar><![CDATA[
-        @text = "Select Gear to Purchase from the List Below"
-        ]]></titlebar>
-      <headertitle><![CDATA[
-        @text = "Miscellaneous Gear"
-        ]]></headertitle>
-      <additem><![CDATA[
-        @text = "Add New Gear"
-        ]]></additem>
-      </table_dynamic>
-    </portal>
+<portal
+  id="grGear"
+  style="tblNormal">
+  <table_dynamic
+    component="Gear"
+    showtemplate="grGrPick"
+    choosesortset="Gear"
+    choosetemplate="grGrThing"
+    buytemplate="BuyCash"
+    selltemplate="SellCash">
+    <list>component.Equipment</list>
+    <titlebar><![CDATA[
+      @text = "Select Gear to Purchase from the List Below"
+      ]]></titlebar>
+    <headertitle><![CDATA[
+      @text = "Miscellaneous Gear"
+      ]]></headertitle>
+    <additem><![CDATA[
+      @text = "Add New Gear"
+      ]]></additem>
+    </table_dynamic>
+  </portal>
 
 
   <!-- grGrThing template
