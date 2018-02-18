@@ -211,13 +211,27 @@
       call InfoDef
     elseif (tagis[component.Advance] <> 0) then
       call InfoAdv
+    elseif (tagis[component.Ammunition] <> 0) then
+      call InfoAmmo
+    elseif (tagis[component.Vehicle] <> 0) then
+      ~ call InfoVeh
       endif
+      
+    
 
     ~if this is a piece of gear, append proper info to the item-specific details
     if (tagis[component.Gear] <> 0) then
 
       ~Append the cost
-      iteminfo &= "Cost: " & field[grCost].text & "{br}"
+      if (field[grLotCost].value > 0) then
+        iteminfo &= "Lot Cost: S" & field[grLotCost].value & "{br}"
+      else
+        iteminfo &= "Cost: " & field[grCost].text & "{br}"
+        endif
+      
+      if (field[lotsize].value <> 0) then
+        iteminfo &= "Lot Size: " & field[lotsize].value & "{br}"
+        endif
       
       ~append the gear type
       if (tagis[GearType.?] <> 0) then
@@ -439,6 +453,26 @@
     ]]></procedure>
 
 
+  <!-- Procedure InfoAmmo
+        Generate details specific to ammunition.
+        The text is placed into the "iteminfo" variable for subsequent use by our
+        caller.
+
+        Outbound parameter: iteminfo
+  -->
+  <procedure id="InfoAmmo" context="info"><![CDATA[
+    ~declare variables that are used to communicate with our caller
+    var iteminfo as string
+
+    ~add the Use Mechanism
+    iteminfo &= "Use Mechanism: " & field[ammUseMech].text & "{br}"
+
+    ~report the Notes
+    iteminfo &= "Notes: " & field[ammNotes].text & "{br}"
+
+    ]]></procedure>
+
+
   <!-- Procedure InfoHeld
         Retrieve a summary of what container this gear is currently held within.
         Used for mouse-info scripts with equipment, with the generated text being
@@ -503,7 +537,6 @@
         Purchase an item for cash from the character's resources.
   -->
   <procedure id="XactBuy" scripttype="xactbuy"><![CDATA[
-    debug "Entering XactBuy"
     ~if we're buying for free, no cash should be touched, so get out
     doneif (hero.transact.field[xactIsFree].value <> 0)
 
@@ -516,7 +549,6 @@
       cash = hero.transact.field[xactQty].value * hero.transact.field[xactEach].value
       endif
 
-    debug "Buying: " & cash
     ~add the amount from the current pool of cash
     perform hero.usagepool[TotalCash].adjust[cash]
     ]]></procedure>
@@ -526,12 +558,10 @@
         Sell an item for cash that gets added to the character's resources.
   -->
   <procedure id="XactSell" scripttype="xactsell"><![CDATA[
-    debug "Entering XactSell"
     ~get the cash amount specified by the user
     var cash as number
     cash = hero.transact.field[xactCash].value
 
-    debug "Selling: " & cash
     ~subtract the amount to the current pool of cash
     perform hero.usagepool[TotalCash].adjust[-cash]
     ]]></procedure>

@@ -20,7 +20,7 @@
         skChoices1 = field[FTRole].chosen.tagids[FTSkChc1.?, " | "]
         skChoices2 = field[FTRole].chosen.tagids[FTSkChc2.?, " | "]
         
-        debug "Skill Choices: " & skChoices1 & " / " & skChoices2
+        ~ debug "Skill Choices: " & skChoices1 & " / " & skChoices2
         
         field[availSk1].text = skChoices1
         field[availSk2].text = skChoices2

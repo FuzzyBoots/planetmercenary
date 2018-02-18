@@ -155,18 +155,19 @@
       id="name"
       style="lblNormal">
       <label
-        field="name">
+        field="name"
+        ismultiline="yes">
         </label>
       </portal>
 
-    <!--portal
+    <portal
       id="damage"
       style="lblSmall">
       <label
-        field="wpDamage"
+        field="wpDmg"
         ismultiline="yes">
         </label>
-      </portal-->
+      </portal>
 
     <portal
       id="cost"
@@ -181,18 +182,17 @@
     <position><![CDATA[
       ~set up our dimensions, with a width that we dictate; our width can vary
       ~between weapon types, since ranged weapons require extra space for the range
-      height = portal[name].height
-      ~if (tagis[component.WeapRange] <> 0) then
+      height = portal[name].height * 2
       width = 350
-      ~else
-      ~  width = 250
-      ~  endif
-
+      
       ~if this is a "sizing" calculation, we're done
       doneif (issizing <> 0)
 
       ~position the cost portal on the far right
       perform portal[cost].alignedge[right,0]
+      
+      ~position the damage portal to the left of the cost button
+      perform portal[damage].alignrel[rtol,cost,-8]
       
       if (tagis[thing.showonly] <> 0) then
         portal[cost].visible = 0
@@ -266,9 +266,12 @@
       id="damage"
       style="lblNormal">
       <label
-        field="wpDamage"
+        field="wpDmg"
         ismultiline="yes">
         </label>
+        <mouseinfo><![CDATA[
+        @text = field[wpDamage].text
+        ]]></mouseinfo>
       </portal>
 
     <portal

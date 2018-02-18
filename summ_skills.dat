@@ -45,7 +45,7 @@
         
         var specIds as string
         specIds = hero.tagids[Specialty.?, " | "]
-        debug "Hero Specialty tags: " & specIds
+        ~ debug "Hero Specialty tags: " & specIds
         
         foreach pick in hero from Specialty
           ~debug "Specialty for summary: " & eachthing.field[spcTabName].text

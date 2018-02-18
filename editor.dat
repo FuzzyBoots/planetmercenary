@@ -376,6 +376,11 @@
       <it_field field="wpDamage"/>
       </inputthing>
     <inputthing
+      name="Weapon Damage (Short)"
+      helptext="Specify the abbreviated damage rating of the weapon.">
+      <it_field field="wpDmgShort"/>
+      </inputthing>
+    <inputthing
       name="Cost"
       helptext="Specify the standard cost of the item, with a value of 0 meaning it is free.">
       <it_field field="grCost"/>
@@ -426,6 +431,11 @@
       name="Weapon Damage"
       helptext="Specify the damage rating of the weapon.">
       <it_field field="wpDamage"/>
+      </inputthing>
+    <inputthing
+      name="Weapon Damage (Short)"
+      helptext="Specify the abbreviated damage rating of the weapon.">
+      <it_field field="wpDmgShort"/>
       </inputthing>
     <inputthing
       name="Cost"

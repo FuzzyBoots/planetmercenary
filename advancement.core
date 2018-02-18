@@ -178,7 +178,7 @@
         
       field[livename].text = choices
 
-      debug "Selected: " & choices
+      ~ debug "Selected: " & choices
       
       ~determine the user-selected child associated with this advancement
       ~Note: If the user hasn't selected anything yet, we won't have one, so we need

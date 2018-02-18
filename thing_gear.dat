@@ -81,7 +81,7 @@
     <tag group="LockerCls" tag="CivNo"/>
     <tag group="LockerCls" tag="MilNo"/>
     </thing>
-  <thing id="eqHvrboard" name="Wächter Sunrise “McFly-15” Hoverboard" description="Hovers 10 cm oﬀ the ground and travels at a speed of up to 9 m/s; may only carry one sophont (or sophont equivalent weight)" compset="Equipment">
+  <thing id="eqHvrboard" name="Wächter Sunrise “McFly-15” Hoverboard" description="Hovers 10 cm off the ground and travels at a speed of up to 9 m/s; may only carry one sophont (or sophont equivalent weight)" compset="Equipment">
     <fieldval field="grCost" value="1"/>
     <tag group="GearType" tag="Automation"/>
     <tag group="LockerCls" tag="CivYes"/>
@@ -403,5 +403,81 @@
     <tag group="Print" tag="NoPrint"/>
     </thing>
 
+  <!-- Ammunition -->
+  <thing id="amArmCrack" name="Armor Crackers" description="Anyone who has ever fired a handgun at an approaching column of armored cavalry knows the futility of hurling inert ballistics at hullmetal. Even micro-grenades with their white-hot atomic annihilation payloads are largely useless against properly armored vehicles. Enter armor crackers, which compress a micro-grenade laced with Boomex into one tiny apocalyptic package. As the round impacts a target, its nano-bottles break, ripping the target’s armor apart at an atomic level." compset="Ammunition" stacking="merge">
+    <fieldval field="grLotCost" value="12"/>
+    <fieldval field="ammUseMech" value="Gunfoam"/>
+    <fieldval field="ammNotes" value="Gives the weapon Breacher, APVL, and +3d6 damage added to the existing damage of the weapon."/>
+    </thing>
+  <thing id="amBoomex" name="Boomex" description="Boomex is the duct tape of explosives. It is the pivotal piece of any IED and of many carefully planned and executed explosive effects. With Boomex, you can create anything from a massive fireball for distraction purposes to a carefully-aimed shaped charge that allows you discreet entrance into a place out of which someone else was trying to keep you. No mercenary company should be without a supply of Boomex" compset="Ammunition" lotsize="5" stacking="merge">
+    <fieldval field="grLotCost" value="3"/>
+    <fieldval field="ammNotes" value="A single use is required to build a bomb or shaped charge as noted in the Explosives skill description."/>
+    <fieldval field="ammUseMech" value="Explosives skill"/>
+    </thing>
+  <thing id="amBurners" name="Burners" description="These frangible rounds “splatter” on impact, sending flaming fragments in all directions. These fragments have their own oxidant — far more than they need for their own immolation — ensuring there’s enough air available to spread the fire to anything nearby.\n\nMany quartermasters will not issue burner rounds, and legend has it the 1st Maxim of Maximally Effective Mercenaries, “Pillage, then burn,” was coined as an exhortation against this type of ammunition. Legend is about half-right. The maxim predates modern burner rounds by centuries, but it was coined by humans in response to the finest available conflagratory projectiles of the era: flaming arrows." compset="Ammunition" lotsize="5" stacking="merge">
+    <fieldval field="grLotCost" value="3"/>
+    <fieldval field="ammUseMech" value="Underslung Launcher or Thrown Skill"/>
+    <fieldval field="ammNotes" value="Target takes 1d6 damage each round until it spends one action putting itself out."/>
+    </thing>
+  <thing id="amCheeseCt" name="Cheesecutters" description="Tis particularly offensive de-motivator round contains fermented blocks of curdled lactates. The wax seal enclosing them is broken on impact, releasing a cloud of pungent gas that — while not rendering the enemy dead — often leaves them wishing they were dead instead. Unfortunately, Cheesecutters are only truly effective when fired at short range. Over longer ranges, the wax seal tends to ablate in the air resistance, thus dissipating the effect over a long distance and turning an effective weapon into a simple bad smell. But make sure that you are at least several feet away, or your Cheesecutter shot might affect you as well." compset="Ammunition" lotsize="6" stacking="merge">
+    <fieldval field="ammUseMech" value="Underslung Launcher or Thrown Skill"/>
+    <fieldval field="grLotCost" value="2"/>
+    <fieldval field="ammNotes" value="Grants Short Range; Target makes Endurance check (TN 20) or lose one action"/>
+    </thing>
+  <thing id="amFlshBng" name="Flash-Bang Rounds" description="Designed to overload the sensory apparatus of most sophonts, this common example of stun ammunition delivers a burst of bright light and intense sound. Certain defensive gear can protect a target from this onslaught, but this has given rise to ﬂash-bang emitter grenades, which continue to strobe for several seconds after detonation." compset="Ammunition" lotsize="3" stacking="merge">
+    <fieldval field="grLotCost" value="10"/>
+    <fieldval field="ammUseMech" value="Underslung Launcher or Thrown Skill"/>
+    <fieldval field="ammNotes" value="Endurance skill check (TN 20) or lose their next turn"/>
+    </thing>
+  <thing id="amGrnFrag" name="Grenade, Frag" description="Grenades are a staple of military companies everywhere. This is the classic fragmentation grenade, whose explosion sends shrapnel into those who are unfortunate enough to be within range." compset="Ammunition" lotsize="5" stacking="merge">
+    <fieldval field="grLotCost" value="4"/>
+    <fieldval field="ammUseMech" value="Underslung Launcher or Thrown Skill"/>
+    <fieldval field="ammNotes" value="Damage 4d6+4"/>
+    </thing>
+  <thing id="amGrnPlas" name="Grenade, Plasma" description="The plasma grenade functions much like a frag grenade, except instead of discharging pieces of metal, this grenade sends plasma ﬂying in all directions. The combination of explosion and ﬂying plasma is guaranteed to cause dismay and fire anywhere that one goes off." compset="Ammunition" lotsize="4" stacking="merge">
+    <fieldval field="grLotCost" value="5"/>
+    <fieldval field="ammUseMech" value="Underslung Launcher or Thrown Skill"/>
+    <fieldval field="ammNotes" value="Damage 4d6+9"/>
+    </thing>
+  <thing id="amMicroGrn" name="Micro-Grenades" description="Explosive payloads are common and vary widely in their efficacy, especially as the muzzle diameter decreases. The term “micro” is usually only applied to explosive payloads delivered via rounds up to 7 mm in diameter. Given the inherent limits of chemical energy that can be stored in a single cubic millimeter of material, the most powerful micro-grenades use “doped” charges, where the payload contains a primer of high-explosive Boomex laced with billions of fullerene nano-bottles, each containing a single ionized atom of antimatter.\n\nThis ammunition is expensive, both because it’s difficult to manufacture — even with Milspec annies — and because it’s tightly controlled." compset="Ammunition" lotsize="3" stacking="merge">
+    <fieldval field="grLotCost" value="10"/>
+    <fieldval field="ammUseMech" value="PEA"/>
+    <fieldval field="ammNotes" value="Target suffers 6d6 damage, nearby sophonts suffer one-half this damage (rounded down)"/>
+    </thing>
+  <thing id="amNandPois" name="Nandap Express Poison Kit" description="The Nandap Express Poison Kit is unique in the galaxy in that this specially designed box is loaded with all the necessary chemicals to poison any known lifeform in the galaxy. You simply program the type of life into the built-in SI, and it calculates and crafts a poison-flled syringe dart that comes out the slot on the side. Unfortunately, due to the vast array of chemicals that must be in the box, each box is only able to create a single dart. Nandap is said to be working on refll kits which would allow boxes to be reloaded, but that isn’t possible at this time." compset="Ammunition" stacking="merge">
+    <fieldval field="grLotCost" value="8"/>
+    <fieldval field="ammUseMech" value="Delivery"/>
+    <fieldval field="ammNotes" value="Prep time 1 round, then 2d6 damage that ignores Damage Reduction"/>
+    </thing>
+  <thing id="amNadTranq" name="Nandap Express Tranquilizer Kit" description="The Nandap Express Tranquilizer Kit is the same in form and function as the Nandap Express Poison Kit. In fact, the understated design and tastefully discreet markings on the box have caused difculties for some sophonts who carried both and didn’t inspect carefully before requesting and using darts. If you don’t need your box to be discreet, then we recommend that you mark them in bright colors. This has the added beneft of potentially being intimidating to others who see you have a clearly marked Nandap Tranquilizer Kit, thus implying that you may also have a Poison Kit somewhere nearby.\n\nAs with the Poison Kit, you program the SI with the sophont that you want to drop unconscious. The chemicals necessary to render sophonts unconscious are less complex and less expensive than those which poison. At least, this is the reason that Nandap gives for their Tranquilizer Kit having multiple uses and being so much less expensive than the poison kit. Investigative bodies have occasionally made inquiries to discover if this was true, but as yet, no investigators have returned from their visits to Nandap facillities." compset="Ammunition" lotsize="6" stacking="merge">
+    <fieldval field="ammUseMech" value="Delivery"/>
+    <fieldval field="ammNotes" value="Prep time 1 round, then Endurance check TN 20 or fall asleep"/>
+    <fieldval field="grLotCost" value="4"/>
+    </thing>
+  <thing id="amNandVomD" name="Nandap Express Vom-Darts" description="Another vicious de-motivator, these small syringes deliver a toxin that chemically induces vomiting. The effect is specifc to humans and purps, but it will also work on rillas, neophants, and ursumari or any other terran-based life form. It has no impact at all on anything outside the Terran gene pool." compset="Ammunition" lotsize="3" stacking="merge">
+    <fieldval field="ammNotes" value="Endurance check TN 20 or lose two actions. Only works on terrans"/>
+    <fieldval field="grLotCost" value="3"/>
+    <fieldval field="ammUseMech" value="Delivery"/>
+    </thing>
+  <thing id="amShckBds" name="Shockbeads" description="Another specialty stun round, the shockbead is a tiny capstack that delivers a jolt of electricity through the tip of a ﬂechette. It isn’t much use against an armored target, or a target that’s insulated against grounding, but if the charge can travel through a target’s nervous system on the way to the ground, then welcome to Stun City." compset="Ammunition" lotsize="6" stacking="merge">
+    <fieldval field="grLotCost" value="2"/>
+    <fieldval field="ammUseMech" value="Stun"/>
+    <fieldval field="ammNotes" value="Endurance check TN 20 or fall unconscious. If target has 4+ Damage Reduction then no effect"/>
+    </thing>
+  <thing id="amSmkeBomb" name="Smoke Bombs" description="Used for signaling, screening, and painting targets, smoke rounds come in a wide variety of formulations. Soldiers “popping smoke” to signal their location for friendly evac are typically deploying simple smoke sticks, which don’t qualify as ammunition. Soldiers signaling the location of an enemy usually want to launch the smoke round from a distance.\n\nSome smoke rounds block most of the visual spectrum and can be used to blind the enemy. Friendlies are equipped with optics that let them see in non-blocked frequencies. This option is a favorite of first-strike, deep-insertion forces, and well-equipped pirates." compset="Ammunition" lotsize="6" stacking="merge">
+    <fieldval field="ammUseMech" value="Underslung Launcher or Thrown Skill"/>
+    <fieldval field="ammNotes" value="Anyone near the target must reroll any roll of 6 on attack rolls for three turns"/>
+    <fieldval field="grLotCost" value="2"/>
+    </thing>
+  <thing id="amSmrtFlch" name="Strohl Munitions 7 mm Smart Flechettes" description="Strohl Munitions 7 mm Smart Flechettes are a proprietary ammunition designed specifcally to be fired by the Strohl Munitions 7 mm Rotary Mag-Rail Deluxe. Each ﬂechette has a link to the targeting system in the Mag-Rail. This targeting system tells the ﬂechettes where to go, and each ﬂechette has an onboard steering system that allows it to guide itself toward its target." compset="Ammunition" lotsize="6" stacking="merge">
+    <fieldval field="grLotCost" value="6"/>
+    <fieldval field="ammUseMech" value="Strohl Mag Rail Weapon"/>
+    <fieldval field="ammNotes" value="+4 on attack rolls; Qualities and damage attached to the weapon still apply"/>
+    </thing>
+  <thing id="amSmrtBrch" name="Strohl Munitions Smart Breacher Missiles" description="Strohl Munitions Smart Breacher Missiles are a proprietary ammunition designed specifically to go with the Strohl Munitions L-105 Breacher Cannon. These missiles each contain a tiny annie plant which powers their ﬂight and steering. The annie also provides a short burst of shielding for these missiles, making it more likely that they will survive countermeasures. When these missiles land, they crack through armor and explode with great force. This is the munition of choice for militaries who need to take down vehicles or vessels." compset="Ammunition" stacking="merge">
+    <fieldval field="grLotCost" value="15"/>
+    <fieldval field="ammNotes" value="Grants Autocorrecting, AVPL, Breacher, Damage 8d6"/>
+    <fieldval field="ammUseMech" value="Strohl L-105 Breacher Cannon"/>
+    </thing>
 
   </document>

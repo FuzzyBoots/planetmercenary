@@ -333,6 +333,28 @@
       type="derived"
       maxlength="200">
       </field>
+      
+    <field
+      id="wpDmgShort"
+      name="Damage (short)"
+      type="derived"
+      maxlength="30">
+      </field>
+      
+    <field
+      id="wpDmg"
+      name="Derived damage"
+      type="derived"
+      maxfinal="30">
+      <finalize><![CDATA[
+        ~calculate the height in terms of feet and inches
+        if (field[wpDmgShort].isempty = 0) then
+          @text = field[wpDmgShort].text
+        else
+          @text = field[wpDamage].text
+          endif
+        ]]></finalize>
+      </field>
 
     <!-- Special details about the weapon -->
     <field
