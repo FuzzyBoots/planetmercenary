@@ -214,7 +214,7 @@
     elseif (tagis[component.Ammunition] <> 0) then
       call InfoAmmo
     elseif (tagis[component.Vehicle] <> 0) then
-      ~ call InfoVeh
+      call InfoVeh
       endif
       
     
@@ -461,6 +461,33 @@
         Outbound parameter: iteminfo
   -->
   <procedure id="InfoAmmo" context="info"><![CDATA[
+    ~declare variables that are used to communicate with our caller
+    var iteminfo as string
+
+    ~add the Passengers
+    iteminfo &= "Passengers: " & field[vhPass].text & "{br}"
+
+    ~report the Damage Resistance
+    iteminfo &= "DR: " & field[vhDR].text & "{br}"
+
+    ~report the Damage Resistance
+    iteminfo &= "Notes: " & field[vhSpec].text & "{br}"
+
+    if (tagis[VehEnclose.Enclosed] <> 0) then
+      iteminfo &= "Enclosed {br}"
+      endif
+    
+    ]]></procedure>
+
+
+  <!-- Procedure InfoVeh
+        Generate details specific to vehicles.
+        The text is placed into the "iteminfo" variable for subsequent use by our
+        caller.
+
+        Outbound parameter: iteminfo
+  -->
+  <procedure id="InfoVeh" context="info"><![CDATA[
     ~declare variables that are used to communicate with our caller
     var iteminfo as string
 

@@ -9,22 +9,8 @@
 
 <document signature="Hero Lab Data">
 
-  <!-- grGear portal
-        Presents a dynamic table where the user can add gear for the character.
-
-        We use separate templates for selecting gear and showing the gear that has
-        been chosen. Each of these appears further below.
-
-        We use an "additem" script to simply prompt the user to add gear.
-
-        The "buytemplate" and "selltemplate" attributes hook in the logic for
-        properly buying and selling gear for cash.
-
-        We use a "headertitle" script to place a suitable title above the table.
-
-        The "list" tag expression restricts everything to only equipment (e.g. no
-        weapons). The "candidate" tag expression is omitted, resulting in the same
-        contents as the "list" tag expression.
+  <!-- grAmmo portal
+        Presents a dynamic table where the user can add ammo for the character.
   -->
   <portal
     id="grAmmo"
@@ -44,6 +30,31 @@
         ]]></headertitle>
       <additem><![CDATA[
         @text = "Add New Ammunition"
+        ]]></additem>
+      </table_dynamic>
+    </portal>
+    
+    <!-- grVehicles portal
+        Presents a dynamic table where the user can add vehicles for the character.
+  -->
+  <portal
+    id="grVehicles"
+    style="tblNormal">
+    <table_dynamic
+      component="Gear"
+      showtemplate="grVehPick"
+      choosetemplate="grGrThing"
+      buytemplate="BuyCash"
+      selltemplate="SellCash">
+      <list>component.Vehicle</list>
+      <titlebar><![CDATA[
+        @text = "Select Vehicles to Purchase from the List Below"
+        ]]></titlebar>
+      <headertitle><![CDATA[
+        @text = "Vehicles"
+        ]]></headertitle>
+      <additem><![CDATA[
+        @text = "Add New Vehicles"
         ]]></additem>
       </table_dynamic>
     </portal>
@@ -141,6 +152,135 @@
 
     </template>
 
+  <template
+    id="grVehThing"
+    name="Vehicle Thing"
+    compset="Vehicle"
+    marginhorz="3"
+    marginvert="2">
+
+    <portal
+      id="name"
+      style="lblNormal">
+      <label field="name">
+        </label>
+      </portal>
+
+    <portal
+      id="cost"
+      style="lblNormal">
+      <label>
+        <labeltext><![CDATA[
+          @text = field[grCost].text
+          ]]></labeltext>
+        </label>
+      </portal>
+
+    <position><![CDATA[
+      ~set up our dimensions, with a width that we dictate
+      height = portal[name].height
+      width = 250
+
+      ~if this is a "sizing" calculation, we're done
+      if (issizing <> 0) then
+        done
+        endif
+
+      ~position the cost portal on the far right
+      perform portal[cost].alignedge[right,0]
+
+      ~position the name on the left and let it use all available space
+      portal[name].left = 0
+      portal[name].width = minimum(portal[name].width,portal[cost].left - 10)
+      ]]></position>
+
+    </template>
+  
+  <template
+    id="grVehPick"
+    name="Vehicle Pick"
+    compset="Vehicle"
+    marginhorz="3"
+    marginvert="3">
+
+    <portal
+      id="name"
+      style="lblNormal"
+      showinvalid="yes">
+      <label
+        field="name">
+        </label>
+      </portal>
+
+    <portal
+      id="container"
+      style="imgNormal">
+      <image_literal
+        image="container.bmp"
+        istransparent="yes">
+        </image_literal>
+      <mouseinfo mousepos="middle+above"><![CDATA[
+        call InfoHolder
+        ]]></mouseinfo>
+      </portal>
+
+    <portal
+      id="info"
+      style="actInfo">
+      <action
+        action="info">
+        </action>
+      <mouseinfo mousepos="middle+above"/>
+      </portal>
+
+    <portal
+      id="delete"
+      style="actDelete"
+      tiptext="Click to delete this vehicle">
+      <action
+        action="delete">
+        </action>
+      </portal>
+
+    <position><![CDATA[
+      ~set up our height based on our tallest portal
+      height = portal[info].height
+
+      ~if this is a "sizing" calculation, we're done
+      if (issizing <> 0) then
+        done
+        endif
+
+      ~center the portals vertically
+      perform portal[info].centervert
+      perform portal[name].centervert
+      perform portal[delete].centervert
+      perform portal[container].centervert
+
+      ~position the delete portal on the far right
+      perform portal[delete].alignedge[right,0]
+
+      ~position the info portal to the left of the delete button
+      perform portal[info].alignrel[rtol,delete,-8]
+
+      ~position the name on the left and let it use all available space
+      var limit as number
+      limit = portal[info].left - portal[container].width - 5
+      portal[name].left = 0
+      portal[name].width = minimum(portal[name].width,limit)
+
+      ~show the 'container' icon to the right of the name
+      portal[container].left = portal[name].right + 5
+
+      ~if the gear can't be deleted (i.e. it's been auto-added instead of user-added,
+      ~set the style to indicate that behavior to the user
+      if (candelete = 0) then
+        perform portal[name].setstyle[lblAuto]
+        endif
+      ]]></position>
+
+    </template>
+    
 
   <!-- grGrPick template
         Derived from the SimpleItem template, this includes the gear button to move
@@ -502,6 +642,7 @@
     id="gear">
     <portalref portal="grGear" taborder="10"/>
     <portalref portal="grAmmo" taborder="20"/>
+    <portalref portal="grVehicles" taborder="30"/>
 
     <!-- This script sizes and positions the layout and its child visual elements. -->
     <position><![CDATA[
@@ -509,6 +650,7 @@
       this.autogap = 10
       perform portal[grGear].autoplace
       perform portal[grAmmo].autoplace
+      perform portal[grVehicles].autoplace
       
       ]]></position>
 
