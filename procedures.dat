@@ -464,19 +464,12 @@
     ~declare variables that are used to communicate with our caller
     var iteminfo as string
 
-    ~add the Passengers
-    iteminfo &= "Passengers: " & field[vhPass].text & "{br}"
+    ~add the Use Mechanism
+    iteminfo &= "Use Mechanism: " & field[ammUseMech].text & "{br}"
 
-    ~report the Damage Resistance
-    iteminfo &= "DR: " & field[vhDR].text & "{br}"
+    ~report the Notes
+    iteminfo &= "Notes: " & field[ammNotes].text & "{br}"
 
-    ~report the Damage Resistance
-    iteminfo &= "Notes: " & field[vhSpec].text & "{br}"
-
-    if (tagis[VehEnclose.Enclosed] <> 0) then
-      iteminfo &= "Enclosed {br}"
-      endif
-    
     ]]></procedure>
 
 
@@ -491,12 +484,19 @@
     ~declare variables that are used to communicate with our caller
     var iteminfo as string
 
-    ~add the Use Mechanism
-    iteminfo &= "Use Mechanism: " & field[ammUseMech].text & "{br}"
+    ~add the Passengers
+    iteminfo &= "Passengers: " & field[vhPass].text & "{br}"
 
-    ~report the Notes
-    iteminfo &= "Notes: " & field[ammNotes].text & "{br}"
+    ~report the Damage Resistance
+    iteminfo &= "DR: " & field[vhDR].text & "{br}"
 
+    ~report the Damage Resistance
+    iteminfo &= "Notes: " & field[vhSpec].text & "{br}"
+
+    if (tagis[VehEnclose.Enclosed] <> 0) then
+      iteminfo &= "Enclosed {br}"
+      endif
+    
     ]]></procedure>
 
 

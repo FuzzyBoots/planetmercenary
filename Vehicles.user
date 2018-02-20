@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="vehSkates" name="Wächter Sunrise Talrico Skates" description="Anyone who’s seen the neighborhood kids ﬂit around as if running on twenty centimeters of thin air has seen the Talarico skates in action. Careful observation reveals that these skates are not being used by adults. We may conclude, then, that either (1) adults are too smart to use them, or (2) the children who use them do not survive to become adults. \n\nTalarico skates can more than double the running speed of a typical biped, but they require signifcant skill to use safely. They’re not available in sizes suitable for anything much larger than an adult human, which means that neophants on skates are not among the many mobile catastrophes this universe will throw at you. Unless, of course, your GC invents some neophants with high jury-rigging skills." compset="Vehicle">
+    <fieldval field="vhPass" value="1"/>
+    <fieldval field="vhDR" value="0"/>
+    <fieldval field="grCost" value="1"/>
+    <tag group="Skill" tag="skAthlete"/>
+    <tag group="VehClass" tag="Consumer"/>
+    </thing>
+  <thing id="vehScooter" name="Jogamoto Fleetworks “Ninjurai 47” Scooter" description="Numerous consumer manufacturers produce personal scooters. The Ninjurai 47 was created by Jogamoto, a subsidiary of Gaines-Uashjo. It’s designed for comfortable errand-running, not combat. The open-air design offers zero protection from incoming fre and the “quiet” propulsor turbines are too loud for stealth. The Ninjurai’s prevalence on battlefelds is likely due to its low cost, which makes it very nearly disposable and therefore extremely attractive to quartermasters focused on the bottom line. It is available in either Ground, Air, or Water models.\n\nHeavily armored soldiers looking for zippy, stylish transit through a theater of operations can cruise along at 25m/sec, secure in the knowledge that when they come under fire they’ll almost certainly live longer than their scooter. They might even recover from their scooter’s destruction quickly and adroitly enough to return fire. They might also get hit by ﬂaming bits of their scooter, but field reports suggest this causes superficial bruising at worst." compset="Vehicle">
+    <fieldval field="vhPass" value="1"/>
+    <fieldval field="vhDR" value="0"/>
+    <fieldval field="grCost" value="2"/>
+    <tag group="VehClass" tag="Consumer"/>
+    <tag group="Skill" tag="skAirVeh"/>
+    <tag group="Skill" tag="skGrndVeh"/>
+    <tag group="Skill" tag="skWatVeh"/>
+    </thing>
+  <thing id="vehHvrChr" name="Wächter Com Hub Hover Chair" description="The Wächter Com Hub Hover Chair was specifcally designed for polyﬂorian sophonts who are dependent on vehicles for their transportation. Sophonts who are larger or smaller than the average polyﬂorian can use the chair, but it is likely to be uncomfortable for them. The chair has the necessary attachments and leads to allow a polyﬂorian to interface directly with the chair so that the chair becomes more like an extension of the polyﬂorian’s body than a vehicle. Com Hub chairs come with large carrying compartments and two slots suitable for attaching tools and/or mechanical arms. Debates continue whether Wächter deliberately designed these tool slots to function as weapon emplacement spots , but that is what they do." compset="Vehicle">
+    <fieldval field="vhPass" value="1"/>
+    <fieldval field="vhWpSlots" value="2"/>
+    <fieldval field="grCost" value="2"/>
+    <tag group="Skill" tag="skAirVeh"/>
+    <tag group="VehClass" tag="Consumer"/>
+    </thing>
+  </document>

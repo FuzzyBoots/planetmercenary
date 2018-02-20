@@ -357,6 +357,66 @@
       </inputthing>      
     </editthing>
 
+  <!-- Melee editthing - for melee weapons -->
+  <editthing
+    compset="Vehicle"
+    name="Vehicles (non-Spaceships)"
+    prefix="veh"
+    description="Armor, vehicles, and simple equipment all have their own tabs for creating objects of those types."
+    summary="Defines a vehicle that can be selected on the Gear tab.">
+    
+    <inputthing
+      name="Passengers"
+      helptext="Specify how many passengers the vehicle can hold.">
+      <it_field field="vhPass"/>
+      </inputthing>
+      
+    <inputthing
+      name="Damage Resistance"
+      helptext="Specify the damage resistance of the vehicle.">
+      <it_field field="vhDR"/>
+      </inputthing>
+      
+    <inputthing
+      name="Weapon Slots"
+      helptext="Specify the number of weapon slots.">
+      <it_field field="vhWpSlots"/>
+      </inputthing>
+      
+    <inputthing
+      name="Cost"
+      helptext="Specify the standard cost of the item, with a value of 0 meaning it is free.">
+      <it_field field="grCost"/>
+      </inputthing>
+      
+    <inputthing
+      name="SkillUsed"
+      helptext="Specify the skills used.">
+      <it_taglist
+        group="Skill" tag="?"/>
+      </inputthing>
+    
+    <inputthing
+      name="VehClass"
+      helptext="Specify the vehicle classification.">
+      <it_tagpick
+        group="VehClass" tag="?"/>
+      </inputthing>
+    
+    <!--inputthing
+      name="Special Behaviors"
+      helptext="Specify any special behaviors for the vehicle of which the user should be reminded.">
+      <it_field field="vhSpec"/>
+      </inputthing-->
+      
+    <inputthing
+      name="Enclosed?"
+      helptext="Specify whether this vehicle is enclosed.">
+      <it_tagcheck group="VehEnclose" tag="Enclosed"/>
+      </inputthing>
+    
+    </editthing>
+    
 
   <!-- Melee editthing - for melee weapons -->
   <editthing
