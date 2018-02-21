@@ -46,6 +46,20 @@
         ]]></calculate>
       </field>
 
+    <field
+      id="ftPhys"
+      name="Fireteam Physical"
+      type="derived">
+      <calculate phase="Traits" priority="5001"><![CDATA[
+        var value as number
+        foreach thing in FTMember
+          value += eachthing.field[ftPhysical].value
+          debug "value: " & value
+          nexteach
+        @value = value
+        ]]></calculate>
+      </field>
+      
     <!-- Bonus health for the actor -->
     <field
       id="acHPBonus"

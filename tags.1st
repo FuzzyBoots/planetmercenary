@@ -358,10 +358,10 @@
 
   <group
     id="Skills">
-    <value id="Combat"/>
-    <value id="Mental"/>
-    <value id="Physical"/>
-    <value id="Social"/>
+    <value id="Combat" name="Combat Skills"/>
+    <value id="Mental" name="Mental Skills"/>
+    <value id="Physical" name="Physical Skills"/>
+    <value id="Social" name="Social Skills"/>
     </group>
     
   <!-- Hide group - controls whether things are hidden in certain contexts

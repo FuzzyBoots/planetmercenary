@@ -14,7 +14,7 @@
   <portal
     id="skBonuses"
     style="tblInvis"
-    width="240">
+    width="400">
     <table_fixed
       component="SkillBonus"
       showtemplate="MenuSlPick"

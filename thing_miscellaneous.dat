@@ -171,8 +171,21 @@
       var skilltypes as string
       skilltypes = tagids[Skills.?, " | "]
 
+      var skillNames as string
+      skillNames = tagnames[Skill.?, ", "]
+      var skillTypes as string
+      skillTypes = tagnames[Skills.?, ", "]
+      
+      if (empty(skillNames) = 0 ) then
+        if (empty(skillTypes) = 0 ) then
+          skillNames &= ", " & tagnames[Skills.?, ", "]
+          endif
+      else
+        skillNames = skillTypes
+        endif
+      
       if (bonus > 0) then
-        field[livename].text = "+" & bonus & " to Multiple"
+        field[livename].text = "+" & bonus & " to " & skillNames
         
         foreach pick in hero from Skill where skills
           perform eachpick.field[trtBG].modify[+,bonus,"Background"]
@@ -182,16 +195,15 @@
           perform eachpick.field[trtBG].modify[+,bonus,"Background"]
         nexteach
       elseif (penalty > 0) then
-        field[livename].text = "-" & penalty & " to Multiple"
+        field[livename].text = "-" & penalty & " to " & skillNames
         
-        
-        foreach pick in hero from Skill where skills
-          perform eachpick.field[trtBonus].modify[-,penalty,"Background"]
-        nexteach
+        ~foreach pick in hero from Skill where skills
+        ~  perform eachpick.field[trtBonus].modify[-,penalty,"Background"]
+        ~nexteach
       
-        foreach pick in hero from Skill where skilltypes
-          perform eachpick.field[trtBonus].modify[-,penalty,"Background"]
-        nexteach
+        ~foreach pick in hero from Skill where skilltypes
+        ~  perform eachpick.field[trtBonus].modify[-,penalty,"Background"]
+        ~nexteach
       endif
       
       ]]></eval>

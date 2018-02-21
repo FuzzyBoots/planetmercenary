@@ -215,7 +215,7 @@
       id="ftDamage"
       name="Fireteam damage"
       type="derived"
-      defvalue="1">
+      defvalue="0">
       </field>
       
     <field

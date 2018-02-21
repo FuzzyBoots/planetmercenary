@@ -20,10 +20,15 @@
         skChoices1 = field[FTRole].chosen.tagids[FTSkChc1.?, " | "]
         skChoices2 = field[FTRole].chosen.tagids[FTSkChc2.?, " | "]
         
-        ~ debug "Skill Choices: " & skChoices1 & " / " & skChoices2
-        
         field[availSk1].text = skChoices1
         field[availSk2].text = skChoices2
+        
+        ~if (field[FTRole].chosen.tagcount[FTSkChc1.?] = 1) then
+        ~  foreach thing in FTSkill where field[FTRole].chosen.tagids[FTSkChc1.?, " & "]
+        ~    ~ Should only be the one
+        ~    field[skillCh1].chosen = eachthing
+        ~    nexteach
+        ~  endif
       
       ]]>
       </eval>

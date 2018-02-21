@@ -12,9 +12,15 @@
     isunique="yes"
     description="If you play as the Captain, then your in-game job is to make command decisions and issue orders to the other officers. You’re a little like the Adjutant to the GC, and in that role, you rely on people skills to keep the game moving.\n\nThe Captain’s bonuses reflect both expertise and experience. Mercenary captains are more than just career soldiers with brass garnish. They’re entrepreneurs with a passion for turning professionals-at-arms into a profitable fighting force. With an emphasis on profitable. And an unwritten nod toward “legal,” because that always makes things easier.\n\n{b}Bonus Skill Ranks:{/b} +2 Economics, +2 Contracts, +2 History (Military), +2 to any 1 Combat skill; also, you’re in charge!">
     
-    <tag group="SkillBonus" tag="skEcon"/>
-    <tag group="SkillBonus" tag="skContract"/>
-    <tag group="SkillBonus" tag="skHistory"/>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skEcon"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skContract"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skHistory"/>
+      </bootstrap>
 
     <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Combat"/>
@@ -31,8 +37,12 @@
     isunique="yes"
     description="The Chaplain provides both moral support and a moral compass. Morale and morality! Sometimes it falls to the Chaplain to point out what horrible people the other officers could become if they follow a given path. Other times the Chaplain must bring his carbine to his shoulder and clear a path with righteous indignation!\n\nCareer Chaplains are students of history, and they’re adept at citing scriptural, historical, and cultural touchstones at just the right time. In a mercenary company, their inspirational speeches usually have pointy bits right at the very end. \n\n{b}Bonus Skill Ranks:{/b} +2 Dodge, +2 History (Religious), +2 Inspire {i}or{/i} Perform, +2 to any 1 Combat skill">
     
-    <tag group="SkillBonus" tag="skDodge"/>
-    <tag group="SkillBonus" tag="skHistory"/>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skDodge"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skHistory"/>
+      </bootstrap>
 
     <bootstrap thing="spHistRel"/>
     
@@ -57,9 +67,15 @@
     description="The tools of 31st-century medicine are extremely powerful, but the single most useful surgical instrument is always information — specifically, information about which bits are supposed to be reconnected to which other bits, and whether a particular organ would be missed, since there’s rarely time to grow a new one.\n\nYears of schooling (or equivalent experience) qualify a Doctor for the job of making everyone else not-dead as often as possible. Sure, the Doctor sometimes hands a stretcher full of mince flambé to the Chaplain, but the very best way to prevent stretcher-flambé is to pick up something far deadlier than a scalpel, and invite the folks on the other side to call {i}their{/i} chaplain.\n\n{b}Bonus Skill Ranks:{/b} +2 Dodge, +2 Medicine, +2 Xenobiology, +2 to any 1 Combat skill">
        
 
-    <tag group="SkillBonus" tag="skDodge"/>
-    <tag group="SkillBonus" tag="skMedicine"/>
-    <tag group="SkillBonus" tag="skXeno"/>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skDodge"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skMedic"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skXeno"/>
+      </bootstrap>
     
     <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Combat"/>
@@ -75,8 +91,12 @@
     isunique="yes"
     description="An Engineer is like a walking toolbox of two-twists-and-hit-it-with-a-hammer solutions to problems the company may encounter. (If the Engineer is a machine-intelligence with the right attachments, then remove the word “like” from the previous sentence.) Typically, the Engineer is tasked with fixing (or building!) things in the “materiel” category, though they may also be adept at hacking the various nonsentient “thinking” machines commonly called “computers.”\n\nMercenary Engineers don’t just sit in the quartermastery playing rear-echelon wrenchmonkey, though. They need to be right there next to the boots on deck, because the odds are pretty good that the deck will eventually give way, or that the those boots will suddenly not have their rockets attached correctly anymore. \n\n{b}Bonus Skill Ranks:{/b} +2 Chemistry, +2 Engineering, +2 Experimental Sciences {i}or{/i} Mechanic, +2 to any 1 Combat skill">
     
-    <tag group="SkillBonus" tag="skChem"/>
-    <tag group="SkillBonus" tag="skEng"/>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skChem"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skEng"/>
+      </bootstrap>
     
     <bootstrap thing="fRPlusSk">
       <autotag group="Skill" tag="skExpSci"/>
@@ -98,7 +118,9 @@
     isunique="yes"
     description="When the client looks to your officer corps, their eyes fall on the Captain. They may not even notice the Ops Commander, who has already identified the exits, possible entry points for attackers, and half a dozen ways to kill everyone in the room — all without attracting any attention.\n\nThe Captain may give the orders but when bullets are flying at the boots on deck, but it’s the Ops Commander who leads the strike force. Years of experience are valuable, yes, but the Ops Commander has this role thanks to surviving those years of experience. \n\n{b}Bonus Skill Ranks:{/b} +2 Empathy {i}or{/i} Inspire, +2 Perception, +2 to any 2 Combat skills">
     
-    <tag group="SkillBonus" tag="skPercept"/>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skPercept"/>
+      </bootstrap>
     
     <bootstrap thing="fRPlusSk">
       <autotag group="Skill" tag="skEmpathy"/>
@@ -157,9 +179,15 @@
     isunique="yes"
     description="Properly selected weapons and other materiel can turn a lone soldier into a perambulatory dispensary of enemy dismay. It’s the Quartermaster’s job to keep the “properly” there with the “maintained,” and to perform repairs on gear that’s been dragged into one too many ambushes. \n\nIn the canon of force multiplication there are many axioms and aphorisms featuring the words “high” and “explosives.” The Quartermaster knows them all, and knows which ones cause any particular thing to explode. Or not explode. The Quartermaster also knows how quickly to run when the answer to any question was “fire in the hole” or “oops.” \n\n{b}Bonus Skill Ranks:{/b} +2 Chemistry, +2 Dodge, +2 Explosives, +2 to any 1 Combat skill">
     
-    <tag group="SkillBonus" tag="skChem"/>
-    <tag group="SkillBonus" tag="skDodge"/>
-    <tag group="SkillBonus" tag="skExplsves"/>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skChem"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skDodge"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skExplsves"/>
+      </bootstrap>
     
     <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Combat"/>

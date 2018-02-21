@@ -46,15 +46,9 @@
   <bootstrap index="10" thing="mscPerson"/>
 
   <!-- Add three fireteam members -->
-  <bootstrap index="30" thing="Fireteam">
-    <assignval field="ftName" value="Bob"/>
-  </bootstrap>
-  <bootstrap index="31" thing="Fireteam">
-    <assignval field="ftName" value="Tom"/>
-  </bootstrap>
-  <bootstrap index="32" thing="Fireteam">
-    <assignval field="ftName" value="Harry"/>
-  </bootstrap>
+  <bootstrap index="30" thing="Fireteam"/>
+  <bootstrap index="31" thing="Fireteam"/>
+  <bootstrap index="32" thing="Fireteam"/>
 
   <!-- The "autoadd" elements identify individual things that should be automatically
         added to every new character by Hero Lab. The key difference from "bootstrap"

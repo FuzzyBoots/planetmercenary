@@ -194,9 +194,15 @@
     </thing>
   <thing id="racPolyfl" name="Polyflorian" description="Arguably the most technologically dependent of all sophonts, polyﬂorians resemble terran gastropods, or Othlin sea-plasms. They don’t like being described this way, however, nor do they like being called “cyborgs” or “ﬂying snotstrosities.” However, they happily accept compliments on their heightened skill with many technologies.\n\n{b}Bonus Skill Ranks:{/b} +2 Computers, +1 Engineering, +1 to any Vehicle skill, +1 Research\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} You require a special chair to move around. If this chair is destroyed, damaged, or lost, then you have a hard time moving quickly. (All your Athletic checks have a -2 penalty until you manage to re-acquire a functioning chair.) On the plus side, each of these chairs can ﬂy and you may fit yours with up to two weapons. However, each piece of your gear costs 1 additional Supplies because it must be modifed to fit your chair. Once attached to the chair, the weapon is a Stationed Weapon and thus subject to the Stationed Weapons skill. Other stats of the weapon do not change.{br}{br}{b}Health:{/b} 4 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="4"/>
-  <tag group="SkillBonus" tag="skCompute"/>
-    <tag group="SkillBonus" tag="skEng"/>
-    <tag group="SkillBonus" tag="skRes"/>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skCompute"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skEng"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skRes"/>
+      </bootstrap>
     <bootstrap thing="fRPlusSk">
       <autotag group="Bonus" tag="Plus1"/>
       <autotag group="Skill" tag="skAirVeh"/>

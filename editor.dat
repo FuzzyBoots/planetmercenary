@@ -12,12 +12,6 @@
   <inputthinggroup  
     id="bckTraits">
     <inputthing
-      name="Skill Bonuses"
-      helptext="Pick skills to which this assigns a +2 bonus.">
-      <it_taglist group="SkillBonus" tag="?"/>
-      </inputthing>
-      
-    <inputthing
       name="Bonus Specialties"
       helptext="Specialties automatically accorded.">
       <it_bootcustom compset="Specialty">
