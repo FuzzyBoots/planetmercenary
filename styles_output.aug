@@ -19,6 +19,16 @@
       style="bold">
       </font>
     </resource>
+    
+  <!-- font used on smaller text -->
+  <resource
+    id="ofnttiny">
+    <font
+      face="Arial"
+      size="30"
+      style="bold">
+      </font>
+    </resource>
 
   <!-- font used on medium text -->
   <resource
@@ -172,6 +182,38 @@
       textcolor="000000"
       font="ofntnormal"
       alignment="right">
+      </style_output>
+    </style>
+
+  <!-- center-aligned for output -->
+  <style
+    id="outSmallCt">
+    <style_output
+      textcolor="000000"
+      font="ofnttiny"
+      alignment="center">
+      </style_output>
+    </style>
+
+  <!-- left-aligned for output with border-->
+  <style
+    id="outBNormLt"
+    border="solid">
+    <style_output
+      textcolor="000000"
+      font="ofntnormal"
+      alignment="left">
+      </style_output>
+    </style>
+
+  <!-- center-aligned for output with border-->
+  <style
+    id="outBNormCt"
+    border="solid">
+    <style_output
+      textcolor="000000"
+      font="ofntnormal"
+      alignment="center">
       </style_output>
     </style>
 

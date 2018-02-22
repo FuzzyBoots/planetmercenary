@@ -24,7 +24,7 @@
   <!-- oHLLogo portal - Hero Lab logo -->
   <portal
     id="oHLLogo"
-    style="outNormal">
+    style="outTitle">
     <output_image
       image="sheet_hllogo.bmp">
       </output_image>
@@ -33,7 +33,7 @@
   <!-- oGameLogo portal - game system logo -->
   <portal
     id="oGameLogo"
-    style="outNormal"
+    style="outTitle"
     width="0"
     height="0">
     <output_image
@@ -42,10 +42,7 @@
     </portal>
 
 
-  <!-- Hero and Player Info
-        NOTE! These could be easily wrapped inside a template or used directly within
-              a layout, as we do here. Both methods are perfectly reasonable.
-  -->
+  <!-- Hero Info -->
 
   <!-- oCharSec portal - Character portal -->
   <portal
@@ -55,38 +52,175 @@
       text="Character"/>
     </portal>
   
-  <!-- oHeroInfo portal - details about the actor -->
+  <!-- oCharBox portal - Background box -->
   <portal
-    id="oHeroInfo"
+    id="oCharBox"
     style="outNormal">
+    <output_label
+      text=" "/>
+    </portal>
+  
+  <portal
+    id="oNameLbl"
+    style="outNormLt">
+    <output_label text="Name"/>
+    </portal>
+    
+  <portal
+    id="oHeroName"
+    style="outBNormCt">
     <output_label>
       <labeltext><![CDATA[
-        var temp as string
-        @text = "{b}Name: "
-        if (empty(hero.actorname) = 0) then
-          @text &= hero.actorname
-          endif
-        @text &= "{br}"
-        
-        temp = hero.firstchild["component.CmdPckge"].field[name].text
-        @text &= "Command Package: " & temp & "{br}"
-        
-        temp = hero.firstchild["component.Bckgrnd"].field[name].text
-        @text &= "Background: " & temp & "{br}"
-        
-        temp = hero.firstchild["component.Race"].field[name].text
-        @text &= "Sophont Type: " & temp & "{br}"
-        ]]></labeltext>
+        @text = hero.actorname
+        ]]>
+        </labeltext>
       </output_label>
     </portal>
     
+  <portal
+    id="oCmdPkgLbl"
+    style="outNormLt">
+    <output_label text="Command Package"/>
+    </portal>
+    
+  <portal
+    id="oHeroCPkg"
+    style="outBNormLt">
+    <output_label>
+      <labeltext><![CDATA[
+        @text = hero.firstchild["component.CmdPckge"].field[name].text
+        ]]>
+        </labeltext>
+      </output_label>
+    </portal>
+  
+  <portal
+    id="oBackgrLbl"
+    style="outNormLt">
+    <output_label text="Background Package"/>
+    </portal>
+    
+  <portal
+    id="oHeroBckgr"
+    style="outBNormLt">
+    <output_label>
+      <labeltext><![CDATA[
+        @text = hero.firstchild["component.Bckgrnd"].field[name].text
+        ]]>
+        </labeltext>
+      </output_label>
+    </portal>
+  
+  <portal
+    id="oRaceLbl"
+    style="outNormLt">
+    <output_label text="Sophont Type"/>
+    </portal>
+    
+  <portal
+    id="oHeroRace"
+    style="outBNormLt">
+    <output_label>
+      <labeltext><![CDATA[
+        @text = hero.firstchild["component.Race"].field[name].text
+        ]]>
+        </labeltext>
+      </output_label>
+    </portal>
+  
+  <!-- Company Info -->
+
+  <!-- oCompSec portal - Company portal -->
+  <portal
+    id="oCompSec"
+    style="outSection">
+    <output_label
+      text="Company"/>
+    </portal>
+  
+  <portal
+    id="oNameLbl2"
+    style="outNameLg">
+    <output_label text="Name"/>
+    </portal>
+    
+  <!--portal
+    id="CompName"
+    style="outBNormCt">
+    <output_label>
+      <labeltext><![CDATA[
+        @text = hero.actorname
+        ]]>
+        </labeltext>
+      </output_label>
+    </portal>
+    
+  <portal
+    id="oCmdPkgLbl"
+    style="outNormLt">
+    <output_label text="Command Package"/>
+    </portal>
+    
+  <portal
+    id="oHeroCPkg"
+    style="outBNormLt">
+    <output_label>
+      <labeltext><![CDATA[
+        @text = hero.firstchild["component.CmdPckge"].field[name].text
+        ]]>
+        </labeltext>
+      </output_label>
+    </portal>
+  
+  <portal
+    id="oBackgrLbl"
+    style="outNormLt">
+    <output_label text="Background Package"/>
+    </portal>
+    
+  <portal
+    id="oHeroBckgr"
+    style="outBNormLt">
+    <output_label>
+      <labeltext><![CDATA[
+        @text = hero.firstchild["component.Bckgrnd"].field[name].text
+        ]]>
+        </labeltext>
+      </output_label>
+    </portal>
+  
+  <portal
+    id="oRaceLbl"
+    style="outNormLt">
+    <output_label text="Sophont Type"/>
+    </portal>
+    
+  <portal
+    id="oHeroRace"
+    style="outBNormLt">
+    <output_label>
+      <labeltext><![CDATA[
+        @text = hero.firstchild["component.Race"].field[name].text
+        ]]>
+        </labeltext>
+      </output_label>
+    </portal-->
+  
   <!-- oHealth portal
         This is a grouping of items related to Health. It will have the base health/powers
         value, a larger box for tracking deductions, and three headers with boxes of
         Reduction, Defense, and Dodge 
   -->
   <portal
-    id="oHealth"
+    id="oHealthBox"
+    style="outNormal">
+    <output_label
+      text=" ">
+      </output_label>
+    </portal>
+    
+  <portal
+    id="oHealthBx2"
     style="outNormal">
     <output_label
       text=" ">
@@ -99,14 +233,14 @@
     id="oHealthLbl"
     style="outNameLg">
     <output_label
-      text="{b}Health{/b}"/>
+      text="Health"/>
     </portal>
     
   <!-- oReductLbl
   -->
   <portal
     id="oReductLbl"
-    style="outNameLg">
+    style="outSmallCt">
     <output_label
       text="Reduction"/>
     </portal>
@@ -115,7 +249,7 @@
   -->
   <portal
     id="oDefLbl"
-    style="outNameLg">
+    style="outSmallCt">
     <output_label
       text="Defense"/>
     </portal>
@@ -124,79 +258,35 @@
   -->
   <portal
     id="oDodgeLbl"
-    style="outNameLg">
+    style="outSmallCt">
     <output_label
       text="Dodge"/>
     </portal>
     
   <portal
-    id="valBox"
+    id="valBoxRed"
+    style="outGreyBox">
+    <output_label
+      text=" ">
+      </output_label>
+    </portal>
+    
+  <portal
+    id="valBoxDef"
+    style="outGreyBox">
+    <output_label
+      text=" ">
+      </output_label>
+    </portal>
+    
+  <portal
+    id="valBoxDdge"
     style="outGreyBox">
     <output_label
       text=" ">
       </output_label>
     </portal>
   
-  <!-- oDerived portal
-        This is a table of Derived Traits for the actor. Only resistance and combat
-        traits are included in the list of derived traits within the character sheet.
-  -->
-  <portal
-    id="oDerived"
-    style="outTblGrid">
-    <output_table
-      component="Trait"
-      showtemplate="oDerivPick"
-      showsortset="explicit">
-      <list><![CDATA[
-        User.Resistance | User.Combat
-        ]]></list>
-      <headertitle><![CDATA[
-        @text = "Derived Traits"
-        ]]></headertitle>
-      </output_table>
-    </portal>
-
-
-  <!-- oPower portal
-        This is a table of the Health and Power traits for the actor. Only traits
-        with the "Power" tag are included in this table.
-  -->
-  <portal
-    id="oPower"
-    style="outNormal">
-    <output_table
-      component="Trait"
-      showtemplate="oPowerPick"
-      showsortset="explicit">
-      <list><![CDATA[
-        User.Power
-        ]]></list>
-      <headertitle><![CDATA[
-        @text = "Health and Power"
-        ]]></headertitle>
-      </output_table>
-    </portal>
-
-
-  <!-- oAbility portal
-        This is a table of all Special Abilities for the actor.
-  -->
-  <portal
-    id="oAbility"
-    style="outNormal">
-    <output_table
-      component="Ability"
-      showtemplate="oAbilPick">
-      <list><![CDATA[
-        ]]></list>
-      <headertitle><![CDATA[
-        @text = "Special Abilities"
-        ]]></headertitle>
-      </output_table>
-    </portal>
-
-
   <!-- oSkills portal
         This is a table of all Skills for the actor.
   -->
@@ -571,7 +661,7 @@
 
     <portal
       id="value"
-      style="outNormRt">
+      style="outBNormLt">
       <output_label>
         <labeltext><![CDATA[
           if (stackable = 0) then
@@ -1150,42 +1240,118 @@
       ]]></position>
     </layout>
 
-
-  <!-- oLeftSide layout
-        This layout is rendered down the left side of the sheet and contains the
-        name and description details for the character, as well as the table of
-        table of attributes, table of health/powers, and table of derived traits.
-  -->
+  <!-- layout oCharInfo -->
   <layout
-    id="oLeftSide">
+    id="oCharInfo">
     <portalref portal="oCharSec"/>
-    <portalref portal="oHeroInfo"/>
-    <portalref portal="oDerived"/>
-    <portalref portal="oHealthLbl"/>
-    <!--portalref portal="oReductLbl"/>
-    <portalref portal="oDefLbl"/>
-    <portalref portal="oDodgeLbl"/-->
-    <portalref portal="valBox"/>
+    <portalref portal="oCharBox"/>
+    <portalref portal="oNameLbl"/>
+    <portalref portal="oHeroName"/>
+    <portalref portal="oCmdPkgLbl"/>
+    <portalref portal="oHeroCPkg"/>
+    <portalref portal="oBackgrLbl"/>
+    <portalref portal="oHeroBckgr"/>
+    <portalref portal="oRaceLbl"/>
+    <portalref portal="oHeroRace"/>
     <position><![CDATA[
       ~position the hero name at the top with the hero details beneath the name
       perform portal[oCharSec].autoplace[0]
-      perform portal[oHeroInfo].autoplace[15]
-      portal[oHealthLbl].left = portal[oHeroInfo].left
-      portal[oHealthLbl].top = portal[oHeroInfo].bottom + 5
-      portal[oHealthLbl].width = 20
-      portal[valBox].left = portal[oHealthLbl].left
-      portal[valBox].top = portal[oHealthLbl].bottom + 5
-      portal[valBox].width = 20
+      
+      portal[oNameLbl].left = portal[oCharSec].left + 5
+      portal[oCmdPkgLbl].left = portal[oCharSec].left + 5
+      portal[oBackgrLbl].left = portal[oCharSec].left + 5
+      portal[oRaceLbl].left = portal[oCharSec].left + 5
+      
+      portal[oNameLbl].top = portal[oCharSec].bottom + 5
+      portal[oCmdPkgLbl].top = portal[oNameLbl].bottom + 5
+      portal[oBackgrLbl].top = portal[oCmdPkgLbl].bottom + 5
+      portal[oRaceLbl].top = portal[oBackgrLbl].bottom + 5
+      
+      ~ The width is 1/2 except Name, which is 1/4
+      portal[oNameLbl].width = width / 4
+      portal[oCmdPkgLbl].width = width / 2
+      portal[oBackgrLbl].width = width / 2
+      portal[oRaceLbl].width = width / 2
+      
+      portal[oHeroName].left = portal[oNameLbl].right + 5 
+      portal[oHeroCPkg].left = portal[oCmdPkgLbl].right + 5
+      portal[oHeroBckgr].left = portal[oBackgrLbl].right + 5
+      portal[oHeroRace].left = portal[oRaceLbl].right + 5
+      
+      portal[oHeroName].top = portal[oNameLbl].top 
+      portal[oHeroCPkg].top = portal[oCmdPkgLbl].top
+      portal[oHeroBckgr].top = portal[oBackgrLbl].top
+      portal[oHeroRace].top = portal[oRaceLbl].top
+      
+      portal[oHeroName].width = width - portal[oNameLbl].right - 5
+      portal[oHeroCPkg].width = width - portal[oCmdPkgLbl].right - 5
+      portal[oHeroBckgr].width = width - portal[oBackgrLbl].right - 5
+      portal[oHeroRace].width = width - portal[oRaceLbl].right - 5
+      
+      portal[oCharBox].top = portal[oCharSec].bottom
+      portal[oCharBox].left = portal[oCharSec].left
+      portal[oCharBox].width = width
+      portal[oCharBox].height = portal[oHeroRace].bottom - portal[oCharSec].bottom + 5
 
-      ~position the tables next
-      perform portal[oDerived].autoplace
-
-      ~our layout height is the extent of the elements within
-      height = autoextent
-      ]]></position>
+      height = portal[oCharBox].height + portal[oCharBox].top
+      
+    ]]></position>
     </layout>
-
-
+    
+  <!-- layout oCompInfo -->
+  <layout
+    id="oCompInfo">
+    <portalref portal="oCompSec"/>
+    <portalref portal="oNameLbl2"/>
+    <!-- more items to come -->
+    <position><![CDATA[
+      ~position the company name at the top with the hero details beneath the name
+      perform portal[oCompSec].autoplace[0]
+      
+      portal[oNameLbl2].left = portal[oCompSec].left
+      
+      portal[oNameLbl2].top = portal[oCompSec].bottom + 5
+      
+      ~ The width is 1/2 except Name, which is 1/4
+      portal[oNameLbl2].width = width / 4
+      
+    ]]></position>
+    </layout>
+  
+  <layout
+    id="oDerived">
+    <portalref portal="oHealthLbl"/>
+    <portalref portal="oHealthBox"/>
+    <portalref portal="oHealthBx2"/>
+    <portalref portal="oReductLbl"/> 
+    <portalref portal="oDefLbl"/> 
+    <portalref portal="oDodgeLbl"/>
+    <portalref portal="valBoxRed"/> 
+    <portalref portal="valBoxDef"/> 
+    <portalref portal="valBoxDdge"/>
+    <position><![CDATA[
+      ~Position the Health label with a box below
+      portal[oHealthLbl].left = 5
+      portal[oHealthLbl].top = 5
+      portal[oHealthLbl].width = 150
+      
+      portal[oHealthBox].left = portal[oHealthLbl].left
+      portal[oHealthBox].top = portal[oHealthLbl].bottom + 5
+      portal[oHealthBox].width = portal[oHealthLbl].width
+      portal[oHealthBox].height = portal[oHealthLbl].height
+      
+      portal[oHealthBx2].left = portal[oHealthLbl].right + 20
+      portal[oHealthBx2].top = portal[oHealthLbl].top
+      portal[oHealthBx2].width = width * 2 / 3 - portal[oHealthLbl].right - 25
+      portal[oHealthBx2].height = portal[oHealthBox].bottom - portal[oHealthLbl].top
+      
+      portal[oReductLbl].left = width * 6 / 9
+      portal[oDefLbl].left = width * 7 / 9
+      portal[oDodgeLbl].left = width * 8 / 9
+    ]]></position>
+    </layout>
+    
+  
   <!-- oArmory layout
         This layout contains the tables of armor and weapons that appear in the
         lefthand column of the character sheet. If the two tables are too large to
@@ -1275,33 +1441,6 @@
     </layout>
 
 
-  <!-- oRightSide layout
-        This layout is rendered down the right side of the sheet and contains the
-        character portrait, table of special abilities, table of skills, and table
-        of gear. As much gear as will fit is output, with any excess being truncated
-        on this sheet and being included on the spillover sheet.
-  -->
-  <layout
-    id="oRightSide">
-    <portalref portal="oAbility"/>
-    <portalref portal="oSkills"/>
-    <portalref portal="oGear"/>
-    <portalref portal="oPersonal"/>
-    <templateref template="oPortrait" thing="actor"/>
-    <position><![CDATA[
-      ~position the character portrait at the top and the various tables beneath
-      perform template[oPortrait].autoplace
-      perform portal[oAbility].autoplace
-      perform portal[oSkills].autoplace
-      perform portal[oGear].autoplace
-      perform portal[oPersonal].autoplace
-
-      ~our layout height is the extent of the elements within
-      height = autoextent
-      ]]></position>
-    </layout>
-
-
   <!-- oValidate layout
         This layout contains the validation report at the bottom of the sheet.
   -->
@@ -1331,11 +1470,15 @@
     id="standard1"
     name="Standard character sheet, page #1">
     <layoutref layout="oLogos"/>
-    <layoutref layout="oLeftSide"/>
-    <layoutref layout="oRightSide"/>
+    <layoutref layout="oCharInfo"/>
+    <layoutref layout="oCompInfo"/>
+    <layoutref layout="oDerived"/>
+    <!--layoutref layout="oSkillPen"/>
+    <layoutref layout="oRiPPs"/>
+    <layoutref layout="oSkills"/>
     <layoutref layout="oAdjust"/>
     <layoutref layout="oArmory"/>
-    <layoutref layout="oValidate"/>
+    <layoutref layout="oValidate"/-->
     <position><![CDATA[
       ~set this global variable to 1 if you want the logos to be stacked; a value
       ~of zero places them side-by-side
@@ -1347,51 +1490,65 @@
 
       ~calculate the width of the two columns of the character sheet, leaving a
       ~suitable center gap between them
-      var colwidth as number
-      colwidth = (width - 50) / 2
+      var colwidth2 as number
+      colwidth2 = (width - 50) / 2
+      
+      var colwidth3 as number
+      colwidth3 = (width - 50) / 3
 
       ~if the user wants to omit the validation report, the hide it and allow the
       ~rest of the sheet to fill that space; otherwise, output the layout and the
       ~top of the validation report establishes the bottom for all other output
       var extent as number
-      if (hero.tagis[source.Validation] = 0) then
-        layout[oValidate].visible = 0
-        extent = height
-      else
-        layout[oValidate].width = width
-        perform layout[oValidate].render
-        layout[oValidate].top = height - layout[oValidate].height
-        extent = layout[oValidate].top - autogap
-        endif
+      extent = height
+      ~if (hero.tagis[source.Validation] = 0) then
+      ~  layout[oValidate].visible = 0
+      ~  extent = height
+      ~else
+      ~  layout[oValidate].width = width
+      ~  perform layout[oValidate].render
+      ~  layout[oValidate].top = height - layout[oValidate].height
+      ~  extent = layout[oValidate].top - autogap
+      ~  endif
 
-      ~position the leftside layout in the upper left corner
-      layout[oLeftSide].width = colwidth
-      layout[oLeftSide].height = extent - layout[oLeftSide].top
-      perform layout[oLeftSide].render
+      ~position the Character Info layout in the upper left corner
+      layout[oCharInfo].width = colwidth3
+      layout[oCharInfo].height = extent - layout[oCharInfo].top
+      perform layout[oCharInfo].render
+      
+      layout[oCompInfo].left = colwidth3 + 16
+      layout[oCompInfo].width = colwidth3
+      layout[oCompInfo].height = extent - layout[oCompInfo].top
+      perform layout[oCompInfo].render
+      
 
       ~position the activated adjustments at the bottom on the left; this will
       ~establish the remaining space available on the left for armor and weapons
-      layout[oAdjust].width = colwidth
-      perform layout[oAdjust].render
-      layout[oAdjust].top = extent - layout[oAdjust].height
+      ~layout[oAdjust].width = width
+      ~perform layout[oAdjust].render
+      ~layout[oAdjust].top = extent - layout[oAdjust].height
 
+      layout[oDerived].width = width - colwidth3
+      layout[oDerived].top = layout[oCharInfo].bottom
+      layout[oDerived].height = extent - layout[oDerived].top
+      
       ~position the armory layout within the remaining space on the left
-      layout[oArmory].width = colwidth
-      layout[oArmory].top = layout[oLeftSide].bottom + autogap
-      layout[oArmory].height = layout[oAdjust].top - autogap - layout[oArmory].top
-      perform layout[oArmory].render
+      ~layout[oArmory].width = width
+      ~layout[oArmory].top = layout[oLeftSide].bottom + autogap
+      ~layout[oArmory].height = layout[oAdjust].top - autogap - layout[oArmory].top
+      ~perform layout[oArmory].render
 
       ~position the logos layout in the upper right corner
-      layout[oLogos].width = colwidth
+      layout[oLogos].width = colwidth3
       perform layout[oLogos].render
-      layout[oLogos].left = width - colwidth
+      layout[oLogos].left = width - colwidth3
 
       ~position the rightside layout in the remaining space on the right
-      layout[oRightSide].width = colwidth
-      layout[oRightSide].top = layout[oLogos].bottom + autogap
-      layout[oRightSide].left = layout[oLogos].left
-      layout[oRightSide].height = extent - layout[oRightSide].top
-      perform layout[oRightSide].render
+      ~layout[oRightSide].width = colwidth
+      ~layout[oRightSide].top = layout[oLogos].bottom + autogap
+      ~layout[oRightSide].left = layout[oLogos].left
+      ~layout[oRightSide].height = extent - layout[oRightSide].top
+      ~perform layout[oRightSide].render
       ]]></position>
     </sheet>
 
