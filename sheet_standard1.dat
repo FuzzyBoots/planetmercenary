@@ -205,7 +205,7 @@
         </labeltext>
       </output_label>
     </portal-->
-  
+    
   <!-- oHealth portal
         This is a grouping of items related to Health. It will have the base health/powers
         value, a larger box for tracking deductions, and three headers with boxes of
@@ -265,7 +265,7 @@
     
   <portal
     id="valBoxRed"
-    style="outGreyBox">
+    style="outNormal">
     <output_label
       text=" ">
       </output_label>
@@ -273,7 +273,7 @@
     
   <portal
     id="valBoxDef"
-    style="outGreyBox">
+    style="outNormal">
     <output_label
       text=" ">
       </output_label>
@@ -281,7 +281,7 @@
     
   <portal
     id="valBoxDdge"
-    style="outGreyBox">
+    style="outNormal">
     <output_label
       text=" ">
       </output_label>
@@ -411,12 +411,14 @@
       </output_table>
     </portal>
 
-
   
+  
+    
   <!-- oDerivPick template
         This template presents the various derived traits. Derived traits simply list
-        the name and final value for each. We use margins around the template to get
-        a large indent on either side and insert a little bit of vertical spacing.
+        the name and final value for each, stacked vertically. We use margins around 
+        the template to get a large indent on either side and insert a little bit of 
+        vertical spacing.
   -->
   <template
     id="oDerivPick"
@@ -427,7 +429,7 @@
 
     <portal
       id="name"
-      style="outNameLg">
+      style="outSmallCt">
       <output_label
         field="name">
         </output_label>
@@ -435,35 +437,34 @@
 
     <portal
       id="value"
-      style="outValueLg">
+      style="outNormal">
       <output_label
         field="trtFinal">
         </output_label>
       </portal>
 
-    <portal
-      id="dots"
-      style="outDots">
-      <output_dots>
-        </output_dots>
-      </portal>
-
     <position><![CDATA[
-      ~our height is based on the tallest portal
-      height = portal[name].height
+      ~our width is based on the name width
+      width = portal[name].width
+      
+      ~our height is based on stacking the two together with margins
+      height = 5 + portal[name].height + 5 + portal[value].height + 5
+      
       doneif (issizing <> 0)
-
-      ~center everything vertically
-      perform portal[name].centervert
-      perform portal[value].centervert
-      perform portal[dots].centervert
+      
+      ~center everything horizontally
+      perform portal[name].centerhorz
+      perform portal[value].centerhorz
 
       ~position the value at the rightmost edge
       perform portal[value].alignedge[right,0]
 
-      ~extend the dots from the right of the name across to the value on the right
-      perform portal[dots].alignrel[ltor,name,5]
-      portal[dots].width = portal[value].left - 5 - portal[dots].left
+      ~position the name at the topmost edge
+      perform portal[name].alignedge[top,5]
+
+      ~position the value at the bottommost edge
+      perform portal[name].alignedge[bottom,5]
+
       ]]></position>
 
     </template>
@@ -1289,7 +1290,7 @@
       portal[oHeroRace].width = width - portal[oRaceLbl].right - 5
       
       portal[oCharBox].top = portal[oCharSec].bottom
-      portal[oCharBox].left = portal[oCharSec].left
+      portal[oCharBox].left = 0
       portal[oCharBox].width = width
       portal[oCharBox].height = portal[oHeroRace].bottom - portal[oCharSec].bottom + 5
 
@@ -1329,6 +1330,10 @@
     <portalref portal="valBoxRed"/> 
     <portalref portal="valBoxDef"/> 
     <portalref portal="valBoxDdge"/>
+    <templateref template="oDerivPick" reference="health" thing="trHealth"/>
+    <templateref template="oDerivPick" reference="defense" thing="trDefense"/>
+    <templateref template="oDerivPick" reference="dodge" thing="trDodge"/>
+    <templateref template="oDerivPick" reference="DR" thing="trDR"/>
     <position><![CDATA[
       ~Position the Health label with a box below
       portal[oHealthLbl].left = 5
@@ -1348,6 +1353,22 @@
       portal[oReductLbl].left = width * 6 / 9
       portal[oDefLbl].left = width * 7 / 9
       portal[oDodgeLbl].left = width * 8 / 9
+      
+      portal[valBoxRed].top = portal[oReductLbl].bottom + 5
+      portal[valBoxDef].top = portal[oDefLbl].bottom + 5
+      portal[valBoxDdge].top = portal[oDodgeLbl].bottom + 5
+      
+      portal[valBoxRed].width = width / 9 - 10
+      portal[valBoxDef].width = width / 9 - 10
+      portal[valBoxDdge].width = width / 9 - 10
+      
+      ~portal[valBoxRed].left = width * 6 / 9
+      ~portal[valBoxDef].left = width * 7 / 9
+      ~portal[valBoxDdge].left = width * 8 / 9
+      
+      perform portal[valBoxRed].centeron[horz,oReductLbl]
+      perform portal[valBoxDef].centeron[horz,oDefLbl]
+      perform portal[valBoxDdge].centeron[horz,oDodgeLbl]
     ]]></position>
     </layout>
     

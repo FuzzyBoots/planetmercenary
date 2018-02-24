@@ -98,6 +98,22 @@
       </font>
     </resource>
 
+  <!-- border used for character sheet bubbles -->
+  <resource
+    id="bubble"
+    issystem="no"
+    isbuiltin="no">
+    <border>
+      <topleft bitmap="bubble_topleft.bmp"/>
+      <topright bitmap="bubble_topright.bmp"/>
+      <bottomleft bitmap="bubble_bottomleft.bmp"/>
+      <bottomright bitmap="bubble_bottomright.bmp"/>
+      <left bitmap="bubble_left.bmp"/>
+      <top bitmap="bubble_top.bmp"/>
+      <right bitmap="bubble_right.bmp"/>
+      <bottom bitmap="bubble_bottom.bmp"/>
+      </border>
+    </resource>
 
 <!-- ##### Output Styles ##### -->
 
@@ -115,7 +131,7 @@
   <!-- simple text for output -->
   <style
     id="outNormal"
-    border="solid">
+    border="bubble">
     <style_output
       textcolor="000000"
       font="ofntnormal"
@@ -198,7 +214,7 @@
   <!-- left-aligned for output with border-->
   <style
     id="outBNormLt"
-    border="solid">
+    border="bubble">
     <style_output
       textcolor="000000"
       font="ofntnormal"
@@ -209,7 +225,7 @@
   <!-- center-aligned for output with border-->
   <style
     id="outBNormCt"
-    border="solid">
+    border="bubble">
     <style_output
       textcolor="000000"
       font="ofntnormal"

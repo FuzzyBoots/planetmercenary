@@ -36,6 +36,7 @@
   isunique="yes"
   description="This is your health, which is derived from your sophont type and your endurance.">
   <fieldval field="trtAbbrev" value="Hlth"/>
+  <tag group="TraitType" tag="Health"/>
   <tag group="explicit" tag="9"/>
   <tag group="DashTacCon" tag="Combat"/>
   <eval index="1" phase="Traits" priority="4000">
@@ -54,7 +55,8 @@
     description="Defense is equal to 5 plus your character's Dodge bonus. This is the TN for someone who is not Dodging, or who rolled Dodge lower than their Defense">
     <fieldval field="trtAbbrev" value="Def"/>
     <fieldval field="trtBonus" value="0"/>
-    <tag group="explicit" tag="2"/>
+    <tag group="TraitType" tag="Defense"/>
+    <tag group="explicit" tag="3"/>
     <tag group="DashTacCon" tag="Combat"/>
 
     <!-- Calculate the trait as appropriate -->
@@ -75,6 +77,28 @@
     <fieldval field="trtBonus" value="0"/>
     <tag group="explicit" tag="2"/>
     <tag group="DashTacCon" tag="Combat"/>
+    <tag group="TraitType" tag="Defense"/>
+  </thing>
+  
+  
+  <!--  Dodge Trait -->
+  <thing
+    id="trDodge"
+    name="Dodge"
+    compset="Trait"
+    isunique="yes"
+    description="">
+    <fieldval field="trtAbbrev" value="Ddg"/>
+    <fieldval field="trtBonus" value="0"/>
+    <tag group="explicit" tag="4"/>
+    <tag group="DashTacCon" tag="Combat"/>
+    <tag group="TraitType" tag="Defense"/>
+    
+    <!-- Calculate the trait as appropriate -->
+    <eval index="1" phase="Traits" priority="4000"><![CDATA[
+      ~Dodge is the Dodge skill
+      field[trtBase].value = #traitfound[skDodge]
+    ]]></eval> 
   </thing>
   
   

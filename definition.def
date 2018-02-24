@@ -209,7 +209,7 @@ These data files provide a framework for Hypernode Press's Planet Mercenary game
 
 
   <!-- The "phase" elements define the various evaluation stages that all processing of
-        scripts will be channelled through. Each phase identifies a stage, with the list
+        scripts will be channeled through. Each phase identifies a stage, with the list
         of phases being processed in the order specified below. Within each phase, the
         priority value assigned controls the processing order.
   -->

@@ -90,6 +90,15 @@
     <value id="NonCombat"/>   <!-- Whether to show pick within the list of "NonCombat" information on the TacCon -->
     <value id="Traits"/>      <!-- Whether to show pick in the "traits" column on the TacCon -->
     </group>
+    
+  <!-- TraitType group - derived traits get displayed in tables for the character sheet. 
+        This is a convenient way of differentiating Health, and the Defense values -->
+  <group
+    id="TraitType">
+    <value id="Health"/>
+    <value id="Defense"/>
+    </group>
+
 
   <group
     id="GearType"

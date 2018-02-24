@@ -316,7 +316,7 @@
       <autotag group="Skills" tag="Combat"/>
       <autotag group="Skills" tag="Physical"/>
       </bootstrap>
-    <eval phase="Traits" priority="4002">#traitbonus[trHealth] = field[baseHealth].value + 2 * #trait[skEndure]
+    <eval phase="Traits" priority="4002">#traitbase[trHealth] = field[baseHealth].value + 2 * #trait[skEndure]
       <after name="Calc Sophont Health"/>
       </eval>
     </thing>
