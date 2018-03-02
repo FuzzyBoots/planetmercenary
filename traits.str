@@ -21,7 +21,7 @@
       id="trtAbbrev"
       name="Abbreviation"
       type="static"
-      maxlength="5">
+      maxlength="7">
       </field>
 
     <!-- Base value that costs no points, and can't be decreased, but counts toward the maximum -->
@@ -136,12 +136,6 @@
     name="Background trait"
     autocompset="no"
     panellink="basics">
-    <eval index="1" phase="Setup" priority="3000" name="BG SkillBonus">
-      <![CDATA[
-      foreach pick in hero from Skill where tagids[SkillBonus.?, " | "]
-        perform eachpick.field[trtBG].modify[+,2,"Background trait"]
-        nexteach
-        ]]></eval>
     
     </component>
 
@@ -293,14 +287,13 @@
       <finalize><![CDATA[
         ~Displays name
         @text = field[name].text
-        
         var numAoE as number
         var i as number
         
-        if (tagcount[User.HasSpec] <> 0) then
+        ~if (tagcount[User.HasSpec] <> 0) then
           numAoE = tagcount[User.HasSpec]
           
-          if (numAoE > 0) then
+          ~if (numAoE > 0) then
             @text &= " ("
             
             foreach pick in gizmo where "component.Specialty"
@@ -312,8 +305,8 @@
               nexteach
               
             @text &= ")"
-            endif
-        endif
+            ~endif
+        ~endif
         
         ]]></finalize>
       </field>  
@@ -321,10 +314,6 @@
     <!-- Each skill needs its own identity tag so existing skills can be identified during advancement -->
     <identity group="Skill"/>
     
-    <!-- Each skill can also be selected as a background/command package/race bonus.
-         This bonus does count against the maximum at character creation.    -->
-    <identity group="SkillBonus"/>
-
     <!-- Every skill is shown on the "Rolls" mouse-over on the Dashboard/TacCon -->
     <tag group="DashTacCon" tag="Rolls"/>
  

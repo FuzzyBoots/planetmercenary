@@ -2,7 +2,9 @@
 <document signature="Hero Lab Data">
   <thing id="racUpple" name="Uuplechan" description="The Uuplechan race are a catlike squat race prone to research and other studious pursuits.\n\n{i}The Cat in the Hat Comes Back{/i} enjoyed renewed popularity in the early 28th century with its discovery in an Earth Library by a felino-hominid researcher from Uuplech. The contents of the book made the rounds on Uuplechan networks under the caption &quot;Tell me this doesn&apos;t look JUST like my half-uncle Cubbins.&quot;\n\n {b}Bonus Skill Ranks:{/b} +2 Research, +1 to any two Mental skills\n\n {b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} Uuplechan can reroll any one dice in Research as if they had a specialty.\nUuplechan, when forced to move without a vehicle, move somewhat slower than humans due to their squat limbs. The Game Chief may choose to limit how quickly they can move." compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="6"/>
-    <tag group="SkillBonus" tag="skRes"/>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skRes"/>
+      </bootstrap>
     <bootstrap thing="fRPlusSk">
       <autotag group="Skills" tag="Mental"/>
       <autotag group="Bonus" tag="Plus1"/>

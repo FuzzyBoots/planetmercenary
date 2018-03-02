@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
   <thing id="cmdMilPol" name="Military Police" description="Sometimes, mercenaries don&apos;t do what they&apos;re supposed to do. Letting them get away with it is bad for business, so sometimes you need an enforcer. The Military Police fill that gap." compset="CmdPckge" uniqueness="unique">
-    <tag group="SkillBonus" tag="skInsight"/>
-    <tag group="SkillBonus" tag="skIntim"/>
-    <tag group="SkillBonus" tag="skPercept"/>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skInsight"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skIntim"/>
+      </bootstrap>
+    <bootstrap thing="fRPlusSk2">
+      <autotag group="Skill" tag="skPercept"/>
+      </bootstrap>
     <bootstrap thing="fRPlusSk">
       <autotag group="Bonus" tag="Plus2"/>
       <autotag group="Skills" tag="Combat"/>

@@ -206,19 +206,14 @@
       </output_label>
     </portal-->
     
-  <!-- oHealth portal
-        This is a grouping of items related to Health. It will have the base health/powers
-        value, a larger box for tracking deductions, and three headers with boxes of
-        Reduction, Defense, and Dodge 
-  -->
+  <!-- oDerivBox portal - Background box -->
   <portal
-    id="oHealthBox"
+    id="oDerivBox"
     style="outNormal">
     <output_label
-      text=" ">
-      </output_label>
+      text="  "/>
     </portal>
-    
+  
   <portal
     id="oHealthBx2"
     style="outNormal">
@@ -226,70 +221,68 @@
       text=" ">
       </output_label>
     </portal>
-    
-  <!-- oHealthLbl
-  -->
+  
+  <!-- oRiPP portal - oRiPP graphic -->
   <portal
-    id="oHealthLbl"
-    style="outNameLg">
-    <output_label
-      text="Health"/>
+    id="oRiPP"
+    style="outTitle">
+    <output_image
+      image="RiPP.bmp">
+      </output_image>
     </portal>
-    
-  <!-- oReductLbl
-  -->
+
+  <!-- oSkillPen portal -->  
   <portal
-    id="oReductLbl"
-    style="outSmallCt">
-    <output_label
-      text="Reduction"/>
-    </portal>
-    
-  <!-- oDefLbl
-  -->
-  <portal
-    id="oDefLbl"
-    style="outSmallCt">
-    <output_label
-      text="Defense"/>
-    </portal>
-    
-  <!-- oDodgeLbl
-  -->
-  <portal
-    id="oDodgeLbl"
-    style="outSmallCt">
-    <output_label
-      text="Dodge"/>
-    </portal>
-    
-  <portal
-    id="valBoxRed"
-    style="outNormal">
-    <output_label
-      text=" ">
-      </output_label>
-    </portal>
-    
-  <portal
-    id="valBoxDef"
-    style="outNormal">
-    <output_label
-      text=" ">
-      </output_label>
-    </portal>
-    
-  <portal
-    id="valBoxDdge"
-    style="outNormal">
-    <output_label
-      text=" ">
-      </output_label>
+    id="oPenLabel"
+    style="outNormLt">
+    <output_label text="Skill Penalties"/>
     </portal>
   
-  <!-- oSkills portal
-        This is a table of all Skills for the actor.
-  -->
+  <portal
+    id="oPenValBox"
+    style="outNormal">
+    <output_label
+      text=" "/>
+    </portal>
+    
+  <portal
+    id="oPenBox"
+    style="outNormal">
+    <output_label
+      text=" "/>
+    </portal>
+
+  <!-- oSkillsSec portal - Skills portal -->
+  <portal
+    id="oSkillsSec"
+    style="outSection">
+    <output_label
+      text="Skills"/>
+    </portal>
+  
+  <!-- oSkillsBox portal - Background box -->
+  <portal
+    id="oSkillsBox"
+    style="outNormal">
+    <output_label
+      text=" "/>
+    </portal>
+    
+  <portal
+  id="oCSkills"
+  style="outNormal">
+    <output_table 
+      component="Skill" 
+      showtemplate="oSkillPick">
+      <list><![CDATA[
+        Skills.Combat 
+        ]]></list>
+      <headertitle><![CDATA[
+        @text="Combat Skills"
+      ]]></headertitle>
+      </output_table>
+  </portal>
+  
   <portal
     id="oSkills"
     style="outNormal">
@@ -303,8 +296,7 @@
         ]]></headertitle>
       </output_table>
     </portal>
-
-
+    
   <!-- oGear portal
         This is a table of all Gear carried by the actor. The gear list needs to
         exclude weapons and armor, since those are already listed in the separate
@@ -424,20 +416,20 @@
     id="oDerivPick"
     name="Output Derived Traits Table"
     compset="Trait"
-    marginhorz="200"
+    marginhorz="5"
     marginvert="5">
 
     <portal
       id="name"
       style="outSmallCt">
       <output_label
-        field="name">
+        field="trtAbbrev">
         </output_label>
       </portal>
 
     <portal
       id="value"
-      style="outNormal">
+      style="outBNormCt">
       <output_label
         field="trtFinal">
         </output_label>
@@ -445,26 +437,26 @@
 
     <position><![CDATA[
       ~our width is based on the name width
-      width = portal[name].width
+      ~ width = portal[name].width
       
       ~our height is based on stacking the two together with margins
-      height = 5 + portal[name].height + 5 + portal[value].height + 5
+      height = portal[name].height + portal[value].height
       
       doneif (issizing <> 0)
+      
+      portal[value].width = width * 2 / 3
       
       ~center everything horizontally
       perform portal[name].centerhorz
       perform portal[value].centerhorz
 
-      ~position the value at the rightmost edge
-      perform portal[value].alignedge[right,0]
-
       ~position the name at the topmost edge
-      perform portal[name].alignedge[top,5]
+      perform portal[name].alignedge[top,0]
 
       ~position the value at the bottommost edge
-      perform portal[name].alignedge[bottom,5]
-
+      perform portal[value].alignedge[bottom,0]
+      
+      
       ]]></position>
 
     </template>
@@ -596,13 +588,13 @@
   <template
     id="oSkillPick"
     name="Output Skills Table"
-    compset="Trait"
-    marginhorz="200"
+    compset="Skill"
+    marginhorz="2"
     marginvert="2">
 
     <portal
       id="name"
-      style="outNameLg">
+      style="outNormLt">
       <output_label
         field="name">
         </output_label>
@@ -610,17 +602,18 @@
 
     <portal
       id="value"
-      style="outValueLg">
+      style="outBNormLt">
       <output_label
         field="trtFinal">
         </output_label>
       </portal>
 
     <portal
-      id="dots"
-      style="outDots">
-      <output_dots>
-        </output_dots>
+      id="special"
+      style="outBNormLt">
+      <output_label
+        field="trtFinal">
+        </output_label>
       </portal>
 
     <position><![CDATA[
@@ -637,13 +630,13 @@
       perform portal[name].autoheight
 
       ~the dots should span the region between the name and the value
-      perform portal[dots].alignrel[ltor,name,5]
-      portal[dots].width = portal[value].left - 5 - portal[dots].left
+      ~perform portal[dots].alignrel[ltor,name,5]
+      ~portal[dots].width = portal[value].left - 5 - portal[dots].left
 
       ~center all portals vertically
       perform portal[name].centervert
       perform portal[value].centervert
-      perform portal[dots].centervert
+      ~perform portal[dots].centervert
       ]]></position>
 
     </template>
@@ -1173,6 +1166,15 @@
 
     </template>
 
+  <!-- oRiPPs layout -->
+  <layout
+    id="oRiPPs">
+    <portalref portal="oRiPP"/>
+    <position><![CDATA[
+      portal[oRiPP].top = 0
+      perform portal[oRiPP].centerhorz
+      ]]></position>
+      </layout>
 
   <!-- oLogos layout
         This layout sizes and positions the Hero Lab and game system logos. The logos
@@ -1255,7 +1257,7 @@
     <portalref portal="oRaceLbl"/>
     <portalref portal="oHeroRace"/>
     <position><![CDATA[
-      ~position the hero name at the top with the hero details beneath the name
+      ~position the header at the top with the hero details beneath the name
       perform portal[oCharSec].autoplace[0]
       
       portal[oNameLbl].left = portal[oCharSec].left + 5
@@ -1270,9 +1272,9 @@
       
       ~ The width is 1/2 except Name, which is 1/4
       portal[oNameLbl].width = width / 4
-      portal[oCmdPkgLbl].width = width / 2
-      portal[oBackgrLbl].width = width / 2
-      portal[oRaceLbl].width = width / 2
+      portal[oCmdPkgLbl].width = width * 3 / 5
+      portal[oBackgrLbl].width = width * 3 / 5
+      portal[oRaceLbl].width = width * 3 / 5
       
       portal[oHeroName].left = portal[oNameLbl].right + 5 
       portal[oHeroCPkg].left = portal[oCmdPkgLbl].right + 5
@@ -1318,61 +1320,69 @@
       
     ]]></position>
     </layout>
-  
+
   <layout
     id="oDerived">
-    <portalref portal="oHealthLbl"/>
-    <portalref portal="oHealthBox"/>
     <portalref portal="oHealthBx2"/>
-    <portalref portal="oReductLbl"/> 
-    <portalref portal="oDefLbl"/> 
-    <portalref portal="oDodgeLbl"/>
-    <portalref portal="valBoxRed"/> 
-    <portalref portal="valBoxDef"/> 
-    <portalref portal="valBoxDdge"/>
-    <templateref template="oDerivPick" reference="health" thing="trHealth"/>
-    <templateref template="oDerivPick" reference="defense" thing="trDefense"/>
-    <templateref template="oDerivPick" reference="dodge" thing="trDodge"/>
-    <templateref template="oDerivPick" reference="DR" thing="trDR"/>
+    <portalref portal="oDerivBox"/>
+    <templateref template="oDerivPick" reference="oHealth" thing="trHealth"/>
+    <templateref template="oDerivPick" reference="oDefense" thing="trDefense"/>
+    <templateref template="oDerivPick" reference="oDodge" thing="trDodge"/>
+    <templateref template="oDerivPick" reference="oDR" thing="trDR"/>
     <position><![CDATA[
-      ~Position the Health label with a box below
-      portal[oHealthLbl].left = 5
-      portal[oHealthLbl].top = 5
-      portal[oHealthLbl].width = 150
+      template[oHealth].left = 5
+      template[oHealth].top = 5
+      template[oHealth].width = width / 9      
+      perform template[oHealth].render
       
-      portal[oHealthBox].left = portal[oHealthLbl].left
-      portal[oHealthBox].top = portal[oHealthLbl].bottom + 5
-      portal[oHealthBox].width = portal[oHealthLbl].width
-      portal[oHealthBox].height = portal[oHealthLbl].height
+      ~ Height is based on our tallest element, which is the templates
+      height = template[oHealth].height + 10
+            
+      portal[oHealthBx2].left = template[oHealth].right + 20
+      portal[oHealthBx2].width = width * 2 / 3 - template[oHealth].right - 25
+      portal[oHealthBx2].height = template[oHealth].height
+      portal[oHealthBx2].top = template[oHealth].bottom - portal[oHealthBx2].height + 5
       
-      portal[oHealthBx2].left = portal[oHealthLbl].right + 20
-      portal[oHealthBx2].top = portal[oHealthLbl].top
-      portal[oHealthBx2].width = width * 2 / 3 - portal[oHealthLbl].right - 25
-      portal[oHealthBx2].height = portal[oHealthBox].bottom - portal[oHealthLbl].top
+      template[oDR].left = width * 6 / 9
+      template[oDR].top = template[oHealth].top
+      template[oDR].width = width / 9
+      perform template[oDR].render
       
-      portal[oReductLbl].left = width * 6 / 9
-      portal[oDefLbl].left = width * 7 / 9
-      portal[oDodgeLbl].left = width * 8 / 9
+      template[oDefense].left = width * 7 / 9
+      template[oDefense].top = template[oHealth].top
+      template[oDefense].width = width / 9
+      perform template[oDefense].render
       
-      portal[valBoxRed].top = portal[oReductLbl].bottom + 5
-      portal[valBoxDef].top = portal[oDefLbl].bottom + 5
-      portal[valBoxDdge].top = portal[oDodgeLbl].bottom + 5
+      template[oDodge].left = width * 8 / 9
+      template[oDodge].top = template[oHealth].top
+      template[oDodge].width = width / 9
+      perform template[oDodge].render
       
-      portal[valBoxRed].width = width / 9 - 10
-      portal[valBoxDef].width = width / 9 - 10
-      portal[valBoxDdge].width = width / 9 - 10
-      
-      ~portal[valBoxRed].left = width * 6 / 9
-      ~portal[valBoxDef].left = width * 7 / 9
-      ~portal[valBoxDdge].left = width * 8 / 9
-      
-      perform portal[valBoxRed].centeron[horz,oReductLbl]
-      perform portal[valBoxDef].centeron[horz,oDefLbl]
-      perform portal[valBoxDdge].centeron[horz,oDodgeLbl]
+      portal[oDerivBox].top = 0
+      portal[oDerivBox].left = 0
+      portal[oDerivBox].width = width + 5
+      portal[oDerivBox].height = height + 5
     ]]></position>
     </layout>
     
   
+  <layout
+    id="oSkillPen">
+    <portalref portal="oPenLabel"/>
+    <portalref portal="oPenValBox"/>
+    <portalref portal="oPenBox"/>
+    <position><![CDATA[
+      portal[oPenLabel].top = 5
+      portal[oPenLabel].left = 5
+      portal[oPenValBox].left = portal[oPenLabel].right + 5
+      portal[oPenValBox].width = width - portal[oPenLabel].right - 5
+      portal[oPenBox].left = left
+      portal[oPenBox].top = 0
+      portal[oPenBox].width = width
+      portal[oPenBox].height = portal[oPenValBox].height
+    ]]></position>
+    </layout>
+    
   <!-- oArmory layout
         This layout contains the tables of armor and weapons that appear in the
         lefthand column of the character sheet. If the two tables are too large to
@@ -1490,13 +1500,13 @@
   <sheet
     id="standard1"
     name="Standard character sheet, page #1">
+    <layoutref layout="oRiPPs"/>
     <layoutref layout="oLogos"/>
     <layoutref layout="oCharInfo"/>
     <layoutref layout="oCompInfo"/>
     <layoutref layout="oDerived"/>
-    <!--layoutref layout="oSkillPen"/>
-    <layoutref layout="oRiPPs"/>
-    <layoutref layout="oSkills"/>
+    <layoutref layout="oSkillPen"/>
+    <!--layoutref layout="oSkills"/>
     <layoutref layout="oAdjust"/>
     <layoutref layout="oArmory"/>
     <layoutref layout="oValidate"/-->
@@ -1517,7 +1527,7 @@
       var colwidth3 as number
       colwidth3 = (width - 50) / 3
 
-      ~if the user wants to omit the validation report, the hide it and allow the
+      ~if the user wants to omit the validation report, then hide it and allow the
       ~rest of the sheet to fill that space; otherwise, output the layout and the
       ~top of the validation report establishes the bottom for all other output
       var extent as number
@@ -1552,6 +1562,12 @@
       layout[oDerived].width = width - colwidth3
       layout[oDerived].top = layout[oCharInfo].bottom
       layout[oDerived].height = extent - layout[oDerived].top
+      perform layout[oDerived].render
+      
+      layout[oSkillPen].width = width - colwidth3
+      layout[oSkillPen].top = layout[oDerived].bottom
+      layout[oSkillPen].height = extent - layout[oSkillPen].top
+      perform layout[oSkillPen].render
       
       ~position the armory layout within the remaining space on the left
       ~layout[oArmory].width = width
@@ -1564,6 +1580,11 @@
       perform layout[oLogos].render
       layout[oLogos].left = width - colwidth3
 
+      layout[oRiPPs].left = width - colwidth3
+      layout[oRiPPs].width = colwidth3
+      layout[oRiPPs].top = layout[oLogos].bottom
+      perform layout[oRiPPs].render
+      
       ~position the rightside layout in the remaining space on the right
       ~layout[oRightSide].width = colwidth
       ~layout[oRightSide].top = layout[oLogos].bottom + autogap

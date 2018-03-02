@@ -65,12 +65,17 @@
         skillrank = eachpick.field[trtFinal].value
         speccount = eachpick.tagcount[User.HasSpec]
         
-        if (speccount < skillrank) then
-          foreach pick in eachpick.gizmo where "component.Specialty & !Hide.Specialty"
-            if (each.isunique <> 0) then
-              tagexpr &= " & !Specialty." & each.idstring
+        var specExpr as string
+        foreach pick in eachpick.gizmo where "component.Specialty & !Hide.Specialty"
+          if (each.isunique <> 0) then
+            specExpr &= " & !Specialty." & each.idstring
             endif
+           speccount += 1
           nexteach
+        
+        debug skillID & " skillRank: " & skillrank & " specCount: " & speccount & " specExptr: " & specExpr
+        if (speccount < skillrank) then
+          tagexpr &= specExpr         
         else
           tagexpr &= " & !Skill." & skillID
         endif
@@ -79,7 +84,7 @@
       ~if there are any tags to exclude, append them to the tagexpr appropriately
       if (empty(tagexpr) = 0) then
         field[advDynamic].text &= tagexpr
-        ~ debug "advDynamic: " & field[advDynamic].text
+        debug "advDynamic: " & field[advDynamic].text
         endif
       ]]></eval>
 <child entity="Advance">
