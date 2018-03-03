@@ -284,19 +284,50 @@
   </portal>
   
   <portal
-    id="oSkills"
-    style="outNormal">
-    <output_table
-      component="Skill"
+  id="oPSkills"
+  style="outNormal">
+    <output_table 
+      component="Skill" 
       showtemplate="oSkillPick">
       <list><![CDATA[
+        Skills.Physical 
         ]]></list>
       <headertitle><![CDATA[
-        @text = "Skills"
-        ]]></headertitle>
+        @text="Physical Skills"
+      ]]></headertitle>
       </output_table>
-    </portal>
-    
+  </portal>
+  
+  <portal
+  id="oMSkills"
+  style="outNormal">
+    <output_table 
+      component="Skill" 
+      showtemplate="oSkillPick">
+      <list><![CDATA[
+        Skills.Mental 
+        ]]></list>
+      <headertitle><![CDATA[
+        @text="Mental Skills"
+      ]]></headertitle>
+      </output_table>
+  </portal>
+  
+  <portal
+  id="oSSkills"
+  style="outNormal">
+    <output_table 
+      component="Skill" 
+      showtemplate="oSkillPick">
+      <list><![CDATA[
+        Skills.Social 
+        ]]></list>
+      <headertitle><![CDATA[
+        @text="Social Skills"
+      ]]></headertitle>
+      </output_table>
+  </portal>
+  
   <!-- oGear portal
         This is a table of all Gear carried by the actor. The gear list needs to
         exclude weapons and armor, since those are already listed in the separate
@@ -621,22 +652,28 @@
       height = portal[name].height
       doneif (issizing <> 0)
 
-      ~position the value at the right edge
-      perform portal[value].alignedge[right,0]
+      ~position the name to the left and let it take up a third of the space.
+      portal[name].left = 0
+      portal[name].width = width / 3
+      
+      ~position the value to the right of that, and a ninth of the space
+      portal[value].left = portal[name].right + 5
+      portal[value].width = width / 9
+      
+      ~ Let the Specialties take up the rest of the space
+      portal[special].left = portal[value].right + 50
+      portal[special].width = width - portal[special].left
 
       ~size the name to fit the available space
-      portal[name].width = portal[value].left - 10
       perform portal[name].sizetofit[40]
       perform portal[name].autoheight
-
-      ~the dots should span the region between the name and the value
-      ~perform portal[dots].alignrel[ltor,name,5]
-      ~portal[dots].width = portal[value].left - 5 - portal[dots].left
-
+      perform portal[special].sizetofit[32]
+      perform portal[special].autoheight
+      
       ~center all portals vertically
       perform portal[name].centervert
       perform portal[value].centervert
-      ~perform portal[dots].centervert
+      perform portal[special].centervert
       ]]></position>
 
     </template>
@@ -1379,9 +1416,42 @@
       portal[oPenBox].left = left
       portal[oPenBox].top = 0
       portal[oPenBox].width = width
-      portal[oPenBox].height = portal[oPenValBox].height
+      portal[oPenBox].height = portal[oPenValBox].height + 10
+      height = portal[oPenBox].height
     ]]></position>
     </layout>
+    
+  <layout
+    id="oSkills">
+    <portalref portal="oSkillsSec"/>
+    <portalref portal="oSkillsBox"/>
+    <portalref portal="oCSkills"/>
+    <portalref portal="oSSkills"/>
+    <portalref portal="oMSkills"/>
+    <portalref portal="oPSkills"/>
+    <position><![CDATA[
+      portal[oSkillsSec].width = width
+      portal[oSkillsBox].width = width
+      portal[oCSkills].left = 0
+      portal[oMSkills].left = width / 2
+      portal[oCSkills].top = portal[oSkillsSec].bottom
+      portal[oMSkills].top = portal[oSkillsSec].bottom
+      portal[oCSkills].width = width / 2.05
+      portal[oMSkills].width = width / 2.05
+      portal[oCSkills].height = 800
+      portal[oMSkills].height = 800
+      
+      portal[oPSkills].left = 0
+      portal[oSSkills].left = width / 2
+      portal[oPSkills].top = portal[oCSkills].bottom
+      portal[oSSkills].top = portal[oMSkills].bottom
+      portal[oPSkills].width = width / 2.05
+      portal[oSSkills].width = width / 2.05
+      portal[oPSkills].height = 800
+      portal[oSSkills].height = 800
+      ]]></position>
+    </layout>
+    
     
   <!-- oArmory layout
         This layout contains the tables of armor and weapons that appear in the
@@ -1506,8 +1576,8 @@
     <layoutref layout="oCompInfo"/>
     <layoutref layout="oDerived"/>
     <layoutref layout="oSkillPen"/>
-    <!--layoutref layout="oSkills"/>
-    <layoutref layout="oAdjust"/>
+    <layoutref layout="oSkills"/>
+    <!--layoutref layout="oAdjust"/>
     <layoutref layout="oArmory"/>
     <layoutref layout="oValidate"/-->
     <position><![CDATA[
@@ -1585,12 +1655,10 @@
       layout[oRiPPs].top = layout[oLogos].bottom
       perform layout[oRiPPs].render
       
-      ~position the rightside layout in the remaining space on the right
-      ~layout[oRightSide].width = colwidth
-      ~layout[oRightSide].top = layout[oLogos].bottom + autogap
-      ~layout[oRightSide].left = layout[oLogos].left
-      ~layout[oRightSide].height = extent - layout[oRightSide].top
-      ~perform layout[oRightSide].render
+      layout[oSkills].top = layout[oSkillPen].bottom + 20
+      layout[oSkills].width = width
+      layout[oSkills].height = 2000
+      
       ]]></position>
     </sheet>
 
