@@ -290,26 +290,26 @@
         var numAoE as number
         var i as number
         
-        ~if (tagcount[User.HasSpec] <> 0) then
-          numAoE = tagcount[User.HasSpec]
-          
-          ~if (numAoE > 0) then
-            @text &= " ("
-            
-            foreach pick in gizmo where "component.Specialty"
-              i += 1
-              if (i > 1) then
-                @text &= ", "
-                endif
-              @text &= eachpick.field[name].text
-              nexteach
+        ~ There should just be one
+        var skTag as string
+        skTag = tagids[Skill.?]
+        debug "Skill tag: " & skTag
+        
+        var specText as string
+        foreach pick in gizmo where "component.Specialty"
+          i += 1
+          if (i > 1) then
+            specText &= ", "
+            endif
+          specText &= eachpick.field[name].text
+          nexteach
               
-            @text &= ")"
-            ~endif
-        ~endif
+        if (empty(specText) = 0) then
+          @text &= " (" & specText &")"
+          endif
         
         ]]></finalize>
-      </field>  
+      </field>
     
     <!-- Each skill needs its own identity tag so existing skills can be identified during advancement -->
     <identity group="Skill"/>
