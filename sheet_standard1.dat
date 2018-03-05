@@ -820,9 +820,8 @@
 
   <!-- oWeapPick template
         This template presents the weapons possessed by the character. Each weapon
-        lists its net attack value and damage, with ranged weapons including the
-        range details. Any weapon that doesn't satisfy the minimum strength requirement
-        is flagged with a suitable bitmap.
+        lists its damage and special qualities, with ranged weapons including the
+        reload and ammo details.
 
         The template is also used as a header for the table. As such, the template
         includes additional portals that are only used as part of the header (i.e.
@@ -844,28 +843,11 @@
     marginvert="2">
 
     <portal
-      id="badstr"
-      style="outNameMed">
-      <output_label>
-        <labeltext><![CDATA[
-          @text = "{font Webdings}" & chr(120)
-          ]]></labeltext>
-        </output_label>
-      </portal>
-
-    <portal
       id="name"
       style="outNameMed">
       <output_label
-        field="shortname">
-        </output_label>
-      </portal>
-
-    <portal
-      id="attack"
-      style="outNameMed">
-      <output_label
-        field="wpNetAtk">
+        field="shortname"
+        ismultiline="yes">
         </output_label>
       </portal>
 
@@ -873,7 +855,8 @@
       id="damage"
       style="outNameMed">
       <output_label
-        field="wpDamage">
+        field="wpDamage"
+        ismultiline="yes">
         </output_label>
       </portal>
 
@@ -1430,34 +1413,41 @@
     <portalref portal="oMSkills"/>
     <portalref portal="oPSkills"/>
     <position><![CDATA[
+      var colWidth as number
+      colWidth = (width - 30) / 2
       portal[oSkillsSec].width = width
       portal[oSkillsBox].width = width
-      portal[oCSkills].left = 0
-      portal[oMSkills].left = width / 2
+      portal[oCSkills].left = 5
+      portal[oMSkills].left = colWidth + 20
       portal[oCSkills].top = portal[oSkillsSec].bottom
       portal[oMSkills].top = portal[oSkillsSec].bottom
-      portal[oCSkills].width = width / 2.05
-      portal[oMSkills].width = width / 2.05
+      portal[oCSkills].width = colWidth
+      portal[oMSkills].width = colWidth
       portal[oCSkills].height = 800
       portal[oMSkills].height = 800
       
-      portal[oPSkills].left = 0
-      portal[oSSkills].left = width / 2
+      portal[oPSkills].left = 5
+      portal[oSSkills].left = colWidth + 20
       portal[oPSkills].top = portal[oCSkills].bottom
       portal[oSSkills].top = portal[oMSkills].bottom
-      portal[oPSkills].width = width / 2.05
-      portal[oSSkills].width = width / 2.05
+      portal[oPSkills].width = colWidth
+      portal[oSSkills].width = colWidth
       portal[oPSkills].height = 800
       portal[oSSkills].height = 800
+      
+      portal[oSkillsBox].top = 0
+      portal[oSkillsBox].left = 0
+      portal[oSkillsBox].height = portal[oPSkills].bottom + 5
+      
+      height = portal[oSkillsBox].height
       ]]></position>
     </layout>
-    
-    
+
   <!-- oArmory layout
-        This layout contains the tables of armor and weapons that appear in the
-        lefthand column of the character sheet. If the two tables are too large to
-        fit in the available space, they are truncated intelligently, with the
-        remaining gear appearing on a second spillover sheet.
+        This layout contains the tables of armor and weapons that appears in the
+        character sheet. If the two tables are too large to fit in the available 
+        space, they are truncated intelligently, with the remaining gear appearing 
+        on a second spillover sheet.
   -->
   <layout
     id="oArmory">
@@ -1465,9 +1455,9 @@
     <portalref portal="oWeapon"/>
     <position><![CDATA[
       ~position the armor table at the top and the weapon table beneath it
-      perform portal[oArmor].autoplace
       perform portal[oWeapon].autoplace
-
+      perform portal[oArmor].autoplace
+      
       ~if all equipment was shown, everything fits, so update height and we're done
       if (portal[oWeapon].itemsleft + portal[oArmor].itemsleft = 0) then
         height = autoextent
@@ -1577,9 +1567,9 @@
     <layoutref layout="oDerived"/>
     <layoutref layout="oSkillPen"/>
     <layoutref layout="oSkills"/>
-    <!--layoutref layout="oAdjust"/>
+    <!--layoutref layout="oAdjust"/-->
     <layoutref layout="oArmory"/>
-    <layoutref layout="oValidate"/-->
+    <!--layoutref layout="oValidate"/-->
     <position><![CDATA[
       ~set this global variable to 1 if you want the logos to be stacked; a value
       ~of zero places them side-by-side
@@ -1639,12 +1629,6 @@
       layout[oSkillPen].height = extent - layout[oSkillPen].top
       perform layout[oSkillPen].render
       
-      ~position the armory layout within the remaining space on the left
-      ~layout[oArmory].width = width
-      ~layout[oArmory].top = layout[oLeftSide].bottom + autogap
-      ~layout[oArmory].height = layout[oAdjust].top - autogap - layout[oArmory].top
-      ~perform layout[oArmory].render
-
       ~position the logos layout in the upper right corner
       layout[oLogos].width = colwidth3
       perform layout[oLogos].render
@@ -1655,10 +1639,16 @@
       layout[oRiPPs].top = layout[oLogos].bottom
       perform layout[oRiPPs].render
       
-      layout[oSkills].top = layout[oSkillPen].bottom + 20
+      layout[oSkills].top = layout[oSkillPen].bottom
       layout[oSkills].width = width
-      layout[oSkills].height = 2000
+      perform layout[oSkills].render
       
+      ~position the weapons layout within the remaining space
+      layout[oArmory].width = width
+      layout[oArmory].top = layout[oSkills].bottom
+      layout[oArmory].height = 600
+      perform layout[oArmory].render
+
       ]]></position>
     </sheet>
 
