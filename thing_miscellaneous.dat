@@ -197,13 +197,13 @@
       elseif (penalty > 0) then
         field[livename].text = "-" & penalty & " to " & skillNames
         
-        ~foreach pick in hero from Skill where skills
-        ~  perform eachpick.field[trtBonus].modify[-,penalty,"Background"]
-        ~nexteach
+        foreach pick in hero from Skill where skills
+          perform eachpick.field[sklRoll].modify[-,penalty,"Background"]
+          nexteach
       
-        ~foreach pick in hero from Skill where skilltypes
-        ~  perform eachpick.field[trtBonus].modify[-,penalty,"Background"]
-        ~nexteach
+        foreach pick in hero from Skill where skilltypes
+          perform eachpick.field[sklRoll].modify[-,penalty,"Background"]
+          nexteach
       endif
       
       ]]></eval>
