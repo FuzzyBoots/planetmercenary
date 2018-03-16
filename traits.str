@@ -287,6 +287,7 @@
       <finalize><![CDATA[
         ~Displays name
         @text = field[name].text
+        debug "In sklTabName"
         var numAoE as number
         var i as number
         
@@ -296,12 +297,15 @@
         debug "Skill tag: " & skTag
         
         var specText as string
-        foreach pick in gizmo where "component.Specialty"
-          i += 1
-          if (i > 1) then
-            specText &= ", "
+        foreach pick in hero where "component.Specialty"
+          debug "Name: " & eachpick.field[name].text & " Tags: " & eachpick.tagids[Skill.?] & " tagsearch: " & eachpick.tagsearch[skTag]
+          if (eachpick.tagsearch[skTag] <> 0) then
+            i += 1
+            if (i > 1) then
+              specText &= ", "
+              endif
+            specText &= eachpick.field[name].text
             endif
-          specText &= eachpick.field[name].text
           nexteach
               
         if (empty(specText) = 0) then

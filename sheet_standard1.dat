@@ -855,16 +855,34 @@
       id="damage"
       style="outNameMed">
       <output_label
-        field="wpDamage"
+        field="wpDmg"
+        ismultiline="yes">
+        </output_label>
+      </portal>
+      
+    <portal
+      id="ammotype"
+      style="outNameMed">
+      <output_label
+        field="wpAmmo"
         ismultiline="yes">
         </output_label>
       </portal>
 
     <portal
-      id="dots"
-      style="outDots">
-      <output_dots>
-        </output_dots>
+      id="reload"
+      style="outNameMed">
+      <output_label
+        field="wpReload">
+        </output_label>
+      </portal>
+      
+    <portal
+      id="notes"
+      style="outNameMed">
+      <output_label
+        field="wpNotes">
+        </output_label>
       </portal>
 
     <!-- Portals used as the header -->
@@ -878,39 +896,61 @@
       </portal>
 
     <portal
-      id="hdrattack"
+      id="hdrname"
       style="outHeader"
       isheader="yes">
       <output_label
-        text="Atk">
+        text="Name">
         </output_label>
       </portal>
-
+      
     <portal
       id="hdrdamage"
       style="outHeader"
       isheader="yes">
       <output_label
-        text="Dmg">
+        text="Damage">
         </output_label>
       </portal>
-
+      
+    <portal
+      id="hdrammo"
+      style="outHeader"
+      isheader="yes">
+      <output_label
+        text="Ammo">
+        </output_label>
+      </portal>
+      
+    <portal
+      id="hdrreload"
+      style="outHeader"
+      isheader="yes">
+      <output_label
+        text="Reload">
+        </output_label>
+      </portal>
+      
+    <portal
+      id="hdrnotes"
+      style="outHeader"
+      isheader="yes">
+      <output_label
+        text="Rules &amp; Qualities">
+        </output_label>
+      </portal>
+      
     <position><![CDATA[
       ~our height is based on the tallest portal within
       height = portal[name].height
       doneif (issizing <> 0)
 
-      ~if the weapon satisfies the minimum strength requirement, hide the bitmap
-      if (tagis[Helper.BadStrReq] = 0) then
-        portal[badstr].visible = 0
-        endif
-
       ~center all portals vertically
-      perform portal[badstr].centervert
       perform portal[name].centervert
-      perform portal[attack].centervert
       perform portal[damage].centervert
-      perform portal[dots].centervert
+      perform portal[ammotype].centervert
+      perform portal[reload].centervert
+      perform portal[notes].centervert
 
       ~position the range with the same baseline as the rest of the text; since it
       ~uses a smaller font, it will have a smaller height, so centering it will have
@@ -918,65 +958,45 @@
       ~perform portal[range].alignrel[btob,name,0]
 
       ~establish suitable fixed widths for the various columns of data
-      portal[damage].width = 120
-      portal[attack].width = 70
-      ~portal[range].width = 260
-
+      portal[name].width = 200
+      portal[damage].width = 150
+      portal[ammotype].width = 120
+      portal[reload].width = 70
+      
       ~position everything horizontally, leaving a margin on both sides appropriately
-      portal[badstr].left = 5
-      perform portal[damage].alignedge[right,-5]
-      perform portal[name].alignrel[ltor,badstr,5]
-      perform portal[attack].alignrel[rtol,damage,-10]
-      ~perform portal[range].alignrel[rtol,attack,-10]
-
-      ~if this is a ranged weapon, limit the name to the space up to the range details;
-      ~otherwise, let the name extend over to the attack value
-      var limit as number
-      ~if (tagis[component.WeapRange] <> 0) then
-      ~  limit = portal[range].left
-      ~else
-        limit = portal[attack].left
-      ~  endif
-
-      ~limit the name to the extent determined above
-      if (portal[name].right > limit - 5) then
-        portal[name].width = limit - portal[name].left - 5
-        endif
+      portal[name].left = 5
+      perform portal[notes].alignedge[right,-5]
+      perform portal[damage].alignrel[rtol,name,-10]
+      perform portal[reload].alignrel[rtol,damage,-10]
+      perform portal[ammotype].alignrel[rtol,reload,-10]
 
       ~size the name to fit the available space
-      perform portal[name].sizetofit[36]
+      perform portal[name].sizetofit[12]
       perform portal[name].autoheight
       perform portal[name].centervert
 
-      ~extend the dots from the right of the name across to the value on the right
-      if (portal[name].right > limit - 10) then
-        portal[dots].visible = 0
-      else
-        perform portal[dots].alignrel[ltor,name,5]
-        portal[dots].width = limit - 5 - portal[dots].left
-        endif
       ]]></position>
 
     <header><![CDATA[
       ~our header height is the title plus a gap plus the header text
-      height = portal[hdrtitle].height + 10 + portal[hdrattack].height
+      height = portal[hdrtitle].height + 10 + portal[hdrdamage].height
       doneif (issizing <> 0)
 
       ~our title spans the entire width of the template
       portal[hdrtitle].width = width
 
       ~each of our header labels has the same width as the corresponding data beneath
-      portal[hdrattack].width = portal[attack].width
+      ~ portal[hdrattack].width = portal[attack].width
       portal[hdrdamage].width = portal[damage].width
       ~portal[hdrrange].width = portal[range].width
 
       ~center each header label on the corresponding data beneath
-      perform portal[hdrattack].centeron[horz,attack]
+      ~ perform portal[hdrattack].centeron[horz,attack]
       perform portal[hdrdamage].centeron[horz,damage]
       ~perform portal[hdrrange].centeron[horz,range]
 
       ~align all header labels at the bottom of the header region
-      perform portal[hdrattack].alignedge[bottom,0]
+     ~ perform portal[hdrattack].alignedge[bottom,0]
       perform portal[hdrdamage].alignedge[bottom,0]
       ~perform portal[hdrrange].alignedge[bottom,0]
       ]]></header>
@@ -1315,6 +1335,11 @@
       portal[oCharBox].left = 0
       portal[oCharBox].width = width
       portal[oCharBox].height = portal[oHeroRace].bottom - portal[oCharSec].bottom + 5
+      
+      perform portal[oHeroName].sizetofit[24]
+      perform portal[oHeroCPkg].sizetofit[24]
+      perform portal[oHeroBckgr].sizetofit[24]
+      perform portal[oHeroRace].sizetofit[24]
 
       height = portal[oCharBox].height + portal[oCharBox].top
       

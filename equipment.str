@@ -385,6 +385,31 @@
       name="Net Attack"
       type="derived">
       </field>
+      
+    <field
+      id="wpReload"
+      name="Reload"
+      type="derived"
+      maxlength="3"
+      maxfinal="3">
+      <finalize><![CDATA[
+        @text = tagnames[Reload.?]
+        if (empty(@text) <> 0) then
+          @text = "-"
+          endif
+        ]]></finalize>
+      </field>
+
+    <field
+      id="wpAmmo"
+      name="Ammo Type"
+      type="derived"
+      maxlength="50"
+      maxfinal="50">
+      <finalize><![CDATA[
+        @text = tagnames[AmmoType.?, ", "]
+        ]]></finalize>
+      </field>
 
     <!-- Weapons require one hand by default (unless natural) -->
     <tag group="Equipment" tag="Hand"/>
