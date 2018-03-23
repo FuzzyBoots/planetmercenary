@@ -612,9 +612,8 @@
 
 
   <!-- oSkillPick template
-        This template presents the list of Skills, showing just the name and value.
-        We use a large horizontal margin to center the skills nicely and a small
-        vertical margin to insert spacing between each skill.
+        This template presents the list of Skills, showing the name, value, 
+        and specialties.
   -->
   <template
     id="oSkillPick"
@@ -643,7 +642,7 @@
       id="special"
       style="outBNormLt">
       <output_label
-        field="trtFinal">
+        field="sklSpecs">
         </output_label>
       </portal>
 
@@ -665,9 +664,9 @@
       portal[special].width = width - portal[special].left
 
       ~size the name to fit the available space
-      perform portal[name].sizetofit[40]
+      perform portal[name].sizetofit[20]
       perform portal[name].autoheight
-      perform portal[special].sizetofit[32]
+      perform portal[special].sizetofit[16]
       perform portal[special].autoheight
       
       ~center all portals vertically

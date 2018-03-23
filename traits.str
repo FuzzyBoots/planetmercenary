@@ -277,18 +277,13 @@
         ]]></calculate>
       </field>
 
-    <!-- Display Name without values for use on Skills Tab -->
     <field
-      id="sklTabName"
-      name="Display Name (Tab)"
+      id="sklSpecs"
+      name="Skill Specialties (if any)"
       type="static"
       maxlength="50"
       maxfinal="50">
       <finalize><![CDATA[
-        ~Displays name
-        @text = field[name].text
-        debug "In sklTabName"
-        var numAoE as number
         var i as number
         
         ~ There should just be one
@@ -298,7 +293,6 @@
         
         var specText as string
         foreach pick in hero where "component.Specialty"
-          debug "Name: " & eachpick.field[name].text & " Tags: " & eachpick.tagids[Skill.?] & " tagsearch: " & eachpick.tagsearch[skTag]
           if (eachpick.tagsearch[skTag] <> 0) then
             i += 1
             if (i > 1) then
@@ -307,9 +301,26 @@
             specText &= eachpick.field[name].text
             endif
           nexteach
-              
-        if (empty(specText) = 0) then
-          @text &= " (" & specText &")"
+
+          @text = specText
+        ]]></finalize>
+      </field>
+      
+    <!-- Display Name without values for use on Skills Tab -->
+    <field
+      id="sklTabName"
+      name="Display Name (Tab)"
+      type="static"
+      maxlength="70"
+      maxfinal="70">
+      <finalize><![CDATA[
+        ~Displays name
+        @text = field[name].text
+        
+        debug "sklSpecs: " & field[sklSpecs].text
+        
+        if (empty(field[sklSpecs].text) = 0) then
+          @text &= " (" & field[sklSpecs].text &")"
           endif
         
         ]]></finalize>
