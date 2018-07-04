@@ -306,7 +306,7 @@
         ]]></finalize>
       </field>
       
-    <!-- Display Name without values for use on Skills Tab -->
+    <!-- Display Name followed by specialties for use on Skills Tab -->
     <field
       id="sklTabName"
       name="Display Name (Tab)"
