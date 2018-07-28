@@ -764,11 +764,21 @@
       style="outNameMed">
       <output_label>
         <labeltext><![CDATA[
-          @text = field[name].text & " (Def: " & field[defDefense].text & ")"
+          @text = field[name].text
           ]]></labeltext>
         </output_label>
       </portal>
 
+    <portal
+      id="defense"
+      style="outNameMed">
+      <output_label>
+        <labeltext><![CDATA[
+          @text = field[name].text
+          ]]></labeltext>
+        </output_label>
+      </portal>
+      
     <position><![CDATA[
       ~our height is the height of the tallest portal
       height = maximum(portal[name].height,portal[equipped].height)
@@ -904,7 +914,7 @@
       
     <portal
       id="hdrreload"
-      style="outHeader"
+      style="outHeaderSm"
       isheader="yes">
       <output_label
         text="Reload">
@@ -921,7 +931,7 @@
       </portal>
       
     <position><![CDATA[
-      ~our height is based on the tallest portal within
+      ~our initial height is based on the name portal
       height = portal[name].height
       doneif (issizing <> 0)
 
@@ -939,22 +949,24 @@
 
       ~establish suitable fixed widths for the various columns of data
       portal[name].width = 200
-      portal[damage].width = 150
-      portal[ammotype].width = 120
-      portal[reload].width = 70
+      portal[damage].width = 250
+      portal[ammotype].width = 200
+      portal[reload].width = 100
       
       ~position everything horizontally, leaving a margin on both sides appropriately
       portal[name].left = 5
-      perform portal[notes].alignedge[right,-5]
-      perform portal[damage].alignrel[rtol,name,-10]
-      perform portal[reload].alignrel[rtol,damage,-10]
-      perform portal[ammotype].alignrel[rtol,reload,-10]
+      portal[damage].left = portal[name].right + 10
+      portal[reload].left = portal[damage].right + 10
+      portal[ammotype].left = portal[reload].right + 10
+      portal[notes].left = portal[ammotype].right + 10
+      
+      portal[notes].width = width - portal[ammotype].right - 10
 
       ~size the name to fit the available space
-      ~ perform portal[name].sizetofit[12]
+      perform portal[name].sizetofit[12]
       perform portal[name].autoheight
       perform portal[name].centervert
-
+      
       ]]></position>
 
     <header><![CDATA[
@@ -966,19 +978,26 @@
       portal[hdrtitle].width = width
 
       ~each of our header labels has the same width as the corresponding data beneath
-      ~ portal[hdrattack].width = portal[attack].width
+      portal[hdrname].width = portal[name].width
       portal[hdrdamage].width = portal[damage].width
-      ~portal[hdrrange].width = portal[range].width
-
+      portal[hdrreload].width = portal[reload].width
+      portal[hdrammo].width = portal[ammotype].width
+      portal[hdrnotes].width = portal[notes].width
+      
       ~center each header label on the corresponding data beneath
-      ~ perform portal[hdrattack].centeron[horz,attack]
+      perform portal[hdrname].centeron[horz,name]
       perform portal[hdrdamage].centeron[horz,damage]
-      ~perform portal[hdrrange].centeron[horz,range]
-
+      perform portal[hdrreload].centeron[horz,reload]
+      perform portal[hdrammo].centeron[horz,ammotype]
+      perform portal[hdrnotes].centeron[horz,notes]
+      
       ~align all header labels at the bottom of the header region
-     ~ perform portal[hdrattack].alignedge[bottom,0]
+      perform portal[hdrname].alignedge[bottom,0]
       perform portal[hdrdamage].alignedge[bottom,0]
-      ~perform portal[hdrrange].alignedge[bottom,0]
+      perform portal[hdrreload].alignedge[bottom,0]
+      perform portal[hdrammo].alignedge[bottom,0]
+      perform portal[hdrnotes].alignedge[bottom,0]
+      
       ]]></header>
 
     </template>

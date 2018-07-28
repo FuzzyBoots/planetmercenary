@@ -88,6 +88,15 @@
       </font>
     </resource>
 
+  <!-- font used on smaller header text -->
+  <resource
+    id="ofntheaderSm">
+    <font
+      face="Arial"
+      size="24">
+      </font>
+    </resource>
+
   <!-- font used within validation report -->
   <resource
     id="ofntvalid">
@@ -255,7 +264,8 @@
 
   <!-- small name for output -->
   <style
-    id="outNameSm">
+    id="outNameSm"
+    border="solid">
     <style_output
       textcolor="000000"
       font="ofntsmall"
@@ -299,6 +309,16 @@
     <style_output
       textcolor="000000"
       font="ofntheader"
+      alignment="center">
+      </style_output>
+    </style>
+
+  <!-- header text for output -->
+  <style
+    id="outHeaderSm">
+    <style_output
+      textcolor="000000"
+      font="ofntheaderSm"
       alignment="center">
       </style_output>
     </style>
