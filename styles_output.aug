@@ -90,7 +90,7 @@
 
   <!-- font used on smaller header text -->
   <resource
-    id="ofntheaderSm">
+    id="ofnthdrSm">
     <font
       face="Arial"
       size="24">
@@ -315,10 +315,10 @@
 
   <!-- header text for output -->
   <style
-    id="outHeaderSm">
+    id="outHdrSm">
     <style_output
       textcolor="000000"
-      font="ofntheaderSm"
+      font="ofnthdrSm"
       alignment="center">
       </style_output>
     </style>

@@ -738,9 +738,7 @@
 
 
   <!-- oArmorPick template
-        This template presents the armor possessed, flagging equipped armor with a
-        suitable bitmap and armor that doesn't meet the minimum strength requirement
-        with a different bitmap.
+        This template presents the armor possessed.
   -->
   <template
     id="oArmorPick"
@@ -774,7 +772,37 @@
       style="outNameMed">
       <output_label>
         <labeltext><![CDATA[
-          @text = field[name].text
+          @text = field[defDefense].text
+          ]]></labeltext>
+        </output_label>
+      </portal>
+      
+    <portal
+      id="DR"
+      style="outNameMed">
+      <output_label>
+        <labeltext><![CDATA[
+          @text = field[defDR].text
+          ]]></labeltext>
+        </output_label>
+      </portal>
+      
+    <portal
+      id="Hull"
+      style="outNameMed">
+      <output_label>
+        <labeltext><![CDATA[
+          @text = field[defHull].text
+          ]]></labeltext>
+        </output_label>
+      </portal>
+      
+    <portal
+      id="special"
+      style="outNameMed">
+      <output_label>
+        <labeltext><![CDATA[
+          @text = field[defSpecial].text
           ]]></labeltext>
         </output_label>
       </portal>
@@ -789,9 +817,29 @@
         portal[equipped].visible = 0
         endif
 
+      portal[equipped].visible = 0
+      portal[name].visible = 1
+      portal[defense].visible = 0
+      portal[DR].visible = 0
+      portal[Hull].visible = 0
+      portal[special].visible = 0
+      
+      portal[equipped].width = 50
+      portal[name].width = 200
+      portal[defense].width = 50
+      portal[DR].width = 50
+      portal[Hull].width = 50
+        
       ~align everything horizontally
-      perform portal[name].alignrel[ltor,equipped,5]
+      ~perform portal[name].alignrel[ltor,equipped,5]
+      portal[name].left = portal[equipped].right + 5
+      perform portal[defense].alignrel[ltor,name,5]
+      perform portal[DR].alignrel[ltor,defense,5]
+      perform portal[Hull].alignrel[ltor,DR,5]
+      perform portal[special].alignrel[ltor,Hull,5]
 
+      portal[special].width = width - (portal[Hull].right + 5 + 5)
+      
       ~size the name to fit the available space
       portal[name].width = width - portal[name].left
       ~ perform portal[name].sizetofit[36]
@@ -846,7 +894,7 @@
       id="damage"
       style="outNameSm">
       <output_label
-        field="wpDmgShort">
+        field="wpDmg">
         </output_label>
       </portal>
       
@@ -914,7 +962,7 @@
       
     <portal
       id="hdrreload"
-      style="outHeaderSm"
+      style="outHdrSm"
       isheader="yes">
       <output_label
         text="Reload">
@@ -963,9 +1011,25 @@
       portal[notes].width = width - portal[ammotype].right - 10
 
       ~size the name to fit the available space
-      perform portal[name].sizetofit[12]
+      perform portal[name].sizetofit[8]
       perform portal[name].autoheight
       perform portal[name].centervert
+      
+      perform portal[damage].sizetofit[8]
+      perform portal[damage].autoheight
+      perform portal[damage].centervert
+      
+      perform portal[reload].sizetofit[8]
+      perform portal[reload].autoheight
+      perform portal[reload].centervert
+      
+      perform portal[ammotype].sizetofit[8]
+      perform portal[ammotype].autoheight
+      perform portal[ammotype].centervert
+      
+      perform portal[notes].sizetofit[8]
+      perform portal[notes].autoheight
+      perform portal[notes].centervert
       
       ]]></position>
 
@@ -1309,7 +1373,22 @@
       portal[oBackgrLbl].top = portal[oCmdPkgLbl].bottom + 5
       portal[oRaceLbl].top = portal[oBackgrLbl].bottom + 5
       
-      ~ The width is 1/2 except Name, which is 1/4
+      perform portal[oNameLbl].autoheight
+      perform portal[oCmdPkgLbl].autoheight
+      perform portal[oBackgrLbl].autoheight
+      perform portal[oRaceLbl].autoheight
+      
+      portal[oNameLbl].height += 5
+      portal[oCmdPkgLbl].height += 5
+      portal[oBackgrLbl].height += 5
+      portal[oRaceLbl].height += 5
+      
+      portal[oNameLbl].top = portal[oCharSec].bottom + 5
+      portal[oCmdPkgLbl].top = portal[oNameLbl].bottom + 5
+      portal[oBackgrLbl].top = portal[oCmdPkgLbl].bottom + 5
+      portal[oRaceLbl].top = portal[oBackgrLbl].bottom + 5
+      
+      ~ The width is 3/5 except Name, which is 1/4
       portal[oNameLbl].width = width / 4
       portal[oCmdPkgLbl].width = width * 3 / 5
       portal[oBackgrLbl].width = width * 3 / 5
@@ -1335,10 +1414,10 @@
       portal[oCharBox].width = width
       portal[oCharBox].height = portal[oHeroRace].bottom - portal[oCharSec].bottom + 5
       
-      perform portal[oHeroName].sizetofit[24]
-      perform portal[oHeroCPkg].sizetofit[24]
-      perform portal[oHeroBckgr].sizetofit[24]
-      perform portal[oHeroRace].sizetofit[24]
+      perform portal[oHeroName].sizetofit[2]
+      perform portal[oHeroCPkg].sizetofit[2]
+      perform portal[oHeroBckgr].sizetofit[2]
+      perform portal[oHeroRace].sizetofit[2]
 
       height = portal[oCharBox].height + portal[oCharBox].top
       
