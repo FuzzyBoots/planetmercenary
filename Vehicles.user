@@ -22,5 +22,10 @@
     <fieldval field="grCost" value="2"/>
     <tag group="Skill" tag="skAirVeh"/>
     <tag group="VehClass" tag="Consumer"/>
+    <child entity="LoadOut">
+  <bootstrap thing="wprGlDag">
+    </bootstrap>
+    <bootstrap thing="wprSmythMM"/>
+  </child>
     </thing>
   </document>

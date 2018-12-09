@@ -45,6 +45,30 @@
     append @newline
     ]]></procedure>
 
+  <!-- Procedure sbtraits
+        Output all of the traits that satisfy the provided tag expression and whose 
+        final values is non-zero, reporting the name and final value for each. 
+        The "tagexpr" text variable specifies the constraints that must be satisfied 
+        for the list of traits.
+
+        Inbound parameter:  tagexpr
+  -->
+  <procedure id="sbtraitsnz" scripttype="synthesize"><![CDATA[
+    var tagexpr as string
+    var ismore as number
+    ismore = 0
+    foreach pick in hero where tagexpr
+      if (eachpick.field[trtFinal].value <> 0) then
+        if (ismore <> 0) then
+          append ", "
+          endif
+        append eachpick.field[name].text & " " & eachpick.field[trtFinal].text
+        ismore = 1
+        endif
+      nexteach
+    append @newline
+    ]]></procedure>
+    
   <procedure id="sbabs" scripttype="synthesize"><![CDATA[
     var tagexpr as string
     var ismore as number
@@ -59,6 +83,24 @@
     append @newline
     ]]></procedure>
 
+  <procedure id="sbspecs" scripttype="synthesize"><![CDATA[
+    var ismore as number
+    ~output a list of all specialities
+    ismore = 0
+    foreach pick in hero from Specialty
+      if (ismore <> 0) then
+        append ", "
+        endif
+      append eachpick.field[spcTabName].text
+      ismore = 1
+      nexteach
+    append @newline
+    ~if we have no specialities, output that fact
+    if (ismore = 0) then
+      append @indent & "-none-" & @newline
+      endif
+    ]]></procedure>
+    
   <!-- Procedure sbweapons
         Output all of the weapons possessed by the character, listing equipped
         weapons first and including attack values, damage, and ranges for eachpick.
@@ -70,7 +112,7 @@
     ismore = 0
     foreach pick in hero from WeaponBase sortas Armory
       ismore = 1
-      append @indent & eachpick.field[wpNetAtk].text & " - " & eachpick.field[name].text
+      append @indent & signed(eachpick.field[wpNetAtk].text) & " - " & eachpick.field[name].text
       append " - " & eachpick.field[wpDamage].text
       if (eachpick.field[grIsEquip].value <> 0) then
         append " (Equipped)"
@@ -184,13 +226,31 @@
           endif
         append @boldon & "Race: " & @boldoff & txt & @newline
 
+        ~output any background
+        txt = hero.findchild[Bckgrnd].field[name].text
+        if (empty(txt) <> 0) then
+          txt = "-none-"
+          endif
+        append @boldon & "Background: " & @boldoff & txt & @newline
+
+        ~output any command package
+        txt = hero.findchild[CmdPckge].field[name].text
+        if (empty(txt) <> 0) then
+          txt = "-none-"
+          endif
+        append @boldon & "Race: " & @boldoff & txt & @newline
+
         ~output age
-        append @boldon & "Age: " & @boldoff & hero.child[mscPerson].field[perAge].text & @newline
+        ~ append @boldon & "Age: " & @boldoff & hero.child[mscPerson].field[perAge].text & @newline
 
         ~output skills
         append @boldon & "Skills: " & @boldoff
         tagexpr = "component.Skill"
-        call sbtraits
+        call sbtraitsnz
+        
+        ~output specialities
+        append @boldon & "Specialities: " & @boldoff
+        call sbspecs
 
         ~output special abilities
         append @boldon & "Special Abilities: " & @boldoff

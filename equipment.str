@@ -434,7 +434,6 @@
       ~we've synthesized the notes for the weapon
       field[wpNotes].text = special
       ]]></eval>
-
     </component>
 
 
@@ -849,4 +848,8 @@
     id="LoadOut">
     </entity>
 
+  <entity
+    id="Qualities">
+    </entity>
+    
   </document>

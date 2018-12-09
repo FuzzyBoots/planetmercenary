@@ -378,12 +378,12 @@
       
       if (specMatch <> 0) then
         if (field[trtFinal].value > 0) then
-          ~ debug myId & " : trtFinal Sufficient"
+          debug myId & " : trtFinal Sufficient"
           perform assign[Helper.AllowSpec]
           endif
           
         if (tagis[Specialty.?] <> 0) then
-          ~ debug myId & " : Has a speciality"
+          debug myId & " : Has a speciality"
           perform assign[Helper.AllowSpec]
           endif
         endif
