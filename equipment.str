@@ -191,6 +191,32 @@
 
     </component>
 
+  <!-- Weapon Quality
+        Weapons may have certain qualities, either innately or added by Mayhem,
+        skill checks, or GC purview.
+  -->
+  <component
+    id="WeapQual"
+    name="Weapon Quality"
+    autocompset="yes"
+    ispublic="no">
+    
+    <field
+      id="qualName"
+      name="Name"
+      type="derived"/>
+      
+    <field
+      id="qualDesc"
+      name="Description"
+      type="derived"/>
+      
+    <field
+      id="qualCost"
+      name="Cost"
+      type="derived"/>
+    
+    </component>
 
   <!-- Equippable component
         Any gear that can be equipped (e.g. weapons) must derive from this component.
@@ -849,7 +875,7 @@
     </entity>
 
   <entity
-    id="Qualities">
+    id="grCustWeap">
     </entity>
     
   </document>

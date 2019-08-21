@@ -317,6 +317,27 @@
       </inputthing-->
     </editthing>
 
+  <!-- Weapon Quality editthing - for weapon qualities -->
+  <editthing
+    compset="WeapQual"
+    name="Weapon Quality"
+    prefix="wq"
+    description="Weapons can have certain special qualities that have an associated name, description, and cost."
+    summary="Defines a weapon quality that can be added to a weapon.">
+    
+    <inputthing
+      name="Cost"
+      helptext="Specify the standard cost of the item, with a value of 0 meaning it is free.">
+      <it_field field="qualCost"/>
+      </inputthing>
+      
+    <inputthing
+      name="Notes"
+      helptext="Description of the weapon quality.">
+      <it_field field="qualDesc"/>
+      </inputthing>      
+    </editthing>
+    
 
   <!-- Ammunition editthing - for ammunition -->
   <editthing
@@ -351,7 +372,7 @@
       </inputthing>      
     </editthing>
 
-  <!-- Melee editthing - for melee weapons -->
+  <!-- Vehicle editthing - for non-spaceship vehicles -->
   <editthing
     compset="Vehicle"
     name="Vehicles (non-Spaceships)"
@@ -418,7 +439,8 @@
     name="Melee Weapon"
     prefix="wpm"
     description="Armor, vehicles, and simple equipment all have their own tabs for creating objects of those types."
-    summary="Defines a melee weapon that can be selected on the Armory tab.">
+    summary="Defines a melee weapon that can be selected on the Armory tab."
+    defchild="grCustWeap">
     <!--inputthing
       name="Weapon Bonus"
       helptext="Specify the attack bonus of the weapon.">
@@ -456,6 +478,25 @@
       <it_taglist
         group="Weapon" tag="?"/>
       </inputthing>
+    <inputthing
+      name="Qualities"
+      helptext="Choose any integral qualities this weapon always comes with.">
+      <it_bootcustom compset="WeapQual" target="child">
+      <match><![CDATA[
+        !thing.showonly
+        ]]></match>
+    <!--inputthing
+      name="Fixed Rating?"
+      helptext="If this gear uses ratings, specify the minimum rating it can be set to.">
+      <it_tagcheck group="Equipment" tag="FixRating"/>
+      </inputthing>
+    <inputthing
+      name="Rating"
+      helptext="If this gear is only available at a single rating, specify that here.">
+      <it_field field="grUser"/>
+      </inputthing-->
+    </it_bootcustom>
+  </inputthing>
     <inputthing
       name="Special Behaviors"
       helptext="Specify any special behaviors for the weapon of which the user should be reminded.">

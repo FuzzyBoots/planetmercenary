@@ -139,7 +139,7 @@
       ~ debug "combined: " & combined
       gizmo.childfound[SpecHelp].field[SpecExpr].text = "component.Specialty & (" & combined & ")"
       field[usrCandid2].text &= " & (" & combined & ")"
-      ~ debug "Gizmo Text: " & gizmo.childfound[SpecHelp].field[SpecExpr].text
+      debug "Gizmo Text: " & gizmo.childfound[SpecHelp].field[SpecExpr].text
       ]]></eval>
       <child entity="entSpec"/>
     
