@@ -324,6 +324,18 @@
     ~report any special details about the weapon (omitting if there are none)
     var special as string
     special = tagnames[Weapon.?,", "]
+    if (isentity = 1) then
+      if (ispick = 0) then
+        foreach bootstrap in entity from WeapQual
+          special = splice(special, eachthing.field[name].text,", ")
+          nexteach
+      else
+        foreach pick in gizmo from WeapQual
+          special = splice(special, eachpick.field[thingname].text,", ")
+          nexteach
+        endif
+      endif
+
     special = splice(special,field[wpSpecial].text,", ")
     if (empty(special) = 0) then
       iteminfo &= "Special: " & special & "{br}"

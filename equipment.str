@@ -215,7 +215,7 @@
       id="qualCost"
       name="Cost"
       type="derived"/>
-    
+      
     </component>
 
   <!-- Equippable component
@@ -343,7 +343,6 @@
       name="Short Name"
       type="derived">
       </field>
-      
     
     <!-- Weapon bonus -->
     <field
@@ -437,9 +436,11 @@
         ]]></finalize>
       </field>
 
+    <containerreq phase="Initialize" priority="900">TRUE</containerreq>
+
     <!-- Weapons require one hand by default (unless natural) -->
     <tag group="Equipment" tag="Hand"/>
-
+    
     <!-- Assign any derived special notes to the appropriate field -->
     <eval index="2" phase="Render" priority="1000"><![CDATA[
       var special as string
@@ -454,6 +455,18 @@
       attribs = tagnames[Weapon.?,", "]
       special = splice(special,attribs,", ")
 
+      if (isentity = 1) then
+        if (ispick = 0) then
+          foreach bootstrap in entity from WeapQual
+            special = splice(special, eachthing.field[name].text,", ")
+            nexteach
+        else
+          foreach pick in gizmo from WeapQual
+            special = splice(special, eachpick.field[thingname].text,", ")
+            nexteach
+          endif
+        endif
+      
       ~append any special details for this weapon
       special = splice(special,field[wpSpecial].text,", ")
 

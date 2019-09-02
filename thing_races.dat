@@ -252,12 +252,7 @@
       <autotag group="Skill" tag="skStaWeap"/>
       <autotag group="Skill" tag="skThrown"/>
       </bootstrap>
-    <bootstrap thing="wpmKssthr"></bootstrap>
-    </thing>
-  <thing id="wpmKssthr" name="Kss’thrata Unarmed Strike" description="Kss’thrata have headbutt and claw attacks equal to Athletics+2." compset="Melee" uniqueness="unique">
-    <fieldval field="wpDamage" value="Athletics+2"/>
-    <fieldval field="shortname" value="Unarmed"/>
-    <tag group="Equipment" tag="Natural" name="Natural weapon/armor/etc." abbrev="Natural weapon/armor/etc."/>
+    <bootstrap thing="wpKssthrat"></bootstrap>
     </thing>
   <thing id="racObenn" name="Ob’enn" description="By accident or design, these short, furry, congenitally-xenophobic creatures discovered space travel just a little too late to attack and exterminate their nearest neighbors, the kss’thrata. This resulted in open war and an arms race that spanned centuries. Most ob’enn are far too sociopathic to get by in mixed company. Some manage, but they’re usually seen as abominations by their families, and every other species that they meet still regards them with suspicion.\n\n{b}Bonus Skill Ranks:{/b} +1 to any four skills\n\n{b}Skill Check Penalties:{/b} None\n\n{b}Special Rules:{/b} You suffer a –1 penalty with social skill checks targeting non-ob’enn.{br}{br}{b}Health:{/b} 6 + Endurance" compset="Race" uniqueness="unique">
     <fieldval field="baseHealth" value="6"/>

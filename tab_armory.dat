@@ -273,7 +273,7 @@
         @text = field[wpDamage].text
         ]]></mouseinfo>
       </portal>
-
+      
     <portal
       id="special"
       style="imgNormal">

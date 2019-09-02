@@ -474,28 +474,15 @@
         group="License" tag="?"/>
       </inputthing>
      <inputthing
-      name="Qualities">
-      <it_taglist
-        group="Weapon" tag="?"/>
-      </inputthing>
-    <inputthing
       name="Qualities"
       helptext="Choose any integral qualities this weapon always comes with.">
-      <it_bootcustom compset="WeapQual" target="child">
-      <match><![CDATA[
-        !thing.showonly
-        ]]></match>
-    <!--inputthing
-      name="Fixed Rating?"
-      helptext="If this gear uses ratings, specify the minimum rating it can be set to.">
-      <it_tagcheck group="Equipment" tag="FixRating"/>
-      </inputthing>
-    <inputthing
-      name="Rating"
-      helptext="If this gear is only available at a single rating, specify that here.">
-      <it_field field="grUser"/>
-      </inputthing-->
-    </it_bootcustom>
+        <it_bootcustom compset="WeapQual" target="child">
+      <inputthing
+        name="Free?"
+        helptext="If this quality is not considered in the cost, check this.">
+        <it_tagcheck group="Quality" tag="Free"/>
+        </inputthing>
+      </it_bootcustom>
   </inputthing>
     <inputthing
       name="Special Behaviors"
@@ -520,6 +507,7 @@
     compset="Ranged"
     name="Ranged Weapon"
     prefix="wpr"
+    defchild="grCustWeap"
     description="Armor, vehicles, and simple equipment all have their own tabs for creating objects of those types."
     summary="Defines a ranged weapon that can be selected on the Armory tab.">
     <inputthing
@@ -567,9 +555,15 @@
         group="Reload" tag="?"/>
       </inputthing>
     <inputthing
-      name="Qualities">
-      <it_taglist
-        group="Weapon" tag="?"/>
+      name="Qualities"
+      helptext="Choose any integral qualities this weapon always comes with.">
+      <it_bootcustom compset="WeapQual" target="child">
+        <inputthing
+          name="Free?"
+          helptext="If this quality is not considered in the cost, check this.">
+          <it_tagcheck group="Quality" tag="Free"/>
+          </inputthing>
+        </it_bootcustom>
       </inputthing>
     <inputthing
       name="Special Behaviors"

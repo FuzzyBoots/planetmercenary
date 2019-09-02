@@ -136,71 +136,23 @@
     <value id="Natural" name="Natural weapon/armor/etc."/>        <!-- Identifies equipment that is a natural form and exempt from various behaviors -->
     </group>
 
+  <group
+    id="Quality">
+    <value id="Free"/>
+  </group>
+    
   <!-- Weapon group - helper tags for weapon special abilities
         If a tag is used to indicate a special ability for a weapon, it should be
         defined in this group.
+        
+        These have basicly been replaced by Weapon Qualities, but I'm keeping
+        the tag support for legacy purposes.
   -->
   <group
     id="Weapon"
     dynamic="yes">
-    <value id="Accurate" name="Accurate"/>
-    <value id="APPS" name="Annie Plant Power Supply"/>
-    <value id="APiercing" name="Armor-piercing"/>
-    <value id="ACorrect" name="Autocorrecting"/>
-    <value id="AVPL" name="AVPL"/>
-    <value id="Breacher" name="Breacher"/>
-    <value id="CAmmo" name="Costly Ammo"/>
-    <value id="Delivery" name="Delivery"/>
-    <value id="DoubTap" name="Double Tap"/>
-    <value id="ExMag" name="Extended Magazine "/>
-    <value id="FProne" name="Failure Prone"/>
-    <value id="TSystem" name="Hi-Res Targeting System"/>
-    <value id="Holdout" name="Holdout/Stealth"/>
-    <value id="HyperAcc" name="Hyper-accurate"/>
-    <value id="Polymer" name="Lightweight Polymer"/>
-    <value id="Lucky" name="Lucky"/>
-    <value id="ReloadInt" name="Reload-intensive"/>
-    <value id="RemoteUp" name="Remote Targeting Uplink"/>
-    <value id="Scatter" name="Scattergun"/>
-    <value id="SSAmmo" name="Self-supplying Ammunition"/>
-    <value id="SRange" name="Short Range"/>
-    <value id="SingleUse" name="Single-use"/>
-    <value id="Sniper" name="Sniper"/>
-    <value id="SConstrct" name="Sturdy Construction"/>
-    <value id="ULauncher" name="Underslung Launcher"/>
-    <value id="Unlucky" name="Unlucky"/>
-    <value id="VAmmo" name="Variable Ammunition"/>
     </group>
-  <!--group // Yeah... no Value. But we don't need it yet.
-    id="Weapon">
-    <value id="Accurate" name="Accurate" value="2"/>
-    <value id="APPS" name="Annie Plant Power Supply" value="3"/>
-    <value id="APiercing" name="Armor-piercing" value="2"/>
-    <value id="ACorrect" name="Autocorrecting" value="1"/>
-    <value id="AVPL" name="AVPL" value="4"/>
-    <value id="Breacher" name="Breacher" value="10"/>
-    <value id="CAmmo" name="Costly Ammo" value="-3"/>
-    <value id="Delivery" name="Delivery" value="2"/>
-    <value id="DoubTap" name="Double Tap" value="1"/>
-    <value id="ExMag" name="Extended Magazine " value="3"/>
-    <value id="FProne" name="Failure Prone" value="-2"/>
-    <value id="TSystem" name="Hi-Res Targeting System" value="1"/>
-    <value id="Holdout" name="Holdout/Stealth" value="1"/>
-    <value id="HyperAcc" name="Hyper-accurate" value="3"/>
-    <value id="Polymer" name="Lightweight Polymer" value="1"/>
-    <value id="Lucky" name="Lucky" value="1"/>
-    <value id="ReloadInt" name="Reload-intensive" value="-2"/>
-    <value id="RemoteUp" name="Remote Targeting Uplink" value="1"/>
-    <value id="Scatter" name="Scattergun" value="2"/>
-    <value id="SSAmmo" name="Self-supplying Ammunition" value="2"/>
-    <value id="SRange" name="Short Range" value="-1"/>
-    <value id="SingleUse" name="Single-use" value="-6"/>
-    <value id="Sniper" name="Sniper" value="4"/>
-    <value id="SConstrct" name="Sturdy Construction" value="3"/>
-    <value id="ULauncher" name="Underslung Launcher" value="3"/>
-    <value id="Unlucky" name="Unlucky" value="-1"/>
-    <value id="VAmmo" name="Variable Ammunition" value="1"/>
-    </group-->
+    
   <!-- Weapon Class group - helper tags for ranged weapon class -->
   <group
     id="WeapClass"

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="wqAccurate" name="Accurate" description="An attack with this weapon hits with any roll of triples, regardless of the attack  check result or the target’s Defense or Dodge stats. For attacks against an enemy  with high Defense or Dodge (15+), the Accurate quality doubles your chance of  a hit (5–5–5, 5–5–6, 5–6–6, and 6–6–6 are already success; you now also succeed  with a roll of 1–1–1, 2–2–2, 3–3–3, and 4–4–4)." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="2"/>
+    </thing>
+  <thing id="wqAPPS" name="Annie Plant Power Supply" description="When using this weapon, you ignore the first required reload in each combat." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="3"/>
+    </thing>
+  <thing id="wqAPiercing" name="Armor-piercing" description="When using this weapon, your attacks ignore the first 2 points of Damage Reduction." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="2"/>
+    </thing>
+  <thing id="wqACorrect" name="Autocorrecting" description="This device tries to compensate for your failings. If each individual die rolled in an attack with this weapon results in a 3 or lower, then you may re-roll all three  dice. You may only do this once and you must accept the second roll no matter the result. Mayhem can only happen once even if it comes up on both rolls." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="1"/>
+    </thing>
+  <thing id="wqAVPL" name="AVPL (Anti-vehicular Payload)" description="This weapon can damage large objects and vehicles that have hull points.  When an attack with this weapon hits a target with Hull Points, the target loses 1 Hull Point. This may destroy the source of the target’s Hull Points, such as a suit of heavy armor. Against any target without Hull Points, roll the weapon’s listed damage as normal." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="4"/>
+    </thing>
+  <thing id="wqBreacher" name="Breacher" description="Your attacks ignore the first 8 points of Damage Reduction." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="10"/>
+    </thing>
+  <thing id="wqCAmmo" name="Costly Ammo" description="After the weapon has been fired three times (regardless of success or failure), you must spend 3 Supplies before firing this weapon again" compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="-3"/>
+    </thing>
+  <thing id="wqDelivery" name="Delivery" description="This weapon can deliver a chemical, biological, or synthetic payload to the target." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="2"/>
+    </thing>
+  <thing id="wqDoubTap" name="Double Tap" description="When an attack with this weapon hits and you roll a straight (1–2–3, 2–3–4, 3–4–5, or 4–5–6), you may immediately make a second attack against the same  target (assuming you don’t need to reload)." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="1"/>
+    </thing>
+  <thing id="wqExMag" name="Extended Magazine " description="When using this weapon, you ignore the first required reload in each combat." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="3"/>
+    </thing>
+  <thing id="wqFProne" name="Failure Prone" description="Any roll of triples when attacking with this weapon causes the weapon to explode instead of firing. The explosion inflicts the weapon’s normal damage on you and anyone next to you (as determined by the combat conditions and the GC).  The weapon is destroyed in the process and may not be repaired." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="-2"/>
+    </thing>
+  <thing id="wqTSystem" name="Hi-Res Targeting System" description="You gain a +2 bonus to hit when attacking with this weapon, but you can only attack with the weapon once per turn regardless of any other attacks you may  normally make." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="1"/>
+    </thing>
+  <thing id="wqHoldout" name="Holdout/Stealth" description="This weapon is easily hidden on your person. The TN to find this weapon is increased by 5 when you are being searched. If there is no default TN, then the new default TN is 20." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="1"/>
+    </thing>
+  <thing id="wqHyperAcc" name="Hyper-accurate" description="An attack with this weapon hits with any roll of doubles, regardless of the attack check result or the target’s Defense or Dodge. “Doubles” means two or more of the same number on individual dice (e.g. two or three 1s, 2s, etc.)" compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="3"/>
+    </thing>
+  <thing id="wqPolymer" name="Lightweight Polymer" description="This weapon is made from a lightweight material. It requires one less grip to use If this reduces the number of required grips to 0, then the weapon  still requires one grip but you may attack with it one extra time in each round of combat due to its light frame and improved recoil composition system. This attack must happen on your turn but takes no time. It may occur before or after another action or attack." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="1"/>
+    </thing>
+  <thing id="wqLucky" name="Lucky" description="When using this weapon, you may re-roll a Mayhem result of 6. You must accept the new roll, no matter what it is. Adding this quality to a weapon removes and  replaces the Unlucky quality, and vice-versa." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="1"/>
+    </thing>
+  <thing id="wqReloadInt" name="Reload-intensive" description="This weapon must be reloaded each time even a single damage die result falls into its Reload range (i.e. the range of numbers in the Reload column of its table entry)." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="-2"/>
+    </thing>
+  <thing id="wqRemoteUp" name="Remote Targeting Uplink" description="Your line of sight isn’t required to attack with this weapon. The computer can shoot the target as long as it has access to tools (drones, cameras, satellites) that can see the target and your weapon can draw a straight line between you and the target." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="1"/>
+    </thing>
+  <thing id="wqScatter" name="Scattergun" description="This weapon has a wide arc of fire. Even when an attack with the weapon misses, the target still suffers 1d6 damage. If firing goober, then the target still may become immobilized, and need to succeed on an Athletics skill check (TN 15) to escape. This quality cannot be attached to a pistol." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="2"/>
+    </thing>
+  <thing id="wqSSAmmo" name="Self-supplying Ammunition" description="Reloading this weapon takes no actions. You must still reload the weapon on your turn but it doesn’t interrupt any other action or attack. After this weapon is reloaded, the next hit with it inflicts 3 less damage (minimum 1)." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="2"/>
+    </thing>
+  <thing id="wqSRange" name="Short Range" description="This weapon may only fire at targets that are near you. The GC determines when a target is too far away to attack with this weapon." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="-1"/>
+    </thing>
+  <thing id="wqSingleUse" name="Single-use" description="This weapon may only be fired once. Whether you hit or miss, the weapon may not be fired again until after a successful Engineering skill check (TN 25)." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="-6"/>
+    </thing>
+  <thing id="wqSniper" name="Sniper" description="This weapon is designed to fire accurately over long distances. When you attack with this weapon as your only action in a round and hit your target, they suffer 1d6 additional damage." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="4"/>
+    </thing>
+  <thing id="wqSConstrct" name="Sturdy Construction" description="This weapon ignores the first Mayhem card that affects it in each combat engagement." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="3"/>
+    </thing>
+  <thing id="wqULauncher" name="Underslung Launcher" description="When using explosives or specialized ammo that works with this quality, you may substitute the attack skill you use with this weapon instead of the Thrown skill." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="3"/>
+    </thing>
+  <thing id="wqUnlucky" name="Unlucky" description="When attacking with this weapon, you must re-roll the Mayhem die each time it rolls a 1. Adding this quality to a weapon removes and replaces the Lucky quality, and vice-versa." compset="WeapQual" uniqueness="useronce">
+    <fieldval field="qualCost" value="-1"/>
+    </thing>
+  <thing id="wqVAmmo" name="Variable Ammunition" description="When adding this quality, choose a type of ammunition to add to your weapon’s capabilities. As an action, you can switch between types of damage." compset="WeapQual">
+    <fieldval field="qualCost" value="1"/>
+    </thing>
+  </document>
