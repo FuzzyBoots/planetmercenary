@@ -22,27 +22,6 @@
         selected on the Personal and In-Play tabs and applied to the character.
   -->
 
-  <!-- Attribute Adjustment -->
-  <thing
-    id="adjAttr"
-    name="Attribute"
-    compset="Adjustment"
-    description="Select this adjustment to change one of your attributes.">
-    <fieldval field="adjUsePick" value="1"/>
-    <fieldval field="adjCandid" value="component.Attribute"/>
-    <tag group="AdjustShow" tag="Increment"/>
-    <tag group="AdjustShow" tag="Menu"/>
-    <tag group="Helper" tag="UserAdjust"/>
-    <tag group="InPlay" tag="PermOK"/>
-    <tag group="InPlay" tag="TempOK"/>
-    <eval phase="Setup" priority="8000">
-      <before name="Calc trtFinal"/><![CDATA[
-      if (tagis[Helper.Activated] <> 0) then
-        field[adjChosen].chosen.field[trtInPlay].value += field[adjUser].value
-        endif
-      ]]></eval>
-    </thing>
-
   <!-- Skill Adjustment -->
   <thing
     id="adjSkill"
@@ -111,6 +90,8 @@
     name="Character Points"
     compset="Adjustment"
     description="Select this adjustment to apply a bonus/penalty to your total character points (CP).">
+    <fieldval field="adjMinimum" value="-99"/>
+    <fieldval field="adjMaximum" value="99"/>
     <tag group="AdjustShow" tag="Increment"/>
     <tag group="Helper" tag="UserAdjust"/>
     <tag group="InPlay" tag="PermOK"/>

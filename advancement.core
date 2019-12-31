@@ -74,9 +74,9 @@
       ~Note: Since the advancement is displaced to the hero, it's "parent" is *not* the
       ~       gizmo, so we must explicitly reference through the "origin" container.
       if (origin.parent.tagis[Advance.Increase] > 0) then
-        linkage[basis].field[trtBonus].value += 1
+        linkage[basis].field[trtAdvance].value += 1
       elseif (origin.parent.tagis[Advance.Decrease] > 0) then
-        linkage[basis].field[trtBonus].value -= 1
+        linkage[basis].field[trtAdvance].value -= 1
         endif
       ]]></eval>
 

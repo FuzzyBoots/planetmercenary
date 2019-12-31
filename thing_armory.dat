@@ -341,7 +341,7 @@
     <bootstrap thing="wqFProne">
       <autotag group="Quality" tag="Free"/>
     </bootstrap>
-<bootstrap thing="wqAPPS">
+    <bootstrap thing="wqAPPS">
         <autotag group="Quality" tag="Free"/>
       </bootstrap>
     </child>

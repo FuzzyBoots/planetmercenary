@@ -106,7 +106,7 @@
         field[usrCandid1].text &= " & (" & combined & ")"
       endif
         
-      perform field[usrChosen1].chosen.field[trtBG].modify[+,bonus,"Background"]
+      perform field[usrChosen1].chosen.field[trtBG].modify[+,bonus,field[skbName].text]
       ]]></eval>
     </thing>
         
@@ -115,13 +115,14 @@
     name="Bonus Specialty"
     compset="cmpsetSB"
     description="Adds the selected specialty.">
-    <fieldval field="usrCandid2" value="component.Specialty"/>
+    <fieldval field="usrCandid1" value="component.Specialty"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4900">
       <before name="Calc trtFinal"/><![CDATA[
       ~build the candidate expression out of our specialty tags
       var specs as string
       specs = tagids[Specialty.?, " | "]
+      
       var skills as string
       skills = tagids[Skill.?, " | "]
 
@@ -136,12 +137,13 @@
         combined = specs
       endif
 
-      ~ debug "combined: " & combined
-      gizmo.childfound[SpecHelp].field[SpecExpr].text = "component.Specialty & (" & combined & ")"
-      field[usrCandid2].text &= " & (" & combined & ")"
-      debug "Gizmo Text: " & gizmo.childfound[SpecHelp].field[SpecExpr].text
+      ~gizmo.childfound[SpecHelp].field[SpecExpr].text = "component.Specialty & (" & combined & ")"
+      field[usrCandid1].text &= " & (" & combined & ")"
+      field[usrSource1].value = 0
+      debug "usrCandid1: " & field[usrCandid1].text
+      ~debug "Gizmo Text: " & gizmo.childfound[SpecHelp].field[SpecExpr].text
       ]]></eval>
-      <child entity="entSpec"/>
+      <!--child entity="entSpec"/-->
     
   </thing>
         
@@ -188,21 +190,21 @@
         field[livename].text = "+" & bonus & " to " & skillNames
         
         foreach pick in hero from Skill where skills
-          perform eachpick.field[trtBG].modify[+,bonus,"Background"]
+          perform eachpick.field[trtBG].modify[+,bonus,field[skbName].text]
         nexteach
       
         foreach pick in hero from Skill where skilltypes
-          perform eachpick.field[trtBG].modify[+,bonus,"Background"]
+          perform eachpick.field[trtBG].modify[+,bonus,field[skbName].text]
         nexteach
       elseif (penalty > 0) then
         field[livename].text = "-" & penalty & " to " & skillNames
         
         foreach pick in hero from Skill where skills
-          ~perform eachpick.field[sklRoll].modify[-,penalty,"Background"]
+          ~perform eachpick.field[sklRoll].modify[-,penalty,field[skbName].text]
           nexteach
       
         foreach pick in hero from Skill where skilltypes
-          ~perform eachpick.field[sklRoll].modify[-,penalty,"Background"]
+          ~perform eachpick.field[sklRoll].modify[-,penalty,field[skbName].text]
           nexteach
       endif
       

@@ -54,7 +54,6 @@
     isunique="yes"
     description="Defense is equal to 5 plus your character's Dodge bonus. This is the TN for someone who is not Dodging, or who rolled Dodge lower than their Defense">
     <fieldval field="trtAbbrev" value="Defense"/>
-    <fieldval field="trtBonus" value="0"/>
     <tag group="TraitType" tag="Defense"/>
     <tag group="explicit" tag="3"/>
     <tag group="DashTacCon" tag="Combat"/>
@@ -74,7 +73,6 @@
     isunique="yes"
     description="">
     <fieldval field="trtAbbrev" value="DR"/>
-    <fieldval field="trtBonus" value="0"/>
     <tag group="explicit" tag="2"/>
     <tag group="DashTacCon" tag="Combat"/>
     <tag group="TraitType" tag="Defense"/>
@@ -89,7 +87,6 @@
     isunique="yes"
     description="">
     <fieldval field="trtAbbrev" value="Dodge"/>
-    <fieldval field="trtBonus" value="0"/>
     <tag group="explicit" tag="4"/>
     <tag group="DashTacCon" tag="Combat"/>
     <tag group="TraitType" tag="Defense"/>

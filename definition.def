@@ -121,7 +121,7 @@ These data files provide a framework for Hypernode Press's Planet Mercenary game
   <scriptmacro
     name="traitbonus"
     param1="trait"
-    result="hero.child[#trait].field[trtBonus].value"/>
+    result="hero.child[#trait].field[trtAdvance].value"/>
   <scriptmacro
     name="traitinplay"
     param1="trait"

@@ -80,10 +80,10 @@
         ]]></finalize>
       </field>
 
-    <!-- Bonuses applied to the trait (e.g. from other abilities) -->
+    <!-- Advancements applied to the trait (i.e. "leveling up") -->
     <field
-      id="trtBonus"
-      name="Bonus Value"
+      id="trtAdvance"
+      name="Advancement Value"
       type="derived"
       history="stack">
       </field>
@@ -104,7 +104,7 @@
       <calculate phase="Traits" priority="3000" name="Calc trtFinal"><![CDATA[
         ~Note! If you change this calculation, you may need to change the similar
         ~       calculation in the "Derived" component.
-        @value = field[trtUser].value + field[trtBG].value + field[trtBase].value + field[trtBonus].value + field[trtInPlay].value
+        @value = field[trtUser].value + field[trtBG].value + field[trtBase].value + field[trtAdvance].value + field[trtInPlay].value
         ]]></calculate>
       </field>
 
@@ -112,14 +112,14 @@
         NOTE! This is necessary so incrementers have proper values when edited by the user.
         -->
     <!--eval index="1" phase="Render" priority="5000"><![CDATA[
-      field[trtUser].delta = field[trtBase].value + field[trtBG].value + field[trtBonus].value + field[trtInPlay].value
+      field[trtUser].delta = field[trtBase].value + field[trtBG].value + field[trtAdvance].value + field[trtInPlay].value
       ]]></eval-->
 
     <!-- If the trait is at its minimum/maximum, assign a tag to preclude further advancements -->
     <eval index="2" phase="Final" priority="4001"><![CDATA[
       ~base our test on the adjusted trait value, sans any in-play adjustments
       var trait as number
-      trait = field[trtUser].value + field[trtBonus].value
+      trait = field[trtUser].value + field[trtAdvance].value
       if (trait <= field[trtMinimum].value) then
         perform assign[Helper.Minimum]
       elseif (trait >= field[trtMaximum].value) then
@@ -335,7 +335,7 @@
     <eval index="1" phase="Initialize" priority="3000"><![CDATA[
       field[trtMinimum].value = 0
       field[trtMaximum].value = 9
-      ]]></eval>      
+      ]]></eval>
     
     <!-- Each skill point that is allocated by the user costs 1 CP 
          Except Amorphs, who pay double for Social and Mental skills-->
@@ -405,7 +405,29 @@
     name="Starting Skill Bonus"
     autocompset="no"
     panellink="basics">
-
+    
+    <field
+      id="skbNamCst"
+      name="Custom Name"
+      type="user"
+      maxlength="20"/>
+      
+    <field
+      id="skbName"
+      name="Name"
+      type="derived"
+      maxlength="20">
+      </field>
+    
+    <eval index="1" phase="Initialize" priority="3005"><![CDATA[
+      if (this.field[skbNamCst].isempty = 0) then
+        field[skbName].text = field[skbNamCst].text
+      elseif (this.isroot <> 0) then
+        field[skbName].text = this.root.field[name].text
+      else
+        field[skbName].text = this.field[name].text
+      endif
+      ]]></eval>
     </component>
     
   <component
@@ -554,7 +576,7 @@
         value from the calculation since derived traits have no user-defined facet.
         -->
     <eval index="1" phase="Traits" priority="6000" name="Derived trtFinal"><![CDATA[
-      field[trtFinal].value = field[trtBase].value + field[trtBonus].value + field[trtInPlay].value
+      field[trtFinal].value = field[trtBase].value + field[trtAdvance].value + field[trtInPlay].value
       ]]></eval>
 
     </component>

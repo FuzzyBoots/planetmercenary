@@ -102,6 +102,10 @@
           @text = "(+" & field[trtFinal].value & ")"
           ]]></labeltext>
       </label>
+      
+    <mouseinfo mousepos="middle+above"><![CDATA[
+      call TrtDerive
+      ]]></mouseinfo>
     </portal>
   
   <portal
