@@ -115,13 +115,14 @@
     name="Bonus Specialty"
     compset="cmpsetSB"
     description="Adds the selected specialty.">
-    <fieldval field="usrCandid2" value="component.Specialty"/>
+    <fieldval field="usrCandid1" value="component.Specialty"/>
     <tag group="Hide" tag="Special"/>
     <eval index="1" phase="PreTraits" priority="4900">
       <before name="Calc trtFinal"/><![CDATA[
       ~build the candidate expression out of our specialty tags
       var specs as string
       specs = tagids[Specialty.?, " | "]
+      
       var skills as string
       skills = tagids[Skill.?, " | "]
 
@@ -136,12 +137,13 @@
         combined = specs
       endif
 
-      ~ debug "combined: " & combined
-      gizmo.childfound[SpecHelp].field[SpecExpr].text = "component.Specialty & (" & combined & ")"
-      field[usrCandid2].text &= " & (" & combined & ")"
-      debug "Gizmo Text: " & gizmo.childfound[SpecHelp].field[SpecExpr].text
+      ~gizmo.childfound[SpecHelp].field[SpecExpr].text = "component.Specialty & (" & combined & ")"
+      field[usrCandid1].text &= " & (" & combined & ")"
+      field[usrSource1].value = 0
+      debug "usrCandid1: " & field[usrCandid1].text
+      ~debug "Gizmo Text: " & gizmo.childfound[SpecHelp].field[SpecExpr].text
       ]]></eval>
-      <child entity="entSpec"/>
+      <!--child entity="entSpec"/-->
     
   </thing>
         
@@ -206,6 +208,7 @@
       
         foreach pick in hero from Skill where skilltypes
           perform eachpick.field[trtBG].modify[-,penalty,field[skbName].text]
+          ~perform eachpick.field[sklRoll].modify[-,penalty,field[skbName].text]
           nexteach
       endif
       

@@ -10,6 +10,39 @@
 <document signature="Hero Lab Data">
 
 
+  <procedure id="TrtDerive" scripttype="mouseinfo"><![CDATA[
+  var info as string
+
+  ~@value = field[trtUser].value + field[trtBG].value + field[trtBase].value + field[trtAdvance].value + field[trtInPlay].value
+  ~ field[trtBG].history[", "] & "{BR}" & field[trtUser].value & " spent in creation"
+
+  ~start with the base value, if any.
+  info = field[trtBase].value
+  if (empty(info) <> 0) then
+    @text=""
+  else
+    @text="Base value: " & field[trtBase].value & "{br}"
+    endif
+
+  ~append background adjustments that stack
+  info = field[trtBG].history[", "]
+  if (empty(info) <> 0) then
+    info = chr(150)
+  else
+    info = signed(field[trtBG].value) & ", " & info
+    endif
+  @text &= "Background Adjustments: " & info & "{br}"
+
+  ~append the user-spent points
+  @text &= "Points Spent in Creation: " & field[trtUser].value & "{br}"
+
+  info = field[trtAdvance].value
+  if (empty(info) = 0) then
+    @text&="Advancements: " & info & "{br}"
+    endif
+  
+  ]]></procedure>
+
 <!-- ##################
       The following procedures are generic and used in various places
      ##################
@@ -935,7 +968,7 @@
     var myId as string
 
     expr = "component.Specialty & " & myId
-    
+    debug "expr: " & expr
     gizmo.childfound[SpecHelp].field[SpecExpr].text = expr
     ]]></procedure>
 

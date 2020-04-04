@@ -103,8 +103,9 @@
           ]]></labeltext>
       </label>
       <mouseinfo mousepos="middle+above"><![CDATA[
-    @text = field[trtBG].history[", "] & "{BR}" & field[trtUser].value & " spent in creation"
-    ]]></mouseinfo>
+    ~ @text = field[trtBG].history[", "] & "{BR}" & field[trtUser].value & " spent in creation"
+      call TrtDerive
+      ]]></mouseinfo>
     </portal>
   
   <portal
