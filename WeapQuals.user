@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document signature="Hero Lab Data">
-  <thing id="wqAccurate" name="Accurate" description="The wielder can reroll one die on their attack roll." compset="WeapQual" uniqueness="useronce">
-    <fieldval field="qualCost" value="1"/>
-    </thing>
-  </document>

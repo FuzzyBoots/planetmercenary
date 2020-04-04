@@ -405,7 +405,7 @@
 
   <!-- Ammunition -->
   <thing id="amArmCrack" name="Armor Crackers" description="Anyone who has ever fired a handgun at an approaching column of armored cavalry knows the futility of hurling inert ballistics at hullmetal. Even micro-grenades with their white-hot atomic annihilation payloads are largely useless against properly armored vehicles. Enter armor crackers, which compress a micro-grenade laced with Boomex into one tiny apocalyptic package. As the round impacts a target, its nano-bottles break, ripping the target’s armor apart at an atomic level." compset="Ammunition" stacking="merge">
-    <fieldval field="grLotCost" value="12"/>
+    <fieldval field="grCost" value="12"/>
     <fieldval field="ammUseMech" value="Gunfoam"/>
     <fieldval field="ammNotes" value="Gives the weapon Breacher, APVL, and +3d6 damage added to the existing damage of the weapon."/>
     </thing>

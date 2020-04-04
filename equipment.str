@@ -165,12 +165,19 @@
       id="vhPass"
       name="Passengers"
       type="static"
-      maxlength="5">
+      maxlength="8">
       </field>
 
     <field
       id="vhDR"
       name="Damage Resistance"
+      type="static"
+      maxlength="3">
+      </field>
+
+    <field
+      id="vhHull"
+      name="Hull Points"
       type="static"
       maxlength="3">
       </field>

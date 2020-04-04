@@ -57,58 +57,58 @@
     <!--tag group="Helper" tag="NoMaxBound"/-->
     </thing> 
   
-  <thing
-    id="fRPlusSk"
-    name="Skill Bonus"
-    compset="cmpsetSB"
-    description="Gives a bonus to the selected skill.">
-    <fieldval field="usrCandid1" value="component.Skill"/>
-    <tag group="Hide" tag="Special"/>
-    <eval index="1" phase="PreTraits" priority="4900">
-      <before name="Calc trtFinal"/><![CDATA[
-      var bonus as number
-      var penalty as number
-      bonus = tagvalue[Bonus.?]
-      penalty = tagvalue[Penalty.?]
-      if (bonus = 0) then
-        if (penalty = 0) then
-          bonus = 2
-        else
-          bonus = penalty
-        endif
-      endif
-      
-      if (bonus > 0) then
-        field[livename].text = "+" & bonus & " " & livename
+<thing
+  id="fRPlusSk"
+  name="Skill Bonus"
+  compset="cmpsetSB"
+  description="Gives a bonus to the selected skill.">
+  <fieldval field="usrCandid1" value="component.Skill"/>
+  <tag group="Hide" tag="Special"/>
+  <eval index="1" phase="PreTraits" priority="4900">
+    <before name="Calc trtFinal"/><![CDATA[
+    var bonus as number
+    var penalty as number
+    bonus = tagvalue[Bonus.?]
+    penalty = tagvalue[Penalty.?]
+    if (bonus = 0) then
+      if (penalty = 0) then
+        bonus = 2
       else
-        field[livename].text = bonus & " " & livename
+        bonus = penalty
       endif
-      
-      ~build the candidate expression out of our Skill and Skills tags
-      var skills as string
-      skills = tagids[Skill.?, " | "]
-      var skilltypes as string
-      skilltypes = tagids[Skills.?, " | "]
+    endif
+    
+    if (bonus > 0) then
+      field[livename].text = "+" & bonus & " " & livename
+    else
+      field[livename].text = bonus & " " & livename
+    endif
+    
+    ~build the candidate expression out of our Skill and Skills tags
+    var skills as string
+    skills = tagids[Skill.?, " | "]
+    var skilltypes as string
+    skilltypes = tagids[Skills.?, " | "]
 
-      var combined as string
-      if (tagis[Skills.?] <> 0) then
-        if (tagis[Skill.?] <> 0) then
-          combined = skills & " | " & skilltypes
-        else
-          combined = skilltypes
-        endif
+    var combined as string
+    if (tagis[Skills.?] <> 0) then
+      if (tagis[Skill.?] <> 0) then
+        combined = skills & " | " & skilltypes
       else
-        combined = skills
+        combined = skilltypes
       endif
-      
-      ~ debug combined & ", " & empty(combined)
-      if (empty(combined) = 0) then
-        field[usrCandid1].text &= " & (" & combined & ")"
-      endif
-        
-      perform field[usrChosen1].chosen.field[trtBG].modify[+,bonus,"Background"]
-      ]]></eval>
-    </thing>
+    else
+      combined = skills
+    endif
+    
+    ~ debug combined & ", " & empty(combined)
+    if (empty(combined) = 0) then
+      field[usrCandid1].text &= " & (" & combined & ")"
+    endif
+    
+    perform field[usrChosen1].chosen.field[trtBG].modify[+,bonus,field[skbName].text]
+    ]]></eval>
+  </thing>
         
   <thing
     id="fRPlusSp"
@@ -184,25 +184,28 @@
         skillNames = skillTypes
         endif
       
+      debug "Skill Bonus: " & field[skbName].text
       if (bonus > 0) then
         field[livename].text = "+" & bonus & " to " & skillNames
         
         foreach pick in hero from Skill where skills
-          perform eachpick.field[trtBG].modify[+,bonus,"Background"]
+          perform eachpick.field[trtBG].modify[+,bonus,field[skbName].text]
+          debug "* Adding " & field[skbName].text & "/" & bonus & " to " & eachpick.field[name].text
         nexteach
       
         foreach pick in hero from Skill where skilltypes
-          perform eachpick.field[trtBG].modify[+,bonus,"Background"]
+          perform eachpick.field[trtBG].modify[+,bonus,field[skbName].text]
+          debug "& Adding " & field[skbName].text & "/" & bonus & " to " & eachpick.field[name].text
         nexteach
       elseif (penalty > 0) then
         field[livename].text = "-" & penalty & " to " & skillNames
         
         foreach pick in hero from Skill where skills
-          ~perform eachpick.field[sklRoll].modify[-,penalty,"Background"]
+          perform eachpick.field[trtBG].modify[-,penalty,field[skbName].text]
           nexteach
       
         foreach pick in hero from Skill where skilltypes
-          ~perform eachpick.field[sklRoll].modify[-,penalty,"Background"]
+          perform eachpick.field[trtBG].modify[-,penalty,field[skbName].text]
           nexteach
       endif
       

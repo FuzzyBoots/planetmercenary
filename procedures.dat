@@ -229,7 +229,7 @@
         iteminfo &= "Cost: " & field[grCost].text & "{br}"
         endif
       
-      if (field[lotsize].value <> 0) then
+      if (field[lotsize].value > 1) then
         iteminfo &= "Lot Size: " & field[lotsize].value & "{br}"
         endif
       
@@ -477,10 +477,14 @@
     var iteminfo as string
 
     ~add the Use Mechanism
-    iteminfo &= "Use Mechanism: " & field[ammUseMech].text & "{br}"
+    if (field[ammUseMech].isempty = 0) then
+      iteminfo &= "Use Mechanism: " & field[ammUseMech].text & "{br}"
+      endif
 
     ~report the Notes
-    iteminfo &= "Notes: " & field[ammNotes].text & "{br}"
+    if (field[ammNotes].isempty = 0) then
+      iteminfo &= "Notes: " & field[ammNotes].text & "{br}"
+      endif
 
     ]]></procedure>
 
@@ -500,10 +504,19 @@
     iteminfo &= "Passengers: " & field[vhPass].text & "{br}"
 
     ~report the Damage Resistance
-    iteminfo &= "DR: " & field[vhDR].text & "{br}"
-
-    ~report the Damage Resistance
-    iteminfo &= "Notes: " & field[vhSpec].text & "{br}"
+    if (field[vhDR].isempty = 0) then
+      iteminfo &= "DR: " & field[vhDR].text & "{br}"
+      endif
+    
+    ~report the Hull Points
+    if (field[vhHull].isempty = 0) then
+      iteminfo &= "Hull: " & field[vhHull].text & "{br}"
+      endif
+    
+    ~report the special notes
+    if (field[vhSpec].isempty = 0) then
+      iteminfo &= "Notes: " & field[vhSpec].text & "{br}"
+      endif    
 
     if (tagis[VehEnclose.Enclosed] <> 0) then
       iteminfo &= "Enclosed {br}"
@@ -922,8 +935,7 @@
     var myId as string
 
     expr = "component.Specialty & " & myId
-
-    ~ debug "expr: " & expr
+    
     gizmo.childfound[SpecHelp].field[SpecExpr].text = expr
     ]]></procedure>
 

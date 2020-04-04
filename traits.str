@@ -108,13 +108,6 @@
         ]]></calculate>
       </field>
 
-    <!-- Set the delta for the user value to be the current bonuses
-        NOTE! This is necessary so incrementers have proper values when edited by the user.
-        -->
-    <!--eval index="1" phase="Render" priority="5000"><![CDATA[
-      field[trtUser].delta = field[trtBase].value + field[trtBG].value + field[trtBonus].value + field[trtInPlay].value
-      ]]></eval-->
-
     <!-- If the trait is at its minimum/maximum, assign a tag to preclude further advancements -->
     <eval index="2" phase="Final" priority="4001"><![CDATA[
       ~base our test on the adjusted trait value, sans any in-play adjustments
@@ -405,6 +398,29 @@
     name="Starting Skill Bonus"
     autocompset="no"
     panellink="basics">
+    
+    <field
+      id="skbNamCst"
+      name="Custom Name"
+      type="user"
+      maxlength="20"/>
+      
+    <field
+      id="skbName"
+      name="Name"
+      type="derived"
+      maxlength="20">
+      </field>
+      
+    <eval  phase="PreTraits" priority="1010"><![CDATA[
+        if (this.field[skbNamCst].isempty = 0) then
+          this.field[skbName].text = this.field[skbNamCst].text
+        elseif (this.isroot <> 0) then
+          this.field[skbName].text = this.root.field[name].text
+        else
+          this.field[skbName].text = this.field[name].text
+        endif
+        ]]></eval>
 
     </component>
     

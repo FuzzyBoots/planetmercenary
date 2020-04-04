@@ -102,6 +102,9 @@
           @text = "(+" & field[trtFinal].value & ")"
           ]]></labeltext>
       </label>
+      <mouseinfo mousepos="middle+above"><![CDATA[
+    @text = field[trtBG].history[", "] & "{BR}" & field[trtUser].value & " spent in creation"
+    ]]></mouseinfo>
     </portal>
   
   <portal

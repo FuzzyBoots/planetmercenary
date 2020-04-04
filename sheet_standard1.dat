@@ -747,7 +747,7 @@
     marginvert="2"
     marginhorz="5">
 
-    <portal
+    <!--portal
       id="equipped"
       style="outNameMed">
       <output_label>
@@ -755,7 +755,7 @@
           @text = "{bmpscale 3 output_armor}"
           ]]></labeltext>
         </output_label>
-      </portal>
+      </portal-->
 
     <portal
       id="name"
@@ -767,7 +767,7 @@
         </output_label>
       </portal>
 
-    <portal
+    <!--portal
       id="defense"
       style="outNameMed">
       <output_label>
@@ -805,54 +805,55 @@
           @text = field[defSpecial].text
           ]]></labeltext>
         </output_label>
-      </portal>
+      </portal-->
       
     <position><![CDATA[
       ~our height is the height of the tallest portal
-      height = maximum(portal[name].height,portal[equipped].height)
+      ~height = maximum(portal[name].height,portal[equipped].height)
+      height = portal[name].height
       doneif (issizing <> 0)
 
       ~if the armor is not equipped, hide the bitmap
-      if (tagis[Equipped.Equipped] = 0) then
-        portal[equipped].visible = 0
-        endif
+      ~if (tagis[Equipped.Equipped] = 0) then
+      ~  portal[equipped].visible = 0
+      ~  endif
 
-      portal[equipped].visible = 0
+      ~portal[equipped].visible = 1
       portal[name].visible = 1
-      portal[defense].visible = 0
-      portal[DR].visible = 0
-      portal[Hull].visible = 0
-      portal[special].visible = 0
+      ~portal[defense].visible = 0
+      ~portal[DR].visible = 0
+      ~portal[Hull].visible = 0
+      ~portal[special].visible = 0
       
-      portal[equipped].width = 50
+      ~center all portals vertically
+      ~perform portal[equipped].centervert
+      perform portal[name].centervert
+
+      ~portal[equipped].width = 50
       portal[name].width = 200
-      portal[defense].width = 50
-      portal[DR].width = 50
-      portal[Hull].width = 50
+      ~portal[defense].width = 50
+      ~portal[DR].width = 50
+      ~portal[Hull].width = 50
         
       ~align everything horizontally
       ~perform portal[name].alignrel[ltor,equipped,5]
-      portal[name].left = portal[equipped].right + 5
-      perform portal[defense].alignrel[ltor,name,5]
-      perform portal[DR].alignrel[ltor,defense,5]
-      perform portal[Hull].alignrel[ltor,DR,5]
-      perform portal[special].alignrel[ltor,Hull,5]
+      portal[name].left = 0
+      ~perform portal[defense].alignrel[ltor,name,5]
+      ~perform portal[DR].alignrel[ltor,defense,5]
+      ~perform portal[Hull].alignrel[ltor,DR,5]
+      ~perform portal[special].alignrel[ltor,Hull,5]
 
-      portal[special].width = width - (portal[Hull].right + 5 + 5)
+      ~portal[special].width = width - (portal[Hull].right + 5 + 5)
       
       ~size the name to fit the available space
       portal[name].width = width - portal[name].left
       ~ perform portal[name].sizetofit[36]
-      perform portal[name].autoheight
-
-      ~center all portals vertically
-      perform portal[equipped].centervert
-      perform portal[name].centervert
+      ~ perform portal[name].autoheight
 
       ~shift the "equipped" bitmap downward a little bit; this is because it is a
       ~lone bitmap drawn via encoded text, and bitmaps are never drawn within the
       ~descender portion of the text, which causes it to appear higher than we want it
-      portal[equipped].top += 4
+      ~portal[equipped].top += 4
       ]]></position>
 
     </template>

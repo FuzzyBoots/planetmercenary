@@ -17,6 +17,11 @@
       <it_bootcustom compset="Specialty">
         <match>thingid.?</match>
         <inputthing
+          name="Name"
+          helptext="Specify the identifier for the breakdown">
+          <it_field field="skbNamCst"/>
+          </inputthing>
+        <inputthing
           name="Specialties"
           helptext="Pick the Specialties that will automatically be added.">
           <it_taglist group="Specialty" tag="?" dynamic="no"/>
@@ -29,6 +34,12 @@
       helptext="Add one or more skill bonus choices that the characters can pick.">
       <it_bootcustom compset="cmpsetSB">
         <match>thingid.fRPlusSk</match>
+        <inputthing
+          name="Name"
+          helptext="Specify the identifier for the breakdown">
+          <it_field field="skbNamCst"/>
+          </inputthing>
+    
         <inputthing
           name="Skills"
           helptext="Pick the skills that can be chosen for this bonus.">
@@ -74,6 +85,11 @@
       helptext="Add one or more skills that receive automatic bonuses.">
       <it_bootcustom compset="cmpsetSB">
         <match>thingid.fRPlusSk2</match>
+        <inputthing
+          name="Name"
+          helptext="Specify a custom identifier for the breakdown">
+          <it_field field="skbNamCst"/>
+          </inputthing>
         <inputthing
           name="Skills"
           helptext="Pick the skills that can be chosen for this bonus.">
@@ -255,8 +271,7 @@
     name="Background"
     prefix="bck"
     description="Backgrounds confer skill bonuses, penalties, and specialties."
-    summary="Defines a Background that can be selected by a character."
-    defchild="">
+    summary="Defines a Background that can be selected by a character.">
 
     <inputthing>
       <it_groupref id="bckTraits"/>
@@ -381,6 +396,12 @@
     summary="Defines a vehicle that can be selected on the Gear tab.">
     
     <inputthing
+      name="Special Rules"
+      helptext="Special rules for this vehicle.">
+      <it_field field="vhSpec"/>
+      </inputthing>
+      
+    <inputthing
       name="Passengers"
       helptext="Specify how many passengers the vehicle can hold.">
       <it_field field="vhPass"/>
@@ -390,6 +411,12 @@
       name="Damage Resistance"
       helptext="Specify the damage resistance of the vehicle.">
       <it_field field="vhDR"/>
+      </inputthing>
+      
+    <inputthing
+      name="Hull Points"
+      helptext="Specify the Hull Points of the vehicle.">
+      <it_field field="vhHull"/>
       </inputthing>
       
     <inputthing
@@ -405,7 +432,7 @@
       </inputthing>
       
     <inputthing
-      name="SkillUsed"
+      name="Skill Used"
       helptext="Specify the skills used.">
       <it_taglist
         group="Skill" tag="?"/>
@@ -417,12 +444,6 @@
       <it_tagpick
         group="VehClass" tag="?"/>
       </inputthing>
-    
-    <!--inputthing
-      name="Special Behaviors"
-      helptext="Specify any special behaviors for the vehicle of which the user should be reminded.">
-      <it_field field="vhSpec"/>
-      </inputthing-->
       
     <inputthing
       name="Enclosed?"

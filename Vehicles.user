@@ -1,26 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
-  <thing id="vehSkates" name="Wächter Sunrise Talrico Skates" description="Anyone who’s seen the neighborhood kids ﬂit around as if running on twenty centimeters of thin air has seen the Talarico skates in action. Careful observation reveals that these skates are not being used by adults. We may conclude, then, that either (1) adults are too smart to use them, or (2) the children who use them do not survive to become adults. \n\nTalarico skates can more than double the running speed of a typical biped, but they require signifcant skill to use safely. They’re not available in sizes suitable for anything much larger than an adult human, which means that neophants on skates are not among the many mobile catastrophes this universe will throw at you. Unless, of course, your GC invents some neophants with high jury-rigging skills." compset="Vehicle">
+  <thing id="vehSkates" name="Wächter Sunrise Talrico Skates" description="Anyone who’s seen the neighborhood kids flit around as if running on twenty centimeters of thin air has seen the Talarico skates in action. Careful observation reveals that these skates are not being used by adults. We may conclude, then, that either (1) adults are too smart to use them, or (2) the children who use them do not survive to become adults. \n\nTalarico skates can more than double the running speed of a typical biped, but they require signifcant skill to use safely. They’re not available in sizes suitable for anything much larger than an adult human, which means that neophants on skates are not among the many mobile catastrophes this universe will throw at you. Unless, of course, your GC invents some neophants with high jury-rigging skills." compset="Vehicle">
     <fieldval field="vhPass" value="1"/>
-    <fieldval field="vhDR" value="0"/>
     <fieldval field="grCost" value="1"/>
     <tag group="Skill" tag="skAthlete"/>
     <tag group="VehClass" tag="Consumer"/>
     </thing>
-  <thing id="vehScooter" name="Jogamoto Fleetworks “Ninjurai 47” Scooter" description="Numerous consumer manufacturers produce personal scooters. The Ninjurai 47 was created by Jogamoto, a subsidiary of Gaines-Uashjo. It’s designed for comfortable errand-running, not combat. The open-air design offers zero protection from incoming fre and the “quiet” propulsor turbines are too loud for stealth. The Ninjurai’s prevalence on battlefelds is likely due to its low cost, which makes it very nearly disposable and therefore extremely attractive to quartermasters focused on the bottom line. It is available in either Ground, Air, or Water models.\n\nHeavily armored soldiers looking for zippy, stylish transit through a theater of operations can cruise along at 25m/sec, secure in the knowledge that when they come under fire they’ll almost certainly live longer than their scooter. They might even recover from their scooter’s destruction quickly and adroitly enough to return fire. They might also get hit by ﬂaming bits of their scooter, but field reports suggest this causes superficial bruising at worst." compset="Vehicle">
+  <thing id="vehScooter" name="Jogamoto fleetworks “Ninjurai 47” Scooter" description="Numerous consumer manufacturers produce personal scooters. The Ninjurai 47 was created by Jogamoto, a subsidiary of Gaines-Uashjo. It’s designed for comfortable errand-running, not combat. The open-air design offers zero protection from incoming fre and the “quiet” propulsor turbines are too loud for stealth. The Ninjurai’s prevalence on battlefelds is likely due to its low cost, which makes it very nearly disposable and therefore extremely attractive to quartermasters focused on the bottom line. It is available in either Ground, Air, or Water models.\n\nHeavily armored soldiers looking for zippy, stylish transit through a theater of operations can cruise along at 25m/sec, secure in the knowledge that when they come under fire they’ll almost certainly live longer than their scooter. They might even recover from their scooter’s destruction quickly and adroitly enough to return fire. They might also get hit by flaming bits of their scooter, but field reports suggest this causes superficial bruising at worst." compset="Vehicle">
     <fieldval field="vhPass" value="1"/>
-    <fieldval field="vhDR" value="0"/>
     <fieldval field="grCost" value="2"/>
     <tag group="VehClass" tag="Consumer"/>
     <tag group="Skill" tag="skAirVeh"/>
     <tag group="Skill" tag="skGrndVeh"/>
     <tag group="Skill" tag="skWatVeh"/>
     </thing>
-  <thing id="vehHvrChr" name="Wächter Com Hub Hover Chair" description="The Wächter Com Hub Hover Chair was specifcally designed for polyﬂorian sophonts who are dependent on vehicles for their transportation. Sophonts who are larger or smaller than the average polyﬂorian can use the chair, but it is likely to be uncomfortable for them. The chair has the necessary attachments and leads to allow a polyﬂorian to interface directly with the chair so that the chair becomes more like an extension of the polyﬂorian’s body than a vehicle. Com Hub chairs come with large carrying compartments and two slots suitable for attaching tools and/or mechanical arms. Debates continue whether Wächter deliberately designed these tool slots to function as weapon emplacement spots , but that is what they do." compset="Vehicle">
+  <thing id="vehHvrChr" name="Wächter Com Hub Hover Chair" description="The Wächter Com Hub Hover Chair was specifcally designed for polyflorian sophonts who are dependent on vehicles for their transportation. Sophonts who are larger or smaller than the average polyflorian can use the chair, but it is likely to be uncomfortable for them. The chair has the necessary attachments and leads to allow a polyflorian to interface directly with the chair so that the chair becomes more like an extension of the polyflorian’s body than a vehicle. Com Hub chairs come with large carrying compartments and two slots suitable for attaching tools and/or mechanical arms. Debates continue whether Wächter deliberately designed these tool slots to function as weapon emplacement spots , but that is what they do." compset="Vehicle">
     <fieldval field="vhPass" value="1"/>
     <fieldval field="vhWpSlots" value="2"/>
     <fieldval field="grCost" value="2"/>
     <tag group="Skill" tag="skAirVeh"/>
     <tag group="VehClass" tag="Consumer"/>
+    </thing>
+  <thing id="vehBblCar" name="Jogamoto Skyfleet Bubblecar" description="The skylanes of a great many metropolises teem with teardrop-shaped vehicles, most of which are owned and operated by rental and rideshare companies. Jogamoto’s Skyfleet line of bubble cars serves as a solid representative example.\n\nOften the best camouflage for urban operations is to hail a Jogamoto and tell it where to take you. The majority of the bubblecars in service will comfortably seat two medium-sized sophonts of the majority population, along with all their gear, provided they’re willing to hold that gear in their lap. Suited up in a big armor suit, a single soldier can squeeze into a bubblecar. Neophants and ursumari may need to wait a little longer for a suitable vehicle.\n\nMetropolitan traffic control is understandably restrictive, so bubblecars are always piloted by the onboard AI, with just enough personality to be polite, and to safely and speedily deliver passengers to their stated destinations. Complex instructions like “follow that car” or “lose our tail” will not confuse Jogamoto bubblecar brains, but if actual combat begins, then the vehicle will ignore any useful commands other than “take us down and find cover.”\n\nIn some locations, bubblecar brains converse freely with law enforcement departments. Committing a crime in, or from, a fleet-operated bubblecar is the sort of thing that becomes career-limiting move for the average criminal, since the car would swiftly haul them to the nearest police depot." compset="Vehicle">
+    <fieldval field="grCost" value="4"/>
+    <fieldval field="vhDR" value="1"/>
+    <fieldval field="vhPass" value="2"/>
+    <tag group="VehClass" tag="Consumer"/>
+    <tag group="VehEnclose" tag="Enclosed"/>
+    <tag group="Skill" tag="skAirVeh"/>
+    <tag group="Skill" tag="skGrndVeh"/>
+    </thing>
+  <thing id="vehDevVan" name="Jogamoto Skyfleet Delivery Vans" description="The civilian population looks at delivery vans and imagines that they are filled with durable goods, tasty treats, or perhaps smelly police detectives staring vacuously at espionage gear. They rarely consider that an unassuming Jogamoto van built to haul six tons of compressed snack cakes might, in fact, be carrying three tons of mercenaries sitting atop 600 kilos of extra-compressed snack cakes.\n\nLike the bubblecars of the Skyfleet line, Jogamoto vans do not have armor, and they are not designed to set airspeed records. They do, however, feature heavy-duty capstacks and redundant propulsor turbines, giving an unloaded van a slightly higher top speed and operating range than a car. The majority of these noisy, flying trucks are completely autonomous, owned and operated by shipping companies or snack food companies. A few are independently operated by plucky drivers, who eke out a living by making deliveries, and these entrepreneurial souls can often be hired for an unscheduled delivery of armored hurt and smashed desserts." compset="Vehicle">
+    <fieldval field="grCost" value="6"/>
+    <fieldval field="vhDR" value="1"/>
+    <fieldval field="vhPass" value="8-15"/>
+    <tag group="VehClass" tag="Consumer"/>
+    <tag group="VehEnclose" tag="Enclosed"/>
+    <tag group="Skill" tag="skAirVeh"/>
+    <tag group="Skill" tag="skGrndVeh"/>
+    </thing>
+  <thing id="vehWMV" name="Döblitz WMV" description="Seen by some as the delivery van at the “other end” of commerce, garbage trucks are found in nearly all metros, including those with infrastructure that allows businesses to recycle waste via a chute. Garbage trucks may run regular routes, or they may make scheduled pickups for things that won’t fit down the chute — occasionally, this includes things that the scheduling party does not want to show up on an audit of their chute-drops.\n\nThe Döblitz Foundry WMV (short for “waste management vehicle”) is the top-shelf entry in this field. Their portable compactors require quite a bit of power, so the WMV has several banks of capstacks, and the heavy-duty bin presents the equivalent of armored cover to anyone hiding behind it. For this reason, the WMV is quite popular with companies engaging in non-stealthy, urban wet-work. The WMV carries three human-sized sophonts up front, with room for four more to ride on the outside, holding handles. Of the civilian vehicles, this one is the easiest to hack for aggressive work." compset="Vehicle">
+    <fieldval field="grCost" value="6"/>
+    <fieldval field="vhDR" value="3"/>
+    <fieldval field="vhPass" value="3 (+4)"/>
+    <fieldval field="vhSpec" value="Four extra passengers can hang on outside."/>
+    <tag group="VehEnclose" tag="Enclosed"/>
+    <tag group="Skill" tag="skAirVeh"/>
+    <tag group="Skill" tag="skGrndVeh"/>
+    <tag group="VehClass" tag="Consumer"/>
+    </thing>
+  <thing id="vehLimo" name="Döblitz Skyprince Limousine" description="Like most consumer-grade limousines, the Skyprince provides high levels of comfort, but presents a disturbingly soft target. Those riding inside a Skyprince are invariably disturbed to learn that they’re not enjoying hors d’oeuvres and fruity, bubbling ethanol behind actual armor. The rental companies are equally disturbed by this revelation, because it means that the secret is out, and that their artificially high prices might tumble. Jogamoto Skyprince limos are very reasonably priced if you buy them, but if you rent them, then you’re going to get shafted." compset="Vehicle">
+    <fieldval field="grCost" value="12"/>
+    <fieldval field="vhDR" value="1"/>
+    <fieldval field="vhPass" value="8-10"/>
+    <fieldval field="vhSpec" value=" Rental costs 2/3 price of purchase"/>
+    <tag group="VehEnclose" tag="Enclosed"/>
+    <tag group="Skill" tag="skAirVeh"/>
+    <tag group="Skill" tag="skGrndVeh"/>
+    <tag group="VehClass" tag="Consumer"/>
+    </thing>
+  <thing id="vehArmrCar" name="G-U Horizon-class Armored Car" description="A favorite among diplomats and corporate executives, the Horizon class armored car from Gaines-Uashjo is a comfortably appointed vehicle. It strikes a perfect balance between security and luxury. Its armor extends around all sides of the cabin, to protect the car while it flies or drives on the ground. This car includes light drivetide compensation, so it can maneuver, but not nearly so hard as a tank or gunboat. Seats six. Upgrades to interior for ursumari and neophants available for S1." compset="Vehicle">
+    <fieldval field="vhPass" value="6"/>
+    <fieldval field="grCost" value="6"/>
+    <fieldval field="vhHull" value="1"/>
+    <fieldval field="vhWpSlots" value="2"/>
+    <tag group="VehClass" tag="Military"/>
+    <tag group="VehEnclose" tag="Enclosed"/>
+    <tag group="Skill" tag="skAirVeh"/>
+    <tag group="Skill" tag="skGrndVeh"/>
+    </thing>
+  <thing id="vehAUV" name="BFF Armored Utility Vehicle" description="There is no shortage of suppliers for Milspec general-purpose utility vehicles. We’ve listed the BFF-AUV because it exemplifies the boxy, sturdy utility that soldiers expect from their vehicles. Bryanton Faire Fabricators subcontracted development for the AUV to deliver BFF armaments to active theaters of operations, but brought all manufacturing in-house when the vehicle proved so popular that clients wanted to buy the guns and the car they arrived in. This vehicle seats four. The enclosed cabin can be converted, allowing soldiers to shed the armored top so they can fire from their seats.\n\nThis gets especially interesting when the vehicle is airborne, because while it flies, it’s definitely not meant for aerial combat. Note: It’s not really a convertible because once the top is off, you’re leaving it behind. It doesn’t fold up nice for stowing." compset="Vehicle">
+    <fieldval field="vhHull" value="1"/>
+    <fieldval field="vhPass" value="4"/>
+    <fieldval field="vhWpSlots" value="0"/>
+    <fieldval field="grCost" value="8"/>
+    <tag group="Skill" tag="skAirVeh"/>
+    <tag group="Skill" tag="skGrndVeh"/>
+    <tag group="VehClass" tag="Military"/>
+    <tag group="VehEnclose" tag="Enclosed"/>
+    </thing>
+  <thing id="vehUpgAUV" name="BFF Armored Utility Vehicle (Upgraded)" description="There is no shortage of suppliers for Milspec general-purpose utility vehicles. We’ve listed the BFF-AUV because it exemplifies the boxy, sturdy utility that soldiers expect from their vehicles. Bryanton Faire Fabricators subcontracted development for the AUV to deliver BFF armaments to active theaters of operations, but brought all manufacturing in-house when the vehicle proved so popular that clients wanted to buy the guns and the car they arrived in. This vehicle seats four. The enclosed cabin can be converted, allowing soldiers to shed the armored top so they can fire from their seats.\n\nThis gets especially interesting when the vehicle is airborne, because while it flies, it’s definitely not meant for aerial combat. Note: It’s not really a convertible because once the top is off, you’re leaving it behind. It doesn’t fold up nice for stowing.\n\nUpgraded models include the attack AUV, which comes with a light anti-personnel weapon installed on the roof, and the spaceworthy AUV, which comes with a life support system that allows the vehicle to travel in vacuum. If you choose a spaceworthy AUV as your spacecraft, then you’d better have a deep bladder, because it does not come with toilets or extension to its life support system" compset="Vehicle">
+    <fieldval field="vhHull" value="1"/>
+    <fieldval field="vhPass" value="4"/>
+    <fieldval field="grCost" value="9"/>
+    <fieldval field="vhWpSlots" value="1"/>
+    <tag group="Skill" tag="skAirVeh"/>
+    <tag group="Skill" tag="skGrndVeh"/>
+    <tag group="VehClass" tag="Military"/>
+    <tag group="VehEnclose" tag="Enclosed"/>
+    <tag group="Skill" tag="skSpcVeh"/>
+    </thing>
+  <thing id="vehMinTnk" name="Döblitz Pillbug Mini-Tank" description="The Pillbug is comfortably parked just to the “vehicle” side of that fine line between armored suit and armored vehicle. This fully-armored flying tank seats a single smallish sophont, and the cramped cabin sits atop a small annie plant. It includes two hardpoints for mounting weapons, and these guns can be upgraded for light STS fire (Cost R2), but while the Pillbug can pose a (minor) threat to warships, it is principally used for assaulting heavily emplaced enemies.\n\nDöblitz Foundry has fielded numerous requests from terran Planet Mercenary customers to produce Pillbugs that can accommodate ursumari or neophant pilots. Their response is always: “You’re too big. Just use a full-size tank.”" compset="Vehicle">
+    <fieldval field="vhHull" value="1"/>
+    <fieldval field="vhPass" value="1"/>
+    <fieldval field="vhWpSlots" value="2"/>
+    <fieldval field="grCost" value="10"/>
+    <tag group="VehClass" tag="Military"/>
+    <tag group="VehEnclose" tag="Enclosed"/>
+    <tag group="Skill" tag="skAirVeh"/>
+    </thing>
+  <thing id="vehFlyTnk" name="AG Scutum-5240 Flying Tank" description="Armored cavalry, or “tanks,” have been part of military operations for millennia. Of the countless offerings in this category, the Scutum-5240 from Aguirre Galactic is a fine example. The two-meter annie plant powers a unifield shield, which can be reconfigured as a bunker bubble under which a dozen or more soldiers may take cover.\n\nWhile the Scutum-5240 can deploy for spacebased operations, it is designed under the assumption that when the shooting starts, it will have 180 degrees of full cover provided by the ground underneath it.\n\nThe Scutum-5240 comes with a permanently attached main gun (4d6 or 1 Hull) and three slots where additional weaponry may be attached. The main gun on the 5240 can be re-configured to chamber STS missiles (cost R1) for the foolishly optimistic gunner wishing to paint a picture of a warship on the hull of their tank." compset="Vehicle">
+    <fieldval field="vhHull" value="1"/>
+    <fieldval field="vhPass" value="4"/>
+    <fieldval field="vhWpSlots" value="4"/>
+    <fieldval field="grCost" value="15"/>
+    <tag group="VehClass" tag="Military"/>
+    <tag group="VehEnclose" tag="Enclosed"/>
+    <tag group="Skill" tag="skAirVeh"/>
+    <tag group="Skill" tag="skGrndVeh"/>
+    <tag group="Skill" tag="skSpcVeh"/>
+    <tag group="Skill" tag="skWatVeh"/>
     </thing>
   </document>
